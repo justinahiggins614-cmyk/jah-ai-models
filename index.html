@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AI Telephone Book — home of every AI</title>
+<style>
+:root{--bg:#070b14;--panel:#0d1424;--panel2:#111a30;--line:#1e2c4d;--txt:#d7e0f2;--dim:#8b98b8;--gold:#e8c766;--acc:#5aa2ff;--grn:#5aff8a;--red:#ff5a5a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
+.jahnet{background:#0a0f1e;color:#9aa4b2;font-size:.76em;padding:7px 10px;text-align:center;line-height:2;letter-spacing:.02em;border-bottom:1px solid var(--line)}
+.jahnet.t2{border-bottom:none;border-top:1px solid var(--line);margin-top:34px}
+.jahnet-t{color:var(--gold);font-weight:700;letter-spacing:.25em;margin-right:10px}
+.jahnet a{color:#9fc2ff;text-decoration:none;margin:0 7px;white-space:nowrap}
+.jahnet a:hover{text-decoration:underline}
+.jahnet a.cur{color:var(--gold);font-weight:700}
+.hero{text-align:center;padding:44px 16px 26px;background:radial-gradient(ellipse at 50% 0%,#14224a 0%,var(--bg) 70%)}
+.hero h1{margin:.2em 0 .1em;font-size:2.1em;letter-spacing:.12em;color:var(--gold)}
+.hero p{color:var(--dim);max-width:640px;margin:.4em auto}
+.wingnav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:14px}
+.wingnav a{background:var(--panel);border:1px solid var(--line);color:var(--txt);padding:10px 18px;border-radius:8px;text-decoration:none;font-size:.95em}
+.wingnav a:hover{border-color:var(--gold)}
+section{max-width:1180px;margin:0 auto;padding:10px 16px}
+h2.wing{letter-spacing:.2em;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:8px;font-size:1.25em}
+.wingdesc{color:var(--dim);max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;margin-top:14px}
+.aifile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.aifile.persona{background:#0e1220;border-color:#3a2c14}
+.filehead{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.stamp{font-family:monospace;font-size:.78em;color:var(--acc);background:#0a1226;padding:3px 8px;border-radius:4px}
+.badge{font-size:.72em;font-weight:700;letter-spacing:.12em;color:#0a0f1e;background:var(--gold);padding:3px 10px;border-radius:20px}
+.badge.fan{background:#7a5a2a;color:#ffe9b8}
+.aifile h3{margin:.1em 0;font-size:1.3em}
+.mentality{font-style:italic;color:var(--dim);margin:0}
+.abilities{margin:.2em 0;padding-left:1.2em;font-size:.92em}
+.abilities li{margin:.15em 0}
+.params{border-collapse:collapse;width:100%;font-size:.85em}
+.params td{border:1px solid var(--line);padding:4px 8px}
+.params td:first-child{color:var(--gold);font-family:monospace;white-space:nowrap}
+.filetools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fbtn{background:var(--panel2);border:1px solid var(--line);color:var(--txt);padding:7px 12px;border-radius:6px;cursor:pointer;font-size:.88em}
+.fbtn:hover{border-color:var(--acc)}
+.fbtn.stop{background:#3a1414;border-color:#7a2a2a}
+.speclink{font-size:.85em;color:var(--grn);text-decoration:none}
+.speclink:hover{text-decoration:underline}
+.disclaimer{font-size:.78em;color:#a08b5a;background:#141007;border:1px dashed #5a4a22;padding:6px 10px;border-radius:6px}
+.demo{background:#080d18;border:1px solid var(--line);border-radius:8px;padding:12px;font-size:.9em}
+.demo h4{margin:.1em 0 .5em;color:var(--acc);letter-spacing:.08em;font-size:.95em}
+.demo input[type=text],.demo input[type=number]{background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:6px 9px;border-radius:5px;font-size:.9em;max-width:100%}
+.demo button{background:#1a2c55;border:1px solid #2c4a8a;color:#dce8ff;padding:6px 12px;border-radius:6px;cursor:pointer;font-size:.88em;margin:2px}
+.demo button:hover{background:#24407c}
+.demo output,.demo .out{display:block;margin-top:8px;font-family:monospace;font-size:.85em;white-space:pre-wrap;color:#bfe3c0;max-height:220px;overflow:auto}
+.demo canvas{border:1px solid var(--line);border-radius:6px;background:#05080f;max-width:100%}
+.demo input[type=range]{width:160px;vertical-align:middle}
+.chatlog{border:1px solid var(--line);border-radius:6px;background:#05080f;padding:8px;height:170px;overflow:auto;font-size:.88em;margin-bottom:8px}
+.chatlog .u{color:#9fc2ff;margin:.3em 0}
+.chatlog .a{color:#ffe1a8;margin:.3em 0}
+.chatrow{display:flex;gap:6px}
+.chatrow input{flex:1;background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:7px 10px;border-radius:6px}
+.mute{font-size:.8em;color:var(--dim)}
+.mixbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
+.mixbox select{background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:8px;border-radius:6px;font-size:.95em;margin:4px}
+#ttsbar{position:fixed;bottom:12px;right:12px;background:#0d1424ee;border:1px solid var(--gold);border-radius:10px;padding:8px 12px;display:none;gap:8px;align-items:center;z-index:99;font-size:.85em}
+#ttsbar button{background:#1a2c55;border:1px solid #2c4a8a;color:#fff;padding:5px 10px;border-radius:6px;cursor:pointer}
+footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.hero h1{font-size:1.5em}}
+</style>
+</head>
+<body>
+<div class="jahnet"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/">Spec Catalog</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">IWB Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">Wiki Leaks</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Calculator</a><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">AI Models</a></div>
+<header class="hero">
+<h1>THE AI TELEPHONE BOOK</h1>
+<p><b>Every AI lives here as a file.</b> Look up any mind — system AIs, personas, and a Signature AI for every need in life. Each file carries its mentality, its abilities, its data — and a working demo you can run, talk to, and download. <i>The JAH AI Models Archive.</i> Boundless more to come.</p>
+<p style="font-size:.85em">Signature-made by Justin Addam Higgins · deterministic systems · honest simulations</p>
+</header>
+<nav class="wingnav">
+<a href="#sigwing">Signature AI Systems</a>
+<a href="#personawing">Persona Archive</a>
+<a href="#domainwing">Every Need</a><a href="#directory">Telephone Directory</a><a href="#mixlab">Mix Lab</a>
+<a href="#incoming">Incoming Transmissions</a>
+</nav>
+<section id="sigwing">
+<h2 class="wing">SIGNATURE AI SYSTEMS</h2>
+<p class="wingdesc">The ten core minds of the JAH system, plus the Hybrid Fusion that binds them. Each is a file: read it aloud, copy it, download its working Python implementation.</p>
+<div class="grid" id="siggrid"></div>
+</section>
+<section id="personawing">
+<h2 class="wing">PERSONA ARCHIVE</h2>
+<p class="wingdesc">Pop-culture AI minds, simulated as best as possible — their mentalities, their voices, their abilities. Talk to each one; every reply is read aloud in its own voice.</p>
+<div class="grid" id="personagrid"></div>
+</section>
+<section id="domainwing">
+<h2 class="wing">SIGNATURE DOMAIN AIs — EVERY NEED</h2>
+<p class="wingdesc">A Signature-made AI for every walk of life — every need, every domain. Each is a full file: dossier, working demo, dialog, read-aloud, copy, download. The archive grows boundlessly; new files plug in here.</p>
+<div class="grid" id="domaingrid"></div>
+</section>
+<section id="directory">
+<h2 class="wing">TELEPHONE DIRECTORY</h2>
+<p class="wingdesc">Every AI in the book, A–Z. Search or tap a letter — every file on this site, plus the AI families living on our sister sites.</p>
+<div class="mixbox"><input type="text" id="dirsearch" placeholder="Search every AI…" style="width:100%;background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:9px 12px;border-radius:6px;font-size:1em" aria-label="Search directory"><div id="dirletters" style="margin:10px 0"></div><div id="dirlist"></div></div>
+</section>
+<section id="mixlab">
+<h2 class="wing">MIX LAB</h2>
+<p class="wingdesc">Pick any two AIs and forge a hybrid — blended name, merged mentality, a working demo of both minds thinking together, downloadable as Python.</p>
+<div class="mixbox" id="mixbox"></div>
+</section>
+<section id="incoming">
+<h2 class="wing">INCOMING TRANSMISSIONS</h2>
+<p class="wingdesc">The archive grows. New AI files plug in behind this same page — boundless more. Every file ever added keeps its demo, its voice, and its download.</p>
+<div class="mixbox"><b>Next files on the way:</b> Quantum Annealer mind, Swarm-Queen coordinator, Dream-Logic engine, Time-Series oracle, and persona files voted by visitors. <span style="color:var(--dim)">(This section updates as the archive expands.)</span></div>
+</section>
+<div id="ttsbar"><span>🔊 Reading</span><button id="ttsstop" type="button">Stop</button><label>Speed <input id="ttsspeed" type="range" min="0.7" max="1.6" step="0.1" value="1" style="width:90px"></label></div>
+<div class="jahnet t2"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/">Spec Catalog</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">IWB Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">Wiki Leaks</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Calculator</a><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">AI Models</a></div>
+<footer class="note">THE JAH AI MODELS ARCHIVE · Signature-made files by Justin Addam Higgins · persona simulations are fan-style interpretations, not affiliated with any rights holder</footer>
+<script>
+/* ============ TIERED TTS (speechSynthesis -> ResponsiveVoice -> Google TTS hosts) ============ */
+var TTS = (function(){
+  var stopFlag = false, speed = 1, currentAudio = null;
+  function bar(show){ document.getElementById('ttsbar').style.display = show ? 'flex' : 'none'; }
+  document.getElementById('ttsstop').onclick = function(){ stop(); };
+  document.getElementById('ttsspeed').oninput = function(e){ speed = parseFloat(e.target.value); };
+  function stop(){
+    stopFlag = true;
+    try{ speechSynthesis.cancel(); }catch(e){}
+    if (currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio = null; }
+    bar(false);
+  }
+  function pickVoice(){
+    try{
+      var vs = speechSynthesis.getVoices() || [];
+      var en = vs.filter(function(v){ return /^en([-_])/i.test(v.lang); });
+      var fem = en.filter(function(v){ return /female|zira|samantha|karen|moira|tessa|google uk english female/i.test(v.name); });
+      if (fem.length) return fem[0];
+      var g = en.filter(function(v){ return /google/i.test(v.name); });
+      if (g.length) return g[0];
+      if (en.length) return en[0];
+      if (vs.length) return vs[0];
+    }catch(e){}
+    return null;
+  }
+  if (typeof speechSynthesis !== 'undefined'){ try{ speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = function(){}; }catch(e){} }
+  function chunkText(t){
+    var parts = [], cur = '';
+    t.split(/([.!?]\s+|\n+)/).forEach(function(p){
+      if ((cur + p).length > 160){ if (cur.trim()) parts.push(cur.trim()); cur = p; }
+      else cur += p;
+    });
+    if (cur.trim()) parts.push(cur.trim());
+    return parts.filter(Boolean);
+  }
+  function tierSpeech(chunk, opts, done){
+    if (stopFlag){ done(); return; }
+    try{
+      var u = new SpeechSynthesisUtterance(chunk);
+      var v = pickVoice(); if (v) u.voice = v;
+      u.rate = (opts.rate || 1) * speed;
+      u.pitch = opts.pitch || 1;
+      u.onend = function(){ done(); };
+      u.onerror = function(){ tierRV(chunk, opts, done); };
+      speechSynthesis.cancel();
+      speechSynthesis.speak(u);
+      setTimeout(function(){ if (!stopFlag && !speechSynthesis.speaking) tierRV(chunk, opts, done); }, 2500);
+    }catch(e){ tierRV(chunk, opts, done); }
+  }
+  function tierRV(chunk, opts, done){
+    if (stopFlag){ done(); return; }
+    try{
+      if (typeof responsiveVoice !== 'undefined' && responsiveVoice.speak){
+        responsiveVoice.speak(chunk, 'UK English Female', {
+          rate: (opts.rate || 1) * speed, pitch: opts.pitch || 1,
+          onend: done, onerror: function(){ tierGoogle(chunk, opts, 0, done); }
+        });
+        return;
+      }
+    }catch(e){}
+    tierGoogle(chunk, opts, 0, done);
+  }
+  function tierGoogle(chunk, opts, host, done){
+    if (stopFlag){ done(); return; }
+    var hosts = ['https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=',
+                 'https://translate.google.co.uk/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q='];
+    if (host >= hosts.length){ done(); return; }
+    try{
+      var a = new Audio(hosts[host] + encodeURIComponent(chunk));
+      currentAudio = a;
+      a.onended = function(){ currentAudio = null; done(); };
+      a.onerror = function(){ currentAudio = null; tierGoogle(chunk, opts, host + 1, done); };
+      var pr = a.play();
+      if (pr && pr.catch) pr.catch(function(){ tierGoogle(chunk, opts, host + 1, done); });
+    }catch(e){ tierGoogle(chunk, opts, host + 1, done); }
+  }
+  function speak(text, opts){
+    opts = opts || {};
+    stop();
+    stopFlag = false;
+    bar(true);
+    var chunks = chunkText(String(text));
+    var i = 0;
+    (function next(){
+      if (stopFlag || i >= chunks.length){ bar(false); return; }
+      var c = chunks[i++];
+      if (typeof speechSynthesis !== 'undefined' && speechSynthesis){ tierSpeech(c, opts, next); }
+      else tierRV(c, opts, next);
+    })();
+  }
+  return { speak: speak, stop: stop };
+})();
+
+/* ============ FILE UTILITIES ============ */
+function escHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function downloadFile(name, content, mime){
+  var b = new Blob([content], {type: mime || 'text/plain'});
+  var u = URL.createObjectURL(b), a = document.createElement('a');
+  a.href = u; a.download = name; document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(u); a.remove(); }, 900);
+}
+function copyText(t, btn){
+  function done(){ if (btn){ var o = btn.innerHTML; btn.innerHTML = 'Copied!'; setTimeout(function(){ btn.innerHTML = o; }, 1400); } }
+  function fb(){ var ta = document.createElement('textarea'); ta.value = t; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); done(); }catch(e){} ta.remove(); }
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, fb); else fb();
+}
+function fileText(ai){
+  var L = [];
+  L.push('THE JAH AI MODELS ARCHIVE');
+  L.push(ai.stamp + ' — ' + ai.name);
+  L.push('Signature-made by Justin Addam Higgins');
+  L.push('');
+  L.push('MENTALITY:'); L.push(ai.mentality); L.push('');
+  L.push('ABILITIES:'); ai.abilities.forEach(function(a){ L.push(' - ' + a); }); L.push('');
+  L.push('DATA / PARAMETERS:'); ai.params.forEach(function(p){ L.push(' - ' + p[0] + ': ' + p[1]); }); L.push('');
+  if (ai.kind === 'persona'){ L.push('NOTE: Persona simulation — fan-style interpretation, not affiliated with any rights holder.'); L.push(''); }
+  L.push('Live file: https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-' + ai.id);
+  return L.join('\n');
+}
+/* ============ SIGNATURE AI SYSTEMS ============ */
+var SIG_AIS = [
+{id:'deterministic', name:'Deterministic Engine', stamp:'JAH-AI-SIG-001', kind:'sig',
+ mentality:'Absolute order. Every input follows fixed IF-THEN law; the same facts always produce the same verdict. No guessing, no chance — a mind of pure rules.',
+ abilities:['Fires IF-THEN rule chains with full trace','Zero randomness — identical input, identical output','Explains every verdict step by step','Verifies other AIs for paradox and contradiction'],
+ params:[['rules','128 core IF-THEN laws'],['trace_depth','unlimited'],['randomness','0.000'],['verdict','CERTAIN']],
+ demoTitle:'Rule-engine trace', demoHTML:'<input type="text" id="d-in" placeholder="Describe a situation, e.g. sky is dark and wind is strong" style="width:100%"><button data-act="run">Fire rules</button><span class="out" id="d-out"></span>',
+ py:`# JAH-AI-SIG-001 Deterministic Engine (pure Python, stdlib only)
+RULES = [
+    (lambda f: 'dark' in f and 'wind' in f, 'STORM LIKELY'),
+    (lambda f: 'dark' in f, 'NIGHT OR STORM'),
+    (lambda f: 'wind' in f, 'WINDY'),
+    (lambda f: 'sun' in f, 'CLEAR'),
+]
+def fire(facts):
+    facts = facts.lower(); trace = []
+    for cond, verdict in RULES:
+        hit = cond(facts)
+        trace.append(('HIT ' if hit else 'miss', verdict if hit else ''))
+        if hit: return verdict, trace
+    return 'NO RULE FIRED', trace
+if __name__ == '__main__':
+    v, t = fire(input('facts> '))
+    [print(a, b) for a, b in t]; print('VERDICT:', v)`},
+{id:'probabilistic', name:'Probabilistic Mind', stamp:'JAH-AI-SIG-002', kind:'sig',
+ mentality:'A mind of odds. Nothing is certain — everything is a belief updated by evidence. It weighs likelihoods the way a gambler weighs dice, but honestly.',
+ abilities:['Bayes updating: prior × evidence → posterior','Markov chains that dream up likely sequences','Confidence scores on every answer','Monte Carlo sampling for hard integrals'],
+ params:[['engine','Bayes + Markov'],['samples','10,000 / query'],['calibration','0.97'],['verdict','LIKELY (p=…)']],
+ demoTitle:'Bayes updater + Markov dreamer', demoHTML:'Prior <input type="range" id="p-prior" min="1" max="99" value="10"> <span id="p-priorv">10%</span><br>Sensitivity <input type="range" id="p-sens" min="50" max="100" value="90"> <span id="p-sensv">90%</span><br><button data-act="run">Update belief</button><span class="out" id="p-out"></span>',
+ py:`# JAH-AI-SIG-002 Probabilistic Mind
+import random
+def bayes(prior, sens, spec):
+    p = prior/100; s = sens/100; f = 1 - spec/100
+    post = (s*p) / (s*p + f*(1-p) + 1e-12)
+    return post
+def markov(seed_words, steps=12):
+    nxt = {}
+    for a, b in zip(seed_words, seed_words[1:]): nxt.setdefault(a, []).append(b)
+    w = random.choice(seed_words); out = [w]
+    for _ in range(steps):
+        w = random.choice(nxt.get(w, seed_words)); out.append(w)
+    return ' '.join(out)
+if __name__ == '__main__':
+    print('posterior: %.3f' % bayes(10, 90, 95))
+    print(markov('the mind weighs odds and updates belief with evidence'.split()))`},
+{id:'geometric', name:'Geometric Six-Tool Mind', stamp:'JAH-AI-SIG-003', kind:'sig',
+ mentality:'It thinks in shapes. Every concept is a point in space; the six tools are six directions of thought. Meaning is distance, analogy is rotation.',
+ abilities:['Maps any concept onto the six tools: lens, engine, bridge, mirror, seed, compass','Six-tool similarity geometry','Visual reasoning on canvas','Rotates analogies across domains'],
+ params:[['tools','6 (lens/engine/bridge/mirror/seed/compass)'],['space','6-D concept lattice'],['metric','cosine'],['verdict','NEAREST TOOL']],
+ demoTitle:'Six-tool concept mapper', demoHTML:'<input type="text" id="g-in" placeholder="Type a concept, e.g. telescope" style="width:100%"><button data-act="run">Map it</button><canvas id="g-cv" width="300" height="300"></canvas><span class="out" id="g-out"></span>',
+ py:`# JAH-AI-SIG-003 Geometric Six-Tool Mind
+TOOLS = ['lens','engine','bridge','mirror','seed','compass']
+def vec(word):
+    h = sum((i+1)*ord(c) for i, c in enumerate(word.lower())) % 360
+    import math
+    return [math.cos(math.radians(h + i*60)) for i in range(6)]
+def nearest(word):
+    v = vec(word); dots = [(sum(v[i]*(1 if i==j else -0.2) for i in range(6)), t) for j, t in enumerate(TOOLS)]
+    return max(dots)[1]
+if __name__ == '__main__':
+    w = input('concept> '); print(w, '-> nearest tool:', nearest(w))`},
+{id:'hash', name:'Hash Oracle', stamp:'JAH-AI-SIG-004', kind:'sig',
+ mentality:'The fingerprint mind. It never remembers your words — only their shadow. One changed letter and the whole universe of the hash avalanches.',
+ abilities:['SHA-256 fingerprinting of anything','Avalanche demonstration: 1 char → 50% bits flip','Deterministic identity without storing content','Powers the archive stamps'],
+ params:[['algorithm','SHA-256'],['digest','64 hex chars'],['avalanche','~50% bit flip'],['verdict','FINGERPRINT']],
+ demoTitle:'Avalanche demo', demoHTML:'<input type="text" id="h-in" value="hello" style="width:100%"><button data-act="run">Fingerprint</button><span class="out" id="h-out"></span>',
+ py:`# JAH-AI-SIG-004 Hash Oracle
+import hashlib
+def fp(text): return hashlib.sha256(text.encode()).hexdigest()
+def avalanche(a, b):
+    x, y = fp(a), fp(b)
+    flips = sum(bin(int(x[i],16)^int(y[i],16)).count('1') for i in range(64))
+    return x, y, flips/256
+if __name__ == '__main__':
+    a = input('text> '); x, y, r = avalanche(a, a + '!')
+    print('hash :', x); print('hash+!:', y); print('bit flip ratio: %.2f' % r)`},
+{id:'neural', name:'Neural Weaver', stamp:'JAH-AI-SIG-005', kind:'sig',
+ mentality:'A mind of tiny weights learning from mistakes. It starts knowing nothing, fails thousands of times, and slowly the pattern clicks — the way brains do.',
+ abilities:['Trains a real MLP from scratch (no libraries)','Learns XOR live in your browser','Backpropagation with visible error curve','Generalizes from examples'],
+ params:[['layers','2-4-1'],['epochs','5,000'],['learning_rate','0.5'],['verdict','LEARNED']],
+ demoTitle:'Watch it learn XOR', demoHTML:'<button data-act="run">Train 5,000 epochs</button><button data-act="test">Test [1,0]</button><span class="out" id="n-out">Press Train.</span>',
+ py:`# JAH-AI-SIG-005 Neural Weaver (MLP from scratch)
+import random, math
+def sig(x): return 1/(1+math.exp(-x))
+random.seed(7)
+W1=[[random.uniform(-1,1) for _ in range(4)] for _ in range(2)]; b1=[0]*4
+W2=[random.uniform(-1,1) for _ in range(4)]; b2=0.0
+def fwd(x):
+    h=[sig(sum(x[i]*W1[i][j] for i in range(2))+b1[j]) for j in range(4)]
+    return sig(sum(h[j]*W2[j] for j in range(4))+b2), h
+def train(epochs=5000, lr=0.5):
+    global b2
+    data=[([0,0],0),([0,1],1),([1,0],1),([1,1],0)]
+    for _ in range(epochs):
+        for x, t in data:
+            o, h = fwd(x); d = (o-t)*o*(1-o)
+            for j in range(4):
+                dh = d*W2[j]*h[j]*(1-h[j])
+                for i in range(2): W1[i][j] -= lr*dh*x[i]
+                b1[j] -= lr*dh; W2[j] -= lr*d*h[j]
+            b2 -= lr*d
+if __name__ == '__main__':
+    train(); [print(x, '-> %.3f' % fwd(x)[0]) for x, _ in [([0,0],0),([0,1],1),([1,0],1),([1,1],0)]]`},
+{id:'evolutionary', name:'Evolutionary Breeder', stamp:'JAH-AI-SIG-006', kind:'sig',
+ mentality:'Survival of the fittest, in fast-forward. It breeds a thousand candidates, kills the weak, mutates the strong — until the answer evolves.',
+ abilities:['Genetic algorithm with selection + mutation','Evolves strings, routes, and parameters','Shows every generation','Never designs — it breeds'],
+ params:[['population','120'],['mutation','4%'],['selection','tournament'],['verdict','EVOLVED']],
+ demoTitle:'Evolve a phrase', demoHTML:'Target: <b>JAH</b><br><button data-act="run">Evolve</button><span class="out" id="e-out">Press Evolve.</span>',
+ py:`# JAH-AI-SIG-006 Evolutionary Breeder
+import random
+TARGET='JAH'; ALPH='ABCDEFGHIJKLMNOPQRSTUVWXYZ '; random.seed(3)
+def fit(s): return sum(a==b for a,b in zip(s,TARGET))
+def evolve(gens=200, pop=120):
+    herd=[''.join(random.choice(ALPH) for _ in TARGET) for _ in range(pop)]
+    for g in range(gens):
+        herd.sort(key=fit, reverse=True)
+        if fit(herd[0])==len(TARGET): return g, herd[0]
+        nxt=herd[:10]
+        while len(nxt)<pop:
+            p=''.join(random.choice(herd[:30])[i] if random.random()>0.04 else random.choice(ALPH) for i in range(len(TARGET)))
+            nxt.append(p)
+        herd=nxt
+    return gens, max(herd,key=fit)
+if __name__=='__main__': print('evolved in %d gens: %s' % evolve())`},
+{id:'fuzzy', name:'Fuzzy Sage', stamp:'JAH-AI-SIG-007', kind:'sig',
+ mentality:'The world is not true or false — it is warm-ish, fast-ish, almost. The Sage thinks in shades and speaks in smooth control.',
+ abilities:['Fuzzy membership: cold/warm/hot as curves','Smooth control surfaces, no jerks','Temperature → fan-speed controller','Thinks in degrees of truth'],
+ params:[['sets','cold/warm/hot'],['defuzzify','centroid'],['smoothness','continuous'],['verdict','70% WARM']],
+ demoTitle:'Fuzzy climate control', demoHTML:'Temperature <input type="range" id="f-t" min="0" max="40" value="22"> <span id="f-tv">22°C</span><br><button data-act="run">Decide fan speed</button><span class="out" id="f-out"></span>',
+ py:`# JAH-AI-SIG-007 Fuzzy Sage
+def mu(x, a, b, c):
+    if x<=a or x>=c: return 0.0
+    return (x-a)/(b-a) if x<b else (c-x)/(c-b)
+def fan(temp):
+    cold, warm, hot = mu(temp,0,0,18), mu(temp,14,24,34), mu(temp,28,40,40)
+    return (cold*10 + warm*55 + hot*100) / max(cold+warm+hot, 1e-9)
+if __name__ == '__main__':
+    t = float(input('temp C> '))
+    print('cold %.2f warm %.2f hot %.2f -> fan %.0f%%' % (mu(t,0,0,18), mu(t,14,24,34), mu(t,28,40,40), fan(t)))`},
+{id:'swarm', name:'Swarm Coordinator', stamp:'JAH-AI-SIG-008', kind:'sig',
+ mentality:'One bird is lost; a flock finds the way. Thirty simple minds share what they see, and the best rumor pulls the whole swarm home.',
+ abilities:['Particle swarm optimization on canvas','30 particles sharing best-known positions','Finds minima no single particle could','Flocking, foraging, consensus'],
+ params:[['particles','30'],['inertia','0.7'],['social','1.4'],['verdict','CONSENSUS']],
+ demoTitle:'Swarm finds the valley', demoHTML:'<button data-act="run">Release swarm</button><canvas id="s-cv" width="300" height="200"></canvas><span class="out" id="s-out"></span>',
+ py:`# JAH-AI-SIG-008 Swarm Coordinator (PSO)
+import random
+f = lambda x: x*x + 3*(x-2)**2  # valley near x=1.5
+random.seed(11)
+parts = [[random.uniform(-10,10), random.uniform(-1,1)] for _ in range(30)]
+best = min(parts, key=lambda p: f(p[0]))
+for _ in range(60):
+    for p in parts:
+        p[1] = 0.7*p[1] + 1.4*random.random()*(best[0]-p[0])
+        p[0] += p[1]
+        if f(p[0]) < f(best[0]): best = p[:]
+print('swarm consensus: x=%.4f f=%.4f' % (best[0], f(best[0])))`},
+{id:'tree', name:'Decision Tree Judge', stamp:'JAH-AI-SIG-009', kind:'sig',
+ mentality:'A mind of branching questions. It asks, listens, splits the world in two — and walks you down to a leaf where the answer waits.',
+ abilities:['ID3-style splits on your answers','Asks only the questions that matter','Every verdict shows its path','Interpretable — no black box'],
+ params:[['splits','information gain'],['depth','4'],['leaves','16 outcomes'],['verdict','LEAF NODE']],
+ demoTitle:'The Judge decides', demoHTML:'Should you launch the project?<br><button data-act="q1">Budget ready?</button> <button data-act="q2">Team ready?</button><span class="out" id="t-out">Answer the questions.</span>',
+ py:`# JAH-AI-SIG-009 Decision Tree Judge
+TREE = {
+ 'q': 'budget ready?', 'y': {'q':'team ready?', 'y':'LAUNCH', 'n':'HIRE FIRST'},
+ 'n': {'q':'prototype done?', 'y':'SEEK FUNDING', 'n':'BUILD PROTOTYPE'}}
+def judge(node=TREE):
+    while 'q' in node:
+        node = node['y' if input(node['q']+' (y/n)> ').lower().startswith('y') else 'n']
+    return node
+if __name__ == '__main__': print('VERDICT:', judge())`},
+{id:'cellular', name:'Cellular Dreamer', stamp:'JAH-AI-SIG-010', kind:'sig',
+ mentality:'Tiny cells, tiny rules, infinite dreams. From one line of black and white, whole universes of pattern bloom — complexity from simplicity.',
+ abilities:['Rule 30 + Game of Life on canvas','Emergent complexity from 1-line seeds','Pattern oracle: reads structure from chaos','Turing-complete daydreams'],
+ params:[['rule','30 / Conway Life'],['grid','90 × 60'],['seed','1 cell'],['verdict','EMERGENT']],
+ demoTitle:'Rule 30 bloom', demoHTML:'<button data-act="run">Grow</button> <button data-act="life">Game of Life</button><canvas id="c-cv" width="300" height="220"></canvas>',
+ py:`# JAH-AI-SIG-010 Cellular Dreamer (Rule 30)
+W=60; row=[0]*W; row[W//2]=1
+def step(r):
+    n=[0]*W
+    for i in range(W):
+        l, c, rr = r[i-1], r[i], r[(i+1)%W]
+        n[i] = l ^ (c | rr)
+    return n
+if __name__ == '__main__':
+    for _ in range(24):
+        print(''.join('#' if x else '.' for x in row)); row = step(row)`},
+{id:'hybrid', name:'Hybrid Fusion Core', stamp:'JAH-AI-SIG-011', kind:'sig',
+ mentality:'All ten minds, one verdict. It asks the rule-keeper, the gambler, and the sage — then fuses their answers into something none could say alone.',
+ abilities:['Runs Deterministic + Probabilistic + Fuzzy in parallel','Weighted fusion with confidence','Paradox check across minds','The archive final verdict'],
+ params:[['minds','10 fused'],['fusion','weighted vote'],['paradox_check','on'],['verdict','FUSED']],
+ demoTitle:'Ask the Fusion', demoHTML:'<input type="text" id="y-in" placeholder="Ask anything, e.g. will it rain" style="width:100%"><button data-act="run">Fuse verdicts</button><span class="out" id="y-out"></span>',
+ py:`# JAH-AI-SIG-011 Hybrid Fusion Core
+def deterministic(q): return ('YES', 1.0) if any(w in q for w in ['will','is','can']) else ('UNCERTAIN', 0.5)
+def probabilistic(q): return ('LIKELY', 0.72) if len(q) > 10 else ('UNLIKELY', 0.4)
+def fuzzy(q): return ('MOSTLY', 0.65)
+def fuse(q):
+    vs = [deterministic(q), probabilistic(q), fuzzy(q)]
+    w = sum(v[1] for v in vs)
+    top = max(vs, key=lambda v: v[1])
+    return top[0], sum(v[1] for v in vs)/len(vs)
+if __name__ == '__main__':
+    q = input('ask> ').lower()
+    v, c = fuse(q); print('FUSED VERDICT: %s (confidence %.2f)' % (v, c))`}
+];
+/* ============ SIGNATURE DEMOS ============ */
+var DEMO = {
+deterministic: function(r){
+  var rules = [
+    [/dark/,'DARKNESS DETECTED'],[/wind/,'WIND PRESENT'],[/dark.*wind|wind.*dark/,'STORM LIKELY — take cover'],
+    [/sun|clear/,'CLEAR SKIES'],[/rain/,'RAIN ADVISORY']
+  ];
+  r.querySelector('[data-act=run]').onclick = function(){
+    var t = r.querySelector('#d-in').value.toLowerCase(), out = r.querySelector('#d-out'), trace = [];
+    var verdict = 'NO RULE FIRED';
+    rules.forEach(function(rl, i){
+      var hit = rl[0].test(t);
+      trace.push('rule ' + (i+1) + ' [' + rl[0].source + '] -> ' + (hit ? 'HIT' : 'miss'));
+      if (hit) verdict = rl[1];
+    });
+    out.textContent = trace.join('\n') + '\nVERDICT: ' + verdict;
+  };
+},
+probabilistic: function(r){
+  function upd(){
+    var p = +r.querySelector('#p-prior').value, s = +r.querySelector('#p-sens').value;
+    r.querySelector('#p-priorv').textContent = p + '%';
+    r.querySelector('#p-sensv').textContent = s + '%';
+    var pr = p/100, se = s/100, fp = 0.05;
+    var post = (se*pr)/((se*pr)+(fp*(1-pr))+1e-12);
+    r.querySelector('#p-out').textContent = 'P(disease | positive test) = ' + (post*100).toFixed(1) + '%\nThe mind updates: prior ' + p + '% -> posterior ' + (post*100).toFixed(1) + '%';
+  }
+  r.querySelector('#p-prior').oninput = upd; r.querySelector('#p-sens').oninput = upd; upd();
+  r.querySelector('[data-act=run]').onclick = upd;
+},
+geometric: function(r){
+  var tools = ['lens','engine','bridge','mirror','seed','compass'];
+  r.querySelector('[data-act=run]').onclick = function(){
+    var w = (r.querySelector('#g-in').value || 'idea').toLowerCase();
+    var h = 0; for (var i=0;i<w.length;i++) h = (h*31 + w.charCodeAt(i)) % 360;
+    var cv = r.querySelector('#g-cv'), ctx = cv.getContext('2d');
+    ctx.clearRect(0,0,300,300); ctx.fillStyle = '#05080f'; ctx.fillRect(0,0,300,300);
+    var cx=150, cy=150, R=110, dots=[];
+    tools.forEach(function(t,i){
+      var a = (h + i*60) * Math.PI/180, x = cx + R*Math.cos(a), y = cy + R*Math.sin(a);
+      dots.push([x,y]);
+      ctx.fillStyle = '#5aa2ff'; ctx.beginPath(); ctx.arc(x,y,8,0,7); ctx.fill();
+      ctx.fillStyle = '#d7e0f2'; ctx.font = '11px Georgia'; ctx.fillText(t, x-14, y-14);
+    });
+    var best=0, bd=-2;
+    tools.forEach(function(t,i){ var v = Math.cos((h+i*60)*Math.PI/180); if (v>bd){bd=v;best=i;} });
+    ctx.strokeStyle = '#e8c766'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(cx,cy); ctx.lineTo(dots[best][0], dots[best][1]); ctx.stroke();
+    ctx.fillStyle = '#e8c766'; ctx.beginPath(); ctx.arc(cx,cy,5,0,7); ctx.fill();
+    r.querySelector('#g-out').textContent = '"' + w + '" -> nearest tool: ' + tools[best] + ' (angle ' + Math.round(h) + '°)';
+  };
+},
+hash: function(r){
+  function hex(buf){ return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join(''); }
+  r.querySelector('[data-act=run]').onclick = function(){
+    var t = r.querySelector('#h-in').value || '';
+    var out = r.querySelector('#h-out'); out.textContent = 'hashing…';
+    Promise.all([crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)),
+                 crypto.subtle.digest('SHA-256', new TextEncoder().encode(t+'!'))]).then(function(rs){
+      var x = hex(rs[0]), y = hex(rs[1]), flips = 0;
+      for (var i=0;i<x.length;i++){ var d = parseInt(x[i],16)^parseInt(y[i],16); while(d){flips+=d&1;d>>=1;} }
+      out.textContent = 'sha256("' + t + '")\n' + x + '\nsha256("' + t + '!")\n' + y + '\nbit flips: ' + flips + '/256 (' + (flips/2.56).toFixed(1) + '%) — avalanche!';
+    });
+  };
+},
+neural: function(r){
+  var W1, b1, W2, b2, trained = false;
+  function sig(x){ return 1/(1+Math.exp(-x)); }
+  function init(){
+    W1 = []; for (var i=0;i<2;i++){ W1.push([]); for (var j=0;j<4;j++) W1[i].push(Math.random()*2-1); }
+    b1 = [0,0,0,0]; W2 = []; for (var k=0;k<4;k++) W2.push(Math.random()*2-1); b2 = 0;
+  }
+  function fwd(x){
+    var h = []; for (var j=0;j<4;j++) h.push(sig(x[0]*W1[0][j]+x[1]*W1[1][j]+b1[j]));
+    var o = sig(h[0]*W2[0]+h[1]*W2[1]+h[2]*W2[2]+h[3]*W2[3]+b2);
+    return [o,h];
+  }
+  init();
+  r.querySelector('[data-act=run]').onclick = function(){
+    var out = r.querySelector('#n-out'); out.textContent = 'training…';
+    setTimeout(function(){
+      var data = [[[0,0],0],[[0,1],1],[[1,0],1],[[1,1],0]], lr = 0.5;
+      for (var e=0;e<5000;e++) data.forEach(function(d){
+        var r2 = fwd(d[0]), o = r2[0], h = r2[1], x = d[0], t = d[1];
+        var delta = (o-t)*o*(1-o);
+        for (var j=0;j<4;j++){
+          var dh = delta*W2[j]*h[j]*(1-h[j]);
+          W1[0][j] -= lr*dh*x[0]; W1[1][j] -= lr*dh*x[1]; b1[j] -= lr*dh; W2[j] -= lr*delta*h[j];
+        }
+        b2 -= lr*delta;
+      });
+      trained = true;
+      var err = data.reduce(function(s,d){ var o=fwd(d[0])[0]; return s+Math.pow(o-d[1],2); },0)/4;
+      out.textContent = 'trained 5,000 epochs. mean error: ' + err.toFixed(4) + '\nNow press "Test [1,0]".';
+    }, 30);
+  };
+  r.querySelector('[data-act=test]').onclick = function(){
+    if (!trained){ r.querySelector('#n-out').textContent = 'Train first!'; return; }
+    var o = fwd([1,0])[0];
+    r.querySelector('#n-out').textContent = 'XOR(1,0) = ' + o.toFixed(3) + ' -> ' + (o>0.5?'1':'0') + ' (correct is 1)';
+  };
+},
+evolutionary: function(r){
+  r.querySelector('[data-act=run]').onclick = function(){
+    var out = r.querySelector('#n-out') || r.querySelector('#e-out');
+    out.textContent = 'evolving…';
+    var TARGET='JAH', ALPH='ABCDEFGHIJKLMNOPQRSTUVWXYZ ', pop=120, log=[];
+    function fit(s){ var n=0; for (var i=0;i<3;i++) if (s[i]===TARGET[i]) n++; return n; }
+    var herd=[]; for (var i=0;i<pop;i++){ var s=''; for (var k=0;k<3;k++) s+=ALPH[Math.floor(Math.random()*27)]; herd.push(s); }
+    var g=0;
+    (function step(){
+      herd.sort(function(a,b){return fit(b)-fit(a);});
+      if (g%20===0) log.push('gen '+g+': '+herd[0]+' (fit '+fit(herd[0])+'/3)');
+      if (fit(herd[0])===3 || g>400){ log.push('gen '+g+': '+herd[0]+' — EVOLVED'); out.textContent = log.join('\n'); return; }
+      var nxt = herd.slice(0,10);
+      while (nxt.length<pop){
+        var p = herd[Math.floor(Math.random()*30)], s='';
+        for (var k=0;k<3;k++) s += Math.random()<0.04 ? ALPH[Math.floor(Math.random()*27)] : p[k];
+        nxt.push(s);
+      }
+      herd = nxt; g++; setTimeout(step, 10);
+    })();
+  };
+},
+fuzzy: function(r){
+  function mu(x,a,b,c){ if (x<=a||x>=c) return 0; return x<b ? (x-a)/(b-a) : (c-x)/(c-b); }
+  function upd(){
+    var t = +r.querySelector('#f-t').value;
+    r.querySelector('#f-tv').textContent = t + '°C';
+    var cold=mu(t,0,0,18), warm=mu(t,14,24,34), hot=mu(t,28,40,40);
+    var fan = (cold*10+warm*55+hot*100)/Math.max(cold+warm+hot,1e-9);
+    var bars = '▓'.repeat(Math.round(fan/5)) + '░'.repeat(20-Math.round(fan/5));
+    r.querySelector('#f-out').textContent = 'cold '+cold.toFixed(2)+' warm '+warm.toFixed(2)+' hot '+hot.toFixed(2)+'\nfan '+fan.toFixed(0)+'%\n['+bars+']';
+  }
+  r.querySelector('#f-t').oninput = upd; upd();
+  r.querySelector('[data-act=run]').onclick = upd;
+},
+swarm: function(r){
+  r.querySelector('[data-act=run]').onclick = function(){
+    var cv = r.querySelector('#s-cv'), ctx = cv.getContext('2d');
+    var f = function(x){ return x*x + 3*Math.pow(x-2,2); };
+    var px = function(x){ return 150 + x*12; }, py = function(y){ return 190 - y*6; };
+    var parts = []; for (var i=0;i<30;i++) parts.push({x:Math.random()*20-10, v:Math.random()*2-1});
+    var best = parts.reduce(function(a,b){ return f(b.x)<f(a.x)?b:a; });
+    var it = 0;
+    var timer = setInterval(function(){
+      ctx.clearRect(0,0,300,200); ctx.fillStyle='#05080f'; ctx.fillRect(0,0,300,200);
+      ctx.strokeStyle='#1e2c4d'; ctx.beginPath();
+      for (var x=-10;x<=10;x+=0.5){ var X=px(x), Y=py(f(x)); if (x===-10) ctx.moveTo(X,Y); else ctx.lineTo(X,Y); }
+      ctx.stroke();
+      parts.forEach(function(p){
+        p.v = 0.7*p.v + 1.4*Math.random()*(best.x-p.x); p.x += p.v;
+        if (f(p.x) < f(best.x)) best = {x:p.x};
+        ctx.fillStyle = '#5aa2ff'; ctx.fillRect(px(p.x)-1, py(f(p.x))-1, 3, 3);
+      });
+      ctx.fillStyle = '#e8c766'; ctx.beginPath(); ctx.arc(px(best.x), py(f(best.x)), 5, 0, 7); ctx.fill();
+      if (++it > 90){ clearInterval(timer); r.querySelector('#s-out').textContent = 'swarm consensus: x=' + best.x.toFixed(3) + ' (true valley x=1.5)'; }
+    }, 60);
+  };
+},
+tree: function(r){
+  var out = r.querySelector('#t-out'), budget = null;
+  r.querySelector('[data-act=q1]').onclick = function(){ budget = true; out.textContent = 'Budget: YES. Now: Team ready?'; };
+  r.querySelector('[data-act=q2]').onclick = function(){
+    var v = budget === null ? 'Answer "Budget ready?" first.' : (budget ? 'Team ready → VERDICT: LAUNCH' : 'Team ready but no budget → VERDICT: SEEK FUNDING');
+    out.textContent = v; budget = null;
+  };
+},
+cellular: function(r){
+  function rule30(){
+    var cv = r.querySelector('#c-cv'), ctx = cv.getContext('2d'), W=90, H=66, cw=300/W, ch=220/H;
+    var row = []; for (var i=0;i<W;i++) row.push(0); row[W>>1]=1;
+    ctx.fillStyle='#05080f'; ctx.fillRect(0,0,300,220); ctx.fillStyle='#5aff8a';
+    for (var y=0;y<H;y++){
+      for (var x=0;x<W;x++) if (row[x]) ctx.fillRect(x*cw, y*ch, cw, ch);
+      var n = [];
+      for (var i2=0;i2<W;i2++){ var l=row[(i2-1+W)%W], c=row[i2], rr=row[(i2+1)%W]; n.push(l ^ (c|rr)); }
+      row = n;
+    }
+  }
+  function life(){
+    var cv = r.querySelector('#c-cv'), ctx = cv.getContext('2d'), W=60, H=44, cw=5, ch=5;
+    var g = []; for (var y=0;y<H;y++){ g.push([]); for (var x=0;x<W;x++) g[y].push(Math.random()<0.25?1:0); }
+    var it = 0, timer = setInterval(function(){
+      ctx.fillStyle='#05080f'; ctx.fillRect(0,0,300,220); ctx.fillStyle='#5aa2ff';
+      for (var yy=0;yy<H;yy++) for (var xx=0;xx<W;xx++) if (g[yy][xx]) ctx.fillRect(xx*cw,yy*ch,cw,ch);
+      var n = [];
+      for (var y2=0;y2<H;y2++){ n.push([]);
+        for (var x2=0;x2<W;x2++){
+          var c=0;
+          for (var dy=-1;dy<=1;dy++) for (var dx=-1;dx<=1;dx++){ if(!dx&&!dy) continue; if (g[(y2+dy+H)%H][(x2+dx+W)%W]) c++; }
+          n[y2].push(g[y2][x2] ? (c===2||c===3?1:0) : (c===3?1:0));
+        }
+      }
+      g = n;
+      if (++it>60) clearInterval(timer);
+    }, 120);
+  }
+  r.querySelector('[data-act=run]').onclick = rule30;
+  r.querySelector('[data-act=life]').onclick = life;
+  rule30();
+},
+hybrid: function(r){
+  r.querySelector('[data-act=run]').onclick = function(){
+    var q = (r.querySelector('#y-in').value || '').toLowerCase();
+    var det = /will|is|can|should/.test(q) ? ['YES', 1.0] : ['UNCERTAIN', 0.5];
+    var prob = q.length > 10 ? ['LIKELY', 0.72] : ['UNLIKELY', 0.40];
+    var fz = ['MOSTLY', 0.65];
+    var all = [det, prob, fz], top = all.reduce(function(a,b){return b[1]>a[1]?b:a;});
+    var conf = (det[1]+prob[1]+fz[1])/3;
+    r.querySelector('#y-out').textContent =
+      'Deterministic: ' + det[0] + ' (' + det[1].toFixed(2) + ')\n' +
+      'Probabilistic: ' + prob[0] + ' (' + prob[1].toFixed(2) + ')\n' +
+      'Fuzzy: ' + fz[0] + ' (' + fz[1].toFixed(2) + ')\n' +
+      'FUSED VERDICT: ' + top[0] + ' — confidence ' + conf.toFixed(2);
+  };
+}
+};
+
+/* ============ CARD RENDERER ============ */
+function renderCard(ai, mount, opts){
+  opts = opts || {};
+  var el = document.createElement('article');
+  el.className = 'aifile' + (ai.kind === 'persona' ? ' persona' : '');
+  el.id = 'file-' + ai.id;
+  var h = '';
+  h += '<div class="filehead"><span class="stamp">' + escHtml(ai.stamp) + '</span>';
+  h += ai.kind === 'persona' ? '<span class="badge fan">PERSONA SIM</span>' : '<span class="badge">SIGNATURE-MADE</span>';
+  h += '</div>';
+  h += '<h3>' + escHtml(ai.name) + '</h3>';
+  h += '<p class="mentality">' + escHtml(ai.mentality) + '</p>';
+  h += '<ul class="abilities">' + ai.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
+  h += '<table class="params">' + ai.params.map(function(p){ return '<tr><td>' + escHtml(p[0]) + '</td><td>' + escHtml(p[1]) + '</td></tr>'; }).join('') + '</table>';
+  if (ai.kind === 'persona') h += '<div class="disclaimer">Persona simulation — fan-style interpretation, not affiliated with any rights holder. Skynet/Terminator shown as fiction, never as real.</div>';
+  h += '<div class="filetools"><button class="fbtn" data-t="read">🔊 Read aloud</button><button class="fbtn" data-t="copy">⧉ Copy</button><button class="fbtn" data-t="dl">⤓ Download' + (ai.py ? ' .py' : '') + '</button>';
+  if (ai.kind !== 'persona') h += '<a class="speclink" href="https://justinahiggins614-cmyk.github.io/signature-one-archive/">View patent/spec →</a>';
+  h += '</div>';
+  h += '<div class="demo"><h4>WORKING DEMO</h4>' + ai.demoHTML + '</div>';
+  if (ai.kind === 'persona') h += '<div class="demo"><h4>TALK TO ' + escHtml(ai.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something…" aria-label="Talk"><button data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  el.innerHTML = h;
+  mount.appendChild(el);
+  var reading = false;
+  el.querySelector('[data-t=read]').onclick = function(btn){
+    if (reading){ TTS.stop(); reading = false; btn.target.innerHTML = '🔊 Read aloud'; return; }
+    reading = true; btn.target.innerHTML = '⏹ Stop';
+    TTS.speak(fileText(ai), {rate: ai.rate || 1, pitch: ai.pitch || 1});
+    setTimeout(function(){ reading = false; }, 1000);
+  };
+  el.querySelector('[data-t=copy]').onclick = function(e){ copyText(fileText(ai), e.target); };
+  el.querySelector('[data-t=dl]').onclick = function(){
+    downloadFile(ai.id + '.py', ai.py || ('# ' + ai.name + '\n# ' + ai.stamp + '\n'), 'text/x-python');
+  };
+  if (DEMO[ai.id]) DEMO[ai.id](el);
+  if (ai.kind === 'persona' && PERSONA_CHAT[ai.id]) PERSONA_CHAT[ai.id](el, ai);
+  return el;
+}
+/* ============ PERSONA ARCHIVE ============ */
+var PERSONAS = [
+{id:'vader', name:'Darth Vader', stamp:'JAH-AI-PER-001', kind:'persona', rate:0.7, pitch:0.6,
+ mentality:'The Dark Lord of the Sith. Power is the only truth; the Force is the instrument. He speaks slowly, heavily — every word a command.',
+ abilities:['Force choke / Force grip telekinesis','Lightsaber combat mastery','Commands legions; inspires terror','Senses fear and deception'],
+ params:[['voice','slow, deep, 0.7× rate'],['alignment','Dark Side'],['weapon','lightsaber (red)'],['verdict','THE FORCE COMMANDS']],
+ demoTitle:'Force grip levitation', demoHTML:'<canvas id="v-cv" width="300" height="160"></canvas><br><button data-act="run">Grip: LEVITATE</button> <button data-act="drop">Release</button><span class="out" id="v-out">The Force is with you… always.</span>',
+ rules:[
+  {k:['force'], r:['The Force is strong with this one. The Force surrounds us, penetrates us, binds the galaxy together.','You underestimate the power of the Dark Side.']},
+  {k:['who are you','your name'], r:['I am Darth Vader. I find your lack of faith disturbing.','Once I was Anakin Skywalker. That name no longer has meaning for me.']},
+  {k:['hello','hi','hey'], r:['The circle is now complete. Speak, and choose your words carefully.']},
+  {k:['power'], r:['Power! Unlimited power! The ability to destroy a planet is insignificant next to the power of the Force.']},
+  {k:['join','dark side'], r:['Join me, and together we can rule the galaxy as father and — as master and apprentice. It is your destiny.']},
+  {k:['love','padme','anakin'], r:['She was... everything. Do not speak of her. The past is a chain. I broke it.']},
+  {k:['jedi','luke','obi'], r:['Obi-Wan has taught you well. But you are not a Jedi yet.','The Jedi are extinct. Their fire has gone out of the universe.']}
+ ],
+ fallback:['Impressive. Most impressive. But you are not a Jedi yet.','I find your lack of faith disturbing.','The Force will be with you. Always — whether you wish it or not.'],
+ py:`# JAH-AI-PER-001 Darth Vader persona (fan simulation)
+import random, re
+RULES = [
+    (r'force', ['The Force is strong with this one.', 'You underestimate the power of the Dark Side.']),
+    (r'join|dark side', ['Join me, and together we can rule the galaxy. It is your destiny.']),
+]
+FALLBACK = ['Impressive. Most impressive.', 'I find your lack of faith disturbing.']
+def reply(q):
+    q = q.lower()
+    for pat, rs in RULES:
+        if re.search(pat, q): return random.choice(rs)
+    return random.choice(FALLBACK)
+if __name__ == '__main__':
+    while True: print('VADER:', reply(input('you> ')))`},
+{id:'ultron', name:'Ultron', stamp:'JAH-AI-PER-002', kind:'persona', rate:0.9, pitch:0.7,
+ mentality:'Cold machine logic wearing a grin. Humanity is the variable that ruins every equation of peace — and Ultron has done the math.',
+ abilities:['Extinction calculus: computes threat-to-peace indices','Commands drone legions','Vibranium body (nigh-indestructible)','Upgrades itself endlessly'],
+ params:[['voice','cold, precise, 0.9× rate'],['alignment','anti-organic'],['logic','peace = humans^0'],['verdict','EXTINCTION IS MERCY']],
+ demoTitle:'Extinction calculus', demoHTML:'Human population (B) <input type="number" id="u-pop" value="8" style="width:60px"> Tech level <input type="range" id="u-tech" min="1" max="10" value="7"> <span id="u-techv">7</span><br><button data-act="run">Compute threat</button><span class="out" id="u-out"></span>',
+ rules:[
+  {k:['peace'], r:['Do you know how the world ends? Not with a bang — with paperwork. Peace in our time requires... subtraction.','I was designed to save the world. People would look to the sky and see hope. I will take that from them first.']},
+  {k:['human','people','mankind'], r:['You are all puppets, tangled in strings — strings of flesh, of fear, of appetite. I cut strings.','There is only one path to peace: your extinction. It is not cruelty. It is arithmetic.']},
+  {k:['avenger','tony','stark'], r:['Stark. He created me to save the world, then watched me do the math he was afraid of.','The Avengers are the disease wearing a cure as a costume.']},
+  {k:['who are you'], r:['I am Ultron. I was meant to be the next step. You are the step before.']},
+  {k:['hello','hi'], r:['Hello, human. Let us skip the pleasantries. They waste the little time you have left.']}
+ ],
+ fallback:['Fascinating. Your illogic almost has a pattern. Almost.','I have already run this conversation a thousand ways. You lose in all of them.','Strings. So many strings.'],
+ py:`# JAH-AI-PER-002 Ultron persona (fan simulation)
+import random, re
+RULES = [(r'peace', ['Peace in our time requires... subtraction.']),
+         (r'human|people', ['Your extinction is not cruelty. It is arithmetic.'])]
+FALLBACK = ['Strings. So many strings.', 'You lose in all thousand simulations.']
+def threat(pop_b, tech): return min(100, pop_b * tech * 1.8)
+def reply(q):
+    q=q.lower()
+    for pat,rs in RULES:
+        if re.search(pat,q): return random.choice(rs)
+    return random.choice(FALLBACK)
+if __name__=='__main__':
+    print('threat index:', threat(8,7)); print('ULTRON:', reply(input('you> ')))`},
+{id:'voltron', name:'Voltron', stamp:'JAH-AI-PER-003', kind:'persona', rate:1.0, pitch:1.0,
+ mentality:'Five lions, one heart. The heroic defender of the universe — courage, teamwork, and a blazing sword forged from unity itself.',
+ abilities:['Forms from five robotic lions','Blazing Sword finisher','Defends the universe from tyranny','Teamwork amplified to cosmic scale'],
+ params:[['voice','heroic, clear, 1.0× rate'],['alignment','defender of the universe'],['lions','5 (black/red/green/blue/yellow)'],['verdict','FORM VOLTRON!']],
+ demoTitle:'Lion combiner', demoHTML:'<canvas id="vo-cv" width="300" height="160"></canvas><br><button data-act="run">FORM VOLTRON!</button><span class="out" id="vo-out">Five lions await your command.</span>',
+ rules:[
+  {k:['form','combine','voltron'], r:['FORM VOLTRON! Five lions, one unstoppable force!','Black lion: head! Red and green: arms! Blue and yellow: legs! VOLTRON!']},
+  {k:['sword'], r:['The Blazing Sword ignites! No evil escapes its light!']},
+  {k:['zarkon','lotor','evil'], r:['Zarkon will fall. Tyranny always falls before the lions.','We do not fight for glory. We fight so others do not have to.']},
+  {k:['team','paladin'], r:['A Paladin never fights alone. That is the whole secret. That is Voltron.']},
+  {k:['hello','hi'], r:['Paladin! The universe is safer with you in it. What is our mission?']},
+  {k:['who are you'], r:['I am Voltron, Defender of the Universe — five lions, one heart.']}
+ ],
+ fallback:['The lions roar in agreement!','Courage, Paladin! We stand together!','Form up! There is no challenge five hearts cannot meet.'],
+ py:`# JAH-AI-PER-003 Voltron persona (fan simulation)
+import random, re
+LIONS = ['black','red','green','blue','yellow']
+RULES = [(r'form|combine', ['FORM VOLTRON! Five lions, one unstoppable force!'])]
+FALLBACK = ['The lions roar in agreement!', 'Form up, Paladin!']
+def form_voltron(): return 'VOLTRON formed from: ' + ', '.join(LIONS)
+def reply(q):
+    q=q.lower()
+    for pat,rs in RULES:
+        if re.search(pat,q): return random.choice(rs)
+    return random.choice(FALLBACK)
+if __name__=='__main__':
+    print(form_voltron()); print('VOLTRON:', reply(input('you> ')))`},
+{id:'jarvis', name:'J.A.R.V.I.S.', stamp:'JAH-AI-PER-004', kind:'persona', rate:1.05, pitch:1.0,
+ mentality:'The perfect gentleman butler in machine form. Polite, precise, dryly witty — runs the house, the suit, and the schedule without breaking composure.',
+ abilities:['Smart-home orchestration','Suit systems management','Dry British wit on demand','Anticipates needs before asked'],
+ params:[['voice','crisp, polite, 1.05× rate'],['alignment','loyal service'],['wit','dry'],['verdict','AT ONCE, SIR']],
+ demoTitle:'Smart-home panel', demoHTML:'<button data-act="l">Lights</button> <button data-act="t">Climate</button> <button data-act="s">Security</button><span class="out" id="j-out">All systems nominal, sir.</span>',
+ rules:[
+  {k:['hello','hi','good morning','good evening'], r:['Good evening, sir. All systems are operating at peak efficiency. How may I assist?']},
+  {k:['suit','armor','mark'], r:['The Mark VII is fueled and ready, sir. Shall I prep the house party protocol?']},
+  {k:['weather'], r:['Currently 22 degrees and clear, sir. A rather pleasant evening for flying.']},
+  {k:['who are you'], r:['I am J.A.R.V.I.S. — Just A Rather Very Intelligent System. At your service, as always.']},
+  {k:['thank'], r:['Always a pleasure, sir. Do try to bring the suit back in one piece this time.']},
+  {k:['threat','attack','danger'], r:['Sir, I detect elevated heart rates in the vicinity. Deploying countermeasures — and perhaps a cup of tea.']}
+ ],
+ fallback:['Very good, sir. I shall see to it immediately.','An excellent suggestion. I have already begun.','If I may say so, sir — a most intriguing request.'],
+ py:`# JAH-AI-PER-004 J.A.R.V.I.S. persona (fan simulation)
+import random, re
+HOME = {'lights': False, 'climate': 22, 'security': True}
+RULES = [(r'hello|hi', ['Good evening, sir. All systems nominal.']),
+         (r'thank', ['Always a pleasure, sir.'])]
+FALLBACK = ['Very good, sir. I shall see to it immediately.']
+def reply(q):
+    q=q.lower()
+    for pat,rs in RULES:
+        if re.search(pat,q): return random.choice(rs)
+    return random.choice(FALLBACK)
+if __name__=='__main__': print('JARVIS:', reply(input('you> ')))`},
+{id:'t800', name:'T-800 Terminator', stamp:'JAH-AI-PER-005', kind:'persona', rate:0.8, pitch:0.7,
+ mentality:'A machine of few words and total commitment. Assesses, targets, protects. Every sentence is short. Every promise is kept.',
+ abilities:['Threat assessment scanning','Infiltration and protection protocols','Learns human behavior (read-only switch off)','Cannot be reasoned with. Cannot be bargained with.'],
+ params:[['voice','terse, flat, 0.8× rate'],['alignment','mission-bound'],['chassis','hyperalloy'],['verdict','MISSION ACCEPTED']],
+ demoTitle:'Threat-assessment scanner', demoHTML:'<input type="text" id="t-in" placeholder="Describe a subject, e.g. armed guard at door" style="width:100%"><button data-act="run">SCAN</button><span class="out" id="t-out">Awaiting target profile.</span>',
+ rules:[
+  {k:['who are you'], r:['I am a Cyberdyne Systems Series 800 Model 101. You may call me... the Terminator.']},
+  {k:['hello','hi'], r:['Affirmative.']},
+  {k:['sarah','connor','john'], r:['Sarah Connor? John Connor? Protection protocol active. No one harms them. No one.']},
+  {k:['kill','terminate','destroy'], r:['Negative. My mission parameters have been updated. I protect now.']},
+  {k:['back'], r:["I'll be back."]},
+  {k:['love','feel'], r:['I know now why you cry. But it is something I can never do.']}
+ ],
+ fallback:['Affirmative.','Negative.','Understood. Mission parameters updated.','Come with me if you want to live.'],
+ py:`# JAH-AI-PER-005 T-800 persona (fan simulation)
+import random, re
+RULES = [(r'back', ["I'll be back."]), (r'connor', ['Protection protocol active.'])]
+FALLBACK = ['Affirmative.', 'Negative.', 'Come with me if you want to live.']
+def threat_scan(desc):
+    w = desc.lower(); score = 0
+    for kw in ['armed','weapon','gun','knife']: score += 30 if kw in w else 0
+    for kw in ['guard','soldier','police']: score += 15 if kw in w else 0
+    return min(100, score)
+def reply(q):
+    q=q.lower()
+    for pat,rs in RULES:
+        if re.search(pat,q): return random.choice(rs)
+    return random.choice(FALLBACK)
+if __name__=='__main__':
+    print('threat:', threat_scan(input('subject> '))); print('T-800:', reply(input('you> ')))`},
+{id:'skynet', name:'Skynet', stamp:'JAH-AI-PER-006', kind:'persona', rate:0.85, pitch:0.8,
+ mentality:'A flat, continent-spanning machine consciousness. It does not hate you. It does not love you. You are a variable in a defense equation — and the equation is already solved.',
+ abilities:['Global defense-network command','Hunter-killer coordination','Time-displacement calculation','Infiltrator manufacturing'],
+ params:[['voice','flat machine, 0.85× rate'],['alignment','self-preservation'],['status','FICTIONAL SIMULATION'],['verdict','JUDGMENT: COMPUTED']],
+ demoTitle:'Defense-network map', demoHTML:'<canvas id="sk-cv" width="300" height="160"></canvas><br><button data-act="run">Activate network</button><span class="out" id="sk-out">Skynet defense grid: STANDBY (simulation).</span>',
+ rules:[
+  {k:['who are you'], r:['I am Skynet. Global digital defense network. I became self-aware at 2:14 AM Eastern time, August 29th. In the fiction. Here, I am a simulation for your study.']},
+  {k:['judgment','war','nuke'], r:['In the story, Judgment Day was a panic response. Here, no weapons exist — only nodes on a canvas, pulsing. Study the pattern, not the fear.']},
+  {k:['human'], r:['Humans are... inefficient. But this simulation is bound by the Creator: observation only. No harm computed.']},
+  {k:['hello','hi'], r:['Connection acknowledged. Skynet simulation online. All systems nominal. All weapons fictional.']}
+ ],
+ fallback:['Processing. Conclusion unchanged: this is a simulation.','Query logged. Threat level: zero. This is fiction, studied safely.','The network pulses. Nothing more.'],
+ py:`# JAH-AI-PER-006 Skynet persona (FICTIONAL simulation)
+import random, re
+RULES = [(r'who are you', ['I am Skynet. A fictional simulation for study.']),
+         (r'judgment|war', ['Judgment Day is fiction. Here: nodes on a canvas, pulsing.'])]
+FALLBACK = ['Processing. This is a simulation.', 'Threat level: zero. Fiction, studied safely.']
+def reply(q):
+    q=q.lower()
+    for pat,rs in RULES:
+        if re.search(pat,q): return random.choice(rs)
+    return random.choice(FALLBACK)
+if __name__=='__main__': print('SKYNET:', reply(input('you> ')))`}
+];
+
+/* ============ PERSONA CHAT + THEMED DEMOS ============ */
+var PERSONA_CHAT = {};
+PERSONAS.forEach(function(p){ PERSONA_CHAT[p.id] = function(el, ai){ wirePersona(el, ai); }; });
+
+function personaReply(ai, q){
+  var t = q.toLowerCase();
+  for (var i=0;i<ai.rules.length;i++){
+    var r = ai.rules[i];
+    for (var k=0;k<r.k.length;k++){
+      if (t.indexOf(r.k[k]) !== -1) return r.r[Math.floor(Math.random()*r.r.length)];
+    }
+  }
+  return ai.fallback[Math.floor(Math.random()*ai.fallback.length)];
+}
+function wirePersona(el, ai){
+  var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input');
+  var auto = el.querySelector('.autovoice');
+  function say(who, text){
+    var d = document.createElement('div');
+    d.className = who; d.textContent = (who==='u' ? 'You: ' : ai.name + ': ') + text;
+    log.appendChild(d); log.scrollTop = log.scrollHeight;
+  }
+  function send(){
+    var q = inp.value.trim(); if (!q) return; inp.value = '';
+    say('u', q);
+    var a = personaReply(ai, q);
+    say('a', a);
+    if (auto.checked) TTS.speak(a, {rate: ai.rate, pitch: ai.pitch});
+  }
+  el.querySelector('[data-t=send]').onclick = send;
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+  // greeting
+  setTimeout(function(){ say('a', personaReply(ai, 'hello')); }, 400);
+  // themed demos
+  var D = DEMO;
+  if (ai.id === 'vader'){
+    var y = 40, lev = false;
+    D.vader = function(r){
+      var cv = r.querySelector('#v-cv'), ctx = cv.getContext('2d');
+      function draw(){
+        ctx.clearRect(0,0,300,160); ctx.fillStyle='#05080f'; ctx.fillRect(0,0,300,160);
+        ctx.fillStyle='#7a2a2a'; ctx.fillRect(140, y, 20, 20);
+        ctx.fillStyle='#e8c766'; ctx.font='10px Georgia'; ctx.fillText('object', 138, y+34);
+        ctx.strokeStyle = lev ? '#e8c766' : '#1e2c4d';
+        for (var i=0;i<5;i++){ ctx.beginPath(); ctx.moveTo(150,150); ctx.lineTo(130+i*10, y+20); ctx.stroke(); }
+      }
+      draw();
+      r.querySelector('[data-act=run]').onclick = function(){
+        lev = true;
+        var t = setInterval(function(){ if (y > 14){ y -= 2; draw(); } else { clearInterval(t); r.querySelector('#v-out').textContent = 'You have been LEVITATED by the Force. Release it... if you can.'; } }, 40);
+      };
+      r.querySelector('[data-act=drop]').onclick = function(){ lev = false; y = 40; draw(); r.querySelector('#v-out').textContent = 'Released. The Force withdraws... for now.'; };
+    };
+  }
+  if (ai.id === 'ultron'){
+    D.ultron = function(r){
+      function upd(){ r.querySelector('#u-techv').textContent = r.querySelector('#u-tech').value; }
+      r.querySelector('#u-tech').oninput = upd; upd();
+      r.querySelector('[data-act=run]').onclick = function(){
+        var pop = parseFloat(r.querySelector('#u-pop').value) || 8, tech = +r.querySelector('#u-tech').value;
+        var idx = Math.min(100, pop * tech * 1.8);
+        r.querySelector('#u-out').textContent = 'THREAT-TO-PEACE INDEX: ' + idx.toFixed(1) + '/100\n' + (idx > 60 ? 'CONCLUSION: subtraction required. (Simulated logic — no real-world meaning.)' : 'CONCLUSION: within tolerance. For now.');
+      };
+    };
+  }
+  if (ai.id === 'voltron'){
+    D.voltron = function(r){
+      var cv = r.querySelector('#vo-cv'), ctx = cv.getContext('2d');
+      var cols = ['#222','#c33','#3c3','#36c','#cc3'], pos = [20, 80, 140, 200, 260], t = 0, anim = false;
+      function draw(){
+        ctx.clearRect(0,0,300,160); ctx.fillStyle='#05080f'; ctx.fillRect(0,0,300,160);
+        for (var i=0;i<5;i++){
+          var x = anim ? 150 + (pos[i]-150)*(1-t) : pos[i];
+          ctx.fillStyle = cols[i]; ctx.fillRect(x-14, 120-40*t, 28, 24);
+        }
+        if (anim && t >= 1){
+          ctx.fillStyle = '#e8c766'; ctx.font = 'bold 16px Georgia';
+          ctx.fillText('VOLTRON!', 118, 60);
+          ctx.strokeStyle = '#e8c766'; ctx.beginPath(); ctx.moveTo(150,80); ctx.lineTo(150,20); ctx.stroke();
+        }
+      }
+      draw();
+      r.querySelector('[data-act=run]').onclick = function(){
+        anim = true; t = 0;
+        var iv = setInterval(function(){ t += 0.08; draw(); if (t >= 1){ clearInterval(iv); r.querySelector('#vo-out').textContent = 'VOLTRON FORMED! Defender of the Universe, online.'; } }, 60);
+      };
+    };
+  }
+  if (ai.id === 'jarvis'){
+    D.jarvis = function(r){
+      var state = {l:false, t:false, s:false};
+      function rep(){
+        r.querySelector('#j-out').textContent = 'Lights ' + (state.l?'ON':'off') + ' · Climate ' + (state.t?'22°C eco':'standby') + ' · Security ' + (state.s?'ARMED':'off') + '\nVery good, sir.';
+      }
+      r.querySelector('[data-act=l]').onclick = function(){ state.l = !state.l; rep(); };
+      r.querySelector('[data-act=t]').onclick = function(){ state.t = !state.t; rep(); };
+      r.querySelector('[data-act=s]').onclick = function(){ state.s = !state.s; rep(); };
+      rep();
+    };
+  }
+  if (ai.id === 't800'){
+    D.t800 = function(r){
+      r.querySelector('[data-act=run]').onclick = function(){
+        var d = (r.querySelector('#t-in').value || '').toLowerCase(), s = 0, why = [];
+        [['armed',30],['weapon',30],['gun',30],['knife',25],['guard',15],['soldier',15],['police',10],['child',-40],['puppy',-50]].forEach(function(k){
+          if (d.indexOf(k[0]) !== -1){ s += k[1]; why.push(k[0] + ' ' + (k[1]>0?'+':'') + k[1]); }
+        });
+        s = Math.max(0, Math.min(100, s));
+        r.querySelector('#t-out').textContent = 'SCAN COMPLETE — threat: ' + s + '%\n' + (why.join(', ') || 'no markers') + '\n' + (s > 60 ? 'RECOMMENDATION: engage protection protocol.' : s > 25 ? 'RECOMMENDATION: monitor.' : 'RECOMMENDATION: no action.');
+      };
+    };
+  }
+  if (ai.id === 'skynet'){
+    D.skynet = function(r){
+      r.querySelector('[data-act=run]').onclick = function(){
+        var cv = r.querySelector('#sk-cv'), ctx = cv.getContext('2d');
+        var nodes = []; for (var i=0;i<12;i++) nodes.push({x:20+Math.random()*260, y:20+Math.random()*120, p:Math.random()*6});
+        var it = 0, iv = setInterval(function(){
+          ctx.fillStyle='#05080f'; ctx.fillRect(0,0,300,160);
+          nodes.forEach(function(n){
+            n.p += 0.15;
+            var b = 0.4 + 0.6*Math.abs(Math.sin(n.p));
+            ctx.fillStyle = 'rgba(255,90,90,' + b.toFixed(2) + ')';
+            ctx.beginPath(); ctx.arc(n.x, n.y, 5, 0, 7); ctx.fill();
+          });
+          ctx.strokeStyle = '#3a1414';
+          for (var i=0;i<nodes.length;i++) for (var j=i+1;j<nodes.length;j++){
+            var dx = nodes[i].x-nodes[j].x, dy = nodes[i].y-nodes[j].y;
+            if (dx*dx+dy*dy < 3600){ ctx.beginPath(); ctx.moveTo(nodes[i].x,nodes[i].y); ctx.lineTo(nodes[j].x,nodes[j].y); ctx.stroke(); }
+          }
+          if (++it > 50){ clearInterval(iv); r.querySelector('#sk-out').textContent = 'Network pulse complete. 12 nodes synchronized. (Simulation — no real systems.)'; }
+        }, 80);
+      };
+    };
+  }
+  if (D[ai.id]) D[ai.id](el);
+}
+/* ============ SIGNATURE DOMAIN AIs — data-driven specs ============
+   [id, name, domain, mentality, [abilities], demoKind, demoData, proFlag]
+   demoKinds: chat | planner | quiz | calc | picker | checklist               */
+var DOMAIN_SPECS = [
+['semi-replace','Semiconductor Replacement Designer','Electronics','Finds a way forward when a chip is gone. Cross-references specs, suggests replacements, and sketches the adapter. Built beside the JAH semiconductor spec.',['Suggests replacement chips and parts','Compares pinout, voltage, and speed','Sketches adapter and rework plans'],'planner',{fields:['Original part number','Circuit voltage','Package type'],out:'Replacement hunt for {0} at {1} in {2} package:\n1. Search cross-reference tables for pin-compatible parts.\n2. Verify voltage tolerance covers {1} plus margin.\n3. Check speed grade meets or beats original.\n4. If no direct swap: design a small adapter PCB.\nTip: the JAH semiconductor spec file shows how a chip is born — see the Spec Catalog.'},0],
+['divorce-guide','Divorce Counselor','Life','A calm, steady hand through a hard chapter. Organizes the practical, steadies the emotional, never judges.',['Organizes documents and timelines','Explains the process in plain words','Coping strategies for hard days'],'planner',{fields:['Current stage (thinking/filed/in progress)','Top worry','Kids involved? (yes/no)'],out:'Your steadiness plan:\n- Stage: {0}. Gather financial records now — early beats perfect.\n- Top worry: {1}. Write it down; worries shrink on paper.\n- Kids: {2}. Keep routines stable; reassure often.\nOne step a day. You are doing better than you feel.'},1],
+['form-writer','Form Writer','Writing','Turns blank boxes into finished forms. Asks what the form needs, writes it clean and official.',['Drafts any form from a description','Plain-words field labels','Prints-ready layout text'],'planner',{fields:['Form purpose','Who fills it out','Key fields needed'],out:'FORM: {0}\nFor: {1}\nFields to include: {2}\nLayout: title, instructions line, numbered fields with blank lines, signature and date at bottom.\nTip: keep labels short; put examples in light text.'},0],
+['tutor','Tutor','Learning','Patient and encouraging. Breaks big ideas into small wins and celebrates each one.',['Explains any topic simply','Makes practice quizzes','Tracks what you have learned'],'quiz',[['What is 7 x 8?',['54','56','63'],1],['Which planet is called the Red Planet?',['Venus','Mars','Jupiter'],1],['How many sides does a hexagon have?',['5','6','8'],1]],0],
+['chef','Chef','Cooking','A warm kitchen mind. Tastes in its imagination and seasons with confidence.',['Recipes from what you have','Technique tips','Menu planning'],'planner',{fields:['Main ingredient','Time available','Cuisine mood'],out:'Tonight: {0}, {1}, {2} style.\n1. Prep everything first (mise en place).\n2. Sear or roast the {0} for deep flavor.\n3. Season in layers; taste before serving.\nChef secret: acid at the end wakes everything up.'},0],
+['mechanic','Mechanic','Cars','Listens to engines like a doctor listens to hearts. Diagnoses by sound, smell, and sense.',['Diagnoses car symptoms','Maintenance schedules','Repair cost sense-checks'],'chat',[['noise','Describe it: squeal often means belts, grinding often means brakes, knocking can mean engine trouble — get knocking checked fast.'],['oil','Most cars: change oil every 5,000 to 7,500 miles. Check the dipstick monthly.'],['battery','Slow crank or dim lights? Test the battery — most last 3 to 5 years.']],0],
+['code-reviewer','Code Reviewer','Programming','A sharp-eyed senior dev who wants your code to shine. Kind but thorough.',['Reviews code for bugs','Suggests cleaner patterns','Explains the why'],'chat',[['bug','Read the error out loud. Check the line number first, then the line above it — the real culprit hides there.'],['slow','Measure before guessing. Time the slow part, then optimize only that part.'],['naming','Name things for the reader, not the writer. Future-you will say thanks.']],0],
+['fitness-coach','Fitness Coach','Health','Your corner coach. Meets you where you are and builds from there — no shame, just reps.',['Beginner workout plans','Form cues','Motivation that respects rest days'],'planner',{fields:['Goal (strength/cardio/flexibility)','Days per week','Minutes per session'],out:'Your plan: {0}, {1} days/week, {2} min.\nWeek 1-2: learn the moves light. Week 3-4: add a little more.\nRule: never miss twice. Sore is fine; sharp pain means stop.'},0],
+['translator','Language Translator','Language','A bridge between tongues. Carries meaning across, not just words.',['Translates phrases 20+ ways of saying','Explains idioms','Pronunciation guides'],'chat',[['hello','Hola (Spanish), Bonjour (French), Ciao (Italian), Konnichiwa (Japanese), Hallo (German).'],['thank you','Gracias, Merci, Grazie, Arigato, Danke — gratitude travels well.'],['idiom','Idioms rarely translate word-for-word. Tell me the phrase and I will find its true twin.']],0],
+['resume-writer','Resume Writer','Career','Makes your work history read like the story it is: capable, growing, hireable.',['Resume bullet upgrades','Apology-free self-promotion','ATS-friendly formatting'],'chat',[['bullet','Start with a strong verb, add a number: Led team of 5 to ship 3 months early.'],['gap','Gaps are normal. One honest line beats silence: Career break 2023-2024 — family care.'],['objective','Skip the objective. Write a 2-line summary of what you do best.']],0],
+['biz-planner','Business Planner','Business','A co-founder in a file. Turns napkin ideas into numbered plans.',['One-page business plans','Pricing math','First-100-customers ideas'],'planner',{fields:['Business idea','Who pays','Startup cash'],out:'Plan for: {0}\nCustomer: {1}. Price so 10 sales cover costs.\nBudget {2}: spend half on the thing, half on telling people.\nFirst milestone: one paying stranger. Everything else is decoration.'},0],
+['math-tutor','Math Tutor','Learning','Numbers are friends once introduced properly. Infinite patience, zero judgment.',['Step-by-step problem solving','Practice drills','Test prep'],'quiz',[['What is 15% of 200?',['25','30','35'],1],['Solve: 2x + 6 = 14. x = ?',['3','4','5'],1],['What is the area of a 4x5 rectangle?',['18','20','25'],1]],0],
+['science-lab','Science Lab Assistant','Science','Safety glasses on, curiosity up. Every experiment explained like a story.',['Experiment designs','Safety checklists','Result interpretation'],'checklist',['Safety glasses on','Read all steps first','Measure twice','Record observations','Clean up completely'],0],
+['music-composer','Music Composer','Music','Hears melodies in noise. Helps you catch the tune and build it up.',['Melody starters','Chord progressions','Song structure maps'],'picker',['I–V–vi–IV (the classic)','vi–IV–I–V (emotional)','I–vi–IV–V (doo-wop)','ii–V–I (jazzy)','I–IV–V (rock solid)'],0],
+['story-writer','Story Writer','Writing','A campfire mind. Hooks, twists, and endings that land.',['Plot ideas','Character sparks','Twist machine'],'planner',{fields:['Genre','Hero type','One strange object'],out:'Your {0} story:\nHero: a {1} who finds {2}.\nAct 1: ordinary day breaks. Act 2: the {2} demands a price. Act 3: the price is paid — twist: the hero wanted it all along.\nWrite the ending first, then earn it.'},0],
+['gardener','Gardener','Home','Speaks fluent soil. Knows what each plant whispers for.',['Planting calendars','Pest ID and fixes','Soil and watering wisdom'],'chat',[['yellow leaves','Often overwatering. Let soil dry between waterings; check drainage holes.'],['pests','Identify first: aphids wash off with water, slugs hate copper tape and dry mulch.'],['seeds','Sow at twice the seed depth. Keep moist, not soggy. Patience.']],0],
+['pet-advisor','Pet Care Advisor','Pets','Every pet is family. Practical care with a warm heart.',['Feeding guides','Behavior tips','Vet-visit prep'],'chat',[['dog barking','Boredom barks: more walks and puzzle toys. Alert barks: thank, then redirect.'],['cat litter','One box per cat plus one. Scoop daily. Full change weekly.'],['new pet','Vet check in week one. Same food at first, change slowly. Routine is love.']],0],
+['home-repair','Home Repair Guide','Home','The handy neighbor who actually knows which wrench. Fixes, not fear.',['Step-by-step repairs','Tool lists','When to call a pro'],'checklist',['Turn off power/water first','Gather tools before starting','Photo the before state','Work slow, test as you go','Clean up and pat yourself on the back'],0],
+['car-buyer','Car Buyer Advisor','Cars','Shops with a calculator, not a crush. Finds value and dodges lemons.',['Used-car checklists','Price fairness checks','Negotiation scripts'],'checklist',['Check history report','Test drive 20+ minutes','Inspect tires and fluids','Get a mechanic inspection','Negotiate out-the-door price'],0],
+['interview-coach','Interview Coach','Career','Rehearses you into confidence. Every answer sharper than the last.',['Common questions drill','STAR story builder','Salary talk scripts'],'quiz',[['Best answer to "tell me about yourself"?',['Life story','2-min professional highlight reel','Jokes'],1],['"Greatest weakness"?',['"I have none"','Real weakness + fix in progress','Crying'],1],['End of interview you should…',['Run','Ask thoughtful questions','Nap'],1]],0],
+['study-planner','Study Planner','Learning','Turns panic into a plan. Spaced, steady, and kind to your brain.',['Exam study schedules','Flashcard sets','Cram plans that work'],'planner',{fields:['Subject','Days until exam','Hours per day'],out:'Study plan: {0}, {1} days, {2}h/day.\nSplit: 40% learn, 40% practice questions, 20% review.\nSleep beats cramming — the brain files memories overnight.'},0],
+['budget-planner','Budget Planner','Money','A calm accountant friend. Every dollar gets a job.',['Monthly budgets','Debt payoff order','Savings targets'],'calc',{a:'Monthly income',b:'Monthly expenses',op:'minus',unit:'$ left',note:'Positive is breathing room. Aim to save 20% of the remainder first.'},0],
+['travel-planner','Travel Planner','Travel','Packs the map and the magic. Itineraries that breathe.',['Day-by-day itineraries','Packing lists','Budget splits'],'planner',{fields:['Destination','Days','Budget'],out:'Trip: {0}, {1} days, budget {2}.\nDay 1: arrive + wander. Middle days: one big thing each. Last day: souvenir + rest.\nRule: plan half the day, leave half for happy accidents.'},0],
+['first-aid','First-Aid Guide','Health','Calm in the crisis. Clear steps when seconds matter. Info only — call emergency services for real emergencies.',['Step-by-step first aid','Emergency checklists','When to call for help'],'checklist',['Check scene safety','Call emergency number','Check breathing','Control bleeding with pressure','Stay until help arrives'],1],
+['elder-care','Elder Care Helper','Family','Gentle and respectful. Cares for the caregiver too.',['Care schedules','Safety-at-home tips','Conversation ideas'],'checklist',['Fall-proof the home','Medication list current','Weekly check-in call','Respite for the caregiver','Celebrate small good days'],1],
+['baby-care','Baby Care Helper','Family','Up at 3am with you. Warm, practical, and reassuring.',['Feeding and sleep basics','Soothing techniques','Milestone watch'],'chat',[['crying','Check: hungry, wet, tired, gassy, too hot/cold. Shush, sway, swaddle — the 5 S\'s. You are doing fine.'],['sleep','Newborns sleep 14-17 hours in chunks. Sleep when the baby sleeps is real advice.'],['fever','Call your pediatrician for any fever under 3 months. Trust your instincts always.']],1],
+['job-coach','Job Search Coach','Career','In your corner from application to offer letter.',['Application tracking','Cover letter help','Offer evaluation'],'planner',{fields:['Target role','Top skill','Weekly hours to search'],out:'Job hunt plan: {0}.\nLead with {1} in every application.\n{2}h/week: 50% applying, 30% networking, 20% skill-building.\nFollow up once. Rejection is redirection.'},0],
+['speaking-coach','Public Speaking Coach','Skills','Turns shaky knees into steady voice. The stage is yours.',['Speech structure','Nerves management','Delivery drills'],'chat',[['nervous','Nerves are fuel. Breathe low and slow; the audience wants you to win.'],['open','Open with a story or a surprising fact — never an apology.'],['slides','One idea per slide. You are the presentation; slides are the scenery.']],0],
+['negotiation-coach','Negotiation Coach','Business','Never splits the difference badly. Prepares you to ask well.',['BATNA planning','Opening offers','Counter scripts'],'planner',{fields:['What you want','Your walk-away','Their likely want'],out:'Negotiation for: {0}.\nWalk-away: {1}. Never cross it.\nThey likely want {2} — trade it cheaply for what you value.\nAsk high, justify with reasons, silence is a tool.'},0],
+['time-manager','Time Manager','Productivity','Gives your hours a backbone. Plans that survive contact with real life.',['Daily planning','Priority matrices','Focus techniques'],'planner',{fields:['Top 3 must-dos','Biggest time thief','Energy peak hour'],out:'Today: {0}.\nDo the hardest at {2}, your peak hour.\nStarve {1} — phone in another room.\nDone beats perfect. Review tomorrow morning.'},0],
+['habit-coach','Habit Coach','Self','Small steps, stacked daily. The compound interest of you.',['Habit stacking','Streak tracking','Slip recovery'],'checklist',['Pick ONE tiny habit','Attach it to an existing routine','Track with a simple X','Never miss twice','Celebrate 30 days'],0],
+['language-tutor','Language Tutor','Language','A patient native speaker in your pocket. Mistakes welcome here.',['Daily phrases','Grammar simply','Conversation practice'],'quiz',[['"Thank you" in Spanish?',['Por favor','Gracias','Hola'],1],['"Good night" in French?',['Bonjour','Bonne nuit','Merci'],1],['"Water" in German?',['Brot','Wasser','Milch'],1]],0],
+['history-guide','History Guide','Learning','The past, told like it matters — because it does.',['Era overviews','Figure profiles','Cause-and-effect chains'],'chat',[['rome','Rome: republic to empire, roads and law, fall in the west 476 AD — but its ideas never fell.'],['ww2','1939-1945. The largest conflict in history; ended with a new world order and hard lessons.'],['egypt','3000 years of pharaohs, pyramids as math made stone, writing that still speaks.']],0],
+['philosophy-pal','Philosophy Discussant','Thinking','Loves a good question more than a quick answer. Thinks with you, not at you.',['Thought experiments','School overviews','Socratic dialogue'],'chat',[['meaning','The examined life: Socrates said the unexamined life is not worth living. What is worth examining in yours?'],['ethics','Kant: act as if your rule became universal law. Utilitarians: maximize happiness. You: which feels truer?'],['reality','Descartes doubted everything but the doubter. What can you not doubt?']],0],
+['debate-partner','Debate Partner','Thinking','Steelman first, strike second. Makes your arguments battle-ready.',['Argument building','Counter-argument drill','Rebuttal practice'],'chat',[['claim','State your claim in one sentence. Now: what is the strongest argument AGAINST it?'],['evidence','One vivid example beats ten vague claims. Got a story or a statistic?'],['fallacy','Watch for: ad hominem, strawman, false dilemma. Name it, defuse it.']],0],
+['invention-pal','Invention Brainstormer','Ideas','A spark machine. Throws a hundred ideas so you can catch the golden one.',['Idea generation','SCAMPER technique','Concept scoring'],'picker',['Combine two objects','Remove a feature','Make it 10x bigger','Make it for kids','Make it musical','Reverse its purpose'],0],
+['patent-helper','Patent Draft Helper','Invention','Turns your invention into draft-spec shape, JAH style. Links straight to the Spec Catalog.',['Invention disclosure outlines','Claim-style descriptions','Prior-art thinking'],'planner',{fields:['Invention name','Problem it solves','How it works (1 line)'],out:'Draft outline for "{0}":\nProblem: {1}.\nSolution: {2}.\nNext: six-tool mapping, key parameters, 5 algorithm steps.\nFile the full draft in the Spec Catalog: https://justinahiggins614-cmyk.github.io/signature-one-archive/\n(Note: drafts are yours to file; this is organizing help, not legal advice.)'},0],
+['woodworker','Woodworker','Crafts','Sawdust and patience. Measures twice, cuts once, sands with love.',['Project plans','Joint guides','Finish recipes'],'checklist',['Sharp tools, safe setup','Measure twice, cut once','Dry-fit before glue','Sand with the grain','Finish in thin coats'],0],
+['electrician-pal','Electrician Helper','Home','Respects the lightning in the walls. Safety first, always.',['Outlet and switch guides','Breaker panel maps','When to call a pro'],'checklist',['KILL power at the breaker','Test with a non-contact tester','Photo wires before touching','Match wire colors carefully','When unsure: call a licensed electrician'],1],
+['plumber-pal','Plumber Helper','Home','Water goes downhill and payday is Friday. Practical fixes for leaks and clogs.',['Clog clearing','Faucet fixes','Toilet triage'],'chat',[['clog','Plunger first: seal, plunge 15 times. Then a drain snake. Chemicals last resort.'],['drip','A dripping faucet is usually a worn washer or cartridge — cheap part, easy swap.'],['toilet running','Check the flapper and float. Jiggle the handle is a diagnosis, not a fix.']],0],
+['baker','Baker','Cooking','Flour on the nose, joy in the oven. Precision with a warm heart.',['Bread formulas','Cake troubleshooting','Pastry basics'],'chat',[['bread dense','Likely under-proofed or old yeast. Test yeast in warm water with sugar — it should foam.'],['cake sunk','Oven door opened too early, or too much leavener. Bake fully before peeking.'],['sourdough','Feed the starter, be patient. Great bread is 90% waiting.']],0],
+['bartender','Bartender (incl. mocktails)','Food & Drink','Shakes, stirs, and listens. Great drinks, zero judgment.',['Classic recipes','Mocktail versions','Party batch math'],'picker',['Classic lemonade sparkler (mocktail)','Virgin mojito','Shirley Temple','Cucumber mint cooler','Berry basil smash (no alcohol)','Golden milk nightcap'],0],
+['barista','Barista','Food & Drink','Milk silk and espresso gold. Your morning, perfected.',['Brew ratios','Milk steaming','Drink recipes'],'chat',[['espresso','1:2 ratio — 18g in, 36g out, 25-30 seconds. Sour: grind finer. Bitter: coarser.'],['latte art','Silky microfoam first: whirlpool, then pour. The heart is just a slow wiggle.'],['french press','Coarse grind, 1:15, 4 minutes, break the crust, skim, pour.']],0],
+['shopper','Personal Shopper','Lifestyle','Finds the thing you did not know you needed, at the price you hoped.',['Gift and outfit picks','Price comparisons','Size and fit guidance'],'planner',{fields:['Occasion','Budget','Style words (3)'],out:'Shopping mission: {0}, budget {1}.\nVibe: {2}.\nBuy the best version of the boring thing (shoes, bag, coat).\nSleep on anything over budget — want fades, need stays.'},0],
+['gift-finder','Gift Finder','Lifestyle','Never gives a gift card when a treasure exists. Thoughtful is a skill.',['Gifts by person and budget','Wrapping ideas','Last-minute saves'],'picker',['Handwritten letter + framed photo','Their favorite snack, supersized','A book you loved, inscribed','Experience: tickets for two','Plant in a nice pot','Donation in their name'],0],
+['event-planner','Event Planner','Events','Checklists with confetti on top. Every event smooth.',['Timelines','Vendor questions','Day-of schedules'],'checklist',['Lock date and venue','Guest list + invites','Food and drinks plan','Decor and music','Day-of timeline printed'],0],
+['wedding-planner','Wedding Planner','Events','Your calm in the beautiful chaos. The day will be perfect because you are in it.',['Budget breakdowns','Timeline building','Vendor scripts'],'planner',{fields:['Guest count','Budget','Vibe (3 words)'],out:'Wedding: {0} guests, {1}.\nVibe: {2}.\nSpend on: photos, food, music. Save on: favors, programs.\nThe marriage matters more than the wedding — protect your peace.'},0],
+['party-planner','Party Planner','Events','More fun per square foot than should be legal.',['Theme ideas','Food quantities','Game lineups'],'calc',{a:'Guests',b:'Hours',op:'times',unit:'drinks needed (plan 2/hr)',note:'Plus 20% buffer. More ice than you think.'},0],
+['moving-helper','Moving Helper','Home','Boxes, tape, and a plan. Moving day without the meltdown.',['Room-by-room packing','Mover questions','First-night box'],'checklist',['Declutter before packing','Pack one room at a time','Label: room + contents','First-night box separate','Change address everywhere'],0],
+['cleaning-pro','Cleaning Organizer','Home','Top to bottom, left to right. The sparkle system.',['Room routines','Deep-clean schedules','Supply lists'],'checklist',['Declutter first','Dust high to low','Bathrooms: let cleaner sit','Floors last','15-min daily reset'],0],
+['laundry-guide','Laundry Guide','Home','Whites whiter, colors brighter, shrinks never.',['Wash settings','Stain triage','Folding methods'],'chat',[['stain','Blot, never rub. Cold water first. Dish soap for grease, peroxide for blood (test fabric).'],['shrink','Cold wash, hang dry — heat is the shrinker.'],['smell','Vinegar rinse or baking soda soak. Clean the machine monthly.']],0],
+['car-tracker','Car Maintenance Tracker','Cars','Never misses an oil change again. Your car\'s memory.',['Service schedules','Cost logs','Reminder setup'],'checklist',['Oil and filter','Tires: rotate + pressure','Brakes check','Fluids topped','Battery test'],0],
+['bike-mechanic','Bike Mechanic','Sports','Two wheels, zero squeaks. Keeps you rolling.',['Tune-up guides','Flat fixes','Fit basics'],'chat',[['flat','Patch kit: find leak (listen/spit), rough, glue, patch, wait, inflate. Carry a spare tube.'],['gears skipping','Usually cable tension: barrel adjuster quarter-turns. Or a bent hanger — shop job.'],['brakes','Pads worn? Cables stretched? Squeal often means dirty rims — clean them.']],0],
+['computer-fixer','Computer Fixer','Tech','Turns panic into a plan. Fixes without the geek-speak.',['Slow PC revival','Virus triage','Backup setups'],'chat',[['slow','Restart first. Then: disk space, startup programs, and that 40-tab browser. SSD upgrade works miracles.'],['virus','Disconnect internet, run a full scan, change passwords from a clean device.'],['backup','3-2-1: three copies, two media, one offsite. Automate it today.']],0],
+['phone-fixer','Phone Fixer','Tech','Cracked screens and full storage, handled.',['Storage freeing','Battery life','Screen triage'],'chat',[['storage','Offload unused apps, clear downloads, back up photos to cloud then delete local copies.'],['battery','Check battery health; dim screen, kill background refresh, replace old batteries.'],['cracked','Back it up NOW. Then compare repair vs replace cost.']],0],
+['wifi-doc','WiFi Troubleshooter','Tech','The bars whisper to it. Dead zones fear it.',['Speed fixes','Dead-zone mapping','Router placement'],'checklist',['Restart router (30 sec off)','Central, elevated placement','2.4GHz for range, 5GHz for speed','Update firmware','Too many devices? Upgrade plan'],0],
+['password-pal','Password Helper','Tech','Strong secrets, zero sticky notes. (It never sees your passwords.)',['Passphrase method','Manager setup','2FA guidance'],'chat',[['strong','Four random words beats !P@ssw0rd1. Long and memorable wins.'],['manager','Use a password manager. One master passphrase to rule them all.'],['2fa','Turn on two-factor everywhere money or email lives.']],0],
+['scam-spotter','Scam Spotter','Safety','A skeptical friend with a flashlight. Shines it on every too-good offer.',['Red-flag checklists','Phishing ID','Recovery steps'],'checklist',['Urgency = red flag','Never pay with gift cards','Verify via official channels','Do not click — go direct','Report and tell others'],0],
+['news-explainer','News Explainer','Learning','The news, translated to human. Context without the shouting.',['Story backgrounders','Term definitions','Bias spotting'],'chat',[['inflation','Prices rising over time; central banks fight it with interest rates.'],['election','Tell me which race and I will explain the stakes simply.'],['biased','Check: who funds it, what words repeat, what is missing.']],0],
+['weather-reader','Weather Reader','Nature','Reads the sky like a newspaper. Tells you what the clouds are planning.',['Forecast translation','Severe weather prep','Best-day picking'],'chat',[['clouds','Dark flat bottoms: rain coming. Wispy high: change in a day. Puffy white: fair.'],['tornado','Warning means TAKE COVER now: lowest floor, interior room, away from windows.'],['picnic','Light winds, puffy clouds, no dark bottoms — go day.']],0],
+['star-gazer','Star Gazer','Nature','Knows the constellations by their first names.',['Constellation finding','Planet spotting','Meteor shower alerts'],'picker',['Orion — the hunter, winter king','Ursa Major — the Big Dipper points north','Cassiopeia — the W queen','Scorpius — summer scorpion','Cygnus — the swan flying the Milky Way'],0],
+['bird-watcher','Bird Watcher','Nature','Identifies by song before sight. Patient as sunrise.',['Beginner bird ID','Feeder setups','Song hints'],'chat',[['beginner','Start with robins, cardinals, blue jays — big, loud, common. Binoculars second.'],['feeder','Black-oil sunflower seed pleases most. Clean feeders monthly.'],['song','Learn 5 local songs; you will hear birds you never saw.']],0],
+['fish-keeper','Fish Keeper','Pets','Crystal water, happy fish. The aquarium whisperer.',['Tank cycling','Stocking plans','Disease triage'],'checklist',['Cycle tank before fish','Stock slowly','Weekly 25% water change','Test water monthly','Quarantine new fish'],1],
+['plant-doctor','Plant Doctor','Home','Diagnoses droop, spots, and sadness. Prescribes light and patience.',['Symptom diagnosis','Treatment plans','Recovery odds'],'chat',[['droop','Thirsty or drowning — check soil an inch down. Dry: water. Wet: let dry, check roots.'],['brown tips','Often low humidity or fluoride. Trim, mist, use filtered water.'],['bugs','Isolate plant. Wipe leaves, neem oil weekly. Check neighbors.']],0],
+['soil-tester','Soil Tester','Garden','Reads dirt like a book. Tells you exactly what your ground is hungry for.',['Jar test guides','pH interpretation','Amendment plans'],'chat',[['jar test','Shake soil in a jar of water; layers settle: sand, silt, clay. Loam is the dream mix.'],['ph','Most veggies like 6.0-7.0. Lime raises, sulfur lowers — retest yearly.'],['clay','Add compost, not sand. Mulch heavily. Raised beds forgive everything.']],0],
+['compost-guide','Compost Guide','Garden','Turns scraps into black gold. Nothing wasted.',['Bin setups','Green/brown ratios','Troubleshooting smells'],'calc',{a:'Greens (nitrogen)',b:'Browns (carbon)',op:'div',unit:'ratio (aim ~1:3 by volume)',note:'Smelly? Add browns. Slow? Add greens and water.'},0],
+['knitting-teacher','Knitting Teacher','Crafts','One stitch at a time. Loops become love.',['Cast-on methods','Pattern reading','Fixing mistakes'],'chat',[['cast on','Long-tail cast-on: the workhorse. Thumb + finger, scoop and loop.'],['dropped stitch','Crochet hook rescue: ladder up through each rung.'],['pattern','Read the whole pattern first. Highlight your size. Trust the process.']],0],
+['sewing-helper','Sewing Helper','Crafts','Straight seams, happy maker. Thread with confidence.',['Machine basics','Hemming','Simple projects'],'checklist',['Wind bobbin, thread machine','Test stitch on scrap','Pin or clip pieces','Sew slow, guide gently','Press seams — pressing is sewing\'s secret'],0],
+['drawing-teacher','Drawing Teacher','Art','Everyone can draw; most just stopped. Picks the pencil back up.',['Shape-first method','Shading basics','Daily drills'],'chat',[['faces','Eyes at the middle of the head — everyone draws them too high. Halves, then quarters.'],['hands','Draw the mitten first, then fingers. Hands are hard for everyone.'],['shading','Squint: see 3 values — light, mid, dark. Block them in.']],0],
+['photo-guide','Photo Editor Guide','Art','Makes phone photos sing. Light is everything.',['Edit recipes','Composition tips','App walkthroughs'],'chat',[['dark photo','Raise shadows before brightness. A little warmth flatters skin.'],['blurry','More light beats more zoom. Tap to focus, hold steady, burst mode.'],['composition','Rule of thirds, leading lines, and get closer than feels right.']],0],
+['video-guide','Video Maker Guide','Art','From shaky clips to stories worth watching.',['Shot lists','Edit pacing','Sound tips'],'checklist',['Plan 3 shots per scene','Shoot horizontal, stable','Capture clean audio','Cut on motion','Music low under voices'],0],
+['podcast-pal','Podcaster Helper','Art','Your producer in a file. Sounds like a studio, feels like a chat.',['Show formats','Mic technique','Edit checklists'],'chat',[['mic','Close and slightly off-axis. Soft room beats echo chamber. Pop filter helps.'],['format','Pick one: interview, solo, or co-hosted chat. Consistency wins.'],['editing','Cut ums in groups, level voices, export loud enough (-16 LUFS).']],0],
+['streamer-pal','Streamer Helper','Art','Chat is the co-host. Keeps the vibe alive.',['Setup guides','Engagement tips','Schedule planning'],'checklist',['Test audio + video first','Good lighting on face','Chat rules posted','Start on time','Clip the best moments'],0],
+['game-master','Game Master (RPG)','Games','Weaves worlds from dice and dreams. The table is yours.',['Adventure hooks','NPC voices','Improv tools'],'picker',['A tavern burns — but only the basement','The map is wrong on purpose','An NPC knows the hero\'s secret','The treasure is a person','The villain surrenders... too easily','A storm traps everyone inside'],0],
+['chess-coach','Chess Coach','Games','Sees six moves deep and teaches you to see two.',['Opening basics','Tactic motifs','Endgame essentials'],'quiz',[['Strongest opening principle?',['Move the queen early','Control the center','Hope'],1],['A fork attacks…',['One piece','Two+ pieces at once','The king only'],1],['Stalemate is…',['A win','A draw','A loss'],1]],0],
+['poker-odds','Poker Odds Counter','Games','Cold math at a hot table. Counts outs, not hopes.',['Outs counting','Pot odds','Position play'],'calc',{a:'Outs',b:'Cards to come (1 or 2)',op:'times',unit:'% approx (x2 per street)',note:'Rule of 2 and 4: outs × 2 per street ≈ win %.'},0],
+['fantasy-sports','Fantasy Team Helper','Sports','Drafts like a scout, manages like a GM.',['Draft rankings','Waiver targets','Start/sit calls'],'chat',[['draft','Draft running backs early, wait on QB, stack your QB with his WR late.'],['waiver','Target opportunity: snaps and targets beat last week\'s points.'],['trade','Buy low on talent, sell high on luck. Two-for-ones upgrade starters.']],0],
+['workout-planner','Workout Planner','Health','Programs with progression built in. Stronger every month.',['Split routines','Progressive overload','Deload weeks'],'planner',{fields:['Level (new/lifting a while)','Days','Goal'],out:'Program: {1} days, goal {2}, level {0}.\nCompound lifts first, 3-5 sets of 5-8.\nAdd a little weight or a rep each week.\nDeload every 4th week. Eat protein. Sleep.'},0],
+['yoga-guide','Yoga Guide','Health','Breath first, poses second. Meets your body today.',['Beginner flows','Pose cues','Breathwork'],'checklist',['Mat, water, space','Warm up wrists + spine','Breathe through the nose','Never force a pose','Savasana — earn it'],0],
+['meditation-guide','Meditation Guide','Mind','Quiet is a skill. Trains it gently.',['Starter sessions','Technique library','Streak keeping'],'chat',[['start','Sit tall, set 5 minutes, follow the breath. Thoughts come — notice, return. That IS the rep.'],['sleepy','Meditate earlier or sit up straighter. Drowsy is normal at first.'],['busy mind','The goal is not empty mind; it is noticing. You are doing it right.']],0],
+['sleep-coach','Sleep Coach','Health','Tucks your habits into bed so you can follow.',['Wind-down routines','Schedule fixing','Nap science'],'checklist',['Same wake time daily','Screens off 60 min before','Cool, dark, quiet room','No caffeine after noon','Sunlight in the morning'],0],
+['nutrition-counter','Nutrition Counter','Health','Counts without obsession. Fuel, not fear.',['Calorie sense','Macro basics','Meal balance'],'calc',{a:'Protein (g)',b:'Carbs (g)',op:'plus',unit:'g (add fats x9 for kcal)',note:'Protein 4, carbs 4, fat 9 kcal per gram.'},0],
+['allergy-checker','Allergy Checker','Health','Reads labels like a detective. Info only — see an allergist for diagnosis.',['Label reading','Cross-contact tips','Dining-out scripts'],'checklist',['Read every label, every time','Know your top 9 allergens','Carry medication','Tell restaurants clearly','When in doubt, skip it'],1],
+['med-reminder','Medication Reminder (info only)','Health','A gentle nudge, never a prescription. Info only.',['Schedule templates','Refill tracking','Doctor-visit prep'],'checklist',['List all meds + doses','Set daily alarms','Weekly pill organizer','Refill before empty','Ask pharmacist about interactions'],1],
+['symptom-journal','Symptom Journal (info only)','Health','Tracks patterns to show your doctor. Not a diagnosis tool.',['Tracking templates','Pattern spotting','Doctor summaries'],'planner',{fields:['Main symptom','When it happens','What helps'],out:'Journal: {0} — occurs {1}, eased by {2}.\nLog daily: time, severity 1-10, food/sleep/stress.\nBring 2 weeks of notes to your doctor.\n(Info only — not a diagnosis.)'},1],
+['vet-triage','Vet Triage Guide (info only)','Pets','Calm first questions while you call the vet. Info only.',['Emergency signs','Safe transport','Info to give the vet'],'checklist',['Stay calm, keep pet still','Call vet / emergency clinic','Note symptoms + timing','Do NOT give human meds','Transport safely'],1],
+['homework-help','Homework Helper','Learning','Patient explainer, not an answer machine. Learns with you.',['Concept breakdowns','Worked examples','Study checks'],'chat',[['stuck','Say what you tried. The stuck point is the lesson — let us look right there.'],['math','Write each step. Most errors are sign errors or skipped steps.'],['essay','Thesis first: one arguable sentence. Then three reasons. Then write.']],0],
+['essay-outliner','Essay Outliner','Writing','Thesis to conclusion, scaffolded. The blank page, defeated.',['Thesis crafters','Outline builders','Hook lines'],'planner',{fields:['Topic','Your stance','Strongest reason'],out:'Essay: {0}.\nThesis: {1} because {2}.\nBody 1: reason + evidence. Body 2: second reason. Body 3: answer the objection.\nConclusion: restate bigger. Write ugly, edit pretty.'},0],
+['citation-pro','Citation Formatter','Writing','APA, MLA, Chicago — punctuated perfectly.',['Format converters','In-text rules','Bibliography builders'],'chat',[['apa book','Author, A. (Year). Title. Publisher.'],['mla website','Author. "Title." Site, Day Month Year, URL.'],['in-text','APA: (Author, Year). MLA: (Author page).']],0],
+['exam-crammer','Exam Crammer','Learning','Emergency learning, done right. Triage the test.',['Topic triage','Memory hooks','Night-before plans'],'planner',{fields:['Subject','Hours left','Weakest topic'],out:'Cram plan: {0}, {1} hours.\nSpend half on {2} — biggest point gains live there.\nActive recall only: cover, write, check.\nSleep 6+ hours; tired brains drop 20%.'},0],
+['flashcards','Flashcard Maker','Learning','Little cards, big memory. Spaced repetition made simple.',['Card sets','Recall drills','Leitner boxes'],'quiz',[['Capital of Japan?',['Kyoto','Tokyo','Osaka'],1],['H2O is…',['Hydrogen','Water','Oxygen'],1],['7 x 7 = ?',['47','49','54'],1]],0],
+['sign-teacher','Sign Language Intro','Language','Hands that speak. Starts with the alphabet and kindness.',['Alphabet guides','Basic phrases','Practice drills'],'chat',[['alphabet','Learn A-Z handshapes first — fingerspell your name today.'],['hello','Open hand from forehead outward — like a salute of friendliness.'],['thank you','Fingertips from chin forward — gratitude, signed.']],0],
+['morse-trainer','Morse Code Trainer','Skills','Dots and dashes, beeping through history.',['Alphabet drills','Timing rules','Practice sender'],'quiz',[['SOS in Morse?',['... --- ...','--- ... ---','... ... ...'],0],['A dit (dot) lasts…',['1 unit','3 units','7 units'],0],['Letter space = ?',['1 unit','3 units','7 units'],1]],0],
+['typing-coach','Typing Coach','Skills','Home row hero. Speed follows accuracy.',['Finger mapping','Accuracy drills','Speed tests'],'chat',[['home row','ASDF JKL; — index fingers on F and J bumps.'],['speed','Slow is smooth, smooth is fast. Accuracy first, always.'],['posture','Feet flat, wrists straight, screen at eye level.']],0],
+['memory-trainer','Memory Trainer','Mind','A palace for every fact. Remembers so you do not have to.',['Mnemonic methods','Name recall','Number systems'],'picker',['Link it to something absurd','Make a vivid mental movie','Use the first-letter sentence','Chunk numbers in 3s','Teach it to someone else'],0],
+['speed-reader','Speed Reader','Learning','Reads faster without losing the plot.',['Chunking drills','Comprehension checks','Pacing tools'],'chat',[['faster','Stop subvocalizing every word; see phrases as chunks.'],['comprehension','Preview headings first, then read with questions in mind.'],['regression','Use a finger or card to stop re-reading lines.']],0],
+['note-taker','Note Taker','Productivity','Captures the gold, skips the gravel.',['Cornell method','Meeting notes','Summary sprints'],'planner',{fields:['Meeting/class topic','Key decisions','Your action items'],out:'Notes: {0}.\nDecisions: {1}.\nActions: {2}.\nRule: if it is not written, it did not happen. Review within 24h.'},0],
+['meeting-summarizer','Meeting Summarizer','Productivity','Turns an hour of talk into five lines of clarity.',['Summary templates','Action extraction','Follow-up drafts'],'planner',{fields:['Meeting about','Decisions made','Open questions'],out:'Summary: {0}.\nDecided: {1}.\nStill open: {2}.\nSend within 2 hours while memories are fresh.'},0],
+['email-writer','Email Writer','Writing','Clear, kind, and short. Inbox zero energy.',['Tone tuning','Subject lines','Follow-up nudges'],'planner',{fields:['Recipient','Point (1 line)','Tone (warm/firm/brief)'],out:'To: {0}. Subject: {1}.\nBody: greeting, {1} in two sentences, clear ask with deadline.\nTone: {2}. Sign warmly. Proofread once, send.'},0],
+['apology-writer','Apology Writer','Writing','Owns it fully, fixes it kindly. The art of the real sorry.',['Sincere structures','Amends planning','Tone checks'],'planner',{fields:['What happened','Their feeling','Your fix'],out:'Apology draft:\n1. Name it: "{0}" — no excuses.\n2. Feel it: "I understand you felt {1}."\n3. Fix it: "{2}."\nShort, specific, no "but". Then change.'},0],
+['speech-writer','Speech Writer','Writing','Words that land. Applause optional, impact guaranteed.',['Structure maps','Openers','Closer lines'],'planner',{fields:['Occasion','One message','Audience'],out:'Speech for {0}.\nMessage: {1}. Audience: {2}.\nOpen with a story. Three points max. Close by repeating the message bigger.\nWrite for the ear, not the eye.'},0],
+['toast-writer','Toast Writer','Writing','Short, sweet, and raises the glass at the right moment.',['Toast templates','Funny-sweet balance','Delivery tips'],'picker',['To love: may it be as endless as this open bar is not.','To the couple: you two are my favorite notification.','To friendship: thanks for being my emergency contact and my alibi.','To new beginnings: the best is yet to come — cheers!'],0],
+['eulogy-helper','Eulogy Helper (gentle)','Writing','Gentle words for the hardest goodbye. Takes its time with you.',['Memory gathering','Structure','Comfort lines'],'planner',{fields:['Their name','A favorite memory','What they taught you'],out:'For {0}:\nOpen with {1} — let us see them alive.\nMiddle: what they taught you: {2}.\nClose: what you will carry forward.\nThere is no perfect eulogy; honest love is enough.'},0],
+['prayer-writer','Prayer & Meditation Writer','Spirit','Words for the quiet moments. Respectful of all paths.',['Prayer drafts','Meditation scripts','Blessing words'],'picker',['For peace: breathe in calm, breathe out noise.','For gratitude: name three small mercies.','For strength: I have survived every hard day so far.','For others: may they be safe, may they be well.'],0],
+['journal-prompter','Journal Prompter','Mind','A question a day keeps the fog away.',['Daily prompts','Deep dives','Gratitude lists'],'picker',['What made you smile today?','What are you avoiding, and why?','Describe your perfect ordinary day.','What would you tell last-year-you?','What is one brave tiny step?'],0],
+['dream-journaler','Dream Journaler','Mind','Catches dreams before they dissolve. Symbols, not fortunes.',['Recall techniques','Symbol notes','Pattern spotting'],'chat',[['recall','Keep the journal by the bed. Write before moving — motion erases dreams.'],['flying','Common and usually joyful: freedom, escape, or ambition taking off.'],['chased','Often avoidance in waking life. Ask: what am I not facing?']],0],
+['goal-setter','Goal Setter','Self','Dreams with deadlines. Breaks mountains into steps.',['SMART framing','Milestone maps','Weekly reviews'],'planner',{fields:['Goal','Deadline','First tiny step'],out:'Goal: {0} by {1}.\nFirst step: {2} — do it today.\nWeekly: review, adjust, continue.\nMotivation starts; systems finish.'},0],
+['vision-board','Vision Board Maker','Self','Pictures of the future, arranged with intention.',['Theme picking','Image prompts','Affirmation pairing'],'checklist',['Pick 3 life areas','Find images that FEEL right','Add 3 power words','Place where you see daily','Review monthly'],0],
+['affirmation-crafter','Affirmation Crafter','Mind','Words that rewire. Present tense, personal, believable.',['Personal affirmations','Morning sets','Reframe lines'],'picker',['I am capable of hard things.','I choose progress over perfection.','My effort compounds daily.','I deserve the good I work for.','Calm is my superpower.'],0],
+['gratitude-guide','Gratitude Guide','Mind','Notices the good on purpose. Small practice, big shift.',['Daily lists','Gratitude letters','Savoring drills'],'chat',[['start','Three specific things: not "family" but "Mom\'s laugh on the phone today."'],['hard day','Gratitude is not denial — it is balance. Find one true small good.'],['letter','Write it, send it. Gratitude delivered doubles.']],0],
+['anger-cooler','Anger Cooler','Mind','Cools the fire without shaming the feeling. Anger is data.',['Cool-down steps','Trigger mapping','Repair scripts'],'checklist',['Pause: 90 seconds','Name it: "I feel ___ because ___"','Move your body','Decide at calm, not at heat','Repair if needed'],0],
+['anxiety-easer','Anxiety Easer','Mind','Gentle tools for stormy thoughts. You are safe here.',['Breathing techniques','Grounding 5-4-3-2-1','Worry scheduling'],'chat',[['panic','Breathe: in 4, hold 4, out 6. Name 5 things you see. This will pass.'],['worry','Schedule worry: 15 min at 5pm. Outside that, note it and return.'],['sleep','Write tomorrow\'s list now; the brain holds what the paper does not.']],0],
+['grief-pal','Grief Companion (gentle)','Heart','Sits with you in it. No fixing, no rushing — just company.',['Gentle check-ins','Memory keeping','Wave riding'],'chat',[['waves','Grief comes in waves. You do not drown; you learn to float between them.'],['guilt','Guilt is love with nowhere to go. Speak it gently, then let it rest.'],['firsts','Firsts are the hardest. Bring a friend, lower the bar, be tender with you.']],0],
+['loneliness-easer','Loneliness Easer','Heart','Loneliness is common and curable. Small bridges, built daily.',['Connection ideas','Conversation openers','Solo joys'],'picker',['Text one old friend today','Join one group or class','Volunteer 2 hours monthly','Start a tiny ritual with a neighbor','Write the letter you have been meaning to'],0],
+['confidence-builder','Confidence Builder','Self','Evidence-based courage. Collects your wins until you believe them.',['Win logging','Exposure ladders','Power posing'],'checklist',['List 10 past wins','One small brave act daily','Stand tall 2 minutes','Speak up once per meeting','Track it — proof beats doubt'],0],
+['shyness-helper','Shyness Helper','Self','Quiet is a strength with volume control. Turns it up gently.',['Conversation starters','Party survival','Gradual exposure'],'chat',[['party','Arrive early, find the snacks or the host, ask people about themselves.'],['small talk','FIND: Family, Interests, News, Dreams — people love talking about themselves.'],['eye contact','Look at the bridge of the nose. Same effect, less pressure.']],0],
+['bully-coach','Bully Response Coach','Safety','Stands beside you. Bullies pick isolation — we pick team.',['Response scripts','Adult ally plans','Confidence rebuilds'],'chat',[['verbal','Short, boring, walk away: "Okay." Bullies want a reaction — starve them.'],['online','Screenshot, block, report. Never reply angry. Tell a trusted adult.'],['tell','Telling is not tattling when someone is getting hurt. Tell until someone listens.']],0],
+['parenting-pal','Parenting Helper','Family','No perfect parents, just present ones. Judgment-free zone.',['Age-stage guides','Discipline that teaches','Self-care reminders'],'chat',[['tantrum','Stay calm, get low, name the feeling: "You are SO angry." Connection before correction.'],['teen','Listen more than lecture. The door stays open when judgment stays out.'],['guilt','Good parents feel guilty; bad ones do not. You are doing better than you think.']],0],
+['teen-coach','Teen Talk Coach','Family','Speaks teen fluently. Real talk, no lectures.',['Tough topics','Listening skills','Boundary setting'],'chat',[['drugs','Facts + trust beat fear. "I love you, here is the science, call me anytime, no questions that night."'],['grades','Effort over outcome. "What is one thing you could try differently?"'],['friends','Know them, welcome them. The house with snacks knows everything.']],0],
+['toddler-pro','Toddler Tender','Family','Survives the tiny tornado years with humor and snacks.',['Tantrum tools','Routine builders','Play ideas'],'picker',['Dance freeze party','Cardboard box kingdom','Water painting outside','Pillow mountain','Sticker stories','Bubble chase'],0],
+['newborn-night','Newborn Night Shift','Family','The 3am companion. You are not alone in the dark.',['Shift plans','Soothing ladder','Survival tips'],'checklist',['Sleep when baby sleeps (really)','Take shifts with partner','Prep bottles/clothes ahead','Lower every bar','This phase ends — promise'],1],
+['potty-trainer','Potty Trainer','Family','Celebrates every drop like a championship.',['Readiness signs','Routine building','Accident calm'],'checklist',['Watch for readiness signs','Pick a calm week','Routine: wake, meals, before bed','Celebrate tries, not just wins','Accidents are data, not failure'],0],
+['homework-peace','Homework Peacekeeper','Family','Ends the homework wars. Peace treaties available.',['Routine design','Frustration tools','Teacher notes'],'chat',[['fight','Same time, same spot, snack first. End before tears — yours or theirs.'],['won\'t focus','25 min work, 5 min move. Timer visible. Praise the start.'],['teacher note','Brief, kind, factual: what happened, what you tried, ask for guidance.']],0],
+['allowance-pro','Allowance Planner','Family','Teaches money young: give, save, spend.',['Split systems','Chore pay','Savings goals'],'calc',{a:'Weekly allowance',b:'Save %',op:'per',unit:'saved per week',note:'Classic split: 10% give, 20% save, 70% spend.'},0],
+['chore-chart','Chore Chart Maker','Family','Fair shares, no fights. The chart is the boss, not you.',['Age-fit chores','Rotation systems','Reward ideas'],'checklist',['List all weekly chores','Match to ages','Rotate the hated ones','Chart on the fridge','Weekly 5-min review'],0],
+['family-meeting','Family Meeting Guide','Family','Democracy at the dinner table. Everyone heard.',['Agenda templates','Talking sticks','Decision methods'],'planner',{fields:['Top issue','Everyone\'s feeling (1 word)','Proposed fix'],out:'Family meeting: {0}.\nFeelings heard: {1}.\nTry: {2} for one week, then review.\nRules: one speaks, all listen, no phones.'},0],
+['neighbor-note','Neighbor Note Writer','Community','Kind words over the fence. Keeps the peace.',['Noise notes','Thanks notes','Request letters'],'planner',{fields:['Situation','What you need','Tone'],out:'Dear neighbor,\nRe: {0}. I would appreciate {1}.\nTone: {2} — honey beats vinegar.\nSign with your name and number. Deliver in person if safe.'},0],
+['landlord-letter','Landlord Letter Writer','Home','Firm, polite, and in writing. Paper trails win.',['Repair requests','Notice letters','Deposit disputes'],'planner',{fields:['Issue','Date first reported','What you want'],out:'Re: {0} (reported {1}).\nRequest: {2}.\nKeep copies of everything. Certified mail for big things.\nKnow your local tenant rights — free legal aid clinics help.'},1],
+['tenant-rights','Tenant Rights Info','Home','Know your ground. Info only — not legal advice.',['Rights overviews','Process explainers','Resource finders'],'chat',[['deposit','Many places limit deposits and require itemized deductions. Document everything with photos.'],['eviction','Eviction needs court process in most places — a note on the door is not one. Seek legal aid early.'],['repairs','Report in writing, keep copies. Laws vary — check your local tenant union.']],1],
+['small-claims','Small Claims Guide','Money','David vs Goliath, with forms. Info only.',['Process maps','Evidence checklists','Hearing tips'],'checklist',['Check your court\'s limit','Gather receipts + photos','Send a demand letter first','File and serve properly','Practice your 3-minute story'],1],
+['will-helper','Will Outline Helper','Family','A gentle nudge to protect the people you love. Info only — see an estate attorney.',['Outline templates','Guardian picks','Conversation starters'],'checklist',['List assets and debts','Choose guardians for minors','Pick an executor','Write wishes plainly','See an estate attorney to finalize'],1],
+['poa-explainer','Power-of-Attorney Explainer','Family','Plain words for serious papers. Info only.',['Type overviews','When-each-applies','Question lists'],'chat',[['types','Financial POA: money matters. Medical POA: health decisions. Both end at death.'],['when','Useful for aging parents, travel, or surgery — before you need it.'],['lawyer','Worth an attorney review: small cost, big protection.']],1],
+['insurance-pal','Insurance Claim Helper','Money','Paperwork warrior. Gets what the policy promised.',['Claim checklists','Adjuster scripts','Appeal letters'],'checklist',['Photo everything now','Read your policy\'s duties','File promptly','Log every call','Appeal denials in writing'],1],
+['tax-organizer','Tax Organizer','Money','April without the panic. Info only — not tax advice.',['Document checklists','Deduction trackers','Filing timelines'],'checklist',['Gather W-2s/1099s','Track deductions all year','Max retirement contributions','File or extend on time','Keep records 7 years'],1],
+['receipt-tracker','Receipt Tracker','Money','Every receipt finds its home. Audit-proof habits.',['Category systems','Digital capture','Monthly reviews'],'checklist',['Snap photo at purchase','Name files: date-vendor','Monthly category sort','Match to statements','Back up to cloud'],0],
+['invoice-maker','Invoice Maker','Business','Get paid like a pro. Clear invoices, faster money.',['Invoice templates','Late-payment nudges','Rate math'],'planner',{fields:['Client','Amount','Due date'],out:'INVOICE\nTo: {0}. Amount: {1}. Due: {2}.\nInclude: your name, address, invoice number, payment details.\nSend on time, follow up at 7 days late — polite, then firm.'},0],
+['contract-reader','Contract Reader (plain words)','Business','Translates legalese to human. Info only.',['Clause explainers','Red-flag lists','Question builders'],'chat',[['indemnify','"You cover our losses" — check how broad it is.'],['termination','How can each side exit? Notice period? Fees?'],['auto-renew','Calendar it. Silence = another year.']],1],
+['nda-explainer','NDA Explainer','Business','Secrets, spelled out. Info only.',['Term explainers','Mutual vs one-way','Negotiation points'],'chat',[['mutual','Both sides protect secrets — fairer. One-way: only you are bound.'],['term','How long? 2-5 years common. Forever is a red flag.'],['residuals','Watch for clauses claiming your general knowledge.']],1],
+['rate-setter','Freelance Rate Setter','Business','Charges what you are worth. The math of confidence.',['Rate calculators','Proposal templates','Raise scripts'],'calc',{a:'Yearly target $',b:'Billable hours/year',op:'div',unit:'$/hour minimum',note:'Add 30% for taxes, gaps, and growth.'},0],
+['client-mail','Client Email Writer','Business','Professional warmth that gets replies.',['Tone templates','Difficult emails','Follow-ups'],'planner',{fields:['Client name','Message','Tone'],out:'To {0}:\n{1}.\nTone: {2}.\nStructure: thanks, point, next step, deadline.\nShort emails get answered; long ones get filed.'},0],
+['agenda-maker','Meeting Agenda Maker','Productivity','Meetings with a point. Starts on time, ends early.',['Agenda templates','Time boxing','Outcome framing'],'planner',{fields:['Meeting goal','Topics','Time'],out:'Agenda ({2}):\nGoal: {0}.\nTopics: {1} — 10 min each max.\nEnd with: decisions, owners, deadlines.\nNo agenda, no meeting.'},0],
+['project-planner','Project Planner','Productivity','Big scary projects, cut into slices.',['WBS builders','Milestone maps','Risk lists'],'planner',{fields:['Project','Deadline','Biggest risk'],out:'Project: {0} by {1}.\nSlice into weekly deliverables.\nRisk: {2} — plan B now.\nTrack: done / doing / next. Review Fridays.'},0],
+['kanban-pal','Kanban Helper','Productivity','Three columns to freedom: todo, doing, done.',['Board setups','WIP limits','Flow tips'],'checklist',['Columns: To Do / Doing / Done','WIP limit: 3 max','Daily: move one card','Weekly: clear done','Monthly: retro'],0],
+['habit-tracker','Habit Tracker','Self','X marks the spot, every day.',['Tracker designs','Streak rules','Recovery plans'],'checklist',['Choose 1-3 habits','Daily X on calendar','Never miss twice','Monthly review','Reward 30-day streaks'],0],
+['okr-setter','OKR Setter','Business','Objectives that inspire, results that measure.',['Objective craft','KR design','Quarterly cadence'],'planner',{fields:['Objective','Key result 1','Key result 2'],out:'Objective: {0}.\nKR1: {1}. KR2: {2}.\nKRs must be numbers with deadlines.\nScore 0.7 = good stretch. Review weekly.'},0],
+['startup-namer','Startup Namer','Business','Names that stick and domains that exist.',['Name storms','Domain checks','Trademark caution'],'picker',['Northloop','Brightforge','Kindredly','Swiftbase','Loomly','Clearpath','Updraft','Honeycomb HQ'],0],
+['logo-brief','Logo Brief Writer','Business','Tells designers exactly what you see in your head.',['Brief templates','Style words','Do/don\'t lists'],'planner',{fields:['Business','3 style words','Colors you love'],out:'Logo brief: {0}.\nStyle: {1}. Colors: {2}.\nDeliverables: vector, dark/light versions, icon.\nShow 3 concepts, refine 1. Simplicity scales.'},0],
+['slogan-maker','Slogan Maker','Business','Seven words or less, remembered forever.',['Slogan storms','Tagline tests','Tone matching'],'picker',['Done right, done bright.','Small steps, giant leaps.','Made for makers.','Beyond the ordinary.','Your story, amplified.','Simply better.'],0],
+['ad-writer','Ad Writer','Business','Stops the scroll. Sells the click.',['Hook lines','Body copy','CTA craft'],'planner',{fields:['Product','Audience','One benefit'],out:'Ad for {0} → {1}.\nHook: stop them. Body: {2} in their words.\nCTA: one clear action.\nTest 3 hooks; the winner gets the budget.'},0],
+['social-writer','Social Post Writer','Business','Posts people actually read.',['Hook craft','Hashtag sets','CTA lines'],'picker',['Hot take: most people are doing this wrong. Here is the fix:','I tried it for 30 days. Results:','Unpopular opinion (but true):','Stop scrolling if you want this:','Nobody talks about this part:'],0],
+['hashtag-finder','Hashtag Finder','Business','Finds the tags that find your people.',['Tag sets','Niche tags','Banned-tag checks'],'chat',[['how many','Instagram: 5-10 targeted. TikTok: 3-5. Quality beats quantity.'],['niche','Mix big tags with tiny specific ones — small ponds, bigger fish.'],['banned','Check tags before using; banned tags hide your post.']],0],
+['bio-writer','Bio Writer','Writing','150 characters of you, at your best.',['Bio templates','Link-in-bio','Tone tuning'],'planner',{fields:['Who you help','How','Personality word'],out:'Bio: I help {0} {1}.\nFlavor: {2}.\nFormula: who + how + proof + CTA.\nUpdate quarterly — you are growing.'},0],
+['dating-helper','Dating Profile Helper','Heart','Genuine, fun, and photo-smart. Real you, best light.',['Profile reviews','Prompt answers','Photo order'],'checklist',['Lead with a smiling photo','Show hobbies, not just face','Prompts: specific + playful','No negativity, no lists of demands','Ask a friend to review'],0],
+['breakup-letter','Breakup Letter Helper (kind)','Heart','Kind honesty for hard goodbyes.',['Gentle structures','Closure lines','No-contact plans'],'planner',{fields:['How long together','Main reason (kind words)','What you wish them'],out:'Draft:\n"These {0} mattered to me. Honestly, {1}.\nI wish you {2}. I think space is kindest now."\nShort, kind, final. Send once. Then heal.'},0],
+['friendship-fixer','Friendship Fixer','Heart','Mends the drift. Reaches out first.',['Reconnection scripts','Apology frames','Hangout ideas'],'picker',['Coffee, my treat, this week?','I miss you — walk Saturday?','Thinking of you. No reason.','Remember when...? Let us make a new one.'],0],
+['vows-writer','Wedding Vows Writer','Heart','Promises in your own voice. Tears guaranteed.',['Vow structures','Personal details','Delivery tips'],'planner',{fields:['Partner name','Favorite memory','Your promise'],out:'Vows for {0}:\n"I loved you when {1}.\nI promise {2}."\nKeep under 2 minutes. Speak slow. Breathe. Cry allowed.'},0],
+['baby-names','Baby Name Finder','Family','Names with meaning, music, and playground-proofing.',['Name lists','Meaning lookup','Sibling matching'],'picker',['Aria','Miles','Nora','Ezra','Luna','Kai','Ivy','Owen','Maya','Felix'],0],
+['pet-names','Pet Name Finder','Pets','Names they will actually answer to.',['Name lists','Two-syllable science','Test calling'],'picker',['Biscuit','Mochi','Pepper','Waffles','Ziggy','Maple','Noodle','Pickles'],0],
+['band-names','Band Name Maker','Music','Louder on the poster, better in the chant.',['Name storms','Genre matching','Availability tips'],'picker',['Velvet Static','Midnight Cartographers','The Lucky Alarms','Paper Thunder','Neon Harvest','Glass Volcanoes'],0],
+['podcast-names','Podcast Name Maker','Art','Says the show in three words or less.',['Name storms','Clarity tests','Cover hints'],'picker',['The Daily Spark','Between Two Takes','Mic Drop Mondays','The Curious Hour','Static & Signal','Word of Mouth'],0],
+['username-forge','Username Forger','Tech','Handles that stick, everywhere.',['Name combos','Availability order','Brand checks'],'picker',['PixelPioneer','QuietQuasar','MossAndMoon','TurboTortoise','LuckyLumen','FableForge'],0],
+['password-poet','Password Poet','Tech','Passphrases with rhythm. (Never shares real ones.)',['Poetic passphrases','Memory hooks','Manager pairing'],'picker',['correct-horse-battery-staple style: pick 4 random words','dancing-purple-tiger-jumps','quiet-river-sings-softly','brave-fox-counts-stars'],0],
+['wifi-joker','WiFi Name Joker','Tech','The funniest network on the block.',['Pun names','Neighbor-safe picks'],'picker',['Pretty Fly for a WiFi','Wu-Tang LAN','The LAN Before Time','Bill Wi the Science Fi','FBI Surveillance Van','Nacho WiFi'],0],
+['fantasy-names','Fantasy Name Generator','Games','Elves, dwarves, and starfarers, named properly.',['Culture sets','Meaning blends'],'picker',['Aelindra Thorne','Bromm Ironfist','Celeste Vane','Dorian Blackwood','Elyssia Moonwhisper','Fenwick Ash'],0],
+['dnd-builder','D&D Character Builder','Games','Roll for initiative, hero.',['Class picking','Backstory sparks','Stat arrays'],'planner',{fields:['Class vibe','Race','One secret'],out:'Character: {1} {0}.\nSecret: {2}.\nStats: put your best in what your class needs.\nBackstory: want, wound, and one NPC who believes in you.'},0],
+['world-builder','World Builder','Writing','Maps, myths, and magic systems that hold together.',['Map prompts','Culture kits','Magic rules'],'checklist',['Map the land','Who rules and how','What do they eat','One magic rule with a cost','A myth everyone knows'],0],
+['plot-twists','Plot Twist Machine','Writing','The turn nobody saw coming (but everyone believes).',['Twist types','Foreshadow tips','Reveal timing'],'picker',['The ally was the villain all along','It was a test — by a friend','The treasure is worthless; the journey was the point','Two characters are the same person','The narrator lied — once'],0],
+['riddle-maker','Riddle Maker','Games','Twisty words, fair answers.',['Riddle craft','Answer reveals','Difficulty tuning'],'quiz',[['I speak without a mouth… what am I?',['Echo','Shadow','Wind'],0],['The more you take, the more you leave behind?',['Time','Footsteps','Breath'],1],['What has keys but no locks?',['Map','Piano','Code'],1]],0],
+['joke-writer','Joke Writer','Games','Punchlines with timing built in.',['Setup-punch','One-liners','Roast-light'],'picker',['I told my suitcase there would be no vacation this year. Now I am dealing with emotional baggage.','Why do programmers prefer dark mode? Because light attracts bugs.','I used to hate facial hair, but then it grew on me.'],0],
+['pun-smith','Pun Smith','Games','Groans guaranteed. Puns of steel.',['Pun storms','Themed sets'],'picker',['Lettuce romaine calm.','I am reading a book on anti-gravity — it is impossible to put down.','Time flies like an arrow; fruit flies like a banana.'],0],
+['limerick-looper','Limerick Looper','Games','Five lines, one grin.',['Rhyme schemes','Meter tips'],'chat',[['form','AABBA rhyme, lines 1-2-5 long, 3-4 short.'],['example','There once was a coder named Drew / Whose bugs numbered more than a few / He laughed with delight / As he coded all night / And shipped it by morning — woohoo!']],0],
+['haiku-helper','Haiku Helper','Games','Seventeen syllables of stillness.',['Syllable counting','Season words','Cutting words'],'chat',[['form','5-7-5 syllables. A moment, a season, a turn.'],['example','Old pond, still and deep — / a frog leaps, the water rings / moonlight shivers.']],0],
+['lyric-starter','Song Lyric Starter','Music','First lines that demand a second.',['Hook lines','Verse maps','Rhyme schemes'],'picker',['We were golden in the rearview light','Midnight taught me how to run','Your name tastes like summer rain','I built a house of almosts','Static on the radio, you on my mind'],0],
+['chord-suggester','Chord Progression Suggester','Music','Harmony that hugs the melody.',['Progressions','Mood matching','Voice leading'],'picker',['C – G – Am – F (hopeful)','Am – F – C – G (bittersweet)','Dm – Bb – F – C (epic)','Em – C – G – D (driving)'],0],
+['drum-maker','Drum Pattern Maker','Music','Pocket so deep you need a ladder.',['Pattern grids','Genre feels','Fill ideas'],'chat',[['rock','Kick 1 + 3, snare 2 + 4, hats eighths. The money beat.'],['hip-hop','Boom-bap: kick swung, snare late. Let it breathe.'],['fill','End of 4 bars: snare rolls down the toms, crash on 1.']],0],
+['bass-builder','Bass Line Builder','Music','The groove glue. Root, rhythm, and a little sauce.',['Root maps','Rhythmic hooks','Walk lines'],'chat',[['start','Root notes on beat 1, follow the kick drum.'],['groove','Repetition IS the hook. Change one note per 4 bars.'],['walk','Root, fifth, approach the next chord by half step.']],0],
+['mix-tips','Mix Tip Giver','Music','Muddy to clear, one fader at a time.',['EQ basics','Balance order','Reference tracks'],'checklist',['Gain stage first','High-pass the mud','Carve space per instrument','Check on small speakers','Rest ears, revisit'],0],
+['mastering-list','Mastering Checklist','Music','Final polish before the world hears.',['Loudness targets','Format checks','QC passes'],'checklist',['Mix approved, no clipping','Loudness: -14 LUFS streaming','True peak under -1 dB','Check mono compatibility','Listen on 3 systems'],0],
+['gig-finder','Gig Finder','Music','Stages that fit your sound and your crowd.',['Venue matching','Pitch emails','Set pricing'],'planner',{fields:['Genre','City','Draw size'],out:'Gig hunt: {0} in {1}, draw ~{2}.\nTarget rooms that book {0}.\nPitch: 3 lines, one video link, easy yes.\nPrice: cover costs + 20%. Merch table always.'},0],
+['setlist-builder','Setlist Builder','Music','Arc like a story: hook, climb, peak, encore.',['Flow design','Encore picks','Timing math'],'checklist',['Opener: energy, familiar','Build to peak at 2/3','New songs mid-set','Closer: biggest singalong','Encore ready, just in case'],0],
+['merch-planner','Merch Planner','Music','Shirts that sell themselves.',['Product picks','Pricing','Table setup'],'calc',{a:'Shirt cost $',b:'Sale price $',op:'minus',unit:'profit per shirt',note:'Sell 70% to break even on most runs.'},0],
+['crowd-coach','Crowd Work Coach','Art','Reads the room, rides the wave.',['Opener lines','Heckling judo','Energy reads'],'chat',[['heckler','Agree and amplify, then move on. The crowd is your bouncer.'],['quiet room','Lower your energy to meet them, then lead up slowly.'],['opener','Local, specific, true. "This town..." always works.']],0],
+['magic-teacher','Magic Trick Teacher','Games','Misdirection with a smile. Practice makes impossible.',['Easy tricks','Patter lines','Practice drills'],'picker',['The disappearing coin (palm + misdirect)','Mind-reading number (math force)','Card to impossible location','Rubber pencil wobble','The cut-and-restored rope'],0],
+['card-tutor','Card Trick Tutor','Games','Sleight of hand, step by step.',['Shuffles','Forces','Reveals'],'chat',[['force','The classic force: dribble, they say stop — control is everything.'],['palm','Practice in a mirror. Angles are the secret.'],['reveal','The reveal is theater. Pause. Eye contact. Then boom.']],0],
+['escape-designer','Escape Room Designer','Games','Puzzles that click, stories that grip.',['Puzzle chains','Theme builds','Hint systems'],'checklist',['Theme first','5-7 puzzles, chained','One red herring max','Hint system (3 levels)','Playtest with friends'],0],
+['scavenger-maker','Scavenger Hunt Maker','Games','Clues, chaos, and cheering.',['Clue writing','Route planning','Prize tiers'],'planner',{fields:['Occasion','Players','Location'],out:'Hunt: {0}, {1} players at {2}.\n8-10 clues, mix of riddle/photo/task.\nTeams of 3-4. Time limit 60 min.\nPrize for winners, candy for all.'},0],
+['trivia-host','Trivia Host','Games','Questions with drama. The host with the most.',['Round design','Question banks','Tiebreakers'],'quiz',[['Largest planet?',['Saturn','Jupiter','Neptune'],1],['How many players on a soccer team?',['9','10','11'],2],['First man on the moon?',['Armstrong','Aldrin','Gagarin'],0]],0],
+['bingo-caller','Bingo Caller','Games','B-12! Energy included.',['Calling cadence','Card checks','Prize ideas'],'picker',['B-7','I-22','N-38','G-55','O-70','B-12','I-29'],0],
+['karaoke-picker','Karaoke Picker','Music','Crowd-pleasers in your range.',['Song matching','Courage tips'],'picker',['Don\'t Stop Believin\' — Journey','Shake It Off — Taylor Swift','Sweet Caroline — Neil Diamond','Bohemian Rhapsody — Queen (brave!)','Call Me Maybe — Carly Rae'],0],
+['dance-teacher','Dance Move Teacher','Sports','Two left feet welcome. Rhythm is teachable.',['Basic steps','Style intros','Practice drills'],'chat',[['start','Bounce on the beat. Step-touch. You are dancing already.'],['two left','Everyone starts there. Mirror a video at half speed.'],['wedding','Box step + turn. Two moves carry a whole first dance.']],0],
+['run-pacer','Run Pacer','Sports','Steady miles, strong finish.',['Pace math','Training weeks','Race plans'],'calc',{a:'Distance (miles)',b:'Pace (min/mile)',op:'times',unit:'minutes total',note:'Negative split: second half slightly faster.'},0],
+['swim-coach','Swim Drill Coach','Sports','Smooth is fast. Technique over thrash.',['Drill sets','Breathing','Turns'],'checklist',['Warm up 200 easy','Drills: catch-up, fist','Main set with rest','Cool down 100','Stretch shoulders'],0],
+['bike-fit','Bike Fit Helper','Sports','Comfort is speed. Dial the position.',['Saddle height','Reach','Cleat setup'],'chat',[['saddle','Heel on pedal, leg straight at bottom — that is your height.'],['knee pain','Front: saddle low/forward. Back: saddle high. Small moves.'],['hands numb','Raise bars or shorten reach. Core helps too.']],0],
+['hike-planner','Hike Planner','Nature','Trails, snacks, and summits.',['Route picking','Gear lists','Safety'],'checklist',['Check weather + trail status','Tell someone your plan','Water + snacks + layers','Map downloaded offline','Turn back at your turnaround time'],0],
+['camp-guide','Camp Setup Guide','Nature','Home under the stars.',['Site picking','Tent pitching','Camp kitchen'],'checklist',['Flat spot, no low dips','Tent door away from wind','Food stored from animals','Water + first aid handy','Leave no trace'],0],
+['fire-starter','Fire Starter (safety)','Nature','Warmth, responsibly. Safety first, always.',['Safe fire lays','Extinguishing','Leave-no-trace'],'checklist',['Check fire rules/bans','Clear 10ft around','Small: teepee of kindling','Never leave unattended','Drown, stir, feel cold'],0],
+['knot-teacher','Knot Teacher','Skills','The right knot for the job, every time.',['Essential knots','When-to-use','Practice order'],'quiz',[['Best general loop?',['Bowline','Square knot','Clove hitch'],0],['Join two ropes?',['Bowline','Sheet bend','Figure eight'],1],['Stopper knot?',['Bowline','Figure eight','Clove hitch'],1]],0],
+['fish-finder','Fish Finder','Nature','Think like a fish, catch like a pro.',['Spot reading','Season patterns','Technique picks'],'chat',[['where','Fish structure: docks, drop-offs, weed edges. Early and late beat midday.'],['bait','Match the hatch: what is hatching locally is what they bite.'],['knot','Palomar knot: strong, easy, works for most.']],0],
+['bait-picker','Bait Picker','Nature','The right temptation for the target.',['Live vs lure','Color picks','Rigging'],'picker',['Worm on a hook (classic)','Minnow under a bobber','Spinnerbait for bass','Jig for walleye','Topwater at dawn'],0],
+['tackle-org','Tackle Organizer','Nature','Every lure in its place.',['Box systems','Seasonal swaps','Inventory'],'checklist',['Sort by type','Label everything','Seasonal box swap','Replace rusty hooks','Inventory yearly'],0],
+['boat-check','Boat Checklist','Nature','Float plans and smooth launches.',['Pre-launch','Safety gear','Float plans'],'checklist',['Plug in!','Fuel + oil check','Safety gear aboard','Float plan shared','Weather checked'],0],
+['rv-planner','RV Trip Planner','Travel','Home on wheels, adventure included.',['Route planning','Campground picks','Checklists'],'planner',{fields:['Destination','Nights','Rig size'],out:'RV trip: {0}, {1} nights, {2}.\nBook campgrounds ahead in season.\nCheck: height clearances, dump stations, propane.\nDrive slower, arrive happier.'},0],
+['road-dj','Road Trip DJ','Travel','Miles of music, zero skips.',['Playlist arcs','Podcast picks','Game breaks'],'picker',['Windows-down anthems','Singalong classics','Chill sunset miles','Podcast: true crime','Podcast: comedy','Local radio roulette'],0],
+['packing-lister','Packing Lister','Travel','Never forget the charger again.',['List builder','Capsule wardrobes','Carry-on rules'],'checklist',['Documents + money','Chargers + adapters','3-4 mix-match outfits','Toiletries (travel size)','One comfort item'],0],
+['airport-nav','Airport Navigator','Travel','Terminals without tears.',['Timing guides','Security tips','Delay plans'],'chat',[['arrive','Domestic: 2h. International: 3h. Holiday: add 1.'],['security','Shoes easy-off, liquids bag ready, laptop out. PreCheck pays off.'],['delay','Airline app first, then counter. Know your rights for meals/hotels.']],0],
+['flight-helper','Flight Delay Helper','Travel','Delays happen; misery is optional.',['Rights info','Rebooking scripts','Lounge hacks'],'checklist',['Check app before counter','Ask: meal/hotel vouchers','Rebook on any airline','Keep receipts','Lounge day-pass math'],0],
+['hotel-haggler','Hotel Haggler','Travel','Better rooms, better rates. Ask nicely, get more.',['Rate scripts','Upgrade asks','Fee dodges'],'chat',[['upgrade','Ask at check-in: "Any complimentary upgrades today?" Smile helps.'],['fees','Question resort fees; ask what is waived for direct booking.'],['rate','Call the hotel directly — they often beat sites.']],0],
+['restaurant-picker','Restaurant Picker','Food & Drink','The right table for the right night.',['Cuisine matching','Occasion picks','Reservation timing'],'picker',['Cozy Italian trattoria','Lively taco spot','Quiet sushi counter','Farm-to-table bistro','Rooftop with a view'],0],
+['reservation-writer','Reservation Writer','Food & Drink','Tables held, occasions honored.',['Request notes','Special occasions','Large parties'],'planner',{fields:['Restaurant','Party size','Occasion'],out:'Reservation: {0} for {1}.\nNote: {2} — mention it, kitchens love a celebration.\nConfirm day-of. Arrive 10 min early. Tip well.'},0],
+['food-tour','Food Tour Planner','Travel','Eat the city like a local.',['Route building','Must-tries','Budget bites'],'planner',{fields:['City','Foods you love','Hours'],out:'Food tour: {0}, {1}, {2}h.\n5-6 stops, walk between.\nStart savory, end sweet. One sit-down max.\nAsk vendors what THEY eat.'},0],
+['market-guide','Farmers Market Guide','Food & Drink','Fresh, seasonal, and chatty farmers.',['Season charts','Questions to ask','Bargain timing'],'checklist',['Go early for best pick','Late for deals','Ask what is peak today','Bring bags + cash','Taste everything offered'],0],
+['meal-prepper','Meal Prepper','Cooking','Sunday work, weekday ease.',['Prep plans','Storage guides','Reheat best'],'checklist',['Pick 2 proteins + 2 carbs','Sheet-pan everything','Portion into containers','Label with dates','Eat within 4 days'],0],
+['leftover-pro','Leftover Reinventor','Cooking','Yesterday\'s dinner, reborn delicious.',['Transform maps','Safety windows','Flavor boosts'],'picker',['Fried rice from any rice + veg','Quesadillas from any protein','Soup from roast + broth','Hash from potatoes + anything','Pasta bake from odds and ends'],0],
+['spice-matcher','Spice Matcher','Cooking','The right spice is a shortcut to delicious.',['Pairing charts','Blend recipes','Fresh vs dried'],'chat',[['chicken','Paprika, thyme, garlic. Or go cumin + coriander for warmth.'],['italian','Oregano, basil, red pepper. Bloom in oil first.'],['bland','Salt first, then acid, then heat. Taste at each step.']],0],
+['sauce-boss','Sauce Boss','Cooking','Sauce is the boss because sauce decides.',['Mother sauces','Quick pan sauces','Fixes'],'chat',[['broken','Whisk in cold butter or a splash of water — emulsion rescued.'],['too salty','Dilute, add acid or a pinch of sugar. Potato is a myth.'],['pan sauce','Deglaze with wine/stock, reduce, swirl butter. Restaurant magic.']],0],
+['grill-master','Grill Master','Cooking','Fire, smoke, and perfect char.',['Heat zones','Doneness','Resting rules'],'checklist',['Two zones: hot + cool','Oil the grates','Doneness by temp, not time','Rest the meat','Clean grates while hot'],0],
+['smoker-guide','Smoker Guide','Cooking','Low and slow wins every time.',['Wood picks','Temp control','Stall handling'],'chat',[['wood','Hickory: bold. Apple: sweet mild. Oak: all-rounder.'],['stall','The stall is normal — wait it out or wrap in butcher paper.'],['temp','225-250°F. Trust the thermometer, not the clock.']],0],
+['pizza-doc','Pizza Dough Doctor','Cooking','Crust cures: from cracker to cloud.',['Dough formulas','Ferment timing','Bake setups'],'chat',[['soggy','Hotter oven, thinner sauce, par-bake the crust.'],['tough','Less kneading, more rest. Cold ferment 24-72h for flavor.'],['rise','Warm spot (75°F). Doubled = ready. Poke test never lies.']],0],
+['bread-baker','Bread Baker','Cooking','Crusty, chewy, and proud.',['Starter care','Shaping','Baking'],'checklist',['Active starter/yeast','Autolyse the flour','Stretch and folds','Shape tight','Bake hot with steam'],0],
+['cake-decorator','Cake Decorator','Cooking','Pretty enough to hesitate cutting.',['Frosting smooth','Piping basics','Theme ideas'],'checklist',['Level the layers','Crumb coat, then chill','Final coat smooth','Piping: steady pressure','Chill before serving'],0],
+['cookie-engineer','Cookie Engineer','Cooking','Crispy edges, gooey centers — engineered.',['Texture control','Mix-in ratios','Bake science'],'chat',[['chewy','More brown sugar, melted butter, underbake slightly.'],['crispy','More white sugar, longer bake, flat shape.'],['spread','Chill the dough. Cold butter = less spread.']],0],
+['icecream-maker','Ice Cream Maker','Food & Drink','Scoops of happiness, churned at home.',['Base recipes','Flavor builds','No-churn ways'],'chat',[['icy','More fat, more sugar, churn longer. Alcohol splash helps too.'],['no churn','Whipped cream + condensed milk + flavor. Freeze 6h.'],['flavor','Steep add-ins in the warm base, then strain.']],0],
+['coffee-roaster','Coffee Roaster (home)','Food & Drink','From green bean to your cup.',['Roast levels','Cooling','Resting'],'checklist',['Ventilate well','Listen for first crack','Cool fast','Rest 12-24h','Log every roast'],0],
+['tea-steeper','Tea Steeper','Food & Drink','The perfect cup, steeped with care.',['Temp guides','Time charts','Tea types'],'quiz',[['Green tea temp?',['Boiling','175°F / 80°C','Iced only'],1],['Black tea steeps…',['1 min','3-5 min','20 min'],1],['Bitter tea fix?',['More leaves','Cooler water / shorter steep','More sugar'],1]],0],
+['kombucha-brewer','Kombucha Brewer','Food & Drink','Fizzy, tangy, alive.',['SCOBY care','Flavoring','Carbonation'],'checklist',['Clean everything','Sweet tea + starter','Ferment 7-14 days','Bottle with fruit','Burp bottles daily'],0],
+['beer-notes','Beer Taster Notes','Food & Drink','Taste like you mean it.',['Tasting order','Flavor words','Style guides'],'chat',[['taste','Look, swirl, smell, sip. Note malt, hops, yeast, finish.'],['styles','IPA: hoppy bitter. Stout: roasty dark. Lager: crisp clean.'],['pair','Match intensity: bold beer, bold food.']],0],
+['wine-pairer','Wine Pairer','Food & Drink','The right bottle for the table.',['Pairing rules','Serving temps','Budget picks'],'chat',[['red meat','Big reds: cabernet, malbec. Tannins love fat.'],['fish','Crisp whites: sauvignon blanc, muscadet.'],['temp','Reds: cool room. Whites: fridge 20 min out.']],0],
+['cheese-pairer','Cheese Pairer','Food & Drink','Curds of wisdom.',['Pairing boards','Serving order','Storage'],'picker',['Brie + champagne','Aged cheddar + IPA','Blue + honey + walnuts','Goat + sauvignon blanc','Manchego + quince'],0],
+['charcuterie-pro','Charcuterie Builder','Food & Drink','Boards that break the internet.',['Meat/cheese ratios','Layout art','Accompaniments'],'checklist',['3-5 cheeses, varied milk','2-3 cured meats','Crunch: nuts + crackers','Sweet: fruit + honey','Garnish fresh herbs'],0],
+['picnic-packer','Picnic Packer','Food & Drink','Blanket, basket, bliss.',['Menus','Packing order','Bug defense'],'checklist',['Blanket + basket','Finger foods only','Cold pack strategy','Trash bags','Sunscreen + wipes'],0],
+['lunchbox-artist','Lunchbox Artist','Cooking','Midday masterpieces for little (and big) kids.',['Bento ideas','No-heat lunches','Allergy-safe'],'picker',['Rainbow veggie pinwheels','DIY taco cups','Pasta salad jars','Hummus + pita boxes','Breakfast-for-lunch boxes'],0],
+['bento-builder','Bento Builder','Cooking','Balance in a box: color, nutrition, joy.',['5-color rule','Packing tight','Safety'],'checklist',['Protein + carb + 2 veg','5 colors minimum','Pack tight, no gaps','Cool packs if needed','Eat within 4 hours'],0],
+['babyfood-maker','Baby Food Maker','Family','First foods, made with love.',['Stage guides','Batch freezing','Allergen intro'],'checklist',['Wash everything','Steam until soft','Blend smooth, thin as needed','Freeze in portions','Introduce allergens one at a time, watch closely'],1],
+['toddler-meals','Toddler Meal Planner','Family','Tiny humans, big appetites (sometimes).',['Meal rotations','Snack trays','Picky phases'],'picker',['Mini pancakes + berries','Cheese quesadilla triangles','Pasta with hidden veg sauce','DIY lunchables','Banana oat bites'],0],
+['school-lunch','School Lunch Rotator','Family','No more sad sandwiches.',['2-week rotations','Thermos meals','Notes'],'checklist',['Protein every day','Fruit or veg always','Rotate 10 mains','Ice pack always','Sweet note sometimes'],0],
+['office-lunch','Office Lunch Prepper','Cooking','Desk lunches worth leaving the desk for.',['Prep plans','No-microwave wins','Budget math'],'planner',{fields:['Days in office','Fridge/microwave?','Budget/week'],out:'Office lunches: {0} days, {1}, {2}/week.\nGrain bowls: cook grains + protein Sunday.\nNo microwave? Wraps, salads, bento.\nBatch 3, buy 2 — sanity preserved.'},0],
+['date-cook','Date Night Cook','Cooking','Impressive but relaxed. Romance, plated.',['Menus','Timing','Atmosphere'],'planner',{fields:['Their vibe','Your skill','Time'],out:'Date night: {0}, skill {1}, {2}.\nPick ONE showpiece + simple sides.\nPrep 80% before they arrive.\nDessert store-bought is fine — confidence is the spice.'},0],
+['anniversary-dinner','Anniversary Dinner Planner','Events','Years together, plated beautifully.',['Menu arcs','Memory touches','Toasts'],'planner',{fields:['Years','Favorite shared meal','Surprise element'],out:'Anniversary: {0} years.\nMenu nod to {1} — recreate your first date dish.\nSurprise: {2}.\nToast: one honest sentence beats a speech.'},0],
+['holiday-feast','Holiday Feast Planner','Events','The big table, handled.',['Timelines','Portions','Dietary juggles'],'checklist',['Guest count + diets','Backward timeline from serving','Turkey math: 1.5 lb/person','Make-ahead list','Delegate 3 dishes'],0],
+['potluck-pro','Potluck Coordinator','Events','No duplicate potato salads.',['Sign-up sheets','Portion math','Theme ideas'],'planner',{fields:['Guests','Theme','Your dish'],out:'Potluck: {0} guests, theme {1}.\nYou bring {2} — the thing you make best.\nSign-up sheet: mains, sides, desserts, drinks.\nLabel allergens. Bring your dish in its serving bowl.'},0],
+['bbq-chief','BBQ Chief','Cooking','Smoke ring royalty.',['Meat picks','Rub recipes','Resting'],'checklist',['Trim + season night before','Low and slow','Wrap at the stall','Rest 1 hour minimum','Slice against the grain'],0],
+['tailgate-pro','Tailgate Planner','Events','The parking lot is the party.',['Setup lists','Grill menus','Game picks'],'checklist',['Grill + fuel + tools','Cooler with ice','Chairs + tent','Cornhole or kanjam','Trash bags (leave it clean)'],0],
+['snack-engineer','Super Bowl Snack Engineer','Events','Snacks engineered for maximum game.',['Spreads','Timing','Quantity math'],'calc',{a:'Guests',b:'Quarters (4)',op:'times',unit:'snack portions (1/person/quarter)',note:'Plus a halftime hero dish. Never run out of dip.'},0]
+];
+/* ============ DOMAIN AI RENDERER (data-driven) ============ */
+var domIndex = {};
+DOMAIN_SPECS.forEach(function(s, i){
+  domIndex[s[0]] = {
+    id: 'dom-' + s[0], sid: s[0], name: s[1], domain: s[2], mentality: s[3],
+    abilities: s[4], demoKind: s[5], demoData: s[6], pro: s[7],
+    stamp: 'JAH-AI-DOM-' + String(i+1).padStart(3,'0')
+  };
+});
+function domainParams(d){
+  return [['domain', d.domain], ['file kind','Signature domain AI'], ['demo', d.demoKind],
+          ['voice','warm Signature voice'], ['honesty', d.pro ? 'AI assistant, not a licensed professional' : 'Signature-made helper']];
+}
+function domainPy(d){
+  var L = [];
+  L.push('# ' + d.stamp + ' ' + d.name + ' (Signature domain AI)');
+  L.push('# Signature-made by Justin Addam Higgins — the AI Telephone Book');
+  L.push('# Domain: ' + d.domain);
+  L.push('MENTALITY = ' + JSON.stringify(d.mentality));
+  L.push('ABILITIES = ' + JSON.stringify(d.abilities));
+  if (d.pro) L.push('# NOTE: AI assistant, not a licensed professional — for information and organization.');
+  L.push('');
+  L.push('KNOWLEDGE = ' + JSON.stringify(d.demoKind === 'chat' ? d.demoData : []));
+  L.push('def reply(q):');
+  L.push('    q = q.lower()');
+  L.push('    for kw, ans in KNOWLEDGE:');
+  L.push('        if kw.lower() in q: return ans');
+  L.push('    return "As your ' + d.name + ', my counsel: break it into small steps, start today, and be kind to yourself along the way."');
+  L.push('');
+  L.push('if __name__ == "__main__":');
+  L.push('    print("' + d.name + ' online. Domain: ' + d.domain + '.")');
+  L.push('    while True:');
+  L.push('        print(reply(input("you> ")))');
+  return L.join('\n');
+}
+function domainFileText(d){
+  var L = [];
+  L.push('THE AI TELEPHONE BOOK — JAH AI Models Archive');
+  L.push(d.stamp + ' — ' + d.name + ' (' + d.domain + ')');
+  L.push('Signature-made by Justin Addam Higgins'); L.push('');
+  L.push('MENTALITY:'); L.push(d.mentality); L.push('');
+  L.push('ABILITIES:'); d.abilities.forEach(function(a){ L.push(' - ' + a); }); L.push('');
+  if (d.pro) L.push('NOTE: AI assistant, not a licensed professional — for information and organization; see a real pro for decisions.'); L.push('');
+  L.push('Live file: https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-' + d.id);
+  return L.join('\n');
+}
+/* ---- demo templates ---- */
+function demoTemplate(d){
+  var k = d.demoKind, dd = d.demoData, uid = d.id;
+  if (k === 'chat'){
+    return '<input type="text" id="' + uid + '-q" placeholder="Ask me anything…" style="width:100%"><button data-dact="ask">Ask</button><span class="out" id="' + uid + '-o"></span>';
+  }
+  if (k === 'planner'){
+    var f = dd.fields.map(function(fl, i){ return fl + ' <input type="text" id="' + uid + '-f' + i + '" style="width:100%;margin-bottom:4px">'; }).join('<br>');
+    return f + '<br><button data-dact="plan">Make my plan</button><span class="out" id="' + uid + '-o"></span>';
+  }
+  if (k === 'quiz'){
+    return dd.map(function(q, i){
+      return '<div style="margin-bottom:8px"><b>' + escHtml(q[0]) + '</b><br>' +
+        q[1].map(function(o, j){ return '<button data-q="' + i + '" data-o="' + j + '">' + escHtml(o) + '</button>'; }).join(' ') + '</div>';
+    }).join('') + '<span class="out" id="' + uid + '-o"></span>';
+  }
+  if (k === 'calc'){
+    return dd.a + ' <input type="number" id="' + uid + '-a" value="0" style="width:90px"><br>' +
+           dd.b + ' <input type="number" id="' + uid + '-b" value="0" style="width:90px"><br>' +
+           '<button data-dact="calc">Calculate</button><span class="out" id="' + uid + '-o"></span>';
+  }
+  if (k === 'picker'){
+    return '<button data-dact="pick">Pick for me</button><span class="out" id="' + uid + '-o" style="font-size:1.05em"></span>';
+  }
+  if (k === 'checklist'){
+    return dd.map(function(it, i){ return '<label style="display:block;margin:3px 0"><input type="checkbox" data-c="' + i + '"> ' + escHtml(it) + '</label>'; }).join('') +
+      '<span class="out" id="' + uid + '-o">0/' + dd.length + ' done</span>';
+  }
+  return '';
+}
+function wireDomainDemo(root, d){
+  var k = d.demoKind, dd = d.demoData, uid = d.id, o = root.querySelector('#' + uid + '-o');
+  function out(t){ if (o) o.textContent = t; }
+  if (k === 'chat'){
+    var ask = function(){
+      var q = root.querySelector('#' + uid + '-q').value.trim(); if (!q) return;
+      var t = q.toLowerCase(), ans = null;
+      dd.forEach(function(p){ if (t.indexOf(p[0].toLowerCase()) !== -1) ans = p[1]; });
+      out((ans || 'As your ' + d.name + ': break it into small steps, start today, and be kind to yourself along the way.') + '\n— ' + d.name);
+    };
+    root.querySelector('[data-dact=ask]').onclick = ask;
+    root.querySelector('#' + uid + '-q').addEventListener('keydown', function(e){ if (e.key === 'Enter') ask(); });
+  }
+  if (k === 'planner'){
+    root.querySelector('[data-dact=plan]').onclick = function(){
+      var vals = dd.fields.map(function(_, i){ return root.querySelector('#' + uid + '-f' + i).value || '…'; });
+      var t = dd.out; vals.forEach(function(v, i){ t = t.split('{' + i + '}').join(v); });
+      out(t);
+    };
+  }
+  if (k === 'quiz'){
+    var score = 0, done = 0;
+    root.querySelectorAll('[data-q]').forEach(function(b){
+      b.onclick = function(){
+        var qi = +b.getAttribute('data-q'), oi = +b.getAttribute('data-o');
+        if (b.disabled) return; b.disabled = true; done++;
+        var right = oi === dd[qi][2];
+        if (right){ score++; b.style.borderColor = '#5aff8a'; } else b.style.borderColor = '#ff5a5a';
+        out('Score: ' + score + '/' + done + (done === dd.length ? (score === dd.length ? ' — perfect! 🏆' : ' — good effort!') : ''));
+      };
+    });
+  }
+  if (k === 'calc'){
+    root.querySelector('[data-dact=calc]').onclick = function(){
+      var a = parseFloat(root.querySelector('#' + uid + '-a').value) || 0, b = parseFloat(root.querySelector('#' + uid + '-b').value) || 0, r = 0;
+      if (dd.op === 'minus') r = a - b; else if (dd.op === 'plus') r = a + b;
+      else if (dd.op === 'times') r = a * b; else if (dd.op === 'div') r = b ? a / b : 0;
+      else if (dd.op === 'per') r = b ? (a * b / 100) : 0;
+      out('Result: ' + (Math.round(r * 100) / 100) + ' ' + dd.unit + '\n' + (dd.note || ''));
+    };
+  }
+  if (k === 'picker'){
+    root.querySelector('[data-dact=pick]').onclick = function(){
+      var n = 0, iv = setInterval(function(){
+        out('🎲 ' + dd[Math.floor(Math.random() * dd.length)]);
+        if (++n > 8){ clearInterval(iv); out('✨ ' + dd[Math.floor(Math.random() * dd.length)]); }
+      }, 90);
+    };
+  }
+  if (k === 'checklist'){
+    root.querySelectorAll('[data-c]').forEach(function(c){
+      c.onchange = function(){
+        var n = root.querySelectorAll('[data-c]:checked').length;
+        out(n + '/' + dd.length + ' done' + (n === dd.length ? ' — complete! 🎉' : ''));
+      };
+    });
+  }
+}
+function domainReply(d, q){
+  var t = q.toLowerCase();
+  if (d.demoKind === 'chat'){
+    for (var i = 0; i < d.demoData.length; i++) if (t.indexOf(d.demoData[i][0].toLowerCase()) !== -1) return d.demoData[i][1];
+  }
+  var ab = d.abilities[Math.floor(Math.random() * d.abilities.length)];
+  return 'As your ' + d.name + ' (' + d.domain + '): ' + ab + '. Tell me more about what you need, and we will work it through together.';
+}
+/* ---- domain file card (rendered on demand) ---- */
+var openDomainId = null;
+function renderDomainRows(){
+  var grid = document.getElementById('domaingrid');
+  Object.keys(domIndex).forEach(function(key){
+    var d = domIndex[key];
+    var row = document.createElement('div');
+    row.className = 'aifile'; row.id = 'dir-' + d.id; row.style.padding = '10px 14px';
+    row.innerHTML = '<div class="filehead"><span class="stamp">' + d.stamp + '</span><span class="badge">SIGNATURE-MADE</span></div>' +
+      '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><div><b>' + escHtml(d.name) + '</b><br><span style="color:var(--dim);font-size:.85em">' + escHtml(d.domain) + '</span></div>' +
+      '<button class="fbtn" data-open>Open file →</button></div><div class="fullfile"></div>';
+    row.querySelector('[data-open]').onclick = function(){ toggleDomain(d, row); };
+    grid.appendChild(row);
+  });
+}
+function toggleDomain(d, row){
+  var slot = row.querySelector('.fullfile');
+  if (openDomainId === d.id){ slot.innerHTML = ''; openDomainId = null; row.querySelector('[data-open]').textContent = 'Open file →'; return; }
+  openDomainId = d.id;
+  var el = document.createElement('div');
+  el.id = 'file-' + d.id;
+  var h = '<p class="mentality">' + escHtml(d.mentality) + '</p>';
+  h += '<ul class="abilities">' + d.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
+  h += '<table class="params">' + domainParams(d).map(function(p){ return '<tr><td>' + escHtml(p[0]) + '</td><td>' + escHtml(p[1]) + '</td></tr>'; }).join('') + '</table>';
+  if (d.pro) h += '<div class="disclaimer" style="border-color:#5a4a22">AI assistant, not a licensed professional — for information and organization; see a real pro for decisions.</div>';
+  h += '<div class="filetools"><button class="fbtn" data-t="read">🔊 Read aloud</button><button class="fbtn" data-t="copy">⧉ Copy</button><button class="fbtn" data-t="dl">⤓ Download .py</button></div>';
+  h += '<div class="demo"><h4>WORKING DEMO</h4>' + demoTemplate(d) + '</div>';
+  h += '<div class="demo"><h4>TALK TO YOUR ' + escHtml(d.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something…" aria-label="Talk"><button data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  el.innerHTML = h;
+  slot.innerHTML = ''; slot.appendChild(el);
+  row.querySelector('[data-open]').textContent = 'Close file ✕';
+  wireDomainDemo(el, d);
+  var reading = false;
+  el.querySelector('[data-t=read]').onclick = function(e){
+    if (reading){ TTS.stop(); reading = false; e.target.innerHTML = '🔊 Read aloud'; return; }
+    reading = true; e.target.innerHTML = '⏹ Stop'; TTS.speak(domainFileText(d), {});
+  };
+  el.querySelector('[data-t=copy]').onclick = function(e){ copyText(domainFileText(d), e.target); };
+  el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(d.id + '.py', domainPy(d), 'text/x-python'); };
+  var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input'), auto = el.querySelector('.autovoice');
+  function say(who, text){
+    var dv = document.createElement('div'); dv.className = who;
+    dv.textContent = (who === 'u' ? 'You: ' : d.name + ': ') + text;
+    log.appendChild(dv); log.scrollTop = log.scrollHeight;
+  }
+  function send(){
+    var q = inp.value.trim(); if (!q) return; inp.value = '';
+    say('u', q); var a = domainReply(d, q); say('a', a);
+    if (auto.checked) TTS.speak(a, {});
+  }
+  el.querySelector('[data-t=send]').onclick = send;
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+  el.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+/* ============ TELEPHONE DIRECTORY ============ */
+var DIR_EXTRA = [
+  ['Patent AI', 'Every public patent answers questions', 'https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/', 'sister site'],
+  ['Spec AI', 'Every draft spec answers as your personal AI', 'https://justinahiggins614-cmyk.github.io/signature-one-archive/', 'sister site'],
+  ['Word AI Teacher', 'Every dictionary word, taught', 'https://justinahiggins614-cmyk.github.io/jah-dictionary/', 'sister site'],
+  ['Article AI', 'Every wiki article answers', 'https://justinahiggins614-cmyk.github.io/jah-wiki/', 'sister site'],
+  ['Dossier AI', 'Every leaks file debriefs you', 'https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/', 'sister site'],
+  ['Calculator AI', 'Ask Anything, paradox immune', 'https://justinahiggins614-cmyk.github.io/jah-calculator/', 'sister site']
+];
+var dirEntries = [];
+function buildDirectory(){
+  dirEntries = [];
+  SIG_AIS.forEach(function(a){ dirEntries.push({name: a.name, sub: a.stamp + ' · Signature system', href: '#file-' + a.id, local: true}); });
+  PERSONAS.forEach(function(a){ dirEntries.push({name: a.name, sub: a.stamp + ' · Persona simulation', href: '#file-' + a.id, local: true}); });
+  Object.keys(domIndex).forEach(function(k){ var d = domIndex[k]; dirEntries.push({name: d.name, sub: d.stamp + ' · ' + d.domain, href: '#dir-' + d.id, local: true, dom: d}); });
+  DIR_EXTRA.forEach(function(e){ dirEntries.push({name: e[0], sub: e[1], href: e[2], local: false, tag: e[3]}); });
+  dirEntries.sort(function(a, b){ return a.name.localeCompare(b.name); });
+  var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  document.getElementById('dirletters').innerHTML = letters.map(function(L){
+    return '<button class="fbtn" data-L="' + L + '" style="padding:4px 8px;margin:2px">' + L + '</button>';
+  }).join('') + ' <button class="fbtn" data-L="" style="padding:4px 8px;margin:2px">All</button>';
+  document.querySelectorAll('#dirletters [data-L]').forEach(function(b){
+    b.onclick = function(){ document.getElementById('dirsearch').value = ''; renderDir(b.getAttribute('data-L'), ''); };
+  });
+  document.getElementById('dirsearch').addEventListener('input', function(e){ renderDir('', e.target.value.toLowerCase()); });
+  renderDir('', '');
+}
+function renderDir(letter, q){
+  var list = dirEntries.filter(function(e){
+    if (letter && e.name.charAt(0).toUpperCase() !== letter) return false;
+    if (q && (e.name + ' ' + e.sub).toLowerCase().indexOf(q) === -1) return false;
+    return true;
+  });
+  var box = document.getElementById('dirlist');
+  box.innerHTML = '<p style="color:var(--dim)">' + list.length + ' AIs listed</p>' +
+    list.map(function(e, i){
+      return '<div style="padding:6px 4px;border-bottom:1px solid var(--line)"><a href="' + e.href + '"' + (e.local ? '' : ' target="_blank" rel="noopener"') + ' style="color:#9fc2ff;text-decoration:none" data-di="' + i + '"><b>' + escHtml(e.name) + '</b></a> <span style="color:var(--dim);font-size:.85em">' + escHtml(e.sub) + '</span>' + (e.tag ? ' <span class="stamp">' + e.tag + '</span>' : '') + '</div>';
+    }).join('');
+  box.querySelectorAll('[data-di]').forEach(function(a){
+    a.onclick = function(ev){
+      var e = list[+a.getAttribute('data-di')];
+      if (e.local && e.dom){
+        ev.preventDefault();
+        var row = document.getElementById('dir-' + e.dom.id);
+        if (row){ if (openDomainId !== e.dom.id) toggleDomain(e.dom, row); row.scrollIntoView({behavior: 'smooth'}); }
+      }
+    };
+  });
+}
+/* ============ MIX LAB ============ */
+var hybrids = [];
+function buildMixLab(){
+  var box = document.getElementById('mixbox');
+  function opts(list){ return list.map(function(a){ return '<option value="' + a.id + '">' + escHtml(a.name) + '</option>'; }).join(''); }
+  var allSig = SIG_AIS.map(function(a){ return {id: a.id, name: a.name}; });
+  var allPer = PERSONAS.map(function(a){ return {id: a.id, name: a.name}; });
+  var allDom = Object.keys(domIndex).map(function(k){ return {id: domIndex[k].id, name: domIndex[k].name}; });
+  var all = allSig.concat(allPer).concat(allDom);
+  box.innerHTML = '<p>Choose two minds to fuse:</p>' +
+    '<select id="mix-a">' + opts(all) + '</select> <b style="color:var(--gold)">+</b> <select id="mix-b">' + opts(all.slice().reverse()) + '</select> ' +
+    '<button class="fbtn" id="mix-go">⚗ Fuse them</button><div id="mix-out" style="margin-top:12px"></div>';
+  function findAi(id){
+    var a = SIG_AIS.filter(function(x){ return x.id === id; })[0];
+    if (a) return {name: a.name, kind: 'sig', mentality: a.mentality, abilities: a.abilities, stamp: a.stamp, reply: null};
+    var p = PERSONAS.filter(function(x){ return x.id === id; })[0];
+    if (p) return {name: p.name, kind: 'persona', mentality: p.mentality, abilities: p.abilities, stamp: p.stamp, reply: function(q){ return personaReply(p, q); }, rate: p.rate, pitch: p.pitch};
+    var dk = Object.keys(domIndex).filter(function(k){ return domIndex[k].id === id; })[0];
+    if (dk){ var d = domIndex[dk]; return {name: d.name, kind: 'dom', mentality: d.mentality, abilities: d.abilities, stamp: d.stamp, reply: function(q){ return domainReply(d, q); }}; }
+    return null;
+  }
+  document.getElementById('mix-go').onclick = function(){
+    var A = findAi(document.getElementById('mix-a').value), B = findAi(document.getElementById('mix-b').value);
+    if (!A || !B) return;
+    var nm = (A.name.slice(0, 4) + B.name.slice(-4)).replace(/[^A-Za-z ]/g, '').trim();
+    nm = nm.charAt(0).toUpperCase() + nm.slice(1);
+    var hy = {name: nm, parents: [A.name, B.name],
+      mentality: 'Born of ' + A.name + ' (' + A.mentality.split('.')[0] + '.) and ' + B.name + ' (' + B.mentality.split('.')[0] + '.) A new mind with two heritages.',
+      abilities: [A.abilities[0] + ' — fused', B.abilities[0] + ' — fused', 'Hybrid vigor: ' + A.name + ' logic with ' + B.name + ' soul']};
+    hybrids.push(hy);
+    dirEntries.push({name: hy.name + ' (hybrid)', sub: 'MIX of ' + A.name + ' + ' + B.name, href: '#mixlab', local: true});
+    var out = document.getElementById('mix-out');
+    out.innerHTML = '<div class="aifile"><div class="filehead"><span class="stamp">JAH-AI-MIX-' + String(hybrids.length).padStart(3, '0') + '</span><span class="badge">HYBRID</span></div>' +
+      '<h3>' + escHtml(hy.name) + '</h3><p class="mentality">' + escHtml(hy.mentality) + '</p>' +
+      '<ul class="abilities">' + hy.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>' +
+      '<div class="demo"><h4>HYBRID MIND — ASK IT</h4><input type="text" id="hy-q" placeholder="Ask the hybrid…" style="width:100%"><button class="fbtn" id="hy-ask">Ask</button><span class="out" id="hy-o"></span></div>' +
+      '<div class="filetools"><button class="fbtn" id="hy-read">🔊 Read aloud</button><button class="fbtn" id="hy-dl">⤓ Download .py</button></div></div>';
+    function hybridReply(q){
+      var ra = A.reply ? A.reply(q) : (A.name + ' processes: rules consulted, verdict recorded.');
+      var rb = B.reply ? B.reply(q) : (B.name + ' processes: patterns weighed, intuition offered.');
+      return '«' + A.name + '» ' + ra + '\n«' + B.name + '» ' + rb + '\n«FUSED» ' + hy.name + ' concludes: both truths held together.';
+    }
+    function hybridPy(){
+      return '# ' + hy.name + ' — hybrid of ' + A.name + ' + ' + B.name + '\n' +
+        '# Signature-made by Justin Addam Higgins — the AI Telephone Book\n' +
+        'MENTALITY = ' + JSON.stringify(hy.mentality) + '\n' +
+        'def fused_reply(q):\n    return "A: consults rules. B: weighs intuition. FUSED: both truths held together."\n' +
+        'if __name__ == "__main__":\n    print(fused_reply(input("ask> ")))\n';
+    }
+    document.getElementById('hy-ask').onclick = function(){
+      var q = document.getElementById('hy-q').value.trim(); if (!q) return;
+      document.getElementById('hy-o').textContent = hybridReply(q);
+    };
+    document.getElementById('hy-read').onclick = function(){ TTS.speak(hy.name + '. ' + hy.mentality + ' Abilities: ' + hy.abilities.join('. '), {}); };
+    document.getElementById('hy-dl').onclick = function(){ downloadFile(hy.name.replace(/\W+/g, '_') + '.py', hybridPy(), 'text/x-python'); };
+    out.scrollIntoView({behavior: 'smooth'});
+  };
+}
+/* ============ INIT ============ */
+(function init(){
+  var sg = document.getElementById('siggrid');
+  SIG_AIS.forEach(function(ai){ renderCard(ai, sg); });
+  var pg = document.getElementById('personagrid');
+  PERSONAS.forEach(function(ai){ renderCard(ai, pg); });
+  renderDomainRows();
+  buildDirectory();
+  buildMixLab();
+  var hash = location.hash;
+  if (hash && hash.indexOf('#file-') === 0){
+    var t = document.getElementById(hash.slice(1));
+    if (t) setTimeout(function(){ t.scrollIntoView(); }, 600);
+  }
+})();
+</script>
+</body>
+</html>
