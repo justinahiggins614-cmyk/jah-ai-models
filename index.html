@@ -52,6 +52,20 @@ h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--lin
 .be-stamp{font-family:monospace;font-size:.72em;color:var(--acc);background:#0a1226;padding:2px 7px;border-radius:4px}
 .be-tag{flex-basis:100%;font-size:.82em;color:var(--dim);font-style:italic}
 .be-wing{margin-left:auto;font-size:.68em;font-weight:700;letter-spacing:.1em;color:#0a0f1e;background:var(--gold);padding:2px 9px;border-radius:12px;font-family:Arial,Helvetica,sans-serif}
+/* ---- AUTO-FORGE ---- */
+.autoforge{margin-top:18px;background:#0b0f1c;border:2px solid var(--gold);border-radius:12px;padding:16px}
+.af-title{color:var(--gold);letter-spacing:.12em;font-size:1.05em;margin:0 0 6px;font-family:Arial,Helvetica,sans-serif}
+.af-count{text-align:center;margin:10px 0;padding:12px 8px;background:#0a0d18;border:1px solid var(--amber);border-radius:10px}
+.af-count #afCountNum{font-size:2.2em;font-weight:700;color:var(--gold);font-family:Arial,Helvetica,sans-serif}
+.af-count-sub{display:block;color:var(--dim);letter-spacing:.15em;font-size:.82em;margin-top:2px}
+.af-dial{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.af-dial label{font-size:.9em;color:var(--txt)}
+.af-dial input{width:150px;background:#0a0d18;border:1px solid var(--amber);color:var(--txt);padding:8px 10px;border-radius:8px;font-size:1em}
+.af-sub{color:var(--amber);letter-spacing:.15em;font-size:.85em;margin:14px 0 6px;font-family:Arial,Helvetica,sans-serif}
+#afTray{max-height:430px;overflow:auto;margin-bottom:10px}
+.af-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;width:100%;text-align:left;background:none;border:none;border-bottom:1px dotted #22304f;color:var(--txt);padding:8px 6px;cursor:pointer;font-family:Georgia,serif;font-size:.92em}
+.af-row:hover{background:#141d33}
+.af-parents{flex-basis:100%;font-size:.8em;color:var(--dim);font-style:italic}
 /* ---- SHOWCASE + BOOK SEARCH + LETTER PAGER ---- */
 .showcase{border:2px solid var(--gold);border-radius:12px;padding:16px 18px;margin:12px 0;background:linear-gradient(180deg,#151126,#0b0f1c);box-shadow:0 0 22px #ffc93c2e}
 .sh-kicker{color:var(--gold);font-weight:700;letter-spacing:.18em;font-size:.78em}
@@ -275,10 +289,23 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 </div>
 </details>
 <details class="dropwin" id="mixlab">
-<summary><span class="dw-t">MIX LAB</span><span class="dw-h">blend any two AIs into a hybrid</span></summary>
+<summary><span class="dw-t">MIX LAB</span><span class="dw-h">blend any two AIs into a hybrid &middot; auto-forge marches to a million</span></summary>
 <div class="dw-body">
 <p class="wingdesc">Pick any two AIs and forge a hybrid &mdash; blended name, merged mentality, a working demo of both minds thinking together, downloadable as Python.</p>
 <div class="mixbox" id="mixbox"></div>
+<div class="autoforge" id="autoforge">
+<h3 class="af-title">&#9874; AUTO-FORGE &mdash; MARCH TO A MILLION</h3>
+<p class="wingdesc">The forge never sleeps: every visit it auto-fills a fresh batch of hybrids from the whole archive &mdash; every system AI, every persona, every need, every word AI. One million possible hybrids, each with its own stamp, full file, working chat, and download. Tap any listing to open it.</p>
+<div class="af-count"><span id="afCountNum">0</span><span class="af-count-sub" id="afCountSub"> / 1,000,000 HYBRIDS FORGED</span></div>
+<div class="af-dial">
+<label>Dial any hybrid <b>#1 &ndash; #1,000,000</b></label>
+<input type="number" id="afNum" min="1" max="1000000" placeholder="e.g. 424242" aria-label="Hybrid number">
+<button type="button" class="fbtn" id="afDial">&#9742; Dial it</button>
+</div>
+<h4 class="af-sub">FRESH OFF THE LINE</h4>
+<div id="afTray"><p class="wingdesc">Heating up the forge&hellip;</p></div>
+<button type="button" class="fbtn" id="afMore">&#9874; Forge another batch</button>
+</div>
 </div>
 </details>
 <details class="dropwin" id="incoming">
@@ -1799,6 +1826,298 @@ function buildMixLab(){
     out.scrollIntoView({behavior: 'smooth'});
   };
 }
+/* ============ AUTO-FORGE — MARCH TO A MILLION ============
+   Deterministic hybrid space: exactly 1,000,000 hybrids, computed on
+   demand from the hybrid number — no storage, no bloat, nothing deleted.
+   Pool = base archive (systems + personas + every-need, in fixed order)
+   + 100,000 word-AI slots (word ids 1..100000, seeded by the dictionary
+   drip; unseeded slots resolve gracefully as "arriving").
+   Index math (verified: 1,000,000 distinct pairs, i never == j):
+     z = N-1, P = pool size
+     i = z % P
+     q = floor(z / P)
+     j0 = (q*7919 + i*104729 + 13) % (P-1);  j = j0 < i ? j0 : j0+1
+     v = z % 3   (fusion variant) */
+var AF_WORDCAP = 100000, AF_MAX = 1000000, AF_BATCH = 24;
+var _afBase = null;
+function afBaseList(){
+  if (_afBase) return _afBase;
+  _afBase = [];
+  SIG_AIS.forEach(function(a){ _afBase.push({kind: 'sig', ref: a}); });
+  PERSONAS.forEach(function(p){ _afBase.push({kind: 'persona', ref: p}); });
+  Object.keys(domIndex).forEach(function(k){ _afBase.push({kind: 'dom', ref: domIndex[k]}); });
+  return _afBase;
+}
+function afPoolSize(){ return afBaseList().length + AF_WORDCAP; }
+function afHybrid(N){
+  N = Math.max(1, Math.min(AF_MAX, parseInt(N, 10) || 1));
+  var z = N - 1, P = afPoolSize();
+  var i = z % P, q = Math.floor(z / P);
+  var j0 = (q * 7919 + i * 104729 + 13) % (P - 1);
+  var j = j0 < i ? j0 : j0 + 1;
+  return {n: N, i: i, j: j, v: z % 3, P: P};
+}
+function afStamp(N){ return 'JAH-AI-MIX-' + String(N).padStart(6, '0'); }
+function afWordName(wid){
+  if (!wordaiIndex || wid < 1 || wid > wordaiIndex.length) return null;
+  var e = wordaiIndex[wid - 1];
+  if (e && e[1] === wid) return {word: e[0], name: wordaiDisplay(e[0]) + ' AI'};
+  for (var k = 0; k < wordaiIndex.length; k++)
+    if (wordaiIndex[k][1] === wid) return {word: wordaiIndex[k][0], name: wordaiDisplay(wordaiIndex[k][0]) + ' AI'};
+  return null;
+}
+function afParent(slot){
+  var base = afBaseList();
+  if (slot < base.length){
+    var e = base[slot], r = e.ref;
+    var p = {kind: e.kind, ref: r, name: r.name, mentality: r.mentality || '', abilities: (r.abilities || []).slice(), stamp: r.stamp, wordId: 0, word: '', reply: null};
+    if (e.kind === 'sig') p.reply = (function(rr){ return function(q){ return systemReply(rr, q); }; })(r);
+    else if (e.kind === 'persona') p.reply = (function(rr){ return function(q){ return personaReply(rr, q); }; })(r);
+    else p.reply = (function(rr){ return function(q){ return domainReply(rr, q); }; })(r);
+    return p;
+  }
+  var wid = slot - base.length + 1;
+  var wn = afWordName(wid);
+  var p2 = {kind: 'word', ref: null, wordId: wid, word: wn ? wn.word : '',
+    name: wn ? wn.name : 'WordAI' + wid,
+    mentality: wn ? '' : 'A word AI arriving with the dictionary drip \u2014 its file is still being written.',
+    abilities: wn ? [] : ['Word mastery \u2014 arriving'],
+    stamp: 'JAH-AI-WORD-' + String(wid).padStart(6, '0'),
+    unseeded: !wn, reply: null};
+  return p2;
+}
+/* Fill a word-AI parent's full record (for chat) from its chunk. */
+function afFillWord(p){
+  if (p.kind !== 'word' || p.unseeded) return Promise.resolve();
+  var cn = 'wordai-c' + String(Math.floor((p.wordId - 1) / 150) + 1).padStart(5, '0') + '.jsonl.gz';
+  var line = (p.wordId - 1) % 150;
+  return wordaiFetchChunk(cn).then(function(arr){
+    var rec = arr[line];
+    if (rec && parseInt(rec.ai_id.split('-')[3], 10) === p.wordId){
+      p.name = rec.name; p.word = rec.word; p.mentality = rec.mentality || '';
+      p.abilities = (rec.abilities || []).slice(); p.stamp = rec.stamp;
+      p.reply = (function(rr){ return function(q){ return wordReply(rr, q); }; })(rec);
+    }
+  }).catch(function(){});
+}
+function afBlendName(A, B){
+  var nm = (A.name.slice(0, 4) + B.name.slice(-4)).replace(/[^A-Za-z]/g, '');
+  if (nm.length < 3) nm = (A.name + B.name).replace(/[^A-Za-z]/g, '').slice(0, 8);
+  if (!nm) nm = 'Fused';
+  return nm.charAt(0).toUpperCase() + nm.slice(1);
+}
+var AF_VARIANTS = [
+  'logic leads; the other soul flavors every answer.',
+  'soul leads; the other logic steadies every answer.',
+  'true 50/50 fusion \u2014 neither parent leads, both speak as one.'
+];
+function afMakeSpec(h, A, B){
+  function first(m){ var s = String(m || '').split('.')[0].trim(); return s ? s + '.' : ''; }
+  var lead = h.v === 2 ? AF_VARIANTS[2]
+    : (h.v === 1 ? B.name + "'s " + AF_VARIANTS[1].replace('the other', A.name + "'s")
+                 : A.name + "'s " + AF_VARIANTS[0].replace('the other', B.name + "'s"));
+  var mentality = 'Born of ' + A.name + (first(A.mentality) ? ' (' + first(A.mentality) + ')' : '') +
+    ' and ' + B.name + (first(B.mentality) ? ' (' + first(B.mentality) + ')' : '') + ' ' + lead;
+  var abilities = [];
+  if (A.abilities[0]) abilities.push(A.abilities[0] + ' \u2014 fused');
+  if (B.abilities[0]) abilities.push(B.abilities[0] + ' \u2014 fused');
+  if (A.abilities[1]) abilities.push(A.abilities[1] + ' \u2014 fused');
+  if (B.abilities[1]) abilities.push(B.abilities[1] + ' \u2014 fused');
+  abilities.push('Hybrid vigor: ' + A.name + ' \u00D7 ' + B.name);
+  return {n: h.n, i: h.i, j: h.j, v: h.v, name: afBlendName(A, B), stamp: afStamp(h.n),
+    A: A, B: B, mentality: mentality, abilities: abilities, _hist: []};
+}
+function afReply(spec, q){
+  var ql = String(q == null ? '' : q).toLowerCase().trim();
+  function fresh(s){
+    var last = spec._hist[spec._hist.length - 1];
+    var o = (s === last) ? s + ' What else shall we fuse for you?' : s;
+    spec._hist.push(o); if (spec._hist.length > 8) spec._hist.shift();
+    return o;
+  }
+  var ra = spec.A.reply ? spec.A.reply(q) : (spec.A.name + ' consults its rules and records a verdict.');
+  var rb = spec.B.reply ? spec.B.reply(q) : (spec.B.name + ' weighs the patterns and offers its intuition.');
+  var out;
+  if (/\b(hi|hello|hey)\b/.test(ql))
+    out = 'Hello \u2014 I am ' + spec.name + ' (' + spec.stamp + '), born of ' + spec.A.name + ' and ' + spec.B.name + '. Ask me anything; you will hear both my parents and my own fused voice.';
+  else if (/(who are you|your name)/.test(ql))
+    out = 'I am ' + spec.name + ', hybrid ' + spec.stamp + ': ' + spec.A.name + ' fused with ' + spec.B.name + '.';
+  else if (/(thank|thanks)/.test(ql))
+    out = 'You are welcome \u2014 both of my halves enjoyed that.';
+  else if (/(bye|goodbye)/.test(ql))
+    out = 'Farewell from both of us. The forge is always hot.';
+  else
+    out = '\u00AB' + spec.A.name + '\u00BB ' + ra + '\n\u00AB' + spec.B.name + '\u00BB ' + rb + '\n\u00ABFUSED\u00BB ' + spec.name + ' holds both truths together.';
+  return fresh(out);
+}
+function afFileText(spec){
+  var L = [];
+  L.push('THE AI TELEPHONE BOOK \u2014 JAH AI Models Archive');
+  L.push(spec.stamp + ' \u2014 ' + spec.name + ' (auto-forged hybrid #' + spec.n + ' of 1,000,000)');
+  L.push('Signature-made by Justin Addam Higgins'); L.push('');
+  L.push('PARENTS: ' + spec.A.name + ' (' + spec.A.stamp + ')  +  ' + spec.B.name + ' (' + spec.B.stamp + ')');
+  L.push('VARIANT: ' + (spec.v + 1) + ' of 3'); L.push('');
+  L.push('MENTALITY:'); L.push(spec.mentality); L.push('');
+  L.push('ABILITIES:'); spec.abilities.forEach(function(a){ L.push(' - ' + a); });
+  return L.join('\n');
+}
+function afPy(spec){
+  function pyq(s){ return JSON.stringify(String(s)); }
+  return '# ' + spec.name + ' \u2014 auto-forged hybrid ' + spec.stamp + ' (#' + spec.n + ' of 1,000,000)\n' +
+    '# Parents: ' + spec.A.name + ' + ' + spec.B.name + '\n' +
+    '# Signature-made by Justin Addam Higgins \u2014 the AI Telephone Book\n' +
+    'NAME = ' + pyq(spec.name) + '\n' +
+    'STAMP = ' + pyq(spec.stamp) + '\n' +
+    'PARENTS = [' + pyq(spec.A.name) + ', ' + pyq(spec.B.name) + ']\n' +
+    'MENTALITY = ' + pyq(spec.mentality) + '\n' +
+    'ABILITIES = [' + spec.abilities.map(pyq).join(', ') + ']\n' +
+    'def fused_reply(q):\n' +
+    '    ql = q.lower().strip()\n' +
+    '    if any(w in ql for w in ("hi", "hello", "hey")):\n' +
+    '        return "Hello \u2014 I am " + NAME + ", born of " + PARENTS[0] + " and " + PARENTS[1] + "."\n' +
+    '    if "who are you" in ql or "your name" in ql:\n' +
+    '        return "I am " + NAME + " (" + STAMP + "), a fused mind of " + PARENTS[0] + " and " + PARENTS[1] + "."\n' +
+    '    return "\u00AB" + PARENTS[0] + "\u00BB consults its rules. | \u00AB" + PARENTS[1] + "\u00BB weighs intuition. | \u00ABFUSED\u00BB " + NAME + " holds both truths together."\n' +
+    'if __name__ == "__main__":\n' +
+    '    print(NAME, STAMP, "\u2014 ask me anything (blank to quit)")\n' +
+    '    while True:\n' +
+    '        try:\n' +
+    '            q = input("ask> ")\n' +
+    '        except (EOFError, KeyboardInterrupt):\n' +
+    '            break\n' +
+    '        if not q.strip():\n' +
+    '            break\n' +
+    '        print(fused_reply(q))\n';
+}
+function afParentBtn(p){
+  if (p.kind === 'word'){
+    if (p.unseeded || !p.word) return '<span class="fbtn" style="opacity:.5;cursor:default">' + escHtml(p.stamp) + ' \u2014 arriving</span>';
+    return '<button type="button" class="fbtn" data-afpw="' + p.wordId + '">' + escHtml(p.stamp) + ' \u2192</button>';
+  }
+  return '<button type="button" class="fbtn" data-afpb="' + escHtml(p.ref.id) + '">' + escHtml(p.stamp) + ' \u2192</button>';
+}
+function renderHybridFile(spec){
+  var fv = document.getElementById('fileview'), body = document.getElementById('fvbody');
+  body.innerHTML = '';
+  var el = document.createElement('article');
+  el.className = 'aifile';
+  var h = '<div class="filehead"><span class="stamp">' + escHtml(spec.stamp) + '</span><span class="badge">AUTO-HYBRID</span><span class="badge">VARIANT ' + (spec.v + 1) + '/3</span></div>';
+  h += '<h3>' + escHtml(spec.name) + '</h3>';
+  h += '<p class="mentality">' + escHtml(spec.mentality) + '</p>';
+  h += '<ul class="abilities">' + spec.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
+  h += '<table class="params">' +
+    '<tr><td>Hybrid #</td><td>' + spec.n + ' of 1,000,000</td></tr>' +
+    '<tr><td>Parent A</td><td>' + escHtml(spec.A.name) + ' \u2014 ' + escHtml(spec.A.stamp) + '</td></tr>' +
+    '<tr><td>Parent B</td><td>' + escHtml(spec.B.name) + ' \u2014 ' + escHtml(spec.B.stamp) + '</td></tr>' +
+    '<tr><td>Lineage</td><td>' + afParentBtn(spec.A) + ' ' + afParentBtn(spec.B) + '</td></tr>' +
+    '</table>';
+  h += '<div class="filetools"><button type="button" class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button type="button" class="fbtn" data-t="copy">\u29C9 Copy</button><button type="button" class="fbtn" data-t="dl">\u2913 Download .py</button></div>';
+  h += '<div class="demo"><h4>FUSED MIND \u2014 WORKING CHAT</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk to the hybrid"><button type="button" data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  el.innerHTML = h;
+  body.appendChild(el);
+  fv.style.display = 'block'; fv.scrollTop = 0; document.body.style.overflow = 'hidden';
+  var reading = false;
+  el.querySelector('[data-t=read]').onclick = function(e){
+    if (reading){ TTS.stop(); reading = false; e.target.innerHTML = '\uD83D\uDD0A Read aloud'; return; }
+    reading = true; e.target.innerHTML = '\u23F9 Stop';
+    TTS.speak(spec.name + '. ' + spec.mentality + ' Abilities: ' + spec.abilities.join('. '), {});
+  };
+  el.querySelector('[data-t=copy]').onclick = function(e){ copyText(afFileText(spec), e.target); };
+  el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(spec.name.replace(/\W+/g, '_') + '.py', afPy(spec), 'text/x-python'); };
+  el.querySelectorAll('[data-afpb]').forEach(function(b){ b.onclick = function(){ openFile(b.getAttribute('data-afpb')); }; });
+  el.querySelectorAll('[data-afpw]').forEach(function(b){
+    b.onclick = function(){
+      var wid = parseInt(b.getAttribute('data-afpw'), 10), wn = afWordName(wid);
+      if (wn) openWordAI(wn.word, wid);
+    };
+  });
+  var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input'), auto = el.querySelector('.autovoice');
+  function say(who, text){
+    var dv = document.createElement('div'); dv.className = who;
+    dv.textContent = (who === 'u' ? 'You: ' : spec.name + ': ') + text;
+    log.appendChild(dv); log.scrollTop = log.scrollHeight;
+  }
+  function send(){
+    var q = inp.value.trim(); if (!q) return; inp.value = '';
+    say('u', q); var a = afReply(spec, q); say('a', a);
+    if (auto.checked) TTS.speak(a, {});
+  }
+  el.querySelector('[data-t=send]').onclick = send;
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
+  setTimeout(function(){ say('a', afReply(spec, 'hello')); }, 400);
+}
+/* Open hybrid #N: resolve parents (word parents lazy-fetch), then render. */
+function openHybrid(N){
+  var h = afHybrid(N);
+  var A = afParent(h.i), B = afParent(h.j);
+  var fv = document.getElementById('fileview'), body = document.getElementById('fvbody');
+  body.innerHTML = '<p style="padding:20px">Dialing hybrid ' + escHtml(afStamp(h.n)) + '\u2026</p>';
+  fv.style.display = 'block'; fv.scrollTop = 0; document.body.style.overflow = 'hidden';
+  wordaiEnsureIndex(function(){
+    /* names may have improved once the index arrived */
+    var A2 = afParent(h.i), B2 = afParent(h.j);
+    Promise.all([afFillWord(A2), afFillWord(B2)]).then(function(){
+      var spec = afMakeSpec(h, A2, B2);
+      renderHybridFile(spec);
+      afBump(1);
+      try { history.replaceState(null, '', '#hybrid-' + spec.stamp); } catch (e){}
+    });
+  });
+}
+/* ---- showcase counter (localStorage) ---- */
+function afGetCount(){ try { return parseInt(localStorage.getItem('jahAFCount') || '0', 10) || 0; } catch (e){ return 0; } }
+function afSetCount(n){ try { localStorage.setItem('jahAFCount', String(n)); } catch (e){} }
+function afPaintCount(){
+  var el = document.getElementById('afCountNum'); if (!el) return;
+  var n = afGetCount();
+  el.textContent = n.toLocaleString('en-US');
+  var sub = document.getElementById('afCountSub');
+  if (sub) sub.textContent = n >= AF_MAX ? ' / 1,000,000 \u2014 \u2605 MILLION HIT \u2605' : ' / 1,000,000 HYBRIDS FORGED';
+}
+function afBump(d){
+  afSetCount(Math.min(AF_MAX, afGetCount() + d));
+  afPaintCount();
+}
+/* ---- fresh-off-the-line tray ---- */
+var afTrayNs = [];
+function afRenderTray(){
+  var box = document.getElementById('afTray'); if (!box) return;
+  box.innerHTML = afTrayNs.map(function(n){
+    var h = afHybrid(n), A = afParent(h.i), B = afParent(h.j);
+    return '<button type="button" class="af-row" data-n="' + n + '"><span class="be-name">' +
+      escHtml(afBlendName(A, B)) + '</span><span class="be-stamp">' + afStamp(n) +
+      '</span><span class="af-parents">' + escHtml(A.name + ' \u00D7 ' + B.name) + '</span></button>';
+  }).join('');
+}
+function afForgeBatch(){
+  afTrayNs = [];
+  var guard = 0;
+  while (afTrayNs.length < AF_BATCH && guard++ < 600){
+    var n = 1 + Math.floor(Math.random() * AF_MAX);
+    if (afTrayNs.indexOf(n) === -1) afTrayNs.push(n);
+  }
+  afRenderTray();
+  afBump(AF_BATCH);
+  wordaiEnsureIndex(function(){ afRenderTray(); });
+}
+function buildAutoForge(){
+  afPaintCount();
+  afForgeBatch();
+  document.getElementById('afTray').addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.af-row') : null;
+    if (b) openHybrid(parseInt(b.getAttribute('data-n'), 10));
+  });
+  document.getElementById('afMore').onclick = afForgeBatch;
+  var num = document.getElementById('afNum');
+  function dial(){
+    var v = parseInt(num.value, 10);
+    if (!v || v < 1 || v > AF_MAX){ num.value = ''; num.placeholder = 'Enter 1 \u2013 1,000,000'; num.focus(); return; }
+    openHybrid(v);
+  }
+  document.getElementById('afDial').onclick = dial;
+  num.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) dial(); });
+}
+
 /* ============ AI GENOME LAB ============ */
 function geneHash(str){
   var h = 5381;
@@ -2668,6 +2987,7 @@ function openWordAI(word, idNum){
   buildSisterStrip();
   wireLookup();
   buildMixLab();
+  buildAutoForge();
   document.getElementById('fvclose').onclick = closeFile;
   document.getElementById('popclose').onclick = closePopup;
   document.getElementById('popup').addEventListener('click', function(e){ if (e.target === this) closePopup(); });
@@ -2681,6 +3001,10 @@ function openWordAI(word, idNum){
   if (hash && hash.indexOf('#file-') === 0){
     var id = hash.slice(6);
     if (findFullAi(id)) setTimeout(function(){ openFile(id); }, 400);
+  }
+  if (hash && hash.indexOf('#hybrid-JAH-AI-MIX-') === 0){
+    var hnn = parseInt(hash.split('-')[4], 10);
+    if (hnn >= 1 && hnn <= 1000000) setTimeout(function(){ openHybrid(hnn); }, 400);
   }
   if (hash && hash.indexOf('#wordai-') === 0){
     var wm = /(\d+)$/.exec(hash);
