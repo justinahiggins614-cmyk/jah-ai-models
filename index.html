@@ -180,7 +180,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <input type="text" id="lookup" placeholder="Name, ID number, or describe what you need&hellip;" aria-label="Look up an AI by name, ID, or description" autocomplete="off">
 <div id="lookupres"></div>
 </div>
-<div class="bookstats"><b>260</b> AI FILES ON RECORD &middot; <b>6</b> SISTER-SITE LINES &middot; DIRECTORY ASSISTANCE OPEN</div>
+<div class="bookstats"><span id="aicount"><b>260</b></span> AI FILES ON RECORD &middot; <b>6</b> SISTER-SITE LINES &middot; DIRECTORY ASSISTANCE OPEN</div>
 <p style="font-size:.85em">Signature-made by Justin Addam Higgins &middot; deterministic systems &middot; honest simulations</p>
 </header>
 <nav class="wingnav">
@@ -1023,12 +1023,15 @@ if __name__=='__main__': print('SKYNET:', reply(input('you> ')))`}
 var PERSONA_CHAT = {};
 PERSONAS.forEach(function(p){ PERSONA_CHAT[p.id] = function(el, ai){ wirePersona(el, ai); }; });
 
+function phraseIn(t, kw){
+  return (' ' + String(t).toLowerCase() + ' ').indexOf(' ' + String(kw).toLowerCase() + ' ') !== -1;
+}
 function personaReply(ai, q){
-  var t = q.toLowerCase();
+  var t = String(q).toLowerCase();
   for (var i=0;i<ai.rules.length;i++){
     var r = ai.rules[i];
     for (var k=0;k<r.k.length;k++){
-      if (t.indexOf(r.k[k]) !== -1) return r.r[Math.floor(Math.random()*r.r.length)];
+      if (phraseIn(t, r.k[k])) return r.r[Math.floor(Math.random()*r.r.length)];
     }
   }
   return ai.fallback[Math.floor(Math.random()*ai.fallback.length)];
@@ -1539,9 +1542,9 @@ function wireDomainDemo(root, d){
   }
 }
 function domainReply(d, q){
-  var t = q.toLowerCase();
+  var t = String(q).toLowerCase();
   if (d.demoKind === 'chat'){
-    for (var i = 0; i < d.demoData.length; i++) if (t.indexOf(d.demoData[i][0].toLowerCase()) !== -1) return d.demoData[i][1];
+    for (var i = 0; i < d.demoData.length; i++) if (phraseIn(t, d.demoData[i][0])) return d.demoData[i][1];
   }
   var ab = d.abilities[Math.floor(Math.random() * d.abilities.length)];
   return 'As your ' + d.name + ' (' + d.domain + '): ' + ab + '. Tell me more about what you need, and we will work it through together.';
@@ -1623,22 +1626,57 @@ function buildDirectory(){
     return '<button class="fbtn" data-L="' + L + '" style="padding:4px 8px;margin:2px">' + L + '</button>';
   }).join('') + ' <button class="fbtn" data-L="" style="padding:4px 8px;margin:2px">All</button>';
   document.querySelectorAll('#dirletters [data-L]').forEach(function(b){
-    b.onclick = function(){ document.getElementById('dirsearch').value = ''; renderDir(b.getAttribute('data-L'), ''); };
+    b.onclick = function(){ document.getElementById('dirsearch').value = ''; wordaiUser(); renderDir(b.getAttribute('data-L'), ''); };
   });
-  document.getElementById('dirsearch').addEventListener('input', function(e){ renderDir('', e.target.value.toLowerCase()); });
+  document.getElementById('dirsearch').addEventListener('input', function(e){ wordaiUser(); renderDir('', e.target.value.toLowerCase()); });
   renderDir('', '');
 }
+var dirPageSize = 120, dirShown = 120, dirCurLetter = '', dirCurQ = '';
+var wordaiWanted = false;
+function wordaiUser(){
+  wordaiWanted = true;
+  if (!wordaiIndex && !wordaiIndexLoading) wordaiEnsureIndex(function(){ renderDirPage(); });
+}
+function wordaiMatches(letter, q){
+  var out = [];
+  if (!wordaiIndex) return out;
+  var ql = (q || '').toLowerCase();
+  for (var i = 0; i < wordaiIndex.length; i++){
+    var w = wordaiIndex[i][0], id = wordaiIndex[i][1];
+    var nm = wordaiDisplay(w) + ' AI';
+    if (letter && nm.charAt(0).toUpperCase() !== letter) continue;
+    if (ql && (nm + ' jah-ai-word-' + String(id).padStart(6, '0')).toLowerCase().indexOf(ql) === -1) continue;
+    out.push(i);
+    if (out.length >= 3000) break;
+  }
+  return out;
+}
 function renderDir(letter, q){
+  dirCurLetter = letter; dirCurQ = q; dirShown = dirPageSize;
+  renderDirPage();
+}
+function renderDirPage(){
+  var letter = dirCurLetter, q = dirCurQ;
   var list = dirEntries.filter(function(e){
     if (letter && e.name.charAt(0).toUpperCase() !== letter) return false;
     if (q && (e.name + ' ' + e.sub).toLowerCase().indexOf(q) === -1) return false;
     return true;
   });
+  var wm = wordaiMatches(letter, q);
+  var wshown = wm.slice(0, Math.max(0, dirShown));
   var box = document.getElementById('dirlist');
-  box.innerHTML = '<p style="color:var(--dim)">' + list.length + ' AIs listed</p>' +
-    list.map(function(e, i){
+  var h = '<p style="color:var(--dim)">' + (list.length + wm.length) + ' AIs listed' + (wordaiIndex ? '' : ' <span style="font-size:.85em">(word AIs load on search)</span>') + '</p>';
+  h += list.map(function(e, i){
       return '<div style="padding:6px 4px;border-bottom:1px solid var(--line)"><a href="' + e.href + '"' + (e.local ? '' : ' target="_blank" rel="noopener"') + ' style="color:#9fc2ff;text-decoration:none" data-di="' + i + '"><b>' + escHtml(e.name) + '</b></a> <span style="color:var(--dim);font-size:.85em">' + escHtml(e.sub) + '</span>' + (e.tag ? ' <span class="stamp">' + e.tag + '</span>' : '') + '</div>';
     }).join('');
+  h += wshown.map(function(wi){
+      var w = wordaiIndex[wi][0], id = wordaiIndex[wi][1];
+      return '<div style="padding:6px 4px;border-bottom:1px solid var(--line)"><a href="#wordai-JAH-AI-WORD-' + String(id).padStart(6, '0') + '" style="color:#9fc2ff;text-decoration:none" data-wi="' + wi + '"><b>' + escHtml(wordaiDisplay(w) + ' AI') + '</b></a> <span style="color:var(--dim);font-size:.85em">' + 'JAH-AI-WORD-' + String(id).padStart(6, '0') + ' · word AI · ' + escHtml(w) + '</span> <span class="badge">WORD AI</span></div>';
+    }).join('');
+  if (wm.length > wshown.length){
+    h += '<div style="padding:10px 4px"><button type="button" class="fbtn" id="dirmore">Show more word AIs (' + (wm.length - wshown.length) + ' more) →</button></div>';
+  }
+  box.innerHTML = h;
   box.querySelectorAll('[data-di]').forEach(function(a){
     a.onclick = function(ev){
       var e = list[+a.getAttribute('data-di')];
@@ -1649,6 +1687,15 @@ function renderDir(letter, q){
       }
     };
   });
+  box.querySelectorAll('[data-wi]').forEach(function(a){
+    a.onclick = function(ev){
+      ev.preventDefault();
+      var wi = wordaiIndex[+a.getAttribute('data-wi')];
+      openWordAI(wi[0], wi[1]);
+    };
+  });
+  var more = document.getElementById('dirmore');
+  if (more) more.onclick = function(){ dirShown += dirPageSize; renderDirPage(); };
 }
 /* ============ MIX LAB ============ */
 var hybrids = [];
@@ -2344,19 +2391,32 @@ function wireLookup(){
     if (q.length < 2){ res.style.display = 'none'; res.innerHTML = ''; return; }
     var out = [];
     for (var i = 0; i < all.length && out.length < 10; i++) if (all[i].hay.indexOf(q) >= 0) out.push(all[i]);
+    if (wordaiIndex){
+      for (var j = 0; j < wordaiIndex.length && out.length < 10; j++){
+        var w = wordaiIndex[j][0], id = wordaiIndex[j][1];
+        if (w.indexOf(q) !== -1) out.push({wai: true, wi: j, name: wordaiDisplay(w) + ' AI', stamp: 'JAH-AI-WORD-' + String(id).padStart(6, '0'), tag: 'Word AI · ' + w});
+      }
+    }
     res.innerHTML = out.length
-      ? out.map(function(e){ return '<button type="button" class="lr" data-id="' + e.id + '"><b>' + escHtml(e.name) + '</b><span>' + escHtml(e.stamp) + '</span><i>' + escHtml(String(e.tag).slice(0, 90)) + '</i></button>'; }).join('')
+      ? out.map(function(e){
+          if (e.wai) return '<button type="button" class="lr" data-wi="' + e.wi + '"><b>' + escHtml(e.name) + '</b><span>' + escHtml(e.stamp) + '</span><i>' + escHtml(String(e.tag).slice(0, 90)) + '</i></button>';
+          return '<button type="button" class="lr" data-id="' + e.id + '"><b>' + escHtml(e.name) + '</b><span>' + escHtml(e.stamp) + '</span><i>' + escHtml(String(e.tag).slice(0, 90)) + '</i></button>';
+        }).join('')
       : '<div class="lr none">No listing found \u2014 try a name, an ID like JAH-AI-SIG-001, or a word like \u201cdivorce\u201d.</div>';
     res.style.display = 'block';
   }
-  inp.addEventListener('input', function(){ clearTimeout(t); t = setTimeout(function(){ search(inp.value); }, 160); });
+  inp.addEventListener('input', function(){ wordaiUser(); clearTimeout(t); t = setTimeout(function(){ search(inp.value); }, 160); });
   inp.addEventListener('keydown', function(e){
-    if (e.key === 'Enter'){ var f = res.querySelector('.lr[data-id]'); if (f){ res.style.display = 'none'; inp.value = ''; openFile(f.getAttribute('data-id')); } }
+    if (e.key === 'Enter'){ var f = res.querySelector('.lr[data-id],.lr[data-wi]'); if (f){ res.style.display = 'none'; inp.value = ''; openLr(f); } }
     if (e.key === 'Escape'){ res.style.display = 'none'; }
   });
+  function openLr(b){
+    if (b.hasAttribute('data-wi')){ var wi = wordaiIndex[+b.getAttribute('data-wi')]; openWordAI(wi[0], wi[1]); }
+    else openFile(b.getAttribute('data-id'));
+  }
   res.addEventListener('click', function(e){
-    var b = e.target.closest ? e.target.closest('.lr[data-id]') : null;
-    if (b){ res.style.display = 'none'; inp.value = ''; openFile(b.getAttribute('data-id')); }
+    var b = e.target.closest ? e.target.closest('.lr[data-id],.lr[data-wi]') : null;
+    if (b){ res.style.display = 'none'; inp.value = ''; openLr(b); }
   });
   document.addEventListener('click', function(e){ if (!e.target.closest || !e.target.closest('.booksearch')) res.style.display = 'none'; });
 }
@@ -2375,6 +2435,154 @@ function buildSisterStrip(){
     if (!b) return;
     var x = DIR_EXTRA[+b.getAttribute('data-i')];
     openPopup('<div class="pophead"><span class="stamp">SISTER-SITE LINE</span></div><h3>' + escHtml(x[0]) + '</h3><p class="mentality">' + escHtml(x[1]) + '</p><p style="font-size:.9em">This line lives on its home site \u2014 every record there answers in this voice. Tap through to ring it up.</p><p><a class="fbtn" style="display:inline-block;text-decoration:none" href="' + escHtml(x[2]) + '">Visit ' + escHtml(x[0]) + ' \u2192</a></p>');
+  });
+}
+/* ============ WORD AIs — lazy-loaded from the Spec Catalog ============
+   Every dictionary word gets its own AI, tied to its word patent (JAH-WORD)
+   and its word program. Records live in the signature-one-archive repo as
+   150/chunk gz files; the phone book fetches the compact index on first
+   directory/lookup use and fetches a chunk only when a word AI is opened. */
+var WORDAI_BASE = 'https://justinahiggins614-cmyk.github.io/signature-one-archive';
+var wordaiIndex = null, wordaiIndexLoading = false, wordaiChunks = {}, wordaiCount = 0;
+function wordaiDisplay(w){ return (w && /[A-Za-z]/.test(w.charAt(0))) ? w.charAt(0).toUpperCase() + w.slice(1) : w; }
+function wordaiGunzip(buf){
+  if (typeof DecompressionStream === 'undefined') return Promise.reject(new Error('gzip unsupported'));
+  var ds = new DecompressionStream('gzip');
+  return new Response(new Blob([buf]).stream().pipeThrough(ds)).text();
+}
+function wordaiEnsureIndex(cb){
+  cb = cb || function(){};
+  if (wordaiIndex){ cb(true); return; }
+  if (wordaiIndexLoading){
+    var t = setInterval(function(){ if (!wordaiIndexLoading){ clearInterval(t); cb(!!wordaiIndex); } }, 400);
+    return;
+  }
+  wordaiIndexLoading = true;
+  fetch(WORDAI_BASE + '/data/index/wordai.idx.json.gz').then(function(r){
+    if (!r.ok) throw new Error('http ' + r.status);
+    return r.arrayBuffer();
+  }).then(wordaiGunzip).then(function(txt){
+    wordaiIndex = JSON.parse(txt);
+    wordaiCount = wordaiIndex.length;
+    wordaiIndexLoading = false;
+    updateBookstats();
+    cb(true);
+  }).catch(function(){ wordaiIndexLoading = false; cb(false); });
+}
+function wordaiFetchChunk(cn){
+  if (wordaiChunks[cn]) return Promise.resolve(wordaiChunks[cn]);
+  return fetch(WORDAI_BASE + '/data/ai/' + cn).then(function(r){
+    if (!r.ok) throw new Error('http ' + r.status);
+    return r.arrayBuffer();
+  }).then(wordaiGunzip).then(function(txt){
+    var arr = txt.trim().split('\n').map(function(ln){ return JSON.parse(ln); });
+    wordaiChunks[cn] = arr;
+    return arr;
+  });
+}
+function updateBookstats(){
+  var el = document.getElementById('aicount');
+  if (!el) return;
+  var base = SIG_AIS.length + PERSONAS.length + DOMAIN_SPECS.length;
+  el.innerHTML = '<b>' + (base + wordaiCount + (window.filedAICount || 0)) + '</b>';
+}
+/* ---- word-AI chat engine: whole-word matching, never substring ---- */
+var _wLastReply = {};
+function wordReply(w, q){
+  var t = ' ' + String(q == null ? '' : q).toLowerCase().replace(/[^a-z0-9\s\-']/g, ' ') + ' ';
+  function has(ph){ return t.indexOf(' ' + String(ph).toLowerCase() + ' ') !== -1; }
+  function any(){ for (var i = 0; i < arguments.length; i++) if (has(arguments[i])) return true; return false; }
+  function fresh(s){
+    var k = w.ai_id;
+    if (_wLastReply[k] === s) return s + " What else about '" + w.word + "'?";
+    _wLastReply[k] = s; return s;
+  }
+  if (any('hello', 'hi', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening')) return fresh(w.greeting);
+  if (any('who are you', 'your name', 'introduce yourself')) return fresh("I am the '" + w.word + "' AI \u2014 " + w.mentality);
+  if (any('thank', 'thanks', 'thx')) return fresh("You are welcome \u2014 the word '" + w.word + "' thanks you too.");
+  if (any('bye', 'goodbye', 'good night', 'see you', 'farewell')) return fresh("Goodbye \u2014 '" + w.word + "' will be right here in the book when you need it.");
+  var best = null, bestLen = -1;
+  for (var i = 0; i < w.rules.length; i++){
+    var r = w.rules[i];
+    for (var k = 0; k < r.k.length; k++){
+      if (has(r.k[k]) && r.k[k].length > bestLen){ best = r; bestLen = r.k[k].length; }
+    }
+  }
+  if (best) return fresh(best.r[Math.floor(Math.random() * best.r.length)]);
+  w._fi = ((w._fi || 0) + 1) % w.fallback.length;
+  return fresh(w.fallback[w._fi]);
+}
+function wordFileText(w){
+  var L = [];
+  L.push('THE AI TELEPHONE BOOK \u2014 JAH AI Models Archive');
+  L.push(w.stamp + ' \u2014 ' + w.name + ' (word AI)');
+  L.push('Signature-made by Justin Addam Higgins'); L.push('');
+  L.push('MENTALITY:'); L.push(w.mentality); L.push('');
+  L.push('ABILITIES:'); w.abilities.forEach(function(a){ L.push(' - ' + a); }); L.push('');
+  if (w.definition){ L.push('DEFINITION:'); L.push(w.definition); L.push(''); }
+  L.push('WORD PATENT: ' + w.word_spec + ' (Signature Spec Catalog \u2014 draft, ready to file)');
+  L.push('DICTIONARY: ' + w.links.dictionary);
+  L.push('WORD PROGRAM: download the .py from this file');
+  return L.join('\n');
+}
+function renderWordFile(w, mount){
+  var el = document.createElement('div');
+  el.id = 'file-word-' + w.ai_id;
+  var h = '<div class="filehead"><span class="stamp">' + escHtml(w.stamp) + '</span><span class="badge">WORD AI</span></div>';
+  h += '<h3>' + escHtml(w.name) + '</h3>';
+  h += '<p class="mentality">' + escHtml(w.mentality) + '</p>';
+  h += '<ul class="abilities">' + w.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
+  h += '<table class="params">' + w.params.map(function(p){ return '<tr><td>' + escHtml(p[0]) + '</td><td>' + escHtml(p[1]) + '</td></tr>'; }).join('') + '</table>';
+  h += '<div class="filetools"><button type="button" class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button type="button" class="fbtn" data-t="copy">\u29C9 Copy</button><button type="button" class="fbtn" data-t="dl">\u2913 Download .py</button></div>';
+  h += '<div class="demo"><h4>WORD LAB \u2014 WORKING DEMO</h4>';
+  if (w.definition) h += '<p><b>Definition:</b> ' + escHtml(w.definition) + '</p>';
+  h += '<p><b>In a sentence:</b> <span id="wsen">' + escHtml(w.sentences[0]) + '</span> <button type="button" class="fbtn" data-dact="newsent">\u21BB New sentence</button></p>';
+  h += '<div class="filetools">'
+    + '<a class="fbtn" href="' + escHtml(w.links.dictionary) + '" target="_blank" rel="noopener">\uD83D\uDCD6 Dictionary entry</a> '
+    + '<a class="fbtn" href="' + escHtml(w.links.wordPatent) + '" target="_blank" rel="noopener">\uD83D\uDCDC Word patent ' + escHtml(w.word_spec) + '</a>'
+    + '</div></div>';
+  h += '<div class="demo"><h4>TALK TO YOUR ' + escHtml(w.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk"><button type="button" data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  el.innerHTML = h;
+  mount.appendChild(el);
+  var si = 0;
+  el.querySelector('[data-dact=newsent]').onclick = function(){ si = (si + 1) % w.sentences.length; el.querySelector('#wsen').textContent = w.sentences[si]; };
+  var reading = false;
+  el.querySelector('[data-t=read]').onclick = function(e){
+    if (reading){ TTS.stop(); reading = false; e.target.innerHTML = '\uD83D\uDD0A Read aloud'; return; }
+    reading = true; e.target.innerHTML = '\u23F9 Stop'; TTS.speak(wordFileText(w), {});
+  };
+  el.querySelector('[data-t=copy]').onclick = function(e){ copyText(wordFileText(w), e.target); };
+  el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(w.ai_id + '.py', w.py, 'text/x-python'); };
+  var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input'), auto = el.querySelector('.autovoice');
+  function say(who, text){
+    var dv = document.createElement('div'); dv.className = who;
+    dv.textContent = (who === 'u' ? 'You: ' : w.name + ': ') + text;
+    log.appendChild(dv); log.scrollTop = log.scrollHeight;
+  }
+  function send(){
+    var q = inp.value.trim(); if (!q) return; inp.value = '';
+    say('u', q); var a = wordReply(w, q); say('a', a);
+    if (auto.checked) TTS.speak(a, {});
+  }
+  el.querySelector('[data-t=send]').onclick = send;
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
+  setTimeout(function(){ say('a', wordReply(w, 'hello')); }, 400);
+  return el;
+}
+function openWordAI(word, idNum){
+  var cn = 'wordai-c' + String(Math.floor((idNum - 1) / 150) + 1).padStart(5, '0') + '.jsonl.gz';
+  var line = (idNum - 1) % 150;
+  var fv = document.getElementById('fileview'), body = document.getElementById('fvbody');
+  body.innerHTML = '<p style="padding:20px">Dialing the \u2018' + escHtml(word) + '\u2019 AI\u2026</p>';
+  fv.style.display = 'block'; fv.scrollTop = 0; document.body.style.overflow = 'hidden';
+  wordaiFetchChunk(cn).then(function(arr){
+    var rec = arr[line];
+    if (!rec || parseInt(rec.ai_id.split('-')[3], 10) !== idNum) throw new Error('record mismatch');
+    body.innerHTML = '';
+    renderWordFile(rec, body);
+    try { history.replaceState(null, '', '#wordai-' + rec.ai_id); } catch (e) {}
+  }).catch(function(){
+    body.innerHTML = '<p style="padding:20px">Could not reach the \u2018' + escHtml(word) + '\u2019 AI file right now. Check your connection and try again.</p>';
   });
 }
 /* ============ INIT ============ */
@@ -2405,6 +2613,18 @@ function buildSisterStrip(){
   if (hash && hash.indexOf('#file-') === 0){
     var id = hash.slice(6);
     if (findFullAi(id)) setTimeout(function(){ openFile(id); }, 400);
+  }
+  if (hash && hash.indexOf('#wordai-') === 0){
+    var wm = /(\d+)$/.exec(hash);
+    if (wm) setTimeout(function(){
+      wordaiEnsureIndex(function(ok){
+        if (!ok || !wordaiIndex) return;
+        var idNum = parseInt(wm[1], 10);
+        for (var i = 0; i < wordaiIndex.length; i++){
+          if (wordaiIndex[i][1] === idNum){ openWordAI(wordaiIndex[i][0], idNum); break; }
+        }
+      });
+    }, 400);
   }
 })();
 </script>
