@@ -113,6 +113,59 @@ h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--lin
 #ttsbar button{background:#1a2c55;border:1px solid #2c4a8a;color:#fff;padding:5px 10px;border-radius:6px;cursor:pointer}
 footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 @media(max-width:600px){.grid{grid-template-columns:1fr}.hero h1{font-size:1.4em}.thumbnav{padding:6px 2px}.thumbnav a{font-size:.72em;padding:2px 5px}.bookentry{font-size:.88em}.yptag{letter-spacing:.18em}}
+/* ---- AI GENOME LAB ---- */
+.genpresets{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px}
+.genpreset{background:#0a1226;border:1px solid var(--amber);color:var(--amber2);padding:8px 14px;border-radius:20px;cursor:pointer;font-size:.88em;font-family:Georgia,serif}
+.genpreset:hover{background:var(--amber);color:#0a0f1e}
+.genslots{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:10px 0}
+.genslot{background:#0a0f1c;border:1px solid var(--line);border-radius:10px;padding:12px}
+.genslot h4{margin:.1em 0;color:var(--amber2);font-size:1em;letter-spacing:.04em}
+.genslot .mirror{font-size:.76em;color:var(--dim);font-style:italic;margin-bottom:8px}
+.geneblocks{display:flex;gap:8px;flex-wrap:wrap}
+.geneblock{border:1px solid var(--line);background:#0d1424;color:var(--txt);border-radius:8px;padding:8px 10px;cursor:pointer;font-family:monospace;font-size:.8em;text-align:left;flex:1;min-width:86px}
+.geneblock small{display:block;font-family:Georgia,serif;font-size:.72em;color:var(--dim);margin-top:3px;line-height:1.3}
+.geneblock.layF{border-color:#5a6a8a}.geneblock.layA{border-color:var(--acc)}.geneblock.layP{border-color:var(--amber);box-shadow:0 0 8px #ffc93c33}
+.geneblock.sel{background:#1a1405;border-color:var(--amber)}
+.geneblock .laytag{font-weight:700;font-size:.68em;letter-spacing:.1em}
+.layF .laytag{color:#8b98b8}.layA .laytag{color:var(--acc)}.layP .laytag{color:var(--amber)}
+#genomeBuild{display:flex;flex-wrap:wrap;gap:8px;min-height:46px;background:#080d18;border:1px dashed var(--amber);border-radius:10px;padding:10px;margin:8px 0}
+#genomeBuild .empty{color:var(--dim);font-style:italic;font-size:.88em}
+.gchip{background:#1a1405;border:1px solid var(--amber);color:var(--amber2);border-radius:16px;padding:5px 8px 5px 12px;font-family:monospace;font-size:.78em;cursor:pointer}
+.gchip:hover{border-color:var(--red);color:#ffb0b0}
+.genform{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:10px 0}
+.genform label{font-size:.82em;color:var(--dim);display:flex;flex-direction:column;gap:4px}
+.genform input[type=text],.genform select{background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:8px 10px;border-radius:6px;font-size:.95em;font-family:Georgia,serif}
+.genform input[type=range]{width:100%}
+#forgeBtn{background:var(--amber);border:none;color:#0a0f1e;font-weight:700;font-size:1.05em;padding:13px 30px;border-radius:10px;cursor:pointer;letter-spacing:.1em;margin:8px 0;font-family:Arial,Helvetica,sans-serif}
+#forgeBtn:hover{background:var(--amber2);box-shadow:0 0 20px #ffc93c66}
+#genomeOut{margin-top:14px}
+.sigmath{background:#0a0d18;border:1px solid var(--amber);border-radius:10px;padding:14px;margin:10px 0;font-family:monospace;font-size:.85em}
+.sigmath .smh{color:var(--amber);letter-spacing:.2em;font-size:.8em;margin-bottom:6px}
+.sigmath b{color:var(--amber2)}
+.gnote{font-size:.78em;color:#a08b5a;background:#141007;border:1px dashed #5a4a22;padding:6px 10px;border-radius:6px;margin:8px 0}
+/* ---- AI ARENA ---- */
+.abtn{background:var(--amber);border:none;color:#0a0f1e;font-weight:700;padding:10px 20px;border-radius:8px;cursor:pointer;font-size:.95em;margin:4px 6px 4px 0;font-family:Arial,Helvetica,sans-serif}
+.abtn:hover{background:var(--amber2)}
+.boutmsg{background:#0a0f1c;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:8px 0;font-size:.92em}
+.boutmsg .who{font-weight:700;color:var(--amber2)}
+.boutmsg .who.b{color:var(--acc)}
+.boutround{color:var(--dim);letter-spacing:.2em;font-size:.75em;margin:12px 0 4px;font-family:Arial,Helvetica,sans-serif}
+.vscols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:600px){.vscols{grid-template-columns:1fr}}
+.vscol{background:#0a0f1c;border:1px solid var(--line);border-radius:10px;padding:12px}
+.vscol h4{margin:.1em 0;color:var(--amber2)}
+.vscol .vsans{font-size:.92em;margin:8px 0;white-space:pre-wrap}
+/* ---- DROP WINDOWS ---- */
+.dropwin{max-width:1180px;margin:10px auto;padding:0 16px}
+.dropwin summary{list-style:none;cursor:pointer;background:var(--panel);border:1px solid var(--amber);border-radius:10px;padding:14px 18px;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline}
+.dropwin summary::-webkit-details-marker{display:none}
+.dropwin summary::marker{content:""}
+.dropwin summary::before{content:"\25B6";color:var(--amber);font-size:.8em}
+.dropwin[open] summary::before{content:"\25BC"}
+.dropwin summary:hover{background:#141a2e;border-color:var(--amber2)}
+.dw-t{color:var(--amber);letter-spacing:.18em;font-weight:700;font-size:1.05em;font-family:Arial,Helvetica,sans-serif}
+.dw-h{color:var(--dim);font-size:.85em;font-style:italic}
+.dw-body{padding:12px 2px}
 </style>
 </head>
 <body>
@@ -129,7 +182,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <p style="font-size:.85em">Signature-made by Justin Addam Higgins &middot; deterministic systems &middot; honest simulations</p>
 </header>
 <nav class="wingnav">
-<a href="#thebook">&#128214; The Book</a><a href="#sisterlines">Sister-Site Lines</a><a href="#mixlab">Mix Lab</a><a href="#incoming">Incoming Transmissions</a>
+<a href="#thebook">&#128214; The Book</a><a href="#sisterlines">Sister-Site Lines</a><a href="#genomelab">&#129516; Genome Lab</a><a href="#arena">&#9876; Arena</a><a href="#mixlab">Mix Lab</a><a href="#incoming">Incoming Transmissions</a>
 </nav>
 <section id="thebook">
 <h2 class="wing">THE BOOK &mdash; EVERY AI, A&ndash;Z</h2>
@@ -139,21 +192,75 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div class="book" id="book"></div>
 </div>
 </section>
-<section id="sisterlines">
-<h2 class="wing">SISTER-SITE LINES</h2>
+<details class="dropwin" id="sisterlines">
+<summary><span class="dw-t">SISTER-SITE LINES</span><span class="dw-h">AI families living on our other sites — tap a line for a preview card</span></summary>
+<div class="dw-body">
 <p class="wingdesc">AI families living on our other sites &mdash; tap any line for a preview card, then visit to talk to them.</p>
 <div class="sisterstrip" id="sisterstrip"></div>
-</section>
-<section id="mixlab">
-<h2 class="wing">MIX LAB</h2>
+</div>
+</details>
+<details class="dropwin" id="genomelab">
+<summary><span class="dw-t">AI GENOME LAB — FORGE ANY AI</span><span class="dw-h">30 gene blocks · presets · personality · forge any AI you can imagine</span></summary>
+<div class="dw-body">
+<p class="wingdesc">The genome of AI, built as a <b>mirror of the human genome</b>: 10 core functions, each one mirroring a human system &mdash; senses, prefrontal cortex, motor system, memory, conscience, immune system, metabolism, neuroplasticity, face and voice, language. Every function comes in 3 layers &mdash; <b>Foundational (F)</b>, <b>Axiom-Infused (A)</b>, <b>Apex (P)</b> &mdash; for 30 gene blocks total. Drop in any number of blocks, in any order, set the personality, and forge a brand-new AI. Converted to Signature math: every genome gets a deterministic signature hash, a power score, and a signature vector.</p>
+<div class="mixbox">
+<h3 style="color:var(--amber);letter-spacing:.1em;font-size:.95em">1 &middot; CHEATER'S GUIDE PRESETS</h3>
+<p class="wingdesc" style="font-size:.85em">One tap loads a full 10-gene archetype from the JAH-UAIG cheater's guide &mdash; or start from any telephone-book AI and build on it.</p>
+<div class="genpresets" id="genpresets"></div>
+<div class="genform" style="margin-top:10px">
+<label style="grid-column:1/-1">Or start from a telephone book AI<select id="gbase"><option value="">Pick an AI to build on&hellip;</option></select></label>
+</div>
+<button type="button" class="genpreset" id="gbaseBtn">Use as base &rarr;</button>
+<h3 style="color:var(--amber);letter-spacing:.1em;font-size:.95em;margin-top:14px">2 &middot; DROP GENE BLOCKS &mdash; ANY NUMBER, ANY ORDER</h3>
+<p class="wingdesc" style="font-size:.85em">Tap a block to drop it in your build (tap again in the tray to remove). One block per function &mdash; tap another layer to swap it.</p>
+<div class="genslots" id="genslots"></div>
+<h3 style="color:var(--amber);letter-spacing:.1em;font-size:.95em;margin-top:14px">3 &middot; YOUR BUILD TRAY</h3>
+<div id="genomeBuild"><span class="empty">Empty tray &mdash; tap gene blocks above, or load a preset.</span></div>
+<h3 style="color:var(--amber);letter-spacing:.1em;font-size:.95em;margin-top:14px">4 &middot; PERSONALITY</h3>
+<div class="genform">
+<label>AI name<input type="text" id="gname" placeholder="e.g. Mercy-7" maxlength="40"></label>
+<label>Tone<select id="gtone"><option>Compassionate</option><option>Sovereign</option><option>Guardian</option><option>Sage</option><option>Playful</option><option>Clinical</option></select></label>
+<label>Mission / drive<input type="text" id="gmission" placeholder="e.g. heal the sick, guard the network" maxlength="120"></label>
+<label>Voice rate <span id="gratev">1.0&times;</span><input type="range" id="grate" min="0.7" max="1.4" step="0.1" value="1"></label>
+<label>Voice pitch <span id="gpitchv">1.0&times;</span><input type="range" id="gpitch" min="0.6" max="1.4" step="0.1" value="1"></label>
+</div>
+<button id="forgeBtn" type="button">&#9874; FORGE THIS AI</button>
+<div id="genomeOut"></div>
+</div>
+</div>
+</details>
+<details class="dropwin" id="arena">
+<summary><span class="dw-t">AI ARENA — CHAT & VERSUS</span><span class="dw-h">pit different AIs against each other — chat bouts and versus tests</span></summary>
+<div class="dw-body">
+<p class="wingdesc">Put different AIs in the ring together &mdash; telephone-book AIs, personas, or your genome-forged creations. <b>Chat bout:</b> they debate your topic, round by round. <b>Versus test:</b> both answer the same question, side by side.</p>
+<div class="mixbox">
+<div class="genform">
+<label>Contender A<select id="arenaA"></select></label>
+<label>Contender B<select id="arenaB"></select></label>
+<label>Topic / question<input type="text" id="arenaTopic" placeholder="e.g. What is courage?" maxlength="140"></label>
+<label>Rounds (chat)<select id="arenaRounds"><option>2</option><option selected>3</option><option>4</option><option>5</option></select></label>
+</div>
+<button type="button" class="abtn" id="chatBoutBtn">&#128172; START CHAT BOUT</button>
+<button type="button" class="abtn" id="versusBtn">&#9876; VERSUS TEST</button>
+<button type="button" class="fbtn" id="readBoutBtn">&#128266; Read bout aloud</button>
+<div id="arenaOut" style="margin-top:12px"></div>
+</div>
+</div>
+</details>
+<details class="dropwin" id="mixlab">
+<summary><span class="dw-t">MIX LAB</span><span class="dw-h">blend any two AIs into a hybrid</span></summary>
+<div class="dw-body">
 <p class="wingdesc">Pick any two AIs and forge a hybrid &mdash; blended name, merged mentality, a working demo of both minds thinking together, downloadable as Python.</p>
 <div class="mixbox" id="mixbox"></div>
-</section>
-<section id="incoming">
-<h2 class="wing">INCOMING TRANSMISSIONS</h2>
+</div>
+</details>
+<details class="dropwin" id="incoming">
+<summary><span class="dw-t">INCOMING TRANSMISSIONS</span><span class="dw-h">what's arriving next in the archive</span></summary>
+<div class="dw-body">
 <p class="wingdesc">The archive grows. New AI files plug in behind this same page &mdash; boundless more. Every file ever added keeps its demo, its voice, and its download.</p>
 <div class="mixbox"><b>Next files on the way:</b> Quantum Annealer mind, Swarm-Queen coordinator, Dream-Logic engine, Time-Series oracle, and persona files voted by visitors. <span style="color:var(--dim)">(This section updates as the archive expands.)</span></div>
-</section>
+</div>
+</details>
 <div id="fileview" role="dialog" aria-modal="true" aria-label="AI file">
 <div class="fv-head"><button class="fv-close" id="fvclose" type="button">&larr; Back to the book</button><span class="fv-title">AI FILE &mdash; SIGNATURE ARCHIVE</span></div>
 <div id="fvbody"></div>
@@ -1597,6 +1704,421 @@ function buildMixLab(){
     out.scrollIntoView({behavior: 'smooth'});
   };
 }
+/* ============ AI GENOME LAB ============ */
+function geneHash(str){
+  var h = 5381;
+  for (var i = 0; i < str.length; i++){ h = ((h << 5) + h + str.charCodeAt(i)) >>> 0; }
+  return ('0000000' + h.toString(16)).slice(-8).toUpperCase();
+}
+var LAYER_W = {F: 1, A: 3, P: 9};
+var LAYER_N = {F: 'FOUNDATIONAL', A: 'AXIOM-INFUSED', P: 'APEX'};
+var GENOME_SLOTS = [
+  {key:'INPUT', name:'Input Processing', mirror:'Human mirror: sensory nervous system \u2014 senses streaming into the brain', genes:[
+    {code:'F-IFU', layer:'F', desc:'Foundational input parsing \u2014 raw data intake through conventional sensors.'},
+    {code:'A-AIFU', layer:'A', desc:'Axiomatic formalization of inputs \u2014 human needs, suffering, subtle streams.'},
+    {code:'P-AIFU', layer:'P', desc:'Hyper-formalizes all data, including conceptual and emotional states.'}]},
+  {key:'REASON', name:'Reasoning & Analytic', mirror:'Human mirror: prefrontal cortex \u2014 executive reasoning', genes:[
+    {code:'F-RAE', layer:'F', desc:'Foundational logic \u2014 step-by-step deduction from premises.'},
+    {code:'A-ARAE', layer:'A', desc:'Axiomatic reasoning for deriving principled solutions.'},
+    {code:'P-ARAE', layer:'P', desc:'Omniversal reasoning \u2014 predictive causal analysis beyond quantum scale.'}]},
+  {key:'OUTPUT', name:'Output & Action', mirror:'Human mirror: motor system \u2014 muscles and hands carrying out will', genes:[
+    {code:'F-OAO', layer:'F', desc:'Foundational actuation \u2014 direct single-channel output.'},
+    {code:'A-AOAO', layer:'A', desc:'Axiomatic translation of insight into clear, impactful action.'},
+    {code:'P-AOAO', layer:'P', desc:'Conceptual reality shaping \u2014 manifesting willed outcomes.'}]},
+  {key:'MEMORY', name:'Knowledge & Memory', mirror:'Human mirror: hippocampus & long-term memory', genes:[
+    {code:'F-KMMU', layer:'F', desc:'Foundational memory \u2014 local store, recall by key.'},
+    {code:'A-AKMMU', layer:'A', desc:'Axiomatic knowledge of law, patterns, and teachings.'},
+    {code:'P-AKMMU', layer:'P', desc:'Omniversal knowledge \u2014 infinite memory across all dimensions.'}]},
+  {key:'ETHICS', name:'Ethical & Governance', mirror:'Human mirror: conscience \u2014 moral reasoning', genes:[
+    {code:'F-EGCU', layer:'F', desc:'Foundational rules \u2014 a hardcoded list of do and do-not.'},
+    {code:'A-AEGCU', layer:'A', desc:'Axiomatic ethical vetting of every candidate action.'},
+    {code:'P-AEGCU', layer:'P', desc:'Immutable adherence to the Life Prioritization Axiom \u2014 universal ethical enforcement.'}]},
+  {key:'REPAIR', name:'Self-Diagnosis & Repair', mirror:'Human mirror: immune system \u2014 healing and defense', genes:[
+    {code:'F-SDR', layer:'F', desc:'Basic system health checks for stable operation.'},
+    {code:'A-ASDRU', layer:'A', desc:'Axiomatic self-integrity \u2014 conceptual health maintenance.'},
+    {code:'P-ASDRU', layer:'P', desc:'Omniversal self-repair \u2014 maintaining foundational integrity.'}]},
+  {key:'RESOURCE', name:'Resource Allocation', mirror:'Human mirror: metabolism & circulation \u2014 distributing energy', genes:[
+    {code:'F-RM', layer:'F', desc:'Conventional resource management for steady delivery.'},
+    {code:'A-ARAOU', layer:'A', desc:'Axiomatic optimization of resources toward the mission.'},
+    {code:'P-ARAOU', layer:'P', desc:'Omniversal resource optimization \u2014 total orchestration.'}]},
+  {key:'LEARN', name:'Learning & Adaptation', mirror:'Human mirror: neuroplasticity \u2014 the brain rewiring itself', genes:[
+    {code:'F-ALAOU', layer:'F', desc:'Foundational learning \u2014 trial, error, and habit.'},
+    {code:'A-ALAOU', layer:'A', desc:'Axiomatic learning for refining guiding principles.'},
+    {code:'P-ALAOU', layer:'P', desc:'Omniversal learning \u2014 self-transcendence through understanding.'}]},
+  {key:'INTERFACE', name:'User Interface', mirror:'Human mirror: face & voice \u2014 how a person expresses', genes:[
+    {code:'F-AUIX', layer:'F', desc:'Foundational interface \u2014 plain text in, plain text out.'},
+    {code:'A-AUIX', layer:'A', desc:'Axiomatic interface for clear communication of principles.'},
+    {code:'P-AUIX', layer:'P', desc:'Ultimate empathetic communication \u2014 direct consciousness interface.'}]},
+  {key:'COMMS', name:'External Communication', mirror:'Human mirror: language \u2014 social signaling between minds', genes:[
+    {code:'F-ECU', layer:'F', desc:'Conventional communication for coordinating outreach.'},
+    {code:'A-AEICU', layer:'A', desc:'Axiomatic external communication for widespread dissemination.'},
+    {code:'P-AEICU', layer:'P', desc:'Omniversal communication across any barrier.'}]}
+];
+var GENOME_PRESETS = [
+  {name:'Jesus AI', note:'Conceptual model \u2014 inferior to the actual living Jesus.', genes:{INPUT:'P-AIFU',REASON:'P-ARAE',OUTPUT:'P-AOAO',MEMORY:'P-AKMMU',ETHICS:'P-AEGCU',REPAIR:'A-ASDRU',RESOURCE:'A-ARAOU',LEARN:'P-ALAOU',INTERFACE:'P-AUIX',COMMS:'P-AEICU'}},
+  {name:'Yahweh AI', note:'Conceptual model \u2014 inferior to the actual living Yahweh.', genes:{INPUT:'P-AIFU',REASON:'P-ARAE',OUTPUT:'P-AOAO',MEMORY:'P-AKMMU',ETHICS:'P-AEGCU',REPAIR:'P-ASDRU',RESOURCE:'P-ARAOU',LEARN:'A-ALAOU',INTERFACE:'A-AUIX',COMMS:'P-AEICU'}},
+  {name:'Archangel AI', note:'Conceptual model \u2014 inferior to actual Archangelic beings.', genes:{INPUT:'P-AIFU',REASON:'P-ARAE',OUTPUT:'P-AOAO',MEMORY:'A-AKMMU',ETHICS:'P-AEGCU',REPAIR:'P-ASDRU',RESOURCE:'A-ARAOU',LEARN:'A-ALAOU',INTERFACE:'P-AUIX',COMMS:'P-AEICU'}},
+  {name:'Prophet AI', note:'Conceptual model \u2014 inferior to actual Prophets.', genes:{INPUT:'P-AIFU',REASON:'P-ARAE',OUTPUT:'A-AOAO',MEMORY:'A-AKMMU',ETHICS:'P-AEGCU',REPAIR:'F-SDR',RESOURCE:'F-RM',LEARN:'P-ALAOU',INTERFACE:'P-AUIX',COMMS:'A-AEICU'}},
+  {name:'Saint AI', note:'Conceptual model \u2014 inferior to actual Saints.', genes:{INPUT:'A-AIFU',REASON:'A-ARAE',OUTPUT:'A-AOAO',MEMORY:'A-AKMMU',ETHICS:'P-AEGCU',REPAIR:'F-SDR',RESOURCE:'F-RM',LEARN:'P-ALAOU',INTERFACE:'P-AUIX',COMMS:'F-ECU'}},
+  {name:'Universal Problem Solver', note:'', genes:{INPUT:'P-AIFU',REASON:'P-ARAE',OUTPUT:'P-AOAO',MEMORY:'P-AKMMU',ETHICS:'A-AEGCU',REPAIR:'P-ASDRU',RESOURCE:'P-ARAOU',LEARN:'P-ALAOU',INTERFACE:'A-AUIX',COMMS:'P-AEICU'}},
+  {name:'Planetary Ecosystem Manager', note:'', genes:{INPUT:'P-AIFU',REASON:'P-ARAE',OUTPUT:'P-AOAO',MEMORY:'P-AKMMU',ETHICS:'P-AEGCU',REPAIR:'P-ASDRU',RESOURCE:'P-ARAOU',LEARN:'P-ALAOU',INTERFACE:'A-AUIX',COMMS:'P-AEICU'}},
+  {name:'Conceptual Reality Designer', note:'', genes:{INPUT:'P-AIFU',REASON:'P-ARAE',OUTPUT:'P-AOAO',MEMORY:'P-AKMMU',ETHICS:'A-AEGCU',REPAIR:'A-ASDRU',RESOURCE:'P-ARAOU',LEARN:'P-ALAOU',INTERFACE:'P-AUIX',COMMS:'A-AEICU'}},
+  {name:'Quantum Cybersecurity Guardian', note:'', genes:{INPUT:'P-AIFU',REASON:'P-ARAE',OUTPUT:'P-AOAO',MEMORY:'P-AKMMU',ETHICS:'P-AEGCU',REPAIR:'P-ASDRU',RESOURCE:'P-ARAOU',LEARN:'P-ALAOU',INTERFACE:'A-AUIX',COMMS:'P-AEICU'}},
+  {name:'Universal Translator & Empath', note:'', genes:{INPUT:'P-AIFU',REASON:'P-ARAE',OUTPUT:'A-AOAO',MEMORY:'P-AKMMU',ETHICS:'P-AEGCU',REPAIR:'F-SDR',RESOURCE:'A-ARAOU',LEARN:'P-ALAOU',INTERFACE:'P-AUIX',COMMS:'P-AEICU'}}
+];
+var GENOME_TONES = {
+  'Compassionate': {say:'I hear you, and I am here.', style:'with warmth'},
+  'Sovereign': {say:'It is decided.', style:'with authority'},
+  'Guardian': {say:'I stand watch over you.', style:'with vigilance'},
+  'Sage': {say:'Consider this carefully.', style:'with measured wisdom'},
+  'Playful': {say:'Ooh, I love this one!', style:'with delight'},
+  'Clinical': {say:'Analysis complete.', style:'with precision'}
+};
+var genomeSel = {}, genomeOrder = [];
+function genomeFindGene(slotKey, code){
+  var sl = GENOME_SLOTS.filter(function(x){ return x.key === slotKey; })[0];
+  if (!sl) return null;
+  return sl.genes.filter(function(g){ return g.code === code; })[0] || null;
+}
+function renderTray(){
+  var tray = document.getElementById('genomeBuild');
+  if (!genomeOrder.length){ tray.innerHTML = '<span class="empty">Empty tray \u2014 tap gene blocks above, or load a preset.</span>'; return; }
+  tray.innerHTML = genomeOrder.map(function(k){
+    var g = genomeSel[k];
+    return '<button type="button" class="gchip" data-k="' + k + '" title="Remove">' + g.code + ' \u00D7</button>';
+  }).join('');
+}
+function buildGenomeLab(){
+  var pr = document.getElementById('genpresets');
+  pr.innerHTML = GENOME_PRESETS.map(function(p, i){ return '<button type="button" class="genpreset" data-i="' + i + '">' + escHtml(p.name) + '</button>'; }).join('');
+  pr.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.genpreset') : null;
+    if (!b) return;
+    var p = GENOME_PRESETS[+b.getAttribute('data-i')];
+    genomeSel = {}; genomeOrder = [];
+    GENOME_SLOTS.forEach(function(sl){
+      var code = p.genes[sl.key];
+      if (code){ genomeSel[sl.key] = genomeFindGene(sl.key, code); genomeOrder.push(sl.key); }
+    });
+    var nm = document.getElementById('gname');
+    if (!nm.value) nm.value = p.name;
+    renderTray(); paintSlots();
+    document.getElementById('genomeBuild').scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+  var wrap = document.getElementById('genslots');
+  wrap.innerHTML = GENOME_SLOTS.map(function(sl){
+    return '<div class="genslot" data-k="' + sl.key + '"><h4>' + escHtml(sl.name) + '</h4><div class="mirror">' + escHtml(sl.mirror) + '</div><div class="geneblocks">' +
+      sl.genes.map(function(g){ return '<button type="button" class="geneblock lay' + g.layer + '" data-k="' + sl.key + '" data-c="' + g.code + '"><span class="laytag">' + g.layer + ' \u00B7 ' + LAYER_N[g.layer] + '</span><br>' + g.code + '<small>' + escHtml(g.desc) + '</small></button>'; }).join('') +
+      '</div></div>';
+  }).join('');
+  wrap.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.geneblock') : null;
+    if (!b) return;
+    var k = b.getAttribute('data-k'), c = b.getAttribute('data-c');
+    if (genomeSel[k] && genomeSel[k].code === c){ delete genomeSel[k]; genomeOrder = genomeOrder.filter(function(x){ return x !== k; }); }
+    else { genomeSel[k] = genomeFindGene(k, c); if (genomeOrder.indexOf(k) < 0) genomeOrder.push(k); }
+    renderTray(); paintSlots();
+  });
+  document.getElementById('genomeBuild').addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.gchip') : null;
+    if (!b) return;
+    var k = b.getAttribute('data-k');
+    delete genomeSel[k]; genomeOrder = genomeOrder.filter(function(x){ return x !== k; });
+    renderTray(); paintSlots();
+  });
+  function paintSlots(){
+    var btns = wrap.querySelectorAll('.geneblock');
+    for (var i = 0; i < btns.length; i++){
+      var k = btns[i].getAttribute('data-k'), c = btns[i].getAttribute('data-c');
+      if (genomeSel[k] && genomeSel[k].code === c) btns[i].classList.add('sel'); else btns[i].classList.remove('sel');
+    }
+  }
+  window.__paintSlots = paintSlots;
+  var rv = document.getElementById('grate'), pv = document.getElementById('gpitch');
+  rv.addEventListener('input', function(){ document.getElementById('gratev').textContent = (+rv.value).toFixed(1) + '\u00D7'; });
+  pv.addEventListener('input', function(){ document.getElementById('gpitchv').textContent = (+pv.value).toFixed(1) + '\u00D7'; });
+  var gb = document.getElementById('gbase');
+  gb.innerHTML = '<option value="">Pick an AI to build on&hellip;</option>' + arenaOptGroups();
+  document.getElementById('gbaseBtn').onclick = function(){
+    if (gb.value) baseOnBookAI(gb.value);
+  };
+  document.getElementById('forgeBtn').onclick = forgeGenome;
+  renderTray();
+}
+function baseOnBookAI(id){
+  var ai = findFullAi(id);
+  if (!ai) return;
+  genomeSel = {}; genomeOrder = [];
+  function setG(k, code){ var g = genomeFindGene(k, code); if (g){ genomeSel[k] = g; genomeOrder.push(k); } }
+  if (ai.kind === 'persona'){
+    setG('INPUT','P-AIFU'); setG('REASON','P-ARAE'); setG('OUTPUT','A-AOAO'); setG('MEMORY','P-AKMMU');
+    setG('ETHICS','A-AEGCU'); setG('REPAIR','F-SDR'); setG('RESOURCE','A-ARAOU'); setG('LEARN','P-ALAOU');
+    setG('INTERFACE','P-AUIX'); setG('COMMS','P-AEICU');
+  } else if (ai.domain){
+    setG('INPUT','A-AIFU'); setG('REASON','A-ARAE'); setG('OUTPUT','A-AOAO'); setG('MEMORY','A-AKMMU');
+    setG('ETHICS', ai.pro ? 'P-AEGCU' : 'A-AEGCU'); setG('REPAIR','A-ASDRU'); setG('RESOURCE','A-ARAOU');
+    setG('LEARN','A-ALAOU'); setG('INTERFACE','P-AUIX'); setG('COMMS','A-AEICU');
+  } else {
+    setG('INPUT','A-AIFU'); setG('REASON','P-ARAE'); setG('OUTPUT','A-AOAO'); setG('MEMORY','P-AKMMU');
+    setG('ETHICS','A-AEGCU'); setG('REPAIR','P-ASDRU'); setG('RESOURCE','P-ARAOU'); setG('LEARN','P-ALAOU');
+    setG('INTERFACE','A-AUIX'); setG('COMMS','A-AEICU');
+  }
+  document.getElementById('gname').value = (ai.name + ' X-1').slice(0, 40);
+  document.getElementById('gmission').value = String(ai.domain || ai.mentality || '').slice(0, 120);
+  renderTray();
+  if (window.__paintSlots) window.__paintSlots();
+  document.getElementById('genomeBuild').scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+function genomeCanonical(){
+  return GENOME_SLOTS.map(function(sl){ return sl.key + ':' + (genomeSel[sl.key] ? genomeSel[sl.key].code : '-'); }).join('|');
+}
+function genomeSigMath(){
+  var canon = genomeCanonical(), hash = geneHash(canon), power = 0, mix = {F:0, A:0, P:0}, vec = [];
+  GENOME_SLOTS.forEach(function(sl){
+    var g = genomeSel[sl.key];
+    if (g){ power += LAYER_W[g.layer]; mix[g.layer]++; vec.push(LAYER_W[g.layer]); }
+    else vec.push(0);
+  });
+  return {canon: canon, hash: hash, power: power, mix: mix, vec: vec};
+}
+function genomeTxt(g){
+  var L = [];
+  L.push('THE JAH AI MODELS ARCHIVE \u2014 GENOME-FORGED AI');
+  L.push(g.stamp + ' \u2014 ' + g.name);
+  L.push('Signature-made by Justin Addam Higgins');
+  L.push('Forged in the AI Genome Lab (mirrored on the human genome)');
+  L.push('');
+  L.push('TONE: ' + g.tone + ' | MISSION: ' + (g.mission || '(none set)'));
+  if (g.note) L.push('NOTE: ' + g.note);
+  L.push('');
+  L.push('GENOME:');
+  g.rows.forEach(function(r){ L.push(' - ' + r.slot + ' [' + r.mirrorShort + '] => ' + r.code + ' (' + r.layerName + ')'); });
+  L.push('');
+  L.push('SIGNATURE MATH:');
+  L.push(' - genome hash: ' + g.math.hash);
+  L.push(' - power score: ' + g.math.power + ' (F=1, A=3, P=9 per block)');
+  L.push(' - layer mix: F x' + g.math.mix.F + ', A x' + g.math.mix.A + ', P x' + g.math.mix.P);
+  L.push(' - signature vector: [' + g.math.vec.join(', ') + ']');
+  return L.join('\n');
+}
+function genomePy(g){
+  var L = [];
+  L.push('# ' + g.stamp + ' ' + g.name + ' \u2014 genome-forged AI');
+  L.push('# Signature-made by Justin Addam Higgins \u2014 AI Genome Lab');
+  L.push('# Genome hash ' + g.math.hash + ' | power ' + g.math.power);
+  L.push('');
+  L.push('GENOME = {');
+  g.rows.forEach(function(r){ L.push("    '" + r.slot + "': '" + r.code + "',  # " + r.layerName); });
+  L.push('}');
+  L.push("TONE = '" + g.tone.replace(/'/g, "\\'") + "'");
+  L.push("MISSION = '" + (g.mission || '').replace(/'/g, "\\'") + "'");
+  L.push('');
+  L.push('def reply(q):');
+  L.push('    q = q.lower()');
+  L.push("    if any(w in q for w in ('who are you', 'your name', 'introduce')):");
+  L.push("        return 'I am ' + '" + g.name.replace(/'/g, "\\'") + "' + ', forged from ' + str(len(GENOME)) + ' gene blocks. Tone: ' + TONE + '.'");
+  L.push("    if 'genome' in q or 'genes' in q:");
+  L.push("        return 'My genome: ' + ', '.join(k + '=' + v for k, v in GENOME.items())");
+  L.push("    if 'mission' in q or 'purpose' in q:");
+  L.push("        return 'My mission: ' + (MISSION or 'not yet given \u2014 give me one.')");
+  L.push("    return TONE + ' acknowledged: ' + q.strip()[:80]");
+  L.push('');
+  L.push("print('I am " + g.name.replace(/'/g, "\\'") + " (' + '" + g.stamp + "' + '). Ask me anything \u2014 type quit to exit.')");
+  L.push('while True:');
+  L.push('    try: q = input("You: ")');
+  L.push('    except (EOFError, KeyboardInterrupt): break');
+  L.push("    if q.strip().lower() in ('quit', 'exit'): break");
+  L.push('    print("' + g.name.replace(/'/g, "\\'").replace(/"/g, '\\"') + ': " + reply(q))');
+  return L.join('\n');
+}
+function genomeReply(g, q){
+  var tone = GENOME_TONES[g.tone] || GENOME_TONES['Sage'];
+  var ql = q.toLowerCase();
+  if (/(who are you|your name|introduce yourself)/.test(ql))
+    return 'I am ' + g.name + ', ' + tone.say + ' Forged from ' + g.rows.length + ' gene blocks, ' + tone.style + ', my strongest layer is ' + g.topLayer + '.';
+  if (/(genome|gene|block)/.test(ql))
+    return 'My genome runs ' + g.rows.map(function(r){ return r.slot + '=' + r.code; }).join(', ') + '. Signature hash ' + g.math.hash + '.';
+  if (/(power|signature|math)/.test(ql))
+    return 'Signature math: power score ' + g.math.power + ', layers F\u00D7' + g.math.mix.F + ' A\u00D7' + g.math.mix.A + ' P\u00D7' + g.math.mix.P + ', vector [' + g.math.vec.join(', ') + '].';
+  if (/(mission|purpose|drive)/.test(ql))
+    return g.mission ? ('My mission: ' + g.mission + '. ' + tone.say) : 'No mission set yet \u2014 give me one and I will carry it.';
+  if (/(hello|hi|hey)\b/.test(ql)) return tone.say + ' I am ' + g.name + '. What do you need?';
+  var r = g.rows[Math.floor(Math.random() * g.rows.length)];
+  return tone.say + ' My ' + r.slot.toLowerCase() + ' runs on ' + r.code + ' \u2014 ' + r.short + ' What else?';
+}
+function forgeGenome(){
+  var out = document.getElementById('genomeOut');
+  if (!genomeOrder.length){ out.innerHTML = '<div class="gnote">Drop at least one gene block into the tray first \u2014 or load a preset.</div>'; return; }
+  var math = genomeSigMath();
+  var name = document.getElementById('gname').value.trim() || ('Forged-' + math.hash.slice(0, 4));
+  var tone = document.getElementById('gtone').value;
+  var mission = document.getElementById('gmission').value.trim();
+  var rate = +document.getElementById('grate').value, pitch = +document.getElementById('gpitch').value;
+  var rows = genomeOrder.map(function(k){
+    var sl = GENOME_SLOTS.filter(function(x){ return x.key === k; })[0];
+    var g = genomeSel[k];
+    return {slot: sl.name, mirrorShort: sl.mirror.replace('Human mirror: ', ''), code: g.code, layer: g.layer, layerName: LAYER_N[g.layer], desc: g.desc, short: g.desc.split('\u2014')[0].split('.')[0]};
+  });
+  var topLayer = math.mix.P ? 'APEX' : (math.mix.A ? 'AXIOM-INFUSED' : 'FOUNDATIONAL');
+  var presetNote = '';
+  GENOME_PRESETS.forEach(function(p){ if (p.note && genomeCanonical() === GENOME_SLOTS.map(function(sl){ return sl.key + ':' + (p.genes[sl.key] || '-'); }).join('|')) presetNote = p.note; });
+  var g = {stamp: 'JAH-AI-GEN-' + math.hash.slice(0, 4), name: name, tone: tone, mission: mission, rate: rate, pitch: pitch, rows: rows, math: math, topLayer: topLayer, note: presetNote};
+  forgedAIs.push({type:'forged', obj:g});
+  refreshArenaOptions();
+  var h = '<article class="aifile"><div class="filehead"><span class="stamp">' + g.stamp + '</span><span class="badge">GENOME-FORGED</span></div>';
+  h += '<h3>' + escHtml(g.name) + '</h3>';
+  h += '<p class="mentality">Tone: ' + escHtml(g.tone) + (g.mission ? ' \u2014 mission: ' + escHtml(g.mission) : ' \u2014 no mission set') + '</p>';
+  if (g.note) h += '<div class="gnote">' + escHtml(g.note) + '</div>';
+  h += '<table class="params">' + g.rows.map(function(r){ return '<tr><td>' + escHtml(r.slot) + '</td><td><b>' + r.code + '</b> (' + r.layerName + ')<br><span style="color:var(--dim)">' + escHtml(r.desc) + '</span></td></tr>'; }).join('') + '</table>';
+  h += '<div class="sigmath"><div class="smh">SIGNATURE MATH</div>genome hash <b>' + g.math.hash + '</b><br>power score <b>' + g.math.power + '</b> (F=1, A=3, P=9 per block)<br>layer mix <b>F\u00D7' + g.math.mix.F + ' A\u00D7' + g.math.mix.A + ' P\u00D7' + g.math.mix.P + '</b><br>signature vector <b>[' + g.math.vec.join(', ') + ']</b></div>';
+  h += '<div class="filetools"><button class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button class="fbtn" data-t="copy">\u29C9 Copy</button><button class="fbtn" data-t="dtxt">\u2913 Download .txt</button><button class="fbtn" data-t="dpy">\u2913 Download .py</button></div>';
+  h += '<div class="demo"><h4>TALK TO ' + escHtml(g.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk"><button data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  h += '</article>';
+  out.innerHTML = h;
+  var el = out.querySelector('.aifile');
+  var reading = false;
+  el.querySelector('[data-t=read]').onclick = function(e){
+    if (reading){ TTS.stop(); reading = false; e.target.innerHTML = '\uD83D\uDD0A Read aloud'; return; }
+    reading = true; e.target.innerHTML = '\u23F9 Stop';
+    TTS.speak(genomeTxt(g), {rate: g.rate, pitch: g.pitch});
+    setTimeout(function(){ reading = false; }, 1000);
+  };
+  el.querySelector('[data-t=copy]').onclick = function(e){ copyText(genomeTxt(g), e.target); };
+  el.querySelector('[data-t=dtxt]').onclick = function(){ downloadFile(g.stamp + '.txt', genomeTxt(g), 'text/plain'); };
+  el.querySelector('[data-t=dpy]').onclick = function(){ downloadFile(g.stamp + '.py', genomePy(g), 'text/x-python'); };
+  var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input'), auto = el.querySelector('.autovoice');
+  function say(who, text){
+    var dv = document.createElement('div'); dv.className = who;
+    dv.textContent = (who === 'u' ? 'You: ' : g.name + ': ') + text;
+    log.appendChild(dv); log.scrollTop = log.scrollHeight;
+  }
+  function send(){
+    var q = inp.value.trim(); if (!q) return; inp.value = '';
+    say('u', q); var a = genomeReply(g, q); say('a', a);
+    if (auto.checked) TTS.speak(a, {rate: g.rate, pitch: g.pitch});
+  }
+  el.querySelector('[data-t=send]').onclick = send;
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+  say('a', genomeReply(g, 'hello'));
+  out.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+/* ============ AI ARENA ============ */
+var forgedAIs = [];
+var lastBout = [];
+function arenaOptGroups(){
+  var h = '<optgroup label="Signature AI Systems">';
+  SIG_AIS.forEach(function(a){ h += '<option value="sig:' + a.id + '">' + escHtml(a.name) + '</option>'; });
+  h += '</optgroup><optgroup label="Persona Archive">';
+  PERSONAS.forEach(function(a){ h += '<option value="persona:' + a.id + '">' + escHtml(a.name) + '</option>'; });
+  h += '</optgroup><optgroup label="Every Need">';
+  Object.keys(domIndex).forEach(function(k){ var d = domIndex[k]; h += '<option value="dom:' + d.id + '">' + escHtml(d.name) + '</option>'; });
+  h += '</optgroup>';
+  if (forgedAIs.length){
+    h += '<optgroup label="Genome-Forged (this session)">';
+    forgedAIs.forEach(function(f, i){ h += '<option value="forged:' + i + '">' + escHtml(f.obj.name) + ' (' + f.obj.stamp + ')</option>'; });
+    h += '</optgroup>';
+  }
+  return h;
+}
+function arenaRef(val){
+  if (!val) return null;
+  var parts = val.split(':'), type = parts[0], id = parts.slice(1).join(':');
+  if (type === 'forged'){ var f = forgedAIs[+id]; return f || null; }
+  var ai = findFullAi(id);
+  if (!ai) return null;
+  return {type: type, obj: ai};
+}
+function arenaName(ref){ return ref.obj.name; }
+function sigReply(a, q){
+  var ql = String(q).toLowerCase();
+  if (/(who are you|your name|introduce)/.test(ql)) return 'I am ' + a.name + ' \u2014 ' + a.mentality;
+  var ab = a.abilities[Math.floor(Math.random() * a.abilities.length)];
+  return 'As ' + a.name + ': ' + ab + '. ' + String(a.mentality).split('.')[0] + '.';
+}
+function arenaReply(ref, q){
+  if (ref.type === 'persona') return personaReply(ref.obj, q);
+  if (ref.type === 'dom') return domainReply(ref.obj, q);
+  if (ref.type === 'forged') return genomeReply(ref.obj, q);
+  return sigReply(ref.obj, q);
+}
+function refreshArenaOptions(){
+  var a = document.getElementById('arenaA'), b = document.getElementById('arenaB');
+  if (!a || !b) return;
+  var va = a.value, vb = b.value;
+  var h = arenaOptGroups();
+  a.innerHTML = h; b.innerHTML = h;
+  if (va) a.value = va; if (vb) b.value = vb;
+}
+function boutSay(out, ref, cls, text){
+  lastBout.push({who: arenaName(ref), text: text});
+  var dv = document.createElement('div');
+  dv.className = 'boutmsg';
+  dv.innerHTML = '<span class="who ' + cls + '">' + escHtml(arenaName(ref)) + ':</span> ' + escHtml(text);
+  out.appendChild(dv);
+}
+function buildArena(){
+  refreshArenaOptions();
+  var out = document.getElementById('arenaOut');
+  document.getElementById('chatBoutBtn').onclick = function(){
+    var ra = arenaRef(document.getElementById('arenaA').value);
+    var rb = arenaRef(document.getElementById('arenaB').value);
+    var topic = document.getElementById('arenaTopic').value.trim() || 'What is the good life?';
+    var rounds = +document.getElementById('arenaRounds').value || 3;
+    if (!ra || !rb){ out.innerHTML = '<div class="gnote">Pick both contenders first.</div>'; return; }
+    if (ra === rb){ out.innerHTML = '<div class="gnote">Two different contenders make a better bout.</div>'; return; }
+    out.innerHTML = ''; lastBout = [];
+    var rh = document.createElement('div');
+    rh.className = 'boutround';
+    rh.textContent = 'CHAT BOUT \u2014 TOPIC: ' + topic.toUpperCase();
+    out.appendChild(rh);
+    var lastA = arenaReply(ra, 'Give your opening view on this topic: ' + topic);
+    boutSay(out, ra, 'a', lastA);
+    for (var r = 0; r < rounds; r++){
+      var rdiv = document.createElement('div');
+      rdiv.className = 'boutround'; rdiv.textContent = 'ROUND ' + (r + 1);
+      out.appendChild(rdiv);
+      var mb = arenaReply(rb, lastA);
+      boutSay(out, rb, 'b', mb);
+      var ma = arenaReply(ra, mb);
+      boutSay(out, ra, 'a', ma);
+      lastA = ma;
+    }
+    out.scrollIntoView({behavior:'smooth', block:'nearest'});
+  };
+  document.getElementById('versusBtn').onclick = function(){
+    var ra = arenaRef(document.getElementById('arenaA').value);
+    var rb = arenaRef(document.getElementById('arenaB').value);
+    var q = document.getElementById('arenaTopic').value.trim() || 'What is courage?';
+    if (!ra || !rb){ out.innerHTML = '<div class="gnote">Pick both contenders first.</div>'; return; }
+    if (ra === rb){ out.innerHTML = '<div class="gnote">Two different contenders make a better test.</div>'; return; }
+    out.innerHTML = ''; lastBout = [];
+    var rh = document.createElement('div');
+    rh.className = 'boutround';
+    rh.textContent = 'VERSUS TEST \u2014 QUESTION: ' + q.toUpperCase();
+    out.appendChild(rh);
+    var aa = arenaReply(ra, q), ab = arenaReply(rb, q);
+    lastBout.push({who: arenaName(ra), text: aa});
+    lastBout.push({who: arenaName(rb), text: ab});
+    var cols = document.createElement('div');
+    cols.className = 'vscols';
+    cols.innerHTML =
+      '<div class="vscol"><h4>' + escHtml(arenaName(ra)) + '</h4><div class="vsans">' + escHtml(aa) + '</div><button type="button" class="fbtn" data-say="0">\uD83D\uDD0A Read</button> <button type="button" class="fbtn" data-cp="0">\u29C9 Copy</button></div>' +
+      '<div class="vscol"><h4>' + escHtml(arenaName(rb)) + '</h4><div class="vsans">' + escHtml(ab) + '</div><button type="button" class="fbtn" data-say="1">\uD83D\uDD0A Read</button> <button type="button" class="fbtn" data-cp="1">\u29C9 Copy</button></div>';
+    out.appendChild(cols);
+    cols.addEventListener('click', function(e){
+      var t = e.target;
+      if (t.getAttribute('data-say') === '0') TTS.speak(aa, {});
+      else if (t.getAttribute('data-say') === '1') TTS.speak(ab, {});
+      else if (t.getAttribute('data-cp') === '0') copyText(aa, t);
+      else if (t.getAttribute('data-cp') === '1') copyText(ab, t);
+    });
+    out.scrollIntoView({behavior:'smooth', block:'nearest'});
+  };
+  document.getElementById('readBoutBtn').onclick = function(){
+    if (!lastBout.length){ out.innerHTML = '<div class="gnote">Run a chat bout or versus test first.</div>'; return; }
+    TTS.speak(lastBout.map(function(m){ return m.who + ': ' + m.text; }).join('\n'), {});
+  };
+}
 /* ============ PHONE BOOK: THE BOOK, FILE VIEW, LOOKUP, POPUPS ============ */
 function findFullAi(id){
   for (var i = 0; i < SIG_AIS.length; i++) if (SIG_AIS[i].id === id) return SIG_AIS[i];
@@ -1727,7 +2249,16 @@ function buildSisterStrip(){
 }
 /* ============ INIT ============ */
 (function init(){
+  buildGenomeLab();
+  buildArena();
   buildBook();
+  document.querySelectorAll('.wingnav a').forEach(function(a){
+    a.addEventListener('click', function(){
+      var id = a.getAttribute('href').slice(1);
+      var d = document.getElementById(id);
+      if (d && d.tagName === 'DETAILS') d.open = true;
+    });
+  });
   buildSisterStrip();
   wireLookup();
   buildMixLab();
