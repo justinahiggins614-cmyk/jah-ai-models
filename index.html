@@ -833,7 +833,7 @@ function renderCard(ai, mount, opts){
   if (ai.kind !== 'persona') h += '<a class="speclink" href="https://justinahiggins614-cmyk.github.io/signature-one-archive/">Signature Spec Catalog Pending Patents</a>';
   h += '</div>';
   h += '<div class="demo"><h4>WORKING DEMO</h4>' + ai.demoHTML + '</div>';
-  if (ai.kind === 'persona') h += '<div class="demo"><h4>TALK TO ' + escHtml(ai.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something…" aria-label="Talk"><button data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  h += '<div class="demo"><h4>TALK TO ' + escHtml(ai.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something…" aria-label="Talk"><button data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
   el.innerHTML = h;
   mount.appendChild(el);
   var reading = false;
@@ -849,6 +849,7 @@ function renderCard(ai, mount, opts){
   };
   if (DEMO[ai.id]) DEMO[ai.id](el);
   if (ai.kind === 'persona' && PERSONA_CHAT[ai.id]) PERSONA_CHAT[ai.id](el, ai);
+  else if (ai.kind !== 'persona') wireTalk(el, ai, systemReply);
   return el;
 }
 /* ============ PERSONA ARCHIVE ============ */
@@ -2002,6 +2003,35 @@ function forgeGenome(){
   say('a', genomeReply(g, 'hello'));
   out.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
+function systemReply(a, q){
+  var ql = String(q).toLowerCase();
+  if (/(who are you|your name|introduce)/.test(ql)) return 'I am ' + a.name + ' \u2014 ' + a.mentality;
+  if (/(abilit|what can you|your skills)/.test(ql)) return 'My abilities: ' + a.abilities.join('; ') + '.';
+  if (/(data|param|spec|detail)/.test(ql)) return 'My data: ' + a.params.map(function(p){ return p[0] + ' = ' + p[1]; }).join('; ') + '.';
+  if (/(demo|show me|run)/.test(ql)) return 'Run my working demo above \u2014 it is live inside this file.';
+  if (/(hello|hi|hey)\b/.test(ql)) return 'Hello. I am ' + a.name + ', ready to work. Ask about my abilities, my data, or run my demo.';
+  var ab = a.abilities[Math.floor(Math.random() * a.abilities.length)];
+  return 'As ' + a.name + ': ' + ab + '.';
+}
+function wireTalk(el, ai, replyFn){
+  var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input');
+  var auto = el.querySelector('.autovoice');
+  function say(who, text){
+    var d = document.createElement('div');
+    d.className = who; d.textContent = (who === 'u' ? 'You: ' : ai.name + ': ') + text;
+    log.appendChild(d); log.scrollTop = log.scrollHeight;
+  }
+  function send(){
+    var q = inp.value.trim(); if (!q) return; inp.value = '';
+    say('u', q);
+    var a = replyFn(ai, q);
+    say('a', a);
+    if (auto.checked) TTS.speak(a, {});
+  }
+  el.querySelector('[data-t=send]').onclick = send;
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+  setTimeout(function(){ say('a', replyFn(ai, 'hello')); }, 400);
+}
 /* ============ AI ARENA ============ */
 var forgedAIs = [];
 var lastBout = [];
@@ -2029,12 +2059,7 @@ function arenaRef(val){
   return {type: type, obj: ai};
 }
 function arenaName(ref){ return ref.obj.name; }
-function sigReply(a, q){
-  var ql = String(q).toLowerCase();
-  if (/(who are you|your name|introduce)/.test(ql)) return 'I am ' + a.name + ' \u2014 ' + a.mentality;
-  var ab = a.abilities[Math.floor(Math.random() * a.abilities.length)];
-  return 'As ' + a.name + ': ' + ab + '. ' + String(a.mentality).split('.')[0] + '.';
-}
+function sigReply(a, q){ return systemReply(a, q); }
 function arenaReply(ref, q){
   if (ref.type === 'persona') return personaReply(ref.obj, q);
   if (ref.type === 'dom') return domainReply(ref.obj, q);
