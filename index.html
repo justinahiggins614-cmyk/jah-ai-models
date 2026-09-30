@@ -45,7 +45,21 @@ h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--lin
 .thumbnav a:hover{background:var(--amber);color:#0a0f1e}
 .book{flex:1;min-width:0;background:#0b0f1c;border:1px solid var(--line);border-radius:10px;padding:6px 0}
 .bookletter{break-inside:avoid;padding:6px 0 2px}
-.bookletter-h{font-size:1.6em;font-weight:700;color:var(--amber);letter-spacing:.2em;padding:10px 18px 4px;border-bottom:2px solid var(--amber);margin:0 14px 4px;font-family:Arial,Helvetica,sans-serif}
+.bookletter-h{box-sizing:border-box;display:block;width:calc(100% - 28px);margin:0 14px 4px;padding:10px 40px 4px 18px;background:transparent;border:none;border-bottom:2px solid var(--amber);position:relative;cursor:pointer;text-align:left;font-size:1.6em;font-weight:700;color:var(--amber);letter-spacing:.2em;font-family:Arial,Helvetica,sans-serif}
+.bookletter-h:hover{background:#121830}
+.bookletter-h .pagefold{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-width:24px 24px 0 0;border-color:var(--amber) transparent transparent transparent}
+.bookletter.open .bookletter-h .pagefold{border-width:0 0 24px 24px;border-color:transparent transparent var(--amber) transparent}
+.bookpage{display:none;position:relative;overflow:hidden;margin:0 14px 10px;padding:6px 6px 2px;background:linear-gradient(180deg,#0e1424 0%,#0a0e1a 100%);border:1px solid var(--line);border-top:2px solid var(--amber);border-radius:0 0 10px 10px;box-shadow:inset 0 20px 28px -24px #ffc93c88,0 12px 26px -14px #000c}
+.bookpage:before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--amber) 0%,#5a4416 60%,transparent 100%)}
+.bookletter.open .bookpage{display:block;transform-origin:top center;animation:pageturn .45s ease-out}
+.bookletter.open.noanim .bookpage{animation:none}
+@keyframes pageturn{from{opacity:0;transform:perspective(900px) rotateX(-72deg)}to{opacity:1;transform:perspective(900px) rotateX(0)}}
+@media (prefers-reduced-motion:reduce){.bookletter.open .bookpage{animation:none}}
+.bookpage .bookentry{padding-left:22px;padding-right:12px}
+.pagectl{margin-left:auto;display:flex;gap:4px;align-items:center;white-space:nowrap}
+.pagectl button{background:none;border:none;color:var(--amber);font-size:.72em;letter-spacing:.12em;cursor:pointer;font-family:Arial,Helvetica,sans-serif;font-weight:700;padding:4px 6px}
+.pagectl button:hover{text-decoration:underline}
+.pagectl .pdot{color:var(--dim);font-size:.72em}
 .bookentry{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;width:100%;text-align:left;background:none;border:none;border-bottom:1px dotted #22304f;color:var(--txt);padding:8px 18px;cursor:pointer;font-family:Georgia,serif;font-size:.95em}
 .bookentry:hover{background:#141d33}
 .be-name{color:#fff;font-weight:700}
@@ -240,6 +254,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div class="booksearchrow">
 <input type="text" id="booksearch" placeholder="Search the book&hellip; name, stamp, or subject" aria-label="Search the telephone book" autocomplete="off">
 <span id="bookcount" class="bookcount"></span>
+<span class="pagectl" aria-label="Expand or collapse letter pages"><button type="button" id="expandall">EXPAND ALL</button><span class="pdot">&middot;</span><button type="button" id="collapseall">COLLAPSE ALL</button></span>
 </div>
 <div class="bookwrap">
 <div class="thumbnav" id="thumbnav" aria-label="Jump to letter"></div>
@@ -2844,6 +2859,19 @@ function closeFile(){
   document.body.style.overflow = '';
   try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
 }
+var BOOKPAGES_KEY = 'jahbook_pages';
+function bookOpenPages(){ try { var v = JSON.parse(localStorage.getItem(BOOKPAGES_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { return []; } }
+function bookSavePages(){ try { var a = []; document.querySelectorAll('#book .bookletter.open').forEach(function(s){ a.push(s.id.slice(3)); }); localStorage.setItem(BOOKPAGES_KEY, JSON.stringify(a)); } catch (e) {} }
+function setPageOpen(sec, open, animate, persist){
+  var h = sec.querySelector('.bookletter-h'); if (!h) return;
+  if (open){ sec.classList.add('open'); if (animate) sec.classList.remove('noanim'); else sec.classList.add('noanim'); h.setAttribute('aria-expanded', 'true'); }
+  else { sec.classList.remove('open', 'noanim'); h.setAttribute('aria-expanded', 'false'); }
+  if (persist !== false) bookSavePages();
+}
+function jumpToPage(sec){
+  setPageOpen(sec, true, true);
+  if (sec.scrollIntoView) sec.scrollIntoView();
+}
 function buildBook(){
   var book = document.getElementById('book');
   var entries = [];
@@ -2855,11 +2883,11 @@ function buildBook(){
   entries.forEach(function(e){
     var L = (e.name.replace(/^[^A-Za-z0-9]+/, '').charAt(0) || '#').toUpperCase();
     if (!/[A-Z0-9]/.test(L)) L = '#';
-    if (L !== cur){ if (cur) html += '</div>'; cur = L; letters.push(L); lcounts[L] = 0; html += '<div class="bookletter" id="bk-' + L + '"><div class="bookletter-h">' + L + ' <span class="lc-n" data-lc="' + L + '"></span></div>'; }
+    if (L !== cur){ if (cur) html += '</div></div>'; cur = L; letters.push(L); lcounts[L] = 0; html += '<div class="bookletter" id="bk-' + L + '"><button type="button" class="bookletter-h" data-letter="' + L + '" aria-expanded="false"><span>' + L + '</span> <span class="lc-n" data-lc="' + L + '"></span><span class="pagefold" aria-hidden="true"></span></button><div class="bookpage" data-page="' + L + '">'; }
     lcounts[L]++;
     html += '<button type="button" class="bookentry" data-id="' + e.id + '"><span class="be-name">' + escHtml(e.name) + '</span><span class="be-stamp">' + escHtml(e.stamp) + '</span><span class="be-wing">' + e.wing + '</span><span class="be-tag">' + escHtml(String(e.tag).slice(0, 110)) + '</span></button>';
   });
-  html += '</div>';
+  html += '</div></div>';
   book.innerHTML = html;
   document.getElementById('thumbnav').innerHTML = letters.map(function(L){ return '<a href="#bk-' + L + '">' + L + '<span class="tn-n">' + lcounts[L] + '</span></a>'; }).join('');
   letters.forEach(function(L){ var s = book.querySelector('[data-lc="' + L + '"]'); if (s) s.textContent = '\u00B7 ' + lcounts[L] + ' listings'; });
@@ -2871,11 +2899,30 @@ function buildBook(){
     pg.innerHTML = (prev ? '<a href="#' + prev.id + '">\u2190 ' + prev.id.slice(3) + '</a>' : '<span></span>') +
       '<span style="color:var(--dim)">' + sec.id.slice(3) + ' page</span>' +
       (next ? '<a href="#' + next.id + '">' + next.id.slice(3) + ' \u2192</a>' : '<span></span>');
-    sec.appendChild(pg);
+    sec.querySelector('.bookpage').appendChild(pg);
   });
+  var openPages = bookOpenPages();
+  secs.forEach(function(sec){ if (openPages.indexOf(sec.id.slice(3)) !== -1) setPageOpen(sec, true, false, false); });
   book.addEventListener('click', function(ev){
+    var h = ev.target.closest ? ev.target.closest('.bookletter-h') : null;
+    if (h){ var sec = h.closest('.bookletter'); setPageOpen(sec, !sec.classList.contains('open'), true); return; }
+    var pa = ev.target.closest ? ev.target.closest('.letterpager a') : null;
+    if (pa){ var t = document.getElementById(pa.getAttribute('href').slice(1)); if (t){ ev.preventDefault(); jumpToPage(t); } return; }
     var b = ev.target.closest ? ev.target.closest('.bookentry') : null;
     if (b) openFile(b.getAttribute('data-id'));
+  });
+  document.getElementById('thumbnav').addEventListener('click', function(ev){
+    var a = ev.target.closest ? ev.target.closest('a') : null; if (!a) return;
+    var sec = document.getElementById(a.getAttribute('href').slice(1)); if (!sec) return;
+    ev.preventDefault(); jumpToPage(sec);
+  });
+  document.getElementById('expandall').addEventListener('click', function(){
+    document.querySelectorAll('#book .bookletter').forEach(function(s){ if (s.style.display !== 'none') setPageOpen(s, true, false, false); });
+    bookSavePages();
+  });
+  document.getElementById('collapseall').addEventListener('click', function(){
+    document.querySelectorAll('#book .bookletter').forEach(function(s){ setPageOpen(s, false, false, false); });
+    bookSavePages();
   });
 }
 function wireBookSearch(){
@@ -2894,6 +2941,8 @@ function wireBookSearch(){
       var any = false;
       sec.querySelectorAll('.bookentry').forEach(function(b){ if (b.style.display !== 'none') any = true; });
       sec.style.display = any ? '' : 'none';
+      if (q) setPageOpen(sec, any, false, false);
+      else setPageOpen(sec, bookOpenPages().indexOf(sec.id.slice(3)) !== -1, false, false);
     });
     cnt.textContent = shown + ' of ' + total + ' listings';
   }
