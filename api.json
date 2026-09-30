@@ -1,0 +1,20 @@
+{
+  "site": "The Signature AI Telephone Book",
+  "site_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/",
+  "creator": "Justin Addam Higgins (JAH)",
+  "description": "Home of every AI: Manon's signature AI systems, the persona archive (fan-style simulations), and domain AIs for every need \u2014 each with dossier, working demo, dialog, and downloadable program.",
+  "for_bots": "Machine-readable manifest. Humans use the site above; bots, scrapers, and AI assistants should use the endpoints below \u2014 plain JSON/JSONL over HTTPS, no JavaScript needed.",
+  "records_approx": 266,
+  "records_as_of": "2026-09-29",
+  "note": "Counts grow on automated schedules; re-read this file for the latest shape of the data.",
+  "endpoints": [],
+  "deep_links": [
+    {
+      "pattern": "#<ai-id>",
+      "desc": "Anchor link to an AI's file on the page."
+    }
+  ],
+  "raw_github_base": "https://raw.githubusercontent.com/justinahiggins614-cmyk/jah-ai-models/main/",
+  "raw_example": "https://raw.githubusercontent.com/justinahiggins614-cmyk/jah-ai-models/main/index.html",
+  "sitemap": "https://justinahiggins614-cmyk.github.io/jah-ai-models/sitemap.xml"
+}
