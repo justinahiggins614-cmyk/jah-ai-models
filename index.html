@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Signature AI Telephone Book — home of every AI</title>
 <style>
-:root{--bg:#070b14;--panel:#0d1424;--panel2:#111a30;--line:#1e2c4d;--txt:#d7e0f2;--dim:#8b98b8;--gold:#e8c766;--acc:#5aa2ff;--grn:#5aff8a;--red:#ff5a5a}
+:root{--bg:#070b14;--panel:#0d1424;--panel2:#111a30;--line:#1e2c4d;--txt:#d7e0f2;--dim:#8b98b8;--gold:#e8c766;--amber:#ffc93c;--amber2:#ffdf7e;--acc:#5aa2ff;--grn:#5aff8a;--red:#ff5a5a}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--txt);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
 .jahnet{background:#0a0f1e;color:#9aa4b2;font-size:.76em;padding:7px 10px;text-align:center;line-height:2;letter-spacing:.02em;border-bottom:1px solid var(--line)}
@@ -14,15 +14,64 @@ body{margin:0;background:var(--bg);color:var(--txt);font-family:Georgia,'Times N
 .jahnet a{color:#9fc2ff;text-decoration:none;margin:0 7px;white-space:nowrap}
 .jahnet a:hover{text-decoration:underline}
 .jahnet a.cur{color:var(--gold);font-weight:700}
-.hero{text-align:center;padding:44px 16px 26px;background:radial-gradient(ellipse at 50% 0%,#14224a 0%,var(--bg) 70%)}
-.hero h1{margin:.2em 0 .1em;font-size:2.1em;letter-spacing:.12em;color:var(--gold)}
-.hero p{color:var(--dim);max-width:640px;margin:.4em auto}
+.hero{text-align:center;padding:40px 16px 22px;background:radial-gradient(ellipse at 50% 0%,#2a2008 0%,var(--bg) 70%);border-bottom:3px double var(--amber)}
+.yptag{display:inline-block;color:#0a0f1e;background:var(--amber);font-weight:700;letter-spacing:.3em;font-size:.78em;padding:5px 18px;border-radius:4px;margin-bottom:10px;font-family:Arial,Helvetica,sans-serif}
+.hero h1{margin:.2em 0 .1em;font-size:2.1em;letter-spacing:.1em;color:var(--amber2);text-shadow:0 0 22px #7a5a10}
+.hero p{color:var(--dim);max-width:660px;margin:.4em auto}
+.booksearch{position:relative;max-width:620px;margin:20px auto 6px}
+#lookup{width:100%;background:#0a0d18;border:2px solid var(--amber);color:var(--txt);padding:14px 18px 14px 48px;border-radius:10px;font-size:1.05em;font-family:Georgia,serif;box-shadow:0 0 18px #ffc93c33}
+#lookup::placeholder{color:#6b7694}
+.booksearch::before{content:"\260E";position:absolute;left:16px;top:11px;font-size:1.3em;color:var(--amber)}
+#lookupres{display:none;position:absolute;left:0;right:0;top:105%;background:#0c1322;border:1px solid var(--amber);border-radius:10px;z-index:60;max-height:340px;overflow:auto;text-align:left;box-shadow:0 12px 40px #000c}
+.lr{display:flex;flex-direction:column;gap:2px;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--line);color:var(--txt);padding:10px 14px;cursor:pointer;font-family:Georgia,serif}
+.lr:last-child{border-bottom:none}
+.lr:hover,.lr:focus{background:#16203a}
+.lr b{color:var(--amber2);font-size:1em}
+.lr span{font-family:monospace;font-size:.75em;color:var(--acc)}
+.lr i{font-style:normal;font-size:.8em;color:var(--dim)}
+.lr.none{cursor:default;color:var(--dim);font-style:italic}
+.bookstats{color:var(--dim);font-size:.82em;letter-spacing:.14em;margin-top:12px;font-family:Arial,Helvetica,sans-serif}
+.bookstats b{color:var(--amber)}
 .wingnav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:14px}
 .wingnav a{background:var(--panel);border:1px solid var(--line);color:var(--txt);padding:10px 18px;border-radius:8px;text-decoration:none;font-size:.95em}
-.wingnav a:hover{border-color:var(--gold)}
+.wingnav a:hover{border-color:var(--amber);color:var(--amber2)}
 section{max-width:1180px;margin:0 auto;padding:10px 16px}
-h2.wing{letter-spacing:.2em;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:8px;font-size:1.25em}
+h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--line);padding-bottom:8px;font-size:1.25em}
 .wingdesc{color:var(--dim);max-width:760px}
+/* ---- THE BOOK ---- */
+.bookwrap{display:flex;gap:14px;align-items:flex-start;margin-top:12px}
+.thumbnav{position:sticky;top:10px;display:flex;flex-direction:column;gap:2px;background:#0c101c;border:1px solid var(--amber);border-radius:10px;padding:8px 4px;z-index:5}
+.thumbnav a{color:var(--amber);text-decoration:none;font-family:monospace;font-weight:700;font-size:.85em;padding:3px 8px;border-radius:4px;text-align:center}
+.thumbnav a:hover{background:var(--amber);color:#0a0f1e}
+.book{flex:1;min-width:0;background:#0b0f1c;border:1px solid var(--line);border-radius:10px;padding:6px 0}
+.bookletter{break-inside:avoid;padding:6px 0 2px}
+.bookletter-h{font-size:1.6em;font-weight:700;color:var(--amber);letter-spacing:.2em;padding:10px 18px 4px;border-bottom:2px solid var(--amber);margin:0 14px 4px;font-family:Arial,Helvetica,sans-serif}
+.bookentry{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;width:100%;text-align:left;background:none;border:none;border-bottom:1px dotted #22304f;color:var(--txt);padding:8px 18px;cursor:pointer;font-family:Georgia,serif;font-size:.95em}
+.bookentry:hover{background:#141d33}
+.be-name{color:#fff;font-weight:700}
+.be-stamp{font-family:monospace;font-size:.72em;color:var(--acc);background:#0a1226;padding:2px 7px;border-radius:4px}
+.be-tag{flex-basis:100%;font-size:.82em;color:var(--dim);font-style:italic}
+.be-wing{margin-left:auto;font-size:.68em;font-weight:700;letter-spacing:.1em;color:#0a0f1e;background:var(--gold);padding:2px 9px;border-radius:12px;font-family:Arial,Helvetica,sans-serif}
+/* ---- SISTER-SITE LINES ---- */
+.sisterstrip{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.sisterbtn{background:var(--panel);border:1px solid var(--amber);color:var(--txt);border-radius:10px;padding:12px 16px;cursor:pointer;display:flex;flex-direction:column;gap:3px;align-items:flex-start;min-width:200px;flex:1}
+.sisterbtn:hover{background:#171307;box-shadow:0 0 14px #ffc93c44}
+.sb-name{color:var(--amber2);font-weight:700;font-size:1.02em}
+.sb-tag{font-size:.78em;color:var(--dim);letter-spacing:.08em}
+/* ---- FILE VIEW OVERLAY ---- */
+#fileview{display:none;position:fixed;inset:0;background:#04060cf5;z-index:100;overflow:auto;padding:0}
+.fv-head{position:sticky;top:0;background:#0a0f1ecc;border-bottom:2px solid var(--amber);padding:10px 16px;display:flex;align-items:center;gap:12px;z-index:2;backdrop-filter:blur(4px)}
+.fv-close{background:var(--amber);border:none;color:#0a0f1e;font-weight:700;padding:9px 18px;border-radius:8px;cursor:pointer;font-size:.95em;font-family:Arial,Helvetica,sans-serif}
+.fv-close:hover{background:var(--amber2)}
+.fv-title{color:var(--amber2);letter-spacing:.14em;font-size:.85em;font-family:Arial,Helvetica,sans-serif}
+#fvbody{max-width:860px;margin:0 auto;padding:18px 16px 60px}
+/* ---- POPUP ---- */
+#popup{display:none;position:fixed;inset:0;background:#04060cd9;z-index:120;align-items:center;justify-content:center;padding:18px}
+.popbox{background:#0d1322;border:2px solid var(--amber);border-radius:14px;max-width:520px;width:100%;padding:22px;position:relative;box-shadow:0 0 40px #ffc93c33;max-height:86vh;overflow:auto}
+.popclose{position:absolute;top:8px;right:12px;background:none;border:none;color:var(--amber);font-size:1.4em;cursor:pointer}
+.pophead{margin-bottom:6px}
+.popbox h3{margin:.2em 0;color:var(--amber2);font-size:1.4em}
+/* ---- kept from original ---- */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;margin-top:14px}
 .aifile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px}
 .aifile.persona{background:#0e1220;border-color:#3a2c14}
@@ -63,52 +112,55 @@ h2.wing{letter-spacing:.2em;color:var(--gold);border-bottom:1px solid var(--line
 #ttsbar{position:fixed;bottom:12px;right:12px;background:#0d1424ee;border:1px solid var(--gold);border-radius:10px;padding:8px 12px;display:none;gap:8px;align-items:center;z-index:99;font-size:.85em}
 #ttsbar button{background:#1a2c55;border:1px solid #2c4a8a;color:#fff;padding:5px 10px;border-radius:6px;cursor:pointer}
 footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
-@media(max-width:600px){.grid{grid-template-columns:1fr}.hero h1{font-size:1.5em}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.hero h1{font-size:1.4em}.thumbnav{padding:6px 2px}.thumbnav a{font-size:.72em;padding:2px 5px}.bookentry{font-size:.88em}.yptag{letter-spacing:.18em}}
 </style>
 </head>
 <body>
 <div class="jahnet"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/">Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Signature Universal Paradox Immune Calculator</a><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">The Signature AI Telephone Book</a></div>
 <header class="hero">
-<h1>THE SIGNATURE AI TELEPHONE BOOK</h1>
-<p><b>Every AI lives here as a file.</b> Look up any mind — system AIs, personas, and a Signature AI for every need in life. Each file carries its mentality, its abilities, its data — and a working demo you can run, talk to, and download. <i>The JAH AI Models Archive.</i> Boundless more to come.</p>
-<p style="font-size:.85em">Signature-made by Justin Addam Higgins · deterministic systems · honest simulations</p>
+<div class="yptag">&#9733; YELLOW PAGES &middot; CYBER EDITION &#9733;</div>
+<h1>&#9742; THE SIGNATURE AI TELEPHONE BOOK</h1>
+<p><b>Every AI lives here as a file.</b> Ring up any mind — system AIs, personas, and a Signature AI for every need in life. Each file carries its mentality, its abilities, its data — and a working demo you can run, talk to, and download. <i>The JAH AI Models Archive.</i> Boundless more to come.</p>
+<div class="booksearch">
+<input type="text" id="lookup" placeholder="Name, ID number, or describe what you need&hellip;" aria-label="Look up an AI by name, ID, or description" autocomplete="off">
+<div id="lookupres"></div>
+</div>
+<div class="bookstats"><b>260</b> AI FILES ON RECORD &middot; <b>6</b> SISTER-SITE LINES &middot; DIRECTORY ASSISTANCE OPEN</div>
+<p style="font-size:.85em">Signature-made by Justin Addam Higgins &middot; deterministic systems &middot; honest simulations</p>
 </header>
 <nav class="wingnav">
-<a href="#sigwing">Signature AI Systems</a>
-<a href="#personawing">Persona Archive</a>
-<a href="#domainwing">Every Need</a><a href="#directory">Telephone Directory</a><a href="#mixlab">Mix Lab</a>
-<a href="#incoming">Incoming Transmissions</a>
+<a href="#thebook">&#128214; The Book</a><a href="#sisterlines">Sister-Site Lines</a><a href="#mixlab">Mix Lab</a><a href="#incoming">Incoming Transmissions</a>
 </nav>
-<section id="sigwing">
-<h2 class="wing">SIGNATURE AI SYSTEMS</h2>
-<p class="wingdesc">The ten core minds of the JAH system, plus the Hybrid Fusion that binds them. Each is a file: read it aloud, copy it, download its working Python implementation.</p>
-<div class="grid" id="siggrid"></div>
+<section id="thebook">
+<h2 class="wing">THE BOOK &mdash; EVERY AI, A&ndash;Z</h2>
+<p class="wingdesc">The whole archive as one telephone book. Tap any listing to open the full file &mdash; dossier, working demo, dialog, read-aloud, copy, download. Use the A&ndash;Z thumb index to jump.</p>
+<div class="bookwrap">
+<div class="thumbnav" id="thumbnav" aria-label="Jump to letter"></div>
+<div class="book" id="book"></div>
+</div>
 </section>
-<section id="personawing">
-<h2 class="wing">PERSONA ARCHIVE</h2>
-<p class="wingdesc">Pop-culture AI minds, simulated as best as possible — their mentalities, their voices, their abilities. Talk to each one; every reply is read aloud in its own voice.</p>
-<div class="grid" id="personagrid"></div>
-</section>
-<section id="domainwing">
-<h2 class="wing">SIGNATURE DOMAIN AIs — EVERY NEED</h2>
-<p class="wingdesc">A Signature-made AI for every walk of life — every need, every domain. Each is a full file: dossier, working demo, dialog, read-aloud, copy, download. The archive grows boundlessly; new files plug in here.</p>
-<div class="grid" id="domaingrid"></div>
-</section>
-<section id="directory">
-<h2 class="wing">TELEPHONE DIRECTORY</h2>
-<p class="wingdesc">Every AI in the book, A–Z. Search or tap a letter — every file on this site, plus the AI families living on our sister sites.</p>
-<div class="mixbox"><input type="text" id="dirsearch" placeholder="Search every AI…" style="width:100%;background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:9px 12px;border-radius:6px;font-size:1em" aria-label="Search directory"><div id="dirletters" style="margin:10px 0"></div><div id="dirlist"></div></div>
+<section id="sisterlines">
+<h2 class="wing">SISTER-SITE LINES</h2>
+<p class="wingdesc">AI families living on our other sites &mdash; tap any line for a preview card, then visit to talk to them.</p>
+<div class="sisterstrip" id="sisterstrip"></div>
 </section>
 <section id="mixlab">
 <h2 class="wing">MIX LAB</h2>
-<p class="wingdesc">Pick any two AIs and forge a hybrid — blended name, merged mentality, a working demo of both minds thinking together, downloadable as Python.</p>
+<p class="wingdesc">Pick any two AIs and forge a hybrid &mdash; blended name, merged mentality, a working demo of both minds thinking together, downloadable as Python.</p>
 <div class="mixbox" id="mixbox"></div>
 </section>
 <section id="incoming">
 <h2 class="wing">INCOMING TRANSMISSIONS</h2>
-<p class="wingdesc">The archive grows. New AI files plug in behind this same page — boundless more. Every file ever added keeps its demo, its voice, and its download.</p>
+<p class="wingdesc">The archive grows. New AI files plug in behind this same page &mdash; boundless more. Every file ever added keeps its demo, its voice, and its download.</p>
 <div class="mixbox"><b>Next files on the way:</b> Quantum Annealer mind, Swarm-Queen coordinator, Dream-Logic engine, Time-Series oracle, and persona files voted by visitors. <span style="color:var(--dim)">(This section updates as the archive expands.)</span></div>
 </section>
+<div id="fileview" role="dialog" aria-modal="true" aria-label="AI file">
+<div class="fv-head"><button class="fv-close" id="fvclose" type="button">&larr; Back to the book</button><span class="fv-title">AI FILE &mdash; SIGNATURE ARCHIVE</span></div>
+<div id="fvbody"></div>
+</div>
+<div id="popup" role="dialog" aria-modal="true" aria-label="Preview">
+<div class="popbox"><button class="popclose" id="popclose" type="button" aria-label="Close">&times;</button><div id="popbody"></div></div>
+</div>
 <div id="ttsbar"><span>🔊 Reading</span><button id="ttsstop" type="button">Stop</button><label>Speed <input id="ttsspeed" type="range" min="0.7" max="1.6" step="0.1" value="1" style="width:90px"></label></div>
 <div class="jahnet t2"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/">Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Signature Universal Paradox Immune Calculator</a><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">The Signature AI Telephone Book</a></div>
 <footer class="note">THE JAH AI MODELS ARCHIVE · Signature-made files by Justin Addam Higgins · persona simulations are fan-style interpretations, not affiliated with any rights holder</footer>
@@ -1545,19 +1597,153 @@ function buildMixLab(){
     out.scrollIntoView({behavior: 'smooth'});
   };
 }
+/* ============ PHONE BOOK: THE BOOK, FILE VIEW, LOOKUP, POPUPS ============ */
+function findFullAi(id){
+  for (var i = 0; i < SIG_AIS.length; i++) if (SIG_AIS[i].id === id) return SIG_AIS[i];
+  for (var j = 0; j < PERSONAS.length; j++) if (PERSONAS[j].id === id) return PERSONAS[j];
+  var ks = Object.keys(domIndex || {});
+  for (var k = 0; k < ks.length; k++) if (domIndex[ks[k]].id === id) return domIndex[ks[k]];
+  return null;
+}
+function renderDomainFile(d, mount){
+  var el = document.createElement('div');
+  el.id = 'file-' + d.id;
+  var h = '<div class="filehead"><span class="stamp">' + escHtml(d.stamp) + '</span><span class="badge">SIGNATURE-MADE</span></div>';
+  h += '<h3>' + escHtml(d.name) + '</h3>';
+  h += '<p class="mentality">' + escHtml(d.mentality) + '</p>';
+  h += '<ul class="abilities">' + d.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
+  h += '<table class="params">' + domainParams(d).map(function(p){ return '<tr><td>' + escHtml(p[0]) + '</td><td>' + escHtml(p[1]) + '</td></tr>'; }).join('') + '</table>';
+  if (d.pro) h += '<div class="disclaimer">AI assistant, not a licensed professional \u2014 for information and organization; see a real pro for decisions.</div>';
+  h += '<div class="filetools"><button class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button class="fbtn" data-t="copy">\u29C9 Copy</button><button class="fbtn" data-t="dl">\u2913 Download .py</button></div>';
+  h += '<div class="demo"><h4>WORKING DEMO</h4>' + demoTemplate(d) + '</div>';
+  h += '<div class="demo"><h4>TALK TO YOUR ' + escHtml(d.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk"><button data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  el.innerHTML = h;
+  mount.appendChild(el);
+  wireDomainDemo(el, d);
+  var reading = false;
+  el.querySelector('[data-t=read]').onclick = function(e){
+    if (reading){ TTS.stop(); reading = false; e.target.innerHTML = '\uD83D\uDD0A Read aloud'; return; }
+    reading = true; e.target.innerHTML = '\u23F9 Stop'; TTS.speak(domainFileText(d), {});
+  };
+  el.querySelector('[data-t=copy]').onclick = function(e){ copyText(domainFileText(d), e.target); };
+  el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(d.id + '.py', domainPy(d), 'text/x-python'); };
+  var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input'), auto = el.querySelector('.autovoice');
+  function say(who, text){
+    var dv = document.createElement('div'); dv.className = who;
+    dv.textContent = (who === 'u' ? 'You: ' : d.name + ': ') + text;
+    log.appendChild(dv); log.scrollTop = log.scrollHeight;
+  }
+  function send(){
+    var q = inp.value.trim(); if (!q) return; inp.value = '';
+    say('u', q); var a = domainReply(d, q); say('a', a);
+    if (auto.checked) TTS.speak(a, {});
+  }
+  el.querySelector('[data-t=send]').onclick = send;
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+  return el;
+}
+function openFile(id){
+  var ai = findFullAi(id);
+  if (!ai) return;
+  var fv = document.getElementById('fileview'), body = document.getElementById('fvbody');
+  body.innerHTML = '';
+  if (ai.domain) renderDomainFile(ai, body); else renderCard(ai, body);
+  fv.style.display = 'block';
+  fv.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+  try { history.replaceState(null, '', '#file-' + id); } catch (e) {}
+}
+function closeFile(){
+  document.getElementById('fileview').style.display = 'none';
+  document.getElementById('fvbody').innerHTML = '';
+  document.body.style.overflow = '';
+  try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+}
+function buildBook(){
+  var book = document.getElementById('book');
+  var entries = [];
+  SIG_AIS.forEach(function(a){ entries.push({id: a.id, name: a.name, stamp: a.stamp, tag: a.mentality, wing: 'SYSTEM'}); });
+  PERSONAS.forEach(function(a){ entries.push({id: a.id, name: a.name, stamp: a.stamp, tag: a.mentality, wing: 'PERSONA'}); });
+  Object.keys(domIndex).forEach(function(k){ var d = domIndex[k]; entries.push({id: d.id, name: d.name, stamp: d.stamp, tag: d.domain, wing: 'EVERY NEED'}); });
+  entries.sort(function(a, b){ var x = a.name.toLowerCase(), y = b.name.toLowerCase(); return x < y ? -1 : (x > y ? 1 : 0); });
+  var html = '', cur = '', letters = [];
+  entries.forEach(function(e){
+    var L = (e.name.replace(/^[^A-Za-z0-9]+/, '').charAt(0) || '#').toUpperCase();
+    if (!/[A-Z0-9]/.test(L)) L = '#';
+    if (L !== cur){ if (cur) html += '</div>'; cur = L; letters.push(L); html += '<div class="bookletter" id="bk-' + L + '"><div class="bookletter-h">' + L + '</div>'; }
+    html += '<button type="button" class="bookentry" data-id="' + e.id + '"><span class="be-name">' + escHtml(e.name) + '</span><span class="be-stamp">' + escHtml(e.stamp) + '</span><span class="be-wing">' + e.wing + '</span><span class="be-tag">' + escHtml(String(e.tag).slice(0, 110)) + '</span></button>';
+  });
+  html += '</div>';
+  book.innerHTML = html;
+  document.getElementById('thumbnav').innerHTML = letters.map(function(L){ return '<a href="#bk-' + L + '">' + L + '</a>'; }).join('');
+  book.addEventListener('click', function(ev){
+    var b = ev.target.closest ? ev.target.closest('.bookentry') : null;
+    if (b) openFile(b.getAttribute('data-id'));
+  });
+}
+function wireLookup(){
+  var inp = document.getElementById('lookup'), res = document.getElementById('lookupres'), t = null;
+  var all = [];
+  SIG_AIS.forEach(function(a){ all.push({id: a.id, name: a.name, stamp: a.stamp, tag: a.mentality, hay: (a.name + ' ' + a.id + ' ' + a.stamp + ' ' + a.mentality + ' ' + (a.abilities || []).join(' ')).toLowerCase()}); });
+  PERSONAS.forEach(function(a){ all.push({id: a.id, name: a.name, stamp: a.stamp, tag: a.mentality, hay: (a.name + ' ' + a.id + ' ' + a.stamp + ' ' + a.mentality + ' ' + (a.abilities || []).join(' ')).toLowerCase()}); });
+  Object.keys(domIndex).forEach(function(k){ var d = domIndex[k]; all.push({id: d.id, name: d.name, stamp: d.stamp, tag: d.domain, hay: (d.name + ' ' + d.id + ' ' + d.stamp + ' ' + d.domain + ' ' + d.mentality + ' ' + (d.abilities || []).join(' ')).toLowerCase()}); });
+  function search(q){
+    q = q.toLowerCase().trim();
+    if (q.length < 2){ res.style.display = 'none'; res.innerHTML = ''; return; }
+    var out = [];
+    for (var i = 0; i < all.length && out.length < 10; i++) if (all[i].hay.indexOf(q) >= 0) out.push(all[i]);
+    res.innerHTML = out.length
+      ? out.map(function(e){ return '<button type="button" class="lr" data-id="' + e.id + '"><b>' + escHtml(e.name) + '</b><span>' + escHtml(e.stamp) + '</span><i>' + escHtml(String(e.tag).slice(0, 90)) + '</i></button>'; }).join('')
+      : '<div class="lr none">No listing found \u2014 try a name, an ID like JAH-AI-SIG-001, or a word like \u201cdivorce\u201d.</div>';
+    res.style.display = 'block';
+  }
+  inp.addEventListener('input', function(){ clearTimeout(t); t = setTimeout(function(){ search(inp.value); }, 160); });
+  inp.addEventListener('keydown', function(e){
+    if (e.key === 'Enter'){ var f = res.querySelector('.lr[data-id]'); if (f){ res.style.display = 'none'; inp.value = ''; openFile(f.getAttribute('data-id')); } }
+    if (e.key === 'Escape'){ res.style.display = 'none'; }
+  });
+  res.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.lr[data-id]') : null;
+    if (b){ res.style.display = 'none'; inp.value = ''; openFile(b.getAttribute('data-id')); }
+  });
+  document.addEventListener('click', function(e){ if (!e.target.closest || !e.target.closest('.booksearch')) res.style.display = 'none'; });
+}
+function openPopup(html){
+  document.getElementById('popbody').innerHTML = html;
+  document.getElementById('popup').style.display = 'flex';
+}
+function closePopup(){ document.getElementById('popup').style.display = 'none'; }
+function buildSisterStrip(){
+  var strip = document.getElementById('sisterstrip');
+  strip.innerHTML = DIR_EXTRA.map(function(x, i){
+    return '<button type="button" class="sisterbtn" data-i="' + i + '"><span class="sb-name">' + escHtml(x[0]) + '</span><span class="sb-tag">' + escHtml(x[3]) + ' \u2014 tap for preview</span></button>';
+  }).join('');
+  strip.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.sisterbtn') : null;
+    if (!b) return;
+    var x = DIR_EXTRA[+b.getAttribute('data-i')];
+    openPopup('<div class="pophead"><span class="stamp">SISTER-SITE LINE</span></div><h3>' + escHtml(x[0]) + '</h3><p class="mentality">' + escHtml(x[1]) + '</p><p style="font-size:.9em">This line lives on its home site \u2014 every record there answers in this voice. Tap through to ring it up.</p><p><a class="fbtn" style="display:inline-block;text-decoration:none" href="' + escHtml(x[2]) + '">Visit ' + escHtml(x[0]) + ' \u2192</a></p>');
+  });
+}
 /* ============ INIT ============ */
 (function init(){
-  var sg = document.getElementById('siggrid');
-  SIG_AIS.forEach(function(ai){ renderCard(ai, sg); });
-  var pg = document.getElementById('personagrid');
-  PERSONAS.forEach(function(ai){ renderCard(ai, pg); });
-  renderDomainRows();
-  buildDirectory();
+  buildBook();
+  buildSisterStrip();
+  wireLookup();
   buildMixLab();
+  document.getElementById('fvclose').onclick = closeFile;
+  document.getElementById('popclose').onclick = closePopup;
+  document.getElementById('popup').addEventListener('click', function(e){ if (e.target === this) closePopup(); });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){
+      if (document.getElementById('popup').style.display === 'flex') closePopup();
+      else if (document.getElementById('fileview').style.display === 'block') closeFile();
+    }
+  });
   var hash = location.hash;
   if (hash && hash.indexOf('#file-') === 0){
-    var t = document.getElementById(hash.slice(1));
-    if (t) setTimeout(function(){ t.scrollIntoView(); }, 600);
+    var id = hash.slice(6);
+    if (findFullAi(id)) setTimeout(function(){ openFile(id); }, 400);
   }
 })();
 </script>
