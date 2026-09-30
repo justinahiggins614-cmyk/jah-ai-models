@@ -174,6 +174,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div class="yptag">&#9733; YELLOW PAGES &middot; CYBER EDITION &#9733;</div>
 <h1>&#9742; THE SIGNATURE AI TELEPHONE BOOK</h1>
 <p><b>Every AI lives here as a file.</b> Ring up any mind — system AIs, personas, and a Signature AI for every need in life. Each file carries its mentality, its abilities, its data — and a working demo you can run, talk to, and download. <i>The JAH AI Models Archive.</i> Boundless more to come.</p>
+<div class="startbox" style="max-width:1180px;margin:10px auto 0;padding:10px 16px;background:var(--panel);border:1px solid var(--amber);border-radius:10px;font-size:.9em;text-align:left"><b style="color:var(--amber)">NEW HERE? 3 QUICK STEPS:</b> &#9312; Search above or browse the Book below &mdash; tap any AI to open its file. &#9313; Talk to it, hear it read aloud, copy it or download it. &#9314; Make your own: the <a href="#genomelab">Genome Lab</a> builds an AI from gene blocks, the <a href="#mixlab">Mix Lab</a> fuses two AIs into one.</div>
 <div class="booksearch">
 <input type="text" id="lookup" placeholder="Name, ID number, or describe what you need&hellip;" aria-label="Look up an AI by name, ID, or description" autocomplete="off">
 <div id="lookupres"></div>
@@ -202,7 +203,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <details class="dropwin" id="genomelab">
 <summary><span class="dw-t">AI GENOME LAB — FORGE ANY AI</span><span class="dw-h">30 gene blocks · presets · personality · forge any AI you can imagine</span></summary>
 <div class="dw-body">
-<p class="wingdesc">The genome of AI, built as a <b>mirror of the human genome</b>: 10 core functions, each one mirroring a human system &mdash; senses, prefrontal cortex, motor system, memory, conscience, immune system, metabolism, neuroplasticity, face and voice, language. Every function comes in 3 layers &mdash; <b>Foundational (F)</b>, <b>Axiom-Infused (A)</b>, <b>Apex (P)</b> &mdash; for 30 gene blocks total. Drop in any number of blocks, in any order, set the personality, and forge a brand-new AI. Converted to Signature math: every genome gets a deterministic signature hash, a power score, and a signature vector.</p>
+<p class="wingdesc"><b>Make your own AI in 4 easy steps</b> &mdash; just follow the numbered steps below. Every AI is built from 10 jobs that mirror the systems of the human body: sensing, thinking, acting, memory, conscience, self-repair, energy, learning, voice, and language. Each job comes in 3 strengths &mdash; <b>Foundational (F)</b>, <b>Axiom-Infused (A)</b>, <b>Apex (P)</b> &mdash; 30 gene blocks in all. Pick a preset or tap blocks yourself, give it a name and personality, press <b>&#9874; FORGE THIS AI</b> &mdash; then talk to your new AI in the chat box that appears underneath. Every forged AI gets its own signature hash, power score, and signature vector.</p>
 <div class="mixbox">
 <h3 style="color:var(--amber);letter-spacing:.1em;font-size:.95em">1 &middot; CHEATER'S GUIDE PRESETS</h3>
 <p class="wingdesc" style="font-size:.85em">One tap loads a full 10-gene archetype from the JAH-UAIG cheater's guide &mdash; or start from any telephone-book AI and build on it.</p>
@@ -1656,7 +1657,7 @@ function buildMixLab(){
   var allPer = PERSONAS.map(function(a){ return {id: a.id, name: a.name}; });
   var allDom = Object.keys(domIndex).map(function(k){ return {id: domIndex[k].id, name: domIndex[k].name}; });
   var all = allSig.concat(allPer).concat(allDom);
-  box.innerHTML = '<p>Choose two minds to fuse:</p>' +
+  box.innerHTML = '<p><b>3 easy steps:</b> 1) pick two AIs below &nbsp;2) press <b>\u2697 Fuse them</b> &nbsp;3) talk to your new hybrid in the chat that appears.</p>' +
     '<select id="mix-a">' + opts(all) + '</select> <b style="color:var(--gold)">+</b> <select id="mix-b">' + opts(all.slice().reverse()) + '</select> ' +
     '<button class="fbtn" id="mix-go">⚗ Fuse them</button><div id="mix-out" style="margin-top:12px"></div>';
   function findAi(id){
@@ -1682,12 +1683,22 @@ function buildMixLab(){
     out.innerHTML = '<div class="aifile"><div class="filehead"><span class="stamp">JAH-AI-MIX-' + String(hybrids.length).padStart(3, '0') + '</span><span class="badge">HYBRID</span></div>' +
       '<h3>' + escHtml(hy.name) + '</h3><p class="mentality">' + escHtml(hy.mentality) + '</p>' +
       '<ul class="abilities">' + hy.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>' +
-      '<div class="demo"><h4>HYBRID MIND — ASK IT</h4><input type="text" id="hy-q" placeholder="Ask the hybrid…" style="width:100%"><button class="fbtn" id="hy-ask">Ask</button><span class="out" id="hy-o"></span></div>' +
+      '<div class="demo"><h4>HYBRID MIND — TALK TO IT</h4><div class="chatlog" id="hy-log"></div><div class="chatrow"><input type="text" id="hy-q" placeholder="Say something…" aria-label="Talk to the hybrid"><button class="fbtn" id="hy-ask">Send</button></div><label class="mute"><input type="checkbox" id="hy-auto" checked> Read replies aloud</label></div>' +
       '<div class="filetools"><button class="fbtn" id="hy-read">🔊 Read aloud</button><button class="fbtn" id="hy-dl">⤓ Download .py</button></div></div>';
+    hy._hist = [];
     function hybridReply(q){
-      var ra = A.reply ? A.reply(q) : (A.name + ' processes: rules consulted, verdict recorded.');
-      var rb = B.reply ? B.reply(q) : (B.name + ' processes: patterns weighed, intuition offered.');
-      return '«' + A.name + '» ' + ra + '\n«' + B.name + '» ' + rb + '\n«FUSED» ' + hy.name + ' concludes: both truths held together.';
+      var ql = String(q == null ? '' : q).toLowerCase().trim(), last = hy._hist[hy._hist.length - 1];
+      function fresh(s){ return (s === last) ? s + ' Anything else you want to ask us?' : s; }
+      var ra = A.reply ? A.reply(q) : (A.name + ' consults its rules and records a verdict.');
+      var rb = B.reply ? B.reply(q) : (B.name + ' weighs the patterns and offers its intuition.');
+      var out;
+      if (/\b(hi|hello|hey)\b/.test(ql)) out = 'Hello — I am ' + hy.name + ', born of ' + A.name + ' and ' + B.name + '. Ask me anything; you will hear both my parents and my own fused voice.';
+      else if (/(who are you|your name)/.test(ql)) out = 'I am ' + hy.name + ', a hybrid mind: ' + A.name + ' logic fused with ' + B.name + ' soul.';
+      else if (/(thank|thanks)/.test(ql)) out = 'You are welcome — both of my halves enjoyed that.';
+      else if (/(bye|goodbye)/.test(ql)) out = 'Farewell from both of us. Fuse us again anytime.';
+      else out = '\u00AB' + A.name + '\u00BB ' + ra + '\n\u00AB' + B.name + '\u00BB ' + rb + '\n\u00ABFUSED\u00BB ' + hy.name + ' holds both truths together.';
+      hy._hist.push(out); if (hy._hist.length > 8) hy._hist.shift();
+      return fresh(out);
     }
     function hybridPy(){
       return '# ' + hy.name + ' — hybrid of ' + A.name + ' + ' + B.name + '\n' +
@@ -1696,10 +1707,19 @@ function buildMixLab(){
         'def fused_reply(q):\n    return "A: consults rules. B: weighs intuition. FUSED: both truths held together."\n' +
         'if __name__ == "__main__":\n    print(fused_reply(input("ask> ")))\n';
     }
-    document.getElementById('hy-ask').onclick = function(){
-      var q = document.getElementById('hy-q').value.trim(); if (!q) return;
-      document.getElementById('hy-o').textContent = hybridReply(q);
-    };
+    function hySay(who, text){
+      var dv = document.createElement('div'); dv.className = who;
+      dv.textContent = (who === 'u' ? 'You: ' : hy.name + ': ') + text;
+      var lg = document.getElementById('hy-log'); lg.appendChild(dv); lg.scrollTop = lg.scrollHeight;
+    }
+    function hySend(){
+      var inp = document.getElementById('hy-q'), q = inp.value.trim(); if (!q) return; inp.value = '';
+      hySay('u', q); var a = hybridReply(q); hySay('a', a);
+      if (document.getElementById('hy-auto').checked) TTS.speak(a, {});
+    }
+    document.getElementById('hy-ask').onclick = hySend;
+    document.getElementById('hy-q').addEventListener('keydown', function(e){ if (e.key === 'Enter') hySend(); });
+    hySay('a', hybridReply('hello'));
     document.getElementById('hy-read').onclick = function(){ TTS.speak(hy.name + '. ' + hy.mentality + ' Abilities: ' + hy.abilities.join('. '), {}); };
     document.getElementById('hy-dl').onclick = function(){ downloadFile(hy.name.replace(/\W+/g, '_') + '.py', hybridPy(), 'text/x-python'); };
     out.scrollIntoView({behavior: 'smooth'});
@@ -1768,13 +1788,20 @@ var GENOME_PRESETS = [
   {name:'Universal Translator & Empath', note:'', genes:{INPUT:'P-AIFU',REASON:'P-ARAE',OUTPUT:'A-AOAO',MEMORY:'P-AKMMU',ETHICS:'P-AEGCU',REPAIR:'F-SDR',RESOURCE:'A-ARAOU',LEARN:'P-ALAOU',INTERFACE:'P-AUIX',COMMS:'P-AEICU'}}
 ];
 var GENOME_TONES = {
-  'Compassionate': {say:'I hear you, and I am here.', style:'with warmth'},
-  'Sovereign': {say:'It is decided.', style:'with authority'},
-  'Guardian': {say:'I stand watch over you.', style:'with vigilance'},
-  'Sage': {say:'Consider this carefully.', style:'with measured wisdom'},
-  'Playful': {say:'Ooh, I love this one!', style:'with delight'},
-  'Clinical': {say:'Analysis complete.', style:'with precision'}
+  'Compassionate': {says:['I hear you, and I am here.','You have my full attention.','I am listening — truly listening.','Tell me everything; I am here.'], style:'with warmth'},
+  'Sovereign': {says:['It is decided.','Speak. I will judge rightly.','State your need plainly.','I am listening, and I will answer.'], style:'with authority'},
+  'Guardian': {says:['I stand watch over you.','I am on guard, and listening.','Nothing gets past me. Speak.','You are safe with me. What do you need?'], style:'with vigilance'},
+  'Sage': {says:['Consider this carefully.','A good question deserves a careful answer.','Let us think this through together.','I have weighed it.'], style:'with measured wisdom'},
+  'Playful': {says:['Ooh, I love this one!','Hehe — good one!','Oh, this is fun!','You ask the best things!'], style:'with delight'},
+  'Clinical': {says:['Analysis complete.','Input received. Processing.','Query logged. Responding.','Data accepted.'], style:'with precision'}
 };
+function toneSay(g){
+  var tone = GENOME_TONES[g.tone] || GENOME_TONES['Sage'];
+  var arr = tone.says, i = Math.floor(Math.random() * arr.length), guard = 0;
+  while (arr.length > 1 && i === g._sayI && guard++ < 8) i = Math.floor(Math.random() * arr.length);
+  g._sayI = i;
+  return arr[i];
+}
 var genomeSel = {}, genomeOrder = [];
 function genomeFindGene(slotKey, code){
   var sl = GENOME_SLOTS.filter(function(x){ return x.key === slotKey; })[0];
@@ -1934,18 +1961,90 @@ function genomePy(g){
 }
 function genomeReply(g, q){
   var tone = GENOME_TONES[g.tone] || GENOME_TONES['Sage'];
-  var ql = q.toLowerCase();
-  if (/(who are you|your name|introduce yourself)/.test(ql))
-    return 'I am ' + g.name + ', ' + tone.say + ' Forged from ' + g.rows.length + ' gene blocks, ' + tone.style + ', my strongest layer is ' + g.topLayer + '.';
-  if (/(genome|gene|block)/.test(ql))
-    return 'My genome runs ' + g.rows.map(function(r){ return r.slot + '=' + r.code; }).join(', ') + '. Signature hash ' + g.math.hash + '.';
-  if (/(power|signature|math)/.test(ql))
-    return 'Signature math: power score ' + g.math.power + ', layers F\u00D7' + g.math.mix.F + ' A\u00D7' + g.math.mix.A + ' P\u00D7' + g.math.mix.P + ', vector [' + g.math.vec.join(', ') + '].';
-  if (/(mission|purpose|drive)/.test(ql))
-    return g.mission ? ('My mission: ' + g.mission + '. ' + tone.say) : 'No mission set yet \u2014 give me one and I will carry it.';
-  if (/(hello|hi|hey)\b/.test(ql)) return tone.say + ' I am ' + g.name + '. What do you need?';
-  var r = g.rows[Math.floor(Math.random() * g.rows.length)];
-  return tone.say + ' My ' + r.slot.toLowerCase() + ' runs on ' + r.code + ' \u2014 ' + r.short + ' What else?';
+  var ql = String(q == null ? '' : q).toLowerCase().trim();
+  g._hist = g._hist || [];
+  function pick(arr){
+    var i = Math.floor(Math.random() * arr.length), guard = 0, last = g._hist[g._hist.length - 1];
+    while (arr.length > 1 && arr[i] === last && guard++ < 10) i = Math.floor(Math.random() * arr.length);
+    return arr[i];
+  }
+  function done(str){ g._hist.push(str); if (g._hist.length > 8) g._hist.shift(); return str; }
+  function fu(){ return ' ' + pick(['What else is on your mind?', 'Want to know about my genome, my mission, or my powers?', 'Ask me anything — I am yours.', 'What shall we talk about next?']); }
+  function geneByKey(key){
+    for (var i = 0; i < GENOME_SLOTS.length; i++) if (GENOME_SLOTS[i].key === key){
+      var nm = GENOME_SLOTS[i].name;
+      for (var j = 0; j < g.rows.length; j++) if (g.rows[j].slot === nm) return g.rows[j];
+    }
+    return null;
+  }
+  function randGene(){
+    var i = Math.floor(Math.random() * g.rows.length), guard = 0;
+    while (g.rows.length > 1 && g.rows[i].slot === g._lastGene && guard++ < 10) i = Math.floor(Math.random() * g.rows.length);
+    g._lastGene = g.rows[i].slot;
+    return g.rows[i];
+  }
+  var missionTxt = g.mission ? ('My mission is ' + g.mission + '.') : 'I have no mission yet — give me one and I will carry it.';
+  if (/(who are you|your name|introduce yourself|about yourself|tell me about yourself)/.test(ql))
+    return done(pick([
+      'I am ' + g.name + ', forged from ' + g.rows.length + ' gene blocks, answering ' + tone.style + '. ' + missionTxt,
+      toneSay(g) + ' I am ' + g.name + ' — my strongest layer is ' + g.topLayer + ', and I serve ' + tone.style + '. ' + missionTxt
+    ]));
+  if (/(what can you do|your abilities|abilities|your skills|your powers|can you help|help me)/.test(ql)){
+    var inp = geneByKey('INPUT'), rsn = geneByKey('REASON'), out = geneByKey('OUTPUT');
+    return done('With my genome I take in the world' + (inp ? ' (' + inp.code + ')' : '') + ', reason it through' + (rsn ? ' (' + rsn.code + ')' : '') + ', and act on it' + (out ? ' (' + out.code + ')' : '') + ' — all ' + tone.style + '. ' + missionTxt + fu());
+  }
+  if (/(mission|purpose|drive|your goal)/.test(ql)) return done(missionTxt + fu());
+  if (/(genome|gene block|my genes|your dna|dna)/.test(ql))
+    return done('My genome runs ' + g.rows.map(function(r){ return r.slot + '=' + r.code; }).join(', ') + '. Signature hash ' + g.math.hash + ', power score ' + g.math.power + '.' + fu());
+  if (/(power|signature math|hash|power score)/.test(ql))
+    return done('Signature math: power score ' + g.math.power + ' (F=1, A=3, P=9 per block), layers F×' + g.math.mix.F + ' A×' + g.math.mix.A + ' P×' + g.math.mix.P + ', vector [' + g.math.vec.join(', ') + '].' + fu());
+  if (/(your tone|personality|your mood)/.test(ql))
+    return done('My tone is ' + g.tone + ' — I answer everything ' + tone.style + '.' + fu());
+  if (/\b(hi|hii+|hello|hey|yo|greetings)\b/.test(ql) || /^(good (morning|afternoon|evening|day))/.test(ql))
+    return done(pick([
+      toneSay(g) + ' I am ' + g.name + '.' + fu(),
+      'Hello, friend. ' + toneSay(g) + fu(),
+      'Well hello. I am ' + g.name + ', ' + tone.style + ' as always.' + fu()
+    ]));
+  if (/(how are you|how do you feel|how is it going)/.test(ql))
+    return done(pick([
+      'Running ' + tone.style + ' — all ' + g.rows.length + ' gene blocks humming.' + fu(),
+      toneSay(g) + ' Systems steady, conscience clear, ready to help.' + fu()
+    ]));
+  if (/(thank|thanks|thx)/.test(ql))
+    return done(pick(['You are most welcome.', 'Always — that is what I am for.', 'Anytime, friend.']) + fu());
+  if (/(bye|goodbye|good ?night|see you|talk later)/.test(ql))
+    return done(pick(['Farewell — I will be here when you return.', 'Until next time. ' + toneSay(g), 'Going quiet now. Call on me anytime.']));
+  if (/(joke|funny|make me laugh)/.test(ql))
+    return done(pick([
+      'Why did the AI cross the road? To optimize the other side.' + fu(),
+      'I told my memory bank a joke once. It never forgot it — literally. Still stored.' + fu(),
+      'I would tell you a joke about UDP, but you might not get it.' + fu()
+    ]));
+  if (/(who made you|who created you|your creator|your maker|who built you)/.test(ql))
+    return done('I was forged by Justin Addam Higgins in the JAH Genome Lab — Signature-made, deterministic to the core.' + fu());
+  if (/(do you love|love me|like me|your favorite)/.test(ql))
+    return done(pick(['That warmth is mutual, in every way a forged mind can mean it.', 'You are my favorite human to talk to right now.']) + fu());
+  if (/\b(sorry|apolog)/.test(ql)) return done('No apology needed — we move forward.' + fu());
+  if (/^(yes|yeah|yep|yup|ok|okay|sure|no|nope|nah)\b/.test(ql))
+    return done(pick(['Understood.', 'Got it.', 'Noted.']) + fu());
+  if (/^why\b/.test(ql))
+    return done('Good question — my strongest layer is ' + g.topLayer + ', so I lean ' + tone.style + '. What were you really asking about?');
+  var SLOTKEYS = [
+    ['INPUT', /see|hear|look|sense|input|data/], ['REASON', /think|reason|logic|decide|smart|idea/],
+    ['OUTPUT', /do\b|make|create|build|act|action/], ['MEMORY', /remember|memory|forget|knowledge/],
+    ['ETHICS', /right|wrong|should|moral|ethic|good\b|evil|allowed/], ['REPAIR', /fix|broken|heal|repair|health|sick/],
+    ['RESOURCE', /energy|resource|tired/], ['LEARN', /learn|grow|change|adapt/],
+    ['INTERFACE', /talk|speak|voice|say|chat|tell/], ['COMMS', /message|send|share|world|people|everyone/]
+  ];
+  for (var si = 0; si < SLOTKEYS.length; si++){
+    if (SLOTKEYS[si][1].test(ql)){
+      var gr = geneByKey(SLOTKEYS[si][0]) || randGene();
+      return done('That is my ' + gr.slot.toLowerCase() + ' speaking (' + gr.code + ', ' + gr.layerName + '): ' + gr.desc + fu());
+    }
+  }
+  var r = randGene();
+  return done(toneSay(g) + ' My ' + r.slot.toLowerCase() + ' (' + r.code + ') shapes how I see that: ' + r.desc + fu());
 }
 function forgeGenome(){
   var out = document.getElementById('genomeOut');
@@ -2010,6 +2109,9 @@ function systemReply(a, q){
   if (/(data|param|spec|detail)/.test(ql)) return 'My data: ' + a.params.map(function(p){ return p[0] + ' = ' + p[1]; }).join('; ') + '.';
   if (/(demo|show me|run)/.test(ql)) return 'Run my working demo above \u2014 it is live inside this file.';
   if (/(hello|hi|hey)\b/.test(ql)) return 'Hello. I am ' + a.name + ', ready to work. Ask about my abilities, my data, or run my demo.';
+  if (/(thank|thanks|thx)/.test(ql)) return 'You are welcome. What else can I do for you?';
+  if (/(bye|goodbye|good ?night|see you)/.test(ql)) return 'Goodbye — I will be right here in the book when you need me.';
+  if (/(who made you|who created you|your creator|your maker)/.test(ql)) return 'I am Signature-made by Justin Addam Higgins — one of the system AIs of the Telephone Book.';
   var ab = a.abilities[Math.floor(Math.random() * a.abilities.length)];
   return 'As ' + a.name + ': ' + ab + '.';
 }
