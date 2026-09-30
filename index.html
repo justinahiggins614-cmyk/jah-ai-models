@@ -52,6 +52,21 @@ h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--lin
 .be-stamp{font-family:monospace;font-size:.72em;color:var(--acc);background:#0a1226;padding:2px 7px;border-radius:4px}
 .be-tag{flex-basis:100%;font-size:.82em;color:var(--dim);font-style:italic}
 .be-wing{margin-left:auto;font-size:.68em;font-weight:700;letter-spacing:.1em;color:#0a0f1e;background:var(--gold);padding:2px 9px;border-radius:12px;font-family:Arial,Helvetica,sans-serif}
+/* ---- SHOWCASE + BOOK SEARCH + LETTER PAGER ---- */
+.showcase{border:2px solid var(--gold);border-radius:12px;padding:16px 18px;margin:12px 0;background:linear-gradient(180deg,#151126,#0b0f1c);box-shadow:0 0 22px #ffc93c2e}
+.sh-kicker{color:var(--gold);font-weight:700;letter-spacing:.18em;font-size:.78em}
+.sh-name{font-size:1.5em;font-weight:700;color:#fff;margin:4px 0;font-family:Georgia,serif}
+.sh-desc{color:var(--dim);max-width:760px;margin:4px 0 10px}
+.sh-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.booksearchrow{display:flex;gap:10px;align-items:center;margin:10px 0}
+#booksearch{flex:1;min-width:0;background:#0a0d18;border:2px solid var(--amber);color:var(--txt);padding:10px 14px;border-radius:8px;font-size:1em;font-family:Georgia,serif}
+#booksearch::placeholder{color:#6b7694}
+.bookcount{color:var(--dim);font-size:.85em;white-space:nowrap}
+.tn-n{display:block;font-size:.68em;color:var(--dim);font-weight:400}
+.lc-n{font-size:.45em;letter-spacing:.1em;color:var(--dim);font-weight:400}
+.letterpager{display:flex;justify-content:space-between;align-items:center;padding:8px 18px 4px;font-size:.85em}
+.letterpager a{color:var(--amber);text-decoration:none;font-weight:700}
+.letterpager a:hover{text-decoration:underline}
 /* ---- SISTER-SITE LINES ---- */
 .sisterstrip{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
 .sisterbtn{background:var(--panel);border:1px solid var(--amber);color:var(--txt);border-radius:10px;padding:12px 16px;cursor:pointer;display:flex;flex-direction:column;gap:3px;align-items:flex-start;min-width:200px;flex:1}
@@ -189,6 +204,16 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <section id="thebook">
 <h2 class="wing">THE BOOK &mdash; EVERY AI, A&ndash;Z</h2>
 <p class="wingdesc">The whole archive as one telephone book. Tap any listing to open the full file &mdash; dossier, working demo, dialog, read-aloud, copy, download. Use the A&ndash;Z thumb index to jump.</p>
+<div class="showcase" id="llamashow">
+<div class="sh-kicker">&#9733; SHOWCASE &mdash; OUR OWN BASELINE AI</div>
+<div class="sh-name">Signature Llama</div>
+<p class="sh-desc">The baseline mind behind every AI in this book &mdash; built from scratch, trained on the Signature archive's own words, free forever, no keys, no fees. Every AI dials through it.</p>
+<div class="sh-row"><span class="stamp" id="llamastatus">NOW TRAINING</span> <a class="fbtn" style="display:inline-block;text-decoration:none" href="https://justinahiggins614-cmyk.github.io/signature-backend/" target="_blank" rel="noopener">Meet Signature Llama &rarr;</a></div>
+</div>
+<div class="booksearchrow">
+<input type="text" id="booksearch" placeholder="Search the book&hellip; name, stamp, or subject" aria-label="Search the telephone book" autocomplete="off">
+<span id="bookcount" class="bookcount"></span>
+</div>
 <div class="bookwrap">
 <div class="thumbnav" id="thumbnav" aria-label="Jump to letter"></div>
 <div class="book" id="book"></div>
@@ -2365,20 +2390,61 @@ function buildBook(){
   PERSONAS.forEach(function(a){ entries.push({id: a.id, name: a.name, stamp: a.stamp, tag: a.mentality, wing: 'PERSONA'}); });
   Object.keys(domIndex).forEach(function(k){ var d = domIndex[k]; entries.push({id: d.id, name: d.name, stamp: d.stamp, tag: d.domain, wing: 'EVERY NEED'}); });
   entries.sort(function(a, b){ var x = a.name.toLowerCase(), y = b.name.toLowerCase(); return x < y ? -1 : (x > y ? 1 : 0); });
-  var html = '', cur = '', letters = [];
+  var html = '', cur = '', letters = [], lcounts = {};
   entries.forEach(function(e){
     var L = (e.name.replace(/^[^A-Za-z0-9]+/, '').charAt(0) || '#').toUpperCase();
     if (!/[A-Z0-9]/.test(L)) L = '#';
-    if (L !== cur){ if (cur) html += '</div>'; cur = L; letters.push(L); html += '<div class="bookletter" id="bk-' + L + '"><div class="bookletter-h">' + L + '</div>'; }
+    if (L !== cur){ if (cur) html += '</div>'; cur = L; letters.push(L); lcounts[L] = 0; html += '<div class="bookletter" id="bk-' + L + '"><div class="bookletter-h">' + L + ' <span class="lc-n" data-lc="' + L + '"></span></div>'; }
+    lcounts[L]++;
     html += '<button type="button" class="bookentry" data-id="' + e.id + '"><span class="be-name">' + escHtml(e.name) + '</span><span class="be-stamp">' + escHtml(e.stamp) + '</span><span class="be-wing">' + e.wing + '</span><span class="be-tag">' + escHtml(String(e.tag).slice(0, 110)) + '</span></button>';
   });
   html += '</div>';
   book.innerHTML = html;
-  document.getElementById('thumbnav').innerHTML = letters.map(function(L){ return '<a href="#bk-' + L + '">' + L + '</a>'; }).join('');
+  document.getElementById('thumbnav').innerHTML = letters.map(function(L){ return '<a href="#bk-' + L + '">' + L + '<span class="tn-n">' + lcounts[L] + '</span></a>'; }).join('');
+  letters.forEach(function(L){ var s = book.querySelector('[data-lc="' + L + '"]'); if (s) s.textContent = '\u00B7 ' + lcounts[L] + ' listings'; });
+  var secs = book.querySelectorAll('.bookletter');
+  secs.forEach(function(sec, ix){
+    var prev = secs[ix - 1], next = secs[ix + 1];
+    var pg = document.createElement('div');
+    pg.className = 'letterpager';
+    pg.innerHTML = (prev ? '<a href="#' + prev.id + '">\u2190 ' + prev.id.slice(3) + '</a>' : '<span></span>') +
+      '<span style="color:var(--dim)">' + sec.id.slice(3) + ' page</span>' +
+      (next ? '<a href="#' + next.id + '">' + next.id.slice(3) + ' \u2192</a>' : '<span></span>');
+    sec.appendChild(pg);
+  });
   book.addEventListener('click', function(ev){
     var b = ev.target.closest ? ev.target.closest('.bookentry') : null;
     if (b) openFile(b.getAttribute('data-id'));
   });
+}
+function wireBookSearch(){
+  var inp = document.getElementById('booksearch'), cnt = document.getElementById('bookcount');
+  if (!inp || !cnt) return;
+  var entries = Array.prototype.slice.call(document.querySelectorAll('#book .bookentry'));
+  var total = entries.length;
+  function upd(){
+    var q = inp.value.toLowerCase().trim(), shown = 0;
+    entries.forEach(function(b){
+      var hit = !q || b.textContent.toLowerCase().indexOf(q) !== -1;
+      b.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    document.querySelectorAll('#book .bookletter').forEach(function(sec){
+      var any = false;
+      sec.querySelectorAll('.bookentry').forEach(function(b){ if (b.style.display !== 'none') any = true; });
+      sec.style.display = any ? '' : 'none';
+    });
+    cnt.textContent = shown + ' of ' + total + ' listings';
+  }
+  inp.addEventListener('input', upd);
+  upd();
+}
+function llamaStatusCheck(){
+  var pill = document.getElementById('llamastatus');
+  if (!pill) return;
+  fetch('https://justinahiggins614-cmyk.github.io/signature-backend/sigllama/sigllama.js', {method: 'HEAD'}).then(function(r){
+    if (r && r.ok){ pill.textContent = '\u25CF LIVE'; }
+  }).catch(function(){});
 }
 function wireLookup(){
   var inp = document.getElementById('lookup'), res = document.getElementById('lookupres'), t = null;
@@ -2590,6 +2656,8 @@ function openWordAI(word, idNum){
   buildGenomeLab();
   buildArena();
   buildBook();
+  wireBookSearch();
+  llamaStatusCheck();
   document.querySelectorAll('.wingnav a').forEach(function(a){
     a.addEventListener('click', function(){
       var id = a.getAttribute('href').slice(1);
