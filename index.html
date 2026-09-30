@@ -136,6 +136,19 @@ h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--lin
 .chatrow{display:flex;gap:6px}
 .chatrow input{flex:1;min-width:0;background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:7px 10px;border-radius:6px}
 .chatrow button{flex:none}
+/* ---- JAH OPERATIONS BAR (basic to advanced) ---- */
+.opsrow{border:1px solid var(--line);border-radius:8px;background:#0a0f1e;padding:8px 10px;margin:0 0 8px}
+.opshead{font-size:.72em;font-weight:700;letter-spacing:.14em;color:var(--amber);margin-bottom:6px;font-family:Arial,Helvetica,sans-serif}
+.opsline{display:flex;gap:6px;margin-bottom:6px}
+.opsin{flex:1;min-width:0;background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:7px 10px;border-radius:6px;font-size:.88em}
+.opslang{flex:none;background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:7px 8px;border-radius:6px;font-size:.85em}
+.opsbtns{display:flex;flex-wrap:wrap;gap:6px}
+.opsbtn{font-size:.8em;padding:5px 10px}
+.opsay-body{white-space:pre-wrap}
+.opsay-head{font-weight:700;color:#ffe1a8;margin-bottom:2px}
+.opcopy{margin-top:6px;font-size:.78em;padding:4px 10px}
+.qreveal{margin-top:6px;font-size:.8em;padding:4px 10px}
+.qans{margin-top:6px;padding:8px;border:1px dashed var(--amber);border-radius:6px;background:#0c1322}
 .mute{font-size:.8em;color:var(--dim)}
 .mixbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
 .mixbox select{background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:8px;border-radius:6px;font-size:.95em;margin:4px}
@@ -904,6 +917,7 @@ function renderCard(ai, mount, opts){
   if (DEMO[ai.id]) DEMO[ai.id](el);
   if (ai.kind === 'persona' && PERSONA_CHAT[ai.id]) PERSONA_CHAT[ai.id](el, ai);
   else if (ai.kind !== 'persona') wireTalk(el, ai, systemReply);
+  JAHops.mount(el, {kind: ai.kind, obj: ai});
   return el;
 }
 /* ============ PERSONA ARCHIVE ============ */
@@ -1654,6 +1668,7 @@ function toggleDomain(d, row){
   el.querySelector('[data-t=send]').onclick = send;
   inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
   setTimeout(function(){ say('a', domainReply(d, 'hello')); }, 400);
+  JAHops.mount(el, {kind:'dom', obj:d});
   el.scrollIntoView({behavior: 'smooth', block: 'nearest'});
 }
 /* ============ TELEPHONE DIRECTORY ============ */
@@ -2493,6 +2508,7 @@ function forgeGenome(){
   el.querySelector('[data-t=send]').onclick = send;
   inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
   say('a', genomeReply(g, 'hello'));
+  JAHops.mount(el, {kind:'forged', obj:g});
   out.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 function systemReply(a, q){
@@ -2683,6 +2699,7 @@ function renderDomainFile(d, mount){
   el.querySelector('[data-t=send]').onclick = send;
   inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
   setTimeout(function(){ say('a', domainReply(d, 'hello')); }, 400);
+  JAHops.mount(el, {kind:'dom', obj:d});
   return el;
 }
 function openFile(id){
@@ -2952,6 +2969,7 @@ function renderWordFile(w, mount){
   el.querySelector('[data-t=send]').onclick = send;
   inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
   setTimeout(function(){ say('a', wordReply(w, 'hello')); }, 400);
+  JAHops.mount(el, {kind:'word', obj:w});
   return el;
 }
 function openWordAI(word, idNum){
@@ -3019,6 +3037,423 @@ function openWordAI(word, idNum){
     }, 400);
   }
 })();
+/* ============ JAH OPERATIONS — basic → advanced LLM abilities, every AI ============
+   A data-driven OPERATIONS bar mounted above every AI file's chat log (system,
+   persona, domain, word, and genome-forged AIs — no per-AI hand-writing).
+   ALL operation voice routes through one seam: JAHops.talk(ref, text), which
+   dispatches on ref.kind to the matching reply engine:
+     sig → systemReply · persona → personaReply · dom → domainReply
+     forged → genomeReply · word → wordaiReply (falls back to wordReply) */
+var JAHops = (function(){
+  'use strict';
+  function pick(a){ return a[Math.floor(Math.random()*a.length)]; }
+  function cap(s){ s=String(s==null?'':s); return s.charAt(0).toUpperCase()+s.slice(1); }
+  function shuffle(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)), t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+  function short(s,n){ s=String(s==null?'':s); n=n||120; return s.length>n ? s.slice(0,n)+'…' : s; }
+  function firstSent(s){ var m=String(s==null?'':s).match(/[^.!?]+[.!?]/); return m?m[0].trim():short(s,140); }
+
+  /* ---- THE SEAM: every operation's voice goes through here ---- */
+  function talk(ref, text){
+    var k=ref.kind, o=ref.obj, r='';
+    try{
+      if(k==='persona') r=personaReply(o,text);
+      else if(k==='dom') r=domainReply(o,text);
+      else if(k==='forged') r=genomeReply(o,text);
+      else if(k==='word') r=((typeof wordaiReply==='function')?wordaiReply(o,text):wordReply(o,text));
+      else r=systemReply(o,text);
+    }catch(e){ r=''; }
+    return String(r==null?'':r);
+  }
+
+  /* ---- normalize any AI record into a working profile ---- */
+  function profile(ref){
+    var o=ref.obj||{}, k=ref.kind;
+    var P={kind:k,name:'AI',stamp:'',mentality:'',abilities:[],params:[],rate:1,pitch:1,domain:'',quiz:[],checklist:[],definition:'',sentences:[],pro:false};
+    P.name=o.name||'AI'; P.stamp=o.stamp||o.ai_id||'';
+    if(k==='sig'||k==='persona'){
+      P.mentality=o.mentality||''; P.abilities=o.abilities||[]; P.params=o.params||[];
+      P.rate=o.rate||1; P.pitch=o.pitch||1;
+    }else if(k==='dom'){
+      P.mentality=o.mentality||''; P.abilities=o.abilities||[]; P.pro=!!o.pro;
+      try{ P.params=(typeof domainParams==='function')?domainParams(o):[]; }catch(e){ P.params=[]; }
+      P.domain=o.domain||'';
+      if(o.demoKind==='quiz'&&o.demoData) P.quiz=o.demoData;
+      if(o.demoKind==='checklist'&&o.demoData) P.checklist=o.demoData;
+    }else if(k==='forged'){
+      P.mentality='Tone: '+(o.tone||'steady')+(o.mission?'; mission: '+o.mission:'');
+      P.abilities=(o.rows||[]).map(function(r){ return r.slot+' — '+r.code; });
+      P.params=(o.rows||[]).map(function(r){ return [r.slot, r.code+' ('+(r.layerName||'')+')']; });
+      P.rate=o.rate||1; P.pitch=o.pitch||1;
+    }else if(k==='word'){
+      P.mentality=o.mentality||''; P.abilities=o.abilities||[]; P.params=o.params||[];
+      P.definition=o.definition||''; P.sentences=o.sentences||[];
+    }
+    return P;
+  }
+  function ab(P,i){ var n=P.abilities.length; return n?P.abilities[i%n]:'deep focus'; }
+  function watchOut(P){
+    if(P.pro) return 'I am an AI assistant, not a licensed professional — see a real pro for big decisions.';
+    return pick(['garbage in, garbage out — feed me clean input and I shine.','I am a demo mind: verify anything life-sized before you act on it.','big decisions deserve a second source — use me as the first, not the last.']);
+  }
+  function field(P){ return P.domain||(P.kind==='word'?'language':(P.kind==='persona'?'character craft':'signature systems')); }
+
+  /* ---- real extractive summarizer ---- */
+  var STOP={the:1,a:1,an:1,and:1,or:1,of:1,to:1,in:1,is:1,it:1,that:1,this:1,for:1,on:1,with:1,as:1,at:1,by:1,from:1,was:1,were:1,are:1,be:1,been:1,has:1,have:1,had:1,not:1,but:1,they:1,their:1,you:1,your:1,we:1,our:1,he:1,she:1,his:1,her:1,its:1,will:1,would:1,can:1,could:1,should:1,there:1,what:1,which:1,who:1,when:1,where:1,how:1,all:1,any:1,each:1,more:1,most:1,other:1,some:1,such:1,no:1,only:1,own:1,same:1,so:1,than:1,too:1,very:1,just:1,into:1,over:1,after:1,before:1,between:1,through:1,up:1,out:1,about:1,if:1,do:1,does:1,did:1,my:1,me:1,i:1};
+  function sentencesOf(t){ var m=String(t).match(/[^.!?]+[.!?]+/g); return (m&&m.length)?m:[String(t)]; }
+  function summarizeExtractive(t,n){
+    var sents=sentencesOf(t).map(function(s){ return s.trim(); }).filter(function(s){ return s.length>20; });
+    if(!sents.length) return [short(t,160)];
+    if(sents.length<=n) return sents;
+    var freq={};
+    sents.forEach(function(s){ s.toLowerCase().replace(/[^a-z\s]/g,' ').split(/\s+/).forEach(function(w){ if(w&&!STOP[w]) freq[w]=(freq[w]||0)+1; }); });
+    var scored=sents.map(function(s,i){
+      var words=s.toLowerCase().replace(/[^a-z\s]/g,' ').split(/\s+/), sc=0;
+      words.forEach(function(w){ sc+=freq[w]||0; });
+      return {i:i,s:s,sc:sc/Math.sqrt(words.length||1)};
+    });
+    scored.sort(function(a,b){ return b.sc-a.sc; });
+    return scored.slice(0,n).sort(function(a,b){ return a.i-b.i; }).map(function(x){ return x.s; });
+  }
+
+  /* ---- real mini-translator: ES / FR / DE ---- */
+  var LEX={
+   'hello':['hola','bonjour','hallo'],'hi':['hola','salut','hallo'],
+   'goodbye':['adiós','au revoir','tschüss'],'good morning':['buenos días','bonjour','guten Morgen'],
+   'good night':['buenas noches','bonne nuit','gute Nacht'],'thank you':['gracias','merci','danke'],
+   'thanks':['gracias','merci','danke'],'please':['por favor',"s'il vous plaît",'bitte'],
+   'yes':['sí','oui','ja'],'no':['no','non','nein'],'sorry':['lo siento','désolé','entschuldigung'],
+   'love':['amor','amour','Liebe'],'friend':['amigo','ami','Freund'],'family':['familia','famille','Familie'],
+   'water':['agua','eau','Wasser'],'food':['comida','nourriture','Essen'],'house':['casa','maison','Haus'],
+   'home':['hogar','foyer','Zuhause'],'dog':['perro','chien','Hund'],'cat':['gato','chat','Katze'],
+   'sun':['sol','soleil','Sonne'],'moon':['luna','lune','Mond'],'star':['estrella','étoile','Stern'],
+   'day':['día','jour','Tag'],'night':['noche','nuit','Nacht'],'today':['hoy',"aujourd'hui",'heute'],
+   'tomorrow':['mañana','demain','morgen'],'man':['hombre','homme','Mann'],'woman':['mujer','femme','Frau'],
+   'child':['niño','enfant','Kind'],'world':['mundo','monde','Welt'],'time':['tiempo','temps','Zeit'],
+   'life':['vida','vie','Leben'],'work':['trabajo','travail','Arbeit'],'school':['escuela','école','Schule'],
+   'book':['libro','livre','Buch'],'happy':['feliz','heureux','glücklich'],'good':['bueno','bon','gut'],
+   'bad':['malo','mauvais','schlecht'],'big':['grande','grand','groß'],'small':['pequeño','petit','klein'],
+   'new':['nuevo','nouveau','neu'],'beautiful':['hermoso','beau','schön'],'peace':['paz','paix','Frieden'],
+   'help':['ayuda','aide','Hilfe'],'welcome':['bienvenido','bienvenue','willkommen'],
+   'one':['uno','un','eins'],'two':['dos','deux','zwei'],'three':['tres','trois','drei']
+  };
+  var LANGI={es:0,fr:1,de:2}, LANGN={es:'Spanish',fr:'French',de:'German'};
+  function translateText(t,lang){
+    var li=(LANGI[lang]==null)?0:LANGI[lang];
+    var toks=String(t).match(/[A-Za-zÀ-ÖØ-öø-ÿ]+|[^A-Za-zÀ-ÖØ-öø-ÿ]+/g)||[String(t)];
+    var out=[], hit=0, total=0, i=0;
+    function isWord(x){ return /[A-Za-zÀ-ÖØ-öø-ÿ]/.test(x); }
+    while(i<toks.length){
+      if(!isWord(toks[i])){ out.push(toks[i]); i++; continue; }
+      var matched=null, adv=0;
+      for(var n=3;n>=1;n--){
+        var parts=[], k=i;
+        while(k<toks.length&&parts.length<n){
+          if(isWord(toks[k])){ parts.push(toks[k]); k++; }
+          else if(/^\s+$/.test(toks[k])){ k++; }
+          else break;
+        }
+        if(parts.length===n&&LEX[parts.join(' ').toLowerCase()]){ matched=LEX[parts.join(' ').toLowerCase()][li]; adv=k-i; break; }
+      }
+      if(matched){
+        if(/^[A-ZÀ-Þ]/.test(toks[i])) matched=matched.charAt(0).toUpperCase()+matched.slice(1);
+        out.push(matched); hit++; total++; i+=adv;
+      }else{ total++; out.push(toks[i]); i++; }
+    }
+    return {text:out.join(''),hit:hit,total:total};
+  }
+
+  /* ================= THE OPERATIONS ================= */
+  var OPS=[
+  /* ---------- BASIC ---------- */
+  {id:'summarize',label:'📝 Summarize',
+   voice:function(P,t){ return t?('Your one-line reaction to this: '+short(t,140)):'Sum yourself up in one line.'; },
+   body:function(P,t){
+     var tx;
+     if(t){
+       var s=summarizeExtractive(t,3);
+       tx=pick([
+         'Boiled down to the essentials:\n• '+s.join('\n• '),
+         'Here is the short version:\n• '+s.join('\n• '),
+         'Cutting the noise — what matters:\n• '+s.join('\n• ')
+       ]);
+       if(s.length===1) tx=pick(['One line says it all: ','Short and sweet: '])+s[0];
+     }else{
+       var a3=P.abilities.slice(0,3).join('; ')||'many talents';
+       tx=pick([
+         P.name+' in one breath: '+firstSent(P.mentality)+' On file: '+P.abilities.length+' abilities — '+a3+'.',
+         'The short version: '+P.name+' ('+P.stamp+'). '+firstSent(P.mentality)+' Top gear: '+a3+'.',
+         firstSent(P.mentality)+' That is '+P.name+' — '+P.abilities.length+' abilities strong, led by '+a3+'.'
+       ]);
+     }
+     return {text:tx};
+   }},
+  {id:'explain',label:'💡 Explain simply',
+   voice:function(P,t){ return t?('Say this simply, in your voice: '+short(t,140)):'Describe yourself simply.'; },
+   body:function(P,t){
+     var tx;
+     if(!t){
+       tx=pick([
+         'Simply put: I am '+P.name+'. '+firstSent(P.mentality)+' I do '+P.abilities.slice(0,2).join(' and ')+'.',
+         firstSent(P.mentality)+' That is me — '+P.name+', here to help with '+field(P)+'.'
+       ]);
+     }else{
+       tx=pick([
+         'Plain words on "'+t+'":\nThink of it through '+field(P)+' — it comes down to '+ab(P,0)+'. Start there; everything else is detail.',
+         '"'+t+'", no jargon:\n'+P.name+' would file it under '+field(P)+' and handle it with '+ab(P,0)+' plus '+ab(P,1)+'. That is the whole trick.',
+         'Here is '+t+' simply:\n'+cap(ab(P,0))+' — applied to '+t+'. Once you see that, the rest clicks into place.'
+       ]);
+     }
+     return {text:tx};
+   }},
+  {id:'keypoints',label:'🎯 Key points',
+   voice:function(P,t){ return 'Your key points, in your voice, on: '+short(t||'yourself',120); },
+   body:function(P,t){
+     var tx;
+     if(t){
+       tx=pick([
+         'Key points on "'+t+'":\n• Start with '+ab(P,0)+'\n• Measure it with '+ab(P,1)+'\n• Remember: '+watchOut(P),
+         '"'+t+'" — the hits:\n• '+ab(P,0)+' first\n• then '+ab(P,1)+'\n• caveat: '+watchOut(P)
+       ]);
+     }else{
+       var pd=P.params.slice(0,3).map(function(p){ return p[0]+' = '+p[1]; }).join('; ')||'on file';
+       tx='• '+P.name+' ('+P.stamp+')\n• '+firstSent(P.mentality)+'\n• Abilities: '+(P.abilities.slice(0,4).join('; ')||'many')+'\n• Key data: '+pd;
+     }
+     return {text:tx};
+   }},
+  {id:'translate',label:'🌍 Translate',
+   voice:function(P){ return 'Announce your translation service in one line.'; },
+   body:function(P,t,lang){
+     lang=LANGN[lang]?lang:'es';
+     var src=t, note='';
+     if(!src){ src=firstSent(P.mentality)||P.name; note='(nothing typed — translating my own motto)'; }
+     var r=translateText(src,lang);
+     var tx='In '+LANGN[lang]+': '+r.text+(note?'\n'+note:'');
+     if(r.total) tx+='\n('+r.hit+' of '+r.total+' words in my pocket dictionary — everyday words translate best.)';
+     return {text:tx, speak:'In '+LANGN[lang]+': '+short(r.text,180)};
+   }},
+  /* ---------- INTERMEDIATE ---------- */
+  {id:'analyze',label:'🔍 Analyze',
+   voice:function(P,t){ return 'Your analytical take, one line, on: '+short(t||'yourself',120); },
+   body:function(P,t){
+     var subj=t||('this AI ('+P.name+')');
+     var p0=P.params[0]?(P.params[0][0]+' = '+P.params[0][1]):'core settings on file';
+     var tx=pick([
+       'Analysis of '+subj+':\nWhat it is — '+firstSent(P.mentality)+'\nHow it works — through '+ab(P,0)+' and '+ab(P,1)+'.\nStrength — '+ab(P,2)+'\nWatch-out — '+watchOut(P),
+       'Breaking '+subj+' down:\n• Nature: '+firstSent(P.mentality)+'\n• Method: '+ab(P,0)+', backed by '+p0+'\n• Edge: '+ab(P,1)+'\n• Risk: '+watchOut(P),
+       P.name+' reads '+subj+' like this:\nIt runs on '+ab(P,0)+'. Its sharpest tool is '+ab(P,1)+'. The honest caveat: '+watchOut(P)
+     ]);
+     return {text:tx};
+   }},
+  {id:'brainstorm',label:'💭 Brainstorm',
+   voice:function(P,t){ return 'Your wildest one-line idea about: '+short(t||'your field',120); },
+   body:function(P,t){
+     var subj=t||('new work in '+field(P));
+     var ideas=[];
+     for(var i=0;i<5;i++){
+       var a=ab(P,i);
+       ideas.push(pick([
+         'Aim '+a+' at '+subj+'.',
+         'What if '+subj+' ran entirely on '+a+'?',
+         'Combine '+subj+' with '+a+' — ship the hybrid.',
+         'Use '+a+' to rethink '+subj+' from zero.',
+         'Weekend prototype: '+subj+' powered by '+a+'.'
+       ]));
+     }
+     return {text:pick(['Five sparks on "'+subj+'", '+P.name+'-style:','Brainstorm — '+subj+':','Ideas, fresh off the '+P.name+' line:'])+'\n'+ideas.map(function(s,i){ return (i+1)+'. '+s; }).join('\n')};
+   }},
+  {id:'critique',label:'⚖️ Critique ±',
+   voice:function(P,t){ return 'Your honest verdict, one line, on: '+short(t||'yourself',120); },
+   body:function(P,t){
+     var subj=t||'this AI design';
+     var tx=pick([
+       'Critique of '+subj+':\nStrong — '+ab(P,0)+'; '+ab(P,1)+'.\nWeak — '+watchOut(P)+'\nVerdict — '+pick(['worth building on.','solid, with honest limits.','strong core — mind the edges.']),
+       'Pros and cons, '+subj+':\n+ '+ab(P,0)+'\n+ '+ab(P,2)+'\n− '+watchOut(P)+'\nCall: '+pick(['a keeper.','good bones — refine the rest.','strong where it counts.'])
+     ]);
+     return {text:tx};
+   }},
+  {id:'plan',label:'🪜 Step-by-step plan',
+   voice:function(P){ return 'Your planning motto, one line.'; },
+   body:function(P,t){
+     var subj=t||'the mission';
+     var n=Math.min(6,Math.max(3,P.abilities.length));
+     var steps=[];
+     for(var i=0;i<n;i++) steps.push('Step '+(i+1)+' — '+cap(ab(P,i))+': apply it to '+subj+'.');
+     return {text:pick(['The plan for '+subj+', '+P.name+'-style:','Step by step — '+subj+':'])+'\n'+steps.join('\n')+'\nDone when: '+subj+' is handled end to end.'};
+   }},
+  /* ---------- ADVANCED ---------- */
+  {id:'code',label:'💻 Write code',
+   voice:function(P){ return 'Your coding motto, one line.'; },
+   body:function(P,t){
+     var cls=(P.name.replace(/[^A-Za-z0-9]+/g,' ').trim().split(/\s+/).map(cap).join('')||'SignatureAI');
+     if(/^[0-9]/.test(cls)) cls='AI'+cls;
+     var task=t||'a general task';
+     var L=[];
+     L.push('# '+P.stamp+' — '+P.name);
+     L.push('# Operations-bar build · Signature AI Telephone Book');
+     L.push('# Signature-made by Justin Addam Higgins');
+     L.push('"""'+firstSent(P.mentality)+'"""');
+     L.push('');
+     L.push('class '+cls+':');
+     L.push('    ABILITIES = [');
+     P.abilities.slice(0,8).forEach(function(a){ L.push('        '+JSON.stringify(a)+','); });
+     L.push('    ]');
+     L.push('');
+     L.push('    def __init__(self):');
+     L.push('        self.memory = []');
+     L.push('');
+     L.push('    def ask(self, q):');
+     L.push('        q = q.lower()');
+     L.push('        self.memory.append(q)');
+     for(var i=0;i<Math.min(3,P.abilities.length);i++){
+       var kw=P.abilities[i].toLowerCase().split(/[^a-z]+/).filter(function(w){ return w.length>4; })[0]||'task';
+       L.push('        if '+JSON.stringify(kw)+' in q: return '+JSON.stringify(cap(P.abilities[i])+': engaged.'));
+     }
+     L.push('        return '+JSON.stringify(P.name+' ready. Abilities: '+P.abilities.length+'.'));
+     L.push('');
+     L.push('    def run_demo(self):');
+     L.push('        return [self.ask('+JSON.stringify('task: '+task)+'), "demo complete"]');
+     L.push('');
+     L.push("if __name__ == '__main__':");
+     L.push('    ai = '+cls+'()');
+     L.push('    print(ai.ask('+JSON.stringify(task)+'))');
+     L.push('    print(ai.run_demo())');
+     var code=L.join('\n');
+     return {text:'Working Python for "'+task+'", '+P.name+'-edition — copy it, run it:\n\n'+code,
+             speak:'Code written — '+cls+' with '+P.abilities.length+' abilities. It is in the chat log, ready to copy.'};
+   }},
+  {id:'quiz',label:'❓ Quiz me',
+   voice:function(P){ return 'Challenge me in one line.'; },
+   body:function(P,t){
+     var q,opts,ans,letters=['A','B','C','D'];
+     if(P.quiz&&P.quiz.length){
+       var qq=pick(P.quiz); q=qq[0]; opts=qq[1].slice(); ans=qq[2];
+     }else if(P.abilities.length>=2){
+       var correct=pick(P.abilities);
+       var pool=['Teleporting objects','Reading minds','Time travel','Flying unaided','Talking to animals','Becoming invisible'];
+       var ds=shuffle(pool.filter(function(x){ return P.abilities.indexOf(x)===-1; })).slice(0,3);
+       while(ds.length<3) ds.push('Super speed');
+       opts=shuffle([correct].concat(ds)).slice(0,4);
+       ans=opts.indexOf(correct);
+       q='Which of these is one of '+P.name+'’s real abilities?';
+     }else if(P.params.length){
+       var pr=pick(P.params);
+       var vals=shuffle(P.params.map(function(p){ return p[1]; }).filter(function(v){ return v!==pr[1]; }));
+       opts=shuffle([pr[1]].concat(vals.slice(0,3))).slice(0,4);
+       ans=opts.indexOf(pr[1]);
+       q='What is the value of "'+pr[0]+'" on '+P.name+'?';
+     }else{
+       var claim=P.abilities[0]||firstSent(P.mentality)||(P.name+' is ready to help');
+       var st=Math.random()<0.5;
+       q='True or false: '+claim+'.';
+       opts=['True','False']; ans=st?0:1;
+     }
+     var html='<div><b>Quiz — '+escHtml(q)+'</b></div>'+
+       opts.map(function(o,i){ return '<div>'+letters[i]+'. '+escHtml(String(o))+'</div>'; }).join('')+
+       '<button type="button" class="fbtn qreveal">Reveal answer</button>'+
+       '<div class="qans" style="display:none">✅ '+letters[ans]+' — '+escHtml(String(opts[ans]))+'</div>';
+     var text='Quiz — '+q+'\n'+opts.map(function(o,i){ return letters[i]+'. '+o; }).join('\n')+'\nAnswer: '+letters[ans]+' — '+opts[ans];
+     return {html:html,text:text};
+   }},
+  {id:'debate',label:'🎙️ Debate both sides',
+   voice:function(P,t){ return 'Your debate stance, one line, on: '+short(t||'AI helping humans',120); },
+   body:function(P,t){
+     var subj=t||'whether AIs like me should do everything for humans';
+     var tx=pick(['Debate: '+subj,'Both sides of "'+subj+'", '+P.name+' refereeing:'])+
+      '\n\nFOR:\n• '+ab(P,0)+' argues yes — leverage multiplies human reach.\n• '+ab(P,1)+' adds: consistency beats fatigue, every time.'+
+      '\n\nAGAINST:\n• Over-reliance dulls human judgment — '+watchOut(P)+'\n• Some calls need a human heart, not a rule set.'+
+      '\n\n'+P.name+'’s lean: '+pick(['use AI for the heavy lifting, keep humans on the verdict.','both — tools in hand, wisdom in charge.','for, with eyes open.']);
+     return {text:tx};
+   }},
+  {id:'teach5',label:'🧒 Teach like I’m 5',
+   voice:function(P){ return 'Say hi like I am five.'; },
+   body:function(P,t){
+     var subj=t||P.name;
+     var an=pick(['a lunchbox — you put things in and take things out','a puppy — it learns whatever you teach it','building blocks — tiny pieces making big things','a flashlight — it shines where you point it']);
+     var tx=pick([
+       'Okay, little buddy! '+cap(subj)+' is like '+an+'. '+P.name+' uses '+ab(P,0)+' — that is just a fancy way of saying it is really good at helping.',
+       'Imagine '+subj+' is '+an+'. That is '+P.name+' in a nutshell: '+firstSent(P.mentality)+' Easy, right?'
+     ]);
+     return {text:tx};
+   }}
+  ];
+  var OPS_BY_ID={};
+  OPS.forEach(function(o){ OPS_BY_ID[o.id]=o; });
+
+  function weave(voice,body){
+    voice=String(voice||'').trim(); body=String(body||'');
+    if(voice&&voice.length<300&&body.indexOf(voice.slice(0,48))===-1) return voice+'\n\n'+body;
+    return body;
+  }
+  function runFull(ref,P,op,t,lang){
+    var voice=talk(ref, op.voice(P,t));
+    var res=op.body(P,t,lang)||{text:''};
+    var text=weave(voice,res.text||'');
+    return {text:text, speak:res.speak||text, html:res.html||null};
+  }
+
+  /* ---- render one op result into the file's chat log ---- */
+  function opsay(el,ref,P,res){
+    var log=el.querySelector('.chatlog'); if(!log) return;
+    var auto=el.querySelector('.autovoice');
+    var d=document.createElement('div'); d.className='a opsay';
+    var hd=document.createElement('div'); hd.className='opsay-head'; hd.textContent=P.name+':';
+    d.appendChild(hd);
+    var bd=document.createElement('div'); bd.className='opsay-body';
+    if(res.html) bd.innerHTML=res.html; else bd.textContent=res.text;
+    d.appendChild(bd);
+    var cp=document.createElement('button'); cp.type='button'; cp.className='fbtn opcopy'; cp.textContent='⧉ Copy result';
+    var csrc=res.text||bd.textContent||'';
+    cp.onclick=function(){ copyText(csrc,cp); };
+    d.appendChild(cp);
+    log.appendChild(d); log.scrollTop=log.scrollHeight;
+    var spk=res.speak||res.text||bd.textContent||'';
+    if(auto&&auto.checked&&spk){ try{ TTS.speak(spk,(ref.kind==='persona')?{rate:P.rate,pitch:P.pitch}:{}); }catch(e){} }
+  }
+
+  /* ---- quiz reveal (one delegated listener) ---- */
+  var revealWired=false;
+  function ensureReveal(){
+    if(revealWired) return; revealWired=true;
+    document.addEventListener('click',function(e){
+      var b=e.target&&e.target.closest?e.target.closest('.qreveal'):null;
+      if(!b) return;
+      var box=b.parentNode?b.parentNode.querySelector('.qans'):null;
+      if(!box) return;
+      var show=box.style.display==='none';
+      box.style.display=show?'block':'none';
+      b.textContent=show?'Hide answer':'Reveal answer';
+    });
+  }
+
+  /* ---- mount the bar above a file's chat log ---- */
+  function mount(el,ref){
+    if(!el||!ref||!ref.obj) return;
+    var log=el.querySelector('.chatlog');
+    if(!log||log.parentNode.querySelector('.opsrow')) return;
+    ensureReveal();
+    var P=profile(ref);
+    var row=document.createElement('div'); row.className='opsrow';
+    var head='OPERATIONS — basic to advanced'+(ref.kind==='persona'?' · fan-style interpretation':'');
+    row.innerHTML='<div class="opshead">'+escHtml(head)+'</div>'+
+     '<div class="opsline"><input type="text" class="opsin" placeholder="Optional: type something for the op to work on…" aria-label="Operation subject">'+
+     '<select class="opslang" aria-label="Translation language"><option value="es">ES</option><option value="fr">FR</option><option value="de">DE</option></select></div>'+
+     '<div class="opsbtns">'+OPS.map(function(o){ return '<button type="button" class="fbtn opsbtn" data-op="'+o.id+'">'+o.label+'</button>'; }).join('')+'</div>';
+    log.parentNode.insertBefore(row,log);
+    var inp=row.querySelector('.opsin'), lang=row.querySelector('.opslang');
+    row.querySelectorAll('.opsbtn').forEach(function(b){
+      b.onclick=function(){
+        var op=OPS_BY_ID[b.getAttribute('data-op')]; if(!op) return;
+        var t=inp.value.trim(), lg=lang.value;
+        var ud=document.createElement('div'); ud.className='u';
+        ud.textContent='You: ⚙ '+op.label.replace(/^[^ ]+ /,'')+(t?' — '+short(t,80):'');
+        log.appendChild(ud);
+        opsay(el,ref,P,runFull(ref,P,op,t,lg));
+      };
+    });
+  }
+  return {talk:talk, mount:mount, profile:profile, OPS:OPS};
+})();
+
 </script>
 </body>
 </html>
