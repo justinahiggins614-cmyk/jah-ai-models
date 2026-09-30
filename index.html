@@ -105,7 +105,8 @@ h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--lin
 .chatlog .u{color:#9fc2ff;margin:.3em 0}
 .chatlog .a{color:#ffe1a8;margin:.3em 0}
 .chatrow{display:flex;gap:6px}
-.chatrow input{flex:1;background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:7px 10px;border-radius:6px}
+.chatrow input{flex:1;min-width:0;background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:7px 10px;border-radius:6px}
+.chatrow button{flex:none}
 .mute{font-size:.8em;color:var(--dim)}
 .mixbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
 .mixbox select{background:#0a1226;border:1px solid var(--line);color:var(--txt);padding:8px;border-radius:6px;font-size:.95em;margin:4px}
@@ -834,7 +835,7 @@ function renderCard(ai, mount, opts){
   if (ai.kind !== 'persona') h += '<a class="speclink" href="https://justinahiggins614-cmyk.github.io/signature-one-archive/">Signature Spec Catalog Pending Patents</a>';
   h += '</div>';
   h += '<div class="demo"><h4>WORKING DEMO</h4>' + ai.demoHTML + '</div>';
-  h += '<div class="demo"><h4>TALK TO ' + escHtml(ai.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something…" aria-label="Talk"><button data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  h += '<div class="demo"><h4>TALK TO ' + escHtml(ai.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something…" aria-label="Talk"><button type="button" data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
   el.innerHTML = h;
   mount.appendChild(el);
   var reading = false;
@@ -1048,7 +1049,7 @@ function wirePersona(el, ai){
     if (auto.checked) TTS.speak(a, {rate: ai.rate, pitch: ai.pitch});
   }
   el.querySelector('[data-t=send]').onclick = send;
-  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
   // greeting
   setTimeout(function(){ say('a', personaReply(ai, 'hello')); }, 400);
   // themed demos
@@ -1572,7 +1573,7 @@ function toggleDomain(d, row){
   if (d.pro) h += '<div class="disclaimer" style="border-color:#5a4a22">AI assistant, not a licensed professional — for information and organization; see a real pro for decisions.</div>';
   h += '<div class="filetools"><button class="fbtn" data-t="read">🔊 Read aloud</button><button class="fbtn" data-t="copy">⧉ Copy</button><button class="fbtn" data-t="dl">⤓ Download .py</button></div>';
   h += '<div class="demo"><h4>WORKING DEMO</h4>' + demoTemplate(d) + '</div>';
-  h += '<div class="demo"><h4>TALK TO YOUR ' + escHtml(d.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something…" aria-label="Talk"><button data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  h += '<div class="demo"><h4>TALK TO YOUR ' + escHtml(d.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something…" aria-label="Talk"><button type="button" data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
   el.innerHTML = h;
   slot.innerHTML = ''; slot.appendChild(el);
   row.querySelector('[data-open]').textContent = 'Close file ✕';
@@ -1596,7 +1597,8 @@ function toggleDomain(d, row){
     if (auto.checked) TTS.speak(a, {});
   }
   el.querySelector('[data-t=send]').onclick = send;
-  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
+  setTimeout(function(){ say('a', domainReply(d, 'hello')); }, 400);
   el.scrollIntoView({behavior: 'smooth', block: 'nearest'});
 }
 /* ============ TELEPHONE DIRECTORY ============ */
@@ -1718,7 +1720,7 @@ function buildMixLab(){
       if (document.getElementById('hy-auto').checked) TTS.speak(a, {});
     }
     document.getElementById('hy-ask').onclick = hySend;
-    document.getElementById('hy-q').addEventListener('keydown', function(e){ if (e.key === 'Enter') hySend(); });
+    document.getElementById('hy-q').addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) hySend(); });
     hySay('a', hybridReply('hello'));
     document.getElementById('hy-read').onclick = function(){ TTS.speak(hy.name + '. ' + hy.mentality + ' Abilities: ' + hy.abilities.join('. '), {}); };
     document.getElementById('hy-dl').onclick = function(){ downloadFile(hy.name.replace(/\W+/g, '_') + '.py', hybridPy(), 'text/x-python'); };
@@ -2072,7 +2074,7 @@ function forgeGenome(){
   h += '<table class="params">' + g.rows.map(function(r){ return '<tr><td>' + escHtml(r.slot) + '</td><td><b>' + r.code + '</b> (' + r.layerName + ')<br><span style="color:var(--dim)">' + escHtml(r.desc) + '</span></td></tr>'; }).join('') + '</table>';
   h += '<div class="sigmath"><div class="smh">SIGNATURE MATH</div>genome hash <b>' + g.math.hash + '</b><br>power score <b>' + g.math.power + '</b> (F=1, A=3, P=9 per block)<br>layer mix <b>F\u00D7' + g.math.mix.F + ' A\u00D7' + g.math.mix.A + ' P\u00D7' + g.math.mix.P + '</b><br>signature vector <b>[' + g.math.vec.join(', ') + ']</b></div>';
   h += '<div class="filetools"><button class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button class="fbtn" data-t="copy">\u29C9 Copy</button><button class="fbtn" data-t="dtxt">\u2913 Download .txt</button><button class="fbtn" data-t="dpy">\u2913 Download .py</button></div>';
-  h += '<div class="demo"><h4>TALK TO ' + escHtml(g.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk"><button data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  h += '<div class="demo"><h4>TALK TO ' + escHtml(g.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk"><button type="button" data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
   h += '</article>';
   out.innerHTML = h;
   var el = out.querySelector('.aifile');
@@ -2098,7 +2100,7 @@ function forgeGenome(){
     if (auto.checked) TTS.speak(a, {rate: g.rate, pitch: g.pitch});
   }
   el.querySelector('[data-t=send]').onclick = send;
-  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
   say('a', genomeReply(g, 'hello'));
   out.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
@@ -2131,7 +2133,7 @@ function wireTalk(el, ai, replyFn){
     if (auto.checked) TTS.speak(a, {});
   }
   el.querySelector('[data-t=send]').onclick = send;
-  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
   setTimeout(function(){ say('a', replyFn(ai, 'hello')); }, 400);
 }
 /* ============ AI ARENA ============ */
@@ -2265,7 +2267,7 @@ function renderDomainFile(d, mount){
   if (d.pro) h += '<div class="disclaimer">AI assistant, not a licensed professional \u2014 for information and organization; see a real pro for decisions.</div>';
   h += '<div class="filetools"><button class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button class="fbtn" data-t="copy">\u29C9 Copy</button><button class="fbtn" data-t="dl">\u2913 Download .py</button></div>';
   h += '<div class="demo"><h4>WORKING DEMO</h4>' + demoTemplate(d) + '</div>';
-  h += '<div class="demo"><h4>TALK TO YOUR ' + escHtml(d.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk"><button data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
+  h += '<div class="demo"><h4>TALK TO YOUR ' + escHtml(d.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk"><button type="button" data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
   el.innerHTML = h;
   mount.appendChild(el);
   wireDomainDemo(el, d);
@@ -2288,7 +2290,8 @@ function renderDomainFile(d, mount){
     if (auto.checked) TTS.speak(a, {});
   }
   el.querySelector('[data-t=send]').onclick = send;
-  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+  inp.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.keyCode === 13) send(); });
+  setTimeout(function(){ say('a', domainReply(d, 'hello')); }, 400);
   return el;
 }
 function openFile(id){
