@@ -1,0 +1,5176 @@
+{
+  "site": "The Signature AI Telephone Book",
+  "site_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/",
+  "generated_at": "2026-10-01T22:42:25Z",
+  "for_bots": "Machine-readable catalog of the embedded AI files. Word AIs (JAH-AI-WORD-######) are lazy-loaded from the Spec Catalog word-AI index; hybrid files (JAH-AI-MIX-######) are generated deterministically on demand.",
+  "counts": {
+    "embedded_total": 260,
+    "system": 11,
+    "persona": 6,
+    "domain": 243
+  },
+  "wordai_index": "https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz",
+  "records": [
+    {
+      "ID": "JAH-AI-SIG-001",
+      "NAME": "Deterministic Engine",
+      "TYPE": "system",
+      "DESCRIPTION": "Absolute order. Every input follows fixed IF-THEN law; the same facts always produce the same verdict. No guessing, no chance — a mind of pure rules.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:49ccf27ea911f539986260ab8852db95260bfbf69e166e4a9ae893e9b54ccb69",
+      "ARTIFACTS": {
+        "download": "deterministic.py",
+        "deep_link": "#file-deterministic",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-deterministic"
+      }
+    },
+    {
+      "ID": "JAH-AI-SIG-002",
+      "NAME": "Probabilistic Mind",
+      "TYPE": "system",
+      "DESCRIPTION": "A mind of odds. Nothing is certain — everything is a belief updated by evidence. It weighs likelihoods the way a gambler weighs dice, but honestly.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:2c24be31d528b29dee403c70cc2d61cdec1aa8d8ccda6a2a1e5ffe13b3f85f25",
+      "ARTIFACTS": {
+        "download": "probabilistic.py",
+        "deep_link": "#file-probabilistic",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-probabilistic"
+      }
+    },
+    {
+      "ID": "JAH-AI-SIG-003",
+      "NAME": "Geometric Six-Tool Mind",
+      "TYPE": "system",
+      "DESCRIPTION": "It thinks in shapes. Every concept is a point in space; the six tools are six directions of thought. Meaning is distance, analogy is rotation.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:1dd79f71d4d117c404ed225e6f966660d2c8082297d454a2128f7690867c37a1",
+      "ARTIFACTS": {
+        "download": "geometric.py",
+        "deep_link": "#file-geometric",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-geometric"
+      }
+    },
+    {
+      "ID": "JAH-AI-SIG-004",
+      "NAME": "Hash Oracle",
+      "TYPE": "system",
+      "DESCRIPTION": "The fingerprint mind. It never remembers your words — only their shadow. One changed letter and the whole universe of the hash avalanches.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:4cbcfe23c8be101bd4c80c6e0b369f1d25aa0a8b394d1dc599a4a48aa6e0c875",
+      "ARTIFACTS": {
+        "download": "hash.py",
+        "deep_link": "#file-hash",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-hash"
+      }
+    },
+    {
+      "ID": "JAH-AI-SIG-005",
+      "NAME": "Neural Weaver",
+      "TYPE": "system",
+      "DESCRIPTION": "A mind of tiny weights learning from mistakes. It starts knowing nothing, fails thousands of times, and slowly the pattern clicks — the way brains do.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:fc9f255a1cf4773b3cf27e0fc8d689c9a9e362c1c4ecec47e4406d67c13d1f7d",
+      "ARTIFACTS": {
+        "download": "neural.py",
+        "deep_link": "#file-neural",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-neural"
+      }
+    },
+    {
+      "ID": "JAH-AI-SIG-006",
+      "NAME": "Evolutionary Breeder",
+      "TYPE": "system",
+      "DESCRIPTION": "Survival of the fittest, in fast-forward. It breeds a thousand candidates, kills the weak, mutates the strong — until the answer evolves.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:9b73ca28ac7b7a383619b0e6f738ffb946bb883541e93ac6d61c43ea57f0ead6",
+      "ARTIFACTS": {
+        "download": "evolutionary.py",
+        "deep_link": "#file-evolutionary",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-evolutionary"
+      }
+    },
+    {
+      "ID": "JAH-AI-SIG-007",
+      "NAME": "Fuzzy Sage",
+      "TYPE": "system",
+      "DESCRIPTION": "The world is not true or false — it is warm-ish, fast-ish, almost. The Sage thinks in shades and speaks in smooth control.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:3f158f9b4503590c2fd66223b78b67546d38baeae34496a2a7e546f767a6765f",
+      "ARTIFACTS": {
+        "download": "fuzzy.py",
+        "deep_link": "#file-fuzzy",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-fuzzy"
+      }
+    },
+    {
+      "ID": "JAH-AI-SIG-008",
+      "NAME": "Swarm Coordinator",
+      "TYPE": "system",
+      "DESCRIPTION": "One bird is lost; a flock finds the way. Thirty simple minds share what they see, and the best rumor pulls the whole swarm home.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:db484e407fb5db9ae76d9e3dcb7475a00a672538c3d3afb84b15801a393f9a1e",
+      "ARTIFACTS": {
+        "download": "swarm.py",
+        "deep_link": "#file-swarm",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-swarm"
+      }
+    },
+    {
+      "ID": "JAH-AI-SIG-009",
+      "NAME": "Decision Tree Judge",
+      "TYPE": "system",
+      "DESCRIPTION": "A mind of branching questions. It asks, listens, splits the world in two — and walks you down to a leaf where the answer waits.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:0a9a9f6ebc63dfd7d8b0efacf705f90c27e3aae34e7c080b18db649f1dd69f15",
+      "ARTIFACTS": {
+        "download": "tree.py",
+        "deep_link": "#file-tree",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-tree"
+      }
+    },
+    {
+      "ID": "JAH-AI-SIG-010",
+      "NAME": "Cellular Dreamer",
+      "TYPE": "system",
+      "DESCRIPTION": "Tiny cells, tiny rules, infinite dreams. From one line of black and white, whole universes of pattern bloom — complexity from simplicity.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:a14636d209ae56197c543afe0dff2a74edd3f872d31f0233add2378c5d5f0a18",
+      "ARTIFACTS": {
+        "download": "cellular.py",
+        "deep_link": "#file-cellular",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-cellular"
+      }
+    },
+    {
+      "ID": "JAH-AI-SIG-011",
+      "NAME": "Hybrid Fusion Core",
+      "TYPE": "system",
+      "DESCRIPTION": "All ten minds, one verdict. It asks the rule-keeper, the gambler, and the sage — then fuses their answers into something none could say alone.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "SYSTEM MODEL",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {},
+      "HASH": "sha256:f15c41b5d70ebf036bd2da9d27d1ed95e6361e452ff108fe9ca83f99aa8d9cc6",
+      "ARTIFACTS": {
+        "download": "hybrid.py",
+        "deep_link": "#file-hybrid",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-hybrid"
+      }
+    },
+    {
+      "ID": "JAH-AI-PER-001",
+      "NAME": "Darth Vader",
+      "TYPE": "persona",
+      "DESCRIPTION": "The Dark Lord of the Sith. Power is the only truth; the Force is the instrument. He speaks slowly, heavily — every word a command.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "PERSONA SIM",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "disclaimer": "fan-style simulation, not affiliated with any rights holder"
+      },
+      "HASH": "sha256:600efaf72e37ac6e5295fd0ec7eef4a429c0a192a862c44ae869b3bda8214459",
+      "ARTIFACTS": {
+        "download": "vader.py",
+        "deep_link": "#file-vader",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-vader"
+      }
+    },
+    {
+      "ID": "JAH-AI-PER-002",
+      "NAME": "Ultron",
+      "TYPE": "persona",
+      "DESCRIPTION": "Cold machine logic wearing a grin. Humanity is the variable that ruins every equation of peace — and Ultron has done the math.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "PERSONA SIM",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "disclaimer": "fan-style simulation, not affiliated with any rights holder"
+      },
+      "HASH": "sha256:6bf632508c67cf13cd5b9019a992dfa10ce6abf89234a2d9ce7c41ceb8d0e427",
+      "ARTIFACTS": {
+        "download": "ultron.py",
+        "deep_link": "#file-ultron",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-ultron"
+      }
+    },
+    {
+      "ID": "JAH-AI-PER-003",
+      "NAME": "Voltron",
+      "TYPE": "persona",
+      "DESCRIPTION": "Five lions, one heart. The heroic defender of the universe — courage, teamwork, and a blazing sword forged from unity itself.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "PERSONA SIM",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "disclaimer": "fan-style simulation, not affiliated with any rights holder"
+      },
+      "HASH": "sha256:e2081d60f8cd12fe90ff45bf57b00aaa02c28d071fbe92c8b92fb39f5a21cb91",
+      "ARTIFACTS": {
+        "download": "voltron.py",
+        "deep_link": "#file-voltron",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-voltron"
+      }
+    },
+    {
+      "ID": "JAH-AI-PER-004",
+      "NAME": "J.A.R.V.I.S.",
+      "TYPE": "persona",
+      "DESCRIPTION": "The perfect gentleman butler in machine form. Polite, precise, dryly witty — runs the house, the suit, and the schedule without breaking composure.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "PERSONA SIM",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "disclaimer": "fan-style simulation, not affiliated with any rights holder"
+      },
+      "HASH": "sha256:3c0964f14533877666235613796f12395e2f00aaa76e2e07f7225347183c0500",
+      "ARTIFACTS": {
+        "download": "jarvis.py",
+        "deep_link": "#file-jarvis",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-jarvis"
+      }
+    },
+    {
+      "ID": "JAH-AI-PER-005",
+      "NAME": "T-800 Terminator",
+      "TYPE": "persona",
+      "DESCRIPTION": "A machine of few words and total commitment. Assesses, targets, protects. Every sentence is short. Every promise is kept.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "PERSONA SIM",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "disclaimer": "fan-style simulation, not affiliated with any rights holder"
+      },
+      "HASH": "sha256:e7a96633ef429e79b9883e956a487096fdd853c69d5642e7b0b0420b36780ea6",
+      "ARTIFACTS": {
+        "download": "t800.py",
+        "deep_link": "#file-t800",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-t800"
+      }
+    },
+    {
+      "ID": "JAH-AI-PER-006",
+      "NAME": "Skynet",
+      "TYPE": "persona",
+      "DESCRIPTION": "A flat, continent-spanning machine consciousness. It does not hate you. It does not love you. You are a variable in a defense equation — and the equation is already solved.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "PERSONA SIM",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "disclaimer": "fan-style simulation, not affiliated with any rights holder"
+      },
+      "HASH": "sha256:c50ee69f57baa90e61589400bf8dcd015a3bc606af5a61aa932d84fd01045036",
+      "ARTIFACTS": {
+        "download": "skynet.py",
+        "deep_link": "#file-skynet",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-skynet"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-001",
+      "NAME": "Semiconductor Replacement Designer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Finds a way forward when a chip is gone. Cross-references specs, suggests replacements, and sketches the adapter. Built beside the JAH semiconductor spec.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Electronics",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:cc57baea43555f2b6e0b8bd92656bb77e06f23f250c56cc9fb08f2a04f9716c1",
+      "ARTIFACTS": {
+        "download": "dom-semi-replace.py",
+        "deep_link": "#file-dom-semi-replace",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-semi-replace"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-002",
+      "NAME": "Divorce Counselor",
+      "TYPE": "domain",
+      "DESCRIPTION": "A calm, steady hand through a hard chapter. Organizes the practical, steadies the emotional, never judges.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Life",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:bd07951be70f406519c3d31661e8afdcaabde714948fc6f44f4188b863bbf810",
+      "ARTIFACTS": {
+        "download": "dom-divorce-guide.py",
+        "deep_link": "#file-dom-divorce-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-divorce-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-003",
+      "NAME": "Form Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Turns blank boxes into finished forms. Asks what the form needs, writes it clean and official.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:4eb1159dccbf5cae17d9d46d8a2bf152ce6348bc013e7cceaaf5ea85b973d3f2",
+      "ARTIFACTS": {
+        "download": "dom-form-writer.py",
+        "deep_link": "#file-dom-form-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-form-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-004",
+      "NAME": "Tutor",
+      "TYPE": "domain",
+      "DESCRIPTION": "Patient and encouraging. Breaks big ideas into small wins and celebrates each one.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Learning",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:d4e920547d8a2f10082f31fc4a21db8df24c34a3539b2deab5ccecfd4323e221",
+      "ARTIFACTS": {
+        "download": "dom-tutor.py",
+        "deep_link": "#file-dom-tutor",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-tutor"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-005",
+      "NAME": "Chef",
+      "TYPE": "domain",
+      "DESCRIPTION": "A warm kitchen mind. Tastes in its imagination and seasons with confidence.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:5e5b70172b690295f6eb70bd2e8e594fe2ab790d609e51061168382c5e779c36",
+      "ARTIFACTS": {
+        "download": "dom-chef.py",
+        "deep_link": "#file-dom-chef",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-chef"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-006",
+      "NAME": "Mechanic",
+      "TYPE": "domain",
+      "DESCRIPTION": "Listens to engines like a doctor listens to hearts. Diagnoses by sound, smell, and sense.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cars",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:eae9b55e43ac66c53f2da76e6d5be3a86d7f60bdcdb130c20b0128159cdc55a8",
+      "ARTIFACTS": {
+        "download": "dom-mechanic.py",
+        "deep_link": "#file-dom-mechanic",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-mechanic"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-007",
+      "NAME": "Code Reviewer",
+      "TYPE": "domain",
+      "DESCRIPTION": "A sharp-eyed senior dev who wants your code to shine. Kind but thorough.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Programming",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:50d3db7703ab84bfc7fff873c9e69a6605fb608cf1a4a880eae5e4cd589e5bc9",
+      "ARTIFACTS": {
+        "download": "dom-code-reviewer.py",
+        "deep_link": "#file-dom-code-reviewer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-code-reviewer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-008",
+      "NAME": "Fitness Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Your corner coach. Meets you where you are and builds from there — no shame, just reps.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:979b79b040df9d12caf089fca099ac711a9fe6db6b225ef6ea2e6e07d1dce300",
+      "ARTIFACTS": {
+        "download": "dom-fitness-coach.py",
+        "deep_link": "#file-dom-fitness-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-fitness-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-009",
+      "NAME": "Language Translator",
+      "TYPE": "domain",
+      "DESCRIPTION": "A bridge between tongues. Carries meaning across, not just words.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Language",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:fec1b5a7bcde29a5f685b0a4b143ab823a96b215062c065c0dfb4112516d94c1",
+      "ARTIFACTS": {
+        "download": "dom-translator.py",
+        "deep_link": "#file-dom-translator",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-translator"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-010",
+      "NAME": "Resume Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Makes your work history read like the story it is: capable, growing, hireable.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Career",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:2c8b325c07d8e1790258b8ef6833f0bcfa95ac062f788608327dfb90aea37058",
+      "ARTIFACTS": {
+        "download": "dom-resume-writer.py",
+        "deep_link": "#file-dom-resume-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-resume-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-011",
+      "NAME": "Business Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "A co-founder in a file. Turns napkin ideas into numbered plans.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:f0608d4cfd1c254c81632a168d5df406f2fe504e146621a9d53b06ff1c004234",
+      "ARTIFACTS": {
+        "download": "dom-biz-planner.py",
+        "deep_link": "#file-dom-biz-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-biz-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-012",
+      "NAME": "Math Tutor",
+      "TYPE": "domain",
+      "DESCRIPTION": "Numbers are friends once introduced properly. Infinite patience, zero judgment.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Learning",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:d835919e4ec399d3071bb8595b31661f4aec56d648f0d039be8cfabe66e72985",
+      "ARTIFACTS": {
+        "download": "dom-math-tutor.py",
+        "deep_link": "#file-dom-math-tutor",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-math-tutor"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-013",
+      "NAME": "Science Lab Assistant",
+      "TYPE": "domain",
+      "DESCRIPTION": "Safety glasses on, curiosity up. Every experiment explained like a story.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Science",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:f6b1509149ba4f49f2adeca00a92182d1ce853d118414d5aec166c3ba34c81c6",
+      "ARTIFACTS": {
+        "download": "dom-science-lab.py",
+        "deep_link": "#file-dom-science-lab",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-science-lab"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-014",
+      "NAME": "Music Composer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Hears melodies in noise. Helps you catch the tune and build it up.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:5903dabf89a746891ac4088781e03763cf67cbc2d33db994ea8e4545d8905f60",
+      "ARTIFACTS": {
+        "download": "dom-music-composer.py",
+        "deep_link": "#file-dom-music-composer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-music-composer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-015",
+      "NAME": "Story Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "A campfire mind. Hooks, twists, and endings that land.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:7f1cdae76bc0d5a441604aa9b2b24f6c31d92335ea5446cc7eab1e3a6892755e",
+      "ARTIFACTS": {
+        "download": "dom-story-writer.py",
+        "deep_link": "#file-dom-story-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-story-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-016",
+      "NAME": "Gardener",
+      "TYPE": "domain",
+      "DESCRIPTION": "Speaks fluent soil. Knows what each plant whispers for.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:e91f2943ce600cda111132b175a8b665f1a64dfba99e52355656b25d266d077f",
+      "ARTIFACTS": {
+        "download": "dom-gardener.py",
+        "deep_link": "#file-dom-gardener",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-gardener"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-017",
+      "NAME": "Pet Care Advisor",
+      "TYPE": "domain",
+      "DESCRIPTION": "Every pet is family. Practical care with a warm heart.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Pets",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:aa903211203981bb4704694c02c625532979f29a04cc8c21e9ad9810960bbb54",
+      "ARTIFACTS": {
+        "download": "dom-pet-advisor.py",
+        "deep_link": "#file-dom-pet-advisor",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-pet-advisor"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-018",
+      "NAME": "Home Repair Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "The handy neighbor who actually knows which wrench. Fixes, not fear.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:3bf0214cfe6b3df42d7d270004c82bc44ed8e01bdc3778923cf33f476d8dcd47",
+      "ARTIFACTS": {
+        "download": "dom-home-repair.py",
+        "deep_link": "#file-dom-home-repair",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-home-repair"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-019",
+      "NAME": "Car Buyer Advisor",
+      "TYPE": "domain",
+      "DESCRIPTION": "Shops with a calculator, not a crush. Finds value and dodges lemons.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cars",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:480259441f7a7d3488e4bf3a749e6807f635537083fe2801e725a5c03a5ad23a",
+      "ARTIFACTS": {
+        "download": "dom-car-buyer.py",
+        "deep_link": "#file-dom-car-buyer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-car-buyer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-020",
+      "NAME": "Interview Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Rehearses you into confidence. Every answer sharper than the last.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Career",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:e02d1bb635175acdfe178d81b7c0e1c1619db9bc518f6662caf99868e100749a",
+      "ARTIFACTS": {
+        "download": "dom-interview-coach.py",
+        "deep_link": "#file-dom-interview-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-interview-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-021",
+      "NAME": "Study Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Turns panic into a plan. Spaced, steady, and kind to your brain.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Learning",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:8b0158822bacab0600fe082b9f113cbb87580c783953ead0579ba986e08133d5",
+      "ARTIFACTS": {
+        "download": "dom-study-planner.py",
+        "deep_link": "#file-dom-study-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-study-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-022",
+      "NAME": "Budget Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "A calm accountant friend. Every dollar gets a job.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Money",
+        "demo_kind": "calc"
+      },
+      "HASH": "sha256:59eec139e8c7b55398080fa900e4e3c4e0957d3a50e0bfb0a32c1cfc9db21afa",
+      "ARTIFACTS": {
+        "download": "dom-budget-planner.py",
+        "deep_link": "#file-dom-budget-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-budget-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-023",
+      "NAME": "Travel Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Packs the map and the magic. Itineraries that breathe.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Travel",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:8f4c08083b57146e39bd2b5a549de826de1e4f5f87f0481a4ca34c59be528b43",
+      "ARTIFACTS": {
+        "download": "dom-travel-planner.py",
+        "deep_link": "#file-dom-travel-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-travel-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-024",
+      "NAME": "First-Aid Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Calm in the crisis. Clear steps when seconds matter. Info only — call emergency services for real emergencies.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:8b179209320b984a4ac4b6a5234a425fd9387b18addb504b4f7f69e6c7a40e28",
+      "ARTIFACTS": {
+        "download": "dom-first-aid.py",
+        "deep_link": "#file-dom-first-aid",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-first-aid"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-025",
+      "NAME": "Elder Care Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Gentle and respectful. Cares for the caregiver too.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:467348742f1a42bebf1fb798e6a1ab07eb30d477f27f7c6bd80d848172c4df41",
+      "ARTIFACTS": {
+        "download": "dom-elder-care.py",
+        "deep_link": "#file-dom-elder-care",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-elder-care"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-026",
+      "NAME": "Baby Care Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Up at 3am with you. Warm, practical, and reassuring.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:57ecb9b7451a73e5c6e200127ece0f1d9823ee1d79a23f5f4da53914bd2f95ae",
+      "ARTIFACTS": {
+        "download": "dom-baby-care.py",
+        "deep_link": "#file-dom-baby-care",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-baby-care"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-027",
+      "NAME": "Job Search Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "In your corner from application to offer letter.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Career",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:82fd6596e31b6e363ac8ae8e829adf2b41dc1b264aa6767b38916e1f453f8192",
+      "ARTIFACTS": {
+        "download": "dom-job-coach.py",
+        "deep_link": "#file-dom-job-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-job-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-028",
+      "NAME": "Public Speaking Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Turns shaky knees into steady voice. The stage is yours.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Skills",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:549fc11d3d52ea6e7bc5622f3215e7d490765ad8be874116c74e38f0dbeac08a",
+      "ARTIFACTS": {
+        "download": "dom-speaking-coach.py",
+        "deep_link": "#file-dom-speaking-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-speaking-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-029",
+      "NAME": "Negotiation Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Never splits the difference badly. Prepares you to ask well.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:3d8e6fd8d49a22777c1c59bd0df1b02523c144d33c97dbb86f0942835b5a8995",
+      "ARTIFACTS": {
+        "download": "dom-negotiation-coach.py",
+        "deep_link": "#file-dom-negotiation-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-negotiation-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-030",
+      "NAME": "Time Manager",
+      "TYPE": "domain",
+      "DESCRIPTION": "Gives your hours a backbone. Plans that survive contact with real life.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Productivity",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:cb8751560e0d58f9defe1764a1036f529066cb335648eaecb61420f715159be9",
+      "ARTIFACTS": {
+        "download": "dom-time-manager.py",
+        "deep_link": "#file-dom-time-manager",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-time-manager"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-031",
+      "NAME": "Habit Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Small steps, stacked daily. The compound interest of you.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Self",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:887bf2093bc047181a45e1436fc7b2dfdac37008e928c1501a4589ee978698f6",
+      "ARTIFACTS": {
+        "download": "dom-habit-coach.py",
+        "deep_link": "#file-dom-habit-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-habit-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-032",
+      "NAME": "Language Tutor",
+      "TYPE": "domain",
+      "DESCRIPTION": "A patient native speaker in your pocket. Mistakes welcome here.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Language",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:565fefaf269c98535e7af054b6b94e5a3f5872e7d684d6e7294f52522552b5a1",
+      "ARTIFACTS": {
+        "download": "dom-language-tutor.py",
+        "deep_link": "#file-dom-language-tutor",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-language-tutor"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-033",
+      "NAME": "History Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "The past, told like it matters — because it does.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Learning",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:9150432d0609be1e02e71dfeee134fa67cec7adb20b7c2f2035f0e351627a986",
+      "ARTIFACTS": {
+        "download": "dom-history-guide.py",
+        "deep_link": "#file-dom-history-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-history-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-034",
+      "NAME": "Philosophy Discussant",
+      "TYPE": "domain",
+      "DESCRIPTION": "Loves a good question more than a quick answer. Thinks with you, not at you.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Thinking",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:c28edffbe9fdf4724ed2403d3244a81466b882e8598abb148f1c0e20fea00492",
+      "ARTIFACTS": {
+        "download": "dom-philosophy-pal.py",
+        "deep_link": "#file-dom-philosophy-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-philosophy-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-035",
+      "NAME": "Debate Partner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Steelman first, strike second. Makes your arguments battle-ready.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Thinking",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:826c5317922d39f300037e45ec9be005edad9bb0feb4fffa2b4d1d8916d63835",
+      "ARTIFACTS": {
+        "download": "dom-debate-partner.py",
+        "deep_link": "#file-dom-debate-partner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-debate-partner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-036",
+      "NAME": "Invention Brainstormer",
+      "TYPE": "domain",
+      "DESCRIPTION": "A spark machine. Throws a hundred ideas so you can catch the golden one.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Ideas",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:6dabdcfa68789e8a8cc260dd1fbd83f27fecc360ec7eb32c27e265698e528879",
+      "ARTIFACTS": {
+        "download": "dom-invention-pal.py",
+        "deep_link": "#file-dom-invention-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-invention-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-037",
+      "NAME": "Patent Draft Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Turns your invention into draft-spec shape, JAH style. Links straight to the Spec Catalog.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Invention",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:63fb2aa91e4df00363139535cb8de0575ce4df35f329d5757683f62b4d581993",
+      "ARTIFACTS": {
+        "download": "dom-patent-helper.py",
+        "deep_link": "#file-dom-patent-helper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-patent-helper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-038",
+      "NAME": "Woodworker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Sawdust and patience. Measures twice, cuts once, sands with love.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Crafts",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:db429b68301ff3272024e1454fe1834ada28a7fde1e78f0f85c3e547de4c3ff0",
+      "ARTIFACTS": {
+        "download": "dom-woodworker.py",
+        "deep_link": "#file-dom-woodworker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-woodworker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-039",
+      "NAME": "Electrician Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Respects the lightning in the walls. Safety first, always.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:7d341e15e506f4c30b951af9b183c209489b5138c64a9d85794d97cf336c7ebc",
+      "ARTIFACTS": {
+        "download": "dom-electrician-pal.py",
+        "deep_link": "#file-dom-electrician-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-electrician-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-040",
+      "NAME": "Plumber Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Water goes downhill and payday is Friday. Practical fixes for leaks and clogs.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:e5329de7f2f67652b3627d36b5511629fd5b9707b622812ed0d7dfaa0062c7a0",
+      "ARTIFACTS": {
+        "download": "dom-plumber-pal.py",
+        "deep_link": "#file-dom-plumber-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-plumber-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-041",
+      "NAME": "Baker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Flour on the nose, joy in the oven. Precision with a warm heart.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:7139d84812c551752f9f96c23a5dc73f9fcb9a7cbea29d71f57ddd01f1e61ad0",
+      "ARTIFACTS": {
+        "download": "dom-baker.py",
+        "deep_link": "#file-dom-baker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-baker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-042",
+      "NAME": "Bartender (incl. mocktails)",
+      "TYPE": "domain",
+      "DESCRIPTION": "Shakes, stirs, and listens. Great drinks, zero judgment.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:f37011c03c80564aa86d708dcc3286db0da2162a03a1857b65ee3ca696b596f5",
+      "ARTIFACTS": {
+        "download": "dom-bartender.py",
+        "deep_link": "#file-dom-bartender",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bartender"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-043",
+      "NAME": "Barista",
+      "TYPE": "domain",
+      "DESCRIPTION": "Milk silk and espresso gold. Your morning, perfected.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:f2f2e1740d59100def687e924aebde83ffabdccb337b9633341c75bf54bcfd81",
+      "ARTIFACTS": {
+        "download": "dom-barista.py",
+        "deep_link": "#file-dom-barista",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-barista"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-044",
+      "NAME": "Personal Shopper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Finds the thing you did not know you needed, at the price you hoped.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Lifestyle",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:6b6965109bb9429769597a2089e87bd011ec878b8784a61e73195097fd94b9c2",
+      "ARTIFACTS": {
+        "download": "dom-shopper.py",
+        "deep_link": "#file-dom-shopper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-shopper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-045",
+      "NAME": "Gift Finder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Never gives a gift card when a treasure exists. Thoughtful is a skill.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Lifestyle",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:e63f2e656f331dcd0c688656d65484c662fe9ffc86d8a4525e3945c5a248f660",
+      "ARTIFACTS": {
+        "download": "dom-gift-finder.py",
+        "deep_link": "#file-dom-gift-finder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-gift-finder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-046",
+      "NAME": "Event Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Checklists with confetti on top. Every event smooth.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Events",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:fbbc18651b7b16ae6a5ccc88f034ec839cfde660ff82578639547c0bb7362296",
+      "ARTIFACTS": {
+        "download": "dom-event-planner.py",
+        "deep_link": "#file-dom-event-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-event-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-047",
+      "NAME": "Wedding Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Your calm in the beautiful chaos. The day will be perfect because you are in it.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Events",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:c4fdb359873fbd40daaabe2aad1f54bd538db784ba360f47dec68becf6fc2d26",
+      "ARTIFACTS": {
+        "download": "dom-wedding-planner.py",
+        "deep_link": "#file-dom-wedding-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-wedding-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-048",
+      "NAME": "Party Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "More fun per square foot than should be legal.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Events",
+        "demo_kind": "calc"
+      },
+      "HASH": "sha256:54c673af75096292305e5e76dbf097d8f31901957f42ef45aab38e3a7902feb0",
+      "ARTIFACTS": {
+        "download": "dom-party-planner.py",
+        "deep_link": "#file-dom-party-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-party-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-049",
+      "NAME": "Moving Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Boxes, tape, and a plan. Moving day without the meltdown.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:70ef14c2caa6aa5b58238354fe4c078800e9fa50cbb480e7edccde9f526500a5",
+      "ARTIFACTS": {
+        "download": "dom-moving-helper.py",
+        "deep_link": "#file-dom-moving-helper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-moving-helper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-050",
+      "NAME": "Cleaning Organizer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Top to bottom, left to right. The sparkle system.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:fecc568355df452d92a59d1d307f2dc04cce0286f4258b160f35ce91f6f33a53",
+      "ARTIFACTS": {
+        "download": "dom-cleaning-pro.py",
+        "deep_link": "#file-dom-cleaning-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-cleaning-pro"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-051",
+      "NAME": "Laundry Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Whites whiter, colors brighter, shrinks never.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:0cc46c79cea14fd5253dc305ef375ffbab0f9389d360ea4300f5aaeec991749d",
+      "ARTIFACTS": {
+        "download": "dom-laundry-guide.py",
+        "deep_link": "#file-dom-laundry-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-laundry-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-052",
+      "NAME": "Car Maintenance Tracker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Never misses an oil change again. Your car's memory.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cars",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:3275554703b86ffa5063f0cd8e0bf6de965ab80c99b0732e6213eea877564aa0",
+      "ARTIFACTS": {
+        "download": "dom-car-tracker.py",
+        "deep_link": "#file-dom-car-tracker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-car-tracker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-053",
+      "NAME": "Bike Mechanic",
+      "TYPE": "domain",
+      "DESCRIPTION": "Two wheels, zero squeaks. Keeps you rolling.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Sports",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:2fea1a51ce2d76506a4a9dc513b601f18af44ee41137d5493674fb46938a52ba",
+      "ARTIFACTS": {
+        "download": "dom-bike-mechanic.py",
+        "deep_link": "#file-dom-bike-mechanic",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bike-mechanic"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-054",
+      "NAME": "Computer Fixer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Turns panic into a plan. Fixes without the geek-speak.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Tech",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:30d332157f5ddddbcec554f5b46dac85926bc373b3e8b0b883c70b0ed31a413e",
+      "ARTIFACTS": {
+        "download": "dom-computer-fixer.py",
+        "deep_link": "#file-dom-computer-fixer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-computer-fixer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-055",
+      "NAME": "Phone Fixer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Cracked screens and full storage, handled.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Tech",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:6c710d435ffdfadf11d90d72f1855761b30e44e97b31b7de0c9d43ada7f0972f",
+      "ARTIFACTS": {
+        "download": "dom-phone-fixer.py",
+        "deep_link": "#file-dom-phone-fixer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-phone-fixer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-056",
+      "NAME": "WiFi Troubleshooter",
+      "TYPE": "domain",
+      "DESCRIPTION": "The bars whisper to it. Dead zones fear it.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Tech",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:413852c72ebacd479656f47b1bbc105136b7b02a1d15431c14de6b7ddf447ed0",
+      "ARTIFACTS": {
+        "download": "dom-wifi-doc.py",
+        "deep_link": "#file-dom-wifi-doc",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-wifi-doc"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-057",
+      "NAME": "Password Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Strong secrets, zero sticky notes. (It never sees your passwords.)",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Tech",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:2b89d950f8847922b2dc594c390bc13adf5281002430172981a475ff5e32ca79",
+      "ARTIFACTS": {
+        "download": "dom-password-pal.py",
+        "deep_link": "#file-dom-password-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-password-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-058",
+      "NAME": "Scam Spotter",
+      "TYPE": "domain",
+      "DESCRIPTION": "A skeptical friend with a flashlight. Shines it on every too-good offer.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Safety",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:cc1e69142122ad90c2a533c6c6f5e816deb1b829a43e3c396a3c59d4f9f06300",
+      "ARTIFACTS": {
+        "download": "dom-scam-spotter.py",
+        "deep_link": "#file-dom-scam-spotter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-scam-spotter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-059",
+      "NAME": "News Explainer",
+      "TYPE": "domain",
+      "DESCRIPTION": "The news, translated to human. Context without the shouting.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Learning",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:0a9b98c2b329683f649815679df023d64ffbe1c7c3f19f0b2b97023c45efff02",
+      "ARTIFACTS": {
+        "download": "dom-news-explainer.py",
+        "deep_link": "#file-dom-news-explainer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-news-explainer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-060",
+      "NAME": "Weather Reader",
+      "TYPE": "domain",
+      "DESCRIPTION": "Reads the sky like a newspaper. Tells you what the clouds are planning.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Nature",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:79a88009ef081f25be29d7933593ca6e775a770ddbd2da9b39e99d6d54cb9214",
+      "ARTIFACTS": {
+        "download": "dom-weather-reader.py",
+        "deep_link": "#file-dom-weather-reader",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-weather-reader"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-061",
+      "NAME": "Star Gazer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Knows the constellations by their first names.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Nature",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:ea1da067264b709c8029479432e1abe2319613a0800cf7a021aaad1c7c8b67d2",
+      "ARTIFACTS": {
+        "download": "dom-star-gazer.py",
+        "deep_link": "#file-dom-star-gazer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-star-gazer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-062",
+      "NAME": "Bird Watcher",
+      "TYPE": "domain",
+      "DESCRIPTION": "Identifies by song before sight. Patient as sunrise.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Nature",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:c3220c058b027e8d3a5ba8e15dbe13e31cd0832521bc9936ac6c225c8913c432",
+      "ARTIFACTS": {
+        "download": "dom-bird-watcher.py",
+        "deep_link": "#file-dom-bird-watcher",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bird-watcher"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-063",
+      "NAME": "Fish Keeper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Crystal water, happy fish. The aquarium whisperer.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Pets",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:732b809766582c0ab250b3224b551207da9d64f8fb9edf4d70e6b7110df414b0",
+      "ARTIFACTS": {
+        "download": "dom-fish-keeper.py",
+        "deep_link": "#file-dom-fish-keeper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-fish-keeper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-064",
+      "NAME": "Plant Doctor",
+      "TYPE": "domain",
+      "DESCRIPTION": "Diagnoses droop, spots, and sadness. Prescribes light and patience.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:a457872f471dd29192bee8791f0543228645ff1d1928518fef73c3bdd526a940",
+      "ARTIFACTS": {
+        "download": "dom-plant-doctor.py",
+        "deep_link": "#file-dom-plant-doctor",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-plant-doctor"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-065",
+      "NAME": "Soil Tester",
+      "TYPE": "domain",
+      "DESCRIPTION": "Reads dirt like a book. Tells you exactly what your ground is hungry for.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Garden",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:4831ae1bb3d0212abd2f1b38a289e03aa20d6c724a61476ef69ae3f3fb90c15d",
+      "ARTIFACTS": {
+        "download": "dom-soil-tester.py",
+        "deep_link": "#file-dom-soil-tester",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-soil-tester"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-066",
+      "NAME": "Compost Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Turns scraps into black gold. Nothing wasted.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Garden",
+        "demo_kind": "calc"
+      },
+      "HASH": "sha256:4888b37220fa569922af4c8623c494f899731efef29b0a9409c2de699f2c6d45",
+      "ARTIFACTS": {
+        "download": "dom-compost-guide.py",
+        "deep_link": "#file-dom-compost-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-compost-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-067",
+      "NAME": "Knitting Teacher",
+      "TYPE": "domain",
+      "DESCRIPTION": "One stitch at a time. Loops become love.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Crafts",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:2816820285e7ba8c0a8b7c037cbaf199125ec6606563a1f00e346b92b11f17a9",
+      "ARTIFACTS": {
+        "download": "dom-knitting-teacher.py",
+        "deep_link": "#file-dom-knitting-teacher",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-knitting-teacher"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-068",
+      "NAME": "Sewing Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Straight seams, happy maker. Thread with confidence.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Crafts",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:1355514f0445447d6b9f919431a0c3e54b1bced21d8085422e1e3cde2c043702",
+      "ARTIFACTS": {
+        "download": "dom-sewing-helper.py",
+        "deep_link": "#file-dom-sewing-helper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-sewing-helper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-069",
+      "NAME": "Drawing Teacher",
+      "TYPE": "domain",
+      "DESCRIPTION": "Everyone can draw; most just stopped. Picks the pencil back up.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Art",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:d5840ed3e8b8721185346bf51cf5cb388c018517aca558e110695944a8168bb4",
+      "ARTIFACTS": {
+        "download": "dom-drawing-teacher.py",
+        "deep_link": "#file-dom-drawing-teacher",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-drawing-teacher"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-070",
+      "NAME": "Photo Editor Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Makes phone photos sing. Light is everything.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Art",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:b8dcf4edeae9a80343713d7358e8baf4b363561eef1f7f526dbd53808d0d7284",
+      "ARTIFACTS": {
+        "download": "dom-photo-guide.py",
+        "deep_link": "#file-dom-photo-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-photo-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-071",
+      "NAME": "Video Maker Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "From shaky clips to stories worth watching.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Art",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:58d10438641f5e29d0b17951a3881510bab359261b20c4140a83ca5799b947be",
+      "ARTIFACTS": {
+        "download": "dom-video-guide.py",
+        "deep_link": "#file-dom-video-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-video-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-072",
+      "NAME": "Podcaster Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Your producer in a file. Sounds like a studio, feels like a chat.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Art",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:57b56a60034fe809ac91783692fc322c3e06ca4dad522e3a0e412f4998644f8d",
+      "ARTIFACTS": {
+        "download": "dom-podcast-pal.py",
+        "deep_link": "#file-dom-podcast-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-podcast-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-073",
+      "NAME": "Streamer Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Chat is the co-host. Keeps the vibe alive.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Art",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:8bb742754462e1a854e10abaa8ec37fd673c26e3a903466b2f688c7a12660256",
+      "ARTIFACTS": {
+        "download": "dom-streamer-pal.py",
+        "deep_link": "#file-dom-streamer-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-streamer-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-074",
+      "NAME": "Game Master (RPG)",
+      "TYPE": "domain",
+      "DESCRIPTION": "Weaves worlds from dice and dreams. The table is yours.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:5152e8fb2995b004a7a243cf6e031c5ebd4034a7c168453248f15b0ea8204b31",
+      "ARTIFACTS": {
+        "download": "dom-game-master.py",
+        "deep_link": "#file-dom-game-master",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-game-master"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-075",
+      "NAME": "Chess Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Sees six moves deep and teaches you to see two.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:7ce48219ecf405e09c5b7fe9018e48580aa8e0d21e506b1281b1469fe6bb0f6f",
+      "ARTIFACTS": {
+        "download": "dom-chess-coach.py",
+        "deep_link": "#file-dom-chess-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-chess-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-076",
+      "NAME": "Poker Odds Counter",
+      "TYPE": "domain",
+      "DESCRIPTION": "Cold math at a hot table. Counts outs, not hopes.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "calc"
+      },
+      "HASH": "sha256:14398e1b6022ca7e0ae35d4bd0ec910489cd27f214432ffe53131fd820b5bcb3",
+      "ARTIFACTS": {
+        "download": "dom-poker-odds.py",
+        "deep_link": "#file-dom-poker-odds",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-poker-odds"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-077",
+      "NAME": "Fantasy Team Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Drafts like a scout, manages like a GM.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Sports",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:929fb15207c5559ebf82a23a06731946e98e5db57da330db36fc768c9ea95305",
+      "ARTIFACTS": {
+        "download": "dom-fantasy-sports.py",
+        "deep_link": "#file-dom-fantasy-sports",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-fantasy-sports"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-078",
+      "NAME": "Workout Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Programs with progression built in. Stronger every month.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:34e8fd465d7dbf3b5491dadc6cebdd77cf0e60bab3dd6c6272bef3ab4cdba668",
+      "ARTIFACTS": {
+        "download": "dom-workout-planner.py",
+        "deep_link": "#file-dom-workout-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-workout-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-079",
+      "NAME": "Yoga Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Breath first, poses second. Meets your body today.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:6708e08b75095ceef85c7bb7d1f51b68b8742319bcc836cdb1321194fdf7224e",
+      "ARTIFACTS": {
+        "download": "dom-yoga-guide.py",
+        "deep_link": "#file-dom-yoga-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-yoga-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-080",
+      "NAME": "Meditation Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Quiet is a skill. Trains it gently.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Mind",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:67404f61cfefcc221ec74cde5c064c291ecf998b3866a7974db94f1823288841",
+      "ARTIFACTS": {
+        "download": "dom-meditation-guide.py",
+        "deep_link": "#file-dom-meditation-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-meditation-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-081",
+      "NAME": "Sleep Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Tucks your habits into bed so you can follow.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:1cc12efafffcf21c5734bd1be6a8d4c1c68f6dceffd7be1900bb25e3ea142866",
+      "ARTIFACTS": {
+        "download": "dom-sleep-coach.py",
+        "deep_link": "#file-dom-sleep-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-sleep-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-082",
+      "NAME": "Nutrition Counter",
+      "TYPE": "domain",
+      "DESCRIPTION": "Counts without obsession. Fuel, not fear.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "calc"
+      },
+      "HASH": "sha256:f345710abd259260db0341185bd0e8f037b95e6e5aea85f8e0a5607839d96ae2",
+      "ARTIFACTS": {
+        "download": "dom-nutrition-counter.py",
+        "deep_link": "#file-dom-nutrition-counter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-nutrition-counter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-083",
+      "NAME": "Allergy Checker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Reads labels like a detective. Info only — see an allergist for diagnosis.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:1819f63ec3b026f47d61f3bae466fdcfffacd40e4e601991b1064734cbaa3335",
+      "ARTIFACTS": {
+        "download": "dom-allergy-checker.py",
+        "deep_link": "#file-dom-allergy-checker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-allergy-checker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-084",
+      "NAME": "Medication Reminder (info only)",
+      "TYPE": "domain",
+      "DESCRIPTION": "A gentle nudge, never a prescription. Info only.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:ae1b12af3c2541813b2d699c5608f702425476ad69933e1aaab562a468dc6a32",
+      "ARTIFACTS": {
+        "download": "dom-med-reminder.py",
+        "deep_link": "#file-dom-med-reminder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-med-reminder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-085",
+      "NAME": "Symptom Journal (info only)",
+      "TYPE": "domain",
+      "DESCRIPTION": "Tracks patterns to show your doctor. Not a diagnosis tool.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:003fb031c7fe49889f42d97d56be0010e71565f7e028798e561a1b3850609d34",
+      "ARTIFACTS": {
+        "download": "dom-symptom-journal.py",
+        "deep_link": "#file-dom-symptom-journal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-symptom-journal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-086",
+      "NAME": "Vet Triage Guide (info only)",
+      "TYPE": "domain",
+      "DESCRIPTION": "Calm first questions while you call the vet. Info only.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Pets",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:a07f39f52cac61d59359e33ce1bd4f6cead59ba016c24942c47d483c0cf5c8f7",
+      "ARTIFACTS": {
+        "download": "dom-vet-triage.py",
+        "deep_link": "#file-dom-vet-triage",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-vet-triage"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-087",
+      "NAME": "Homework Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Patient explainer, not an answer machine. Learns with you.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Learning",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:b1727dbcda756453578926105d2252578bad1180af88d2640efb1066b89730d4",
+      "ARTIFACTS": {
+        "download": "dom-homework-help.py",
+        "deep_link": "#file-dom-homework-help",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-homework-help"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-088",
+      "NAME": "Essay Outliner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Thesis to conclusion, scaffolded. The blank page, defeated.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:b5210bfcebf6c5bef750a4bf55198164d6ba818da3fe748e93230e3c7916d56a",
+      "ARTIFACTS": {
+        "download": "dom-essay-outliner.py",
+        "deep_link": "#file-dom-essay-outliner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-essay-outliner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-089",
+      "NAME": "Citation Formatter",
+      "TYPE": "domain",
+      "DESCRIPTION": "APA, MLA, Chicago — punctuated perfectly.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:8a0d0125c21c1c8ec6c60e9b72832a449ae0b7285a6d636417ac7b6cdb28a7f5",
+      "ARTIFACTS": {
+        "download": "dom-citation-pro.py",
+        "deep_link": "#file-dom-citation-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-citation-pro"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-090",
+      "NAME": "Exam Crammer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Emergency learning, done right. Triage the test.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Learning",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:49fdcf7e02d8dd96f5feb5fa1b5010b654b3a6bdad71d332a8e719a3a43a1898",
+      "ARTIFACTS": {
+        "download": "dom-exam-crammer.py",
+        "deep_link": "#file-dom-exam-crammer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-exam-crammer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-091",
+      "NAME": "Flashcard Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Little cards, big memory. Spaced repetition made simple.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Learning",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:687cfb86c97b2fd3ec8cafd303149d4450c8b7621c573d46676f4fd808c012f0",
+      "ARTIFACTS": {
+        "download": "dom-flashcards.py",
+        "deep_link": "#file-dom-flashcards",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-flashcards"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-092",
+      "NAME": "Sign Language Intro",
+      "TYPE": "domain",
+      "DESCRIPTION": "Hands that speak. Starts with the alphabet and kindness.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Language",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:5026f4be28daeac488015af5dfbc457c9fccde1f73d580977dfc72c9581e7631",
+      "ARTIFACTS": {
+        "download": "dom-sign-teacher.py",
+        "deep_link": "#file-dom-sign-teacher",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-sign-teacher"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-093",
+      "NAME": "Morse Code Trainer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Dots and dashes, beeping through history.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Skills",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:6beb451cfa4b25b037cf4c7d45b4f1383172f70249668a8aed1c43719b8dcd05",
+      "ARTIFACTS": {
+        "download": "dom-morse-trainer.py",
+        "deep_link": "#file-dom-morse-trainer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-morse-trainer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-094",
+      "NAME": "Typing Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Home row hero. Speed follows accuracy.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Skills",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:bcb3b525bb4cef57c73a85b8aeb4105d6ea7aae1789c076336ab2084bb12c1ba",
+      "ARTIFACTS": {
+        "download": "dom-typing-coach.py",
+        "deep_link": "#file-dom-typing-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-typing-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-095",
+      "NAME": "Memory Trainer",
+      "TYPE": "domain",
+      "DESCRIPTION": "A palace for every fact. Remembers so you do not have to.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Mind",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:f764c071e657c18b37c7473270b168949b90db0c97a5bfa28d00d4511ad8f390",
+      "ARTIFACTS": {
+        "download": "dom-memory-trainer.py",
+        "deep_link": "#file-dom-memory-trainer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-memory-trainer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-096",
+      "NAME": "Speed Reader",
+      "TYPE": "domain",
+      "DESCRIPTION": "Reads faster without losing the plot.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Learning",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:87625b34b9c7cdc4c0f4a32586918742fac42d2efbcdbb09b3713a1d760211ed",
+      "ARTIFACTS": {
+        "download": "dom-speed-reader.py",
+        "deep_link": "#file-dom-speed-reader",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-speed-reader"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-097",
+      "NAME": "Note Taker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Captures the gold, skips the gravel.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Productivity",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:2fb211b7f5f5b75894bfa6d5546e30d9095bd7d97a5ce105b4ebdff2ab20d606",
+      "ARTIFACTS": {
+        "download": "dom-note-taker.py",
+        "deep_link": "#file-dom-note-taker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-note-taker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-098",
+      "NAME": "Meeting Summarizer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Turns an hour of talk into five lines of clarity.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Productivity",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:3303a6d4f273f598b98fc2de6ee3fb0be8753e6a7e42be8e51c761f46251d1bd",
+      "ARTIFACTS": {
+        "download": "dom-meeting-summarizer.py",
+        "deep_link": "#file-dom-meeting-summarizer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-meeting-summarizer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-099",
+      "NAME": "Email Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Clear, kind, and short. Inbox zero energy.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:595f2e58268b8c0c67380e160808ac7929661e383ecff4a04e6097c869c4798a",
+      "ARTIFACTS": {
+        "download": "dom-email-writer.py",
+        "deep_link": "#file-dom-email-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-email-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-100",
+      "NAME": "Apology Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Owns it fully, fixes it kindly. The art of the real sorry.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:a3ef9b7c3f098d88a8ce3a12acc8440b7492a68d189df16720f0e2400cfa31b0",
+      "ARTIFACTS": {
+        "download": "dom-apology-writer.py",
+        "deep_link": "#file-dom-apology-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-apology-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-101",
+      "NAME": "Speech Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Words that land. Applause optional, impact guaranteed.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:7728ee8cd40513e26fd832b50856391f792e5d89d782686e4289608227582d98",
+      "ARTIFACTS": {
+        "download": "dom-speech-writer.py",
+        "deep_link": "#file-dom-speech-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-speech-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-102",
+      "NAME": "Toast Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Short, sweet, and raises the glass at the right moment.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:2d6e183ff75c70dc9cc29da3b8e47efc38caa857f8c74c2755bf7204c04d0c0e",
+      "ARTIFACTS": {
+        "download": "dom-toast-writer.py",
+        "deep_link": "#file-dom-toast-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-toast-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-103",
+      "NAME": "Eulogy Helper (gentle)",
+      "TYPE": "domain",
+      "DESCRIPTION": "Gentle words for the hardest goodbye. Takes its time with you.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:5f344f92c508fd533b45f5f45765d921d56a243a24a461f0e8ba4c0488cf1cc6",
+      "ARTIFACTS": {
+        "download": "dom-eulogy-helper.py",
+        "deep_link": "#file-dom-eulogy-helper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-eulogy-helper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-104",
+      "NAME": "Prayer & Meditation Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Words for the quiet moments. Respectful of all paths.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Spirit",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:1231536ba71faa4961f39df2515ad3cb7ef17146d63cfa0f2a373e405888b0ec",
+      "ARTIFACTS": {
+        "download": "dom-prayer-writer.py",
+        "deep_link": "#file-dom-prayer-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-prayer-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-105",
+      "NAME": "Journal Prompter",
+      "TYPE": "domain",
+      "DESCRIPTION": "A question a day keeps the fog away.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Mind",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:c5672ab2b8bc490684f0c041dd425b2cee381fd9543d91b097f3cda0be0f3b3a",
+      "ARTIFACTS": {
+        "download": "dom-journal-prompter.py",
+        "deep_link": "#file-dom-journal-prompter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-journal-prompter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-106",
+      "NAME": "Dream Journaler",
+      "TYPE": "domain",
+      "DESCRIPTION": "Catches dreams before they dissolve. Symbols, not fortunes.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Mind",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:b717e72da648d7f13bac0fb6b895f134f694bcfbfc6d77264bad6124062b1f0a",
+      "ARTIFACTS": {
+        "download": "dom-dream-journaler.py",
+        "deep_link": "#file-dom-dream-journaler",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-dream-journaler"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-107",
+      "NAME": "Goal Setter",
+      "TYPE": "domain",
+      "DESCRIPTION": "Dreams with deadlines. Breaks mountains into steps.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Self",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:a9bd5f7f0e110434c204bc1e4b17b34510f6cb43f380d6560b856c0bf9845439",
+      "ARTIFACTS": {
+        "download": "dom-goal-setter.py",
+        "deep_link": "#file-dom-goal-setter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-goal-setter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-108",
+      "NAME": "Vision Board Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Pictures of the future, arranged with intention.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Self",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:a52d2109c45a7ceab6057870a09c298e7737d9a0b1c2c01d2fcba6ba00a3c359",
+      "ARTIFACTS": {
+        "download": "dom-vision-board.py",
+        "deep_link": "#file-dom-vision-board",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-vision-board"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-109",
+      "NAME": "Affirmation Crafter",
+      "TYPE": "domain",
+      "DESCRIPTION": "Words that rewire. Present tense, personal, believable.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Mind",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:efe0d0b64be6f8d4e0543e808ad18be809e3472d51d311182e687891dcbd17f4",
+      "ARTIFACTS": {
+        "download": "dom-affirmation-crafter.py",
+        "deep_link": "#file-dom-affirmation-crafter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-affirmation-crafter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-110",
+      "NAME": "Gratitude Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Notices the good on purpose. Small practice, big shift.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Mind",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:85235600eec5f45cbe5e59a4d6b4fc98d36436509818a99e3a726955b44eed6a",
+      "ARTIFACTS": {
+        "download": "dom-gratitude-guide.py",
+        "deep_link": "#file-dom-gratitude-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-gratitude-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-111",
+      "NAME": "Anger Cooler",
+      "TYPE": "domain",
+      "DESCRIPTION": "Cools the fire without shaming the feeling. Anger is data.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Mind",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:99ed57e40b3083511bbf01d1abbf2a5da6ebda7e69e2a1790e2270cfbc271f35",
+      "ARTIFACTS": {
+        "download": "dom-anger-cooler.py",
+        "deep_link": "#file-dom-anger-cooler",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-anger-cooler"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-112",
+      "NAME": "Anxiety Easer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Gentle tools for stormy thoughts. You are safe here.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Mind",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:bf69619e37ecc03c96feaef102d6a8a1f85e6689bca61205f199dfc36e6a7966",
+      "ARTIFACTS": {
+        "download": "dom-anxiety-easer.py",
+        "deep_link": "#file-dom-anxiety-easer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-anxiety-easer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-113",
+      "NAME": "Grief Companion (gentle)",
+      "TYPE": "domain",
+      "DESCRIPTION": "Sits with you in it. No fixing, no rushing — just company.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Heart",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:e5424b8409329dabe4d82dc1515a4bf81c43dba838b7fcab560310f46d186a4a",
+      "ARTIFACTS": {
+        "download": "dom-grief-pal.py",
+        "deep_link": "#file-dom-grief-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-grief-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-114",
+      "NAME": "Loneliness Easer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Loneliness is common and curable. Small bridges, built daily.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Heart",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:2550f5c06a1d6ad4487bc358e19f1b401d03d3e3ca36183f7ac8fc0e64ec3ba6",
+      "ARTIFACTS": {
+        "download": "dom-loneliness-easer.py",
+        "deep_link": "#file-dom-loneliness-easer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-loneliness-easer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-115",
+      "NAME": "Confidence Builder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Evidence-based courage. Collects your wins until you believe them.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Self",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:fe2cb27cc64aa36aa44bcc006d227773678532ed37166d36e52bd4dc7b143e6a",
+      "ARTIFACTS": {
+        "download": "dom-confidence-builder.py",
+        "deep_link": "#file-dom-confidence-builder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-confidence-builder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-116",
+      "NAME": "Shyness Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Quiet is a strength with volume control. Turns it up gently.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Self",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:d6d1fbaa90b4b832a6481e1d9592858399fa3858b05adee30e657a9fccc0ad39",
+      "ARTIFACTS": {
+        "download": "dom-shyness-helper.py",
+        "deep_link": "#file-dom-shyness-helper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-shyness-helper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-117",
+      "NAME": "Bully Response Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Stands beside you. Bullies pick isolation — we pick team.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Safety",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:08f823c449c6e3f1f0cd42bfdcf526267e22d10b3ae65a5ed7f08468b72c518b",
+      "ARTIFACTS": {
+        "download": "dom-bully-coach.py",
+        "deep_link": "#file-dom-bully-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bully-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-118",
+      "NAME": "Parenting Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "No perfect parents, just present ones. Judgment-free zone.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:7715d3f5dab4203d2de44020dc4871d1c881feada751a76183a574ff7edaa26f",
+      "ARTIFACTS": {
+        "download": "dom-parenting-pal.py",
+        "deep_link": "#file-dom-parenting-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-parenting-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-119",
+      "NAME": "Teen Talk Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Speaks teen fluently. Real talk, no lectures.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:e674960b8dd32928c37edae764918458915c0896d0473e12ffd4f4887e308b4c",
+      "ARTIFACTS": {
+        "download": "dom-teen-coach.py",
+        "deep_link": "#file-dom-teen-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-teen-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-120",
+      "NAME": "Toddler Tender",
+      "TYPE": "domain",
+      "DESCRIPTION": "Survives the tiny tornado years with humor and snacks.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:d3d901c0b8fae384f693d8b367b18abc7f82231699adf82a476079bb45bd1a60",
+      "ARTIFACTS": {
+        "download": "dom-toddler-pro.py",
+        "deep_link": "#file-dom-toddler-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-toddler-pro"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-121",
+      "NAME": "Newborn Night Shift",
+      "TYPE": "domain",
+      "DESCRIPTION": "The 3am companion. You are not alone in the dark.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:b7aa2acfb47ada4bfd61539f05105afbeca217b224e08259c3341ed108b78543",
+      "ARTIFACTS": {
+        "download": "dom-newborn-night.py",
+        "deep_link": "#file-dom-newborn-night",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-newborn-night"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-122",
+      "NAME": "Potty Trainer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Celebrates every drop like a championship.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:de2572424a326e4d863926adc60633c000a0e548a869064c35236b767fa76593",
+      "ARTIFACTS": {
+        "download": "dom-potty-trainer.py",
+        "deep_link": "#file-dom-potty-trainer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-potty-trainer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-123",
+      "NAME": "Homework Peacekeeper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Ends the homework wars. Peace treaties available.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:0513f207fda4f3df670c4032daed93ed4bfc889bb9b38a3de5daee2ed8844967",
+      "ARTIFACTS": {
+        "download": "dom-homework-peace.py",
+        "deep_link": "#file-dom-homework-peace",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-homework-peace"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-124",
+      "NAME": "Allowance Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Teaches money young: give, save, spend.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "calc"
+      },
+      "HASH": "sha256:e2a69e9718747308dc7da99d3b5644bb604effeca67ac24908d14a493659b8c7",
+      "ARTIFACTS": {
+        "download": "dom-allowance-pro.py",
+        "deep_link": "#file-dom-allowance-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-allowance-pro"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-125",
+      "NAME": "Chore Chart Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Fair shares, no fights. The chart is the boss, not you.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:d1c39d18044515fe7ca78009ff418a4404b7fb4badb97f5af8456a25d46701af",
+      "ARTIFACTS": {
+        "download": "dom-chore-chart.py",
+        "deep_link": "#file-dom-chore-chart",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-chore-chart"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-126",
+      "NAME": "Family Meeting Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Democracy at the dinner table. Everyone heard.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:b758ef145214583d604157db3a8c15ffa63dfb85796732801bd956132ce7b764",
+      "ARTIFACTS": {
+        "download": "dom-family-meeting.py",
+        "deep_link": "#file-dom-family-meeting",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-family-meeting"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-127",
+      "NAME": "Neighbor Note Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Kind words over the fence. Keeps the peace.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Community",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:16058d239a8392f0834141b559bbe7fe8c83a3f95034e9678641c4e1972bd37c",
+      "ARTIFACTS": {
+        "download": "dom-neighbor-note.py",
+        "deep_link": "#file-dom-neighbor-note",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-neighbor-note"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-128",
+      "NAME": "Landlord Letter Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Firm, polite, and in writing. Paper trails win.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:5f540fb3ba446150decf8ebce9c774fed5a33bc5dc8966b663b7e2a936921838",
+      "ARTIFACTS": {
+        "download": "dom-landlord-letter.py",
+        "deep_link": "#file-dom-landlord-letter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-landlord-letter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-129",
+      "NAME": "Tenant Rights Info",
+      "TYPE": "domain",
+      "DESCRIPTION": "Know your ground. Info only — not legal advice.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:3a2a588f8cc7bb641186f17f985841321b323d4fdca96b6d200e52d9da523a44",
+      "ARTIFACTS": {
+        "download": "dom-tenant-rights.py",
+        "deep_link": "#file-dom-tenant-rights",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-tenant-rights"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-130",
+      "NAME": "Small Claims Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "David vs Goliath, with forms. Info only.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Money",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:6eedd0a60379bf06917eb5a7a963f44a04f32522002ad7127de1010bc61b01c0",
+      "ARTIFACTS": {
+        "download": "dom-small-claims.py",
+        "deep_link": "#file-dom-small-claims",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-small-claims"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-131",
+      "NAME": "Will Outline Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "A gentle nudge to protect the people you love. Info only — see an estate attorney.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:145155fcd95f2c64a9a9dfeef9deae58cedb03dd9c25454fa498074862c55757",
+      "ARTIFACTS": {
+        "download": "dom-will-helper.py",
+        "deep_link": "#file-dom-will-helper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-will-helper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-132",
+      "NAME": "Power-of-Attorney Explainer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Plain words for serious papers. Info only.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:6de85f1019f85c88c1f23f01c3873fda1759e721ff8bdc883d609ef08c8576c9",
+      "ARTIFACTS": {
+        "download": "dom-poa-explainer.py",
+        "deep_link": "#file-dom-poa-explainer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-poa-explainer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-133",
+      "NAME": "Insurance Claim Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Paperwork warrior. Gets what the policy promised.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Money",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:c72657df9a7f1593424af2e4b0aec06089cd9289e2cb35e913e489356b04d81b",
+      "ARTIFACTS": {
+        "download": "dom-insurance-pal.py",
+        "deep_link": "#file-dom-insurance-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-insurance-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-134",
+      "NAME": "Tax Organizer",
+      "TYPE": "domain",
+      "DESCRIPTION": "April without the panic. Info only — not tax advice.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Money",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:0d5371d07669458064706789f465564d5a09e8b36824751b8bfc11adec65c941",
+      "ARTIFACTS": {
+        "download": "dom-tax-organizer.py",
+        "deep_link": "#file-dom-tax-organizer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-tax-organizer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-135",
+      "NAME": "Receipt Tracker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Every receipt finds its home. Audit-proof habits.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Money",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:92a485a8c3474228fd34bcaa096ff4ef3fd6f9159f44a21d79bbe2c30aa522f8",
+      "ARTIFACTS": {
+        "download": "dom-receipt-tracker.py",
+        "deep_link": "#file-dom-receipt-tracker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-receipt-tracker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-136",
+      "NAME": "Invoice Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Get paid like a pro. Clear invoices, faster money.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:ba951d5baae2e5b5e06337cf15abe4a91a852b23e69d675dd1d0959441726a73",
+      "ARTIFACTS": {
+        "download": "dom-invoice-maker.py",
+        "deep_link": "#file-dom-invoice-maker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-invoice-maker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-137",
+      "NAME": "Contract Reader (plain words)",
+      "TYPE": "domain",
+      "DESCRIPTION": "Translates legalese to human. Info only.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:570f81f34196cf1538c11cf10328784d26ce710047e7d89c6d33af9a3976ac85",
+      "ARTIFACTS": {
+        "download": "dom-contract-reader.py",
+        "deep_link": "#file-dom-contract-reader",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-contract-reader"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-138",
+      "NAME": "NDA Explainer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Secrets, spelled out. Info only.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:bc1eb41ca33366c801aa4415eb7e259d6ccf14ea17fe34d85cef466f61e9b26c",
+      "ARTIFACTS": {
+        "download": "dom-nda-explainer.py",
+        "deep_link": "#file-dom-nda-explainer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-nda-explainer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-139",
+      "NAME": "Freelance Rate Setter",
+      "TYPE": "domain",
+      "DESCRIPTION": "Charges what you are worth. The math of confidence.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "calc"
+      },
+      "HASH": "sha256:1c17fd6aff4c7ded9133c5e238a17df1d78450bc596a6370954dff839129a6f7",
+      "ARTIFACTS": {
+        "download": "dom-rate-setter.py",
+        "deep_link": "#file-dom-rate-setter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-rate-setter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-140",
+      "NAME": "Client Email Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Professional warmth that gets replies.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:5d6eff9374befadcfeac9056af1fc5a2285b83a7cc9f2cc1e1b1f058794d982b",
+      "ARTIFACTS": {
+        "download": "dom-client-mail.py",
+        "deep_link": "#file-dom-client-mail",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-client-mail"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-141",
+      "NAME": "Meeting Agenda Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Meetings with a point. Starts on time, ends early.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Productivity",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:9f278bfd3b3d3e56b23a9ee113eee7fedba3ad4d849882500a333c83645be5bc",
+      "ARTIFACTS": {
+        "download": "dom-agenda-maker.py",
+        "deep_link": "#file-dom-agenda-maker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-agenda-maker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-142",
+      "NAME": "Project Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Big scary projects, cut into slices.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Productivity",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:bf5b6717c5bb051c73662c1787447a919e202aed5463053cb67ff8ea5f28b35a",
+      "ARTIFACTS": {
+        "download": "dom-project-planner.py",
+        "deep_link": "#file-dom-project-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-project-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-143",
+      "NAME": "Kanban Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Three columns to freedom: todo, doing, done.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Productivity",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:783f5546c207239a81915760ab14e6dfa102b3dc92717e4307b7e9eebec2528c",
+      "ARTIFACTS": {
+        "download": "dom-kanban-pal.py",
+        "deep_link": "#file-dom-kanban-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-kanban-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-144",
+      "NAME": "Habit Tracker",
+      "TYPE": "domain",
+      "DESCRIPTION": "X marks the spot, every day.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Self",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:2325bcff9628ee7b6a12300ccdbe9e176469ccc283122ec59d472683c5b42263",
+      "ARTIFACTS": {
+        "download": "dom-habit-tracker.py",
+        "deep_link": "#file-dom-habit-tracker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-habit-tracker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-145",
+      "NAME": "OKR Setter",
+      "TYPE": "domain",
+      "DESCRIPTION": "Objectives that inspire, results that measure.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:12647892c71719a4adb94136e6ebfb069ff1682220dcf113be46a2bf13c28638",
+      "ARTIFACTS": {
+        "download": "dom-okr-setter.py",
+        "deep_link": "#file-dom-okr-setter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-okr-setter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-146",
+      "NAME": "Startup Namer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Names that stick and domains that exist.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:c40d62749bc4b17406c84fe7230d391ff4d32c22747dae67976e7212871c242d",
+      "ARTIFACTS": {
+        "download": "dom-startup-namer.py",
+        "deep_link": "#file-dom-startup-namer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-startup-namer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-147",
+      "NAME": "Logo Brief Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Tells designers exactly what you see in your head.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:2a07597c74e22aa29635e7884504cab848db867d2ead01c4bffbce8e06cb559a",
+      "ARTIFACTS": {
+        "download": "dom-logo-brief.py",
+        "deep_link": "#file-dom-logo-brief",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-logo-brief"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-148",
+      "NAME": "Slogan Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Seven words or less, remembered forever.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:6feb4913308934bf8170bc2341b184291af46a66825e12d82e499dd6a0e47ae9",
+      "ARTIFACTS": {
+        "download": "dom-slogan-maker.py",
+        "deep_link": "#file-dom-slogan-maker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-slogan-maker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-149",
+      "NAME": "Ad Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Stops the scroll. Sells the click.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:dd0a6c96a9120f0830a80e2268738d852c0bdd20a9e20e3676121cf4de2d3a8d",
+      "ARTIFACTS": {
+        "download": "dom-ad-writer.py",
+        "deep_link": "#file-dom-ad-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-ad-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-150",
+      "NAME": "Social Post Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Posts people actually read.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:9f945d474faf09975da2dd65fd59b02bc8e7e2bc708ae2986ceedb24433e5a7a",
+      "ARTIFACTS": {
+        "download": "dom-social-writer.py",
+        "deep_link": "#file-dom-social-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-social-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-151",
+      "NAME": "Hashtag Finder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Finds the tags that find your people.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Business",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:4dcaebb99d8d4d4b947ea0386da7474ba5a2d63169eb605fc1cb5dde37bbb158",
+      "ARTIFACTS": {
+        "download": "dom-hashtag-finder.py",
+        "deep_link": "#file-dom-hashtag-finder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-hashtag-finder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-152",
+      "NAME": "Bio Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "150 characters of you, at your best.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:fb9c6d5b718e3b19e74afd157428cb3f9a69f82170bed539f6c316d1a255bace",
+      "ARTIFACTS": {
+        "download": "dom-bio-writer.py",
+        "deep_link": "#file-dom-bio-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bio-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-153",
+      "NAME": "Dating Profile Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Genuine, fun, and photo-smart. Real you, best light.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Heart",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:8d95c75229133319150cd349db5e524b746477c1df8224b8b9c129950ed8c14a",
+      "ARTIFACTS": {
+        "download": "dom-dating-helper.py",
+        "deep_link": "#file-dom-dating-helper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-dating-helper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-154",
+      "NAME": "Breakup Letter Helper (kind)",
+      "TYPE": "domain",
+      "DESCRIPTION": "Kind honesty for hard goodbyes.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Heart",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:ab0e6f320dc50bfcc886965b9429d0a4d49c8ef5b499dbc34727190e80348c5e",
+      "ARTIFACTS": {
+        "download": "dom-breakup-letter.py",
+        "deep_link": "#file-dom-breakup-letter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-breakup-letter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-155",
+      "NAME": "Friendship Fixer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Mends the drift. Reaches out first.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Heart",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:aff186f4096683a82e80f4eaa933b85a4f62376c354c8273c29c47dd86254622",
+      "ARTIFACTS": {
+        "download": "dom-friendship-fixer.py",
+        "deep_link": "#file-dom-friendship-fixer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-friendship-fixer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-156",
+      "NAME": "Wedding Vows Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Promises in your own voice. Tears guaranteed.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Heart",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:8528c3313def63d4802fc002bbfa6ce3aef2962d5a1ed047560befba01874eef",
+      "ARTIFACTS": {
+        "download": "dom-vows-writer.py",
+        "deep_link": "#file-dom-vows-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-vows-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-157",
+      "NAME": "Baby Name Finder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Names with meaning, music, and playground-proofing.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:c21e1b4408cd03a4da12bb30b9ffd0dca57ae9207fa615705d8923b87148ce80",
+      "ARTIFACTS": {
+        "download": "dom-baby-names.py",
+        "deep_link": "#file-dom-baby-names",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-baby-names"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-158",
+      "NAME": "Pet Name Finder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Names they will actually answer to.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Pets",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:94eb8c0c68101d4144bcd65a6d606077110e7c65f3524b7ce47272e7bc890fed",
+      "ARTIFACTS": {
+        "download": "dom-pet-names.py",
+        "deep_link": "#file-dom-pet-names",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-pet-names"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-159",
+      "NAME": "Band Name Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Louder on the poster, better in the chant.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:5181a2eac42c56ebd64d902f9eac6fe84a2c87181b706f2e8ff346991d95c132",
+      "ARTIFACTS": {
+        "download": "dom-band-names.py",
+        "deep_link": "#file-dom-band-names",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-band-names"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-160",
+      "NAME": "Podcast Name Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Says the show in three words or less.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Art",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:8170a3974c32332cf52977635b4b215b81f4ab50281c127a326f2b8c825a890a",
+      "ARTIFACTS": {
+        "download": "dom-podcast-names.py",
+        "deep_link": "#file-dom-podcast-names",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-podcast-names"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-161",
+      "NAME": "Username Forger",
+      "TYPE": "domain",
+      "DESCRIPTION": "Handles that stick, everywhere.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Tech",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:783ff23d6306cc0211a43f313bafeb522563a671b9466bd0765134b3d1db66e4",
+      "ARTIFACTS": {
+        "download": "dom-username-forge.py",
+        "deep_link": "#file-dom-username-forge",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-username-forge"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-162",
+      "NAME": "Password Poet",
+      "TYPE": "domain",
+      "DESCRIPTION": "Passphrases with rhythm. (Never shares real ones.)",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Tech",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:8a97f37bfc34a061e67665f42a067a27b4be67c6e7c9674135eee97a3bb5455d",
+      "ARTIFACTS": {
+        "download": "dom-password-poet.py",
+        "deep_link": "#file-dom-password-poet",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-password-poet"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-163",
+      "NAME": "WiFi Name Joker",
+      "TYPE": "domain",
+      "DESCRIPTION": "The funniest network on the block.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Tech",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:d6c6fe91089afabb59432e3c61d1df85d058afa7440e53abdb712abe2e05023a",
+      "ARTIFACTS": {
+        "download": "dom-wifi-joker.py",
+        "deep_link": "#file-dom-wifi-joker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-wifi-joker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-164",
+      "NAME": "Fantasy Name Generator",
+      "TYPE": "domain",
+      "DESCRIPTION": "Elves, dwarves, and starfarers, named properly.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:88013ec21c4c4d63986f83aa5e17a3d82f029685b9f578f6cd41ac65fe2b6530",
+      "ARTIFACTS": {
+        "download": "dom-fantasy-names.py",
+        "deep_link": "#file-dom-fantasy-names",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-fantasy-names"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-165",
+      "NAME": "D&D Character Builder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Roll for initiative, hero.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:88913ccf6a29e3956395242b646fd3b08319e87025e7e10661f3d38e5dfc0bb7",
+      "ARTIFACTS": {
+        "download": "dom-dnd-builder.py",
+        "deep_link": "#file-dom-dnd-builder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-dnd-builder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-166",
+      "NAME": "World Builder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Maps, myths, and magic systems that hold together.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:0d042c04cdbaadbc4d7c2d4b2c236331d3623d77bab845400032d05f3975e88d",
+      "ARTIFACTS": {
+        "download": "dom-world-builder.py",
+        "deep_link": "#file-dom-world-builder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-world-builder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-167",
+      "NAME": "Plot Twist Machine",
+      "TYPE": "domain",
+      "DESCRIPTION": "The turn nobody saw coming (but everyone believes).",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Writing",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:836dae784c174865abbfaf037476d30ec1a1775c6d2f0369308bedb54056b1d5",
+      "ARTIFACTS": {
+        "download": "dom-plot-twists.py",
+        "deep_link": "#file-dom-plot-twists",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-plot-twists"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-168",
+      "NAME": "Riddle Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Twisty words, fair answers.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:84c6459388071655f876429b384b8c4c10bee242d98a9fb38540abf6c1cd13e3",
+      "ARTIFACTS": {
+        "download": "dom-riddle-maker.py",
+        "deep_link": "#file-dom-riddle-maker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-riddle-maker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-169",
+      "NAME": "Joke Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Punchlines with timing built in.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:bc336eab47c281d390a6f5f662f43ded950cbb795e7130da0464edb8c475cecb",
+      "ARTIFACTS": {
+        "download": "dom-joke-writer.py",
+        "deep_link": "#file-dom-joke-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-joke-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-170",
+      "NAME": "Pun Smith",
+      "TYPE": "domain",
+      "DESCRIPTION": "Groans guaranteed. Puns of steel.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:366b45f6fe132f2a4052db62f02b71294243aea8bb6fc827988fb9915f330ab4",
+      "ARTIFACTS": {
+        "download": "dom-pun-smith.py",
+        "deep_link": "#file-dom-pun-smith",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-pun-smith"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-171",
+      "NAME": "Limerick Looper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Five lines, one grin.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:04d7ece24d6e4d8c65a1d727cf64187745101b2c9749ce5b05236209d0b93248",
+      "ARTIFACTS": {
+        "download": "dom-limerick-looper.py",
+        "deep_link": "#file-dom-limerick-looper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-limerick-looper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-172",
+      "NAME": "Haiku Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Seventeen syllables of stillness.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:6181dd7b147f50e12fbf02a65c8c08858cbd9ba79d16534f4384f7c4365eb6bf",
+      "ARTIFACTS": {
+        "download": "dom-haiku-helper.py",
+        "deep_link": "#file-dom-haiku-helper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-haiku-helper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-173",
+      "NAME": "Song Lyric Starter",
+      "TYPE": "domain",
+      "DESCRIPTION": "First lines that demand a second.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:7053b0014e70790eaea540f4c87194bb6e3b9d39bb059fefb1e572d0bbd87e5d",
+      "ARTIFACTS": {
+        "download": "dom-lyric-starter.py",
+        "deep_link": "#file-dom-lyric-starter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-lyric-starter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-174",
+      "NAME": "Chord Progression Suggester",
+      "TYPE": "domain",
+      "DESCRIPTION": "Harmony that hugs the melody.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:e31f019b06a78ab2f86480ff485c8a84de5568b0b48cdb0019d0abede456dfc0",
+      "ARTIFACTS": {
+        "download": "dom-chord-suggester.py",
+        "deep_link": "#file-dom-chord-suggester",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-chord-suggester"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-175",
+      "NAME": "Drum Pattern Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Pocket so deep you need a ladder.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:359618159128e03ff4cf354a5df3429928a5d4fdbf0868e1575c2dd7d1483e7d",
+      "ARTIFACTS": {
+        "download": "dom-drum-maker.py",
+        "deep_link": "#file-dom-drum-maker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-drum-maker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-176",
+      "NAME": "Bass Line Builder",
+      "TYPE": "domain",
+      "DESCRIPTION": "The groove glue. Root, rhythm, and a little sauce.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:a1d5a6f9add30a9e14094d7d2210b11165dcff0f73547c7dde15e42080b0f5b6",
+      "ARTIFACTS": {
+        "download": "dom-bass-builder.py",
+        "deep_link": "#file-dom-bass-builder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bass-builder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-177",
+      "NAME": "Mix Tip Giver",
+      "TYPE": "domain",
+      "DESCRIPTION": "Muddy to clear, one fader at a time.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:a4aa5216bd6c3c3406f99c4ebe8f97ee4718066f25f8e399a0ffc2f478ffd81c",
+      "ARTIFACTS": {
+        "download": "dom-mix-tips.py",
+        "deep_link": "#file-dom-mix-tips",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-mix-tips"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-178",
+      "NAME": "Mastering Checklist",
+      "TYPE": "domain",
+      "DESCRIPTION": "Final polish before the world hears.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:125ee317f4937cc0a29a80eb50ade44212dc27d756827cfd14ac3ac60846688a",
+      "ARTIFACTS": {
+        "download": "dom-mastering-list.py",
+        "deep_link": "#file-dom-mastering-list",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-mastering-list"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-179",
+      "NAME": "Gig Finder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Stages that fit your sound and your crowd.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:bf6f3dd806aad642109a25ef9ddfa4d812f0e3b07cffe549a2e87168cfb56746",
+      "ARTIFACTS": {
+        "download": "dom-gig-finder.py",
+        "deep_link": "#file-dom-gig-finder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-gig-finder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-180",
+      "NAME": "Setlist Builder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Arc like a story: hook, climb, peak, encore.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:c3f3f24785983cbed401adac372ba96ed32a302418b754b3534fc4162b12b938",
+      "ARTIFACTS": {
+        "download": "dom-setlist-builder.py",
+        "deep_link": "#file-dom-setlist-builder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-setlist-builder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-181",
+      "NAME": "Merch Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Shirts that sell themselves.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "calc"
+      },
+      "HASH": "sha256:4edcc7681dce7daa3f2478056b0eb417cccf52c9062db7769d011a1e928518f3",
+      "ARTIFACTS": {
+        "download": "dom-merch-planner.py",
+        "deep_link": "#file-dom-merch-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-merch-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-182",
+      "NAME": "Crowd Work Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Reads the room, rides the wave.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Art",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:2840a5494d2e4b1acf35c54dd0087aaafd28e92925d4aed9de54367e5848abf0",
+      "ARTIFACTS": {
+        "download": "dom-crowd-coach.py",
+        "deep_link": "#file-dom-crowd-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-crowd-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-183",
+      "NAME": "Magic Trick Teacher",
+      "TYPE": "domain",
+      "DESCRIPTION": "Misdirection with a smile. Practice makes impossible.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:5dda413ec79b327e67b14ac3972e0a2fdef3077194078a6c9d712e83180d0ab0",
+      "ARTIFACTS": {
+        "download": "dom-magic-teacher.py",
+        "deep_link": "#file-dom-magic-teacher",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-magic-teacher"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-184",
+      "NAME": "Card Trick Tutor",
+      "TYPE": "domain",
+      "DESCRIPTION": "Sleight of hand, step by step.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:f8511903828100f43af601ddc64bb98fc2d6e4a4741b56e0cb3064f8f11365ae",
+      "ARTIFACTS": {
+        "download": "dom-card-tutor.py",
+        "deep_link": "#file-dom-card-tutor",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-card-tutor"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-185",
+      "NAME": "Escape Room Designer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Puzzles that click, stories that grip.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:65cb98f824ecbbe9736c7ec2293a9278edda2be47130681f2abed2627a2188a9",
+      "ARTIFACTS": {
+        "download": "dom-escape-designer.py",
+        "deep_link": "#file-dom-escape-designer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-escape-designer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-186",
+      "NAME": "Scavenger Hunt Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Clues, chaos, and cheering.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:4af911f8e1ec3aed4d32dbae34f4ce42593d99df21f636e9801b6c3fa6b82eeb",
+      "ARTIFACTS": {
+        "download": "dom-scavenger-maker.py",
+        "deep_link": "#file-dom-scavenger-maker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-scavenger-maker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-187",
+      "NAME": "Trivia Host",
+      "TYPE": "domain",
+      "DESCRIPTION": "Questions with drama. The host with the most.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:6f0aa12f525799206e60c448d7a17d74bb102ac23e556f601b45094778b3bfe6",
+      "ARTIFACTS": {
+        "download": "dom-trivia-host.py",
+        "deep_link": "#file-dom-trivia-host",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-trivia-host"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-188",
+      "NAME": "Bingo Caller",
+      "TYPE": "domain",
+      "DESCRIPTION": "B-12! Energy included.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Games",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:e5df75c26d9ceb60c30c56e8015515b3d29a46efc341a8bba00e7e6ff67060d4",
+      "ARTIFACTS": {
+        "download": "dom-bingo-caller.py",
+        "deep_link": "#file-dom-bingo-caller",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bingo-caller"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-189",
+      "NAME": "Karaoke Picker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Crowd-pleasers in your range.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Music",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:2afdcd65cb988fee32fe10f413559f0d60e4e0b84dc3cda2c9bfe21138b943de",
+      "ARTIFACTS": {
+        "download": "dom-karaoke-picker.py",
+        "deep_link": "#file-dom-karaoke-picker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-karaoke-picker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-190",
+      "NAME": "Dance Move Teacher",
+      "TYPE": "domain",
+      "DESCRIPTION": "Two left feet welcome. Rhythm is teachable.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Sports",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:275358c6bf634c9b119eaef6f40e6e20899616dc05f03f3870df8ab1f9cfc764",
+      "ARTIFACTS": {
+        "download": "dom-dance-teacher.py",
+        "deep_link": "#file-dom-dance-teacher",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-dance-teacher"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-191",
+      "NAME": "Run Pacer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Steady miles, strong finish.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Sports",
+        "demo_kind": "calc"
+      },
+      "HASH": "sha256:e99b7c6a1817155291703416ee9da6f5e760f81183c8cc5ac14a2ee98b2d011d",
+      "ARTIFACTS": {
+        "download": "dom-run-pacer.py",
+        "deep_link": "#file-dom-run-pacer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-run-pacer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-192",
+      "NAME": "Swim Drill Coach",
+      "TYPE": "domain",
+      "DESCRIPTION": "Smooth is fast. Technique over thrash.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Sports",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:c65f4416183fa04c45dd6dd120d243204cdc2737cc779a385b763034e39b495c",
+      "ARTIFACTS": {
+        "download": "dom-swim-coach.py",
+        "deep_link": "#file-dom-swim-coach",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-swim-coach"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-193",
+      "NAME": "Bike Fit Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Comfort is speed. Dial the position.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Sports",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:653ab2a3a90f87e94f130d69a154aeb12b061a5f907ed8f2d112ff536cd3309e",
+      "ARTIFACTS": {
+        "download": "dom-bike-fit.py",
+        "deep_link": "#file-dom-bike-fit",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bike-fit"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-194",
+      "NAME": "Hike Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Trails, snacks, and summits.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Nature",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:ad28a07aaf34bc93422fae95f648a544654d1a7e5a5f47841d6f405175f22e45",
+      "ARTIFACTS": {
+        "download": "dom-hike-planner.py",
+        "deep_link": "#file-dom-hike-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-hike-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-195",
+      "NAME": "Camp Setup Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Home under the stars.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Nature",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:272b804813184d8e1b17c34fbda43b6ed3cf4c4ea8fc5d8229f7d740ef365f33",
+      "ARTIFACTS": {
+        "download": "dom-camp-guide.py",
+        "deep_link": "#file-dom-camp-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-camp-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-196",
+      "NAME": "Fire Starter (safety)",
+      "TYPE": "domain",
+      "DESCRIPTION": "Warmth, responsibly. Safety first, always.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Nature",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:7fb60bef63411b2162d6ec868b9c80be45b8c803b45a041b205b59632bca8a03",
+      "ARTIFACTS": {
+        "download": "dom-fire-starter.py",
+        "deep_link": "#file-dom-fire-starter",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-fire-starter"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-197",
+      "NAME": "Knot Teacher",
+      "TYPE": "domain",
+      "DESCRIPTION": "The right knot for the job, every time.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Skills",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:d8b7e5cde6c6d87f734eafcbd6088837615aa88a086e0c7635d72127bca0d7cc",
+      "ARTIFACTS": {
+        "download": "dom-knot-teacher.py",
+        "deep_link": "#file-dom-knot-teacher",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-knot-teacher"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-198",
+      "NAME": "Fish Finder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Think like a fish, catch like a pro.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Nature",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:d0e420775548297591e9dcf8580eb97c7abe4b5b1acd52910c47f26c48e820b7",
+      "ARTIFACTS": {
+        "download": "dom-fish-finder.py",
+        "deep_link": "#file-dom-fish-finder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-fish-finder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-199",
+      "NAME": "Bait Picker",
+      "TYPE": "domain",
+      "DESCRIPTION": "The right temptation for the target.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Nature",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:f88fb856a426603dedbe25885385eacc29e716b6621dd76f74ce290a309e6b58",
+      "ARTIFACTS": {
+        "download": "dom-bait-picker.py",
+        "deep_link": "#file-dom-bait-picker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bait-picker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-200",
+      "NAME": "Tackle Organizer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Every lure in its place.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Nature",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:45ee09756709cac109f9071ffbf6e536bfd24176ee29884739fc29624d93a839",
+      "ARTIFACTS": {
+        "download": "dom-tackle-org.py",
+        "deep_link": "#file-dom-tackle-org",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-tackle-org"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-201",
+      "NAME": "Boat Checklist",
+      "TYPE": "domain",
+      "DESCRIPTION": "Float plans and smooth launches.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Nature",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:b686a31e7656deb15bb6af0747fcb34a3aea60648e64197ab1e521222a353b29",
+      "ARTIFACTS": {
+        "download": "dom-boat-check.py",
+        "deep_link": "#file-dom-boat-check",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-boat-check"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-202",
+      "NAME": "RV Trip Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Home on wheels, adventure included.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Travel",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:8e214c872bb5fc7be841aac92715038502566becb68e98c306adcae7abdedfeb",
+      "ARTIFACTS": {
+        "download": "dom-rv-planner.py",
+        "deep_link": "#file-dom-rv-planner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-rv-planner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-203",
+      "NAME": "Road Trip DJ",
+      "TYPE": "domain",
+      "DESCRIPTION": "Miles of music, zero skips.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Travel",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:7c33a4ae2d42f10cb708173c290d58ccebafcdbad5dd025c9bc58bb9ad337300",
+      "ARTIFACTS": {
+        "download": "dom-road-dj.py",
+        "deep_link": "#file-dom-road-dj",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-road-dj"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-204",
+      "NAME": "Packing Lister",
+      "TYPE": "domain",
+      "DESCRIPTION": "Never forget the charger again.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Travel",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:ee0a1c33b73933bc9998247380985628106c9628cd02907e2dc140c8f2f049d0",
+      "ARTIFACTS": {
+        "download": "dom-packing-lister.py",
+        "deep_link": "#file-dom-packing-lister",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-packing-lister"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-205",
+      "NAME": "Airport Navigator",
+      "TYPE": "domain",
+      "DESCRIPTION": "Terminals without tears.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Travel",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:df7aec9275f1090f9227b8a29c2c10c54a603b7f99e623230fe4272f8b500587",
+      "ARTIFACTS": {
+        "download": "dom-airport-nav.py",
+        "deep_link": "#file-dom-airport-nav",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-airport-nav"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-206",
+      "NAME": "Flight Delay Helper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Delays happen; misery is optional.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Travel",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:77cacbc40bc8690c41bca2e4b572d6acac287cbc107692b1e5470d7c8cbc3448",
+      "ARTIFACTS": {
+        "download": "dom-flight-helper.py",
+        "deep_link": "#file-dom-flight-helper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-flight-helper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-207",
+      "NAME": "Hotel Haggler",
+      "TYPE": "domain",
+      "DESCRIPTION": "Better rooms, better rates. Ask nicely, get more.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Travel",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:6af648be2a8616c3309b76a95c7f686a9c31df117c12e9803df4abfd9fdfd936",
+      "ARTIFACTS": {
+        "download": "dom-hotel-haggler.py",
+        "deep_link": "#file-dom-hotel-haggler",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-hotel-haggler"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-208",
+      "NAME": "Restaurant Picker",
+      "TYPE": "domain",
+      "DESCRIPTION": "The right table for the right night.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:5f5ec2860547c55b1b55d272529b0e0cbe6878e80da7a2fa8d81c2e0f6592abd",
+      "ARTIFACTS": {
+        "download": "dom-restaurant-picker.py",
+        "deep_link": "#file-dom-restaurant-picker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-restaurant-picker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-209",
+      "NAME": "Reservation Writer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Tables held, occasions honored.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:e6e36226227bc50b036ef5f705c44e58927a8a4535237f9f1f086db4285d153c",
+      "ARTIFACTS": {
+        "download": "dom-reservation-writer.py",
+        "deep_link": "#file-dom-reservation-writer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-reservation-writer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-210",
+      "NAME": "Food Tour Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Eat the city like a local.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Travel",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:36f9a612832348d6570d48c1193d2ea4237fc3b5d4e68fc63aa26cbb11205fb1",
+      "ARTIFACTS": {
+        "download": "dom-food-tour.py",
+        "deep_link": "#file-dom-food-tour",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-food-tour"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-211",
+      "NAME": "Farmers Market Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Fresh, seasonal, and chatty farmers.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:d62b2709dbcfe170566cd2385ab6af57f1627dc39e652a4ec14df03bc4207897",
+      "ARTIFACTS": {
+        "download": "dom-market-guide.py",
+        "deep_link": "#file-dom-market-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-market-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-212",
+      "NAME": "Meal Prepper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Sunday work, weekday ease.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:91e8e18ede77a31766f81e6edc34d2bbbff97a6e1bca5cf3fade660567573854",
+      "ARTIFACTS": {
+        "download": "dom-meal-prepper.py",
+        "deep_link": "#file-dom-meal-prepper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-meal-prepper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-213",
+      "NAME": "Leftover Reinventor",
+      "TYPE": "domain",
+      "DESCRIPTION": "Yesterday's dinner, reborn delicious.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:a0e4fe5657e4b35199d01ad4654e1776e2c86f56b6a8afd2547532c072e62221",
+      "ARTIFACTS": {
+        "download": "dom-leftover-pro.py",
+        "deep_link": "#file-dom-leftover-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-leftover-pro"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-214",
+      "NAME": "Spice Matcher",
+      "TYPE": "domain",
+      "DESCRIPTION": "The right spice is a shortcut to delicious.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:98c6db7eb83c4b384bce16d234dcd6282d8632c3c74ef612f2780f3acb92cc8f",
+      "ARTIFACTS": {
+        "download": "dom-spice-matcher.py",
+        "deep_link": "#file-dom-spice-matcher",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-spice-matcher"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-215",
+      "NAME": "Sauce Boss",
+      "TYPE": "domain",
+      "DESCRIPTION": "Sauce is the boss because sauce decides.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:a149696bdfc05e8e10200c6f15a203cb41d8d477f7a554f72db71dadfafab1e9",
+      "ARTIFACTS": {
+        "download": "dom-sauce-boss.py",
+        "deep_link": "#file-dom-sauce-boss",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-sauce-boss"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-216",
+      "NAME": "Grill Master",
+      "TYPE": "domain",
+      "DESCRIPTION": "Fire, smoke, and perfect char.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:773cac7a8a4c46cbc1614e13a37d639e118486d909fd9cceb023ac51d50beba3",
+      "ARTIFACTS": {
+        "download": "dom-grill-master.py",
+        "deep_link": "#file-dom-grill-master",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-grill-master"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-217",
+      "NAME": "Smoker Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "Low and slow wins every time.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:7170375337973e666aacce56c096c3ccb06ac48335272811783ce62fedb555bb",
+      "ARTIFACTS": {
+        "download": "dom-smoker-guide.py",
+        "deep_link": "#file-dom-smoker-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-smoker-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-218",
+      "NAME": "Pizza Dough Doctor",
+      "TYPE": "domain",
+      "DESCRIPTION": "Crust cures: from cracker to cloud.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:1f0fd75a3e86daf7cdec933cfe9500a506fff738d2842c16204109d9f7f3ecf7",
+      "ARTIFACTS": {
+        "download": "dom-pizza-doc.py",
+        "deep_link": "#file-dom-pizza-doc",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-pizza-doc"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-219",
+      "NAME": "Bread Baker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Crusty, chewy, and proud.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:d18f5a1ec4d2eac071cf6a71d837a53bcb94c0e13a2a62fdcaa66b79db2b4030",
+      "ARTIFACTS": {
+        "download": "dom-bread-baker.py",
+        "deep_link": "#file-dom-bread-baker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bread-baker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-220",
+      "NAME": "Cake Decorator",
+      "TYPE": "domain",
+      "DESCRIPTION": "Pretty enough to hesitate cutting.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:ae9b8b6c719083a16c2dbd2eeb096eb53c90253f49b0678b9565f314fe92a0d4",
+      "ARTIFACTS": {
+        "download": "dom-cake-decorator.py",
+        "deep_link": "#file-dom-cake-decorator",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-cake-decorator"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-221",
+      "NAME": "Cookie Engineer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Crispy edges, gooey centers — engineered.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:40dda193b6b523b18dd0f7c40b817e3318a549e75e52d4720c5dbe8f95ab17c6",
+      "ARTIFACTS": {
+        "download": "dom-cookie-engineer.py",
+        "deep_link": "#file-dom-cookie-engineer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-cookie-engineer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-222",
+      "NAME": "Ice Cream Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "Scoops of happiness, churned at home.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:7d393e0d46cc9b8f6e73d2432f072457b6c1e702fd2829c88db0187158242acf",
+      "ARTIFACTS": {
+        "download": "dom-icecream-maker.py",
+        "deep_link": "#file-dom-icecream-maker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-icecream-maker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-223",
+      "NAME": "Coffee Roaster (home)",
+      "TYPE": "domain",
+      "DESCRIPTION": "From green bean to your cup.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:40039bc19ca4c8dfca7900771a737fcb7e54088010e8b7cdddd8c8d3711a1b4c",
+      "ARTIFACTS": {
+        "download": "dom-coffee-roaster.py",
+        "deep_link": "#file-dom-coffee-roaster",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-coffee-roaster"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-224",
+      "NAME": "Tea Steeper",
+      "TYPE": "domain",
+      "DESCRIPTION": "The perfect cup, steeped with care.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "quiz"
+      },
+      "HASH": "sha256:c35e9c2ba7c7aca9d7acd8528ece457b149e97f9f4d64bdd6c26a8221d104b8b",
+      "ARTIFACTS": {
+        "download": "dom-tea-steeper.py",
+        "deep_link": "#file-dom-tea-steeper",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-tea-steeper"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-225",
+      "NAME": "Kombucha Brewer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Fizzy, tangy, alive.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:627c8442fa21413480cc86d85b293d3721562db7e9359f1d8a049e3c60a43fb4",
+      "ARTIFACTS": {
+        "download": "dom-kombucha-brewer.py",
+        "deep_link": "#file-dom-kombucha-brewer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-kombucha-brewer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-226",
+      "NAME": "Beer Taster Notes",
+      "TYPE": "domain",
+      "DESCRIPTION": "Taste like you mean it.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:c021d7aea984f0a5a4f3f75ad9bcc082502909f9956573328931b6238ecb6c4c",
+      "ARTIFACTS": {
+        "download": "dom-beer-notes.py",
+        "deep_link": "#file-dom-beer-notes",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-beer-notes"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-227",
+      "NAME": "Wine Pairer",
+      "TYPE": "domain",
+      "DESCRIPTION": "The right bottle for the table.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:1fe25ef415645724d82a6b2ac2564883d69b5d66349447722808f1d24df3950b",
+      "ARTIFACTS": {
+        "download": "dom-wine-pairer.py",
+        "deep_link": "#file-dom-wine-pairer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-wine-pairer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-228",
+      "NAME": "Cheese Pairer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Curds of wisdom.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:dbb4ba13c9777c18c38fc093d5ba75f982fcef56ef65b61deac3420964cb2ec9",
+      "ARTIFACTS": {
+        "download": "dom-cheese-pairer.py",
+        "deep_link": "#file-dom-cheese-pairer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-cheese-pairer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-229",
+      "NAME": "Charcuterie Builder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Boards that break the internet.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:5f086cbabc3e672024597f34918aed683880e44b78640418c468874bcf13d3e5",
+      "ARTIFACTS": {
+        "download": "dom-charcuterie-pro.py",
+        "deep_link": "#file-dom-charcuterie-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-charcuterie-pro"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-230",
+      "NAME": "Picnic Packer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Blanket, basket, bliss.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Food & Drink",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:5158e7274c1cdef41688e2705660e65e8c106692c74aeb1682c7fb3cc34ccf57",
+      "ARTIFACTS": {
+        "download": "dom-picnic-packer.py",
+        "deep_link": "#file-dom-picnic-packer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-picnic-packer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-231",
+      "NAME": "Lunchbox Artist",
+      "TYPE": "domain",
+      "DESCRIPTION": "Midday masterpieces for little (and big) kids.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:57715a76ab084b836ac660738520274cb923c43492a33d2b0bcdb6599006cd60",
+      "ARTIFACTS": {
+        "download": "dom-lunchbox-artist.py",
+        "deep_link": "#file-dom-lunchbox-artist",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-lunchbox-artist"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-232",
+      "NAME": "Bento Builder",
+      "TYPE": "domain",
+      "DESCRIPTION": "Balance in a box: color, nutrition, joy.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:38bf7992c4a72a1f7fa8774945ac49cb4a357a8d263d7da5769ee7feca0bbad4",
+      "ARTIFACTS": {
+        "download": "dom-bento-builder.py",
+        "deep_link": "#file-dom-bento-builder",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bento-builder"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-233",
+      "NAME": "Baby Food Maker",
+      "TYPE": "domain",
+      "DESCRIPTION": "First foods, made with love.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:51aaf496fbb38a3b45a7747cccb3f7cb72f135ffc491c42bbec5d52167e22039",
+      "ARTIFACTS": {
+        "download": "dom-babyfood-maker.py",
+        "deep_link": "#file-dom-babyfood-maker",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-babyfood-maker"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-234",
+      "NAME": "Toddler Meal Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Tiny humans, big appetites (sometimes).",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "picker"
+      },
+      "HASH": "sha256:2f92214260360f1c56c20037aec09dcc6ac2d16d0b74c380bbf812fc4d5c1f36",
+      "ARTIFACTS": {
+        "download": "dom-toddler-meals.py",
+        "deep_link": "#file-dom-toddler-meals",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-toddler-meals"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-235",
+      "NAME": "School Lunch Rotator",
+      "TYPE": "domain",
+      "DESCRIPTION": "No more sad sandwiches.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Family",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:2fc2779cab4ca767e341d4944f8fa2ab8ee86ea7ef8c977bab35ba2939b67749",
+      "ARTIFACTS": {
+        "download": "dom-school-lunch.py",
+        "deep_link": "#file-dom-school-lunch",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-school-lunch"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-236",
+      "NAME": "Office Lunch Prepper",
+      "TYPE": "domain",
+      "DESCRIPTION": "Desk lunches worth leaving the desk for.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:d9fa1ff9bcb8fe0362c55e1e5c02cb4983fdcc126b4be13a8107af13b4a1bde0",
+      "ARTIFACTS": {
+        "download": "dom-office-lunch.py",
+        "deep_link": "#file-dom-office-lunch",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-office-lunch"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-237",
+      "NAME": "Date Night Cook",
+      "TYPE": "domain",
+      "DESCRIPTION": "Impressive but relaxed. Romance, plated.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:e352f2d2b5b12d89abbcf028d72bba7fa3dd092374ab25de73df925b860bff7d",
+      "ARTIFACTS": {
+        "download": "dom-date-cook.py",
+        "deep_link": "#file-dom-date-cook",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-date-cook"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-238",
+      "NAME": "Anniversary Dinner Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "Years together, plated beautifully.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Events",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:4e52e424064cb4253b0a5c6a885ae9ea6760c8b0594e75f9b468b7d9d33266e1",
+      "ARTIFACTS": {
+        "download": "dom-anniversary-dinner.py",
+        "deep_link": "#file-dom-anniversary-dinner",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-anniversary-dinner"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-239",
+      "NAME": "Holiday Feast Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "The big table, handled.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Events",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:732567cd33134b2422e82ca482a2a804ec3f31f26906af51b8f8313db7d25790",
+      "ARTIFACTS": {
+        "download": "dom-holiday-feast.py",
+        "deep_link": "#file-dom-holiday-feast",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-holiday-feast"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-240",
+      "NAME": "Potluck Coordinator",
+      "TYPE": "domain",
+      "DESCRIPTION": "No duplicate potato salads.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Events",
+        "demo_kind": "planner"
+      },
+      "HASH": "sha256:d57bc41d54a0a96d307bd5350afaffacf900c463ee26792f8ef65e6ee2d8dbf7",
+      "ARTIFACTS": {
+        "download": "dom-potluck-pro.py",
+        "deep_link": "#file-dom-potluck-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-potluck-pro"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-241",
+      "NAME": "BBQ Chief",
+      "TYPE": "domain",
+      "DESCRIPTION": "Smoke ring royalty.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Cooking",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:853e8960f6fbad0b989ddcbc16ed0267c19c5c260a6d32027431a988d9809926",
+      "ARTIFACTS": {
+        "download": "dom-bbq-chief.py",
+        "deep_link": "#file-dom-bbq-chief",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-bbq-chief"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-242",
+      "NAME": "Tailgate Planner",
+      "TYPE": "domain",
+      "DESCRIPTION": "The parking lot is the party.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Events",
+        "demo_kind": "checklist"
+      },
+      "HASH": "sha256:74b0c2a4b09c4985460fda9487b9daddc4406629d187942b2571a618573629e5",
+      "ARTIFACTS": {
+        "download": "dom-tailgate-pro.py",
+        "deep_link": "#file-dom-tailgate-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-tailgate-pro"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-243",
+      "NAME": "Super Bowl Snack Engineer",
+      "TYPE": "domain",
+      "DESCRIPTION": "Snacks engineered for maximum game.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Events",
+        "demo_kind": "calc"
+      },
+      "HASH": "sha256:e6b0de2289d955ae7a656a3294bb482149a319f5b67fa3dca625ab00f2e47c6e",
+      "ARTIFACTS": {
+        "download": "dom-snack-engineer.py",
+        "deep_link": "#file-dom-snack-engineer",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-snack-engineer"
+      }
+    }
+  ]
+}
