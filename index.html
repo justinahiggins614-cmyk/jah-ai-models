@@ -85,6 +85,9 @@ h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--lin
 .sh-kicker{color:var(--gold);font-weight:700;letter-spacing:.18em;font-size:.78em}
 .sh-name{font-size:1.5em;font-weight:700;color:#fff;margin:4px 0;font-family:Georgia,serif}
 .sh-desc{color:var(--dim);max-width:760px;margin:4px 0 10px}
+.sh-arch{font-size:.85em;color:var(--dim);max-width:760px;margin:0 0 10px}
+.af-states{font-size:.82em;color:var(--dim);margin:2px 0 8px}
+.dlnote{font-size:.78em;color:var(--dim);flex-basis:100%;margin-top:2px}
 .sh-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .booksearchrow{display:flex;gap:10px;align-items:center;margin:10px 0}
 #booksearch{flex:1;min-width:0;background:#0a0d18;border:2px solid var(--amber);color:var(--txt);padding:10px 14px;border-radius:8px;font-size:1em;font-family:Georgia,serif}
@@ -249,6 +252,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div class="sh-kicker">&#9733; SHOWCASE &mdash; OUR OWN BASELINE AI</div>
 <div class="sh-name">Signature Llama</div>
 <p class="sh-desc">The baseline mind behind every AI in this book &mdash; built from scratch, trained on the Signature archive's own words, free forever, no keys, no fees. Every AI dials through it.</p>
+<p class="sh-arch">How it runs: every AI in this book is a persona and prompt layer on top of one engine &mdash; responses are generated live by Signature Llama v1 running in this page's own JavaScript, loaded from the published weights, with a silent fallback engine if the weights can't load.</p>
 <div class="sh-row"><span class="stamp" id="llamastatus">NOW TRAINING</span> <a class="fbtn" style="display:inline-block;text-decoration:none" href="https://justinahiggins614-cmyk.github.io/signature-llama/" target="_blank" rel="noopener">Meet Signature Llama &rarr;</a></div>
 </div>
 <div class="booksearchrow">
@@ -280,7 +284,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <label style="grid-column:1/-1">Or start from a telephone book AI<select id="gbase"><option value="">Pick an AI to build on&hellip;</option></select></label>
 </div>
 <button type="button" class="genpreset" id="gbaseBtn">Use as base &rarr;</button>
-<h3 style="color:var(--amber);letter-spacing:.1em;font-size:.95em;margin-top:14px">2 &middot; DROP GENE BLOCKS &mdash; ANY NUMBER, ANY ORDER</h3>
+<h3 style="color:var(--amber);letter-spacing:.1em;font-size:.95em;margin-top:14px">2 &middot; CHOOSE ONE STRENGTH FOR EACH FUNCTION &mdash; ADD FUNCTIONS IN ANY ORDER</h3>
 <p class="wingdesc" style="font-size:.85em">Tap a block to drop it in your build (tap again in the tray to remove). One block per function &mdash; tap another layer to swap it.</p>
 <div class="genslots" id="genslots"></div>
 <h3 style="color:var(--amber);letter-spacing:.1em;font-size:.95em;margin-top:14px">3 &middot; YOUR BUILD TRAY</h3>
@@ -299,7 +303,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 </div>
 </details>
 <details class="dropwin" id="arena">
-<summary><span class="dw-t">AI ARENA — CHAT & VERSUS</span><span class="dw-h">pit different AIs against each other — chat bouts and versus tests</span></summary>
+<summary><span class="dw-t">AI ARENA — CHAT & VERSUS</span><span class="dw-h">pit different AIs against each other — chat bouts and side-by-side comparisons</span></summary>
 <div class="dw-body">
 <p class="wingdesc">Put different AIs in the ring together &mdash; telephone-book AIs, personas, or your genome-forged creations. <b>Chat bout:</b> they debate your topic, round by round. <b>Versus test:</b> both answer the same question, side by side.</p>
 <div class="mixbox">
@@ -310,7 +314,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <label>Rounds (chat)<select id="arenaRounds"><option>2</option><option selected>3</option><option>4</option><option>5</option></select></label>
 </div>
 <button type="button" class="abtn" id="chatBoutBtn">&#128172; START CHAT BOUT</button>
-<button type="button" class="abtn" id="versusBtn">&#9876; VERSUS TEST</button>
+<button type="button" class="abtn" id="versusBtn">&#9876; SIDE-BY-SIDE TEST</button>
 <button type="button" class="fbtn" id="readBoutBtn">&#128266; Read bout aloud</button>
 <div id="arenaOut" style="margin-top:12px"></div>
 </div>
@@ -325,6 +329,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <h3 class="af-title">&#9874; AUTO-FORGE &mdash; MARCH TO A MILLION</h3>
 <p class="wingdesc">The forge never sleeps: every visit it auto-fills a fresh batch of hybrids from the whole archive &mdash; every system AI, every persona, every need, every word AI. One million possible hybrids, each with its own stamp, full file, working chat, and download. Tap any listing to open it.</p>
 <div class="af-count"><span id="afCountNum">0</span><span class="af-count-sub" id="afCountSub"> / 1,000,000 HYBRIDS FORGED</span></div>
+<div class="af-states">Possible: <b>1,000,000</b> &middot; Generated: <b><span id="afGenNum">0</span></b> &middot; Available now: <b>1,000,000</b> (every number dialable on demand below)</div>
 <div class="af-dial">
 <label>Dial any hybrid <b>#1 &ndash; #1,000,000</b></label>
 <input type="number" id="afNum" min="1" max="1000000" placeholder="e.g. 424242" aria-label="Hybrid number">
@@ -444,7 +449,14 @@ var TTS = (function(){
       else tierRV(c, opts, next);
     })();
   }
-  return { speak: speak, stop: stop };
+  function available(){
+    try{
+      if (typeof speechSynthesis !== 'undefined' && speechSynthesis) return true;
+      if (typeof responsiveVoice !== 'undefined' && responsiveVoice && responsiveVoice.speak) return true;
+    }catch(e){}
+    return false;
+  }
+  return { speak: speak, stop: stop, available: available };
 })();
 
 /* ============ FILE UTILITIES ============ */
@@ -911,7 +923,7 @@ function renderCard(ai, mount, opts){
   h += '<ul class="abilities">' + ai.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
   h += '<table class="params">' + ai.params.map(function(p){ return '<tr><td>' + escHtml(p[0]) + '</td><td>' + escHtml(p[1]) + '</td></tr>'; }).join('') + '</table>';
   if (ai.kind === 'persona') h += '<div class="disclaimer">Persona simulation — fan-style interpretation, not affiliated with any rights holder. Skynet/Terminator shown as fiction, never as real.</div>';
-  h += '<div class="filetools"><button class="fbtn" data-t="read">🔊 Read aloud</button><button class="fbtn" data-t="copy">⧉ Copy</button><button class="fbtn" data-t="dl">⤓ Download' + (ai.py ? ' .py' : '') + '</button>';
+  h += '<div class="filetools"><button class="fbtn" data-t="read">🔊 Read aloud</button><button class="fbtn" data-t="copy">⧉ Copy</button><button class="fbtn" data-t="dl">⤓ Download' + (ai.py ? ' .py' : '') + '</button><div class="dlnote">Downloads a .py/.js source file you can run locally. Needs Python 3 or a browser; works offline; no external dependencies; contacts no server.</div>';
   if (ai.kind !== 'persona') h += '<a class="speclink" href="https://justinahiggins614-cmyk.github.io/signature-one-archive/">Signature Spec Catalog Pending Patents</a>';
   h += '</div>';
   h += '<div class="demo"><h4>WORKING DEMO</h4>' + ai.demoHTML + '</div>';
@@ -1661,7 +1673,7 @@ function toggleDomain(d, row){
   h += '<ul class="abilities">' + d.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
   h += '<table class="params">' + domainParams(d).map(function(p){ return '<tr><td>' + escHtml(p[0]) + '</td><td>' + escHtml(p[1]) + '</td></tr>'; }).join('') + '</table>';
   if (d.pro) h += '<div class="disclaimer" style="border-color:#5a4a22">AI assistant, not a licensed professional — for information and organization; see a real pro for decisions.</div>';
-  h += '<div class="filetools"><button class="fbtn" data-t="read">🔊 Read aloud</button><button class="fbtn" data-t="copy">⧉ Copy</button><button class="fbtn" data-t="dl">⤓ Download .py</button></div>';
+  h += '<div class="filetools"><button class="fbtn" data-t="read">🔊 Read aloud</button><button class="fbtn" data-t="copy">⧉ Copy</button><button class="fbtn" data-t="dl">⤓ Download .py</button><div class="dlnote">Downloads a .py/.js source file you can run locally. Needs Python 3 or a browser; works offline; no external dependencies; contacts no server.</div></div>';
   h += '<div class="demo"><h4>WORKING DEMO</h4>' + demoTemplate(d) + '</div>';
   h += '<div class="demo"><h4>TALK TO YOUR ' + escHtml(d.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something…" aria-label="Talk"><button type="button" data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
   el.innerHTML = h;
@@ -1727,7 +1739,8 @@ function buildDirectory(){
   document.querySelectorAll('#dirletters [data-L]').forEach(function(b){
     b.onclick = function(){ document.getElementById('dirsearch').value = ''; wordaiUser(); renderDir(b.getAttribute('data-L'), ''); };
   });
-  document.getElementById('dirsearch').addEventListener('input', function(e){ wordaiUser(); renderDir('', e.target.value.toLowerCase()); });
+  var dsT = null;
+  document.getElementById('dirsearch').addEventListener('input', function(e){ wordaiUser(); clearTimeout(dsT); var v = e.target.value; dsT = setTimeout(function(){ renderDir('', v.toLowerCase()); }, 160); });
   renderDir('', '');
 }
 var dirPageSize = 120, dirShown = 120, dirCurLetter = '', dirCurQ = '';
@@ -1763,6 +1776,13 @@ function renderDirPage(){
   });
   var wm = wordaiMatches(letter, q);
   var wshown = wm.slice(0, Math.max(0, dirShown));
+  var dirTotal = list.length + wm.length;
+  if (dirTotal === 0){
+    document.getElementById('dirlist').innerHTML = '<p class="gnote">' +
+      (letter ? escHtml(letter) + ' \u2014 0 current files.'
+              : (q ? '0 results \u2014 try a name, ID, or subject.' : 'No AIs listed here yet.')) + '</p>';
+    return;
+  }
   var box = document.getElementById('dirlist');
   var h = '<p style="color:var(--dim)">' + (list.length + wm.length) + ' AIs listed' + (wordaiIndex ? '' : ' <span style="font-size:.85em">(word AIs load on search)</span>') + '</p>';
   h += list.map(function(e, i){
@@ -1818,8 +1838,11 @@ function buildMixLab(){
     return null;
   }
   document.getElementById('mix-go').onclick = function(){
-    var A = findAi(document.getElementById('mix-a').value), B = findAi(document.getElementById('mix-b').value);
-    if (!A || !B) return;
+    var aid = document.getElementById('mix-a').value, bid = document.getElementById('mix-b').value;
+    var A = findAi(aid), B = findAi(bid);
+    if (!A || !B){ document.getElementById('mix-out').innerHTML = '<div class="gnote">Pick two AIs to fuse first.</div>'; return; }
+    if (aid === bid){ document.getElementById('mix-out').innerHTML = '<div class="gnote">Pick two different AIs \u2014 fusing an AI with itself makes no hybrid.</div>'; return; }
+    var mixStamp = 'JAH-AI-MIX-' + geneHash(aid + '+' + bid).slice(0, 6);
     var nm = (A.name.slice(0, 4) + B.name.slice(-4)).replace(/[^A-Za-z ]/g, '').trim();
     nm = nm.charAt(0).toUpperCase() + nm.slice(1);
     var hy = {name: nm, parents: [A.name, B.name],
@@ -1828,11 +1851,17 @@ function buildMixLab(){
     hybrids.push(hy);
     dirEntries.push({name: hy.name + ' (hybrid)', sub: 'MIX of ' + A.name + ' + ' + B.name, href: '#mixlab', local: true});
     var out = document.getElementById('mix-out');
-    out.innerHTML = '<div class="aifile"><div class="filehead"><span class="stamp">JAH-AI-MIX-' + String(hybrids.length).padStart(3, '0') + '</span><span class="badge">HYBRID</span></div>' +
+    out.innerHTML = '<div class="aifile"><div class="filehead"><span class="stamp">' + mixStamp + '</span><span class="badge">HYBRID</span></div>' +
       '<h3>' + escHtml(hy.name) + '</h3><p class="mentality">' + escHtml(hy.mentality) + '</p>' +
       '<ul class="abilities">' + hy.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>' +
+      '<table class="params">' +
+      '<tr><td>Parent A ID</td><td>' + escHtml(aid) + '</td></tr>' +
+      '<tr><td>Parent B ID</td><td>' + escHtml(bid) + '</td></tr>' +
+      '<tr><td>Fusion method</td><td>Mix Lab fusion v1 \u2014 4-char prefix + 4-char suffix blend (deterministic)</td></tr>' +
+      '<tr><td>Signature ID</td><td>' + mixStamp + '</td></tr>' +
+      '<tr><td>Forged</td><td>' + new Date().toISOString() + '</td></tr></table>' +
       '<div class="demo"><h4>HYBRID MIND — TALK TO IT</h4><div class="chatlog" id="hy-log"></div><div class="chatrow"><input type="text" id="hy-q" placeholder="Say something…" aria-label="Talk to the hybrid"><button class="fbtn" id="hy-ask">Send</button></div><label class="mute"><input type="checkbox" id="hy-auto" checked> Read replies aloud</label></div>' +
-      '<div class="filetools"><button class="fbtn" id="hy-read">🔊 Read aloud</button><button class="fbtn" id="hy-dl">⤓ Download .py</button></div></div>';
+      '<div class="filetools"><button class="fbtn" id="hy-read">🔊 Read aloud</button><button class="fbtn" id="hy-dl">⤓ Download .py</button><div class="dlnote">Downloads a .py/.js source file you can run locally. Needs Python 3 or a browser; works offline; no external dependencies; contacts no server.</div></div></div>';
     hy._hist = [];
     function hybridReply(q){
       var ql = String(q == null ? '' : q).toLowerCase().trim(), last = hy._hist[hy._hist.length - 1];
@@ -2068,8 +2097,11 @@ function renderHybridFile(spec){
     '<tr><td>Parent A</td><td>' + escHtml(spec.A.name) + ' \u2014 ' + escHtml(spec.A.stamp) + '</td></tr>' +
     '<tr><td>Parent B</td><td>' + escHtml(spec.B.name) + ' \u2014 ' + escHtml(spec.B.stamp) + '</td></tr>' +
     '<tr><td>Lineage</td><td>' + afParentBtn(spec.A) + ' ' + afParentBtn(spec.B) + '</td></tr>' +
+    '<tr><td>Fusion method</td><td>Auto-Forge v1 \u2014 deterministic pair math (variant ' + (spec.v + 1) + '/3)</td></tr>' +
+    '<tr><td>Signature ID</td><td>' + escHtml(spec.stamp) + '</td></tr>' +
+    '<tr><td>Opened</td><td>' + new Date().toISOString() + '</td></tr>' +
     '</table>';
-  h += '<div class="filetools"><button type="button" class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button type="button" class="fbtn" data-t="copy">\u29C9 Copy</button><button type="button" class="fbtn" data-t="dl">\u2913 Download .py</button></div>';
+  h += '<div class="filetools"><button type="button" class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button type="button" class="fbtn" data-t="copy">\u29C9 Copy</button><button type="button" class="fbtn" data-t="dl">\u2913 Download .py</button><div class="dlnote">Downloads a .py/.js source file you can run locally. Needs Python 3 or a browser; works offline; no external dependencies; contacts no server.</div></div>';
   h += '<div class="demo"><h4>FUSED MIND \u2014 WORKING CHAT</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk to the hybrid"><button type="button" data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
   el.innerHTML = h;
   body.appendChild(el);
@@ -2140,6 +2172,7 @@ function afPaintCount(){
   var el = document.getElementById('afCountNum'); if (!el) return;
   var n = afGetCount();
   el.textContent = n.toLocaleString('en-US');
+  var gen = document.getElementById('afGenNum'); if (gen) gen.textContent = n.toLocaleString('en-US');
   var sub = document.getElementById('afCountSub');
   if (sub) sub.textContent = n >= AF_MAX ? ' / 1,000,000 \u2014 \u2605 MILLION HIT \u2605' : ' / 1,000,000 HYBRIDS FORGED';
 }
@@ -2298,7 +2331,7 @@ function buildGenomeLab(){
   var wrap = document.getElementById('genslots');
   wrap.innerHTML = GENOME_SLOTS.map(function(sl){
     return '<div class="genslot" data-k="' + sl.key + '"><h4>' + escHtml(sl.name) + '</h4><div class="mirror">' + escHtml(sl.mirror) + '</div><div class="geneblocks">' +
-      sl.genes.map(function(g){ return '<button type="button" class="geneblock lay' + g.layer + '" data-k="' + sl.key + '" data-c="' + g.code + '"><span class="laytag">' + g.layer + ' \u00B7 ' + LAYER_N[g.layer] + '</span><br>' + g.code + '<small>' + escHtml(g.desc) + '</small></button>'; }).join('') +
+      sl.genes.map(function(g){ var tip = (sl.name + '\u2014 ' + LAYER_N[g.layer] + ': ' + g.desc).replace(/"/g, '&quot;'); return '<button type="button" class="geneblock lay' + g.layer + '" data-k="' + sl.key + '" data-c="' + g.code + '" title="' + tip + '""><span class="laytag">' + g.layer + ' \u00B7 ' + LAYER_N[g.layer] + '</span><br>' + g.code + '<small>' + escHtml(g.desc) + '</small></button>'; }).join('') +
       '</div></div>';
   }).join('');
   wrap.addEventListener('click', function(e){
@@ -2533,7 +2566,8 @@ function forgeGenome(){
   if (g.note) h += '<div class="gnote">' + escHtml(g.note) + '</div>';
   h += '<table class="params">' + g.rows.map(function(r){ return '<tr><td>' + escHtml(r.slot) + '</td><td><b>' + r.code + '</b> (' + r.layerName + ')<br><span style="color:var(--dim)">' + escHtml(r.desc) + '</span></td></tr>'; }).join('') + '</table>';
   h += '<div class="sigmath"><div class="smh">SIGNATURE MATH</div>genome hash <b>' + g.math.hash + '</b><br>power score <b>' + g.math.power + '</b> (F=1, A=3, P=9 per block)<br>layer mix <b>F\u00D7' + g.math.mix.F + ' A\u00D7' + g.math.mix.A + ' P\u00D7' + g.math.mix.P + '</b><br>signature vector <b>[' + g.math.vec.join(', ') + ']</b></div>';
-  h += '<div class="filetools"><button class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button class="fbtn" data-t="copy">\u29C9 Copy</button><button class="fbtn" data-t="dtxt">\u2913 Download .txt</button><button class="fbtn" data-t="dpy">\u2913 Download .py</button></div>';
+  h += '<div class="gnote"><b>What are these?</b> <b>genome hash</b> = this AI\u2019s identity fingerprint (deterministic \u2014 the same genes always give the same hash) \u00B7 <b>signature vector</b> = the AI\u2019s numeric trait representation, one number per gene function \u00B7 <b>power score</b> = a calculated strength rating (F=1, A=3, P=9 per gene block). All three are computed deterministically from the chosen genes.</div>';
+  h += '<div class="filetools"><button class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button class="fbtn" data-t="copy">\u29C9 Copy</button><button class="fbtn" data-t="dtxt">\u2913 Download .txt</button><button class="fbtn" data-t="dpy">\u2913 Download .py</button><div class="dlnote">Downloads a .py/.js source file you can run locally. Needs Python 3 or a browser; works offline; no external dependencies; contacts no server.</div></div>';
   h += '<div class="demo"><h4>TALK TO ' + escHtml(g.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk"><button type="button" data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
   h += '</article>';
   out.innerHTML = h;
@@ -2700,6 +2734,12 @@ function arenaRef(val){
 }
 function arenaName(ref){ return ref.obj.name; }
 function sigReply(a, q){ return systemReply(a, q); }
+function arenaSafe(ref, q){
+  try{
+    var t = arenaReply(ref, q);
+    return (t === undefined || t === null || t === '') ? null : t;
+  }catch(e){ return null; }
+}
 function arenaReply(ref, q){
   if (ref.type === 'persona') return personaReply(ref.obj, q);
   if (ref.type === 'dom') return domainReply(ref.obj, q);
@@ -2727,24 +2767,29 @@ function buildArena(){
   document.getElementById('chatBoutBtn').onclick = function(){
     var ra = arenaRef(document.getElementById('arenaA').value);
     var rb = arenaRef(document.getElementById('arenaB').value);
-    var topic = document.getElementById('arenaTopic').value.trim() || 'What is the good life?';
-    var rounds = +document.getElementById('arenaRounds').value || 3;
+    var topicRaw = document.getElementById('arenaTopic').value.trim();
+    if (!topicRaw){ out.innerHTML = '<div class="gnote">Type a topic or question first \u2014 the contenders need something to talk about.</div>'; return; }
+    var topic = topicRaw;
+    var rounds = parseInt(document.getElementById('arenaRounds').value, 10);
+    if (!(rounds >= 1 && rounds <= 20)){ out.innerHTML = '<div class="gnote">Rounds must be a number from 1 to 20.</div>'; return; }
     if (!ra || !rb){ out.innerHTML = '<div class="gnote">Pick both contenders first.</div>'; return; }
-    if (ra === rb){ out.innerHTML = '<div class="gnote">Two different contenders make a better bout.</div>'; return; }
+    if (ra.type === rb.type && ra.obj === rb.obj){ out.innerHTML = '<div class="gnote">Two different contenders make a better bout.</div>'; return; }
     out.innerHTML = ''; lastBout = [];
     var rh = document.createElement('div');
     rh.className = 'boutround';
     rh.textContent = 'CHAT BOUT \u2014 TOPIC: ' + topic.toUpperCase();
     out.appendChild(rh);
-    var lastA = arenaReply(ra, 'Give your opening view on this topic: ' + topic);
+    var lastA = arenaSafe(ra, 'Give your opening view on this topic: ' + topic);
+    if (lastA === null){ out.innerHTML = '<div class="gnote">A contender failed to answer \u2014 nothing was lost. Try the bout again.</div>'; return; }
     boutSay(out, ra, 'a', lastA);
     for (var r = 0; r < rounds; r++){
       var rdiv = document.createElement('div');
       rdiv.className = 'boutround'; rdiv.textContent = 'ROUND ' + (r + 1);
       out.appendChild(rdiv);
-      var mb = arenaReply(rb, lastA);
+      var mb = arenaSafe(rb, lastA);
+      var ma = arenaSafe(ra, mb === null ? lastA : mb);
+      if (mb === null || ma === null){ out.innerHTML = '<div class="gnote">A contender failed to answer \u2014 nothing was lost. Try the bout again.</div>'; return; }
       boutSay(out, rb, 'b', mb);
-      var ma = arenaReply(ra, mb);
       boutSay(out, ra, 'a', ma);
       lastA = ma;
     }
@@ -2753,15 +2798,18 @@ function buildArena(){
   document.getElementById('versusBtn').onclick = function(){
     var ra = arenaRef(document.getElementById('arenaA').value);
     var rb = arenaRef(document.getElementById('arenaB').value);
-    var q = document.getElementById('arenaTopic').value.trim() || 'What is courage?';
+    var qRaw = document.getElementById('arenaTopic').value.trim();
+    if (!qRaw){ out.innerHTML = '<div class="gnote">Type a question first \u2014 both contenders answer the same question.</div>'; return; }
+    var q = qRaw;
     if (!ra || !rb){ out.innerHTML = '<div class="gnote">Pick both contenders first.</div>'; return; }
-    if (ra === rb){ out.innerHTML = '<div class="gnote">Two different contenders make a better test.</div>'; return; }
+    if (ra.type === rb.type && ra.obj === rb.obj){ out.innerHTML = '<div class="gnote">Two different contenders make a better test.</div>'; return; }
     out.innerHTML = ''; lastBout = [];
     var rh = document.createElement('div');
     rh.className = 'boutround';
-    rh.textContent = 'VERSUS TEST \u2014 QUESTION: ' + q.toUpperCase();
+    rh.textContent = 'SIDE-BY-SIDE COMPARISON \u2014 NO SCORING \u2014 QUESTION: ' + q.toUpperCase();
     out.appendChild(rh);
-    var aa = arenaReply(ra, q), ab = arenaReply(rb, q);
+    var aa = arenaSafe(ra, q), ab = arenaSafe(rb, q);
+    if (aa === null || ab === null){ out.innerHTML = '<div class="gnote">A contender failed to answer \u2014 nothing was lost. Try the test again.</div>'; return; }
     lastBout.push({who: arenaName(ra), text: aa});
     lastBout.push({who: arenaName(rb), text: ab});
     var cols = document.createElement('div');
@@ -2772,8 +2820,11 @@ function buildArena(){
     out.appendChild(cols);
     cols.addEventListener('click', function(e){
       var t = e.target;
-      if (t.getAttribute('data-say') === '0') TTS.speak(aa, {});
-      else if (t.getAttribute('data-say') === '1') TTS.speak(ab, {});
+      var sayIdx = t.getAttribute('data-say');
+      if (sayIdx === '0' || sayIdx === '1'){
+        if (!TTS.available()){ out.innerHTML = '<div class="gnote">Speech is not available on this device or browser \u2014 the answer text above is still here to read.</div>'; return; }
+        TTS.speak(sayIdx === '0' ? aa : ab, {});
+      }
       else if (t.getAttribute('data-cp') === '0') copyText(aa, t);
       else if (t.getAttribute('data-cp') === '1') copyText(ab, t);
     });
@@ -2781,6 +2832,7 @@ function buildArena(){
   };
   document.getElementById('readBoutBtn').onclick = function(){
     if (!lastBout.length){ out.innerHTML = '<div class="gnote">Run a chat bout or versus test first.</div>'; return; }
+    if (!TTS.available()){ out.innerHTML = '<div class="gnote">Speech is not available on this device or browser \u2014 the bout text above is still here to read.</div>'; return; }
     TTS.speak(lastBout.map(function(m){ return m.who + ': ' + m.text; }).join('\n'), {});
   };
 }
@@ -2801,7 +2853,7 @@ function renderDomainFile(d, mount){
   h += '<ul class="abilities">' + d.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
   h += '<table class="params">' + domainParams(d).map(function(p){ return '<tr><td>' + escHtml(p[0]) + '</td><td>' + escHtml(p[1]) + '</td></tr>'; }).join('') + '</table>';
   if (d.pro) h += '<div class="disclaimer">AI assistant, not a licensed professional \u2014 for information and organization; see a real pro for decisions.</div>';
-  h += '<div class="filetools"><button class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button class="fbtn" data-t="copy">\u29C9 Copy</button><button class="fbtn" data-t="dl">\u2913 Download .py</button></div>';
+  h += '<div class="filetools"><button class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button class="fbtn" data-t="copy">\u29C9 Copy</button><button class="fbtn" data-t="dl">\u2913 Download .py</button><div class="dlnote">Downloads a .py/.js source file you can run locally. Needs Python 3 or a browser; works offline; no external dependencies; contacts no server.</div></div>';
   h += '<div class="demo"><h4>WORKING DEMO</h4>' + demoTemplate(d) + '</div>';
   h += '<div class="demo"><h4>TALK TO YOUR ' + escHtml(d.name.toUpperCase()) + '</h4><div class="chatlog"></div><div class="chatrow"><input type="text" placeholder="Say something\u2026" aria-label="Talk"><button type="button" data-t="send">Send</button></div><label class="mute"><input type="checkbox" class="autovoice" checked> Read replies aloud</label></div>';
   el.innerHTML = h;
@@ -2931,9 +2983,10 @@ function wireBookSearch(){
   var entries = Array.prototype.slice.call(document.querySelectorAll('#book .bookentry'));
   var total = entries.length;
   function upd(){
-    var q = inp.value.toLowerCase().trim(), shown = 0;
+    var q = inp.value.toLowerCase().trim(), shown = 0, capped = false;
     entries.forEach(function(b){
       var hit = !q || b.textContent.toLowerCase().indexOf(q) !== -1;
+      if (hit && shown >= 100){ capped = true; hit = false; }
       b.style.display = hit ? '' : 'none';
       if (hit) shown++;
     });
@@ -2944,9 +2997,11 @@ function wireBookSearch(){
       if (q) setPageOpen(sec, any, false, false);
       else setPageOpen(sec, bookOpenPages().indexOf(sec.id.slice(3)) !== -1, false, false);
     });
-    cnt.textContent = shown + ' of ' + total + ' listings';
+    cnt.textContent = (q && shown === 0)
+      ? '0 results \u2014 try a name, ID, or subject.'
+      : (shown + ' of ' + total + ' listings' + (capped ? ' \u2014 showing first 100, refine your search' : ''));
   }
-  inp.addEventListener('input', upd);
+  var bt = null; inp.addEventListener('input', function(){ clearTimeout(bt); bt = setTimeout(upd, 160); });
   upd();
 }
 function llamaStatusCheck(){
@@ -3110,7 +3165,7 @@ function renderWordFile(w, mount){
   h += '<p class="mentality">' + escHtml(w.mentality) + '</p>';
   h += '<ul class="abilities">' + w.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
   h += '<table class="params">' + w.params.map(function(p){ return '<tr><td>' + escHtml(p[0]) + '</td><td>' + escHtml(p[1]) + '</td></tr>'; }).join('') + '</table>';
-  h += '<div class="filetools"><button type="button" class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button type="button" class="fbtn" data-t="copy">\u29C9 Copy</button><button type="button" class="fbtn" data-t="dl">\u2913 Download .py</button></div>';
+  h += '<div class="filetools"><button type="button" class="fbtn" data-t="read">\uD83D\uDD0A Read aloud</button><button type="button" class="fbtn" data-t="copy">\u29C9 Copy</button><button type="button" class="fbtn" data-t="dl">\u2913 Download .py</button><div class="dlnote">Downloads a .py/.js source file you can run locally. Needs Python 3 or a browser; works offline; no external dependencies; contacts no server.</div></div>';
   h += '<div class="demo"><h4>WORD LAB \u2014 WORKING DEMO</h4>';
   if (w.definition) h += '<p><b>Definition:</b> ' + escHtml(w.definition) + '</p>';
   h += '<p><b>In a sentence:</b> <span id="wsen">' + escHtml(w.sentences[0]) + '</span> <button type="button" class="fbtn" data-dact="newsent">\u21BB New sentence</button></p>';
@@ -3180,6 +3235,8 @@ function openWordAI(word, idNum){
   buildArena();
   buildBook();
   wireBookSearch();
+  /* start the word-AI index early (non-blocking): it feeds the headline counter via updateBookstats() */
+  wordaiEnsureIndex(function(){});
   llamaStatusCheck();
   document.querySelectorAll('.wingnav a').forEach(function(a){
     a.addEventListener('click', function(){
