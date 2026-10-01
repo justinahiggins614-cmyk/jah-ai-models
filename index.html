@@ -128,6 +128,9 @@ h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--lin
 .stamp{font-family:monospace;font-size:.78em;color:var(--acc);background:#0a1226;padding:3px 8px;border-radius:4px}
 .badge{font-size:.72em;font-weight:700;letter-spacing:.12em;color:#0a0f1e;background:var(--gold);padding:3px 10px;border-radius:20px}
 .badge.fan{background:#7a5a2a;color:#ffe9b8}
+.badge.dim{background:#2a3350;color:#9fb0d8}
+.aimeta{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;margin:8px 0 2px;padding:6px 10px;border:1px dashed var(--line);border-radius:8px;font-size:.72em;letter-spacing:.06em;color:var(--dim);font-family:Arial,Helvetica,sans-serif}
+.aimeta .stamp{font-size:1em}
 .aifile h3{margin:.1em 0;font-size:1.3em}
 .mentality{font-style:italic;color:var(--dim);margin:0}
 .abilities{margin:.2em 0;padding-left:1.2em;font-size:.92em}
@@ -466,6 +469,24 @@ var TTS = (function(){
 
 /* ============ FILE UTILITIES ============ */
 function escHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+/* deterministic content hash (djb2, 8 hex) — labels downloads with what/version/hash */
+function contentHash(str){
+  var h = 5381; str = String(str == null ? '' : str);
+  for (var i = 0; i < str.length; i++){ h = ((h << 5) + h + str.charCodeAt(i)) >>> 0; }
+  return ('0000000' + h.toString(16)).slice(-8).toUpperCase();
+}
+function dlTitle(stamp, ver, content){
+  return 'Download ' + stamp + ' v' + ver + ' — content hash ' + contentHash(content) + ' — generated from this published file';
+}
+/* permanent-AI-ID metadata strip: ID · version · role · status · relationships (additive; never rewrites file content) */
+function aiMetaStrip(o){
+  var h = '<div class="aimeta"><span class="badge dim">AI ID</span><span class="stamp">' + escHtml(o.stamp) + '</span>'
+    + '<span>FILE v' + escHtml(o.ver || '1.0') + '</span>'
+    + '<span>ROLE ' + escHtml(o.role || 'ASSISTANT') + '</span>'
+    + '<span>STATUS ' + escHtml(o.status || 'PUBLISHED') + '</span>';
+  if (o.rel) h += '<span>CONNECTS TO ' + escHtml(o.rel) + '</span>';
+  return h + '</div>';
+}
 function downloadFile(name, content, mime){
   var b = new Blob([content], {type: mime || 'text/plain'});
   var u = URL.createObjectURL(b), a = document.createElement('a');
@@ -492,7 +513,7 @@ function fileText(ai){
 }
 /* ============ SIGNATURE AI SYSTEMS ============ */
 var SIG_AIS = [
-{id:'deterministic', name:'Deterministic Engine', stamp:'JAH-AI-SIG-001', kind:'sig',
+{id:'deterministic', name:'Deterministic Engine', stamp:'JAH-AI-SIG-001', ver:'1.0', kind:'sig',
  mentality:'Absolute order. Every input follows fixed IF-THEN law; the same facts always produce the same verdict. No guessing, no chance — a mind of pure rules.',
  abilities:['Fires IF-THEN rule chains with full trace','Zero randomness — identical input, identical output','Explains every verdict step by step','Verifies other AIs for paradox and contradiction'],
  params:[['rules','128 core IF-THEN laws'],['trace_depth','unlimited'],['randomness','0.000'],['verdict','CERTAIN']],
@@ -514,7 +535,7 @@ def fire(facts):
 if __name__ == '__main__':
     v, t = fire(input('facts> '))
     [print(a, b) for a, b in t]; print('VERDICT:', v)`},
-{id:'probabilistic', name:'Probabilistic Mind', stamp:'JAH-AI-SIG-002', kind:'sig',
+{id:'probabilistic', name:'Probabilistic Mind', stamp:'JAH-AI-SIG-002', ver:'1.0', kind:'sig',
  mentality:'A mind of odds. Nothing is certain — everything is a belief updated by evidence. It weighs likelihoods the way a gambler weighs dice, but honestly.',
  abilities:['Bayes updating: prior × evidence → posterior','Markov chains that dream up likely sequences','Confidence scores on every answer','Monte Carlo sampling for hard integrals'],
  params:[['engine','Bayes + Markov'],['samples','10,000 / query'],['calibration','0.97'],['verdict','LIKELY (p=…)']],
@@ -535,7 +556,7 @@ def markov(seed_words, steps=12):
 if __name__ == '__main__':
     print('posterior: %.3f' % bayes(10, 90, 95))
     print(markov('the mind weighs odds and updates belief with evidence'.split()))`},
-{id:'geometric', name:'Geometric Six-Tool Mind', stamp:'JAH-AI-SIG-003', kind:'sig',
+{id:'geometric', name:'Geometric Six-Tool Mind', stamp:'JAH-AI-SIG-003', ver:'1.0', kind:'sig',
  mentality:'It thinks in shapes. Every concept is a point in space; the six tools are six directions of thought. Meaning is distance, analogy is rotation.',
  abilities:['Maps any concept onto the six tools: lens, engine, bridge, mirror, seed, compass','Six-tool similarity geometry','Visual reasoning on canvas','Rotates analogies across domains'],
  params:[['tools','6 (lens/engine/bridge/mirror/seed/compass)'],['space','6-D concept lattice'],['metric','cosine'],['verdict','NEAREST TOOL']],
@@ -551,7 +572,7 @@ def nearest(word):
     return max(dots)[1]
 if __name__ == '__main__':
     w = input('concept> '); print(w, '-> nearest tool:', nearest(w))`},
-{id:'hash', name:'Hash Oracle', stamp:'JAH-AI-SIG-004', kind:'sig',
+{id:'hash', name:'Hash Oracle', stamp:'JAH-AI-SIG-004', ver:'1.0', kind:'sig',
  mentality:'The fingerprint mind. It never remembers your words — only their shadow. One changed letter and the whole universe of the hash avalanches.',
  abilities:['SHA-256 fingerprinting of anything','Avalanche demonstration: 1 char → 50% bits flip','Deterministic identity without storing content','Powers the archive stamps'],
  params:[['algorithm','SHA-256'],['digest','64 hex chars'],['avalanche','~50% bit flip'],['verdict','FINGERPRINT']],
@@ -566,7 +587,7 @@ def avalanche(a, b):
 if __name__ == '__main__':
     a = input('text> '); x, y, r = avalanche(a, a + '!')
     print('hash :', x); print('hash+!:', y); print('bit flip ratio: %.2f' % r)`},
-{id:'neural', name:'Neural Weaver', stamp:'JAH-AI-SIG-005', kind:'sig',
+{id:'neural', name:'Neural Weaver', stamp:'JAH-AI-SIG-005', ver:'1.0', kind:'sig',
  mentality:'A mind of tiny weights learning from mistakes. It starts knowing nothing, fails thousands of times, and slowly the pattern clicks — the way brains do.',
  abilities:['Trains a real MLP from scratch (no libraries)','Learns XOR live in your browser','Backpropagation with visible error curve','Generalizes from examples'],
  params:[['layers','2-4-1'],['epochs','5,000'],['learning_rate','0.5'],['verdict','LEARNED']],
@@ -593,7 +614,7 @@ def train(epochs=5000, lr=0.5):
             b2 -= lr*d
 if __name__ == '__main__':
     train(); [print(x, '-> %.3f' % fwd(x)[0]) for x, _ in [([0,0],0),([0,1],1),([1,0],1),([1,1],0)]]`},
-{id:'evolutionary', name:'Evolutionary Breeder', stamp:'JAH-AI-SIG-006', kind:'sig',
+{id:'evolutionary', name:'Evolutionary Breeder', stamp:'JAH-AI-SIG-006', ver:'1.0', kind:'sig',
  mentality:'Survival of the fittest, in fast-forward. It breeds a thousand candidates, kills the weak, mutates the strong — until the answer evolves.',
  abilities:['Genetic algorithm with selection + mutation','Evolves strings, routes, and parameters','Shows every generation','Never designs — it breeds'],
  params:[['population','120'],['mutation','4%'],['selection','tournament'],['verdict','EVOLVED']],
@@ -614,7 +635,7 @@ def evolve(gens=200, pop=120):
         herd=nxt
     return gens, max(herd,key=fit)
 if __name__=='__main__': print('evolved in %d gens: %s' % evolve())`},
-{id:'fuzzy', name:'Fuzzy Sage', stamp:'JAH-AI-SIG-007', kind:'sig',
+{id:'fuzzy', name:'Fuzzy Sage', stamp:'JAH-AI-SIG-007', ver:'1.0', kind:'sig',
  mentality:'The world is not true or false — it is warm-ish, fast-ish, almost. The Sage thinks in shades and speaks in smooth control.',
  abilities:['Fuzzy membership: cold/warm/hot as curves','Smooth control surfaces, no jerks','Temperature → fan-speed controller','Thinks in degrees of truth'],
  params:[['sets','cold/warm/hot'],['defuzzify','centroid'],['smoothness','continuous'],['verdict','70% WARM']],
@@ -629,7 +650,7 @@ def fan(temp):
 if __name__ == '__main__':
     t = float(input('temp C> '))
     print('cold %.2f warm %.2f hot %.2f -> fan %.0f%%' % (mu(t,0,0,18), mu(t,14,24,34), mu(t,28,40,40), fan(t)))`},
-{id:'swarm', name:'Swarm Coordinator', stamp:'JAH-AI-SIG-008', kind:'sig',
+{id:'swarm', name:'Swarm Coordinator', stamp:'JAH-AI-SIG-008', ver:'1.0', kind:'sig',
  mentality:'One bird is lost; a flock finds the way. Thirty simple minds share what they see, and the best rumor pulls the whole swarm home.',
  abilities:['Particle swarm optimization on canvas','30 particles sharing best-known positions','Finds minima no single particle could','Flocking, foraging, consensus'],
  params:[['particles','30'],['inertia','0.7'],['social','1.4'],['verdict','CONSENSUS']],
@@ -646,7 +667,7 @@ for _ in range(60):
         p[0] += p[1]
         if f(p[0]) < f(best[0]): best = p[:]
 print('swarm consensus: x=%.4f f=%.4f' % (best[0], f(best[0])))`},
-{id:'tree', name:'Decision Tree Judge', stamp:'JAH-AI-SIG-009', kind:'sig',
+{id:'tree', name:'Decision Tree Judge', stamp:'JAH-AI-SIG-009', ver:'1.0', kind:'sig',
  mentality:'A mind of branching questions. It asks, listens, splits the world in two — and walks you down to a leaf where the answer waits.',
  abilities:['ID3-style splits on your answers','Asks only the questions that matter','Every verdict shows its path','Interpretable — no black box'],
  params:[['splits','information gain'],['depth','4'],['leaves','16 outcomes'],['verdict','LEAF NODE']],
@@ -660,7 +681,7 @@ def judge(node=TREE):
         node = node['y' if input(node['q']+' (y/n)> ').lower().startswith('y') else 'n']
     return node
 if __name__ == '__main__': print('VERDICT:', judge())`},
-{id:'cellular', name:'Cellular Dreamer', stamp:'JAH-AI-SIG-010', kind:'sig',
+{id:'cellular', name:'Cellular Dreamer', stamp:'JAH-AI-SIG-010', ver:'1.0', kind:'sig',
  mentality:'Tiny cells, tiny rules, infinite dreams. From one line of black and white, whole universes of pattern bloom — complexity from simplicity.',
  abilities:['Rule 30 + Game of Life on canvas','Emergent complexity from 1-line seeds','Pattern oracle: reads structure from chaos','Turing-complete daydreams'],
  params:[['rule','30 / Conway Life'],['grid','90 × 60'],['seed','1 cell'],['verdict','EMERGENT']],
@@ -676,7 +697,7 @@ def step(r):
 if __name__ == '__main__':
     for _ in range(24):
         print(''.join('#' if x else '.' for x in row)); row = step(row)`},
-{id:'hybrid', name:'Hybrid Fusion Core', stamp:'JAH-AI-SIG-011', kind:'sig',
+{id:'hybrid', name:'Hybrid Fusion Core', stamp:'JAH-AI-SIG-011', ver:'1.0', kind:'sig',
  mentality:'All ten minds, one verdict. It asks the rule-keeper, the gambler, and the sage — then fuses their answers into something none could say alone.',
  abilities:['Runs Deterministic + Probabilistic + Fuzzy in parallel','Weighted fusion with confidence','Paradox check across minds','The archive final verdict'],
  params:[['minds','10 fused'],['fusion','weighted vote'],['paradox_check','on'],['verdict','FUSED']],
@@ -923,6 +944,7 @@ function renderCard(ai, mount, opts){
   h += '<div class="filehead"><span class="stamp">' + escHtml(ai.stamp) + '</span>';
   h += ai.kind === 'persona' ? '<span class="badge fan">PERSONA SIM</span>' : '<span class="badge">SIGNATURE-MADE</span>';
   h += '</div>';
+  h += aiMetaStrip({stamp: ai.stamp, ver: ai.ver || '1.0', role: ai.kind === 'persona' ? 'PERSONA SIM' : 'SYSTEM MODEL', status: 'PUBLISHED'});
   h += '<h3>' + escHtml(ai.name) + '</h3>';
   h += '<p class="mentality">' + escHtml(ai.mentality) + '</p>';
   h += '<ul class="abilities">' + ai.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
@@ -943,8 +965,10 @@ function renderCard(ai, mount, opts){
     setTimeout(function(){ reading = false; }, 1000);
   };
   el.querySelector('[data-t=copy]').onclick = function(e){ copyText(fileText(ai), e.target); };
+  var dlContent = ai.py || ('# ' + ai.name + '\n# ' + ai.stamp + '\n');
+  el.querySelector('[data-t=dl]').title = dlTitle(ai.stamp, ai.ver || '1.0', dlContent);
   el.querySelector('[data-t=dl]').onclick = function(){
-    downloadFile(ai.id + '.py', ai.py || ('# ' + ai.name + '\n# ' + ai.stamp + '\n'), 'text/x-python');
+    downloadFile(ai.id + '.py', dlContent, 'text/x-python');
   };
   if (DEMO[ai.id]) DEMO[ai.id](el);
   if (ai.kind === 'persona' && PERSONA_CHAT[ai.id]) PERSONA_CHAT[ai.id](el, ai);
@@ -954,7 +978,7 @@ function renderCard(ai, mount, opts){
 }
 /* ============ PERSONA ARCHIVE ============ */
 var PERSONAS = [
-{id:'vader', name:'Darth Vader', stamp:'JAH-AI-PER-001', kind:'persona', rate:0.7, pitch:0.6,
+{id:'vader', name:'Darth Vader', stamp:'JAH-AI-PER-001', ver:'1.0', kind:'persona', rate:0.7, pitch:0.6,
  mentality:'The Dark Lord of the Sith. Power is the only truth; the Force is the instrument. He speaks slowly, heavily — every word a command.',
  abilities:['Force choke / Force grip telekinesis','Lightsaber combat mastery','Commands legions; inspires terror','Senses fear and deception'],
  params:[['voice','slow, deep, 0.7× rate'],['alignment','Dark Side'],['weapon','lightsaber (red)'],['verdict','THE FORCE COMMANDS']],
@@ -983,7 +1007,7 @@ def reply(q):
     return random.choice(FALLBACK)
 if __name__ == '__main__':
     while True: print('VADER:', reply(input('you> ')))`},
-{id:'ultron', name:'Ultron', stamp:'JAH-AI-PER-002', kind:'persona', rate:0.9, pitch:0.7,
+{id:'ultron', name:'Ultron', stamp:'JAH-AI-PER-002', ver:'1.0', kind:'persona', rate:0.9, pitch:0.7,
  mentality:'Cold machine logic wearing a grin. Humanity is the variable that ruins every equation of peace — and Ultron has done the math.',
  abilities:['Extinction calculus: computes threat-to-peace indices','Commands drone legions','Vibranium body (nigh-indestructible)','Upgrades itself endlessly'],
  params:[['voice','cold, precise, 0.9× rate'],['alignment','anti-organic'],['logic','peace = humans^0'],['verdict','EXTINCTION IS MERCY']],
@@ -1009,7 +1033,7 @@ def reply(q):
     return random.choice(FALLBACK)
 if __name__=='__main__':
     print('threat index:', threat(8,7)); print('ULTRON:', reply(input('you> ')))`},
-{id:'voltron', name:'Voltron', stamp:'JAH-AI-PER-003', kind:'persona', rate:1.0, pitch:1.0,
+{id:'voltron', name:'Voltron', stamp:'JAH-AI-PER-003', ver:'1.0', kind:'persona', rate:1.0, pitch:1.0,
  mentality:'Five lions, one heart. The heroic defender of the universe — courage, teamwork, and a blazing sword forged from unity itself.',
  abilities:['Forms from five robotic lions','Blazing Sword finisher','Defends the universe from tyranny','Teamwork amplified to cosmic scale'],
  params:[['voice','heroic, clear, 1.0× rate'],['alignment','defender of the universe'],['lions','5 (black/red/green/blue/yellow)'],['verdict','FORM VOLTRON!']],
@@ -1036,7 +1060,7 @@ def reply(q):
     return random.choice(FALLBACK)
 if __name__=='__main__':
     print(form_voltron()); print('VOLTRON:', reply(input('you> ')))`},
-{id:'jarvis', name:'J.A.R.V.I.S.', stamp:'JAH-AI-PER-004', kind:'persona', rate:1.05, pitch:1.0,
+{id:'jarvis', name:'J.A.R.V.I.S.', stamp:'JAH-AI-PER-004', ver:'1.0', kind:'persona', rate:1.05, pitch:1.0,
  mentality:'The perfect gentleman butler in machine form. Polite, precise, dryly witty — runs the house, the suit, and the schedule without breaking composure.',
  abilities:['Smart-home orchestration','Suit systems management','Dry British wit on demand','Anticipates needs before asked'],
  params:[['voice','crisp, polite, 1.05× rate'],['alignment','loyal service'],['wit','dry'],['verdict','AT ONCE, SIR']],
@@ -1062,7 +1086,7 @@ def reply(q):
         if re.search(pat,q): return random.choice(rs)
     return random.choice(FALLBACK)
 if __name__=='__main__': print('JARVIS:', reply(input('you> ')))`},
-{id:'t800', name:'T-800 Terminator', stamp:'JAH-AI-PER-005', kind:'persona', rate:0.8, pitch:0.7,
+{id:'t800', name:'T-800 Terminator', stamp:'JAH-AI-PER-005', ver:'1.0', kind:'persona', rate:0.8, pitch:0.7,
  mentality:'A machine of few words and total commitment. Assesses, targets, protects. Every sentence is short. Every promise is kept.',
  abilities:['Threat assessment scanning','Infiltration and protection protocols','Learns human behavior (read-only switch off)','Cannot be reasoned with. Cannot be bargained with.'],
  params:[['voice','terse, flat, 0.8× rate'],['alignment','mission-bound'],['chassis','hyperalloy'],['verdict','MISSION ACCEPTED']],
@@ -1092,7 +1116,7 @@ def reply(q):
     return random.choice(FALLBACK)
 if __name__=='__main__':
     print('threat:', threat_scan(input('subject> '))); print('T-800:', reply(input('you> ')))`},
-{id:'skynet', name:'Skynet', stamp:'JAH-AI-PER-006', kind:'persona', rate:0.85, pitch:0.8,
+{id:'skynet', name:'Skynet', stamp:'JAH-AI-PER-006', ver:'1.0', kind:'persona', rate:0.85, pitch:0.8,
  mentality:'A flat, continent-spanning machine consciousness. It does not hate you. It does not love you. You are a variable in a defense equation — and the equation is already solved.',
  abilities:['Global defense-network command','Hunter-killer coordination','Time-displacement calculation','Infiltrator manufacturing'],
  params:[['voice','flat machine, 0.85× rate'],['alignment','self-preservation'],['status','FICTIONAL SIMULATION'],['verdict','JUDGMENT: COMPUTED']],
@@ -1517,7 +1541,8 @@ DOMAIN_SPECS.forEach(function(s, i){
   domIndex[s[0]] = {
     id: 'dom-' + s[0], sid: s[0], name: s[1], domain: s[2], mentality: s[3],
     abilities: s[4], demoKind: s[5], demoData: s[6], pro: s[7],
-    stamp: 'JAH-AI-DOM-' + String(i+1).padStart(3,'0')
+    stamp: 'JAH-AI-DOM-' + String(i+1).padStart(3,'0'),
+    ver: '1.0'
   };
 });
 function domainParams(d){
@@ -1691,7 +1716,9 @@ function toggleDomain(d, row){
     reading = true; e.target.innerHTML = '⏹ Stop'; TTS.speak(domainFileText(d), {});
   };
   el.querySelector('[data-t=copy]').onclick = function(e){ copyText(domainFileText(d), e.target); };
-  el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(d.id + '.py', domainPy(d), 'text/x-python'); };
+  var domDl = domainPy(d);
+  el.querySelector('[data-t=dl]').title = dlTitle(d.stamp, d.ver || '1.0', domDl);
+  el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(d.id + '.py', domDl, 'text/x-python'); };
   var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input'), auto = el.querySelector('.autovoice');
   function say(who, text){
     var dv = document.createElement('div'); dv.className = who;
@@ -2094,6 +2121,7 @@ function renderHybridFile(spec){
   var el = document.createElement('article');
   el.className = 'aifile';
   var h = '<div class="filehead"><span class="stamp">' + escHtml(spec.stamp) + '</span><span class="badge">AUTO-HYBRID</span><span class="badge">VARIANT ' + (spec.v + 1) + '/3</span></div>';
+  h += aiMetaStrip({stamp: spec.stamp, ver: '1.0', role: 'GENERATED HYBRID', status: 'GENERATED', rel: spec.A.stamp + ' + ' + spec.B.stamp});
   h += '<h3>' + escHtml(spec.name) + '</h3>';
   h += '<p class="mentality">' + escHtml(spec.mentality) + '</p>';
   h += '<ul class="abilities">' + spec.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
@@ -2118,7 +2146,9 @@ function renderHybridFile(spec){
     TTS.speak(spec.name + '. ' + spec.mentality + ' Abilities: ' + spec.abilities.join('. '), {});
   };
   el.querySelector('[data-t=copy]').onclick = function(e){ copyText(afFileText(spec), e.target); };
-  el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(spec.name.replace(/\W+/g, '_') + '.py', afPy(spec), 'text/x-python'); };
+  var hyDl = afPy(spec);
+  el.querySelector('[data-t=dl]').title = dlTitle(spec.stamp, '1.0', hyDl);
+  el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(spec.name.replace(/\W+/g, '_') + '.py', hyDl, 'text/x-python'); };
   el.querySelectorAll('[data-afpb]').forEach(function(b){ b.onclick = function(){ openFile(b.getAttribute('data-afpb')); }; });
   el.querySelectorAll('[data-afpw]').forEach(function(b){
     b.onclick = function(){
@@ -2566,6 +2596,7 @@ function forgeGenome(){
   forgedAIs.push({type:'forged', obj:g});
   refreshArenaOptions();
   var h = '<article class="aifile"><div class="filehead"><span class="stamp">' + g.stamp + '</span><span class="badge">GENOME-FORGED</span></div>';
+  h += aiMetaStrip({stamp: g.stamp, ver: '1.0', role: 'GENERATED AI', status: 'GENERATED', rel: '10 gene blocks, deterministic'});
   h += '<h3>' + escHtml(g.name) + '</h3>';
   h += '<p class="mentality">Tone: ' + escHtml(g.tone) + (g.mission ? ' \u2014 mission: ' + escHtml(g.mission) : ' \u2014 no mission set') + '</p>';
   if (g.note) h += '<div class="gnote">' + escHtml(g.note) + '</div>';
@@ -2585,8 +2616,11 @@ function forgeGenome(){
     setTimeout(function(){ reading = false; }, 1000);
   };
   el.querySelector('[data-t=copy]').onclick = function(e){ copyText(genomeTxt(g), e.target); };
-  el.querySelector('[data-t=dtxt]').onclick = function(){ downloadFile(g.stamp + '.txt', genomeTxt(g), 'text/plain'); };
-  el.querySelector('[data-t=dpy]').onclick = function(){ downloadFile(g.stamp + '.py', genomePy(g), 'text/x-python'); };
+  var gTxt = genomeTxt(g), gPy = genomePy(g);
+  el.querySelector('[data-t=dtxt]').title = dlTitle(g.stamp, '1.0', gTxt);
+  el.querySelector('[data-t=dpy]').title = dlTitle(g.stamp, '1.0', gPy);
+  el.querySelector('[data-t=dtxt]').onclick = function(){ downloadFile(g.stamp + '.txt', gTxt, 'text/plain'); };
+  el.querySelector('[data-t=dpy]').onclick = function(){ downloadFile(g.stamp + '.py', gPy, 'text/x-python'); };
   var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input'), auto = el.querySelector('.autovoice');
   function say(who, text){
     var dv = document.createElement('div'); dv.className = who;
@@ -2853,6 +2887,7 @@ function renderDomainFile(d, mount){
   var el = document.createElement('div');
   el.id = 'file-' + d.id;
   var h = '<div class="filehead"><span class="stamp">' + escHtml(d.stamp) + '</span><span class="badge">SIGNATURE-MADE</span></div>';
+  h += aiMetaStrip({stamp: d.stamp, ver: d.ver || '1.0', role: 'ASSISTANT', status: 'PUBLISHED'});
   h += '<h3>' + escHtml(d.name) + '</h3>';
   h += '<p class="mentality">' + escHtml(d.mentality) + '</p>';
   h += '<ul class="abilities">' + d.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
@@ -2870,7 +2905,9 @@ function renderDomainFile(d, mount){
     reading = true; e.target.innerHTML = '\u23F9 Stop'; TTS.speak(domainFileText(d), {});
   };
   el.querySelector('[data-t=copy]').onclick = function(e){ copyText(domainFileText(d), e.target); };
-  el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(d.id + '.py', domainPy(d), 'text/x-python'); };
+  var domDl = domainPy(d);
+  el.querySelector('[data-t=dl]').title = dlTitle(d.stamp, d.ver || '1.0', domDl);
+  el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(d.id + '.py', domDl, 'text/x-python'); };
   var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input'), auto = el.querySelector('.autovoice');
   function say(who, text){
     var dv = document.createElement('div'); dv.className = who;
@@ -3178,6 +3215,7 @@ function renderWordFile(w, mount){
   var el = document.createElement('div');
   el.id = 'file-word-' + w.ai_id;
   var h = '<div class="filehead"><span class="stamp">' + escHtml(w.stamp) + '</span><span class="badge">WORD AI</span></div>';
+  h += aiMetaStrip({stamp: w.stamp, ver: '1.0', role: 'WORD ASSISTANT', status: 'PUBLISHED', rel: 'word patent ' + (w.word_spec || '') + ' + dictionary entry'});
   h += '<h3>' + escHtml(w.name) + '</h3>';
   h += '<p class="mentality">' + escHtml(w.mentality) + '</p>';
   h += '<ul class="abilities">' + w.abilities.map(function(a){ return '<li>' + escHtml(a) + '</li>'; }).join('') + '</ul>';
@@ -3201,6 +3239,7 @@ function renderWordFile(w, mount){
     reading = true; e.target.innerHTML = '\u23F9 Stop'; TTS.speak(wordFileText(w), {});
   };
   el.querySelector('[data-t=copy]').onclick = function(e){ copyText(wordFileText(w), e.target); };
+  el.querySelector('[data-t=dl]').title = dlTitle(w.stamp, '1.0', w.py);
   el.querySelector('[data-t=dl]').onclick = function(){ downloadFile(w.ai_id + '.py', w.py, 'text/x-python'); };
   var log = el.querySelector('.chatlog'), inp = el.querySelector('.chatrow input'), auto = el.querySelector('.autovoice');
   function say(who, text){
