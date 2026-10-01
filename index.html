@@ -32,6 +32,8 @@ body{margin:0;background:var(--bg);color:var(--txt);font-family:Georgia,'Times N
 .lr.none{cursor:default;color:var(--dim);font-style:italic}
 .bookstats{color:var(--dim);font-size:.82em;letter-spacing:.14em;margin-top:12px;font-family:Arial,Helvetica,sans-serif}
 .bookstats b{color:var(--amber)}
+.bookbreak{color:var(--dim);font-size:.78em;letter-spacing:.08em;margin-top:6px;font-family:Arial,Helvetica,sans-serif}
+.bookbreak b{color:var(--amber)}
 .wingnav{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:14px}
 .wingnav a{background:var(--panel);border:1px solid var(--line);color:var(--txt);padding:10px 18px;border-radius:8px;text-decoration:none;font-size:.95em}
 .wingnav a:hover{border-color:var(--amber);color:var(--amber2)}
@@ -87,6 +89,7 @@ h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--lin
 .sh-desc{color:var(--dim);max-width:760px;margin:4px 0 10px}
 .sh-arch{font-size:.85em;color:var(--dim);max-width:760px;margin:0 0 10px}
 .af-states{font-size:.82em;color:var(--dim);margin:2px 0 8px}
+.af-note{font-size:.76em;color:var(--dim);margin:-4px 0 8px;letter-spacing:.04em}
 .dlnote{font-size:.78em;color:var(--dim);flex-basis:100%;margin-top:2px}
 .sh-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .booksearchrow{display:flex;gap:10px;align-items:center;margin:10px 0}
@@ -240,6 +243,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div id="lookupres"></div>
 </div>
 <div class="bookstats"><span id="aicount"><b>260</b></span> AI FILES ON RECORD &middot; <b>6</b> SISTER-SITE LINES &middot; DIRECTORY ASSISTANCE OPEN</div>
+<div class="bookbreak"><span id="aibreakdown">Counting published AI files&hellip;</span></div>
 <p style="font-size:.85em">Signature-made by Justin Addam Higgins &middot; deterministic systems &middot; honest simulations</p>
 </header>
 <nav class="wingnav">
@@ -330,6 +334,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <p class="wingdesc">The forge never sleeps: every visit it auto-fills a fresh batch of hybrids from the whole archive &mdash; every system AI, every persona, every need, every word AI. One million possible hybrids, each with its own stamp, full file, working chat, and download. Tap any listing to open it.</p>
 <div class="af-count"><span id="afCountNum">0</span><span class="af-count-sub" id="afCountSub"> / 1,000,000 HYBRIDS FORGED</span></div>
 <div class="af-states">Possible: <b>1,000,000</b> &middot; Generated: <b><span id="afGenNum">0</span></b> &middot; Available now: <b>1,000,000</b> (every number dialable on demand below)</div>
+<div class="af-note">FORGED = hybrids actually generated on this device &middot; 1,000,000 = generatable combinations (every number dialable on demand)</div>
 <div class="af-dial">
 <label>Dial any hybrid <b>#1 &ndash; #1,000,000</b></label>
 <input type="number" id="afNum" min="1" max="1000000" placeholder="e.g. 424242" aria-label="Hybrid number">
@@ -3099,7 +3104,7 @@ function wordaiEnsureIndex(cb){
     wordaiIndexLoading = false;
     updateBookstats();
     cb(true);
-  }).catch(function(){ wordaiIndexLoading = false; cb(false); });
+  }).catch(function(){ wordaiIndexLoading = false; window.wordaiIndexFailed = true; updateBookstats(); cb(false); });
 }
 function wordaiFetchChunk(cn){
   if (wordaiChunks[cn]) return Promise.resolve(wordaiChunks[cn]);
@@ -3116,7 +3121,19 @@ function updateBookstats(){
   var el = document.getElementById('aicount');
   if (!el) return;
   var base = SIG_AIS.length + PERSONAS.length + DOMAIN_SPECS.length;
-  el.innerHTML = '<b>' + (base + wordaiCount + (window.filedAICount || 0)) + '</b>';
+  var total = base + wordaiCount + (window.filedAICount || 0);
+  el.innerHTML = '<b>' + total + '</b>';
+  var bd = document.getElementById('aibreakdown');
+  if (bd){
+    var emb = base + ' embedded (' + SIG_AIS.length + ' system · ' + PERSONAS.length + ' persona · ' + DOMAIN_SPECS.length + ' domain)';
+    if (window.wordaiIndexFailed && !wordaiIndex){
+      bd.innerHTML = 'PUBLISHED AI FILES: <b>' + total + '</b> = ' + emb + ' · word-AI index unreachable — showing embedded files only';
+    } else if (wordaiIndex){
+      bd.innerHTML = 'PUBLISHED AI FILES: <b>' + total + '</b> = ' + emb + ' + ' + wordaiCount + ' word-AIs (live index)';
+    } else {
+      bd.innerHTML = emb + ' · word-AI index loading…';
+    }
+  }
 }
 /* ---- word-AI chat engine: whole-word matching, never substring ---- */
 var _wLastReply = {};
@@ -3237,6 +3254,7 @@ function openWordAI(word, idNum){
   wireBookSearch();
   /* start the word-AI index early (non-blocking): it feeds the headline counter via updateBookstats() */
   wordaiEnsureIndex(function(){});
+  updateBookstats();
   llamaStatusCheck();
   document.querySelectorAll('.wingnav a').forEach(function(a){
     a.addEventListener('click', function(){
