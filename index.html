@@ -245,7 +245,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <input type="text" id="lookup" placeholder="Name, ID number, or describe what you need&hellip;" aria-label="Look up an AI by name, ID, or description" autocomplete="off">
 <div id="lookupres"></div>
 </div>
-<div class="bookstats"><span id="aicount"><b>260</b></span> AI FILES ON RECORD &middot; <b>6</b> SISTER-SITE LINES &middot; DIRECTORY ASSISTANCE OPEN</div>
+<div class="bookstats"><span id="aicount"><b>260</b></span> AI FILES ON RECORD &middot; <b><span id="sistercount">6</span></b> SISTER-SITE LINES &middot; DIRECTORY ASSISTANCE OPEN</div>
 <div class="bookbreak"><span id="aibreakdown">Counting published AI files&hellip;</span></div>
 <p style="font-size:.85em">Signature-made by Justin Addam Higgins &middot; deterministic systems &middot; honest simulations</p>
 </header>
@@ -3101,6 +3101,7 @@ function openPopup(html){
 function closePopup(){ document.getElementById('popup').style.display = 'none'; }
 function buildSisterStrip(){
   var strip = document.getElementById('sisterstrip');
+  var sc = document.getElementById('sistercount'); if (sc) sc.textContent = DIR_EXTRA.length;
   strip.innerHTML = DIR_EXTRA.map(function(x, i){
     return '<button type="button" class="sisterbtn" data-i="' + i + '"><span class="sb-name">' + escHtml(x[0]) + '</span><span class="sb-tag">' + escHtml(x[3]) + ' \u2014 tap for preview</span></button>';
   }).join('');
