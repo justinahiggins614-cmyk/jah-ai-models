@@ -33,6 +33,32 @@ if node.returncode != 0:
     raise SystemExit("node parse failed:\n" + node.stderr)
 rows = json.loads(node.stdout)
 
+# Word-AI leg: live snapshot from the authoritative index in signature-one-archive
+# (the same file the page's hero counter fetches). Baked with an as-of date.
+def user_date():
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
+    except Exception:
+        return datetime.date.today().strftime("%Y-%m-%d")
+wordai_snapshot = {"records": 0, "as_of": user_date()}
+try:
+    import gzip, urllib.request
+    req = urllib.request.Request(
+        "https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz",
+        headers={"User-Agent": "JAH-QA-build-catalog/1.0"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        idx = json.loads(gzip.decompress(r.read()).decode("utf-8"))
+    wordai_snapshot["records"] = len(idx)
+except Exception as e:  # noqa: BLE001 - index unreachable; bake last-known snapshot
+    try:
+        prev = json.load(open(os.path.join(REPO, "ai-catalog.json"), encoding="utf-8"))
+        wordai_snapshot = {"records": int(prev["counts"].get("wordai_index_records", 0)),
+                           "as_of": prev["counts"].get("wordai_as_of", wordai_snapshot["as_of"])}
+        print("wordai index unreachable (%s); keeping previous snapshot %s" % (e, wordai_snapshot))
+    except Exception:
+        print("wordai index unreachable (%s); snapshot stays 0" % e)
+
 records = []
 seen = set()
 for r in rows:
@@ -86,6 +112,9 @@ catalog = {
         "system": sum(1 for x in records if x["TYPE"] == "system"),
         "persona": sum(1 for x in records if x["TYPE"] == "persona"),
         "domain": sum(1 for x in records if x["TYPE"] == "domain"),
+        "wordai_index_records": wordai_snapshot["records"],
+        "wordai_as_of": wordai_snapshot["as_of"],
+        "published_total": len(records) + wordai_snapshot["records"],
     },
     "wordai_index": "https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz",
     "records": records,

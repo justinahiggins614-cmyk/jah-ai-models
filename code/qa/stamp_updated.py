@@ -23,7 +23,13 @@ def main():
         cwd=REPO, capture_output=True, text=True)
     if out.returncode != 0 or not out.stdout.strip():
         raise SystemExit("could not read git log: " + out.stderr)
-    date = out.stdout.strip().split(" ")[0]  # YYYY-MM-DD
+    # The footer date is Manon-facing: convert to his local date (America/New_York),
+    # never the VM's UTC clock (which flips to "tomorrow" hours before his day ends).
+    from zoneinfo import ZoneInfo
+    import datetime
+    ci = out.stdout.strip()  # e.g. "2026-10-02 03:12:52 +0000"
+    dt = datetime.datetime.strptime(ci, "%Y-%m-%d %H:%M:%S %z")
+    date = dt.astimezone(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
     html = io.open(HTML, encoding="utf-8").read()
     new, n = re.subn(r'(<span id="siteupdated">)\d{4}-\d{2}-\d{2}(</span>)',
                      r"\g<1>" + date + r"\g<2>", html)

@@ -16,6 +16,7 @@ Exit code 0 = counts agree, 1 = mismatch.
 """
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -74,6 +75,30 @@ expect("api breakdown persona", bd["persona"], live["per"])
 expect("api breakdown domain", bd["domain"], live["dom"])
 print("  note: api wordai_index_records=%s is a snapshot as of %s (live index drifts on the word-spec drip; page derives the live total at runtime)"
       % (api.get("wordai_index_records"), api.get("records_as_of")))
+
+print("static hero breakdown baked into index.html (curl-visible for crawlers):")
+hero_html = open(os.path.join(REPO, "index.html"), encoding="utf-8").read()
+hero_m = re.search(r'<div class="bookbreak"><span id="aibreakdown">(.*?)</span></div>', hero_html, re.S)
+if not hero_m:
+    problems.append("hero static breakdown block missing from index.html")
+    print("  hero breakdown block: MISSING")
+else:
+    hero = hero_m.group(1)
+    expect("hero shows system 11", "11 system" in hero, True)
+    expect("hero shows persona 6", "6 persona" in hero, True)
+    expect("hero shows domain 243", "243 domain" in hero, True)
+    expect("hero word-AI count", re.search(r"\+ ([\d,]+) word-AIs", hero).group(1).replace(",", ""),
+           str(api.get("wordai_index_records")))
+    expect("hero word-AI matches catalog snapshot", re.search(r"\+ ([\d,]+) word-AIs", hero).group(1).replace(",", ""),
+           str(catalog["counts"].get("wordai_index_records")))
+    expect("hero total", re.search(r"PUBLISHED AI FILES: <b>([\d,]+)</b>", hero).group(1).replace(",", ""),
+           str(total_live + int(api.get("wordai_index_records"))))
+    as_of = re.search(r"as of (\d{4}-\d{2}-\d{2})", hero)
+    expect("hero has as-of stamp", bool(as_of), True)
+    if as_of:
+        expect("hero as-of date", as_of.group(1), catalog["counts"].get("wordai_as_of"))
+    hero_total = re.search(r'<span id="aicount"><b>([\d,]+)</b></span>', hero_html).group(1).replace(",", "")
+    expect("hero headline count", hero_total, str(total_live + int(api.get("wordai_index_records"))))
 
 print()
 if problems:

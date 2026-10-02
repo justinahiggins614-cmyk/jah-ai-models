@@ -62,6 +62,8 @@ def main():
     if not embedded_ids:
         problems.append("DYNAMIC: could not parse embedded AI ids (data arrays changed shape?)")
     for h in sorted(set(hrefs)):
+        if is_js_built(h):
+            continue  # JS template (e.g. href="#file-' + e.id + '") — checked dynamically below
         if h.startswith("#file-"):
             if h[6:] not in embedded_ids:
                 problems.append("DEAD AI LINK: %s (no embedded AI with id %s)" % (h, h[6:]))
