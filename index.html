@@ -3867,3 +3867,82 @@ var JAHops = (function(){
 </script>
 </body>
 </html>
+
+/* Finder AI + record helper (additive) */
+.finderbar{background:#0c1322;border:1px solid var(--amber);border-radius:10px;padding:12px 14px;margin:0 0 10px;text-align:left}
+.finder-kicker{color:var(--amber);font-weight:700;letter-spacing:.12em;font-size:.8em}
+.finder-sub{font-size:.85em;color:#9aa4b2;margin:4px 0 8px}
+.finder-row{display:flex;gap:8px}
+#finder-q{flex:1;min-width:0;background:#0a0d18;border:1px solid var(--amber);color:var(--txt);padding:10px 12px;border-radius:8px;font-size:1em;font-family:Georgia,serif}
+#finder-q::placeholder{color:#6b7694}
+.finder-card{background:#0a0d18;border:1px solid #2a3350;border-radius:8px;padding:10px 12px;margin:8px 0}
+.finder-card b{color:var(--amber)}
+.finder-card span{display:block;color:#9fc2ff;font-size:.82em;margin:2px 0}
+.finder-card i{display:block;color:#9aa4b2;font-size:.85em;font-style:normal;margin:2px 0 6px}
+.finder-card a{color:var(--amber);font-weight:700;text-decoration:none}
+.finder-none{color:#9aa4b2;font-size:.9em;margin:8px 0}
+.finder-help{background:#0c1322;border:1px solid var(--amber);border-radius:10px;padding:12px 14px;margin:14px 0;text-align:left}
+.fh-k{color:var(--amber);font-weight:700;letter-spacing:.1em;font-size:.78em;margin-bottom:8px}
+.fh-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.fh-a{font-size:.92em;color:var(--txt);background:#0a0d18;border:1px solid #2a3350;border-radius:8px;padding:10px 12px;min-height:1.4em}
+<div class="finderbar" id="finderbar">
+<div class="finder-kicker">&#9742; DIRECTORY ASSISTANCE &mdash; THE FINDER</div>
+<p class="finder-sub">Describe what you're looking for in plain words &mdash; the Finder reads the whole book and brings you the five closest files.</p>
+<div class="finder-row"><input type="text" id="finder-q" placeholder="Describe what you're looking for&hellip;" aria-label="Describe what you are looking for" autocomplete="off"><button type="button" id="finder-go" class="fbtn">Find it</button></div>
+<div id="finder-res" aria-live="polite"></div>
+</div>
+  body.appendChild(finderHelpBubble(ai));
+/* ============ FINDER AI: describe it in plain words ============ */
+var FINDER_STOP={the:1,a:1,an:1,and:1,or:1,of:1,to:1,in:1,for:1,on:1,with:1,is:1,are:1,was:1,were:1,be:1,by:1,as:1,at:1,from:1,that:1,this:1,it:1,its:1,you:1,your:1,i:1,me:1,my:1,we:1,our:1,they:1,them:1,their:1,he:1,she:1,his:1,her:1,not:1,no:1,yes:1,do:1,does:1,did:1,can:1,could:1,will:1,would:1,should:1,what:1,which:1,who:1,whom:1,when:1,where:1,why:1,how:1,all:1,any:1,both:1,each:1,few:1,more:1,most:1,other:1,some:1,such:1,than:1,then:1,there:1,these:1,those:1,over:1,under:1,between:1,into:1,through:1,about:1,after:1,before:1,also:1,just:1,very:1,only:1,own:1,same:1,so:1,but:1,if:1,because:1,while:1,up:1,out:1,down:1,off:1,again:1,once:1,here:1,need:1,want:1,looking:1,find:1,get:1,show:1,give:1,tell:1,like:1,please:1};
+function finderKeywords(t){
+  return String(t==null?'':t).toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(function(w){return w.length>=3&&!FINDER_STOP[w]});
+}
+function wireFinder(){
+  var inp=document.getElementById('finder-q'),btn=document.getElementById('finder-go'),res=document.getElementById('finder-res');
+  if(!inp||!btn||!res||inp._fwired)return;inp._fwired=1;
+  function run(){
+    var kw=finderKeywords(inp.value);
+    if(!kw.length){res.innerHTML='<p class="finder-none">Tell me a little more &mdash; a word or two about what you need.</p>';return}
+    var cands=[],i,k,s;
+    var all=window._lookupIndex||[];
+    for(i=0;i<all.length;i++){var e=all[i];s=0;for(k=0;k<kw.length;k++)if(e.hay.indexOf(kw[k])>=0)s++;if(s>0)cands.push({s:s,kind:'file',id:e.id,name:e.name,stamp:e.stamp,tag:e.tag})}
+    if(window.wordaiIndex){for(i=0;i<window.wordaiIndex.length;i++){var w=window.wordaiIndex[i][0],id=window.wordaiIndex[i][1];var hay=(w+' jah-ai-word-'+String(id).padStart(6,'0')).toLowerCase();s=0;for(k=0;k<kw.length;k++)if(hay.indexOf(kw[k])>=0)s++;if(s>0)cands.push({s:s,kind:'wordai',wi:i,idNum:id,name:wordaiDisplay(w)+' AI',stamp:'JAH-AI-WORD-'+String(id).padStart(6,'0'),tag:'Word AI \u00b7 '+w})}}
+    cands.sort(function(a,b){return b.s-a.s||(a.name<b.name?-1:1)});
+    var top=cands.slice(0,5);
+    if(!top.length){res.innerHTML='<p class="finder-none">No file matched those words &mdash; try a name, an ID like JAH-AI-SIG-001, or a plain word like &ldquo;divorce&rdquo;.</p>';return}
+    res.innerHTML='<p class="finder-sub" style="margin:8px 0 2px">Five closest files &mdash; straight from the book:</p>'+top.map(function(c){
+      var href=c.kind==='wordai'?'#wordai-'+c.stamp:'#file-'+c.id;
+      return '<div class="finder-card"><b>'+escHtml(c.name)+'</b><span>'+escHtml(c.stamp)+'</span><i>'+escHtml(String(c.tag).slice(0,90))+'</i><a href="'+href+'" data-fk="'+c.kind+'" data-fid="'+escHtml(c.id||'')+'" data-fwi="'+(c.wi==null?'':c.wi)+'">Take me there &rarr;</a></div>';
+    }).join('');
+    Array.prototype.forEach.call(res.querySelectorAll('[data-fk]'),function(a){
+      a.addEventListener('click',function(ev){
+        ev.preventDefault();
+        if(a.getAttribute('data-fk')==='wordai'){var wi=+a.getAttribute('data-fwi');var rec=window.wordaiIndex[wi];if(rec)openWordAI(rec[0],rec[1]);}
+        else openFile(a.getAttribute('data-fid'));
+      });
+    });
+  }
+  btn.onclick=run;
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')run()});
+}
+/* compact record helper: data-grounded answers, never invents */
+function finderHelpBubble(ai){
+  var name=ai.name||'This file';
+  var meta=ai.mentality||ai.domain||'';
+  var stamp=ai.stamp||ai.ai_id||ai.id||'';
+  var abs=ai.abilities||[];
+  var qs=[
+    ['What is this file?',name+(meta?' \u2014 '+meta:'')+(stamp?'. Official file '+stamp+'.':'.')],
+    ['What can it do?',abs.length?('It lists '+abs.length+(abs.length===1?' ability':' abilities')+': '+abs.slice(0,3).join('; ')+'.'):'This file does not list abilities in its record \u2014 ask it in the chat below and it answers from its own data.'],
+    ['What is its stamp?',stamp?('Its official stamp is '+stamp+' \u2014 the permanent machine identity of this file.'):'This record does not carry a stamp.']
+  ];
+  var box=document.createElement('div');box.className='finder-help';
+  box.innerHTML='<div class="fh-k">&#9742; ASK THIS FILE \u2014 quick answers, straight from the record</div><div class="fh-row">'+
+    qs.map(function(x,i){return '<button type="button" class="fbtn" data-fhi="'+i+'">'+escHtml(x[0])+'</button>'}).join('')+
+    '</div><div class="fh-a" aria-live="polite">Tap a question above.</div>';
+  var ans=box.querySelector('.fh-a');
+  Array.prototype.forEach.call(box.querySelectorAll('[data-fhi]'),function(b){b.onclick=function(){ans.textContent=qs[+b.getAttribute('data-fhi')][1]}});
+  return box;
+}
+    body.appendChild(finderHelpBubble(rec));
+  wireFinder();
