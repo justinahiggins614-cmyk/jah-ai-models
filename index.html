@@ -499,6 +499,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <footer class="note">THE JAH AI MODELS ARCHIVE · Signature-made files by Justin Addam Higgins · persona simulations are fan-style interpretations, not affiliated with any rights holder</footer>
 <div class="note" style="text-align:center;font-size:.8em;color:var(--dim);padding:0 0 22px"><b>For crawlers &amp; AI assistants:</b> <a href="ai-catalog.json">ai-catalog.json</a> (all 260 embedded AI files, machine-readable) &middot; <a href="api.json">api.json</a> (deep-link patterns + endpoints) &middot; <a href="sitemap.xml">sitemap.xml</a> &middot; word-AI index: <a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz">wordai.idx.json.gz</a> (22,200 word AIs as of 2026-10-01 &mdash; see the <a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/sitemap.xml">Spec Catalog sitemap</a> for word-AI pages)</div>
 <div class="siteupdated"><b>Site updated:</b> <span id="siteupdated">2026-10-01</span> · AI-file counts above update live from the data index</div>
+<script src="js/jah-talk-fallback.js"></script>
 <script>
 /* ============ TIERED TTS (speechSynthesis -> ResponsiveVoice -> Google TTS hosts) ============ */
 var TTS = (function(){
@@ -2839,20 +2840,50 @@ function llamaPersonaPrompt(kind, o){
   L.push('Answer the user directly in your own voice, in a few sentences.');
   return L.join('\n');
 }
+/* ---- JAHtalk: the shared human-talk fallback + stat-dump guard ----
+   Every reply leaving this engine passes through JAHtalk.guard so no AI ever
+   answers with a terse machine dump ("Name: X | CPC=G06F | UPTIME=99.99%");
+   when the canned engine comes back empty/terse, JAHtalk.reply (or
+   JAHtalk.greet for openers) speaks in human words instead. Invisible
+   plumbing: zero network, zero visual change. */
+function talkProfile(kind, obj){
+  var o = obj || {};
+  var abs = o.abilities;
+  if (!abs && o.rows) abs = o.rows.map(function(r){ return r.slot + ' — ' + r.code; });
+  if (!Array.isArray(abs)) abs = [];
+  return {name: o.name || 'Signature AI', id: o.stamp || o.ai_id || o.id || '',
+    description: o.mentality || o.description || o.definition || '',
+    abilities: abs, domain: o.domain || '', kind: kind || 'domain'};
+}
 function llamaChat(kind, obj, q, cannedFn){
-  var canned = function(){ try{ return String(cannedFn()); }catch(e){ return ''; } };
+  var P = talkProfile(kind, obj);
+  var qTrim = String(q == null ? '' : q).trim();
+  var qIsGreet = /^(hi|hii+|hey|hello|yo|howdy|good\s?(morning|afternoon|evening|day)|greetings|sup)\b/i.test(qTrim);
+  var canned = function(){
+    var r = '';
+    try{ r = String(cannedFn()); }catch(e){ r = ''; }
+    if (r.trim().length < 12 && typeof JAHtalk !== 'undefined'){
+      try{ r = qIsGreet ? JAHtalk.greet(P) : (JAHtalk.reply(P, q) || r); }catch(e){}
+    }
+    return r;
+  };
+  function guardFinal(t){
+    t = String(t == null ? '' : t);
+    try{ if (typeof JAHtalk !== 'undefined') t = JAHtalk.guard(t, P); }catch(e){}
+    return t;
+  };
   try{
     return llamaEnsure().then(function(ok){
-      if (!ok) return canned();
+      if (!ok) return guardFinal(canned());
       var nm = (obj && obj.name) || 'AI';
       var prompt = llamaPersonaPrompt(kind, obj) + '\n\nUser: ' + String(q == null ? '' : q).slice(0, 400) + '\n' + nm + ':';
       try{
         return SigLlama.generate(prompt, {maxTokens: 100, temperature: 0.75, topK: 40}).then(
-          function(t){ t = String(t == null ? '' : t).trim(); return t ? t : canned(); },
-          function(){ return canned(); });
-      }catch(e){ return canned(); }
+          function(t){ t = String(t == null ? '' : t).trim(); return guardFinal(t ? t : canned()); },
+          function(){ return guardFinal(canned()); });
+      }catch(e){ return guardFinal(canned()); }
     });
-  }catch(e){ return Promise.resolve(canned()); }
+  }catch(e){ return Promise.resolve(guardFinal(canned())); }
 }
 function systemReply(a, q){
   var ql = String(q).toLowerCase();
@@ -2923,7 +2954,10 @@ function sigReply(a, q){ return systemReply(a, q); }
 function arenaSafe(ref, q){
   try{
     var t = arenaReply(ref, q);
-    return (t === undefined || t === null || t === '') ? null : t;
+    if (t === undefined || t === null || t === '') return null;
+    /* JAHtalk guard: arena voices never render as terse machine dumps. */
+    try{ if (typeof JAHtalk !== 'undefined' && ref) t = JAHtalk.guard(t, talkProfile(ref.type, ref.obj)); }catch(e){}
+    return t;
   }catch(e){ return null; }
 }
 function arenaReply(ref, q){

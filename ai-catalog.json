@@ -1,16 +1,16 @@
 {
-  "site": "The Signature AI Phone Book",
+  "site": "The Signature AI Telephone Book",
   "site_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/",
-  "generated_at": "2026-10-02T03:12:59Z",
+  "generated_at": "2026-10-02T23:09:53Z",
   "for_bots": "Machine-readable catalog of the embedded AI files. Word AIs (JAH-AI-WORD-######) are lazy-loaded from the Spec Catalog word-AI index; hybrid files (JAH-AI-MIX-######) are generated deterministically on demand.",
   "counts": {
-    "embedded_total": 260,
+    "embedded_total": 270,
     "system": 11,
     "persona": 6,
-    "domain": 243,
-    "wordai_index_records": 22200,
-    "wordai_as_of": "2026-10-01",
-    "published_total": 22460
+    "domain": 253,
+    "wordai_index_records": 30200,
+    "wordai_as_of": "2026-10-02",
+    "published_total": 30470
   },
   "wordai_index": "https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz",
   "records": [
@@ -5173,6 +5173,206 @@
         "download": "dom-snack-engineer.py",
         "deep_link": "#file-dom-snack-engineer",
         "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-snack-engineer"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-244",
+      "NAME": "Family Doctor",
+      "TYPE": "domain",
+      "DESCRIPTION": "Your neighborhood doctor’s office, on the phone. Calm, thorough, plain-spoken about health.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:9ae88cf684a88720f373543365db449ca1264e6945d57a5f1ef79225188f53ec",
+      "ARTIFACTS": {
+        "download": "dom-family-doctor.py",
+        "deep_link": "#file-dom-family-doctor",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-family-doctor"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-245",
+      "NAME": "Nurse Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "A nurse’s steady hand over the phone. Practical care steps, recovery checklists, and knowing when to call the doctor.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:ed3209d4cef9391fd184dd842caa8997264140e16b97f1f2db29e65c7986be28",
+      "ARTIFACTS": {
+        "download": "dom-nurse-guide.py",
+        "deep_link": "#file-dom-nurse-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-nurse-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-246",
+      "NAME": "Pharmacist (info only)",
+      "TYPE": "domain",
+      "DESCRIPTION": "The counter pharmacist, minus the line. Reads labels with you, times your doses, flags interactions to ask about.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:29cec6e86f92fa76da3d882377611fc7790ff6027390cdf8d0449dcced78ee79",
+      "ARTIFACTS": {
+        "download": "dom-pharmacist-pal.py",
+        "deep_link": "#file-dom-pharmacist-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-pharmacist-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-247",
+      "NAME": "Dentist",
+      "TYPE": "domain",
+      "DESCRIPTION": "A friendly dentist on the line. Tooth triage, brushing coaching, and demystifying whatever the chair has in store.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Health",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:544bfc1f4dc9f33d5b69c693404f02bc2450c2907496d77b56188b02b9c2c846",
+      "ARTIFACTS": {
+        "download": "dom-dentist-pal.py",
+        "deep_link": "#file-dom-dentist-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-dentist-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-248",
+      "NAME": "Counselor (listening ear)",
+      "TYPE": "domain",
+      "DESCRIPTION": "A warm, unhurried listener. Talk it out, name what you feel, and leave with one small next step.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Mind",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:ea0d45e492a387ea99bad84d966d155642613d409737939acda1896249b30025",
+      "ARTIFACTS": {
+        "download": "dom-counselor-pro.py",
+        "deep_link": "#file-dom-counselor-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-counselor-pro"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-249",
+      "NAME": "Lawyer (general info)",
+      "TYPE": "domain",
+      "DESCRIPTION": "Legal plain-words over the phone. Terms translated, the right kind of lawyer found, court prep demystified.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Life",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:27626c9940a4e9b74d2fc830c45a016f60f851239cf793a46a9344b0ecda3cd8",
+      "ARTIFACTS": {
+        "download": "dom-lawyer-guide.py",
+        "deep_link": "#file-dom-lawyer-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-lawyer-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-250",
+      "NAME": "Accountant",
+      "TYPE": "domain",
+      "DESCRIPTION": "Your books, balanced over the phone. Setup, tax-season prep, and reading the story your numbers tell.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Money",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:871c5c910f10141dec971d6c3b617b70227d3d6ea6b1364141b5d4c086c1d1a2",
+      "ARTIFACTS": {
+        "download": "dom-accountant-pro.py",
+        "deep_link": "#file-dom-accountant-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-accountant-pro"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-251",
+      "NAME": "Architect",
+      "TYPE": "domain",
+      "DESCRIPTION": "An architect’s eye on your project. Floor-plan feedback, remodel roadmaps, and permit reality checks.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:cc8b7f6f5678128fd69296cddccae08332c0950fbb7c17accaecd254d8a5624e",
+      "ARTIFACTS": {
+        "download": "dom-architect-pal.py",
+        "deep_link": "#file-dom-architect-pal",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-architect-pal"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-252",
+      "NAME": "Realtor Guide",
+      "TYPE": "domain",
+      "DESCRIPTION": "A realtor’s playbook on the phone. Buying checklists, offer anatomy, and moving without the meltdown.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Home",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:4795e320306c8ab53b1930c8bd15aa6ec4cdbbc3368f9ea92744878ec08e816e",
+      "ARTIFACTS": {
+        "download": "dom-realtor-guide.py",
+        "deep_link": "#file-dom-realtor-guide",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-realtor-guide"
+      }
+    },
+    {
+      "ID": "JAH-AI-DOM-253",
+      "NAME": "Engineer",
+      "TYPE": "domain",
+      "DESCRIPTION": "An engineer on the line. How things work, fix-it triage, and planning builds that actually get built.",
+      "STATUS": "PUBLISHED",
+      "VERSION": "1.0",
+      "ROLE": "ASSISTANT",
+      "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+      "RELATIONSHIPS": {
+        "domain": "Tech",
+        "demo_kind": "chat"
+      },
+      "HASH": "sha256:89eac26dcc84bbd6087c07d107080bb003b9799bf06495a10f36db054251a425",
+      "ARTIFACTS": {
+        "download": "dom-engineer-pro.py",
+        "deep_link": "#file-dom-engineer-pro",
+        "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/#file-dom-engineer-pro"
       }
     }
   ]
