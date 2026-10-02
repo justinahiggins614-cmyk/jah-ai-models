@@ -14,6 +14,13 @@ body{margin:0;background:var(--bg);color:var(--txt);font-family:Georgia,'Times N
 .jahnet a{color:#9fc2ff;text-decoration:none;margin:0 7px;white-space:nowrap}
 .jahnet a:hover{text-decoration:underline}
 .jahnet a.cur{color:var(--gold);font-weight:700}
+.jahnet .here{color:var(--gold);font-weight:700;margin:0 2px 0 0;letter-spacing:.12em;font-size:.92em;white-space:nowrap}
+.siteupdated{text-align:center;color:var(--dim);font-size:.75em;padding:6px 10px 2px}
+.siteupdated b{color:var(--gold);font-weight:700}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+table.params{display:block;overflow-x:auto;max-width:100%}
+.aifile.flash{box-shadow:0 0 0 3px var(--amber)}
+@media(pointer:coarse){.fbtn{min-height:44px;padding:10px 14px}.thumbnav a{min-height:34px;display:flex;align-items:center;justify-content:center}.bookentry{min-height:44px}}
 .hero{text-align:center;padding:40px 16px 22px;background:radial-gradient(ellipse at 50% 0%,#2a2008 0%,var(--bg) 70%);border-bottom:3px double var(--amber)}
 .yptag{display:inline-block;color:#0a0f1e;background:var(--amber);font-weight:700;letter-spacing:.3em;font-size:.78em;padding:5px 18px;border-radius:4px;margin-bottom:10px;font-family:Arial,Helvetica,sans-serif}
 .hero h1{margin:.2em 0 .1em;font-size:2.1em;letter-spacing:.1em;color:var(--amber2);text-shadow:0 0 22px #7a5a10}
@@ -235,7 +242,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 </style>
 </head>
 <body>
-<div class="jahnet"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/">Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Signature Universal Paradox Immune Calculator</a><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">The Signature AI Telephone Book</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">The Signature PC System Depository</a></div>
+<div class="jahnet"><span class="jahnet-t">THE JAH NETWORK</span><span class="here">YOU ARE HERE &#9656;</span><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">The Signature AI Telephone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Signature Universal Paradox Immune Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">The Signature PC System Depository</a></div>
 <header class="hero">
 <div class="yptag">&#9733; YELLOW PAGES &middot; CYBER EDITION &#9733;</div>
 <h1>&#9742; THE SIGNATURE AI TELEPHONE BOOK</h1>
@@ -260,7 +267,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div class="sh-name">Signature Llama</div>
 <p class="sh-desc">The baseline mind behind every AI in this book &mdash; built from scratch, trained on the Signature archive's own words, free forever, no keys, no fees. Every AI dials through it.</p>
 <p class="sh-arch">How it runs: every AI in this book is a persona and prompt layer on top of one engine &mdash; responses are generated live by Signature Llama v1 running in this page's own JavaScript, loaded from the published weights, with a silent fallback engine if the weights can't load.</p>
-<div class="sh-row"><span class="stamp" id="llamastatus">NOW TRAINING</span> <a class="fbtn" style="display:inline-block;text-decoration:none" href="https://justinahiggins614-cmyk.github.io/signature-llama/" target="_blank" rel="noopener">Meet Signature Llama &rarr;</a></div>
+<div class="sh-row"><span class="stamp" id="llamastatus" aria-live="polite">&#9679; Signature Llama v1 &mdash; LIVE</span> <a class="fbtn" style="display:inline-block;text-decoration:none" href="https://justinahiggins614-cmyk.github.io/signature-llama/" target="_blank" rel="noopener">Meet Signature Llama &rarr;</a></div>
 </div>
 <div class="booksearchrow">
 <input type="text" id="booksearch" placeholder="Search the book&hellip; name, stamp, or subject" aria-label="Search the telephone book" autocomplete="off">
@@ -364,8 +371,9 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div class="popbox"><button class="popclose" id="popclose" type="button" aria-label="Close">&times;</button><div id="popbody"></div></div>
 </div>
 <div id="ttsbar"><span>🔊 Reading</span><button id="ttsstop" type="button">Stop</button><label>Speed <input id="ttsspeed" type="range" min="0.7" max="1.6" step="0.1" value="1" style="width:90px"></label></div>
-<div class="jahnet t2"><span class="jahnet-t">THE JAH NETWORK</span><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/">Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Signature Universal Paradox Immune Calculator</a><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">The Signature AI Telephone Book</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">The Signature PC System Depository</a></div>
+<div class="jahnet t2"><span class="jahnet-t">THE JAH NETWORK</span><span class="here">YOU ARE HERE &#9656;</span><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">The Signature AI Telephone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Signature Universal Paradox Immune Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">The Signature PC System Depository</a></div>
 <footer class="note">THE JAH AI MODELS ARCHIVE · Signature-made files by Justin Addam Higgins · persona simulations are fan-style interpretations, not affiliated with any rights holder</footer>
+<div class="siteupdated"><b>Site updated:</b> <span id="siteupdated">2026-10-01</span> · AI-file counts above update live from the data index</div>
 <script>
 /* ============ TIERED TTS (speechSynthesis -> ResponsiveVoice -> Google TTS hosts) ============ */
 var TTS = (function(){
@@ -2594,8 +2602,9 @@ function forgeGenome(){
   GENOME_PRESETS.forEach(function(p){ if (p.note && genomeCanonical() === GENOME_SLOTS.map(function(sl){ return sl.key + ':' + (p.genes[sl.key] || '-'); }).join('|')) presetNote = p.note; });
   var g = {stamp: 'JAH-AI-GEN-' + math.hash.slice(0, 4), name: name, tone: tone, mission: mission, rate: rate, pitch: pitch, rows: rows, math: math, topLayer: topLayer, note: presetNote};
   forgedAIs.push({type:'forged', obj:g});
+  if (window._lookupIndex) window._lookupIndex.push({gen: true, name: name, stamp: g.stamp, tag: 'Genome-forged AI \u00b7 in the Genome Lab', hay: (name + ' ' + g.stamp).toLowerCase()});
   refreshArenaOptions();
-  var h = '<article class="aifile"><div class="filehead"><span class="stamp">' + g.stamp + '</span><span class="badge">GENOME-FORGED</span></div>';
+  var h = '<article class="aifile" id="genfile-' + g.stamp + '"><div class="filehead"><span class="stamp">' + g.stamp + '</span><span class="badge">GENOME-FORGED</span></div>';
   h += aiMetaStrip({stamp: g.stamp, ver: '1.0', role: 'GENERATED AI', status: 'GENERATED', rel: '10 gene blocks, deterministic'});
   h += '<h3>' + escHtml(g.name) + '</h3>';
   h += '<p class="mentality">Tone: ' + escHtml(g.tone) + (g.mission ? ' \u2014 mission: ' + escHtml(g.mission) : ' \u2014 no mission set') + '</p>';
@@ -3049,10 +3058,15 @@ function wireBookSearch(){
 function llamaStatusCheck(){
   var pill = document.getElementById('llamastatus');
   if (!pill) return;
-  function live(){ pill.textContent = '\u25CF LIVE'; }
+  function live(){ pill.textContent = '\u25CF Signature Llama v1 \u2014 LIVE'; }
   fetch('https://justinahiggins614-cmyk.github.io/signature-backend/sigllama/sigllama-v1.bin', {method: 'HEAD'}).then(function(r){
     if (r && r.ok) live();
   }).catch(function(){});
+}
+function openForgedFile(stamp){
+  var el = document.getElementById('genfile-' + stamp);
+  if (el){ el.scrollIntoView({behavior:'smooth', block:'center'}); el.classList.add('flash'); setTimeout(function(){ el.classList.remove('flash'); }, 1600); }
+  else { var gl = document.getElementById('genomelab'); if (gl) gl.scrollIntoView({behavior:'smooth'}); }
 }
 function wireLookup(){
   var inp = document.getElementById('lookup'), res = document.getElementById('lookupres'), t = null;
@@ -3065,31 +3079,45 @@ function wireLookup(){
     if (q.length < 2){ res.style.display = 'none'; res.innerHTML = ''; return; }
     var out = [];
     for (var i = 0; i < all.length && out.length < 10; i++) if (all[i].hay.indexOf(q) >= 0) out.push(all[i]);
+    /* exact hybrid ID: deterministic files exist for every #1..#1000000, so open straight away */
+    var mixm = /^jah-ai-mix-(\d{1,6})$/.exec(q);
+    if (mixm && out.length < 10){
+      var mn = parseInt(mixm[1], 10);
+      if (mn >= 1 && mn <= 1000000) out.unshift({mix: true, n: mn, name: 'Hybrid #' + mn, stamp: 'JAH-AI-MIX-' + String(mn).padStart(6, '0'), tag: 'Deterministic hybrid file · opens in the Mix Lab'});
+    }
     if (wordaiIndex){
       for (var j = 0; j < wordaiIndex.length && out.length < 10; j++){
         var w = wordaiIndex[j][0], id = wordaiIndex[j][1];
-        if (w.indexOf(q) !== -1) out.push({wai: true, wi: j, name: wordaiDisplay(w) + ' AI', stamp: 'JAH-AI-WORD-' + String(id).padStart(6, '0'), tag: 'Word AI · ' + w});
+        var wstamp = 'JAH-AI-WORD-' + String(id).padStart(6, '0');
+        if (w.indexOf(q) !== -1 || wstamp.toLowerCase().indexOf(q) !== -1) out.push({wai: true, wi: j, name: wordaiDisplay(w) + ' AI', stamp: wstamp, tag: 'Word AI · ' + w});
       }
     }
+    /* exact ID match always floats to the top */
+    out.sort(function(a, b){ var ae = ((a.stamp || '').toLowerCase() === q) ? 0 : 1, be = ((b.stamp || '').toLowerCase() === q) ? 0 : 1; return ae - be; });
     res.innerHTML = out.length
       ? out.map(function(e){
           if (e.wai) return '<button type="button" class="lr" data-wi="' + e.wi + '"><b>' + escHtml(e.name) + '</b><span>' + escHtml(e.stamp) + '</span><i>' + escHtml(String(e.tag).slice(0, 90)) + '</i></button>';
+          if (e.mix) return '<button type="button" class="lr" data-mix="' + e.n + '"><b>' + escHtml(e.name) + '</b><span>' + escHtml(e.stamp) + '</span><i>' + escHtml(String(e.tag).slice(0, 90)) + '</i></button>';
+          if (e.gen) return '<button type="button" class="lr" data-gen="' + escHtml(e.stamp) + '"><b>' + escHtml(e.name) + '</b><span>' + escHtml(e.stamp) + '</span><i>' + escHtml(String(e.tag).slice(0, 90)) + '</i></button>';
           return '<button type="button" class="lr" data-id="' + e.id + '"><b>' + escHtml(e.name) + '</b><span>' + escHtml(e.stamp) + '</span><i>' + escHtml(String(e.tag).slice(0, 90)) + '</i></button>';
         }).join('')
-      : '<div class="lr none">No listing found \u2014 try a name, an ID like JAH-AI-SIG-001, or a word like \u201cdivorce\u201d.</div>';
+      : '<div class="lr none">No listing found \u2014 try a name, an ID like JAH-AI-SIG-001 or JAH-AI-WORD-000123, or a word like \u201cdivorce\u201d.</div>';
     res.style.display = 'block';
   }
+  window._lookupIndex = all;
   inp.addEventListener('input', function(){ wordaiUser(); clearTimeout(t); t = setTimeout(function(){ search(inp.value); }, 160); });
   inp.addEventListener('keydown', function(e){
-    if (e.key === 'Enter'){ var f = res.querySelector('.lr[data-id],.lr[data-wi]'); if (f){ res.style.display = 'none'; inp.value = ''; openLr(f); } }
+    if (e.key === 'Enter'){ var f = res.querySelector('.lr[data-id],.lr[data-wi],.lr[data-mix],.lr[data-gen]'); if (f){ res.style.display = 'none'; inp.value = ''; openLr(f); } }
     if (e.key === 'Escape'){ res.style.display = 'none'; }
   });
   function openLr(b){
+    if (b.hasAttribute('data-mix')){ openHybrid(+b.getAttribute('data-mix')); return; }
+    if (b.hasAttribute('data-gen')){ openForgedFile(b.getAttribute('data-gen')); return; }
     if (b.hasAttribute('data-wi')){ var wi = wordaiIndex[+b.getAttribute('data-wi')]; openWordAI(wi[0], wi[1]); }
     else openFile(b.getAttribute('data-id'));
   }
   res.addEventListener('click', function(e){
-    var b = e.target.closest ? e.target.closest('.lr[data-id],.lr[data-wi]') : null;
+    var b = e.target.closest ? e.target.closest('.lr[data-id],.lr[data-wi],.lr[data-mix],.lr[data-gen]') : null;
     if (b){ res.style.display = 'none'; inp.value = ''; openLr(b); }
   });
   document.addEventListener('click', function(e){ if (!e.target.closest || !e.target.closest('.booksearch')) res.style.display = 'none'; });
