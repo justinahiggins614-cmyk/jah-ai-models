@@ -372,11 +372,11 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <span class="pagectl" aria-label="Expand or collapse letter pages"><button type="button" id="expandall">EXPAND ALL</button><span class="pdot">&middot;</span><button type="button" id="collapseall">COLLAPSE ALL</button></span>
 </div>
 <div class="payphone" id="payphone">
-<div class="pp-kicker">&#9742; SIGNATURE PAYPHONE</div>
+<div class="pp-kicker">&#9742; AI PUBLIC-PHONE</div>
 <div class="pp-display" id="pp-display" aria-live="polite">&mdash;</div>
-<div class="pp-keys" id="pp-keys" role="group" aria-label="Payphone keypad"></div>
+<div class="pp-keys" id="pp-keys" role="group" aria-label="AI Public-Phone keypad"></div>
 <div class="pp-row"><button type="button" class="fbtn" id="pp-clear">Clear</button><button type="button" class="fbtn" id="pp-back" aria-label="Backspace">&#9003;</button><button type="button" class="fbtn" id="pp-dial">&#9742; DIAL</button></div>
-<p class="pp-note">Every AI in this book has its own 11-digit Signature number &mdash; dial it here to open their line. <a href="#numbering">See the numbering plan</a>.</p>
+<p class="pp-note">Every AI in this book has its own 11-digit Signature number &mdash; find it in that AI's file, where it is displayed &mdash; or dial <b>any</b> number for a prank call: a surprise AI picks up. <a href="#numbering">See the numbering plan</a>.</p>
 <div id="pp-msg" aria-live="polite"></div>
 </div>
 
@@ -392,7 +392,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div class="dw-body numplan">
 <p class="wingdesc">Every AI in this book carries its own 11-digit Signature phone number: <b>1 + 3-digit district + 7-digit block number</b> &mdash; organized like a city. Districts group AIs the way store sections group products; the block number is the AI's address on its street. The number never changes.</p>
 <div id="numplan-table"></div>
-<p class="wingdesc">Dial any number on the <b>Signature Payphone</b> above the A&ndash;Z index to open that AI's line directly.</p>
+<p class="wingdesc">Dial any number on the <b>AI Public-Phone</b> above the A&ndash;Z index to open that AI's line directly &mdash; or dial a made-up number for a prank call and a surprise AI answers.</p>
 </div>
 </details>
 <details class="dropwin" id="provisits">
@@ -4174,9 +4174,22 @@ var Payphone = (function(){
     cur += ch; msg(''); showCur();
     if (cur.length === 11){ var d = cur; setTimeout(function(){ if (cur === d) dial(); }, 450); }
   }
+  function prankCall(num){
+    var pool = [], i, j, k;
+    for (i = 0; i < SIG_AIS.length; i++) pool.push(SIG_AIS[i].id);
+    for (j = 0; j < PERSONAS.length; j++) pool.push(PERSONAS[j].id);
+    var ks = Object.keys(domIndex || {});
+    for (k = 0; k < ks.length; k++) pool.push(domIndex[ks[k]].id);
+    cur = ''; showCur();
+    if (!pool.length){ msg('No listing on that number \u2014 check the digits and try again.'); return; }
+    var id = pool[Math.floor(Math.random() * pool.length)];
+    var ai = findFullAi(id);
+    openFile(id);
+    msg('Prank call! ' + PhoneBook.fmt(num) + ' is no real listing \u2014 ' + (ai ? ai.name : 'a surprise AI') + ' picked up anyway.');
+  }
   function dial(){
     var hit = PhoneBook.lookup(cur);
-    if (!hit){ msg('No listing on that number \u2014 check the digits and try again.'); return; }
+    if (!hit){ prankCall(cur); return; }
     var num = cur; cur = ''; showCur();
     msg('Dialing ' + PhoneBook.fmt(num) + '\u2026');
     if (hit.kind === 'file'){ openFile(hit.id); msg(''); }
