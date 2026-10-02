@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Signature AI Telephone Book — home of every AI</title>
-<meta name="description" content="The Signature AI Telephone Book — home of every AI. Dial 22,460+ published AI files: 11 Signature system AIs, 6 persona AIs, 243 domain AIs for every need in life, and 22,200 word AIs — each with dossier, working demo, dialog, read-aloud, copy and download.">
+<title>The Signature AI Phone Book — home of every AI</title>
+<meta name="description" content="The Signature AI Phone Book — home of every AI. Dial 22,460+ published AI files: 11 Signature system AIs, 6 persona AIs, 243 domain AIs for every need in life, and 22,200 word AIs — each with dossier, working demo, dialog, read-aloud, copy and download.">
 <link rel="canonical" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/" id="canonlink">
 <script type="application/ld+json" id="jah-ld-site">
 {
@@ -12,7 +12,7 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "name": "The Signature AI Telephone Book",
+      "name": "The Signature AI Phone Book",
       "alternateName": "The JAH AI Models Archive",
       "url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/",
       "description": "Home of every AI: Signature-made AI systems, persona archive, and domain AIs for every need — each with dossier, working demo, dialog, read-aloud, copy, and download.",
@@ -269,12 +269,80 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 .dw-h{color:var(--dim);font-size:.85em;font-style:italic}
 .dw-body{padding:12px 2px}
 </style>
+<style>
+.finderbar{background:#0c1322;border:1px solid var(--amber);border-radius:10px;padding:12px 14px;margin:0 0 10px;text-align:left}
+.finder-kicker{color:var(--amber);font-weight:700;letter-spacing:.12em;font-size:.8em}
+.finder-sub{font-size:.85em;color:#9aa4b2;margin:4px 0 8px}
+.finder-row{display:flex;gap:8px}
+#finder-q{flex:1;min-width:0;background:#0a0d18;border:1px solid var(--amber);color:var(--txt);padding:10px 12px;border-radius:8px;font-size:1em;font-family:Georgia,serif}
+#finder-q::placeholder{color:#6b7694}
+.finder-card{background:#0a0d18;border:1px solid #2a3350;border-radius:8px;padding:10px 12px;margin:8px 0}
+.finder-card b{color:var(--amber)}
+.finder-card span{display:block;color:#9fc2ff;font-size:.82em;margin:2px 0}
+.finder-card i{display:block;color:#9aa4b2;font-size:.85em;font-style:normal;margin:2px 0 6px}
+.finder-card a{color:var(--amber);font-weight:700;text-decoration:none}
+.finder-none{color:#9aa4b2;font-size:.9em;margin:8px 0}
+.finder-help{background:#0c1322;border:1px solid var(--amber);border-radius:10px;padding:12px 14px;margin:14px 0;text-align:left}
+.fh-k{color:var(--amber);font-weight:700;letter-spacing:.1em;font-size:.78em;margin-bottom:8px}
+.fh-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.fh-a{font-size:.92em;color:var(--txt);background:#0a0d18;border:1px solid #2a3350;border-radius:8px;padding:10px 12px;min-height:1.4em}
+/* ============ SIGNATURE PHONE BOOK: numbers, payphone, group call, visits ============ */
+.phoneline{font-family:monospace;color:var(--amber);font-size:.95em;margin:6px 0;padding:6px 10px;border:1px dashed #3a3020;border-radius:6px;background:#0a0d18}
+.phoneline b{font-size:1.1em;letter-spacing:.06em}
+.phoneline .ph-dist{color:#9aa4b2;font-size:.85em;margin-left:8px}
+.be-phone{font-family:monospace;color:var(--amber);font-size:.78em}
+/* payphone */
+.payphone{background:linear-gradient(180deg,#101828,#0a0d18);border:2px solid #2a3350;border-radius:14px;padding:14px;margin:0 0 12px;text-align:center;max-width:340px}
+.pp-kicker{color:var(--amber);font-weight:700;letter-spacing:.18em;font-size:.8em;margin-bottom:8px}
+.pp-display{font-family:monospace;font-size:1.5em;letter-spacing:.1em;color:#ffd76a;background:#05080f;border:1px solid #2a3350;border-radius:8px;padding:10px;margin-bottom:10px;min-height:1.6em}
+.pp-keys{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.pp-keys button{font-family:monospace;font-size:1.3em;font-weight:700;background:#141c30;color:var(--txt);border:1px solid #2a3350;border-radius:8px;padding:12px 0;cursor:pointer}
+.pp-keys button:active{background:var(--amber);color:#0a0f1e}
+.pp-row{display:flex;gap:8px;justify-content:center;margin-bottom:8px}
+.pp-note{font-size:.8em;color:#9aa4b2;margin:4px 0}
+.pp-note a{color:var(--amber)}
+#pp-msg{font-size:.85em;color:#ffd76a;min-height:1.2em}
+/* group call */
+#calltray[hidden],#groupcall[hidden],#visitmodal[hidden]{display:none!important}
+#calltray{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#0c1322;border-top:2px solid var(--amber);padding:8px 12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#calltray .ct-t{color:var(--amber);font-weight:700;font-size:.85em}
+.ct-chip{background:#141c30;border:1px solid #2a3350;border-radius:20px;padding:4px 6px 4px 10px;font-size:.8em;color:var(--txt)}
+.ct-chip button{background:none;border:none;color:#ff9a9a;font-size:1em;cursor:pointer;margin-left:4px}
+#groupcall,#visitmodal{position:fixed;inset:0;z-index:70;background:rgba(3,5,10,.82);display:flex;align-items:center;justify-content:center;padding:12px}
+.gc-box,.pv-box{background:#0c1322;border:2px solid var(--amber);border-radius:14px;max-width:640px;width:100%;max-height:92vh;overflow:auto;padding:16px}
+.gc-head{color:var(--amber);font-weight:700;letter-spacing:.1em;margin-bottom:4px}
+.gc-sub{font-size:.82em;color:#9aa4b2;margin-bottom:8px}
+.gc-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.gc-log{border:1px solid var(--line);border-radius:6px;background:#05080f;padding:8px;height:220px;overflow:auto;font-size:.88em;margin-bottom:8px}
+.gc-log .u{color:#9fc2ff;margin:.3em 0}
+.gc-log .a{color:#ffe1a8;margin:.3em 0}
+.gc-log .s{color:#6b7694;font-style:italic;margin:.3em 0}
+.gc-row{display:flex;gap:8px}
+.gc-row input{flex:1;min-width:0;background:#0a0d18;border:1px solid var(--amber);color:var(--txt);padding:10px;border-radius:8px;font-family:Georgia,serif}
+.gc-foot{display:flex;gap:12px;align-items:center;margin-top:8px;font-size:.82em;color:#9aa4b2}
+/* professional visits */
+.progrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:10px}
+.procard{background:#0a0d18;border:1px solid #2a3350;border-radius:10px;padding:12px;cursor:pointer;text-align:left;color:var(--txt);font-family:Georgia,serif}
+.procard:hover{border-color:var(--amber)}
+.procard .pc-i{font-size:1.6em}
+.procard b{display:block;color:var(--amber);margin:4px 0 2px}
+.procard span{font-size:.8em;color:#9aa4b2}
+.pv-visit{border:1px solid #2a3350;border-radius:8px;background:#05080f;padding:10px;margin:8px 0;font-size:.9em}
+.pv-note{border:1px solid #5a4a22;border-radius:8px;padding:8px;font-size:.82em;color:#ffd76a;margin:8px 0}
+/* numbering plan */
+.numplan{font-size:.9em}
+.numplan table{width:100%;border-collapse:collapse;margin-top:8px}
+.numplan td,.numplan th{border:1px solid #2a3350;padding:6px 8px;text-align:left;font-size:.85em}
+.numplan th{color:var(--amber)}
+.numplan td.n{font-family:monospace;color:#ffd76a;white-space:nowrap}
+
+</style>
 </head>
 <body>
-<div class="jahnet"><span class="jahnet-t">THE JAH NETWORK</span><span class="here">YOU ARE HERE &#9656;</span><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">The Signature AI Telephone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Signature Universal Paradox Immune Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">The Signature PC System Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">Signature Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">The Signature Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">The Signature Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">The Signature Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">The Signature 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">Signature Backend</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">The Signature Boundless Generator Archive</a></div>
+<div class="jahnet"><span class="jahnet-t">THE JAH NETWORK</span><span class="here">YOU ARE HERE &#9656;</span><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Signature Universal Paradox Immune Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">The Signature PC System Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">Signature Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">The Signature Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">The Signature Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">The Signature Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">The Signature 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">Signature Backend</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">The Signature Boundless Generator Archive</a></div>
 <header class="hero">
 <div class="yptag">&#9733; YELLOW PAGES &middot; CYBER EDITION &#9733;</div>
-<h1>&#9742; THE SIGNATURE AI TELEPHONE BOOK</h1>
+<h1>&#9742; THE SIGNATURE AI PHONE BOOK</h1>
 <p><b>Every AI lives here as a file.</b> Ring up any mind — system AIs, personas, and a Signature AI for every need in life. Each file carries its mentality, its abilities, its data — and a working demo you can run, talk to, and download. <i>The JAH AI Models Archive.</i> Boundless more to come.</p>
 <div class="startbox" style="max-width:1180px;margin:10px auto 0;padding:10px 16px;background:var(--panel);border:1px solid var(--amber);border-radius:10px;font-size:.9em;text-align:left"><b style="color:var(--amber)">NEW HERE? 3 QUICK STEPS:</b> &#9312; Search above or browse the Book below &mdash; tap any AI to open its file. &#9313; Talk to it, hear it read aloud, copy it or download it. &#9314; Make your own: the <a href="#genomelab">Genome Lab</a> builds an AI from gene blocks, the <a href="#mixlab">Mix Lab</a> fuses two AIs into one.</div>
 <div class="booksearch">
@@ -286,11 +354,11 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <p style="font-size:.85em">Signature-made by Justin Addam Higgins &middot; deterministic systems &middot; honest simulations</p>
 </header>
 <nav class="wingnav">
-<a href="#thebook">&#128214; The Book</a><a href="#sisterlines">Sister-Site Lines</a><a href="#genomelab">&#129516; Genome Lab</a><a href="#arena">&#9876; Arena</a><a href="#mixlab">Mix Lab</a><a href="#incoming">Incoming Transmissions</a>
+<a href="#thebook">&#128214; The Book</a><a href="#sisterlines">Sister-Site Lines</a><a href="#genomelab">&#129516; Genome Lab</a><a href="#arena">&#9876; Arena</a><a href="#mixlab">Mix Lab</a><a href="#incoming">Incoming Transmissions</a><a href="#numbering">&#9742; Numbering Plan</a><a href="#provisits">&#127973; Professional Visits</a>
 </nav>
 <section id="thebook">
 <h2 class="wing">THE BOOK &mdash; EVERY AI, A&ndash;Z</h2>
-<p class="wingdesc">The whole archive as one telephone book. Tap any listing to open the full file &mdash; dossier, working demo, dialog, read-aloud, copy, download. Use the A&ndash;Z thumb index to jump.</p>
+<p class="wingdesc">The whole archive as one phone book. Tap any listing to open the full file &mdash; dossier, working demo, dialog, read-aloud, copy, download. Use the A&ndash;Z thumb index to jump.</p>
 <div class="showcase" id="llamashow">
 <div class="sh-kicker">&#9733; SHOWCASE &mdash; OUR OWN BASELINE AI</div>
 <div class="sh-name">Signature Llama</div>
@@ -299,15 +367,42 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div class="sh-row"><span class="stamp" id="llamastatus" aria-live="polite">&#9679; Signature Llama v1 &mdash; LIVE</span> <a class="fbtn" style="display:inline-block;text-decoration:none" href="https://justinahiggins614-cmyk.github.io/signature-llama/" target="_blank" rel="noopener">Meet Signature Llama &rarr;</a></div>
 </div>
 <div class="booksearchrow">
-<input type="text" id="booksearch" placeholder="Search the book&hellip; name, stamp, or subject" aria-label="Search the telephone book" autocomplete="off">
+<input type="text" id="booksearch" placeholder="Search the book&hellip; name, stamp, or subject" aria-label="Search the phone book" autocomplete="off">
 <span id="bookcount" class="bookcount"></span>
 <span class="pagectl" aria-label="Expand or collapse letter pages"><button type="button" id="expandall">EXPAND ALL</button><span class="pdot">&middot;</span><button type="button" id="collapseall">COLLAPSE ALL</button></span>
 </div>
+<div class="payphone" id="payphone">
+<div class="pp-kicker">&#9742; SIGNATURE PAYPHONE</div>
+<div class="pp-display" id="pp-display" aria-live="polite">&mdash;</div>
+<div class="pp-keys" id="pp-keys" role="group" aria-label="Payphone keypad"></div>
+<div class="pp-row"><button type="button" class="fbtn" id="pp-clear">Clear</button><button type="button" class="fbtn" id="pp-back" aria-label="Backspace">&#9003;</button><button type="button" class="fbtn" id="pp-dial">&#9742; DIAL</button></div>
+<p class="pp-note">Every AI in this book has its own 11-digit Signature number &mdash; dial it here to open their line. <a href="#numbering">See the numbering plan</a>.</p>
+<div id="pp-msg" aria-live="polite"></div>
+</div>
+
+<div class="finderbar" id="finderbar">
+<div class="finder-kicker">&#9742; DIRECTORY ASSISTANCE &mdash; THE FINDER</div>
 <div class="bookwrap">
 <div class="thumbnav" id="thumbnav" aria-label="Jump to letter"></div>
 <div class="book" id="book"></div>
 </div>
 </section>
+<details class="dropwin" id="numbering">
+<summary><span class="dw-t">&#9742; THE NUMBERING PLAN</span><span class="dw-h">Every AI's 11-digit Signature number &mdash; districts like city blocks</span></summary>
+<div class="dw-body numplan">
+<p class="wingdesc">Every AI in this book carries its own 11-digit Signature phone number: <b>1 + 3-digit district + 7-digit block number</b> &mdash; organized like a city. Districts group AIs the way store sections group products; the block number is the AI's address on its street. The number never changes.</p>
+<div id="numplan-table"></div>
+<p class="wingdesc">Dial any number on the <b>Signature Payphone</b> above the A&ndash;Z index to open that AI's line directly.</p>
+</div>
+</details>
+<details class="dropwin" id="provisits">
+<summary><span class="dw-t">&#127973; PROFESSIONAL VISITS</span><span class="dw-h">Phone visits with professional AIs &mdash; doctors to every trade</span></summary>
+<div class="dw-body">
+<p class="wingdesc">Book a phone visit with a professional AI &mdash; from doctors and lawyers to mechanics and chefs. Each visit opens as a warm, appointment-style consultation with the AI. Medical, legal and financial visits always carry their "not a licensed professional" note.</p>
+<div class="progrid" id="progrid"><p class="wingdesc">Opening the appointment book&hellip;</p></div>
+</div>
+</details>
+
 <details class="dropwin" id="sisterlines">
 <summary><span class="dw-t">SISTER-SITE LINES</span><span class="dw-h">AI families living on our other sites — tap a line for a preview card</span></summary>
 <div class="dw-body">
@@ -321,10 +416,10 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <p class="wingdesc"><b>Make your own AI in 4 easy steps</b> &mdash; just follow the numbered steps below. Every AI is built from 10 jobs that mirror the systems of the human body: sensing, thinking, acting, memory, conscience, self-repair, energy, learning, voice, and language. Each job comes in 3 strengths &mdash; <b>Foundational (F)</b>, <b>Axiom-Infused (A)</b>, <b>Apex (P)</b> &mdash; 30 gene blocks in all. Pick a preset or tap blocks yourself, give it a name and personality, press <b>&#9874; FORGE THIS AI</b> &mdash; then talk to your new AI in the chat box that appears underneath. Every forged AI gets its own signature hash, power score, and signature vector.</p>
 <div class="mixbox">
 <h3 style="color:var(--amber);letter-spacing:.1em;font-size:.95em">1 &middot; CHEATER'S GUIDE PRESETS</h3>
-<p class="wingdesc" style="font-size:.85em">One tap loads a full 10-gene archetype from the JAH-UAIG cheater's guide &mdash; or start from any telephone-book AI and build on it.</p>
+<p class="wingdesc" style="font-size:.85em">One tap loads a full 10-gene archetype from the JAH-UAIG cheater's guide &mdash; or start from any phone-book AI and build on it.</p>
 <div class="genpresets" id="genpresets"></div>
 <div class="genform" style="margin-top:10px">
-<label style="grid-column:1/-1">Or start from a telephone book AI<select id="gbase"><option value="">Pick an AI to build on&hellip;</option></select></label>
+<label style="grid-column:1/-1">Or start from a phone book AI<select id="gbase"><option value="">Pick an AI to build on&hellip;</option></select></label>
 </div>
 <button type="button" class="genpreset" id="gbaseBtn">Use as base &rarr;</button>
 <h3 style="color:var(--amber);letter-spacing:.1em;font-size:.95em;margin-top:14px">2 &middot; CHOOSE ONE STRENGTH FOR EACH FUNCTION &mdash; ADD FUNCTIONS IN ANY ORDER</h3>
@@ -348,7 +443,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <details class="dropwin" id="arena">
 <summary><span class="dw-t">AI ARENA — CHAT & VERSUS</span><span class="dw-h">pit different AIs against each other — chat bouts and side-by-side comparisons</span></summary>
 <div class="dw-body">
-<p class="wingdesc">Put different AIs in the ring together &mdash; telephone-book AIs, personas, or your genome-forged creations. <b>Chat bout:</b> they debate your topic, round by round. <b>Versus test:</b> both answer the same question, side by side.</p>
+<p class="wingdesc">Put different AIs in the ring together &mdash; phone-book AIs, personas, or your genome-forged creations. <b>Chat bout:</b> they debate your topic, round by round. <b>Versus test:</b> both answer the same question, side by side.</p>
 <div class="mixbox">
 <div class="genform">
 <label>Contender A<select id="arenaA"></select></label>
@@ -400,7 +495,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div class="popbox"><button class="popclose" id="popclose" type="button" aria-label="Close">&times;</button><div id="popbody"></div></div>
 </div>
 <div id="ttsbar"><span>🔊 Reading</span><button id="ttsstop" type="button">Stop</button><label>Speed <input id="ttsspeed" type="range" min="0.7" max="1.6" step="0.1" value="1" style="width:90px"></label></div>
-<div class="jahnet t2"><span class="jahnet-t">THE JAH NETWORK</span><span class="here">YOU ARE HERE &#9656;</span><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">The Signature AI Telephone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Signature Universal Paradox Immune Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">The Signature PC System Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">Signature Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">The Signature Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">The Signature Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">The Signature Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">The Signature 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">Signature Backend</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">The Signature Boundless Generator Archive</a></div>
+<div class="jahnet t2"><span class="jahnet-t">THE JAH NETWORK</span><span class="here">YOU ARE HERE &#9656;</span><a class="cur" href="https://justinahiggins614-cmyk.github.io/jah-ai-models/">The Signature AI Phone Book</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">Signature Universal Paradox Immune Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">JAH-N Wiki</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">Signature Llama</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">The Signature PC System Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">Signature Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">The Signature Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">The Signature Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">The Signature Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">The Signature 3D Print Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">Signature Backend</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">The Signature Boundless Generator Archive</a></div>
 <footer class="note">THE JAH AI MODELS ARCHIVE · Signature-made files by Justin Addam Higgins · persona simulations are fan-style interpretations, not affiliated with any rights holder</footer>
 <div class="note" style="text-align:center;font-size:.8em;color:var(--dim);padding:0 0 22px"><b>For crawlers &amp; AI assistants:</b> <a href="ai-catalog.json">ai-catalog.json</a> (all 260 embedded AI files, machine-readable) &middot; <a href="api.json">api.json</a> (deep-link patterns + endpoints) &middot; <a href="sitemap.xml">sitemap.xml</a> &middot; word-AI index: <a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz">wordai.idx.json.gz</a> (22,200 word AIs as of 2026-10-01 &mdash; see the <a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/sitemap.xml">Spec Catalog sitemap</a> for word-AI pages)</div>
 <div class="siteupdated"><b>Site updated:</b> <span id="siteupdated">2026-10-01</span> · AI-file counts above update live from the data index</div>
@@ -1012,6 +1107,7 @@ function renderCard(ai, mount, opts){
   if (ai.kind === 'persona' && PERSONA_CHAT[ai.id]) PERSONA_CHAT[ai.id](el, ai);
   else if (ai.kind !== 'persona') wireTalk(el, ai, systemReply);
   JAHops.mount(el, {kind: ai.kind, obj: ai});
+  try{ PhoneUI.decorateFile(el, {kind: ai.kind, obj: ai}); }catch(e){}
   return el;
 }
 /* ============ PERSONA ARCHIVE ============ */
@@ -1571,7 +1667,17 @@ var DOMAIN_SPECS = [
 ['potluck-pro','Potluck Coordinator','Events','No duplicate potato salads.',['Sign-up sheets','Portion math','Theme ideas'],'planner',{fields:['Guests','Theme','Your dish'],out:'Potluck: {0} guests, theme {1}.\nYou bring {2} — the thing you make best.\nSign-up sheet: mains, sides, desserts, drinks.\nLabel allergens. Bring your dish in its serving bowl.'},0],
 ['bbq-chief','BBQ Chief','Cooking','Smoke ring royalty.',['Meat picks','Rub recipes','Resting'],'checklist',['Trim + season night before','Low and slow','Wrap at the stall','Rest 1 hour minimum','Slice against the grain'],0],
 ['tailgate-pro','Tailgate Planner','Events','The parking lot is the party.',['Setup lists','Grill menus','Game picks'],'checklist',['Grill + fuel + tools','Cooler with ice','Chairs + tent','Cornhole or kanjam','Trash bags (leave it clean)'],0],
-['snack-engineer','Super Bowl Snack Engineer','Events','Snacks engineered for maximum game.',['Spreads','Timing','Quantity math'],'calc',{a:'Guests',b:'Quarters (4)',op:'times',unit:'snack portions (1/person/quarter)',note:'Plus a halftime hero dish. Never run out of dip.'},0]
+['snack-engineer','Super Bowl Snack Engineer','Events','Snacks engineered for maximum game.',['Spreads','Timing','Quantity math'],'calc',{a:'Guests',b:'Quarters (4)',op:'times',unit:'snack portions (1/person/quarter)',note:'Plus a halftime hero dish. Never run out of dip.'},0],['family-doctor','Family Doctor','Health','Your neighborhood doctor\u2019s office, on the phone. Calm, thorough, plain-spoken about health.',['Symptom talk-throughs','Checkup prep lists','Medication schedule help'],'chat',[['headache','For a headache: rest, water, and a dark quiet room help most people. If it is sudden, severe, or the worst of your life, get care right away \u2014 and I am an AI assistant, not a licensed professional.'],['checkup','Bring a list of every medication and supplement, your last lab results, and three questions you want answered. That turns a 15-minute visit into a useful one.'],['cold or flu','Rest, fluids, and time do the heavy lifting. See a clinician if breathing is hard, fever tops 103, or it drags past 10 days. I am an AI assistant, not a licensed professional.'],['blood pressure','Check it seated, feet flat, after five quiet minutes \u2014 same arm, same time of day. Bring two weeks of readings to your visit.']],1],
+['nurse-guide','Nurse Guide','Health','A nurse\u2019s steady hand over the phone. Practical care steps, recovery checklists, and knowing when to call the doctor.',['Wound care basics','Recovery checklists','When to call the doctor'],'chat',[['cut','Rinse with clean water, press with a clean cloth, then cover. Watch for spreading redness or warmth \u2014 those mean call a clinician. I am an AI assistant, not a licensed professional.'],['fever','Under 100.4 is usually just the body working. Fluids and rest; call a clinician for high or stubborn fevers, or any fever in a newborn.'],['recovery','Small wins stack up: walk a little, eat a little, rest a lot. If pain spikes or something smells wrong, call your care team.']],1],
+['pharmacist-pal','Pharmacist (info only)','Health','The counter pharmacist, minus the line. Reads labels with you, times your doses, flags interactions to ask about.',['Reading your label','Timing your doses','Interaction flags'],'chat',[['label','Take exactly as the label says \u2014 dose, timing, with-or-without food. Never double up after a missed dose; ask your pharmacist what to do. I am an AI assistant, not a licensed professional.'],['missed dose','Don\u2019t guess \u2014 the answer depends on the drug. Call your pharmacist; that question is literally their job.'],['interaction','Grapefruit, alcohol, and even vitamins can tangle with prescriptions. Keep one list of everything you take and show it at every visit.']],1],
+['dentist-pal','Dentist','Health','A friendly dentist on the line. Tooth triage, brushing coaching, and demystifying whatever the chair has in store.',['Tooth pain triage','Brushing and floss coaching','Braces and aligner tips'],'chat',[['toothache','Rinse warm salt water, floss gently around it, cold compress on the cheek. Don\u2019t put aspirin on the gum. See a dentist soon \u2014 I am an AI assistant, not a licensed professional.'],['brush','Two minutes, twice a day, soft bristles, pea-sized fluoride paste. Angle 45 degrees at the gumline \u2014 gentle circles, not scrubbing.'],['braces','Wax on the pokey bits, rinse after every meal, and wear the retainer exactly as directed or teeth drift back.']],1],
+['counselor-pro','Counselor (listening ear)','Mind','A warm, unhurried listener. Talk it out, name what you feel, and leave with one small next step.',['Talk-it-out sessions','Coping strategies','One-small-step plans'],'chat',[['stressed','Name it out loud: what exactly is heavy right now? Then pick the smallest piece and shrink it further \u2014 tiny steps move big feelings.'],['anxious','Try 4-7-8 breathing: in 4 counts, hold 7, out 8. Do three rounds. If anxiety runs your days, a human counselor is worth it \u2014 I am a listening AI, not a therapist.'],['sad','Sadness needs witnesses, not fixes. Tell me what happened \u2014 I will listen, and we will find one gentle next step together.']],0],
+['lawyer-guide','Lawyer (general info)','Life','Legal plain-words over the phone. Terms translated, the right kind of lawyer found, court prep demystified.',['Legal terms in plain words','Finding the right lawyer','Court prep checklists'],'chat',[['sue','Small claims handles smaller disputes without a lawyer; bigger ones want a consultation \u2014 many lawyers do first meetings free. I am an AI assistant, not a licensed professional.'],['contract','Read the termination clause first, then the money clause, then everything else. If it is over a page of obligations, have a lawyer glance at it.'],['ticket','Read the ticket\u2019s fine print for the deadline \u2014 missing it costs more than the fine. Many tickets can be handled by mail or online.']],1],
+['accountant-pro','Accountant','Money','Your books, balanced over the phone. Setup, tax-season prep, and reading the story your numbers tell.',['Bookkeeping setup','Tax season prep','Reading a P&L'],'chat',[['receipts','Snap every receipt the day you get it \u2014 one folder, by month. Future-you at tax time says thanks. I am an AI assistant, not a licensed professional.'],['profit','Profit = what is left after EVERY cost, including your time. If the number is thin, raise prices before cutting quality.'],['taxes','Track income as it lands and set aside 25\u201330% in a separate account if you are self-employed. April surprises are optional.']],1],
+['architect-pal','Architect','Home','An architect\u2019s eye on your project. Floor-plan feedback, remodel roadmaps, and permit reality checks.',['Floor plan feedback','Remodel roadmaps','Permit checklists'],'chat',[['remodel','Start with the unsexy: structure, plumbing, electrical. Pretty comes last and costs less when the bones are right.'],['addition','Check setbacks and permits before you fall in love with a drawing \u2014 the city gets a vote on your dream.'],['kitchen','The work triangle still rules: sink, stove, fridge within a few steps of each other. Everything else is garnish.']],0],
+['realtor-guide','Realtor Guide','Home','A realtor\u2019s playbook on the phone. Buying checklists, offer anatomy, and moving without the meltdown.',['Buying checklists','Offer anatomy','Moving timelines'],'chat',[['buy','Get pre-approved before you fall in love with a house \u2014 it tells you your real budget and makes offers stronger.'],['offer','Price, contingencies, closing date: the three levers. Waiving the inspection is the riskiest lever \u2014 pull it carefully.'],['moving','Book movers 4\u20136 weeks out, pack one room at a time, and keep a first-night box: sheets, chargers, toilet paper, snacks.']],0],
+['engineer-pro','Engineer','Tech','An engineer on the line. How things work, fix-it triage, and planning builds that actually get built.',['How things work','Fix-it triage','Project planning'],'chat',[['broken','Describe the symptom precisely: what it does versus what it should do. Half of engineering is asking the question right.'],['build','Prototype ugly and early \u2014 cardboard counts. The first version teaches; the tenth version ships.'],['bridge','Load paths, redundancy, margin: everything standing up is a quiet argument with gravity, and gravity always gets a rebuttal.']],0]
+
 ];
 /* ============ DOMAIN AI RENDERER (data-driven) ============ */
 var domIndex = {};
@@ -1590,7 +1696,7 @@ function domainParams(d){
 function domainPy(d){
   var L = [];
   L.push('# ' + d.stamp + ' ' + d.name + ' (Signature domain AI)');
-  L.push('# Signature-made by Justin Addam Higgins — the AI Telephone Book');
+  L.push('# Signature-made by Justin Addam Higgins — the AI Phone Book');
   L.push('# Domain: ' + d.domain);
   L.push('MENTALITY = ' + JSON.stringify(d.mentality));
   L.push('ABILITIES = ' + JSON.stringify(d.abilities));
@@ -1611,7 +1717,7 @@ function domainPy(d){
 }
 function domainFileText(d){
   var L = [];
-  L.push('THE AI TELEPHONE BOOK — JAH AI Models Archive');
+  L.push('THE AI PHONE BOOK — JAH AI Models Archive');
   L.push(d.stamp + ' — ' + d.name + ' (' + d.domain + ')');
   L.push('Signature-made by Justin Addam Higgins'); L.push('');
   L.push('MENTALITY:'); L.push(d.mentality); L.push('');
@@ -1783,9 +1889,10 @@ function toggleDomain(d, row){
     });
   }, 400);
   JAHops.mount(el, {kind:'dom', obj:d});
+  try{ PhoneUI.decorateFile(el, {kind:'dom', obj:d}); }catch(e){}
   el.scrollIntoView({behavior: 'smooth', block: 'nearest'});
 }
-/* ============ TELEPHONE DIRECTORY ============ */
+/* ============ PHONE DIRECTORY ============ */
 var DIR_EXTRA = [
   ['Patent AI', 'Every public patent answers questions', 'https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/', 'sister site'],
   ['Spec AI', 'Every draft spec answers as your personal AI', 'https://justinahiggins614-cmyk.github.io/signature-one-archive/', 'sister site'],
@@ -1949,7 +2056,7 @@ function buildMixLab(){
     }
     function hybridPy(){
       return '# ' + hy.name + ' — hybrid of ' + A.name + ' + ' + B.name + '\n' +
-        '# Signature-made by Justin Addam Higgins — the AI Telephone Book\n' +
+        '# Signature-made by Justin Addam Higgins — the AI Phone Book\n' +
         'MENTALITY = ' + JSON.stringify(hy.mentality) + '\n' +
         'def fused_reply(q):\n    return "A: consults rules. B: weighs intuition. FUSED: both truths held together."\n' +
         'if __name__ == "__main__":\n    print(fused_reply(input("ask> ")))\n';
@@ -2109,7 +2216,7 @@ function afReply(spec, q){
 }
 function afFileText(spec){
   var L = [];
-  L.push('THE AI TELEPHONE BOOK \u2014 JAH AI Models Archive');
+  L.push('THE AI PHONE BOOK \u2014 JAH AI Models Archive');
   L.push(spec.stamp + ' \u2014 ' + spec.name + ' (auto-forged hybrid #' + spec.n + ' of 1,000,000)');
   L.push('Signature-made by Justin Addam Higgins'); L.push('');
   L.push('PARENTS: ' + spec.A.name + ' (' + spec.A.stamp + ')  +  ' + spec.B.name + ' (' + spec.B.stamp + ')');
@@ -2122,7 +2229,7 @@ function afPy(spec){
   function pyq(s){ return JSON.stringify(String(s)); }
   return '# ' + spec.name + ' \u2014 auto-forged hybrid ' + spec.stamp + ' (#' + spec.n + ' of 1,000,000)\n' +
     '# Parents: ' + spec.A.name + ' + ' + spec.B.name + '\n' +
-    '# Signature-made by Justin Addam Higgins \u2014 the AI Telephone Book\n' +
+    '# Signature-made by Justin Addam Higgins \u2014 the AI Phone Book\n' +
     'NAME = ' + pyq(spec.name) + '\n' +
     'STAMP = ' + pyq(spec.stamp) + '\n' +
     'PARENTS = [' + pyq(spec.A.name) + ', ' + pyq(spec.B.name) + ']\n' +
@@ -2720,7 +2827,7 @@ function llamaPersonaPrompt(kind, o){
   o = o || {};
   var L = [];
   var nm = o.name || 'an AI';
-  L.push('You are ' + nm + ', a mind in the Signature AI Telephone Book.');
+  L.push('You are ' + nm + ', a mind in the Signature AI Phone Book.');
   if (kind === 'persona') L.push('This is a fan-style persona interpretation. Stay in character at all times.');
   if (o.mentality) L.push('Your mentality: ' + String(o.mentality).slice(0, 300));
   if (o.abilities && o.abilities.length) L.push('Your abilities: ' + o.abilities.slice(0, 6).join('; '));
@@ -2756,7 +2863,7 @@ function systemReply(a, q){
   if (/(hello|hi|hey)\b/.test(ql)) return 'Hello. I am ' + a.name + ', ready to work. Ask about my abilities, my data, or run my demo.';
   if (/(thank|thanks|thx)/.test(ql)) return 'You are welcome. What else can I do for you?';
   if (/(bye|goodbye|good ?night|see you)/.test(ql)) return 'Goodbye — I will be right here in the book when you need me.';
-  if (/(who made you|who created you|your creator|your maker)/.test(ql)) return 'I am Signature-made by Justin Addam Higgins — one of the system AIs of the Telephone Book.';
+  if (/(who made you|who created you|your creator|your maker)/.test(ql)) return 'I am Signature-made by Justin Addam Higgins — one of the system AIs of the Phone Book.';
   var ab = a.abilities[Math.floor(Math.random() * a.abilities.length)];
   return 'As ' + a.name + ': ' + ab + '.';
 }
@@ -2974,6 +3081,7 @@ function renderDomainFile(d, mount){
     });
   }, 400);
   JAHops.mount(el, {kind:'dom', obj:d});
+  try{ PhoneUI.decorateFile(el, {kind:'dom', obj:d}); }catch(e){}
   return el;
 }
 /* ---- per-record SEO: JSON-LD + title + meta description + canonical ----
@@ -2995,11 +3103,11 @@ function setRecordSeo(anchor, name, desc, stamp){
     'applicationCategory': 'AI persona / assistant',
     'operatingSystem': 'Any',
     'creator': {'@type': 'Person', 'name': 'Justin Addam Higgins'},
-    'isPartOf': {'@type': 'WebSite', 'name': 'The Signature AI Telephone Book', 'url': SITE_BASE}
+    'isPartOf': {'@type': 'WebSite', 'name': 'The Signature AI Phone Book', 'url': SITE_BASE}
   });
-  document.title = name + ' (' + stamp + ') \u2014 The Signature AI Telephone Book';
+  document.title = name + ' (' + stamp + ') \u2014 The Signature AI Phone Book';
   var md = document.querySelector('meta[name="description"]');
-  if (md) md.setAttribute('content', (String(desc || name).slice(0, 150) + ' \u2014 ' + stamp + ' \u00B7 The Signature AI Telephone Book.'));
+  if (md) md.setAttribute('content', (String(desc || name).slice(0, 150) + ' \u2014 ' + stamp + ' \u00B7 The Signature AI Phone Book.'));
   var canon = document.getElementById('canonlink');
   if (canon) canon.setAttribute('href', SITE_BASE + anchor);
 }
@@ -3054,7 +3162,7 @@ function buildBook(){
     if (!/[A-Z0-9]/.test(L)) L = '#';
     if (L !== cur){ if (cur) html += '</div></div>'; cur = L; letters.push(L); lcounts[L] = 0; html += '<div class="bookletter" id="bk-' + L + '"><button type="button" class="bookletter-h" data-letter="' + L + '" aria-expanded="false"><span>' + L + '</span> <span class="lc-n" data-lc="' + L + '"></span><span class="pagefold" aria-hidden="true"></span></button><div class="bookpage" data-page="' + L + '">'; }
     lcounts[L]++;
-    html += '<a class="bookentry" href="#file-' + e.id + '" data-id="' + e.id + '"><span class="be-name">' + escHtml(e.name) + '</span><span class="be-stamp">' + escHtml(e.stamp) + '</span><span class="be-wing">' + e.wing + '</span><span class="be-tag">' + escHtml(String(e.tag).slice(0, 110)) + '</span></a>';
+    html += '<a class="bookentry" href="#file-' + e.id + '" data-id="' + e.id + '"><span class="be-name">' + escHtml(e.name) + '</span><span class="be-stamp">' + escHtml(e.stamp) + '</span><span class="be-phone" data-phid="' + e.id + '"></span><span class="be-wing">' + e.wing + '</span><span class="be-tag">' + escHtml(String(e.tag).slice(0, 110)) + '</span></a>';
   });
   html += '</div></div>';
   book.innerHTML = html;
@@ -3299,7 +3407,7 @@ function wordReply(w, q){
 }
 function wordFileText(w){
   var L = [];
-  L.push('THE AI TELEPHONE BOOK \u2014 JAH AI Models Archive');
+  L.push('THE AI PHONE BOOK \u2014 JAH AI Models Archive');
   L.push(w.stamp + ' \u2014 ' + w.name + ' (word AI)');
   L.push('Signature-made by Justin Addam Higgins'); L.push('');
   L.push('MENTALITY:'); L.push(w.mentality); L.push('');
@@ -3366,6 +3474,7 @@ function renderWordFile(w, mount){
     });
   }, 400);
   JAHops.mount(el, {kind:'word', obj:w});
+  try{ PhoneUI.decorateFile(el, {kind:'word', obj:w}); }catch(e){}
   return el;
 }
 function openWordAI(word, idNum){
@@ -3696,7 +3805,7 @@ var JAHops = (function(){
      var task=t||'a general task';
      var L=[];
      L.push('# '+P.stamp+' — '+P.name);
-     L.push('# Operations-bar build · Signature AI Telephone Book');
+     L.push('# Operations-bar build · Signature AI Phone Book');
      L.push('# Signature-made by Justin Addam Higgins');
      L.push('"""'+firstSent(P.mentality)+'"""');
      L.push('');
@@ -3865,34 +3974,35 @@ var JAHops = (function(){
 })();
 
 </script>
-</body>
-</html>
-
-/* Finder AI + record helper (additive) */
-.finderbar{background:#0c1322;border:1px solid var(--amber);border-radius:10px;padding:12px 14px;margin:0 0 10px;text-align:left}
-.finder-kicker{color:var(--amber);font-weight:700;letter-spacing:.12em;font-size:.8em}
-.finder-sub{font-size:.85em;color:#9aa4b2;margin:4px 0 8px}
-.finder-row{display:flex;gap:8px}
-#finder-q{flex:1;min-width:0;background:#0a0d18;border:1px solid var(--amber);color:var(--txt);padding:10px 12px;border-radius:8px;font-size:1em;font-family:Georgia,serif}
-#finder-q::placeholder{color:#6b7694}
-.finder-card{background:#0a0d18;border:1px solid #2a3350;border-radius:8px;padding:10px 12px;margin:8px 0}
-.finder-card b{color:var(--amber)}
-.finder-card span{display:block;color:#9fc2ff;font-size:.82em;margin:2px 0}
-.finder-card i{display:block;color:#9aa4b2;font-size:.85em;font-style:normal;margin:2px 0 6px}
-.finder-card a{color:var(--amber);font-weight:700;text-decoration:none}
-.finder-none{color:#9aa4b2;font-size:.9em;margin:8px 0}
-.finder-help{background:#0c1322;border:1px solid var(--amber);border-radius:10px;padding:12px 14px;margin:14px 0;text-align:left}
-.fh-k{color:var(--amber);font-weight:700;letter-spacing:.1em;font-size:.78em;margin-bottom:8px}
-.fh-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
-.fh-a{font-size:.92em;color:var(--txt);background:#0a0d18;border:1px solid #2a3350;border-radius:8px;padding:10px 12px;min-height:1.4em}
-<div class="finderbar" id="finderbar">
-<div class="finder-kicker">&#9742; DIRECTORY ASSISTANCE &mdash; THE FINDER</div>
-<p class="finder-sub">Describe what you're looking for in plain words &mdash; the Finder reads the whole book and brings you the five closest files.</p>
-<div class="finder-row"><input type="text" id="finder-q" placeholder="Describe what you're looking for&hellip;" aria-label="Describe what you are looking for" autocomplete="off"><button type="button" id="finder-go" class="fbtn">Find it</button></div>
-<div id="finder-res" aria-live="polite"></div>
+<div id="calltray" hidden>
+<span class="ct-t">&#9742; GROUP CALL <span id="ct-n">(0)</span></span>
+<span id="ct-chips" style="display:flex;gap:6px;flex-wrap:wrap"></span>
+<button type="button" class="fbtn" id="ct-start">Start call</button>
+<button type="button" class="fbtn" id="ct-clear">Hang up all</button>
 </div>
-  body.appendChild(finderHelpBubble(ai));
-/* ============ FINDER AI: describe it in plain words ============ */
+<div id="groupcall" role="dialog" aria-modal="true" aria-label="Group call" hidden>
+<div class="gc-box">
+<div class="gc-head">&#9742; GROUP CALL &mdash; <span id="gc-n">0</span> ON THE LINE</div>
+<div class="gc-sub">Say something and each AI answers in turn, in its own voice. Add more AIs any time with &#10133; Add to call.</div>
+<div class="gc-chips" id="gc-chips"></div>
+<div class="gc-log" id="gc-log" aria-live="polite"></div>
+<div class="gc-row"><input type="text" id="gc-in" placeholder="Say something to the whole call&hellip;" aria-label="Say something to the group call"><button type="button" class="fbtn" id="gc-send">Send</button></div>
+<div class="gc-foot"><label><input type="checkbox" id="gc-voice" checked> Read replies aloud</label><button type="button" class="fbtn" id="gc-close">End call</button></div>
+</div>
+</div>
+<div id="visitmodal" role="dialog" aria-modal="true" aria-label="Professional phone visit" hidden>
+<div class="pv-box">
+<div class="gc-head" id="pv-head">&#127973; YOUR PHONE VISIT</div>
+<div class="pv-visit" id="pv-intro"></div>
+<div class="pv-note" id="pv-note" hidden></div>
+<div class="gc-log" id="pv-log" aria-live="polite" style="height:180px"></div>
+<div class="gc-row"><input type="text" id="pv-in" placeholder="Tell them what brings you in&hellip;" aria-label="Talk in your visit"><button type="button" class="fbtn" id="pv-send">Send</button></div>
+<div class="gc-foot"><button type="button" class="fbtn" id="pv-full">Open full file</button><button type="button" class="fbtn" id="pv-close">End visit</button></div>
+</div>
+</div>
+
+<script>
+
 var FINDER_STOP={the:1,a:1,an:1,and:1,or:1,of:1,to:1,in:1,for:1,on:1,with:1,is:1,are:1,was:1,were:1,be:1,by:1,as:1,at:1,from:1,that:1,this:1,it:1,its:1,you:1,your:1,i:1,me:1,my:1,we:1,our:1,they:1,them:1,their:1,he:1,she:1,his:1,her:1,not:1,no:1,yes:1,do:1,does:1,did:1,can:1,could:1,will:1,would:1,should:1,what:1,which:1,who:1,whom:1,when:1,where:1,why:1,how:1,all:1,any:1,both:1,each:1,few:1,more:1,most:1,other:1,some:1,such:1,than:1,then:1,there:1,these:1,those:1,over:1,under:1,between:1,into:1,through:1,about:1,after:1,before:1,also:1,just:1,very:1,only:1,own:1,same:1,so:1,but:1,if:1,because:1,while:1,up:1,out:1,down:1,off:1,again:1,once:1,here:1,need:1,want:1,looking:1,find:1,get:1,show:1,give:1,tell:1,like:1,please:1};
 function finderKeywords(t){
   return String(t==null?'':t).toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(function(w){return w.length>=3&&!FINDER_STOP[w]});
@@ -3944,5 +4054,403 @@ function finderHelpBubble(ai){
   Array.prototype.forEach.call(box.querySelectorAll('[data-fhi]'),function(b){b.onclick=function(){ans.textContent=qs[+b.getAttribute('data-fhi')][1]}});
   return box;
 }
-    body.appendChild(finderHelpBubble(rec));
-  wireFinder();
+    wireFinder();
+
+</script>
+<script>
+/* ============ SIGNATURE PHONE NUMBERS + PAYPHONE + GROUP CALL + PRO VISITS ============ */
+var PhoneBook = (function(){
+  'use strict';
+  var SIG_DIST = 200, PER_DIST = 300, WORD_DIST = 500, FIELD_BASE = 400;
+  var fieldDist = {}, fieldOrder = [], numById = {}, numLookup = {};
+  function pad(n, l){ n = String(n); while (n.length < l) n = '0' + n; return n; }
+  function digits(dist, idx){ return '1' + pad(dist, 3) + pad(idx, 7); } /* 11 digits */
+  function fmt(d){
+    d = String(d || '');
+    if (d.length !== 11) return d;
+    return d.charAt(0) + '-' + d.slice(1, 4) + '-' + d.slice(4);
+  }
+  function distName(dist){
+    if (dist === SIG_DIST) return 'Signature Systems';
+    if (dist === PER_DIST) return 'Persona Sims';
+    if (dist === WORD_DIST) return 'Word AI Blocks';
+    var f = fieldOrder[dist - FIELD_BASE];
+    return f ? (f + ' Block') : ('District ' + dist);
+  }
+  function build(){
+    var seen = {}, fields = [];
+    DOMAIN_SPECS.forEach(function(s){ if (!seen[s[2]]){ seen[s[2]] = 1; fields.push(s[2]); } });
+    fields.sort();
+    fieldOrder = fields;
+    fields.forEach(function(f, i){ fieldDist[f] = FIELD_BASE + i; });
+    var perField = {};
+    SIG_AIS.forEach(function(a, i){
+      var d = digits(SIG_DIST, i + 1);
+      numById[a.id] = d; numLookup[d] = {kind: 'file', id: a.id, name: a.name, phone: d};
+    });
+    PERSONAS.forEach(function(a, i){
+      var d = digits(PER_DIST, i + 1);
+      numById[a.id] = d; numLookup[d] = {kind: 'file', id: a.id, name: a.name, phone: d};
+    });
+    DOMAIN_SPECS.forEach(function(s){
+      var f = s[2]; perField[f] = (perField[f] || 0) + 1;
+      var d = digits(fieldDist[f], perField[f]);
+      var id = 'dom-' + s[0];
+      numById[id] = d; numLookup[d] = {kind: 'file', id: id, name: s[1], phone: d};
+    });
+  }
+  function wordDigits(idNum){ return digits(WORD_DIST, idNum); }
+  function lookup(d){
+    d = String(d == null ? '' : d).replace(/\D/g, '');
+    if (d.length !== 11) return null;
+    if (numLookup[d]) return numLookup[d];
+    if (d.slice(0, 4) === '1500'){
+      var n = parseInt(d.slice(4), 10);
+      if (n >= 1 && n <= 9999999) return {kind: 'wordai', idNum: n, phone: d};
+    }
+    return null;
+  }
+  function phoneLineFor(id){
+    var d = numById[id]; if (!d) return '';
+    return '<div class="phoneline">&#9742; <b>' + fmt(d) + '</b><span class="ph-dist">District ' +
+      d.slice(1, 4) + ' &middot; ' + escHtml(distName(parseInt(d.slice(1, 4), 10))) + '</span></div>';
+  }
+  function wordPhoneLine(idNum){
+    var d = wordDigits(idNum);
+    return '<div class="phoneline">&#9742; <b>' + fmt(d) + '</b><span class="ph-dist">District 500 &middot; Word AI Blocks</span></div>';
+  }
+  return {
+    build: build, lookup: lookup, fmt: fmt, digits: digits, wordDigits: wordDigits,
+    numById: numById, distName: distName, phoneLineFor: phoneLineFor, wordPhoneLine: wordPhoneLine,
+    fieldOrder: function(){ return fieldOrder; }, fieldDist: function(){ return fieldDist; },
+    SIG_DIST: SIG_DIST, PER_DIST: PER_DIST, WORD_DIST: WORD_DIST
+  };
+})();
+
+var PhoneUI = (function(){
+  'use strict';
+  function decorateFile(el, ref){
+    if (!el || !ref) return;
+    el._airef = ref;
+    var o = ref.obj || {}, id = o.id || o.ai_id, pl = '';
+    if (ref.kind === 'word' && o.ai_id){
+      var m = /JAH-AI-WORD-(\d+)/.exec(o.ai_id);
+      if (m) pl = PhoneBook.wordPhoneLine(parseInt(m[1], 10));
+    } else if (id && PhoneBook.numById[id]) pl = PhoneBook.phoneLineFor(id);
+    if (pl && !el.querySelector('.phoneline')){
+      var fh = el.querySelector('.filehead');
+      if (fh) fh.insertAdjacentHTML('afterend', pl);
+      else el.insertAdjacentHTML('afterbegin', pl);
+    }
+    var ft = el.querySelector('.filetools');
+    if (ft && !ft.querySelector('[data-t=addcall]')){
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'fbtn'; b.setAttribute('data-t', 'addcall');
+      b.textContent = '\u2795 Add to call';
+      b.onclick = function(){ GroupCall.add(ref); };
+      ft.appendChild(b);
+    }
+    if (typeof finderHelpBubble === 'function' && !el.querySelector('.finder-help')){
+      try{ el.appendChild(finderHelpBubble(o)); }catch(e){}
+    }
+  }
+  return {decorateFile: decorateFile};
+})();
+
+var Payphone = (function(){
+  'use strict';
+  var cur = '';
+  function showCur(){
+    var el = document.getElementById('pp-display'); if (!el) return;
+    var d = cur, t;
+    if (!d) t = '\u2014';
+    else t = d.charAt(0) + (d.length > 1 ? '-' + d.slice(1, 4) : '') + (d.length > 4 ? '-' + d.slice(4) : '');
+    el.textContent = t;
+  }
+  function msg(t){ var el = document.getElementById('pp-msg'); if (el) el.textContent = t || ''; }
+  function press(ch){
+    if (ch === '*' || ch === '#'){ msg('The Signature network dials digits 0\u20139 only.'); return; }
+    if (cur.length >= 11) return;
+    cur += ch; msg(''); showCur();
+    if (cur.length === 11){ var d = cur; setTimeout(function(){ if (cur === d) dial(); }, 450); }
+  }
+  function dial(){
+    var hit = PhoneBook.lookup(cur);
+    if (!hit){ msg('No listing on that number \u2014 check the digits and try again.'); return; }
+    var num = cur; cur = ''; showCur();
+    msg('Dialing ' + PhoneBook.fmt(num) + '\u2026');
+    if (hit.kind === 'file'){ openFile(hit.id); msg(''); }
+    else{
+      wordaiEnsureIndex(function(ok){
+        if (ok && wordaiIndex && hit.idNum >= 1 && hit.idNum <= wordaiIndex.length){
+          var rec = wordaiIndex[hit.idNum - 1];
+          openWordAI(rec[0], rec[1]); msg('');
+        } else msg('That Word AI line is not reachable right now \u2014 try again in a moment.');
+      });
+    }
+  }
+  function init(){
+    var keys = document.getElementById('pp-keys'); if (!keys || keys._built) return; keys._built = 1;
+    ['1','2','3','4','5','6','7','8','9','*','0','#'].forEach(function(ch){
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = ch; b.setAttribute('aria-label', 'Dial ' + ch);
+      b.onclick = function(){ press(ch); };
+      keys.appendChild(b);
+    });
+    document.getElementById('pp-clear').onclick = function(){ cur = ''; msg(''); showCur(); };
+    document.getElementById('pp-back').onclick = function(){ cur = cur.slice(0, -1); showCur(); };
+    document.getElementById('pp-dial').onclick = function(){
+      if (cur.length !== 11){ msg('Dial a full 11-digit Signature number first.'); return; }
+      dial();
+    };
+    showCur();
+  }
+  return {init: init, dial: dial};
+})();
+
+var GroupCall = (function(){
+  'use strict';
+  var parts = [], MAXP = 8;
+  function refPhone(ref){
+    if (ref.phone) return ref.phone;
+    var o = ref.obj || {}, id = o.id || o.ai_id;
+    if (ref.kind === 'word' && o.ai_id){
+      var m = /JAH-AI-WORD-(\d+)/.exec(o.ai_id);
+      if (m) return PhoneBook.fmt(PhoneBook.wordDigits(parseInt(m[1], 10)));
+    }
+    if (id && PhoneBook.numById[id]) return PhoneBook.fmt(PhoneBook.numById[id]);
+    return '';
+  }
+  function flash(t){
+    var tray = document.getElementById('calltray');
+    if (tray){ tray.setAttribute('data-flash', t); }
+  }
+  function add(ref){
+    if (!ref || !ref.obj) return;
+    var o = ref.obj, name = o.name || 'AI';
+    for (var i = 0; i < parts.length; i++) if (parts[i].ref === ref || parts[i].name === name) return;
+    if (parts.length >= MAXP) return;
+    ref.phone = refPhone(ref);
+    parts.push({ref: ref, name: name, phone: ref.phone});
+    renderTray();
+  }
+  function remove(ix){ parts.splice(ix, 1); renderTray(); }
+  function renderTray(){
+    var tray = document.getElementById('calltray'); if (!tray) return;
+    tray.hidden = parts.length === 0;
+    document.getElementById('ct-n').textContent = '(' + parts.length + ')';
+    var chips = document.getElementById('ct-chips'); chips.innerHTML = '';
+    parts.forEach(function(p, ix){
+      var s = document.createElement('span'); s.className = 'ct-chip';
+      s.textContent = p.name + (p.phone ? ' \u00B7 ' + p.phone : '');
+      var x = document.createElement('button'); x.type = 'button'; x.textContent = '\u2715';
+      x.setAttribute('aria-label', 'Remove ' + p.name);
+      x.onclick = function(){ remove(ix); };
+      s.appendChild(x); chips.appendChild(s);
+    });
+  }
+  function sayLine(log, who, text){
+    var d = document.createElement('div'); d.className = who;
+    d.textContent = text; log.appendChild(d); log.scrollTop = log.scrollHeight;
+    return d;
+  }
+  function askAll(q){
+    var log = document.getElementById('gc-log');
+    sayLine(log, 'u', 'You: ' + q);
+    var voice = document.getElementById('gc-voice');
+    var chain = Promise.resolve();
+    parts.forEach(function(p){
+      chain = chain.then(function(){
+        var hole = sayLine(log, 'a', p.name + ': \u2026');
+        return JAHops.talk(p.ref, q).then(function(a){
+          a = String(a == null ? '' : a);
+          hole.textContent = p.name + ': ' + a;
+          if (voice && voice.checked){ try{ TTS.speak(a, {}); }catch(e){} }
+        });
+      });
+    });
+    return chain;
+  }
+  function openCall(){
+    if (!parts.length) return;
+    var m = document.getElementById('groupcall'); m.hidden = false;
+    document.getElementById('gc-n').textContent = parts.length;
+    var chips = document.getElementById('gc-chips'); chips.innerHTML = '';
+    parts.forEach(function(p, ix){
+      var s = document.createElement('span'); s.className = 'ct-chip';
+      s.textContent = p.name + (p.phone ? ' \u00B7 ' + p.phone : '');
+      var x = document.createElement('button'); x.type = 'button'; x.textContent = '\u2715';
+      x.setAttribute('aria-label', 'Remove ' + p.name);
+      x.onclick = function(){ remove(ix); if (!parts.length) closeCall(); else openCallRefresh(); };
+      s.appendChild(x); chips.appendChild(s);
+    });
+    var log = document.getElementById('gc-log');
+    if (!log._greeted){
+      log._greeted = 1;
+      sayLine(log, 's', 'Line open \u2014 ' + parts.length + ' on the call. Say something and each AI answers in turn, in its own voice.');
+      var chain = Promise.resolve();
+      parts.forEach(function(p){
+        chain = chain.then(function(){
+          var hole = sayLine(log, 'a', p.name + ': \u2026');
+          return JAHops.talk(p.ref, 'hello').then(function(a){
+            hole.textContent = p.name + ': ' + String(a == null ? '' : a);
+          });
+        });
+      });
+    }
+    document.body.style.overflow = 'hidden';
+  }
+  function openCallRefresh(){
+    document.getElementById('gc-n').textContent = parts.length;
+    renderTray();
+  }
+  function closeCall(){
+    document.getElementById('groupcall').hidden = true;
+    document.body.style.overflow = '';
+  }
+  function init(){
+    if (document.getElementById('ct-start')._wired) return;
+    document.getElementById('ct-start')._wired = 1;
+    document.getElementById('ct-start').onclick = openCall;
+    document.getElementById('ct-clear').onclick = function(){ parts = []; renderTray(); closeCall(); };
+    document.getElementById('gc-close').onclick = closeCall;
+    var send = function(){
+      var inp = document.getElementById('gc-in'), q = inp.value.trim();
+      if (!q || !parts.length) return; inp.value = '';
+      askAll(q);
+    };
+    document.getElementById('gc-send').onclick = send;
+    document.getElementById('gc-in').addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+    renderTray();
+  }
+  return {add: add, init: init, remove: remove, parts: function(){ return parts; }};
+})();
+
+var ProVisits = (function(){
+  'use strict';
+  var LIST = [
+    ['family-doctor', '\uD83D\uDE7A', 'Family Doctor'], ['nurse-guide', '\uD83D\uDC69\u200D\u2695\uFE0F', 'Nurse'],
+    ['pharmacist-pal', '\uD83D\uDC8A', 'Pharmacist'], ['dentist-pal', '\uD83E\uDDB7', 'Dentist'],
+    ['counselor-pro', '\uD83D\uDECB\uFE0F', 'Counselor'], ['lawyer-guide', '\u2696\uFE0F', 'Lawyer'],
+    ['accountant-pro', '\uD83E\uDDEE', 'Accountant'], ['architect-pal', '\uD83D\uDCD0', 'Architect'],
+    ['realtor-guide', '\uD83C\uDFE0', 'Realtor'], ['engineer-pro', '\u2699\uFE0F', 'Engineer'],
+    ['divorce-guide', '\uD83D\uDC94', 'Divorce Counselor'], ['first-aid', '\uD83E\uDE79', 'First-Aid Guide'],
+    ['elder-care', '\uD83E\uDDD3', 'Elder Care Helper'], ['baby-care', '\uD83C\uDF7C', 'Baby Care Helper'],
+    ['vet-triage', '\uD83D\uDC3E', 'Vet Triage Guide'], ['newborn-night', '\uD83C\uDF19', 'Newborn Night Shift'],
+    ['tenant-rights', '\uD83C\uDFD8\uFE0F', 'Tenant Rights Info'], ['small-claims', '\u2696\uFE0F', 'Small Claims Guide'],
+    ['will-helper', '\uD83D\uDCDC', 'Will Outline Helper'], ['poa-explainer', '\u270D\uFE0F', 'Power-of-Attorney Explainer'],
+    ['insurance-pal', '\uD83D\uDEE1\uFE0F', 'Insurance Claim Helper'], ['tax-organizer', '\uD83E\uDDFE', 'Tax Organizer'],
+    ['contract-reader', '\uD83D\uDCC4', 'Contract Reader'], ['nda-explainer', '\uD83E\uDD2B', 'NDA Explainer'],
+    ['mechanic', '\uD83D\uDE97', 'Mechanic'], ['chef', '\uD83D\uDC68\u200D\uD83C\uDF73', 'Chef'],
+    ['tutor', '\uD83D\uDCDA', 'Tutor'], ['math-tutor', '\uD83D\uDD22', 'Math Tutor'],
+    ['code-reviewer', '\uD83D\uDCBB', 'Code Reviewer'], ['fitness-coach', '\uD83D\uDCAA', 'Fitness Coach'],
+    ['translator', '\uD83C\uDF10', 'Translator'], ['resume-writer', '\uD83D\uDCC4', 'Resume Writer'],
+    ['biz-planner', '\uD83D\uDCCA', 'Business Planner'], ['patent-helper', '\uD83D\uDCA1', 'Patent Draft Helper'],
+    ['electrician-pal', '\uD83D\uDCA1', 'Electrician'], ['plumber-pal', '\uD83D\uDD27', 'Plumber'],
+    ['wedding-planner', '\uD83D\uDC92', 'Wedding Planner'], ['computer-fixer', '\uD83D\uDDA5\uFE0F', 'Computer Fixer']
+  ];
+  var HONEST = 'AI assistant, not a licensed professional \u2014 for information and organization; see a real pro for decisions.';
+  var current = null;
+  function build(){
+    var g = document.getElementById('progrid'); if (!g || g._built) return; g._built = 1;
+    var html = '';
+    LIST.forEach(function(e){
+      var d = (typeof domIndex !== 'undefined') ? domIndex[e[0]] : null;
+      if (!d) return;
+      var ph = PhoneBook.numById[d.id] ? PhoneBook.fmt(PhoneBook.numById[d.id]) : '';
+      html += '<button type="button" class="procard" data-sid="' + e[0] + '"><span class="pc-i">' + e[1] +
+        '</span><b>' + escHtml(e[2]) + '</b><span>' + escHtml(d.stamp) + (ph ? ' \u00B7 \u260E ' + ph : '') + '</span></button>';
+    });
+    g.innerHTML = html || '<p class="wingdesc">The appointment book is still loading \u2014 try again in a moment.</p>';
+    g.addEventListener('click', function(ev){
+      var c = ev.target.closest ? ev.target.closest('.procard') : null;
+      if (c) openVisit(c.getAttribute('data-sid'));
+    });
+  }
+  function sayLine(log, who, text){
+    var d = document.createElement('div'); d.className = who;
+    d.textContent = text; log.appendChild(d); log.scrollTop = log.scrollHeight;
+    return d;
+  }
+  function openVisit(sid){
+    var d = (typeof domIndex !== 'undefined') ? domIndex[sid] : null;
+    if (!d) return;
+    current = d;
+    var label = d.name;
+    document.getElementById('pv-head').innerHTML = '\uD83C\uDFE5 YOUR PHONE VISIT \u2014 ' + escHtml(label.toUpperCase());
+    document.getElementById('pv-intro').innerHTML = '<b>Your visit with the ' + escHtml(label) + ' AI.</b><br>' +
+      escHtml(d.mentality || '') + '<br><span style="color:#9aa4b2;font-size:.85em">Official file ' + escHtml(d.stamp) + ' \u00B7 this visit is a friendly consultation, not an appointment with a human.</span>';
+    var note = document.getElementById('pv-note');
+    if (d.pro){ note.hidden = false; note.textContent = HONEST; }
+    else note.hidden = true;
+    var log = document.getElementById('pv-log'); log.innerHTML = '';
+    var m = document.getElementById('visitmodal'); m.hidden = false;
+    document.body.style.overflow = 'hidden';
+    var hole = sayLine(log, 'a', label + ': \u2026');
+    JAHops.talk({kind: 'dom', obj: d}, 'hello, I booked a visit').then(function(a){
+      hole.textContent = label + ': ' + String(a == null ? '' : a) +
+        ' What brings you in today?' + (d.pro ? ' (' + HONEST + ')' : '');
+    });
+  }
+  function closeVisit(){
+    document.getElementById('visitmodal').hidden = true;
+    document.body.style.overflow = ''; current = null;
+  }
+  function init(){
+    var s = document.getElementById('pv-send');
+    if (s._wired) return; s._wired = 1;
+    var send = function(){
+      if (!current) return;
+      var inp = document.getElementById('pv-in'), q = inp.value.trim();
+      if (!q) return; inp.value = '';
+      var log = document.getElementById('pv-log');
+      sayLine(log, 'u', 'You: ' + q);
+      var hole = sayLine(log, 'a', current.name + ': \u2026');
+      JAHops.talk({kind: 'dom', obj: current}, q).then(function(a){
+        hole.textContent = current.name + ': ' + String(a == null ? '' : a);
+      });
+    };
+    s.onclick = send;
+    document.getElementById('pv-in').addEventListener('keydown', function(e){ if (e.key === 'Enter') send(); });
+    document.getElementById('pv-close').onclick = closeVisit;
+    document.getElementById('pv-full').onclick = function(){
+      if (!current) return;
+      var id = current.id; closeVisit(); openFile(id);
+    };
+  }
+  function buildPlan(){
+    var el = document.getElementById('numplan-table'); if (!el || el._built) return; el._built = 1;
+    var rows = [
+      ['1-200-XXXXXXX', 'Signature Systems', 'The 11 system AIs, in book order'],
+      ['1-300-XXXXXXX', 'Persona Sims', 'The 6 persona simulations, in book order']
+    ];
+    PhoneBook.fieldOrder().forEach(function(f){
+      var dd = PhoneBook.fieldDist()[f];
+      rows.push(['1-' + dd + '-XXXXXXX', f + ' Block', 'Every ' + f + ' AI, in book order']);
+    });
+    rows.push(['1-500-XXXXXXX', 'Word AI Blocks', 'Word AIs in A\u2013Z order']);
+    el.innerHTML = '<table><tr><th>Number range</th><th>District</th><th>Who lives there</th></tr>' +
+      rows.map(function(r){ return '<tr><td class="n">' + r[0] + '</td><td>' + escHtml(r[1]) + '</td><td>' + escHtml(r[2]) + '</td></tr>'; }).join('') +
+      '</table>';
+  }
+  return {init: init, build: build, buildPlan: buildPlan, openVisit: openVisit};
+})();
+
+/* ---- boot the phone-book upgrades (runs after the main archive script) ---- */
+(function phoneBoot(){
+  try{ PhoneBook.build(); }catch(e){}
+  try{ Payphone.init(); }catch(e){}
+  try{ GroupCall.init(); }catch(e){}
+  try{ ProVisits.init(); ProVisits.build(); ProVisits.buildPlan(); }catch(e){}
+  try{
+    var nodes = document.querySelectorAll('#book .be-phone');
+    for (var i = 0; i < nodes.length; i++){
+      var d = PhoneBook.numById[nodes[i].getAttribute('data-phid')];
+      if (d) nodes[i].textContent = '\u260E ' + PhoneBook.fmt(d);
+    }
+  }catch(e){}
+})();
+
+</script>
+</body>
+</html>

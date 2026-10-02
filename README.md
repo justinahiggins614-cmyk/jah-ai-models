@@ -1,4 +1,4 @@
-# The AI Telephone Book — home of every AI
+# The AI Phone Book — home of every AI
 
 Live: https://justinahiggins614-cmyk.github.io/jah-ai-models/
 
@@ -26,7 +26,7 @@ endpoints). Pure hand-written JavaScript — no `eval()` anywhere.
    chat, read-aloud, copy, generated `.py` download. Counseling/medical/legal/
    financial-adjacent AIs carry a one-line "AI assistant, not a licensed
    professional" note. New specs plug in boundlessly behind the same page.
-4. **Telephone Directory** — searchable A–Z listing of EVERY AI: all systems,
+4. **Phone Directory** — searchable A–Z listing of EVERY AI: all systems,
    personas, domain AIs, mix-lab hybrids, plus the AI families on the six sister
    sites (Patent AI, Spec AI, Word AI Teacher, Article AI, Dossier AI,
    Calculator AI) deep-linked to where they live.
