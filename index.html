@@ -2860,9 +2860,9 @@ function forgeGenome(){
    JAHtalk fallback otherwise. Gibberish is never shown — a failed gate falls
    back exactly like a failed load. */
 var LLAMA_BASE = 'https://justinahiggins614-cmyk.github.io/signature-backend/sigllama/';
-/* v1 weights stay live until the v2 chat model finishes training; the
-   coherence gate below guarantees v1's word-salad never reaches the user. */
-var LLAMA_VOCAB = 'vocab.json', LLAMA_BIN = 'sigllama-v1.bin';
+/* v2 word-level chat model — trained on the phone book's AI profiles.
+   Dual gates (vocabulary + grounding) verify every reply. */
+var LLAMA_VOCAB = 'vocab2.json', LLAMA_BIN = 'sigllama-v2.bin';
 var llamaNet = {loading: null, ready: false};
 function llamaEnsure(){
   if (llamaNet.ready) return Promise.resolve(true);
