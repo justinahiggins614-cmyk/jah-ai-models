@@ -393,8 +393,8 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div class="sh-kicker">&#9733; SHOWCASE &mdash; OUR OWN BASELINE AI</div>
 <div class="sh-name">Signature Llama</div>
 <p class="sh-desc">The baseline mind behind every AI in this book &mdash; built from scratch, trained on the Signature archive's own words, free forever, no keys, no fees. Every AI dials through it.</p>
-<p class="sh-arch">How it runs: every AI in this book is a persona and prompt layer on top of one engine &mdash; responses are generated live by Signature Llama v1 running in this page's own JavaScript, loaded from the published weights, with a silent fallback engine if the weights can't load.</p>
-<div class="sh-row"><span class="stamp" id="llamastatus" aria-live="polite">&#9679; Signature Llama v1 &mdash; LIVE</span> <a class="fbtn" style="display:inline-block;text-decoration:none" href="https://justinahiggins614-cmyk.github.io/signature-llama/" target="_blank" rel="noopener">Meet Signature Llama &rarr;</a></div>
+<p class="sh-arch">How it runs: every AI in this book is a persona and prompt layer on top of one engine &mdash; responses are generated live by Signature Llama v2 (word-level, on-device) running in this page's own JavaScript, loaded from the published weights, with an honestly labeled fallback engine if the weights can't load.</p>
+<div class="sh-row"><span class="stamp" id="llamastatus" aria-live="polite">&#9679; Signature Llama v2 &mdash; LIVE</span> <a class="fbtn" style="display:inline-block;text-decoration:none" href="https://justinahiggins614-cmyk.github.io/signature-llama/" target="_blank" rel="noopener">Meet Signature Llama &rarr;</a></div>
 </div>
 <div class="booksearchrow">
 <input type="text" id="booksearch" placeholder="Search the book&hellip; name, stamp, or subject" aria-label="Search the phone book" autocomplete="off">
@@ -660,7 +660,7 @@ function aiMetaStrip(o){
    DRAFT SPECIFICATION / USER CREATED), record action panel
    (OPEN.SOURCE.ID.VERSION.SHARE.COPY.DOWNLOAD.READ ALOUD),
    provenance lines, and AI identity cards. ES5-safe. */
-var JAH_ENGINE_LINE = 'Signature Llama v1 \u00B7 JAHtalk basic-LLM fallback (on-device)';
+var JAH_ENGINE_LINE = 'Signature Llama v2 (word-level, on-device) \u00B7 JAHtalk basic-LLM fallback (on-device)';
 function jahStatusBadge(status){
   var cls = status === 'SIMULATION' ? ' sim' : (status === 'GENERATED' ? ' gen' : (status === 'PUBLIC RECORD' ? ' pub' : ''));
   return '<span class="jahstatus' + cls + '" title="Network record status \u2014 one canonical status per record">' + escHtml(status) + '</span>';
@@ -3591,8 +3591,8 @@ function wireBookSearch(){
 function llamaStatusCheck(){
   var pill = document.getElementById('llamastatus');
   if (!pill) return;
-  function live(){ pill.textContent = '\u25CF Signature Llama v1 \u2014 LIVE'; }
-  fetch('https://justinahiggins614-cmyk.github.io/signature-backend/sigllama/sigllama-v1.bin', {method: 'HEAD'}).then(function(r){
+  function live(){ pill.textContent = '\u25CF Signature Llama v2 \u2014 LIVE'; }
+  fetch('https://justinahiggins614-cmyk.github.io/signature-backend/sigllama/sigllama-v2.bin', {method: 'HEAD'}).then(function(r){
     if (r && r.ok) live();
   }).catch(function(){});
 }
