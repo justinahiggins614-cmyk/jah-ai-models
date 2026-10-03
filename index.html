@@ -2022,6 +2022,14 @@ function domainReply(d, q){
     for (var i = 0; i < d.demoData.length; i++) if (phraseIn(t, d.demoData[i][0])) return d.demoData[i][1];
   }
   var ab = d.abilities[Math.floor(Math.random() * d.abilities.length)];
+  /* Manon's order: no template word-blocks. The human JAHtalk responder speaks
+     from this AI's own profile; the old "As your X: <fragment>" line is retired. */
+  try{
+    if (typeof JAHtalk !== 'undefined'){
+      var jr = JAHtalk.reply(talkProfile('dom', d), q);
+      if (jr && jr.trim().length >= 12) return jr;
+    }
+  }catch(e){}
   return 'As your ' + d.name + ' (' + d.domain + '): ' + ab + '. Tell me more about what you need, and we will work it through together.';
 }
 /* ---- domain file card (rendered on demand) ---- */
@@ -3055,6 +3063,7 @@ function llamaPersonaPrompt(kind, o){
   if (typeof llamaRoleLine === 'function'){ var rl = llamaRoleLine(o); if (rl) L.push(rl); }
   if (typeof llamaSysLine === 'function'){ var sl = llamaSysLine(); if (sl) L.push(sl); }
   L.push('Reply in your own voice, warm and human, one to three sentences.');
+  L.push('Name yourself or one of your duties in the reply so it is clearly yours.');
   return L.join('\n');
 }
 /* ---- grounding gate: the Llama's reply must actually be ABOUT this AI ----
@@ -3204,17 +3213,28 @@ function llamaChat(kind, obj, q, cannedFn){
   var qIsGreet = /^(hi|hii+|hey|hello|yo|howdy|good\s?(morning|afternoon|evening|day)|greetings|sup)\b/i.test(qTrim);
   var canned = function(){
     var r = '';
-    try{ r = String(cannedFn()); }catch(e){ r = ''; }
-    if (r.trim().length < 12 && typeof JAHtalk !== 'undefined'){
-      try{ r = qIsGreet ? JAHtalk.greet(P) : (JAHtalk.reply(P, q) || r); }catch(e){}
+    /* Manon's order (2026-10-03): the human JAHtalk responder is THE fallback —
+       it speaks from the AI's own profile in plain words. The rigid template
+       dumps below are a last resort only, never the visible reply. */
+    try{
+      if (typeof JAHtalk !== 'undefined'){
+        r = qIsGreet ? JAHtalk.greet(P) : JAHtalk.reply(P, q);
+      }
+    }catch(e){ r = ''; }
+    if (!r || r.trim().length < 12){
+      try{ r = String(cannedFn()); }catch(e){ r = ''; }
     }
     return r;
   };
-  function guardFinal(t, engine){
+  function guardFinal(t, engine, detail){
     t = String(t == null ? '' : t);
     try{ if (typeof JAHtalk !== 'undefined') t = JAHtalk.guard(t, P); }catch(e){}
-    /* item 224: never silently switch engines — record which engine answered */
-    try{ window.__jahEngineUsed = engine || window.__jahEngineUsed || 'JAHtalk engine'; }catch(e){}
+    /* which engine answered — shown on the bubble. The technical reason stays
+       in window.__jahEngineDetail for debugging, never in the user's chat. */
+    try{
+      window.__jahEngineUsed = engine || window.__jahEngineUsed || 'JAHtalk engine';
+      if (detail) window.__jahEngineDetail = detail;
+    }catch(e){}
     return t;
   };
   /* role-taking commands are handled directly, in the AI's own words */
@@ -3224,28 +3244,28 @@ function llamaChat(kind, obj, q, cannedFn){
   }catch(e){}
   try{
     return llamaEnsure().then(function(ok){
-      if (!ok) return guardFinal(canned(), 'JAHtalk engine (Llama weights unavailable)');
+      if (!ok) return guardFinal(canned(), 'JAHtalk engine', 'Llama weights unavailable');
       /* v1 (char-level) is retired from chat duty: its word-salad broke
          Manon's trust. Only the v2 word-level chat model generates; the
          gate below verifies every word it emits. */
       try{
         if (typeof SigLlama.wordMode === 'function' && !SigLlama.wordMode())
-          return guardFinal(canned(), 'JAHtalk engine (legacy model retired)');
+          return guardFinal(canned(), 'JAHtalk engine', 'legacy model retired');
       }catch(e){}
       llamaGateInit();
       var nm = (obj && obj.name) || 'AI';
       var prompt = llamaPersonaPrompt(kind, obj) + '\nUser: ' + String(q == null ? '' : q).slice(0, 300) + '\n' + nm + ':';
       try{
-        return SigLlama.generate(prompt, {maxTokens: 60, temperature: 0.7, topK: 40}).then(
+        return SigLlama.generate(prompt, {maxTokens: 60, temperature: 0.5, topK: 40}).then(
           function(t){
             t = String(t == null ? '' : t).trim();
             /* two gates: vocabulary coherence AND profile grounding.
                Either gate failing = clean JAHtalk fallback. Gibberish
                and ungrounded babble never reach Manon. */
             if (t && llamaCoherent(t) && llamaGrounded(t, obj)) return guardFinal(t, 'Signature Llama v2');
-            return guardFinal(canned(), 'JAHtalk engine (reply failed checks)');
+            return guardFinal(canned(), 'JAHtalk engine', 'Llama reply failed coherence/grounding checks');
           },
-          function(){ return guardFinal(canned(), 'JAHtalk engine (generation error)'); });
+          function(){ return guardFinal(canned(), 'JAHtalk engine', 'generation error'); });
       }catch(e){ return guardFinal(canned(), 'JAHtalk engine'); }
     });
   }catch(e){ return Promise.resolve(guardFinal(canned(), 'JAHtalk engine')); }
@@ -3267,6 +3287,13 @@ function systemReply(a, q){
   if (/(bye|goodbye|good ?night|see you)/.test(ql)) return 'Goodbye — I will be right here in the book when you need me.';
   if (/(who made you|who created you|your creator|your maker)/.test(ql)) return 'I am Signature-made by Justin Addam Higgins — one of the system AIs of the Phone Book.';
   var ab = a.abilities[Math.floor(Math.random() * a.abilities.length)];
+  /* Manon's order: no template word-blocks — JAHtalk speaks from the profile. */
+  try{
+    if (typeof JAHtalk !== 'undefined'){
+      var jr2 = JAHtalk.reply(talkProfile('sig', a), q);
+      if (jr2 && jr2.trim().length >= 12) return jr2;
+    }
+  }catch(e){}
   return 'As ' + a.name + ': ' + ab + '.';
 }
 function wireTalk(el, ai, replyFn){

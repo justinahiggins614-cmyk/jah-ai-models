@@ -39,6 +39,7 @@
   function s(v) { return String(v == null ? '' : v); }
   function trim(x) { return s(x).replace(/^\s+|\s+$/g, ''); }
   function low(x) { return s(x).toLowerCase(); }
+  function cap1(x) { x = s(x); return x ? x.charAt(0).toUpperCase() + x.slice(1) : x; }
   function firstSent(x) {
     var m = s(x).match(/[^.!?]+[.!?]/);
     return m ? trim(m[0]) : trim(s(x)).slice(0, 160);
@@ -250,7 +251,7 @@
     var f = fieldOf(P);
     var bridges = [
       'Interesting — "' + topic + '". Let me think about that through ' + f + ': ' + purposeLine(P) + ' Tell me a little more about what you are after, and we will work it through together.',
-      'Got it — "' + topic + '". As ' + P.name + ', ' + low(firstSent(purposeLine(P))) + ' What would you like me to do with that?',
+      'Got it — "' + topic + '". As ' + P.name + ', ' + cap1(low(firstSent(purposeLine(P)))) + ' What would you like me to do with that?',
       '"' + topic + '" — okay, I am with you. I can explain it, break it down step by step, or put it to work in ' + f + '. Which sounds good?',
       'I hear you on "' + topic + '". Here is how I would approach it: first we pin down what matters most, then I walk you through it in plain words. Want to start there?'
     ];
