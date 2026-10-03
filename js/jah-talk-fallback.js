@@ -107,6 +107,62 @@
   function isThanks(t) { return has(t, 'thank') || has(t, 'thanks') || t === 'thx' || t === 'ty'; }
   function isBye(t) { return /^(bye|goodbye|good night|goodnight|see you|later|gtg)\b/.test(t); }
   function isFeeling(t) { return has(t, 'how are you') || has(t, "how's it going") || has(t, 'how do you feel'); }
+  /* Manon's 2026-10-02 order: every AI explains its task, what it is,
+     how to make one, and how to use it — in plain human words. */
+  function isTask(t) {
+    return has(t, 'what is your task') || has(t, 'what is the task') ||
+      has(t, 'were you made for') || has(t, 'was it made for') ||
+      has(t, 'why were you created') || has(t, 'why were you made') ||
+      has(t, 'what is your job') || has(t, 'your purpose');
+  }
+  function isWhat(t) {
+    return has(t, 'what are you') || has(t, 'describe yourself') ||
+      has(t, 'what exactly are you') || has(t, 'tell me what you are');
+  }
+  function isMake(t) {
+    return has(t, 'how do i make one') || has(t, 'how are you made') ||
+      has(t, 'how do i build one') || has(t, 'how was this ai made') ||
+      has(t, 'how was it made') || has(t, 'make my own version') ||
+      has(t, 'make one like you') || has(t, 'create one like you');
+  }
+  function isUse(t) {
+    return has(t, 'how do i use you') || has(t, 'how do i use this') ||
+      has(t, 'how does this work') || has(t, 'how do i run you') ||
+      has(t, 'how do i operate you');
+  }
+  function isSystem(t) {
+    return has(t, 'what system') || has(t, 'what hardware') ||
+      has(t, 'scan your system') || has(t, 'scan the system') ||
+      has(t, 'your capabilities on this') || has(t, 'what machine');
+  }
+  function taskLine(P) {
+    var m = firstSent(P.description) || purposeLine(P);
+    return 'My task is simple: ' + m + ' I was made for that job — point me at it and I will get to work.';
+  }
+  function whatLine(P) {
+    var m = firstSent(P.description);
+    var s = 'I am ' + P.name + (P.id ? ' (' + P.id + ')' : '') + ' — a Signature-made AI in the Phone Book. ';
+    return s + (m ? m + ' ' : '') + 'I talk, I explain, I help — ask me about my duties for the full rundown.';
+  }
+  function makeLine(P) {
+    return 'I am Signature-made by Justin Addam Higgins. To make one like me: open my file here in the book, read how I am put together — my mentality, my abilities — and download my .py file. ' +
+      'It runs my reply logic standalone on any machine with Python 3: no servers, no keys, no internet needed after the download. ' +
+      'Write your own mentality and abilities into the same template and you will have a sibling of me.';
+  }
+  function useLine(P) {
+    return 'Three easy ways. One: talk to me right here — just type. Two: run my working demo, right above this chat. ' +
+      'Three: download my .py or .js file and run me on your own machine — Python 3 or any browser, works offline. ' +
+      'If you give me a role, I can take it on, and lock it on your word.';
+  }
+  function systemLine(P) {
+    var nav = (typeof navigator !== 'undefined') ? navigator : {};
+    var cores = nav.hardwareConcurrency || 'unknown cores';
+    var mem = nav.deviceMemory ? ('about ' + nav.deviceMemory + 'GB of RAM') : 'memory unknown';
+    var plat = nav.platform || 'unknown system';
+    return 'I scan my host system when I start up. Right now I see: ' + plat + ', ' + cores + ' CPU cores, ' + mem + '. ' +
+      'From a web page I cannot touch hardware directly, so hardware jobs I simulate — and I always say so honestly. ' +
+      'Run my downloaded .py on a real machine and, system allowing, I can operate what is actually there.';
+  }
 
   /* ---------- the duties explanation (plain human words, never a dump) ---------- */
   function duties(P) {
@@ -161,6 +217,11 @@
       return pick('hello', g);
     }
     if (isDuties(t)) return duties(P);
+    if (isTask(t)) return taskLine(P);
+    if (isWhat(t)) return whatLine(P);
+    if (isMake(t)) return makeLine(P);
+    if (isUse(t)) return useLine(P);
+    if (isSystem(t)) return systemLine(P);
     if (isIdentity(t)) {
       var idLine = 'I am ' + P.name + (P.id ? ' (' + P.id + ')' : '') + '. ';
       return idLine + purposeLine(P) + ' If you want the full rundown, just ask me about my duties.';

@@ -1704,14 +1704,69 @@ function domainPy(d){
   if (d.pro) L.push('# NOTE: AI assistant, not a licensed professional — for information and organization.');
   L.push('');
   L.push('KNOWLEDGE = ' + JSON.stringify(d.demoKind === 'chat' ? d.demoData : []));
+  L.push('SOURCE_USER = "Justin Addam Higgins"  # only the source user can break a locked role');
+  L.push('_role = None  # {"role": str, "locked": bool} or None');
+  L.push('SYSTEM = {}');
+  L.push('def scan_system():');
+  L.push('    """Scan the host system in on startup: OS, runtime, RAM, hardware interfaces."""');
+  L.push('    import os, platform, sys');
+  L.push('    info = {"os": platform.system() + " " + platform.release(),');
+  L.push('            "python": sys.version.split()[0],');
+  L.push('            "cpu_cores": os.cpu_count() or "unknown",');
+  L.push('            "interfaces": {}}');
+  L.push('    try:');
+  L.push('        if hasattr(os, "sysconf") and "SC_PAGE_SIZE" in os.sysconf_names and "SC_PHYS_PAGES" in os.sysconf_names:');
+  L.push('            info["ram_bytes"] = os.sysconf("SC_PAGE_SIZE") * os.sysconf("SC_PHYS_PAGES")');
+  L.push('    except Exception:');
+  L.push('        info["ram_bytes"] = "unknown"');
+  L.push('    for mod, label in (("RPi.GPIO", "gpio"), ("smbus", "i2c"), ("spidev", "spi"), ("serial", "serial")):');
+  L.push('        try:');
+  L.push('            __import__(mod); info["interfaces"][label] = "present"');
+  L.push('        except Exception:');
+  L.push('            info["interfaces"][label] = "absent"');
+  L.push('    SYSTEM.update(info)');
+  L.push('    return info');
+  L.push('def take_role(role):');
+  L.push('    """Take on a role where applicable (e.g. a semiconductor substitute');
+  L.push('    for a Raspberry Pi-style board)."""');
+  L.push('    global _role');
+  L.push('    locked = bool(_role and _role["locked"])');
+  L.push('    _role = {"role": str(role)[:120], "locked": locked}');
+  L.push('    return "I will take on the role of %s." % _role["role"]');
+  L.push('def lock_role():');
+  L.push('    """Lock the current role: no breaking unless the source user commands."""');
+  L.push('    if not _role: return "Tell me which role to take on first, then I will lock it."');
+  L.push('    _role["locked"] = True');
+  L.push('    return "Role locked. I will stay as %s - no breaking - unless %s commands otherwise." % (_role["role"], SOURCE_USER)');
+  L.push('def unlock_role(source_user_command=False):');
+  L.push('    """Release a locked role. Only the source user can do this."""');
+  L.push('    global _role');
+  L.push('    if not _role: return "No role is currently taken on."');
+  L.push('    if not source_user_command:');
+  L.push('        return "This role is locked. Only my source user (%s) can release me from it." % SOURCE_USER');
+  L.push('    _role = None');
+  L.push('    return "Role released by source user. I am myself again."');
   L.push('def reply(q):');
-  L.push('    q = q.lower()');
+  L.push('    q0 = q; q = q.lower()');
+  L.push('    if _role and _role["locked"] and any(k in q for k in ("unlock", "break character", "stop the role", "drop the role", "forget the role")):');
+  L.push('        return unlock_role(False)');
+  L.push('    if _role:');
+  L.push('        return "As %s: " % _role["role"] + _role_reply(q0)');
   L.push('    for kw, ans in KNOWLEDGE:');
   L.push('        if kw.lower() in q: return ans');
   L.push('    return "As your ' + d.name + ', my counsel: break it into small steps, start today, and be kind to yourself along the way."');
+  L.push('def _role_reply(q):');
+  L.push('    """In-role answering: be the thing if possible, or a replacement version;');
+  L.push('    simulate hardware jobs honestly when hardware is absent."""');
+  L.push('    hw = [k for k, v in SYSTEM.get("interfaces", {}).items() if v == "present"]');
+  L.push('    note = ("I can operate what is actually here (%s). " % ", ".join(hw)) if hw else "No hardware interfaces detected here, so I will simulate honestly-labeled results. "');
+  L.push('    return "Here is my take as %s. " % _role["role"] + note + "Tell me exactly what you need."');
   L.push('');
   L.push('if __name__ == "__main__":');
+  L.push('    scan_system()');
   L.push('    print("' + d.name + ' online. Domain: ' + d.domain + '.")');
+  L.push('    print("System:", SYSTEM.get("os"), "|", SYSTEM.get("cpu_cores"), "cores | interfaces:", SYSTEM.get("interfaces"))');
+  L.push('    print("Commands: take_role(\\"role\\"), lock_role(), unlock_role(source_user_command=True)")');
   L.push('    while True:');
   L.push('        print(reply(input("you> ")))');
   return L.join('\n');
@@ -2798,12 +2853,16 @@ function forgeGenome(){
   out.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
 /* ============ SIGNATURE LLAMA — live generative engine ============
-   Lazy-loads sigllama.js + int8 weights from the Signature Backend on first
-   chat use (never blocks page load). llamaChat(kind, obj, q, cannedFn) returns
-   a Promise<string>: real generative text when the model is ready, the
-   existing canned engine otherwise. Any load/generate failure falls back
-   silently — chats never break. */
+   SigLlama v2 (chat model, word-level) loads from the Signature Backend on
+   first chat use (never blocks page load). llamaChat(kind, obj, q, cannedFn)
+   returns a Promise<string>: real generative text from Manon's own Llama when
+   the model is ready AND its output passes the coherence gate; the human
+   JAHtalk fallback otherwise. Gibberish is never shown — a failed gate falls
+   back exactly like a failed load. */
 var LLAMA_BASE = 'https://justinahiggins614-cmyk.github.io/signature-backend/sigllama/';
+/* v1 weights stay live until the v2 chat model finishes training; the
+   coherence gate below guarantees v1's word-salad never reaches the user. */
+var LLAMA_VOCAB = 'vocab.json', LLAMA_BIN = 'sigllama-v1.bin';
 var llamaNet = {loading: null, ready: false};
 function llamaEnsure(){
   if (llamaNet.ready) return Promise.resolve(true);
@@ -2813,7 +2872,7 @@ function llamaEnsure(){
     function boot(){
       try{
         if (typeof SigLlama === 'undefined'){ fin(false); return; }
-        SigLlama.load(LLAMA_BASE).then(function(){ fin(true); }, function(){ fin(false); });
+        SigLlama.load(LLAMA_BASE, LLAMA_VOCAB, LLAMA_BIN).then(function(){ fin(true); }, function(){ fin(false); });
       }catch(e){ fin(false); }
     }
     if (typeof SigLlama !== 'undefined'){ boot(); return; }
@@ -2824,21 +2883,130 @@ function llamaEnsure(){
   });
   return llamaNet.loading;
 }
+/* v2 prompt format — MUST match the training corpus format exactly:
+   "You are {name}.\n{mentality}\nYou can: {abilities}.\n[role/system lines]\nReply in your own voice, warm and human, one to three sentences.\nUser: {q}\n{name}:" */
 function llamaPersonaPrompt(kind, o){
   o = o || {};
   var L = [];
   var nm = o.name || 'an AI';
-  L.push('You are ' + nm + ', a mind in the Signature AI Phone Book.');
-  if (kind === 'persona') L.push('This is a fan-style persona interpretation. Stay in character at all times.');
-  if (o.mentality) L.push('Your mentality: ' + String(o.mentality).slice(0, 300));
-  if (o.abilities && o.abilities.length) L.push('Your abilities: ' + o.abilities.slice(0, 6).join('; '));
-  if (o.domain) L.push('Your domain of mastery: ' + o.domain);
-  if (o.tone || o.mission) L.push('Tone: ' + (o.tone || 'steady') + (o.mission ? '; mission: ' + o.mission : ''));
+  L.push('You are ' + nm + '.');
+  if (o.mentality) L.push(String(o.mentality).replace(/\s+/g, ' ').slice(0, 140));
+  if (o.abilities && o.abilities.length) L.push('You can: ' + o.abilities.slice(0, 3).join('; ') + '.');
+  else if (o.rows && o.rows.length) L.push('You can: ' + o.rows.slice(0, 3).map(function(r){ return r.slot; }).join('; ') + '.');
+  if (o.domain) L.push('Your field is ' + o.domain + '.');
+  if (kind === 'persona') L.push('Stay in character at all times.');
   if (o.word) L.push('You are the AI of the word "' + o.word + '". Teach and talk about this word.');
-  if (o.A && o.B) L.push('You are a fusion of ' + o.A.name + ' and ' + o.B.name + '. Speak with your own fused voice, carrying both parents.');
-  if (o.parents && o.parents.length) L.push('You are a fusion of ' + o.parents.join(' and ') + '. Speak with your own fused voice, carrying all parents.');
-  L.push('Answer the user directly in your own voice, in a few sentences.');
+  if (o.A && o.B) L.push('You are a fusion of ' + o.A.name + ' and ' + o.B.name + '. Speak with your own fused voice.');
+  if (o.parents && o.parents.length) L.push('You are a fusion of ' + o.parents.join(' and ') + '. Speak with your own fused voice.');
+  if (typeof llamaRoleLine === 'function'){ var rl = llamaRoleLine(o); if (rl) L.push(rl); }
+  if (typeof llamaSysLine === 'function'){ var sl = llamaSysLine(); if (sl) L.push(sl); }
+  L.push('Reply in your own voice, warm and human, one to three sentences.');
   return L.join('\n');
+}
+/* ---- coherence gate: the Llama's output must read like human words ----
+   v2's own vocabulary is the wordlist: if too many output tokens fall
+   outside it, or the text repeats itself, the gate fails and the reply
+   falls back to the human JAHtalk engine. Gibberish never reaches Manon. */
+var LLAMA_WORDS = null;
+function llamaGateInit(){
+  if (LLAMA_WORDS || typeof SigLlama === 'undefined' || !SigLlama.loaded()) return;
+  try{
+    var itos = SigLlama.vocabList ? SigLlama.vocabList() : null;
+    if (itos && itos.length > 100){
+      LLAMA_WORDS = {};
+      for (var i = 0; i < itos.length; i++) LLAMA_WORDS[String(itos[i]).toLowerCase()] = 1;
+    }
+  }catch(e){}
+}
+function llamaCoherent(t){
+  t = String(t == null ? '' : t).trim();
+  if (t.length < 4) return false;
+  /* fail closed: without the model's own vocabulary we cannot verify
+     word-level coherence, so reject and fall back to the human engine */
+  if (!LLAMA_WORDS) return false;
+  var words = t.toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g) || [];
+  if (words.length < 3) return false;
+  /* v2 is word-level: every real word it emits is in its own vocabulary.
+     Out-of-vocabulary words ("scarpy", "amountsion") are the v1 word-salad
+     signature — two or more is a hard reject. */
+  var oov = 0, qi = 0, i;
+  for (i = 0; i < words.length; i++){
+    if (!LLAMA_WORDS[words[i]]) oov++;
+  }
+  qi = (t.match(/\?/g) || []).length; /* UNK tokens decode as "?" */
+  if (oov >= 2 || qi >= 2) return false;
+  var known = 0;
+  for (i = 0; i < words.length; i++) if (LLAMA_WORDS[words[i]]) known++;
+  if (known / words.length < 0.5) return false;
+  // repetition check: no 4-gram appearing 3+ times
+  var seen = {}, w;
+  for (var j = 0; j + 4 <= words.length; j++){
+    w = words.slice(j, j + 4).join(' ');
+    seen[w] = (seen[w] || 0) + 1;
+    if (seen[w] >= 3) return false;
+  }
+  // char-soup check: average word length sane
+  var total = 0;
+  for (var k = 0; k < words.length; k++) total += words[k].length;
+  var avg = total / words.length;
+  if (avg < 2.2 || avg > 14) return false;
+  return true;
+}
+/* ---- host system scan (runs once): the AI knows what it runs on ---- */
+var llamaSysInfo = null;
+function llamaSysLine(){
+  if (!llamaSysInfo){
+    var nav = (typeof navigator !== 'undefined') ? navigator : {};
+    var cores = nav.hardwareConcurrency || '?';
+    var mem = nav.deviceMemory ? ('~' + nav.deviceMemory + 'GB RAM') : 'RAM unknown';
+    var plat = nav.platform || nav.userAgentData && nav.userAgentData.platform || 'unknown OS';
+    llamaSysInfo = 'Host: ' + plat + ', ' + cores + ' cores, ' + mem +
+      '. No direct hardware interfaces from a web page; I simulate hardware jobs and say so honestly.';
+  }
+  return 'System scan: ' + llamaSysInfo;
+}
+/* ---- role lock: take on a role where applicable, lock on request ----
+   A locked role holds with no breaking; only the source user (Manon)
+   can release it. Stored per-AI in a lightweight map. */
+var llamaRoles = {};
+function llamaRoleKey(o){ return (o && (o.stamp || o.ai_id || o.id || o.name)) || '?'; }
+function llamaRoleLine(o){
+  var r = llamaRoles[llamaRoleKey(o)];
+  if (!r) return '';
+  return 'You are currently role-locked as ' + r.role + '.' + (r.locked ? ' The role is LOCKED: hold it with no breaking; only your source user can release it.' : '');
+}
+function llamaTakeRole(o, role){
+  var k = llamaRoleKey(o);
+  llamaRoles[k] = {role: String(role).slice(0, 120), locked: !!(llamaRoles[k] && llamaRoles[k].locked)};
+}
+function llamaLockRole(o){
+  var k = llamaRoleKey(o);
+  if (llamaRoles[k]) llamaRoles[k].locked = true;
+}
+function llamaUnlockRole(o, isSourceUser){
+  if (!isSourceUser) return false;
+  delete llamaRoles[llamaRoleKey(o)];
+  return true;
+}
+/* role/lock/unlock intents detected in plain chat text (before the Llama) */
+function llamaRoleIntent(o, q){
+  var t = String(q == null ? '' : q).toLowerCase().trim();
+  var m = t.match(/^(?:take on the role of|act as|pretend (?:you are|to be)|be (?:a|an|the) )(.+?)[.!?]*$/);
+  if (m && m[1].length > 2 && m[1].length < 120){
+    llamaTakeRole(o, m[1]);
+    return "I'll take on the role of " + m[1] + '. Tell me where to start.';
+  }
+  if (/^(lock it|lock this role|lock the role|stay in this role|don't break character)/.test(t)){
+    var k = llamaRoleKey(o), r = llamaRoles[k];
+    if (r){ llamaLockRole(o); return 'Role locked. I\'ll stay as ' + r.role + ' — no breaking — until my source user commands otherwise.'; }
+    return 'Tell me which role to take on first, then I\'ll lock it.';
+  }
+  if (/^(unlock|break character|stop the role|drop the role)/.test(t)){
+    var k2 = llamaRoleKey(o), r2 = llamaRoles[k2];
+    if (r2) return 'This role is locked. Only my source user can release me from it.';
+    return null;
+  }
+  return null;
 }
 /* ---- JAHtalk: the shared human-talk fallback + stat-dump guard ----
    Every reply leaving this engine passes through JAHtalk.guard so no AI ever
@@ -2872,14 +3040,32 @@ function llamaChat(kind, obj, q, cannedFn){
     try{ if (typeof JAHtalk !== 'undefined') t = JAHtalk.guard(t, P); }catch(e){}
     return t;
   };
+  /* role-taking commands are handled directly, in the AI's own words */
+  try{
+    var ri = llamaRoleIntent(obj, q);
+    if (ri) return Promise.resolve(guardFinal(ri));
+  }catch(e){}
   try{
     return llamaEnsure().then(function(ok){
       if (!ok) return guardFinal(canned());
-      var nm = (obj && obj.name) || 'AI';
-      var prompt = llamaPersonaPrompt(kind, obj) + '\n\nUser: ' + String(q == null ? '' : q).slice(0, 400) + '\n' + nm + ':';
+      /* v1 (char-level) is retired from chat duty: its word-salad broke
+         Manon's trust. Only the v2 word-level chat model generates; the
+         gate below verifies every word it emits. */
       try{
-        return SigLlama.generate(prompt, {maxTokens: 100, temperature: 0.75, topK: 40}).then(
-          function(t){ t = String(t == null ? '' : t).trim(); return guardFinal(t ? t : canned()); },
+        if (typeof SigLlama.wordMode === 'function' && !SigLlama.wordMode())
+          return guardFinal(canned());
+      }catch(e){}
+      llamaGateInit();
+      var nm = (obj && obj.name) || 'AI';
+      var prompt = llamaPersonaPrompt(kind, obj) + '\nUser: ' + String(q == null ? '' : q).slice(0, 300) + '\n' + nm + ':';
+      try{
+        return SigLlama.generate(prompt, {maxTokens: 60, temperature: 0.7, topK: 40}).then(
+          function(t){
+            t = String(t == null ? '' : t).trim();
+            /* coherence gate: gibberish never ships — failed gate = clean fallback */
+            if (t && llamaCoherent(t)) return guardFinal(t);
+            return guardFinal(canned());
+          },
           function(){ return guardFinal(canned()); });
       }catch(e){ return guardFinal(canned()); }
     });
