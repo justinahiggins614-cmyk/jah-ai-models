@@ -5,7 +5,9 @@ Verifies sitemap.xml is well-formed and every unique URL it contains returns
 HTTP 200 from the live site:
   * XML parses and uses the sitemap 0.9 namespace
   * every <loc> is an absolute https URL on the jah-ai-models site
-  * the 260 embedded AI deep links (index.html#file-<id>) match the AI ids
+  * the embedded AI deep links (index.html#file-<id>) match the AI ids
+  *   actually embedded in index.html — no orphans, none missing (count derived,
+  *   never hardcoded)
     actually embedded in index.html — no orphans, none missing
   * key pages present: index.html, canonical home, ai-catalog.json, api.json,
     and the wing anchors (#thebook A-Z, #sisterlines, #genomelab, #arena,
@@ -134,7 +136,7 @@ console.log(JSON.stringify(out));
         for p in problems:
             print("  -", p)
         sys.exit(1)
-    print("SITEMAP CLEAN — %d urls, all 200, all 260 embedded AI deep links covered" % len(locs))
+    print("SITEMAP CLEAN — %d urls, all 200, all %d embedded AI deep links covered" % (len(locs), len(embedded)))
 
 
 if __name__ == "__main__":

@@ -2,43 +2,54 @@
 """Missing-ID checker for the Signature AI Telephone Book.
 
 Embedded AI stamps are sequential per wing:
-  JAH-AI-SIG-001..011   (11 system AIs)
-  JAH-AI-PER-001..006   (6 persona AIs)
-  JAH-AI-DOM-001..243   (243 domain AIs, generated in index.html)
-Reports any gaps in the sequences. Gaps are reported, not auto-fixed —
-a gap may be intentional, but it should be a conscious choice.
+  JAH-AI-SIG-001..NNN   (system AIs)
+  JAH-AI-PER-001..NNN   (persona AIs)
+  JAH-AI-DOM-001..NNN   (domain AIs, generated in index.html)
+Expected lengths are DERIVED from the live data arrays via node (2026-10-03
+fix: the old script hardcoded 243 domain AIs and went stale when the leg grew
+to 253). Reports any gaps in the sequences. Gaps are reported, not auto-fixed.
 
 Re-runnable:  python3 code/qa/missing_id_check.py
 Exit code 0 = sequences complete, 1 = gaps found.
 """
+import json
 import os
 import re
+import subprocess
 import sys
+import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(os.path.dirname(HERE))
 
 html = open(os.path.join(REPO, "index.html"), encoding="utf-8").read()
-stamps = re.findall(r"stamp:'(JAH-AI-[A-Z]+-\d+)'", html)
 
-# Domain stamps are generated in JS (not literal in the HTML):
-#   stamp: 'JAH-AI-DOM-' + String(i+1).padStart(3,'0')
-# so the DOM sequence is complete exactly when DOMAIN_SPECS has 243 rows.
-if re.search(r"stamp:\s*'JAH-AI-DOM-'\s*\+\s*String\(i\+1\)", html):
-    dom_rows = re.findall(r"^\['([a-z0-9\-]+)',", html, re.M)
-    # only count rows inside the DOMAIN_SPECS array block
-    block = html[html.index("var DOMAIN_SPECS"):html.index("var domIndex")]
-    dom_rows = re.findall(r"^\['([a-z0-9\-]+)',", block, re.M)
-    stamps += ["JAH-AI-DOM-%03d" % (i + 1) for i in range(len(dom_rows))]
-else:
-    print("WARNING: DOM stamp generator expression not found — sequences may have changed shape")
+start = html.index("var SIG_AIS")
+end = html.index("function domainParams")
+js = html[start:end] + """
+console.log(JSON.stringify({
+  sig: SIG_AIS.length, per: PERSONAS.length, dom: DOMAIN_SPECS.length,
+  domStamps: DOMAIN_SPECS.map(function(s, i){ return 'JAH-AI-DOM-' + String(i+1).padStart(3, '0'); })
+}));
+"""
+with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as tf:
+    tf.write(js)
+    tf_path = tf.name
+node = subprocess.run(["node", tf_path], capture_output=True, text=True)
+os.unlink(tf_path)
+if node.returncode != 0:
+    sys.exit("node parse failed:\n" + node.stderr)
+live = json.loads(node.stdout)
+
+stamps = re.findall(r"stamp:'(JAH-AI-[A-Z]+-\d+)'", html)
+stamps += live["domStamps"]
 
 wings = {}
 for s in stamps:
     kind, num = s.rsplit("-", 1)
     wings.setdefault(kind, []).append(int(num))
 
-EXPECT = {"JAH-AI-SIG": 11, "JAH-AI-PER": 6, "JAH-AI-DOM": 243}
+EXPECT = {"JAH-AI-SIG": live["sig"], "JAH-AI-PER": live["per"], "JAH-AI-DOM": live["dom"]}
 problems = []
 for wing, want in sorted(EXPECT.items()):
     have = sorted(set(wings.get(wing, [])))
@@ -60,4 +71,4 @@ if problems:
     for p in problems:
         print("  -", p)
     sys.exit(1)
-print("ALL ID SEQUENCES COMPLETE — 11 SIG + 6 PER + 243 DOM")
+print("ALL ID SEQUENCES COMPLETE — %d SIG + %d PER + %d DOM" % (live["sig"], live["per"], live["dom"]))

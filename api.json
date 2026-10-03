@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "catalog_revision": 1,
-  "generated_at": "2026-10-03T05:50:28Z",
+  "catalog_revision": 3,
+  "generated_at": "2026-10-03T06:00:10Z",
   "records_as_of": "2026-10-03",
   "site": "The Signature AI Telephone Book",
   "site_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/",
@@ -53,7 +53,7 @@
   "endpoints": [
     {
       "path": "ai-catalog.json",
-      "desc": "Machine-readable catalog of the 270 embedded AI files: ID/NAME/TYPE/DESCRIPTION/STATUS/VERSION/ROLE/SOURCE/RELATIONSHIPS/HASH/ARTIFACTS."
+      "desc": "Machine-readable catalog of the 270 embedded AI files, one AI File Standard record each: ID/NAME/TYPE/CATEGORY/DESCRIPTION/CAPABILITIES/LIMITATIONS/STATUS/VERSION/ROLE/RUNTIME/DEMO/VOICE/SIGNATURE_NUMBER/SOURCE/RELATIONSHIPS/HASH/ARTIFACTS."
     },
     {
       "path": "api.json",
