@@ -2903,10 +2903,31 @@ function llamaPersonaPrompt(kind, o){
   L.push('Reply in your own voice, warm and human, one to three sentences.');
   return L.join('\n');
 }
-/* ---- coherence gate: the Llama's output must read like human words ----
-   v2's own vocabulary is the wordlist: if too many output tokens fall
-   outside it, or the text repeats itself, the gate fails and the reply
-   falls back to the human JAHtalk engine. Gibberish never reaches Manon. */
+/* ---- grounding gate: the Llama's reply must actually be ABOUT this AI ----
+   v2 generates fluent text; this gate ensures it's grounded in the AI's own
+   profile (name, abilities, or domain). Ungrounded output falls back to the
+   human JAHtalk engine — never shown. */
+function llamaGrounded(t, obj){
+  t = String(t == null ? '' : t).toLowerCase();
+  if (!obj) return true;
+  var anchors = [];
+  if (obj.name) anchors.push(String(obj.name).toLowerCase());
+  var abs = obj.abilities || [];
+  for (var i = 0; i < Math.min(abs.length, 6); i++){
+    var words = String(abs[i]).toLowerCase().match(/[a-z]{4,}/g) || [];
+    for (var j = 0; j < words.length; j++) anchors.push(words[j]);
+  }
+  if (obj.domain) anchors.push(String(obj.domain).toLowerCase());
+  if (obj.mentality){
+    var mw = String(obj.mentality).toLowerCase().match(/[a-z]{5,}/g) || [];
+    for (var k = 0; k < Math.min(mw.length, 8); k++) anchors.push(mw[k]);
+  }
+  for (var a = 0; a < anchors.length; a++){
+    if (anchors[a].length > 3 && t.indexOf(anchors[a]) >= 0) return true;
+  }
+  return false;
+}
+/* ---- vocabulary wordlist for the coherence gate ---- */
 var LLAMA_WORDS = null;
 function llamaGateInit(){
   if (LLAMA_WORDS || typeof SigLlama === 'undefined' || !SigLlama.loaded()) return;
@@ -3062,8 +3083,10 @@ function llamaChat(kind, obj, q, cannedFn){
         return SigLlama.generate(prompt, {maxTokens: 60, temperature: 0.7, topK: 40}).then(
           function(t){
             t = String(t == null ? '' : t).trim();
-            /* coherence gate: gibberish never ships — failed gate = clean fallback */
-            if (t && llamaCoherent(t)) return guardFinal(t);
+            /* two gates: vocabulary coherence AND profile grounding.
+               Either gate failing = clean JAHtalk fallback. Gibberish
+               and ungrounded babble never reach Manon. */
+            if (t && llamaCoherent(t) && llamaGrounded(t, obj)) return guardFinal(t);
             return guardFinal(canned());
           },
           function(){ return guardFinal(canned()); });
