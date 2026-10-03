@@ -122,3 +122,81 @@ catalog = {
 out_path = os.path.join(REPO, "ai-catalog.json")
 json.dump(catalog, open(out_path, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 print("wrote", out_path, "records:", len(records))
+
+# ---- api.json: same single source of truth (items 151-160 of the fix list).
+# Never maintain totals by hand again; this builder owns both files.
+counts = catalog["counts"]
+api_path = os.path.join(REPO, "api.json")
+prev_api = {}
+try:
+    prev_api = json.load(open(api_path, encoding="utf-8"))
+except Exception:
+    pass
+api = {
+    "schema_version": "1.1",
+    "catalog_revision": int(prev_api.get("catalog_revision", 0)) + 1,
+    "generated_at": catalog["generated_at"],
+    "records_as_of": wordai_snapshot["as_of"],
+    "site": "The Signature AI Telephone Book",
+    "site_url": SITE,
+    "creator": prev_api.get("creator", "Justin Addam Higgins"),
+    "description": prev_api.get("description", ""),
+    "for_bots": prev_api.get("for_bots", ""),
+    "counts": {
+        "embedded_total": counts["embedded_total"],
+        "embedded_breakdown": {"system": counts["system"],
+                                "persona": counts["persona"],
+                                "domain": counts["domain"]},
+        "wordai_index_records": counts["wordai_index_records"],
+        "wordai_as_of": counts["wordai_as_of"],
+        "published_total": counts["published_total"],
+        "hybrid_space": {
+            "possible_combinations": 1000000,
+            "generated_on_demand": True,
+            "note": "1,000,000 is the deterministic Mix Lab hybrid combination space. "
+                    "Hybrids are generated on demand per device; they are NOT published files.",
+        },
+    },
+    # legacy flat keys kept for existing consumers
+    "records_embedded": counts["embedded_total"],
+    "records_embedded_breakdown": {"system": counts["system"],
+                                   "persona": counts["persona"],
+                                   "domain": counts["domain"]},
+    "wordai_index_records": counts["wordai_index_records"],
+    "records_published_total": counts["published_total"],
+    "hybrid_space": 1000000,
+    "wordai_index": catalog["wordai_index"],
+    "sitemap": SITE + "sitemap.xml",
+    "raw_github_base": prev_api.get("raw_github_base",
+        "https://raw.githubusercontent.com/justinahiggins614-cmyk/jah-ai-models/main/"),
+    "deep_links": prev_api.get("deep_links", []),
+    "endpoints": [
+        {"path": "ai-catalog.json",
+         "desc": "Machine-readable catalog of the %d embedded AI files: ID/NAME/TYPE/DESCRIPTION/STATUS/VERSION/ROLE/SOURCE/RELATIONSHIPS/HASH/ARTIFACTS." % counts["embedded_total"]},
+        {"path": "api.json",
+         "desc": "This manifest: counts, endpoints, deep links, schema version, catalog revision."},
+    ],
+    "note": prev_api.get("note", ""),
+    "raw_example": prev_api.get("raw_example"),
+}
+json.dump(api, open(api_path, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+print("wrote", api_path, "revision", api["catalog_revision"])
+
+# ---- stamp the static hero (crawler-visible) from the same source ----
+hero_path = os.path.join(REPO, "index.html")
+hero = open(hero_path, encoding="utf-8").read()
+emb = counts["embedded_total"]
+pub = counts["published_total"]
+wa = counts["wordai_index_records"]
+asof = counts["wordai_as_of"]
+new_aicount = '<span id="aicount"><b>%s</b></span>' % format(pub, ",d")
+hero = re.sub(r'<span id="aicount"><b>[\d,]+</b></span>', new_aicount, hero)
+new_break = ('PUBLISHED AI FILES: <b>%s</b> = %d embedded (%d system &middot; %d persona &middot; %d domain) '
+             '+ %s word-AIs &middot; Last synchronized %s &mdash; live count refreshes when the word-AI index loads'
+             % (format(pub, ",d"), emb, counts["system"], counts["persona"], counts["domain"],
+                format(wa, ",d"), asof))
+hero = re.sub(r'<span id="aibreakdown">.*?</span>',
+              '<span id="aibreakdown">' + new_break + '</span>', hero, count=1, flags=re.S)
+open(hero_path, "w", encoding="utf-8").write(hero)
+print("stamped hero: %s published (%d embedded + %d word-AIs), as of %s"
+      % (format(pub, ",d"), emb, wa, asof))

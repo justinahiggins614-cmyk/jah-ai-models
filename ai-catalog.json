@@ -1,16 +1,16 @@
 {
   "site": "The Signature AI Telephone Book",
   "site_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/",
-  "generated_at": "2026-10-02T23:09:53Z",
+  "generated_at": "2026-10-03T05:50:28Z",
   "for_bots": "Machine-readable catalog of the embedded AI files. Word AIs (JAH-AI-WORD-######) are lazy-loaded from the Spec Catalog word-AI index; hybrid files (JAH-AI-MIX-######) are generated deterministically on demand.",
   "counts": {
     "embedded_total": 270,
     "system": 11,
     "persona": 6,
     "domain": 253,
-    "wordai_index_records": 30200,
-    "wordai_as_of": "2026-10-02",
-    "published_total": 30470
+    "wordai_index_records": 32600,
+    "wordai_as_of": "2026-10-03",
+    "published_total": 32870
   },
   "wordai_index": "https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz",
   "records": [
