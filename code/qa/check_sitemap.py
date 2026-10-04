@@ -72,10 +72,12 @@ def main():
     html = open(HTML, encoding="utf-8").read()
     start = html.index("var SIG_AIS")
     end = html.index("function domainParams")
-    js = html[start:end] + """
+    twin_src = open(os.path.join(REPO, "js", "sl_twins.js"), encoding="utf-8").read()
+    js = twin_src + "\n" + html[start:end] + """
 var out=[];
 SIG_AIS.forEach(function(a){out.push(a.id)});
 PERSONAS.forEach(function(a){out.push(a.id)});
+SL_TWINS.forEach(function(a){out.push(a.id)});
 Object.keys(domIndex).forEach(function(k){out.push(domIndex[k].id)});
 console.log(JSON.stringify(out));
 """

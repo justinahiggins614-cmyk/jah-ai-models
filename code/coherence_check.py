@@ -30,10 +30,12 @@ def embedded_records():
     html = open(os.path.join(REPO, "index.html"), encoding="utf-8").read()
     start = html.index("var SIG_AIS")
     end = html.index("function domainParams")
-    js = html[start:end] + """
+    twin_src = open(os.path.join(REPO, "js", "sl_twins.js"), encoding="utf-8").read()
+    js = twin_src + "\n" + html[start:end] + """
 var out = [];
 SIG_AIS.forEach(function(a){ out.push({embed:'sig', obj:a}); });
 PERSONAS.forEach(function(a){ out.push({embed:'persona', obj:a}); });
+SL_TWINS.forEach(function(a){ out.push({embed:'sl', obj:a}); });
 Object.keys(domIndex).forEach(function(k){ out.push({embed:'domain', obj:domIndex[k]}); });
 console.log(JSON.stringify(out));
 """

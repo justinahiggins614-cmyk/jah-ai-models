@@ -30,8 +30,9 @@ REPO = os.path.dirname(os.path.dirname(HERE))
 html = open(os.path.join(REPO, "index.html"), encoding="utf-8").read()
 start = html.index("var SIG_AIS")
 end = html.index("function domainParams")
-js = html[start:end] + """
-var out = {sig: SIG_AIS.length, per: PERSONAS.length, dom: DOMAIN_SPECS.length};
+twin_src = open(os.path.join(REPO, "js", "sl_twins.js"), encoding="utf-8").read()
+js = twin_src + "\n" + html[start:end] + """
+var out = {sig: SIG_AIS.length, per: PERSONAS.length, dom: DOMAIN_SPECS.length, sl: SL_TWINS.length};
 console.log(JSON.stringify(out));
 """
 with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as tf:
@@ -42,7 +43,7 @@ os.unlink(tf_path)
 if node.returncode != 0:
     sys.exit("node parse failed:\n" + node.stderr)
 live = json.loads(node.stdout)
-total_live = live["sig"] + live["per"] + live["dom"]
+total_live = live["sig"] + live["per"] + live["dom"] + live["sl"]
 
 catalog = json.load(open(os.path.join(REPO, "ai-catalog.json"), encoding="utf-8"))
 api = json.load(open(os.path.join(REPO, "api.json"), encoding="utf-8"))
@@ -57,8 +58,8 @@ def expect(label, got, want):
         problems.append("%s: got %s, want %s" % (label, got, want))
 
 
-print("live data arrays in index.html: %d system / %d persona / %d domain = %d embedded"
-      % (live["sig"], live["per"], live["dom"], total_live))
+print("live data arrays in index.html: %d system / %d persona / %d domain / %d signature-line = %d embedded"
+      % (live["sig"], live["per"], live["dom"], live["sl"], total_live))
 
 print("ai-catalog.json:")
 cc = catalog["counts"]
@@ -66,6 +67,7 @@ expect("catalog embedded_total", cc["embedded_total"], total_live)
 expect("catalog system", cc["system"], live["sig"])
 expect("catalog persona", cc["persona"], live["per"])
 expect("catalog domain", cc["domain"], live["dom"])
+expect("catalog signature-line", cc.get("sl", 0), live["sl"])
 expect("catalog records length", len(catalog["records"]), total_live)
 expect("catalog published = emb + wordai",
        cc["published_total"], total_live + int(cc["wordai_index_records"]))
@@ -76,6 +78,7 @@ bd = api["records_embedded_breakdown"]
 expect("api breakdown system", bd["system"], live["sig"])
 expect("api breakdown persona", bd["persona"], live["per"])
 expect("api breakdown domain", bd["domain"], live["dom"])
+expect("api breakdown signature-line", bd.get("sl", 0), live["sl"])
 expect("api wordai == catalog wordai",
        int(api["wordai_index_records"]), int(cc["wordai_index_records"]))
 expect("api published == catalog published",
@@ -96,6 +99,7 @@ else:
     expect("hero shows system count", ("%d system" % live["sig"]) in hero, True)
     expect("hero shows persona count", ("%d persona" % live["per"]) in hero, True)
     expect("hero shows domain count", ("%d domain" % live["dom"]) in hero, True)
+    expect("hero shows signature-line count", ("%d signature-line" % live["sl"]) in hero, True)
     expect("hero word-AI count",
            re.search(r"\+ ([\d,]+) word-AIs", hero).group(1).replace(",", ""),
            str(cc["wordai_index_records"]))

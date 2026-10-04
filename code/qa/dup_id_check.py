@@ -23,15 +23,19 @@ REPO = os.path.dirname(os.path.dirname(HERE))
 
 html = open(os.path.join(REPO, "index.html"), encoding="utf-8").read()
 
-# literal stamps in the SIG_AIS / PERSONAS arrays
+# literal stamps in the SIG_AIS / PERSONAS arrays (+ SL_TWINS JSON in js/sl_twins.js)
 stamps = re.findall(r"stamp:'(JAH-AI-[A-Z]+-\d+)'", html)
+stamps += re.findall(r'"stamp":\s*"(JAH-AI-[A-Z]+-\d+)"',
+                     open(os.path.join(REPO, "js", "sl_twins.js"), encoding="utf-8").read())
 
 start = html.index("var SIG_AIS")
 end = html.index("function domainParams")
-js = html[start:end] + """
+twin_src = open(os.path.join(REPO, "js", "sl_twins.js"), encoding="utf-8").read()
+js = twin_src + "\n" + html[start:end] + """
 var out = {
   sigIds: SIG_AIS.map(function(a){ return a.id; }),
   perIds: PERSONAS.map(function(a){ return a.id; }),
+  slIds: SL_TWINS.map(function(a){ return a.id; }),
   domSids: DOMAIN_SPECS.map(function(s){ return s[0]; }),
   domStamps: DOMAIN_SPECS.map(function(s, i){ return 'JAH-AI-DOM-' + String(i+1).padStart(3, '0'); })
 };
@@ -47,7 +51,7 @@ if node.returncode != 0:
 live = json.loads(node.stdout)
 
 stamps += live["domStamps"]
-all_ids = live["sigIds"] + live["perIds"] + ["dom-" + s for s in live["domSids"]]
+all_ids = live["sigIds"] + live["perIds"] + live["slIds"] + ["dom-" + s for s in live["domSids"]]
 
 catalog = json.load(open(os.path.join(REPO, "ai-catalog.json"), encoding="utf-8"))
 cat_ids = [r["ID"] for r in catalog["records"]]

@@ -26,10 +26,12 @@ html = open(os.path.join(REPO, "index.html"), encoding="utf-8").read()
 
 start = html.index("var SIG_AIS")
 end = html.index("function domainParams")
-js = html[start:end] + """
+twin_src = open(os.path.join(REPO, "js", "sl_twins.js"), encoding="utf-8").read()
+js = twin_src + "\n" + html[start:end] + """
 console.log(JSON.stringify({
-  sig: SIG_AIS.length, per: PERSONAS.length, dom: DOMAIN_SPECS.length,
-  domStamps: DOMAIN_SPECS.map(function(s, i){ return 'JAH-AI-DOM-' + String(i+1).padStart(3, '0'); })
+  sig: SIG_AIS.length, per: PERSONAS.length, dom: DOMAIN_SPECS.length, sl: SL_TWINS.length,
+  domStamps: DOMAIN_SPECS.map(function(s, i){ return 'JAH-AI-DOM-' + String(i+1).padStart(3, '0'); }),
+  slStamps: SL_TWINS.map(function(a){ return a.stamp; })
 }));
 """
 with tempfile.NamedTemporaryFile("w", suffix=".js", delete=False) as tf:
@@ -43,13 +45,15 @@ live = json.loads(node.stdout)
 
 stamps = re.findall(r"stamp:'(JAH-AI-[A-Z]+-\d+)'", html)
 stamps += live["domStamps"]
+stamps += live["slStamps"]
 
 wings = {}
 for s in stamps:
     kind, num = s.rsplit("-", 1)
     wings.setdefault(kind, []).append(int(num))
 
-EXPECT = {"JAH-AI-SIG": live["sig"], "JAH-AI-PER": live["per"], "JAH-AI-DOM": live["dom"]}
+EXPECT = {"JAH-AI-SIG": live["sig"], "JAH-AI-PER": live["per"], "JAH-AI-DOM": live["dom"],
+          "JAH-AI-SL": live["sl"]}
 problems = []
 for wing, want in sorted(EXPECT.items()):
     have = sorted(set(wings.get(wing, [])))
