@@ -93,8 +93,15 @@ def build():
     catalog = json.load(io.open(os.path.join(REPO, "ai-catalog.json"), encoding="utf-8"))
     counts = catalog["counts"]
     records = catalog["records"]
-    emb, sys_n, per_n, dom_n = (counts["embedded_total"], counts["system"],
-                               counts["persona"], counts["domain"])
+    emb = counts["embedded_total"]
+    # type breakdown is derived, never hardcoded: new record types (e.g. "sl")
+    # appear automatically, so the stamped line can never go arithmetically stale
+    from collections import Counter
+    type_counts = Counter(r["TYPE"] for r in records)
+    order = ["system", "persona", "domain"] + sorted(t for t in type_counts
+                                                    if t not in ("system", "persona", "domain"))
+    type_break = " &middot; ".join("%d %s" % (type_counts[t], t) for t in order if t in type_counts)
+    assert sum(type_counts.values()) == emb, "type counts must sum to embedded_total"
     wa_total = counts["wordai_index_records"]
     asof = counts["wordai_as_of"]
     pub = counts["published_total"]
@@ -209,7 +216,7 @@ def build():
         'plus a Word-AI for every word. Tap a letter, tap an AI, and its full file opens: '
         'dossier, working demo, dialog, read-aloud, copy, download.</p>'
         '<p class="countline"><b id="archTotal">%s</b> AI files on record: '
-        '<b>%d</b> core AIs (%d system &middot; %d persona &middot; %d domain) + '
+        '<b>%d</b> core AIs (%s) + '
         '<b>%s</b> Word-AIs &middot; Last synchronized %s</p>'
         '<div class="searchbox"><input type="text" id="asearch" '
         'placeholder="Search the core archive\u2026 name, ID, or subject" '
@@ -226,7 +233,7 @@ def build():
         '<p class="fineprint">Persona AIs marked as fan-style interpretations are independent '
         'simulations, not affiliated with or endorsed by any rights holder. Every AI carries a '
         'permanent Signature stamp ID and its own 11-digit Signature phone number.</p>'
-        % (fmt(pub), emb, sys_n, per_n, dom_n, fmt(wa_total), esc(asof),
+        % (fmt(pub), emb, type_break, fmt(wa_total), esc(asof),
            az_html, fmt(wa_live), tile_html)
     )
 
