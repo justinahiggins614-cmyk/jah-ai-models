@@ -5220,7 +5220,7 @@ if(last){addEventListener('load',function(){setTimeout(function(){try{var el=doc
   function isSeen(){ try{ return localStorage.getItem(SEEN)==='1'; }catch(e){ return true; } }
   function markSeen(){ try{ localStorage.setItem(SEEN,'1'); }catch(e){} }
   var wel=document.getElementById('jah-wel');
-  function openWel(){ if(!wel) return; wel.hidden=false; var b=document.getElementById('jah-welok'); try{ if(b) b.focus(); }catch(e){} }
+  function openWel(){ if(!wel) return; wel.hidden=false; var b=document.getElementById('jah-welok'); try{ if(b) b.focus({preventScroll:true}); }catch(e){} }
   function closeWel(){ if(wel) wel.hidden=true; markSeen(); }
   var ok=document.getElementById('jah-welok');
   if(ok) ok.onclick=function(){ closeWel(); };
