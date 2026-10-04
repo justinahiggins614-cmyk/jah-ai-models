@@ -14,6 +14,7 @@ import html
 import json
 import os
 import re
+import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = 'https://justinahiggins614-cmyk.github.io/jah-ai-models/'
@@ -101,10 +102,13 @@ def word_display(w):
 
 
 def fetch_wordai_index():
-    import urllib.request
-    req = urllib.request.Request(WORDAI_IDX, headers={'User-Agent': 'JAH-polish/1.0'})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        raw = r.read()
+    # curl, not urllib: python urllib hangs through this sandbox's egress proxy
+    # (AGENTS.md), curl works.
+    raw = subprocess.run(
+        ["curl", "-sL", "--max-time", "120", "-A", "JAH-polish/1.0", WORDAI_IDX],
+        capture_output=True, timeout=130).stdout
+    if not raw:
+        raise RuntimeError("curl fetch failed for word-AI index")
     return json.loads(gzip.decompress(raw).decode('utf-8'))
 
 
@@ -162,10 +166,21 @@ def build_wordai_pages():
 def stamp_sitemap(page_names):
     p = os.path.join(ROOT, 'sitemap.xml')
     s = open(p, encoding='utf-8').read()
-    s = re.sub(r'  <!-- wordai-dir -->.*?\n', '', s)
+    # drop previously stamped wordai-dir/archive entries: ANY line mentioning a
+    # word-ai page, plus any line carrying the archive marker, then re-add fresh.
+    # (The legacy hardcoded word-AI block sat all on one line and duplicated the
+    # generated block; this wipes it too.)
+    s = re.sub(r'.*word-ai(-[0-9a-z])?\.html.*\n', '', s)
+    s = re.sub(r'.*<!-- archive -->.*\n', '', s)
     entries = ''.join(
         '  <url><loc>%s%s</loc><changefreq>weekly</changefreq></url>  <!-- wordai-dir -->\n' % (BASE, n)
         for n in page_names)
+    # archive hub + per-AI deep-link URL patterns: the archive itself plus the
+    # existing index.html?dial=<ID> pattern (word-AI letter pages carry the
+    # 42,200 word-AI deep links; the #file-<id> deep links for core AIs were
+    # stamped by an earlier pass and are left untouched).
+    entries += ('  <url><loc>%sarchive.html</loc><changefreq>weekly</changefreq></url>  <!-- archive -->\n'
+                % BASE)
     s = s.replace('</urlset>', entries + '</urlset>', 1)
     open(p, 'w', encoding='utf-8').write(s)
 

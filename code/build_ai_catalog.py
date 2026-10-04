@@ -5,6 +5,10 @@ Parses the actual data arrays out of index.html (SIG_AIS, PERSONAS, DOMAIN_SPECS
 + the domIndex builder) with node, then emits one record per AI with
 ID/NAME/TYPE/DESCRIPTION/STATUS/VERSION/SOURCE/RELATIONSHIPS/HASH/ARTIFACTS.
 
+This builder owns the count truth: after flushing ai-catalog.json + api.json it
+stamps the hero counts in index.html AND rebuilds archive.html (code/build_archive.py)
+from the JUST-WRITTEN catalog -- stamp AFTER the data flushes, never one run behind.
+
 Re-run after any data change:  python3 code/build_ai_catalog.py
 """
 import json, subprocess, hashlib, datetime, os, re
@@ -16,10 +20,12 @@ SITE = "https://justinahiggins614-cmyk.github.io/jah-ai-models/"
 html = open(os.path.join(REPO, "index.html"), encoding="utf-8").read()
 start = html.index("var SIG_AIS")
 end = html.index("function domainParams")
-js = html[start:end] + """
+twin_src = open(os.path.join(REPO, "js", "sl_twins.js"), encoding="utf-8").read()
+js = twin_src + "\n" + html[start:end] + """
 var out = {rows: [], fields: []};
 SIG_AIS.forEach(function(a,i){ out.rows.push({embed:'sig', idx:i, obj:a}); });
 PERSONAS.forEach(function(a,i){ out.rows.push({embed:'persona', idx:i, obj:a}); });
+SL_TWINS.forEach(function(a,i){ out.rows.push({embed:'sl', idx:i, obj:a}); });
 var fieldSet = {};
 DOMAIN_SPECS.forEach(function(s){ fieldSet[s[2]] = 1; });
 out.fields = Object.keys(fieldSet).sort();
@@ -60,6 +66,8 @@ for _r in rows:
         _r["signum"] = _fmt_num(_digits(200, _r["idx"] + 1))
     elif _e == "persona":
         _r["signum"] = _fmt_num(_digits(300, _r["idx"] + 1))
+    elif _e == "sl":
+        _r["signum"] = _fmt_num(_digits(600, _r["idx"] + 1))
     else:
         _f = _r["field"]
         _per_field[_f] = _per_field.get(_f, 0) + 1
@@ -75,12 +83,16 @@ def user_date():
         return datetime.date.today().strftime("%Y-%m-%d")
 wordai_snapshot = {"records": 0, "as_of": user_date()}
 try:
-    import gzip, urllib.request
-    req = urllib.request.Request(
-        "https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz",
-        headers={"User-Agent": "JAH-QA-build-catalog/1.0"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        idx = json.loads(gzip.decompress(r.read()).decode("utf-8"))
+    import gzip
+    # curl, not urllib: python urllib hangs through this sandbox's egress proxy
+    # (AGENTS.md), curl works. Same fallback semantics as before.
+    curl = subprocess.run(
+        ["curl", "-sL", "--max-time", "90", "-A", "JAH-QA-build-catalog/1.0",
+         "https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz"],
+        capture_output=True, timeout=100)
+    if curl.returncode != 0 or not curl.stdout:
+        raise RuntimeError("curl fetch failed (rc=%s)" % curl.returncode)
+    idx = json.loads(gzip.decompress(curl.stdout).decode("utf-8"))
     wordai_snapshot["records"] = len(idx)
 except Exception as e:  # noqa: BLE001 - index unreachable; bake last-known snapshot
     try:
@@ -104,6 +116,8 @@ for r in rows:
         typ, role, file_id = "system", "SYSTEM MODEL", o["id"]
     elif r["embed"] == "persona":
         typ, role, file_id = "persona", "PERSONA SIM", o["id"]
+    elif r["embed"] == "sl":
+        typ, role, file_id = "sl", "SIGNATURE-LINE", o["id"]
     else:
         typ, role, file_id = "domain", "ASSISTANT", o["id"]
     abilities = o.get("abilities") or []
@@ -111,6 +125,11 @@ for r in rows:
     rel = {}
     if r["embed"] == "persona":
         rel["disclaimer"] = "fan-style simulation, not affiliated with any rights holder"
+    if r["embed"] == "sl":
+        m = o.get("mirror") or {}
+        rel["disclaimer"] = "independent interpretation; not affiliated with the vendor"
+        rel["mirrors"] = {"model": m.get("model", ""), "vendor": m.get("vendor", ""),
+                          "url": m.get("url", ""), "original_status": m.get("status", "")}
     if r["embed"] == "domain":
         rel["domain"] = o.get("domain", "")
         rel["demo_kind"] = o.get("demoKind", "")
@@ -123,11 +142,15 @@ for r in rows:
         limit += " Gives general information only; not a licensed professional."
     if r["embed"] == "persona":
         limit += " Fan-style fiction simulation, not the real character."
+    if r["embed"] == "sl":
+        limit += (" Signature-Line twin: original Signature-math implementation; "
+                  "capability claims mirror the vendor's published claims.")
     records.append({
         "ID": stamp,
         "NAME": o["name"],
         "TYPE": typ,
-        "CATEGORY": o.get("domain") or ("System" if typ == "system" else "Persona"),
+        "CATEGORY": o.get("domain") or {"system": "System", "persona": "Persona",
+                                        "sl": "Signature-Line"}.get(typ, "Domain"),
         "DESCRIPTION": desc,
         "CAPABILITIES": abilities,
         "LIMITATIONS": limit,
@@ -146,7 +169,9 @@ for r in rows:
         "DEMO": {"kind": o.get("demoKind", ""), "runs_in": "browser", "url": SITE + "#file-" + file_id},
         "VOICE": {"read_aloud": True, "engine": "browser speech synthesis (tiered TTS)"},
         "SIGNATURE_NUMBER": r["signum"],
-        "SOURCE": "embedded in index.html — Signature-made by Justin Addam Higgins",
+        "SOURCE": ("embedded in js/sl_twins.js — Signature-made by Justin Addam Higgins"
+                   if r["embed"] == "sl" else
+                   "embedded in index.html — Signature-made by Justin Addam Higgins"),
         "RELATIONSHIPS": rel,
         "HASH": "sha256:" + digest,
         "ARTIFACTS": {
@@ -166,6 +191,7 @@ catalog = {
         "system": sum(1 for x in records if x["TYPE"] == "system"),
         "persona": sum(1 for x in records if x["TYPE"] == "persona"),
         "domain": sum(1 for x in records if x["TYPE"] == "domain"),
+        "sl": sum(1 for x in records if x["TYPE"] == "sl"),
         "wordai_index_records": wordai_snapshot["records"],
         "wordai_as_of": wordai_snapshot["as_of"],
         "published_total": len(records) + wordai_snapshot["records"],
@@ -200,7 +226,8 @@ api = {
         "embedded_total": counts["embedded_total"],
         "embedded_breakdown": {"system": counts["system"],
                                 "persona": counts["persona"],
-                                "domain": counts["domain"]},
+                                "domain": counts["domain"],
+                                "sl": counts.get("sl", 0)},
         "wordai_index_records": counts["wordai_index_records"],
         "wordai_as_of": counts["wordai_as_of"],
         "published_total": counts["published_total"],
@@ -215,7 +242,8 @@ api = {
     "records_embedded": counts["embedded_total"],
     "records_embedded_breakdown": {"system": counts["system"],
                                    "persona": counts["persona"],
-                                   "domain": counts["domain"]},
+                                   "domain": counts["domain"],
+                                   "sl": counts.get("sl", 0)},
     "wordai_index_records": counts["wordai_index_records"],
     "records_published_total": counts["published_total"],
     "hybrid_space": 1000000,
@@ -245,9 +273,10 @@ wa = counts["wordai_index_records"]
 asof = counts["wordai_as_of"]
 new_aicount = '<span id="aicount"><b>%s</b></span>' % format(pub, ",d")
 hero = re.sub(r'<span id="aicount"><b>[\d,]+</b></span>', new_aicount, hero)
-new_break = ('PUBLISHED AI FILES: <b>%s</b> = %d embedded (%d system &middot; %d persona &middot; %d domain) '
+new_break = ('PUBLISHED AI FILES: <b>%s</b> = %d embedded (%d system &middot; %d persona &middot; %d domain &middot; %d signature-line) '
              '+ %s word-AIs &middot; Last synchronized %s &mdash; live count refreshes when the word-AI index loads'
              % (format(pub, ",d"), emb, counts["system"], counts["persona"], counts["domain"],
+                counts.get("sl", 0),
                 format(wa, ",d"), asof))
 hero = re.sub(r'<span id="aibreakdown">.*?</span>',
               '<span id="aibreakdown">' + new_break + '</span>', hero, count=1, flags=re.S)
@@ -261,25 +290,40 @@ hero = re.sub(
     r'<meta name="description" content="The Signature AI Phone Book[^"]*">',
     '<meta name="description" content="The Signature AI Phone Book — home of every AI. '
     'Dial %s+ published AI files: %d Signature system AIs, %d persona AIs, %d domain AIs for every need in life, '
+    '%d Signature-Line twins of market AIs, '
     'and %s word AIs — each with dossier, working demo, dialog, read-aloud, copy and download. '
     'Counts last synchronized %s.">'
     % (format(pub, ",d"), counts["system"], counts["persona"], counts["domain"],
-       format(wa, ",d"), asof),
+       counts.get("sl", 0), format(wa, ",d"), asof),
     hero, count=1)
 hero = re.sub(
     r'"description": "Published AI files: 22,460 = 260 embedded[^"]*"',
-    '"description": "Published AI files: %s = %d embedded (%d system, %d persona, %d domain) + %s word AIs. '
+    '"description": "Published AI files: %s = %d embedded (%d system, %d persona, %d domain, %d signature-line) + %s word AIs. '
     'Counts last synchronized %s; the page\'s live counter refreshes from the word-AI index at '
     'https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz. '
     'Per-AI machine records: ai-catalog.json."'
     % (format(pub, ",d"), emb, counts["system"], counts["persona"], counts["domain"],
-       format(wa, ",d"), asof),
+       counts.get("sl", 0), format(wa, ",d"), asof),
     hero, count=1)
 hero = re.sub(
-    r'\(all 260 embedded AI files, machine-readable\)',
+    r'\(all [\d,]+ embedded AI files, machine-readable\)',
     '(all %d embedded AI files, machine-readable)' % emb, hero, count=1)
 hero = re.sub(
     r'\(\d[\d,]* word AIs as of \d{4}-\d{2}-\d{2}',
     '(%s word AIs, last synchronized %s' % (format(wa, ",d"), asof), hero, count=1)
 open(hero_path, "w", encoding="utf-8").write(hero)
 print("stamped meta/JSON-LD/crawler note")
+
+# ---- rebuild archive.html from the JUST-WRITTEN catalog (never one run behind) ----
+# Hook: this runs AFTER ai-catalog.json + api.json + hero stamps are flushed above,
+# so the archive's count header and letter lists always match the current data.
+try:
+    import build_archive
+    build_archive.build()
+except ImportError:
+    import importlib.util, os
+    spec = importlib.util.spec_from_file_location(
+        "build_archive", os.path.join(os.path.dirname(os.path.abspath(__file__)), "build_archive.py"))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    mod.build()
