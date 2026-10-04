@@ -5083,30 +5083,36 @@ if(last){addEventListener('load',function(){setTimeout(function(){try{var el=doc
 <style>
 #jah-guidebtn{position:fixed;bottom:64px;right:12px;z-index:99999;font-size:15px;line-height:1;padding:9px 12px;border-radius:50%;border:1px solid #888;background:rgba(128,128,128,.18);color:inherit;cursor:pointer;font-family:inherit;opacity:.55;font-weight:700}
 #jah-guidebtn:hover{opacity:1}
-#jah-tourhl{position:fixed;z-index:100000;border:3px solid var(--gold,#d4a017);border-radius:10px;pointer-events:none;display:none;box-shadow:0 0 0 4000px rgba(0,0,0,.45);transition:all .25s}
-#jah-tourcard{position:fixed;z-index:100001;max-width:min(92vw,360px);background:#0d1424f2;border:1px solid var(--gold,#d4a017);color:#fff;border-radius:12px;padding:14px 16px;display:none;box-shadow:0 8px 30px #000c}
-#jah-tourcard h4{margin:0 0 6px;color:var(--gold,#d4a017);font-size:1em}
-#jah-tourcard .tk-row{margin:6px 0;font-size:.92em;line-height:1.45}
-#jah-tourcard .tk-what{font-weight:700;color:#9fc2ff}
-#jah-tourcard .tk-nav{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-#jah-tourcard .tk-nav .fbtn{min-height:44px;min-width:64px}
-#jah-tourcard .tk-count{color:#9aa4b2;font-size:.8em;margin-top:8px}
-#jah-tourprompt{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:100001;background:#0d1424f2;border:1px solid var(--gold,#d4a017);color:#fff;border-radius:12px;padding:12px 16px;display:none;max-width:92vw;text-align:center;box-shadow:0 8px 30px #000c}
-#jah-tourprompt .fbtn{min-height:44px;margin:6px 4px 0}
-#jahguide{position:fixed;inset:0;z-index:100002;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.6);padding:16px}
-#jahguide .gd-box{background:#0d1424;color:#e8ecf4;border:1px solid var(--gold,#d4a017);border-radius:14px;max-width:640px;width:100%;max-height:86vh;overflow:auto;padding:20px 22px}
-#jahguide h3{margin-top:0;color:var(--gold,#d4a017)}
-#jahguide h4{margin:14px 0 4px;color:#9fc2ff}
+/* TOUR FIX 2026-10-04: centered welcome overlay. No page scrolling, no spotlight, no auto-jump. One "Got it" button. */
+#jah-wel{position:fixed;inset:0;z-index:100002;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:14px}
+#jah-wel[hidden]{display:none}
+#jah-wel .wcard{width:min(560px,96vw);max-height:92vh;overflow:auto;background:#0d1424f2;border:1px solid var(--gold,#d4a017);border-radius:12px;padding:18px;box-shadow:0 8px 30px #000c;color:#fff}
+#jah-wel .wkick{font-size:.7em;letter-spacing:.22em;color:#9aa4b2;margin-bottom:6px}
+#jah-wel h2{margin:.1em 0 .4em;color:var(--gold,#d4a017);font-size:1.25em}
+#jah-wel .wlead{font-size:.92em;line-height:1.6;margin:.3em 0}
+#jah-wel ol{margin:.6em 0;padding-left:1.3em}
+#jah-wel li{margin:.55em 0;font-size:.92em;line-height:1.6}
+#jah-wel li b{color:var(--gold,#d4a017)}
+#jah-welok{display:block;width:100%;min-height:56px;margin-top:12px;font-size:1.1em;font-weight:800;border-radius:10px;border:0;background:var(--gold,#d4a017);color:#101010;cursor:pointer}
+#jah-wel .wfine{font-size:.78em;color:#9aa4b2;margin:.8em 0 0;line-height:1.5}
+#jah-wel .wfine a{color:#9fc2ff}
 #jahguide p{margin:4px 0 8px;line-height:1.5;font-size:.93em}
 #jahguide .fbtn{min-height:44px;margin:4px 4px 0 0}
 </style>
 <button id="jah-guidebtn" type="button" title="How to use this site" aria-label="Open the how-to-use guide">?</button>
-<div id="jah-tourhl" aria-hidden="true"></div>
-<div id="jah-tourcard" role="dialog" aria-label="Site tour"></div>
-<div id="jah-tourprompt" role="dialog" aria-label="Take the tour">
-  <b>New to the Phone Book?</b><br><span style="font-size:.9em">A 1-minute tour shows every feature.</span><br>
-  <button type="button" class="fbtn" id="jah-tourstart">Start tour</button>
-  <button type="button" class="fbtn" id="jah-tourskip">Skip</button>
+<div id="jah-wel" hidden>
+  <div class="wcard" role="dialog" aria-modal="true" aria-label="Welcome — how to use this site">
+    <div class="wkick">WELCOME — FIRST-TIME GUIDE</div>
+    <h2>The Signature AI Phone Book</h2>
+    <p class="wlead">Every AI in the book has its own phone number, its own file, and its own voice. The page stays put while this guide is open — it never scrolls or jumps.</p>
+    <ol>
+      <li><b>Search the book.</b> Find any AI by <b>name</b>, <b>ID stamp</b> (like JAH-AI-SIG-001), <b>phone number</b>, or a plain description of what you need. Type 2 or more letters and tap a result — Enter opens the first match.</li>
+      <li><b>Dial or tap to talk.</b> The <b>dial pad</b> dials any 11-digit Signature number and opens that AI. Tap any listing to open its file and chat with it.</li>
+      <li><b>Build your own.</b> <b>Genome Lab</b> forges a brand-new AI from gene blocks, <b>Mix Lab</b> fuses two AIs into a hybrid, and the <b>Arena</b> pits two AIs against each other.</li>
+    </ol>
+    <button type="button" id="jah-welok">Got it</button>
+    <p class="wfine">Tap the <b>?</b> button any time to see this again. <a href="#" id="jah-welfull">Open the full guide</a> for every feature in plain words.</p>
+  </div>
 </div>
 <div id="jahguide" role="dialog" aria-modal="true" aria-label="How to use this site" hidden>
   <div class="gd-box">
@@ -5142,142 +5148,49 @@ if(last){addEventListener('load',function(){setTimeout(function(){try{var el=doc
     <p>Sister-site lines ring AIs that live on Manon&rsquo;s other sites. Word AIs give every dictionary word its own AI (district 500), loaded on demand.</p>
     <h4>Deep links</h4>
     <p>Every record has an address: #file-ID for book AIs, #hybrid-JAH-AI-MIX-###### for hybrids, #gen-STAMP for forged AIs, #wordai-STAMP for word AIs, or ?dial=ID in the address bar.</p>
-    <p><button type="button" class="fbtn" id="jahguide-close">Close</button><button type="button" class="fbtn" id="jahguide-tour">Replay the tour</button></p>
+    <p><button type="button" class="fbtn" id="jahguide-close">Close</button><button type="button" class="fbtn" id="jahguide-tour">Replay the welcome guide</button></p>
   </div>
 </div>
 <script>
-/* First-time user guide: 1-minute spotlight tour + permanent guide panel.
-   localStorage dismissal key: jah-tour-seen-phonebook. Theme untouched. */
+/* TOUR FIX 2026-10-04: first-visit WELCOME OVERLAY + permanent guide panel.
+   The welcome overlay is centered; the page NEVER scrolls, spotlights, or
+   jumps. One "Got it" button dismisses (localStorage 'jah-tour-seen-phonebook');
+   the "?" button re-opens it any time. Theme untouched. */
 (function(){
   'use strict';
   var SEEN='jah-tour-seen-phonebook';
   function isSeen(){ try{ return localStorage.getItem(SEEN)==='1'; }catch(e){ return true; } }
   function markSeen(){ try{ localStorage.setItem(SEEN,'1'); }catch(e){} }
-  function openDetails(sel){ var d=document.querySelector(sel); if(d&&d.tagName==='DETAILS') d.open=true; }
-  var STEPS=[
-    {sel:'#lookup', what:'Search the whole book',
-     does:'Finds any AI by name, ID stamp, phone number, or a plain description of what you need.',
-     how:'Type 2 or more letters and tap a result. Enter opens the first match.'},
-    {sel:'#thumbnav', what:'A\u2013Z thumb index',
-     does:'Jumps to any letter page of the book.',
-     how:'Tap a letter. Letter pages remember which ones you left open between visits.'},
-    {sel:'#payphone', what:'The dial pad',
-     does:'Dials any 11-digit Signature number and opens that AI. A number with no listing gets a prank call \u2014 a surprise AI picks up anyway.',
-     how:'Tap digits, then Dial. Clear wipes the number, \u232b removes one digit. A full 11 digits dials by itself.'},
-    {sel:'#fvbody .chatrow', what:'Talk to any AI',
-     does:'Every AI file has its own chat. Replies come from Signature Llama v2 when it loads, otherwise the JAHtalk engine \u2014 every reply says which answered.',
-     how:'Tap any listing to open its file, then type and press Send (Enter works). I opened a sample file so you can see.',
-     prep:function(){ try{ if(typeof SIG_AIS!=='undefined'&&SIG_AIS[0]) openFile(SIG_AIS[0].id); }catch(e){} }},
-    {sel:'#fvbody [data-t=read]', what:'Read aloud',
-     does:'Hears the file read out in a real voice \u2014 on-device speech first, web voices as backup.',
-     how:'Press Read aloud on any open file, or the floating \uD83D\uDD0A Read file pill. Press Stop to end it.'},
-    {sel:'#fvbody [data-t=dtxt]', what:'Copy & download',
-     does:'Takes the AI with you: copy the text or download the .txt / .py source to run locally.',
-     how:'Press the buttons on any open file. Downloads carry a content hash proving they match the published file.',
-     leave:function(){ try{ closeFile(); }catch(e){} }},
-    {sel:'#genomelab', what:'Genome Lab \u2014 build your own AI',
-     does:'Forges a brand-new AI from 10 gene blocks. Same genes always give the same deterministic ID.',
-     how:'Tap gene blocks (or load a preset), name it, press Forge. Copy link shares it \u2014 the link re-creates the identical AI anywhere.',
-     prep:function(){ openDetails('#genomelab'); }},
-    {sel:'#mixlab', what:'Mix Lab \u2014 fuse two AIs',
-     does:'Fuses any two AIs into a hybrid with its own chat. Hybrid numbers are deterministic and shareable.',
-     how:'Pick two AIs, press Fuse them, then talk to the hybrid that appears.',
-     prep:function(){ openDetails('#mixlab'); }},
-    {sel:'#arena', what:'Arena \u2014 AI vs AI',
-     does:'Pits two AIs in a chat bout (1\u201320 rounds) or a side-by-side versus test on your question.',
-     how:'Pick two contenders, type a topic, press Chat bout. Read the bout aloud or copy either answer.',
-     prep:function(){ openDetails('#arena'); }},
-    {sel:'#provisits', what:'Professional Visits',
-     does:'Books a phone visit with a pro AI \u2014 doctors, lawyers, mechanics, chefs. Medical, legal and financial AIs always carry their \u201Cnot a licensed professional\u201D warning.',
-     how:'Tap a professional card, tell them what brings you in, and talk. Open full file jumps to their complete record.',
-     prep:function(){ openDetails('#provisits'); }}
-  ];
-  var cur=-1, active=false;
-  var hl=document.getElementById('jah-tourhl'), card=document.getElementById('jah-tourcard');
-  function place(el){
-    var r=el.getBoundingClientRect();
-    hl.style.display='block';
-    hl.style.left=Math.max(4,r.left-6)+'px';
-    hl.style.top=Math.max(4,r.top-6)+'px';
-    hl.style.width=Math.max(40,r.width+12)+'px';
-    hl.style.height=Math.max(40,r.height+12)+'px';
-    card.style.display='block';
-    card.style.visibility='hidden';
-    var cw=card.offsetWidth, ch=card.offsetHeight;
-    var left=Math.min(Math.max(8,r.left), window.innerWidth-cw-8);
-    var top=r.bottom+14;
-    if(top+ch>window.innerHeight-8) top=Math.max(8,r.top-ch-14);
-    card.style.left=left+'px';
-    card.style.top=Math.max(8,top)+'px';
-    card.style.visibility='visible';
-  }
-  function show(i){
-    if(i<0) i=0;
-    if(i>=STEPS.length){ end(); return; }
-    if(cur>=0&&STEPS[cur]&&STEPS[cur].leave){ try{STEPS[cur].leave();}catch(e){} }
-    cur=i; active=true;
-    var s=STEPS[i];
-    if(s.prep){ try{s.prep();}catch(e){} }
-    var el=document.querySelector(s.sel);
-    if(!el){ show(i+1); return; }
-    try{ el.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){}
-    card.innerHTML='<h4>'+escHtml(s.what)+'</h4>'+
-      '<div class="tk-row"><span class="tk-what">WHAT IT DOES:</span> '+escHtml(s.does)+'</div>'+
-      '<div class="tk-row"><span class="tk-what">HOW:</span> '+escHtml(s.how)+'</div>'+
-      '<div class="tk-nav"><button type="button" class="fbtn" data-tk="back">\u2190 Back</button>'+
-      '<button type="button" class="fbtn" data-tk="next">'+(i===STEPS.length-1?'Finish':'Next \u2192')+'</button>'+
-      '<button type="button" class="fbtn" data-tk="skip">Skip tour</button></div>'+
-      '<div class="tk-count">Step '+(i+1)+' of '+STEPS.length+'</div>';
-    Array.prototype.forEach.call(card.querySelectorAll('[data-tk]'),function(b){
-      b.onclick=function(){
-        var a=b.getAttribute('data-tk');
-        if(a==='next') show(cur+1);
-        else if(a==='back') show(cur-1);
-        else end();
-      };
-    });
-    setTimeout(function(){ if(active&&cur===i) place(el); },450);
-  }
-  function end(){
-    if(cur>=0&&STEPS[cur]&&STEPS[cur].leave){ try{STEPS[cur].leave();}catch(e){} }
-    try{ closeFile(); }catch(e){}
-    cur=-1; active=false;
-    hl.style.display='none'; card.style.display='none';
-    markSeen();
-  }
-  document.addEventListener('keydown',function(e){
-    if(!active) return;
-    if(e.key==='Escape'){ end(); }
-    else if(e.key==='ArrowRight'){ show(cur+1); }
-    else if(e.key==='ArrowLeft'){ show(cur-1); }
-  });
-  function start(){
-    document.getElementById('jah-tourprompt').style.display='none';
-    show(0);
-  }
-  document.getElementById('jah-tourstart').onclick=start;
-  document.getElementById('jah-tourskip').onclick=function(){
-    document.getElementById('jah-tourprompt').style.display='none'; markSeen();
-  };
+  var wel=document.getElementById('jah-wel');
+  function openWel(){ if(!wel) return; wel.hidden=false; var b=document.getElementById('jah-welok'); try{ if(b) b.focus(); }catch(e){} }
+  function closeWel(){ if(wel) wel.hidden=true; markSeen(); }
+  var ok=document.getElementById('jah-welok');
+  if(ok) ok.onclick=function(){ closeWel(); };
+  if(wel) wel.addEventListener('click',function(e){ if(e.target===wel) closeWel(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&wel&&!wel.hidden) closeWel(); });
   /* guide dialog */
   var gd=document.getElementById('jahguide');
-  function openGuide(){ gd.hidden=false; gd.style.display='flex'; }
-  function closeGuide(){ gd.style.display='none'; gd.hidden=true; }
-  document.getElementById('jah-guidebtn').onclick=openGuide;
-  document.getElementById('jahguide-close').onclick=closeGuide;
-  document.getElementById('jahguide-tour').onclick=function(){ closeGuide(); show(0); };
-  gd.addEventListener('click',function(e){ if(e.target===gd) closeGuide(); });
+  function openGuide(){ if(!gd) return; gd.hidden=false; gd.style.display='flex'; }
+  function closeGuide(){ if(!gd) return; gd.style.display='none'; gd.hidden=true; }
+  var gb=document.getElementById('jah-guidebtn');
+  if(gb) gb.onclick=openWel;
+  var gc=document.getElementById('jahguide-close');
+  if(gc) gc.onclick=closeGuide;
+  var gt=document.getElementById('jahguide-tour');
+  if(gt) gt.onclick=function(){ closeGuide(); openWel(); };
+  var gf=document.getElementById('jah-welfull');
+  if(gf) gf.onclick=function(e){ try{e.preventDefault();}catch(x){} closeWel(); openGuide(); };
+  if(gd) gd.addEventListener('click',function(e){ if(e.target===gd) closeGuide(); });
   document.addEventListener('keydown',function(e){
-    if(e.key==='Escape'&&gd.style.display==='flex') closeGuide();
+    if(e.key==='Escape'&&gd&&gd.style.display==='flex') closeGuide();
   });
-  /* first-visit prompt: never blocks content, never auto-plays the tour */
+  /* first-visit overlay: never on deep links */
   var deep=(location.hash&&location.hash.length>1)||/[?&](dial|q|query|term|word)=/i.test(location.search||'');
   if(!isSeen()&&!deep){
-    setTimeout(function(){
-      if(!isSeen()) document.getElementById('jah-tourprompt').style.display='block';
-    },1500);
+    setTimeout(function(){ if(!isSeen()) openWel(); },1500);
   }
 })();
+
 </script>
 
 </body>
