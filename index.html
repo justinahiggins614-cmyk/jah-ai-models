@@ -187,6 +187,8 @@ h2.wing{letter-spacing:.2em;color:var(--amber);border-bottom:1px solid var(--lin
 /* ---- kept from original ---- */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;margin-top:14px}
 .aifile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.aicovwide{border-radius:10px;overflow:hidden;border:1px solid var(--line);margin:2px 0 4px;max-width:560px}
+.aicovwide svg{display:block;width:100%;height:auto}
 .aifile.persona{background:#0e1220;border-color:#3a2c14}
 .filehead{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
 .stamp{font-family:monospace;font-size:.78em;color:var(--acc);background:#0a1226;padding:3px 8px;border-radius:4px}
@@ -575,6 +577,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <!-- SL-TWINS-DATA -->
 <script src="js/sl_twins.js"></script>
 <script src="js/jah-talk-fallback.js"></script>
+<script src="js/covers.js"></script>
 <script>
 /* ==== JAH global read-aloud controller (one per page): no stacked voices, no orphan audio ==== */
 (function(){
@@ -1279,6 +1282,11 @@ function renderCard(ai, mount, opts){
   h += ai.kind === 'sl' ? '<span class="badge">SIGNATURE-LINE</span>' : (ai.kind === 'persona' ? '<span class="badge fan">PERSONA SIM</span>' : '<span class="badge">SIGNATURE-MADE</span>');
   h += ai.kind === 'persona' ? '<span class="badge fan">PERSONA SIM</span>' : '<span class="badge">SIGNATURE-MADE</span>';
   h += '</div>';
+  /* AI identity cover — deterministic sigil + name + stamp + 11-digit number (canon data only) */
+  if (window.AICover){
+    var _ph=(window.PhoneBook&&PhoneBook.numById)?PhoneBook.numById[ai.id]:"";
+    h += '<div class="aicovwide">'+AICover.svg({id:ai.id,name:ai.name,type:ai.kind,stamp:ai.stamp,phone:_ph,wide:true})+'</div>';
+  }
   h += aiMetaStrip({stamp: ai.stamp, ver: ai.ver || '1.0', role: ai.kind === 'persona' ? 'PERSONA SIM' : 'SYSTEM MODEL', status: 'PUBLISHED'});
   h += jahRecordPanelHTML({status: ai.kind === 'persona' ? 'SIMULATION' : 'SIGNATURE ORIGINAL', id: ai.stamp || ai.id, ver: ai.ver || '1.0',
     source: ai.kind === 'persona' ? 'Persona archive \u2014 fan-style simulation, authored for the Signature archive' : 'The Signature archive \u2014 authored by Justin Addam Higgins',
