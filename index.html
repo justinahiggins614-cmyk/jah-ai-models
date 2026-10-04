@@ -561,13 +561,43 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <script src="js/sl_twins.js"></script>
 <script src="js/jah-talk-fallback.js"></script>
 <script>
+/* ==== JAH global read-aloud controller (one per page): no stacked voices, no orphan audio ==== */
+(function(){
+if(window.__JAHREAD)return;
+var R={audios:[],lastTap:0,lastLabel:""};
+R.stopAll=function(){
+ try{if(window.speechSynthesis)window.speechSynthesis.cancel();}catch(e){}
+ try{if(window.responsiveVoice&&window.responsiveVoice.cancel)window.responsiveVoice.cancel();}catch(e){}
+ var i,a;
+ for(i=0;i<R.audios.length;i++){a=R.audios[i];try{a.pause();}catch(e){}try{a.removeAttribute("src");}catch(e){}try{a.load();}catch(e){}}
+ R.audios.length=0;
+ var els=document.querySelectorAll("audio");
+ for(i=0;i<els.length;i++){try{els[i].pause();}catch(e){}}
+};
+R.reg=function(a){if(a&&R.audios.indexOf(a)<0)R.audios.push(a);return a;};
+R.playGuard=function(label){
+ var now=Date.now();
+ if(now-R.lastTap<450&&label===R.lastLabel){R.lastTap=0;R.lastLabel="";R.stopAll();return false;}
+ R.lastTap=now;R.lastLabel=String(label||"");
+ R.stopAll();return true;
+};
+try{
+ var NativeAudio=window.Audio;
+ window.Audio=function(src){var a=src===undefined?new NativeAudio():new NativeAudio(src);R.reg(a);return a;};
+ window.Audio.prototype=NativeAudio.prototype;
+}catch(e){}
+window.__JAHREAD=R;
+})();
+</script>
+<script>
 /* ============ TIERED TTS (speechSynthesis -> ResponsiveVoice -> Google TTS hosts) ============ */
 var TTS = (function(){
   var stopFlag = false, speed = 1, currentAudio = null;
   function bar(show){ document.getElementById('ttsbar').style.display = show ? 'flex' : 'none'; }
-  document.getElementById('ttsstop').onclick = function(){ stop(); };
+  document.getElementById('ttsstop').onclick = function(){ try{if(window.__JAHREAD)window.__JAHREAD.stopAll();}catch(e){} stop(); };
   document.getElementById('ttsspeed').oninput = function(e){ speed = parseFloat(e.target.value); };
   function stop(){
+    try{if(window.__JAHREAD)window.__JAHREAD.stopAll();}catch(e){}
     stopFlag = true;
     try{ speechSynthesis.cancel(); }catch(e){}
     if (currentAudio){ try{ currentAudio.pause(); }catch(e){} currentAudio = null; }
@@ -638,6 +668,7 @@ var TTS = (function(){
     }catch(e){ tierGoogle(chunk, opts, host + 1, done); }
   }
   function speak(text, opts){
+    if(window.__JAHREAD&&!window.__JAHREAD.playGuard("speak"))return;
     opts = opts || {};
     stop();
     stopFlag = false;
