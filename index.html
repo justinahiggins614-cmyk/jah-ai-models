@@ -407,6 +407,21 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div style="margin:12px 0 2px;text-align:center"><a href="archive.html" style="display:inline-block;background:var(--amber);color:#0a0f1e;font-weight:800;padding:12px 30px;border-radius:999px;text-decoration:none;letter-spacing:.04em">&#128214; Browse all AIs A&ndash;Z</a></div>
 <p style="font-size:.85em">Signature-made by Justin Addam Higgins &middot; deterministic systems &middot; honest simulations</p>
 </header>
+<!-- JAH TAB BAR — Manon's 2026-10-04 order (calculator screenshot as spec).
+     Paste right after </header> (or after the hero/title block) on index.html AND on the archive page.
+     On index.html: "Front Door" carries class "on". On the archive page: "1 Million Archive" carries "on".
+     Replace  with <a class="jtab" href="...">Label</a> items (may be empty). -->
+<style>
+.jtabbar{display:flex;gap:8px;overflow-x:auto;padding:10px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;border-bottom:1px solid rgba(128,128,128,.25)}
+.jtabbar a.jtab{flex:0 0 auto;text-decoration:none;border:1px solid rgba(160,160,160,.45);border-radius:999px;padding:9px 16px;font-size:.92em;color:inherit;background:rgba(127,127,127,.08);white-space:nowrap;font-family:inherit}
+.jtabbar a.jtab.on{background:#f5c518;border-color:#f5c518;color:#191919;font-weight:700}
+</style>
+<nav class="jtabbar" aria-label="Site sections">
+<a class="jtab on" href="index.html">🏠 Front Door</a>
+<a class="jtab" href="archive.html">📚 1 Million Archive</a>
+
+</nav>
+
 <nav class="wingnav" aria-label="Phone book sections">
 <a href="#top">&#8962; Home</a><a href="#thebook">&#128214; The Book</a><a href="archive.html">&#128218; Archive</a><a href="#sisterlines">Sister-Site Lines</a><a href="#genomelab">&#129516; Genome Lab</a><a href="#arena">&#9876; Arena</a><a href="#mixlab">Mix Lab</a><a href="#incoming">Incoming Transmissions</a><a href="#numbering">&#9742; Numbering Plan</a><a href="#provisits">&#127973; Professional Visits</a>
 </nav>
