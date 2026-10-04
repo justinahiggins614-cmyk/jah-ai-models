@@ -42,7 +42,7 @@ html[data-theme="dark"] img,html[data-theme="dark"] video,html[data-theme="dark"
 }
 </script>
 <style>
-:root{--bg:#070b14;--panel:#0d1424;--panel2:#111a30;--line:#1e2c4d;--txt:#d7e0f2;--dim:#8b98b8;--gold:#e8c766;--amber:#ffc93c;--amber2:#ffdf7e;--acc:#5aa2ff;--grn:#5aff8a;--red:#ff5a5a}
+:root{--bg:#ffd60a;--panel:#fff6cf;--panel2:#ffffff;--line:#141414;--txt:#161616;--dim:#4d4a44;--gold:#141414;--amber:#141414;--amber2:#141414;--acc:#0b3d91;--grn:#0a7a2e;--red:#c1121f}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--txt);font-family:Georgia,'Times New Roman',serif;line-height:1.55}
 .jahnet{background:#0a0f1e;color:#9aa4b2;font-size:.76em;padding:7px 10px;text-align:center;line-height:2;letter-spacing:.02em;border-bottom:1px solid var(--line)}
@@ -377,6 +377,131 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 #readpill:active{transform:scale(.97)}
 @media(max-width:768px){#genomeBuild{position:sticky;bottom:0;z-index:60;background:#080d18f5;box-shadow:0 -6px 18px #000c}}
 </style>
+<style>
+/* ============ YELLOW PAGES THEME — Manon's 2026-10-04 order ============ */
+.hero{background:#ffd60a;border-bottom:4px solid #141414}
+.yp-hero-mascot{display:block;width:150px;max-width:44vw;height:auto;margin:0 auto 8px;border:4px solid #141414;border-radius:50%;background:#fff}
+.yptag{background:#141414;color:#ffd60a}
+.hero h1{color:#141414;text-shadow:none;font-weight:900;letter-spacing:.06em;font-family:Arial,Helvetica,sans-serif}
+.hero p{color:#2e2b25}
+#lookup{background:#fff;color:#161616;border-color:#141414}
+#lookup::placeholder{color:#8a8478}
+.booksearch::before{color:#141414}
+#lookupres{background:#fff;border-color:#141414}
+.lr{color:#161616;border-bottom-color:#e3d9b8}
+.lr:hover,.lr:focus{background:#fff3c4}
+.lr b{color:#141414}
+.bookstats,.bookbreak{color:#3d3a33}
+.wingmascot{width:54px;height:54px;border-radius:50%;border:3px solid #141414;vertical-align:middle;margin-right:10px;background:#fff}
+h2.wing{font-weight:900;font-family:Arial,Helvetica,sans-serif}
+.showcase{background:#fff;border-color:#141414;box-shadow:0 2px 0 #141414}
+.sh-name{color:#141414}
+.sh-kicker{color:#141414}
+.featgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:14px 0}
+.featcard{background:#fff;border:2px solid #141414;border-radius:10px;padding:12px 14px;text-decoration:none;color:#161616;display:flex;flex-direction:column;gap:5px}
+.featcard:hover{background:#fff3c4}
+.featcard b{color:#141414;font-size:1.05em}
+.featcard i{font-size:.82em;color:#4d4a44;font-style:normal}
+.featcard .fw{font-size:.72em;font-weight:700;letter-spacing:.12em;color:#0b3d91}
+.archive-cta{margin:18px 0;padding:18px;border:3px solid #141414;border-radius:12px;background:#141414;text-align:center}
+.archive-cta a{display:inline-block;background:#ffd60a;color:#141414;font-weight:900;font-size:1.15em;padding:12px 30px;border-radius:999px;text-decoration:none;letter-spacing:.04em}
+.archive-cta span{display:block;color:#ffd60a;margin-top:8px;font-size:.82em;letter-spacing:.12em}
+.payphone{background:#fff;border-color:#141414;margin:12px auto}
+.pp-kicker{color:#141414}
+.pp-display{background:#141414;color:#ffd60a;border-color:#141414}
+.pp-keys button{background:#fff6cf;color:#161616;border-color:#141414}
+.pp-keys button:active{background:#141414;color:#ffd60a}
+.pp-note{color:#4d4a44}
+#pp-msg{color:#8a5a00}
+.phoneline{background:#fff;color:#161616;border-color:#141414}
+.phoneline .ph-dist{color:#4d4a44}
+.dropwin summary{background:#fff6cf;border-color:#141414}
+.dropwin summary:hover{background:#fff}
+.dropwin summary::before{color:#141414}
+.dw-t{color:#141414;font-weight:900;font-family:Arial,Helvetica,sans-serif}
+.sisterbtn{background:#fff;border-color:#141414}
+.sisterbtn:hover{background:#fff3c4;box-shadow:none}
+.sb-name{color:#141414}
+.fbtn{background:#fff;border-color:#141414;color:#161616}
+.fbtn:hover{border-color:#0b3d91}
+#forgeBtn,.abtn,.fv-close,.genpreset:hover{background:#ffd60a;color:#141414;border:2px solid #141414}
+#forgeBtn:hover,.abtn:hover{background:#ffdf3d;box-shadow:none}
+.genpreset{background:#fff;border-color:#141414;color:#141414}
+.genslot{background:#fff;border-color:#141414}
+.genslot h4{color:#141414}
+.geneblock{background:#fff;border-color:#141414;color:#161616}
+.geneblock small{color:#4d4a44}
+.geneblock.sel{background:#fff3c4;border-color:#141414}
+.geneblock.layF{border-color:#5a6a8a}.geneblock.layA{border-color:#0b3d91}.geneblock.layP{border-color:#141414;box-shadow:none}
+#genomeBuild{background:#fff6cf;border-color:#141414}
+.gchip{background:#fff;border-color:#141414;color:#141414}
+.gnote{background:#fff6cf;border-color:#141414;color:#4d4a44}
+.sigmath{background:#fff;border-color:#141414}
+.sigmath .smh,.sigmath b{color:#141414}
+.genform label{color:#4d4a44}
+.genform input[type=text],.genform select{background:#fff;border-color:#141414;color:#161616}
+.boutmsg{background:#fff;border-color:#141414}
+.boutmsg .who{color:#141414}
+.vscol{background:#fff;border-color:#141414}
+.vscol h4{color:#141414}
+.aifile{background:#fff;border-color:#141414}
+.aifile.persona{background:#fff6cf;border-color:#141414}
+.stamp{background:#fff6cf;color:#0b3d91;border:1px solid #8a8478}
+.badge{background:#141414;color:#ffd60a}
+.badge.dim{background:#e8e2d2;color:#141414}
+.demo{background:#fff;border-color:#141414}
+.demo input[type=text],.demo input[type=number]{background:#fff;border-color:#141414;color:#161616}
+.demo output,.demo .out{color:#0a5a1e}
+.chatrow input{background:#fff;border-color:#141414;color:#161616}
+.opsrow{background:#fff6cf;border-color:#141414}
+.opshead{color:#141414}
+.opsin,.opslang{background:#fff;border-color:#141414;color:#161616}
+.opsay-head{color:#141414}
+.qans{background:#fff;border-color:#141414}
+.mixbox{background:#fff6cf;border-color:#141414}
+.mixbox select{background:#fff;border-color:#141414;color:#161616}
+.popbox{background:#fff;border-color:#141414}
+.popbox h3{color:#141414}
+.popclose{color:#141414}
+.gc-box,.pv-box{background:#fff;border-color:#141414}
+.gc-head{color:#141414}
+.gc-row input{background:#fff;border-color:#141414;color:#161616}
+.ct-chip{background:#fff;border-color:#141414;color:#161616}
+#calltray{background:#fff}
+#calltray .ct-t{color:#141414}
+.procard{background:#fff;border-color:#141414}
+.procard b{color:#141414}
+.procard span{color:#4d4a44}
+.pv-note{color:#8a5a00;background:#fff3c4}
+.numplan td.n{color:#8a5a00}
+.numplan th{color:#141414}
+.jah-aiid{background:#fff6cf}
+.jah-aiid b{color:#141414}
+.jahrecord{background:#fff}
+.jrp-btn{background:#fff;border-color:#141414;color:#141414}
+.jrp-btn:hover{background:#fff3c4}
+.jahstatus{background:#141414;color:#ffd60a}
+.jahstatus.sim{background:#141414;color:#ffd60a}
+.jahstatus.gen{background:#0b3d91;color:#fff}
+.jahstatus.pub{background:#0a7a2e;color:#fff}
+body .jtabbar a.jtab{background:#fff;border-color:#141414;color:#141414}
+body .jtabbar a.jtab.on{background:#141414;color:#ffd60a;border-color:#141414}
+.wingnav a{background:#fff;border-color:#141414;color:#141414}
+.wingnav a:hover{background:#fff3c4;border-color:#141414;color:#141414}
+.fv-title{color:#ffd60a}
+.autoforge{background:#fff;border-color:#141414}
+.af-count{background:#fff6cf;border-color:#141414}
+.af-count #afCountNum{color:#141414}
+.af-dial input{background:#fff;border-color:#141414;color:#161616}
+.af-row{border-bottom-color:#8a8478}
+.af-row:hover{background:#fff3c4}
+a{color:#0b3d91}
+footer.note{color:#4d4a44}
+.jahnet{background:#141414}
+.jahnet .jahnet-t,.jahnet .here,.jahnet .sitekicker{color:#ffd60a}
+.jahnet .sitekicker{border-color:#ffd60a}
+</style>
+
 <meta property="og:title" content="The Signature AI Phone Book — home of every AI">
 <meta property="og:description" content="The Signature AI Phone Book — home of every AI. Dial 32,870+ published AI files: 11 Signature system AIs, 6 persona AIs, 253 domain AIs for every need in life, and 32,600 word AIs — each with dossier, working demo, dialog, read-aloud, copy and download. Counts last synchronized 2026-10-03.">
 <meta property="og:type" content="website">
@@ -396,6 +521,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 
 <main id="main">
 <header class="hero">
+<img class="yp-hero-mascot" src="assets/yp-mascot-hero.jpg" alt="The smiling yellow-pages phone-book mascot, waving hello">
 <div class="yptag">&#9733; YELLOW PAGES &middot; CYBER EDITION &#9733;</div>
 <h1 id="top">&#9742; THE SIGNATURE AI PHONE BOOK</h1>
 <p><b>Every AI lives here as a file.</b> Ring up any mind — system AIs, personas, and a Signature AI for every need in life. Each file carries its mentality, its abilities, its data — and a working demo you can run, talk to, and download. <i>The JAH AI Models Archive.</i> Boundless more to come.</p>
@@ -427,9 +553,9 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <nav class="wingnav" aria-label="Phone book sections">
 <a href="#top">&#8962; Home</a><a href="#thebook">&#128214; The Book</a><a href="archive.html">&#128218; Archive</a><a href="#sisterlines">Sister-Site Lines</a><a href="#genomelab">&#129516; Genome Lab</a><a href="#arena">&#9876; Arena</a><a href="#mixlab">Mix Lab</a><a href="#incoming">Incoming Transmissions</a><a href="#numbering">&#9742; Numbering Plan</a><a href="#provisits">&#127973; Professional Visits</a>
 </nav>
-<section id="thebook" aria-label="The Book — every AI, A to Z">
-<h2 class="wing">THE BOOK &mdash; EVERY AI, A&ndash;Z</h2>
-<p class="wingdesc">The whole archive as one phone book. Tap any listing to open the full file &mdash; dossier, working demo, dialog, read-aloud, copy, download. Use the A&ndash;Z thumb index to jump.</p>
+<section id="thebook" aria-label="Featured AI files">
+<h2 class="wing"><img class="wingmascot" src="assets/yp-mascot-fingers.jpg" alt="Walking telephone mascot giving a thumbs up"> FEATURED FILES &mdash; STAFF PICKS</h2>
+<p class="wingdesc">Hand-picked favorites from the book. Tap any card to open its full file &mdash; dossier, working demo, dialog, read-aloud, copy, download. The whole archive, A to Z, lives on the <a href="archive.html">&#128218; 1 Million Archive</a> tab.</p>
 <div class="showcase" id="llamashow">
 <div class="sh-kicker">&#9733; SHOWCASE &mdash; OUR OWN BASELINE AI</div>
 <div class="sh-name">Signature Llama</div>
@@ -437,11 +563,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <p class="sh-arch">How it runs: every AI in this book is a persona and prompt layer on top of one engine &mdash; responses are generated live by Signature Llama v2 (word-level, on-device) running in this page's own JavaScript, loaded from the published weights, with an honestly labeled fallback engine if the weights can't load.</p>
 <div class="sh-row"><span class="stamp" id="llamastatus" aria-live="polite">&#9679; Signature Llama v2 &mdash; LIVE</span> <a class="fbtn" style="display:inline-block;text-decoration:none" href="https://justinahiggins614-cmyk.github.io/signature-llama/" target="_blank" rel="noopener">Meet Signature Llama &rarr;</a></div>
 </div>
-<div class="booksearchrow">
-<input type="text" id="booksearch" placeholder="Search the book&hellip; name, stamp, or subject" aria-label="Search the phone book" autocomplete="off">
-<span id="bookcount" class="bookcount"></span>
-<span class="pagectl" aria-label="Expand or collapse letter pages"><button type="button" id="expandall">EXPAND ALL</button><span class="pdot">&middot;</span><button type="button" id="collapseall">COLLAPSE ALL</button></span>
-</div>
+<div class="featgrid" id="featgrid" aria-label="Featured AI files"></div>
 <div class="payphone" id="payphone">
 <div class="pp-kicker">&#9742; AI PUBLIC-PHONE</div>
 <div class="pp-display" id="pp-display" aria-live="polite">&mdash;</div>
@@ -451,12 +573,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 <div id="pp-msg" aria-live="polite"></div>
 </div>
 
-<div class="finderbar" id="finderbar">
-<div class="finder-kicker">&#9742; DIRECTORY ASSISTANCE &mdash; THE FINDER</div>
-<div class="bookwrap">
-<div class="thumbnav" id="thumbnav" aria-label="Jump to letter"></div>
-<div class="book" id="book"></div>
-</div>
+<div class="archive-cta"><a href="archive.html">&#128218; Browse the full A&ndash;Z archive</a><span>42,641 AI FILES &middot; EVERY LISTING DIALABLE</span></div>
 </section>
 <details class="dropwin" id="numbering">
 <summary><span class="dw-t">&#9742; THE NUMBERING PLAN</span><span class="dw-h">Every AI's 11-digit Signature number &mdash; districts like city blocks</span></summary>
@@ -568,7 +685,7 @@ footer.note{text-align:center;color:var(--dim);font-size:.85em;padding:20px}
 </div>
 <div id="ttsbar"><span>🔊 Reading</span><button id="ttsstop" type="button">Stop</button><label>Speed <input id="ttsspeed" type="range" min="0.7" max="1.6" step="0.1" value="1" style="width:90px"></label></div>
 <button id="readpill" type="button" aria-label="Read this AI file aloud">🔊 Read file</button>
-<nav class="jahnet t2" aria-label="JAH Network — all 25 sites"><span class="jahnet-t">THE JAH NETWORK</span><span class="sitekicker">SITE 7 OF 27</span><a href="https://justinahiggins614-cmyk.github.io/signature-math/">1 Signature Math</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Signature Universal Paradox Immune Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 Wiki Leaks</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">6 Signature Llama: The Fully Cyber Utilizable AI</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">8 Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">9 Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">10 The Signature PC System Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">11 The Signature Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">12 The Signature Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">13 The Signature Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">14 The Signature AI Mad Scientist Creation Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">15 The Signature Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">16 The Signature AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">17 AI Olympics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">18 The Signature Computer Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">19 The Signature App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">20 The Signature AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/">21 The Signature Experiment Solver</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">22 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-song-maker/">23 Signature Music Studio</a><a href="https://justinahiggins614-cmyk.github.io/signature-fixit/">24 The Signature Mr Fix-It</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">25 The Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">26 The Signature Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">27 The Signature 3D Print Mega Mall</a><span class="here">7 The Signature AI Phone Book — YOU ARE HERE</span></nav>
+<nav class="jahnet t2" aria-label="JAH Network — all 27 sites"><span class="jahnet-t">THE JAH NETWORK</span><span class="sitekicker">SITE 7 OF 27</span><a href="https://justinahiggins614-cmyk.github.io/signature-math/">1 Signature Math</a><a href="https://justinahiggins614-cmyk.github.io/jah-calculator/">2 Signature Universal Paradox Immune Calculator</a><a href="https://justinahiggins614-cmyk.github.io/jah-dictionary/">3 The Signature Dictionary</a><a href="https://justinahiggins614-cmyk.github.io/jah-wiki/">4 JAH Wiki</a><a href="https://justinahiggins614-cmyk.github.io/jah-n-wiki-leaks/">5 JAH-N Wiki Leaks</a><a href="https://justinahiggins614-cmyk.github.io/signature-llama/">6 Signature Llama: The Fully Cyber Utilizable AI</a><a href="https://justinahiggins614-cmyk.github.io/cyber-patent-catalog/">8 Globally Rejustered Patent Catalog</a><a href="https://justinahiggins614-cmyk.github.io/signature-one-archive/specs.html">9 Signature Spec Catalog Pending Patents</a><a href="https://justinahiggins614-cmyk.github.io/jah-computer-systems/">10 The Signature PC System Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-books/">11 The Signature Book Depository</a><a href="https://justinahiggins614-cmyk.github.io/signature-comics/">12 The Signature Comic Store</a><a href="https://justinahiggins614-cmyk.github.io/signature-newspapers/">13 The Signature Global Newspaper Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-backend/">14 The Signature AI Mad Scientist Creation Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-boundless-generators/">15 The Signature Boundless Generator Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-mixlab/">16 The Signature AI Mix Lab</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-olypics/">17 AI Olympics</a><a href="https://justinahiggins614-cmyk.github.io/signature-chip-maker/">18 The Signature Computer Chip Maker and Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-app-archive/">19 The Signature App Archive</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-robot-matcher/">20 The Signature AI Robot Matcher</a><a href="https://justinahiggins614-cmyk.github.io/signature-experiment-solver/">21 The Signature Experiment Solver</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-image-video-maker/">22 Signature AI Pixel</a><a href="https://justinahiggins614-cmyk.github.io/signature-ai-song-maker/">23 Signature Music Studio</a><a href="https://justinahiggins614-cmyk.github.io/signature-fixit/">24 The Signature Mr Fix-It</a><a href="https://justinahiggins614-cmyk.github.io/signature-university/">25 The Signature University</a><a href="https://justinahiggins614-cmyk.github.io/signature-cyber-mega-mall/">26 The Signature Cyber Mega-Mall</a><a href="https://justinahiggins614-cmyk.github.io/signature-3d-print/">27 The Signature 3D Print Mega Mall</a><span class="here">7 The Signature AI Phone Book — YOU ARE HERE</span></nav>
 <!-- JAH STANDARD SIGNATURE STAMP -->
 <div style="text-align:center;padding:14px 12px 4px"><img src="assets/signature-stamp.jpg" alt="The official Signature stamp" style="width:120px;max-width:32%%;height:auto"></div>
 <footer class="note">THE JAH AI MODELS ARCHIVE · Signature-made files by Justin Addam Higgins · persona simulations are fan-style interpretations, not affiliated with any rights holder</footer>
@@ -3752,6 +3869,31 @@ function wireBookSearch(){
   var bt = null; inp.addEventListener('input', function(){ clearTimeout(bt); bt = setTimeout(upd, 160); });
   upd();
 }
+/* ============ FEATURED FILES — front-door staff picks (lean front page; the full A–Z lives on archive.html) ============ */
+var FEATURED_IDS = ['hybrid','hash','deterministic','swarm','jarvis','vader','t800','voltron'];
+function buildFeatured(){
+  var grid = document.getElementById('featgrid');
+  if (!grid || typeof findFullAi !== 'function' || typeof openFile !== 'function') return;
+  var html = '';
+  FEATURED_IDS.forEach(function(id){
+    var ai = findFullAi(id);
+    if (!ai) return;
+    html += '<a class="featcard" href="#file-' + ai.id + '" data-id="' + ai.id + '">'
+      + '<b>' + escHtml(ai.name) + '</b>'
+      + '<span class="stamp">' + escHtml(ai.stamp || ai.id) + '</span>'
+      + '<i>' + escHtml(String(ai.mentality || ai.domain || '').slice(0, 120)) + '</i>'
+      + '<span class="fw">OPEN FILE &rarr;</span></a>';
+  });
+  grid.innerHTML = html;
+  grid.addEventListener('click', function(ev){
+    var c = ev.target.closest ? ev.target.closest('.featcard') : null;
+    if (!c) return;
+    if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey || (typeof ev.button === 'number' && ev.button !== 0)) return;
+    ev.preventDefault();
+    var f = findFullAi(c.getAttribute('data-id'));
+    if (f) openFile(f.id);
+  });
+}
 function llamaStatusCheck(){
   var pill = document.getElementById('llamastatus');
   if (!pill) return;
@@ -4042,8 +4184,8 @@ function wireReadPill(){
 (function init(){
   buildGenomeLab();
   buildArena();
-  buildBook();
-  wireBookSearch();
+  if (document.getElementById('book')){ buildBook(); wireBookSearch(); }
+  buildFeatured();
   /* start the word-AI index early (non-blocking): it feeds the headline counter via updateBookstats() */
   wordaiEnsureIndex(function(){});
   updateBookstats();
