@@ -2212,7 +2212,8 @@ function domainReply(d, q){
      from this AI's own profile; the old "As your X: <fragment>" line is retired. */
   try{
     if (typeof JAHtalk !== 'undefined'){
-      var jr = JAHtalk.reply(talkProfile('dom', d), q);
+      var _tp1 = talkProfile('dom', d);
+      var jr = JAHtalk.chatFor(_tp1, 'ai:' + (_tp1.id || _tp1.name)).reply(q);
       if (jr && jr.trim().length >= 12) return jr;
     }
   }catch(e){}
@@ -3413,7 +3414,7 @@ function llamaChat(kind, obj, q, cannedFn){
        dumps below are a last resort only, never the visible reply. */
     try{
       if (typeof JAHtalk !== 'undefined'){
-        r = qIsGreet ? JAHtalk.greet(P) : JAHtalk.reply(P, q);
+        r = qIsGreet ? JAHtalk.greet(P) : JAHtalk.chatFor(P, 'ai:' + (P.id || P.name)).reply(q);
       }
     }catch(e){ r = ''; }
     if (!r || r.trim().length < 12){
@@ -3485,7 +3486,8 @@ function systemReply(a, q){
   /* Manon's order: no template word-blocks — JAHtalk speaks from the profile. */
   try{
     if (typeof JAHtalk !== 'undefined'){
-      var jr2 = JAHtalk.reply(talkProfile('sig', a), q);
+      var _tp2 = talkProfile('sig', a);
+      var jr2 = JAHtalk.chatFor(_tp2, 'ai:' + (_tp2.id || _tp2.name)).reply(q);
       if (jr2 && jr2.trim().length >= 12) return jr2;
     }
   }catch(e){}
