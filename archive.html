@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="js/signin.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI Archive A–Z — The Signature AI Phone Book</title>
@@ -194,5 +195,16 @@ document.getElementById("jah-askai-q").addEventListener("keydown",function(e){if
 })();
 </script>
 
+<script>
+(function () {
+  /* JAHProfile sign-in / profiles button (device-local profiles; Google-ready) */
+  var mount = document.querySelector('header .booksearch') ||
+              document.querySelector('nav.jtabbar') ||
+              document.querySelector('header nav') ||
+              document.querySelector('header') ||
+              document.body;
+  if (window.JAHProfile && JAHProfile.ui) JAHProfile.ui.renderButton(mount);
+})();
+</script>
 </body>
 </html>

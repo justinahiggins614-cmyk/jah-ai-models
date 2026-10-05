@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script>try{if(localStorage.getItem('jah-theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}</script>
+<script src="js/signin.js"></script>
+<script>try{var _ps=(typeof JAHProfile!=='undefined')?JAHProfile.store:localStorage;if(_ps.get('jah-theme')==='dark'){document.documentElement.setAttribute('data-theme','dark');}}catch(e){}</script>
 <style>
 html[data-theme="dark"]{filter:invert(1) hue-rotate(180deg)}
 html[data-theme="dark"] img,html[data-theme="dark"] video,html[data-theme="dark"] canvas,html[data-theme="dark"] svg{filter:invert(1) hue-rotate(180deg)}
@@ -2213,7 +2214,7 @@ function domainReply(d, q){
   try{
     if (typeof JAHtalk !== 'undefined'){
       var _tp1 = talkProfile('dom', d);
-      var jr = JAHtalk.chatFor(_tp1, 'ai:' + (_tp1.id || _tp1.name)).reply(q);
+      var jr = JAHtalk.chatFor(_tp1, (typeof JAHProfile!=='undefined'?JAHProfile.chatKey('ai:' + (_tp1.id || _tp1.name)):('ai:' + (_tp1.id || _tp1.name)))).reply(q);
       if (jr && jr.trim().length >= 12) return jr;
     }
   }catch(e){}
@@ -2750,8 +2751,8 @@ function openHybrid(N){
   });
 }
 /* ---- showcase counter (localStorage) ---- */
-function afGetCount(){ try { return parseInt(localStorage.getItem('jahAFCount') || '0', 10) || 0; } catch (e){ return 0; } }
-function afSetCount(n){ try { localStorage.setItem('jahAFCount', String(n)); } catch (e){} }
+function afGetCount(){ var PS=(typeof JAHProfile!=='undefined')?JAHProfile.store:localStorage; try { return parseInt(PS.get('jahAFCount') || '0', 10) || 0; } catch (e){ return 0; } }
+function afSetCount(n){ var PS=(typeof JAHProfile!=='undefined')?JAHProfile.store:localStorage; try { PS.set('jahAFCount', String(n)); } catch (e){} }
 function afPaintCount(){
   var el = document.getElementById('afCountNum'); if (!el) return;
   var n = afGetCount();
@@ -3414,7 +3415,7 @@ function llamaChat(kind, obj, q, cannedFn){
        dumps below are a last resort only, never the visible reply. */
     try{
       if (typeof JAHtalk !== 'undefined'){
-        r = qIsGreet ? JAHtalk.greet(P) : JAHtalk.chatFor(P, 'ai:' + (P.id || P.name)).reply(q);
+        r = qIsGreet ? JAHtalk.greet(P) : JAHtalk.chatFor(P, (typeof JAHProfile!=='undefined'?JAHProfile.chatKey('ai:' + (P.id || P.name)):('ai:' + (P.id || P.name)))).reply(q);
       }
     }catch(e){ r = ''; }
     if (!r || r.trim().length < 12){
@@ -3487,7 +3488,7 @@ function systemReply(a, q){
   try{
     if (typeof JAHtalk !== 'undefined'){
       var _tp2 = talkProfile('sig', a);
-      var jr2 = JAHtalk.chatFor(_tp2, 'ai:' + (_tp2.id || _tp2.name)).reply(q);
+      var jr2 = JAHtalk.chatFor(_tp2, (typeof JAHProfile!=='undefined'?JAHProfile.chatKey('ai:' + (_tp2.id || _tp2.name)):('ai:' + (_tp2.id || _tp2.name)))).reply(q);
       if (jr2 && jr2.trim().length >= 12) return jr2;
     }
   }catch(e){}
@@ -3773,8 +3774,8 @@ function closeFile(){
   try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
 }
 var BOOKPAGES_KEY = 'jahbook_pages';
-function bookOpenPages(){ try { var v = JSON.parse(localStorage.getItem(BOOKPAGES_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { return []; } }
-function bookSavePages(){ try { var a = []; document.querySelectorAll('#book .bookletter.open').forEach(function(s){ a.push(s.id.slice(3)); }); localStorage.setItem(BOOKPAGES_KEY, JSON.stringify(a)); } catch (e) {} }
+function bookOpenPages(){ var PS=(typeof JAHProfile!=='undefined')?JAHProfile.store:localStorage; try { var v = JSON.parse(PS.get(BOOKPAGES_KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { return []; } }
+function bookSavePages(){ var PS=(typeof JAHProfile!=='undefined')?JAHProfile.store:localStorage; try { var a = []; document.querySelectorAll('#book .bookletter.open').forEach(function(s){ a.push(s.id.slice(3)); }); PS.set(BOOKPAGES_KEY, JSON.stringify(a)); } catch (e) {} }
 function setPageOpen(sec, open, animate, persist){
   var h = sec.querySelector('.bookletter-h'); if (!h) return;
   if (open){ sec.classList.add('open'); if (animate) sec.classList.remove('noanim'); else sec.classList.add('noanim'); h.setAttribute('aria-expanded', 'true'); }
@@ -5259,25 +5260,26 @@ var ProVisits = (function(){
 
 <button id="jah-theme-toggle" title="Toggle dark mode" aria-label="Toggle dark mode">&#9681;</button>
 <script>
-(function(){try{var b=document.getElementById('jah-theme-toggle');if(!b)return;function upd(){b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'\u2600':'\u25d0';}upd();b.addEventListener('click',function(){var dark=document.documentElement.getAttribute('data-theme')!=='dark';document.documentElement.setAttribute('data-theme',dark?'dark':'');try{localStorage.setItem('jah-theme',dark?'dark':'');}catch(e){}upd();});}catch(e){}})();
+(function(){try{var PS=(typeof JAHProfile!=='undefined')?JAHProfile.store:localStorage;var b=document.getElementById('jah-theme-toggle');if(!b)return;function upd(){b.textContent=document.documentElement.getAttribute('data-theme')==='dark'?'\u2600':'\u25d0';}upd();b.addEventListener('click',function(){var dark=document.documentElement.getAttribute('data-theme')!=='dark';document.documentElement.setAttribute('data-theme',dark?'dark':'');try{PS.set('jah-theme',dark?'dark':'');}catch(e){}upd();});}catch(e){}})();
 </script>
 <script>
 /* JAH session restore: scroll + tabs + last record. localStorage only, nothing leaves the device. */
 (function(){try{
+var PS=(typeof JAHProfile!=='undefined')?JAHProfile.store:localStorage;
 var path=location.pathname.replace(/\/$/,'')||'/';
 var KEY='jah-session:'+path;
-var state={};try{state=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){state={};}
+var state={};try{state=JSON.parse(PS.get(KEY)||'{}');}catch(e){state={};}
 var deep=/[?&](spec|patent|dossier|w|id|dial|q|query|term|word)=/i.test(location.search||'')||location.hash.length>1;
 if(state.y&&!deep){addEventListener('load',function(){setTimeout(function(){try{window.scrollTo(0,state.y);}catch(e){}},60);});}
-var t=null;addEventListener('scroll',function(){if(t)return;t=setTimeout(function(){t=null;try{state.y=window.scrollY||window.pageYOffset;localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}},600);},{passive:true});
+var t=null;addEventListener('scroll',function(){if(t)return;t=setTimeout(function(){t=null;try{state.y=window.scrollY||window.pageYOffset;PS.set(KEY,JSON.stringify(state));}catch(e){}},600);},{passive:true});
 var tabs=[],sels=['[role="tab"]','.tab-button','.tabbtn','button.tab','a.tab','.wikitabs button'];
 for(var si=0;si<sels.length;si++){var n=document.querySelectorAll(sels[si]);for(var i=0;i<n.length;i++){if(tabs.indexOf(n[i])<0)tabs.push(n[i]);}}
 if(tabs.length){if(state.tab!=null&&tabs[state.tab]){addEventListener('load',function(){setTimeout(function(){try{tabs[state.tab].click();}catch(e){}},150);});}
-for(var k=0;k<tabs.length;k++){(function(el,i){el.addEventListener('click',function(){try{state.tab=i;localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}});})(tabs[k],k);}}
+for(var k=0;k<tabs.length;k++){(function(el,i){el.addEventListener('click',function(){try{state.tab=i;PS.set(KEY,JSON.stringify(state));}catch(e){}});})(tabs[k],k);}}
 var RP=/[?&](spec|patent|dossier|w|id|dial)=([^&#]+)/i.exec(location.search||'');
-if(RP){try{localStorage.setItem('jah-last-record',decodeURIComponent(RP[2]));}catch(e){}}
-document.addEventListener('click',function(ev){var a=ev.target&&ev.target.closest?ev.target.closest('a[href]'):null;if(!a)return;var m=/[?&](spec|patent|dossier|w|id|dial)=([^&#]+)/i.exec(a.getAttribute('href')||'');if(m){try{localStorage.setItem('jah-last-record',decodeURIComponent(m[2]));}catch(e){}}},true);
-if(!deep){var last=null;try{last=localStorage.getItem('jah-last-record');}catch(e){}
+if(RP){try{PS.set('jah-last-record',decodeURIComponent(RP[2]));}catch(e){}}
+document.addEventListener('click',function(ev){var a=ev.target&&ev.target.closest?ev.target.closest('a[href]'):null;if(!a)return;var m=/[?&](spec|patent|dossier|w|id|dial)=([^&#]+)/i.exec(a.getAttribute('href')||'');if(m){try{PS.set('jah-last-record',decodeURIComponent(m[2]));}catch(e){}}},true);
+if(!deep){var last=null;try{last=PS.get('jah-last-record');}catch(e){}
 if(last){addEventListener('load',function(){setTimeout(function(){try{var el=document.querySelector('[data-id="'+last+'"],[id*="'+last+'"],a[href*="'+last+'"]');if(el)el.scrollIntoView({block:'center'});}catch(e){}},300);});}}
 }catch(e){}})();
 </script>
@@ -5361,8 +5363,9 @@ if(last){addEventListener('load',function(){setTimeout(function(){try{var el=doc
 (function(){
   'use strict';
   var SEEN='jah-tour-seen-phonebook';
-  function isSeen(){ try{ return localStorage.getItem(SEEN)==='1'; }catch(e){ return true; } }
-  function markSeen(){ try{ localStorage.setItem(SEEN,'1'); }catch(e){} }
+  var PS=(typeof JAHProfile!=='undefined')?JAHProfile.store:localStorage;
+  function isSeen(){ try{ return PS.get(SEEN)==='1'; }catch(e){ return true; } }
+  function markSeen(){ try{ PS.set(SEEN,'1'); }catch(e){} }
   var wel=document.getElementById('jah-wel');
   function openWel(){ if(!wel) return; wel.hidden=false; var b=document.getElementById('jah-welok'); try{ if(b) b.focus({preventScroll:true}); }catch(e){} }
   function closeWel(){ if(wel) wel.hidden=true; markSeen(); }
@@ -5395,5 +5398,16 @@ if(last){addEventListener('load',function(){setTimeout(function(){try{var el=doc
 
 </script>
 
+<script>
+(function () {
+  /* JAHProfile sign-in / profiles button (device-local profiles; Google-ready) */
+  var mount = document.querySelector('header .booksearch') ||
+              document.querySelector('nav.jtabbar') ||
+              document.querySelector('header nav') ||
+              document.querySelector('header') ||
+              document.body;
+  if (window.JAHProfile && JAHProfile.ui) JAHProfile.ui.renderButton(mount);
+})();
+</script>
 </body>
 </html>
