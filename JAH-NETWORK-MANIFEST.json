@@ -3,7 +3,7 @@
   "official_name": "The Signature AI Phone Book",
   "repo": "justinahiggins614-cmyk/jah-ai-models",
   "live_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/",
-  "site_count": 27,
+  "site_count": 31,
   "sites": [
     {
       "n": 1,
@@ -139,6 +139,26 @@
       "n": 27,
       "name": "The Signature 3D Print Mega Mall",
       "url": "https://justinahiggins614-cmyk.github.io/signature-3d-print/"
+    },
+    {
+      "n": 28,
+      "name": "Signature Earth",
+      "url": "https://justinahiggins614-cmyk.github.io/signature-earth/"
+    },
+    {
+      "n": 29,
+      "name": "The Signature Flight School",
+      "url": "https://justinahiggins614-cmyk.github.io/signature-flight-school/"
+    },
+    {
+      "n": 30,
+      "name": "The Signature Game Store",
+      "url": "https://justinahiggins614-cmyk.github.io/signature-game-store/"
+    },
+    {
+      "n": 31,
+      "name": "The Signature Website Creator",
+      "url": "https://justinahiggins614-cmyk.github.io/signature-website-creator/"
     }
   ]
 }

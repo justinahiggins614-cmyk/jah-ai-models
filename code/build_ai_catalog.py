@@ -181,6 +181,21 @@ for r in rows:
         },
     })
 
+# MIX PRESERVATION (2026-10-04 count-freshness fix): user-generated mixes are
+# filed into the catalog by the Llama compiler auto-record, not by the
+# index.html data arrays this builder parses. Carry any existing mix-type
+# records forward so a rebuild never drops them or undercounts embedded.
+try:
+    _prev = json.load(open(os.path.join(REPO, "ai-catalog.json"), encoding="utf-8"))
+    _have = {r["ID"] for r in records}
+    for _pr in _prev.get("records", []):
+        if _pr.get("TYPE") == "mix" and _pr.get("ID") not in _have:
+            records.append(_pr)
+            _have.add(_pr["ID"])
+    print("carried forward %d filed mix record(s)" % sum(1 for r in records if r["TYPE"] == "mix"))
+except Exception as _e:
+    print("mix carry-forward skipped (%s)" % _e)
+
 catalog = {
     "site": "The Signature AI Telephone Book",
     "site_url": SITE,
@@ -192,6 +207,7 @@ catalog = {
         "persona": sum(1 for x in records if x["TYPE"] == "persona"),
         "domain": sum(1 for x in records if x["TYPE"] == "domain"),
         "sl": sum(1 for x in records if x["TYPE"] == "sl"),
+        "mix": sum(1 for x in records if x["TYPE"] == "mix"),
         "wordai_index_records": wordai_snapshot["records"],
         "wordai_as_of": wordai_snapshot["as_of"],
         "published_total": len(records) + wordai_snapshot["records"],
@@ -227,7 +243,8 @@ api = {
         "embedded_breakdown": {"system": counts["system"],
                                 "persona": counts["persona"],
                                 "domain": counts["domain"],
-                                "sl": counts.get("sl", 0)},
+                                "sl": counts.get("sl", 0),
+                                "mix": counts.get("mix", 0)},
         "wordai_index_records": counts["wordai_index_records"],
         "wordai_as_of": counts["wordai_as_of"],
         "published_total": counts["published_total"],
@@ -243,7 +260,8 @@ api = {
     "records_embedded_breakdown": {"system": counts["system"],
                                    "persona": counts["persona"],
                                    "domain": counts["domain"],
-                                   "sl": counts.get("sl", 0)},
+                                   "sl": counts.get("sl", 0),
+                                   "mix": counts.get("mix", 0)},
     "wordai_index_records": counts["wordai_index_records"],
     "records_published_total": counts["published_total"],
     "hybrid_space": 1000000,
@@ -273,10 +291,11 @@ wa = counts["wordai_index_records"]
 asof = counts["wordai_as_of"]
 new_aicount = '<span id="aicount"><b>%s</b></span>' % format(pub, ",d")
 hero = re.sub(r'<span id="aicount"><b>[\d,]+</b></span>', new_aicount, hero)
-new_break = ('PUBLISHED AI FILES: <b>%s</b> = %d embedded (%d system &middot; %d persona &middot; %d domain &middot; %d signature-line) '
+mix_leg = (' &middot; %d mix' % counts["mix"]) if counts.get("mix") else ''
+new_break = ('PUBLISHED AI FILES: <b>%s</b> = %d embedded (%d system &middot; %d persona &middot; %d domain &middot; %d signature-line%s) '
              '+ %s word-AIs &middot; Last synchronized %s &mdash; live count refreshes when the word-AI index loads'
              % (format(pub, ",d"), emb, counts["system"], counts["persona"], counts["domain"],
-                counts.get("sl", 0),
+                counts.get("sl", 0), mix_leg,
                 format(wa, ",d"), asof))
 hero = re.sub(r'<span id="aibreakdown">.*?</span>',
               '<span id="aibreakdown">' + new_break + '</span>', hero, count=1, flags=re.S)
@@ -297,7 +316,7 @@ hero = re.sub(
        counts.get("sl", 0), format(wa, ",d"), asof),
     hero, count=1)
 hero = re.sub(
-    r'"description": "Published AI files: 22,460 = 260 embedded[^"]*"',
+    r'"description": "Published AI files: [\d,]+ = [\d,]+ embedded[^"]*"',
     '"description": "Published AI files: %s = %d embedded (%d system, %d persona, %d domain, %d signature-line) + %s word AIs. '
     'Counts last synchronized %s; the page\'s live counter refreshes from the word-AI index at '
     'https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz. '
@@ -309,7 +328,7 @@ hero = re.sub(
     r'\(all [\d,]+ embedded AI files, machine-readable\)',
     '(all %d embedded AI files, machine-readable)' % emb, hero, count=1)
 hero = re.sub(
-    r'\(\d[\d,]* word AIs as of \d{4}-\d{2}-\d{2}',
+    r'\(\d[\d,]* word AIs, last synchronized \d{4}-\d{2}-\d{2}',
     '(%s word AIs, last synchronized %s' % (format(wa, ",d"), asof), hero, count=1)
 open(hero_path, "w", encoding="utf-8").write(hero)
 print("stamped meta/JSON-LD/crawler note")

@@ -48,6 +48,14 @@ total_live = live["sig"] + live["per"] + live["dom"] + live["sl"]
 catalog = json.load(open(os.path.join(REPO, "ai-catalog.json"), encoding="utf-8"))
 api = json.load(open(os.path.join(REPO, "api.json"), encoding="utf-8"))
 
+# Filed mixes (2026-10-04 count-freshness fix): the Llama compiler auto-record
+# files user-generated mixes into the catalog (JAH-AI-MIX-######); they are
+# legitimate published AI files but do not live in the page's data arrays, so
+# every "embedded" expectation must add them on top of the array total.
+n_mix = sum(1 for r in catalog["records"] if r.get("TYPE") == "mix")
+total_embedded = total_live + n_mix
+print("filed mix records in catalog: %d" % n_mix)
+
 problems = []
 
 
@@ -63,22 +71,24 @@ print("live data arrays in index.html: %d system / %d persona / %d domain / %d s
 
 print("ai-catalog.json:")
 cc = catalog["counts"]
-expect("catalog embedded_total", cc["embedded_total"], total_live)
+expect("catalog embedded_total", cc["embedded_total"], total_embedded)
 expect("catalog system", cc["system"], live["sig"])
 expect("catalog persona", cc["persona"], live["per"])
 expect("catalog domain", cc["domain"], live["dom"])
 expect("catalog signature-line", cc.get("sl", 0), live["sl"])
-expect("catalog records length", len(catalog["records"]), total_live)
+expect("catalog mix", cc.get("mix", 0), n_mix)
+expect("catalog records length", len(catalog["records"]), total_embedded)
 expect("catalog published = emb + wordai",
-       cc["published_total"], total_live + int(cc["wordai_index_records"]))
+       cc["published_total"], total_embedded + int(cc["wordai_index_records"]))
 
 print("api.json (same source as catalog):")
-expect("api records_embedded", api["records_embedded"], total_live)
+expect("api records_embedded", api["records_embedded"], total_embedded)
 bd = api["records_embedded_breakdown"]
 expect("api breakdown system", bd["system"], live["sig"])
 expect("api breakdown persona", bd["persona"], live["per"])
 expect("api breakdown domain", bd["domain"], live["dom"])
 expect("api breakdown signature-line", bd.get("sl", 0), live["sl"])
+expect("api breakdown mix", bd.get("mix", 0), n_mix)
 expect("api wordai == catalog wordai",
        int(api["wordai_index_records"]), int(cc["wordai_index_records"]))
 expect("api published == catalog published",
@@ -100,17 +110,19 @@ else:
     expect("hero shows persona count", ("%d persona" % live["per"]) in hero, True)
     expect("hero shows domain count", ("%d domain" % live["dom"]) in hero, True)
     expect("hero shows signature-line count", ("%d signature-line" % live["sl"]) in hero, True)
+    if n_mix:
+        expect("hero shows mix count", ("%d mix" % n_mix) in hero, True)
     expect("hero word-AI count",
            re.search(r"\+ ([\d,]+) word-AIs", hero).group(1).replace(",", ""),
            str(cc["wordai_index_records"]))
     expect("hero total", re.search(r"PUBLISHED AI FILES: <b>([\d,]+)</b>", hero).group(1).replace(",", ""),
-           str(total_live + int(cc["wordai_index_records"])))
+           str(total_embedded + int(cc["wordai_index_records"])))
     as_of = re.search(r"(?:as of|Last synchronized) (\d{4}-\d{2}-\d{2})", hero)
     expect("hero has sync stamp", bool(as_of), True)
     if as_of:
         expect("hero sync date", as_of.group(1), cc["wordai_as_of"])
     hero_total = re.search(r'<span id="aicount"><b>([\d,]+)</b></span>', hero_html).group(1).replace(",", "")
-    expect("hero headline count", hero_total, str(total_live + int(cc["wordai_index_records"])))
+    expect("hero headline count", hero_total, str(total_embedded + int(cc["wordai_index_records"])))
 
 print("duplicate ID scan:")
 seen = {}
@@ -128,5 +140,5 @@ if problems:
     for p in problems:
         print("  -", p)
     sys.exit(1)
-print("ALL COUNTS AGREE — embedded leg exact at %d, published %d (as of %s)"
-      % (total_live, cc["published_total"], cc["wordai_as_of"]))
+print("ALL COUNTS AGREE — embedded leg exact at %d (arrays %d + filed mixes %d), published %d (as of %s)"
+      % (total_embedded, total_live, n_mix, cc["published_total"], cc["wordai_as_of"]))

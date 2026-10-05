@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1",
-  "catalog_revision": 5,
-  "generated_at": "2026-10-04T05:05:37Z",
+  "catalog_revision": 6,
+  "generated_at": "2026-10-05T02:51:15Z",
   "records_as_of": "2026-10-04",
   "site": "The Signature AI Telephone Book",
   "site_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/",
@@ -9,31 +9,33 @@
   "description": "Home of every AI: Manon's signature AI systems, the persona archive (fan-style simulations), and domain AIs for every need — each with dossier, working demo, dialog, and downloadable program.",
   "for_bots": "Machine-readable manifest. Humans use the site above; bots, scrapers, and AI assistants should use the endpoints below — plain JSON/JSONL over HTTPS, no JavaScript needed.",
   "counts": {
-    "embedded_total": 441,
+    "embedded_total": 443,
     "embedded_breakdown": {
       "system": 11,
       "persona": 6,
       "domain": 253,
-      "sl": 171
+      "sl": 171,
+      "mix": 2
     },
-    "wordai_index_records": 42200,
+    "wordai_index_records": 49400,
     "wordai_as_of": "2026-10-04",
-    "published_total": 42641,
+    "published_total": 49843,
     "hybrid_space": {
       "possible_combinations": 1000000,
       "generated_on_demand": true,
       "note": "1,000,000 is the deterministic Mix Lab hybrid combination space. Hybrids are generated on demand per device; they are NOT published files."
     }
   },
-  "records_embedded": 441,
+  "records_embedded": 443,
   "records_embedded_breakdown": {
     "system": 11,
     "persona": 6,
     "domain": 253,
-    "sl": 171
+    "sl": 171,
+    "mix": 2
   },
-  "wordai_index_records": 42200,
-  "records_published_total": 42641,
+  "wordai_index_records": 49400,
+  "records_published_total": 49843,
   "hybrid_space": 1000000,
   "wordai_index": "https://justinahiggins614-cmyk.github.io/signature-one-archive/data/index/wordai.idx.json.gz",
   "sitemap": "https://justinahiggins614-cmyk.github.io/jah-ai-models/sitemap.xml",
@@ -55,7 +57,7 @@
   "endpoints": [
     {
       "path": "ai-catalog.json",
-      "desc": "Machine-readable catalog of the 441 embedded AI files, one AI File Standard record each: ID/NAME/TYPE/CATEGORY/DESCRIPTION/CAPABILITIES/LIMITATIONS/STATUS/VERSION/ROLE/RUNTIME/DEMO/VOICE/SIGNATURE_NUMBER/SOURCE/RELATIONSHIPS/HASH/ARTIFACTS."
+      "desc": "Machine-readable catalog of the 443 embedded AI files, one AI File Standard record each: ID/NAME/TYPE/CATEGORY/DESCRIPTION/CAPABILITIES/LIMITATIONS/STATUS/VERSION/ROLE/RUNTIME/DEMO/VOICE/SIGNATURE_NUMBER/SOURCE/RELATIONSHIPS/HASH/ARTIFACTS."
     },
     {
       "path": "api.json",
