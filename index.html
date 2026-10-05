@@ -5409,5 +5409,15 @@ if(last){addEventListener('load',function(){setTimeout(function(){try{var el=doc
   if (window.JAHProfile && JAHProfile.ui) JAHProfile.ui.renderButton(mount);
 })();
 </script>
+<script>
+(function () {
+  /* JAHProfile "Make it mine" greeting — renders ONLY when personalization is
+     live (signed in + My view + opted in); silent otherwise. */
+  if (window.JAHProfile && JAHProfile.ui) {
+    var gmount = document.querySelector("header") || document.body;
+    JAHProfile.ui.renderGreeting(gmount);
+  }
+})();
+</script>
 </body>
 </html>
