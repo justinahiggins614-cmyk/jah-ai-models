@@ -5,8 +5,11 @@ data files, the chat engine (SigLlama v2), or any visible styling.
 
 1. JSON-LD ItemList of the 270 embedded AI files -> index.html <head>.
    (No license field, per Manon's call.)
-2. Static word-AI directory: word-ai.html hub + word-ai-<letter>.html pages,
-   each entry linking index.html?dial=JAH-AI-WORD-###### .
+2. Word-AI directory: word-ai.html hub + word-ai-<letter>.html pages, each
+   entry linking index.html?dial=JAH-AI-WORD-###### . A-Z rule (2026-10-05):
+   letter pages group entries by two-letter prefix into collapsed <details>
+   that lazy-load from data/wordai/wordai-<letter>.json — never a full-letter
+   DOM dump.
 3. sitemap.xml gains the new directory pages.
 """
 import gzip
@@ -74,6 +77,11 @@ PAGE_CSS = (
     '.entries li{break-inside:avoid;padding:5px 0;border-bottom:1px dotted #1c2740;font-size:.92em}'
     '.entries .stamp{color:#8b93a7;font-size:.8em;margin-left:8px;font-family:monospace}'
     '.countline{color:#9aa3b8;font-size:.9em;margin:10px 0}'
+    'details.waigrp{border:1px solid #2c4a8a;border-radius:10px;margin:8px 0;background:#0b1120}'
+    'details.waigrp summary{cursor:pointer;padding:12px 14px;font-size:1.05em;list-style:none;font-weight:700;color:#ffd76a}'
+    'details.waigrp summary::-webkit-details-marker{display:none}'
+    'details.waigrp summary .n{font-weight:400;color:#9aa3b8;font-size:.85em}'
+    '.waiload{color:#9aa3b8;font-style:italic;list-style:none}'
 )
 
 PAGE_SHELL = """<!DOCTYPE html>
@@ -101,6 +109,49 @@ def word_display(w):
     return (w[:1].upper() + w[1:] if w else w) + ' AI'
 
 
+# Lazy two-letter group loader for word-ai-<letter>.html (A-Z rule: collapsed
+# by default, entries render on first open from data/wordai/wordai-<l>.json).
+# WAILETTER is replaced with the page's letter slug at build time.
+WAIGRP_JS = """
+(function(){
+"use strict";
+function waiEsc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#x27;");}
+function waiGrp(w){w=String(w==null?"":w).toLowerCase();return w.length>=2?w.slice(0,2):w;}
+function waiRow(r){
+  var w=String(r[0]).replace(/^\\s+|\\s+$/g,"");
+  var disp=(w.charAt(0).toUpperCase()+w.slice(1))+" AI";
+  return '<li><a href="index.html?dial='+r[1]+'">'+waiEsc(disp)+'</a><span class="stamp">'+waiEsc(r[1])+'</span></li>';
+}
+var waiRows=null,waiTried=false,waiWait=[];
+function waiEnsure(cb){
+  if(waiRows){cb(waiRows);return;}
+  waiWait.push(cb);
+  if(waiTried)return;
+  waiTried=true;
+  fetch("data/wordai/wordai-WAILETTER.json").then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();}).then(function(d){
+    waiRows=d;var w=waiWait;waiWait=[];w.forEach(function(f){f(d);});
+  }).catch(function(){var w=waiWait;waiWait=[];w.forEach(function(f){f(null);});});
+}
+function waiLoad(d){
+  var ul=d.querySelector("ul.entries");
+  if(!ul||ul.getAttribute("data-loaded")==="1")return;
+  ul.setAttribute("data-loaded","1");
+  ul.innerHTML='<li class="waiload">Loading word AIs&hellip;</li>';
+  waiEnsure(function(rows){
+    if(!rows){ul.innerHTML='<li class="waiload">Could not load &mdash; <a href="word-ai.html">back to the directory</a></li>';ul.setAttribute("data-loaded","0");return;}
+    var pfx=d.getAttribute("data-grp"),h="",i;
+    for(i=0;i<rows.length;i++){if(waiGrp(rows[i][0])===pfx)h+=waiRow(rows[i]);}
+    ul.innerHTML=h||'<li class="waiload">None.</li>';
+  });
+}
+document.addEventListener("toggle",function(e){
+  var d=e.target;
+  if(d&&d.tagName==="DETAILS"&&d.classList&&d.classList.contains("waigrp")&&d.open)waiLoad(d);
+},true);
+})();
+"""
+
+
 def fetch_wordai_index():
     # curl, not urllib: python urllib hangs through this sandbox's egress proxy
     # (AGENTS.md), curl works.
@@ -113,6 +164,13 @@ def fetch_wordai_index():
 
 
 def build_wordai_pages():
+    """Word-AI directory pages — A-Z rule compliant (2026-10-05).
+
+    Each word-ai-<letter>.html groups its entries by two-letter prefix into
+    collapsed <details class="waigrp"> shells; a group's <li> entries render
+    on first open from data/wordai/wordai-<letter>.json (never a full-letter
+    DOM dump). The JSON files double as the machine-readable directory.
+    """
     rows = fetch_wordai_index()
     groups = {}
     for w, n in rows:
@@ -121,6 +179,16 @@ def build_wordai_pages():
             L = '#'
         groups.setdefault(L, []).append((w, n))
     letters = sorted(groups.keys())
+    # per-letter machine JSON (lazy data source for the pages + crawlers)
+    waidir = os.path.join(ROOT, 'data', 'wordai')
+    os.makedirs(waidir, exist_ok=True)
+    for L in letters:
+        slug = '0' if L == '#' else L.lower()
+        ents = sorted(groups[L], key=lambda t: t[0].lower())
+        with open(os.path.join(waidir, 'wordai-%s.json' % slug), 'w',
+                  encoding='utf-8') as f:
+            json.dump([[w, 'JAH-AI-WORD-%06d' % n] for w, n in ents], f,
+                      ensure_ascii=False, separators=(',', ':'))
     # hub
     cards = []
     for L in letters:
@@ -144,15 +212,33 @@ def build_wordai_pages():
     for L in letters:
         slug = '0' if L == '#' else L.lower()
         ents = sorted(groups[L], key=lambda t: t[0].lower())
-        lis = []
+        # two-letter subgroups, collapsed + lazy (A-Z rule: no full dumps)
+        subgroups, order = {}, []
         for w, n in ents:
-            stamp = 'JAH-AI-WORD-%06d' % n
-            lis.append('<li><a href="index.html?dial=%s">%s</a><span class="stamp">%s</span></li>'
-                       % (stamp, esc(word_display(w)), stamp))
+            pfx = w.strip()[:2].lower() if len(w.strip()) >= 2 else w.strip().lower()
+            if pfx not in subgroups:
+                subgroups[pfx] = []
+                order.append(pfx)
+            subgroups[pfx].append((w, n))
+        det_parts = []
+        for pfx in order:
+            cnt = len(subgroups[pfx])
+            det_parts.append(
+                '<details class="waigrp" data-grp="%s"><summary>%s '
+                '<span class="n">&middot; %s</span></summary>'
+                '<ul class="entries" data-loaded="0"></ul></details>'
+                % (esc(pfx), esc(pfx),
+                   ('%d AIs' % cnt) if cnt != 1 else '1 AI'))
         label = '0–9 & symbols' if L == '#' else '“' + L + '”'
         body = ('<h1>Word AIs — %s</h1>'
-                '<p class="countline"><b>%d</b> word AIs.</p>'
-                '<ul class="entries">%s</ul>' % (label, len(ents), ''.join(lis)))
+                '<p class="countline"><b>%d</b> word AIs — open a group to load it.</p>'
+                '%s'
+                '<noscript><p class="countline">This directory loads each group on demand with JavaScript. '
+                'Without JavaScript, the full machine-readable list for this letter lives at '
+                '<a href="data/wordai/wordai-%s.json">data/wordai/wordai-%s.json</a>.</p></noscript>'
+                '<script>%s</script>'
+                % (label, len(ents), ''.join(det_parts), slug, slug,
+                   WAIGRP_JS.replace('WAILETTER', slug)))
         pages['word-ai-%s.html' % slug] = PAGE_SHELL.format(
             title='Word AIs — ' + ('0-9' if L == '#' else L),
             desc='Word AIs starting with %s in the Signature AI Phone Book.' % label,
