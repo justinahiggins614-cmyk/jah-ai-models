@@ -2153,7 +2153,7 @@ function wireDomainDemo(root, d){
       var q = root.querySelector('#' + uid + '-q').value.trim(); if (!q) return;
       var t = q.toLowerCase(), ans = null;
       dd.forEach(function(p){ if (t.indexOf(p[0].toLowerCase()) !== -1) ans = p[1]; });
-      out((ans || 'As your ' + d.name + ': break it into small steps, start today, and be kind to yourself along the way.') + '\n— ' + d.name);
+      out((ans || 'I am ' + d.name + ' — ask me anything about what I do, and I will talk it through with you in plain words.') + '\n— ' + d.name);
     };
     root.querySelector('[data-dact=ask]').onclick = ask;
     root.querySelector('#' + uid + '-q').addEventListener('keydown', function(e){ if (e.key === 'Enter') ask(); });
@@ -2218,7 +2218,7 @@ function domainReply(d, q){
       if (jr && jr.trim().length >= 12) return jr;
     }
   }catch(e){}
-  return 'As your ' + d.name + ' (' + d.domain + '): ' + ab + '. Tell me more about what you need, and we will work it through together.';
+  return 'I am ' + d.name + ' — ' + ab + '. Tell me more about what you need, and we will work it through together.';
 }
 /* ---- domain file card (rendered on demand) ---- */
 var openDomainId = null;
