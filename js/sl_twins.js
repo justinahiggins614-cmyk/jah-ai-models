@@ -8845,6 +8845,654 @@ var SL_TWINS = [
    "status": "released"
   },
   "py": "# JAH-AI-SL-171 Signature Cedarcrest Engine - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: Codex Security Cloud / Decisions API (OpenAI).\n# Independent interpretation - not affiliated with OpenAI.\n# Reference (facts only, no copied text or branding): https://openai.com\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Cloud-based coding agents',\n    'Security-focused agent cloud',\n    'Decisions API for agent choices',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Cedarcrest Engine'\n        self.stamp = 'JAH-AI-SL-171'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'Codex Security Cloud / Decisions API'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-172",
+  "name": "Signature Driftcrest Canvas",
+  "stamp": "JAH-AI-SL-172",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring DALL-E (OpenAI) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with OpenAI. It is built to do everything the original's website claims: Text-to-image generation from natural language prompts; DALL-E 3 natively integrated into ChatGPT with automatic prompt refinement; Inpainting, outpainting, and image variations (DALL-E 2); High-resolution detailed imagery with strong prompt adherence; Built-in safety filters and content policies on generations.",
+  "abilities": [
+   "Text-to-image generation from natural language prompts",
+   "DALL-E 3 natively integrated into ChatGPT with automatic prompt refinement",
+   "Inpainting, outpainting, and image variations (DALL-E 2)",
+   "High-resolution detailed imagery with strong prompt adherence",
+   "Built-in safety filters and content policies on generations"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "DALL-E"
+   ],
+   [
+    "vendor",
+    "OpenAI"
+   ],
+   [
+    "type",
+    "image generator"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-172\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-172\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-172\"></span>",
+  "mirror": {
+   "model": "DALL-E",
+   "vendor": "OpenAI",
+   "url": "https://openai.com",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-172 Signature Driftcrest Canvas - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: DALL-E (OpenAI).\n# Independent interpretation - not affiliated with OpenAI.\n# Reference (facts only, no copied text or branding): https://openai.com\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Text-to-image generation from natural language prompts',\n    'DALL-E 3 natively integrated into ChatGPT with automatic prompt refinement',\n    'Inpainting, outpainting, and image variations (DALL-E 2)',\n    'High-resolution detailed imagery with strong prompt adherence',\n    'Built-in safety filters and content policies on generations',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Driftcrest Canvas'\n        self.stamp = 'JAH-AI-SL-172'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'DALL-E'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-173",
+  "name": "Signature Embercrest Mind",
+  "stamp": "JAH-AI-SL-173",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring GPT-4 (OpenAI) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with OpenAI. It is built to do everything the original's website claims: Flagship-class reasoning across math, code, and analysis; Multimodal vision input: understands images alongside text; Function calling and structured JSON outputs for tool use; Large context window for long documents and conversations; Fine-tuning support for specialized behavior.",
+  "abilities": [
+   "Flagship-class reasoning across math, code, and analysis",
+   "Multimodal vision input: understands images alongside text",
+   "Function calling and structured JSON outputs for tool use",
+   "Large context window for long documents and conversations",
+   "Fine-tuning support for specialized behavior"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "GPT-4"
+   ],
+   [
+    "vendor",
+    "OpenAI"
+   ],
+   [
+    "type",
+    "chat / language model"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-173\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-173\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-173\"></span>",
+  "mirror": {
+   "model": "GPT-4",
+   "vendor": "OpenAI",
+   "url": "https://openai.com",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-173 Signature Embercrest Mind - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: GPT-4 (OpenAI).\n# Independent interpretation - not affiliated with OpenAI.\n# Reference (facts only, no copied text or branding): https://openai.com\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Flagship-class reasoning across math, code, and analysis',\n    'Multimodal vision input: understands images alongside text',\n    'Function calling and structured JSON outputs for tool use',\n    'Large context window for long documents and conversations',\n    'Fine-tuning support for specialized behavior',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Embercrest Mind'\n        self.stamp = 'JAH-AI-SL-173'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'GPT-4'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-174",
+  "name": "Signature Flintcrest Mind",
+  "stamp": "JAH-AI-SL-174",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring o3 (OpenAI) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with OpenAI. It is built to do everything the original's website claims: Deliberative chain-of-thought reasoning before answering; Agentic tool use: web search, code execution, file analysis; Visual reasoning over images, charts, and diagrams; Strong performance on coding, math, and science benchmarks; Long context window for multi-step tasks.",
+  "abilities": [
+   "Deliberative chain-of-thought reasoning before answering",
+   "Agentic tool use: web search, code execution, file analysis",
+   "Visual reasoning over images, charts, and diagrams",
+   "Strong performance on coding, math, and science benchmarks",
+   "Long context window for multi-step tasks"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "o3"
+   ],
+   [
+    "vendor",
+    "OpenAI"
+   ],
+   [
+    "type",
+    "chat / language model"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-174\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-174\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-174\"></span>",
+  "mirror": {
+   "model": "o3",
+   "vendor": "OpenAI",
+   "url": "https://openai.com",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-174 Signature Flintcrest Mind - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: o3 (OpenAI).\n# Independent interpretation - not affiliated with OpenAI.\n# Reference (facts only, no copied text or branding): https://openai.com\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Deliberative chain-of-thought reasoning before answering',\n    'Agentic tool use: web search, code execution, file analysis',\n    'Visual reasoning over images, charts, and diagrams',\n    'Strong performance on coding, math, and science benchmarks',\n    'Long context window for multi-step tasks',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Flintcrest Mind'\n        self.stamp = 'JAH-AI-SL-174'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'o3'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-175",
+  "name": "Signature Grovecrest Mind",
+  "stamp": "JAH-AI-SL-175",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring Llama 3.1 (Meta) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with Meta. It is built to do everything the original's website claims: Open-weight model family: 8B, 70B, and 405B parameter sizes; 128K token context window for long documents; Multilingual dialogue across major world languages; Tool use, function calling, and code generation support; Commercially usable license for building on top.",
+  "abilities": [
+   "Open-weight model family: 8B, 70B, and 405B parameter sizes",
+   "128K token context window for long documents",
+   "Multilingual dialogue across major world languages",
+   "Tool use, function calling, and code generation support",
+   "Commercially usable license for building on top"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "Llama 3.1"
+   ],
+   [
+    "vendor",
+    "Meta"
+   ],
+   [
+    "type",
+    "chat / language model"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-175\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-175\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-175\"></span>",
+  "mirror": {
+   "model": "Llama 3.1",
+   "vendor": "Meta",
+   "url": "https://www.llama.com",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-175 Signature Grovecrest Mind - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: Llama 3.1 (Meta).\n# Independent interpretation - not affiliated with Meta.\n# Reference (facts only, no copied text or branding): https://www.llama.com\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Open-weight model family: 8B, 70B, and 405B parameter sizes',\n    '128K token context window for long documents',\n    'Multilingual dialogue across major world languages',\n    'Tool use, function calling, and code generation support',\n    'Commercially usable license for building on top',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Grovecrest Mind'\n        self.stamp = 'JAH-AI-SL-175'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'Llama 3.1'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-176",
+  "name": "Signature Harborcrest Mind",
+  "stamp": "JAH-AI-SL-176",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring Mistral 7B (Mistral AI) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with Mistral AI. It is built to do everything the original's website claims: 7.3B parameter open model under the Apache 2.0 license; Sliding-window attention for efficient long sequences; Strong reasoning and code performance for its size; Runs on consumer hardware and edge devices; Instruction-tuned variants for chat and assistants.",
+  "abilities": [
+   "7.3B parameter open model under the Apache 2.0 license",
+   "Sliding-window attention for efficient long sequences",
+   "Strong reasoning and code performance for its size",
+   "Runs on consumer hardware and edge devices",
+   "Instruction-tuned variants for chat and assistants"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "Mistral 7B"
+   ],
+   [
+    "vendor",
+    "Mistral AI"
+   ],
+   [
+    "type",
+    "chat / language model"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-176\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-176\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-176\"></span>",
+  "mirror": {
+   "model": "Mistral 7B",
+   "vendor": "Mistral AI",
+   "url": "https://mistral.ai",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-176 Signature Harborcrest Mind - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: Mistral 7B (Mistral AI).\n# Independent interpretation - not affiliated with Mistral AI.\n# Reference (facts only, no copied text or branding): https://mistral.ai\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    '7.3B parameter open model under the Apache 2.0 license',\n    'Sliding-window attention for efficient long sequences',\n    'Strong reasoning and code performance for its size',\n    'Runs on consumer hardware and edge devices',\n    'Instruction-tuned variants for chat and assistants',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Harborcrest Mind'\n        self.stamp = 'JAH-AI-SL-176'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'Mistral 7B'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-177",
+  "name": "Signature Indigocrest Mind",
+  "stamp": "JAH-AI-SL-177",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring Llama-2-Uncensored 7B (Community (Eric Hartford)) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with Community (Eric Hartford). It is built to do everything the original's website claims: Uncensored fine-tune of Meta's Llama 2 7B base model; Removes refusal behavior for open-ended conversation; 7B parameters runnable on consumer GPUs and CPUs; Popular base for local, private AI assistants; GGUF quantized builds for llama.cpp and Ollama.",
+  "abilities": [
+   "Uncensored fine-tune of Meta's Llama 2 7B base model",
+   "Removes refusal behavior for open-ended conversation",
+   "7B parameters runnable on consumer GPUs and CPUs",
+   "Popular base for local, private AI assistants",
+   "GGUF quantized builds for llama.cpp and Ollama"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "Llama-2-Uncensored 7B"
+   ],
+   [
+    "vendor",
+    "Community (Eric Hartford)"
+   ],
+   [
+    "type",
+    "chat / language model"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-177\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-177\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-177\"></span>",
+  "mirror": {
+   "model": "Llama-2-Uncensored 7B",
+   "vendor": "Community (Eric Hartford)",
+   "url": "https://huggingface.co",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-177 Signature Indigocrest Mind - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: Llama-2-Uncensored 7B (Community (Eric Hartford)).\n# Independent interpretation - not affiliated with Community (Eric Hartford).\n# Reference (facts only, no copied text or branding): https://huggingface.co\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    \"Uncensored fine-tune of Meta's Llama 2 7B base model\",\n    'Removes refusal behavior for open-ended conversation',\n    '7B parameters runnable on consumer GPUs and CPUs',\n    'Popular base for local, private AI assistants',\n    'GGUF quantized builds for llama.cpp and Ollama',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Indigocrest Mind'\n        self.stamp = 'JAH-AI-SL-177'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'Llama-2-Uncensored 7B'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-178",
+  "name": "Signature Junipercrest Mind",
+  "stamp": "JAH-AI-SL-178",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring Gemini 2.0 Flash (Google) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with Google. It is built to do everything the original's website claims: Google's speed-optimized workhorse multimodal model; 1M token context window for massive inputs; Native text, image, audio, and video understanding; Agentic function calling and real-time streaming API; Multimodal live API for voice and video interaction.",
+  "abilities": [
+   "Google's speed-optimized workhorse multimodal model",
+   "1M token context window for massive inputs",
+   "Native text, image, audio, and video understanding",
+   "Agentic function calling and real-time streaming API",
+   "Multimodal live API for voice and video interaction"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "Gemini 2.0 Flash"
+   ],
+   [
+    "vendor",
+    "Google"
+   ],
+   [
+    "type",
+    "chat / language model"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-178\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-178\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-178\"></span>",
+  "mirror": {
+   "model": "Gemini 2.0 Flash",
+   "vendor": "Google",
+   "url": "https://deepmind.google",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-178 Signature Junipercrest Mind - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: Gemini 2.0 Flash (Google).\n# Independent interpretation - not affiliated with Google.\n# Reference (facts only, no copied text or branding): https://deepmind.google\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    \"Google's speed-optimized workhorse multimodal model\",\n    '1M token context window for massive inputs',\n    'Native text, image, audio, and video understanding',\n    'Agentic function calling and real-time streaming API',\n    'Multimodal live API for voice and video interaction',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Junipercrest Mind'\n        self.stamp = 'JAH-AI-SL-178'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'Gemini 2.0 Flash'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-179",
+  "name": "Signature Kelpcrest Studio",
+  "stamp": "JAH-AI-SL-179",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring MuseNet (OpenAI) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with OpenAI. It is built to do everything the original's website claims: Deep neural network composing 4-minute musical pieces; 10 instruments and 15 musical styles, classical to pop; Note-level generation in the style of famous composers; Style blending: e.g. Chopin-style melodies over pop chords; Research demonstration of long-form music generation.",
+  "abilities": [
+   "Deep neural network composing 4-minute musical pieces",
+   "10 instruments and 15 musical styles, classical to pop",
+   "Note-level generation in the style of famous composers",
+   "Style blending: e.g. Chopin-style melodies over pop chords",
+   "Research demonstration of long-form music generation"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "MuseNet"
+   ],
+   [
+    "vendor",
+    "OpenAI"
+   ],
+   [
+    "type",
+    "music / audio generator"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-179\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-179\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-179\"></span>",
+  "mirror": {
+   "model": "MuseNet",
+   "vendor": "OpenAI",
+   "url": "https://openai.com",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-179 Signature Kelpcrest Studio - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: MuseNet (OpenAI).\n# Independent interpretation - not affiliated with OpenAI.\n# Reference (facts only, no copied text or branding): https://openai.com\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Deep neural network composing 4-minute musical pieces',\n    '10 instruments and 15 musical styles, classical to pop',\n    'Note-level generation in the style of famous composers',\n    'Style blending: e.g. Chopin-style melodies over pop chords',\n    'Research demonstration of long-form music generation',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Kelpcrest Studio'\n        self.stamp = 'JAH-AI-SL-179'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'MuseNet'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-180",
+  "name": "Signature Larkcrest Studio",
+  "stamp": "JAH-AI-SL-180",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring AIVA (AIVA Technologies) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with AIVA Technologies. It is built to do everything the original's website claims: First AI officially recognized as a composer by SACEM; Deep and reinforcement learning trained on classical scores; Editable MIDI output: notes, instrumentation, structure; Styles from symphonic and cinematic to jazz, pop, and rock; Soundtracks for films, games, trailers, and commercials.",
+  "abilities": [
+   "First AI officially recognized as a composer by SACEM",
+   "Deep and reinforcement learning trained on classical scores",
+   "Editable MIDI output: notes, instrumentation, structure",
+   "Styles from symphonic and cinematic to jazz, pop, and rock",
+   "Soundtracks for films, games, trailers, and commercials"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "AIVA"
+   ],
+   [
+    "vendor",
+    "AIVA Technologies"
+   ],
+   [
+    "type",
+    "music / audio generator"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-180\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-180\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-180\"></span>",
+  "mirror": {
+   "model": "AIVA",
+   "vendor": "AIVA Technologies",
+   "url": "https://www.aiva.ai",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-180 Signature Larkcrest Studio - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: AIVA (AIVA Technologies).\n# Independent interpretation - not affiliated with AIVA Technologies.\n# Reference (facts only, no copied text or branding): https://www.aiva.ai\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'First AI officially recognized as a composer by SACEM',\n    'Deep and reinforcement learning trained on classical scores',\n    'Editable MIDI output: notes, instrumentation, structure',\n    'Styles from symphonic and cinematic to jazz, pop, and rock',\n    'Soundtracks for films, games, trailers, and commercials',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Larkcrest Studio'\n        self.stamp = 'JAH-AI-SL-180'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'AIVA'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-181",
+  "name": "Signature Meadowcrest Studio",
+  "stamp": "JAH-AI-SL-181",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring Amper Music (Amper (Shutterstock)) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with Amper (Shutterstock). It is built to do everything the original's website claims: Parameter-driven AI composition: genre, mood, tempo, instruments; Over one million individually recorded audio samples; Full original tracks rendered in seconds for video creators; Acquired by Shutterstock in 2020; technology powers their AI music tools; Royalty-friendly music for commercial and enterprise use.",
+  "abilities": [
+   "Parameter-driven AI composition: genre, mood, tempo, instruments",
+   "Over one million individually recorded audio samples",
+   "Full original tracks rendered in seconds for video creators",
+   "Acquired by Shutterstock in 2020; technology powers their AI music tools",
+   "Royalty-friendly music for commercial and enterprise use"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "Amper Music"
+   ],
+   [
+    "vendor",
+    "Amper (Shutterstock)"
+   ],
+   [
+    "type",
+    "music / audio generator"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-181\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-181\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-181\"></span>",
+  "mirror": {
+   "model": "Amper Music",
+   "vendor": "Amper (Shutterstock)",
+   "url": "https://www.shutterstock.com",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-181 Signature Meadowcrest Studio - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: Amper Music (Amper (Shutterstock)).\n# Independent interpretation - not affiliated with Amper (Shutterstock).\n# Reference (facts only, no copied text or branding): https://www.shutterstock.com\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Parameter-driven AI composition: genre, mood, tempo, instruments',\n    'Over one million individually recorded audio samples',\n    'Full original tracks rendered in seconds for video creators',\n    'Acquired by Shutterstock in 2020; technology powers their AI music tools',\n    'Royalty-friendly music for commercial and enterprise use',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Meadowcrest Studio'\n        self.stamp = 'JAH-AI-SL-181'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'Amper Music'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-182",
+  "name": "Signature Northcrest Engine",
+  "stamp": "JAH-AI-SL-182",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring Ollama (Ollama) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with Ollama. It is built to do everything the original's website claims: Run large language models locally on Mac, Windows, and Linux; Simple model library: pull and run Llama, Mistral, Gemma, and more; Local REST API for app and agent integration; GPU acceleration with CPU fallback and quantized models; Private by design: prompts never leave the machine.",
+  "abilities": [
+   "Run large language models locally on Mac, Windows, and Linux",
+   "Simple model library: pull and run Llama, Mistral, Gemma, and more",
+   "Local REST API for app and agent integration",
+   "GPU acceleration with CPU fallback and quantized models",
+   "Private by design: prompts never leave the machine"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "Ollama"
+   ],
+   [
+    "vendor",
+    "Ollama"
+   ],
+   [
+    "type",
+    "AI product"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-182\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-182\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-182\"></span>",
+  "mirror": {
+   "model": "Ollama",
+   "vendor": "Ollama",
+   "url": "https://ollama.com",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-182 Signature Northcrest Engine - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: Ollama (Ollama).\n# Independent interpretation - not affiliated with Ollama.\n# Reference (facts only, no copied text or branding): https://ollama.com\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Run large language models locally on Mac, Windows, and Linux',\n    'Simple model library: pull and run Llama, Mistral, Gemma, and more',\n    'Local REST API for app and agent integration',\n    'GPU acceleration with CPU fallback and quantized models',\n    'Private by design: prompts never leave the machine',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Northcrest Engine'\n        self.stamp = 'JAH-AI-SL-182'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'Ollama'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-183",
+  "name": "Signature Onyxcrest Engine",
+  "stamp": "JAH-AI-SL-183",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring llama.cpp (Georgi Gerganov / community) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with Georgi Gerganov / community. It is built to do everything the original's website claims: Plain C/C++ inference engine for LLMs with minimal dependencies; GGUF model format with aggressive quantization for small devices; CPU-first execution with GPU offload options; Powers Ollama, LM Studio, and many local AI apps under the hood; Runs 7B-class models on laptops, phones, and Raspberry Pi.",
+  "abilities": [
+   "Plain C/C++ inference engine for LLMs with minimal dependencies",
+   "GGUF model format with aggressive quantization for small devices",
+   "CPU-first execution with GPU offload options",
+   "Powers Ollama, LM Studio, and many local AI apps under the hood",
+   "Runs 7B-class models on laptops, phones, and Raspberry Pi"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "llama.cpp"
+   ],
+   [
+    "vendor",
+    "Georgi Gerganov / community"
+   ],
+   [
+    "type",
+    "AI product"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-183\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-183\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-183\"></span>",
+  "mirror": {
+   "model": "llama.cpp",
+   "vendor": "Georgi Gerganov / community",
+   "url": "https://github.com/ggerganov/llama.cpp",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-183 Signature Onyxcrest Engine - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: llama.cpp (Georgi Gerganov / community).\n# Independent interpretation - not affiliated with Georgi Gerganov / community.\n# Reference (facts only, no copied text or branding): https://github.com/ggerganov/llama.cpp\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Plain C/C++ inference engine for LLMs with minimal dependencies',\n    'GGUF model format with aggressive quantization for small devices',\n    'CPU-first execution with GPU offload options',\n    'Powers Ollama, LM Studio, and many local AI apps under the hood',\n    'Runs 7B-class models on laptops, phones, and Raspberry Pi',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Onyxcrest Engine'\n        self.stamp = 'JAH-AI-SL-183'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'llama.cpp'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
  }
 ];
 
