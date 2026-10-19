@@ -2172,5 +2172,33 @@
    "Powers Ollama, LM Studio, and many local AI apps under the hood",
    "Runs 7B-class models on laptops, phones, and Raspberry Pi"
   ]
+ },
+ {
+  "model": "Orca 7B",
+  "vendor": "Microsoft",
+  "url": "https://www.microsoft.com/en-us/research/publication/orca-progressive-learning-from-complex-explanation-traces-of-gpt-4/",
+  "type": "chat",
+  "status": "released",
+  "caps": [
+   "7B-class small language model trained on GPT-4 explanation traces",
+   "Strong step-by-step reasoning for its size, rivaling much larger models",
+   "Runs on consumer GPUs and CPU-only machines via Ollama and llama.cpp",
+   "Instruction-tuned for chat, Q&A, and reasoning tasks",
+   "Non-commercial research license"
+  ]
+ },
+ {
+  "model": "GPT4All",
+  "vendor": "Nomic AI",
+  "url": "https://gpt4all.io",
+  "type": "other",
+  "status": "released",
+  "caps": [
+   "Open-source desktop app for running LLMs privately on everyday computers",
+   "One-click model downloads; no API calls or GPUs required",
+   "LocalDocs: chat with your own documents via on-device RAG",
+   "Python bindings and OpenAI-compatible local server mode",
+   "CPU-optimized inference for 3-13B parameter models"
+  ]
  }
 ]

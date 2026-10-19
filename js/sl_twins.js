@@ -9493,6 +9493,114 @@ var SL_TWINS = [
    "status": "released"
   },
   "py": "# JAH-AI-SL-183 Signature Onyxcrest Engine - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: llama.cpp (Georgi Gerganov / community).\n# Independent interpretation - not affiliated with Georgi Gerganov / community.\n# Reference (facts only, no copied text or branding): https://github.com/ggerganov/llama.cpp\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Plain C/C++ inference engine for LLMs with minimal dependencies',\n    'GGUF model format with aggressive quantization for small devices',\n    'CPU-first execution with GPU offload options',\n    'Powers Ollama, LM Studio, and many local AI apps under the hood',\n    'Runs 7B-class models on laptops, phones, and Raspberry Pi',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Onyxcrest Engine'\n        self.stamp = 'JAH-AI-SL-183'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'llama.cpp'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-184",
+  "name": "Signature Prairiecrest Mind",
+  "stamp": "JAH-AI-SL-184",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring Orca 7B (Microsoft) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with Microsoft. It is built to do everything the original's website claims: 7B-class small language model trained on GPT-4 explanation traces; Strong step-by-step reasoning for its size, rivaling much larger models; Runs on consumer GPUs and CPU-only machines via Ollama and llama.cpp; Instruction-tuned for chat, Q&A, and reasoning tasks; Non-commercial research license.",
+  "abilities": [
+   "7B-class small language model trained on GPT-4 explanation traces",
+   "Strong step-by-step reasoning for its size, rivaling much larger models",
+   "Runs on consumer GPUs and CPU-only machines via Ollama and llama.cpp",
+   "Instruction-tuned for chat, Q&A, and reasoning tasks",
+   "Non-commercial research license"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "Orca 7B"
+   ],
+   [
+    "vendor",
+    "Microsoft"
+   ],
+   [
+    "type",
+    "chat / language model"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-184\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-184\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-184\"></span>",
+  "mirror": {
+   "model": "Orca 7B",
+   "vendor": "Microsoft",
+   "url": "https://www.microsoft.com/en-us/research/publication/orca-progressive-learning-from-complex-explanation-traces-of-gpt-4/",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-184 Signature Prairiecrest Mind - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: Orca 7B (Microsoft).\n# Independent interpretation - not affiliated with Microsoft.\n# Reference (facts only, no copied text or branding): https://www.microsoft.com/en-us/research/publication/orca-progressive-learning-from-complex-explanation-traces-of-gpt-4/\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    '7B-class small language model trained on GPT-4 explanation traces',\n    'Strong step-by-step reasoning for its size, rivaling much larger models',\n    'Runs on consumer GPUs and CPU-only machines via Ollama and llama.cpp',\n    'Instruction-tuned for chat, Q&A, and reasoning tasks',\n    'Non-commercial research license',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Prairiecrest Mind'\n        self.stamp = 'JAH-AI-SL-184'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'Orca 7B'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
+ },
+ {
+  "id": "sl-185",
+  "name": "Signature Quartzcrest Engine",
+  "stamp": "JAH-AI-SL-185",
+  "ver": "1.0",
+  "kind": "sl",
+  "mentality": "Signature-Line twin mirroring GPT4All (Nomic AI) - an original implementation built from Signature math, in Manon's domain and legally distinct from the original. Independent interpretation; not affiliated with Nomic AI. It is built to do everything the original's website claims: Open-source desktop app for running LLMs privately on everyday computers; One-click model downloads; no API calls or GPUs required; LocalDocs: chat with your own documents via on-device RAG; Python bindings and OpenAI-compatible local server mode; CPU-optimized inference for 3-13B parameter models.",
+  "abilities": [
+   "Open-source desktop app for running LLMs privately on everyday computers",
+   "One-click model downloads; no API calls or GPUs required",
+   "LocalDocs: chat with your own documents via on-device RAG",
+   "Python bindings and OpenAI-compatible local server mode",
+   "CPU-optimized inference for 3-13B parameter models"
+  ],
+  "params": [
+   [
+    "engine",
+    "Signature-math deterministic core"
+   ],
+   [
+    "line",
+    "Signature-Line"
+   ],
+   [
+    "mirrors",
+    "GPT4All"
+   ],
+   [
+    "vendor",
+    "Nomic AI"
+   ],
+   [
+    "type",
+    "AI product"
+   ],
+   [
+    "original status",
+    "released"
+   ],
+   [
+    "implementation",
+    "original - no copied code, branding, or marketing text"
+   ]
+  ],
+  "demoTitle": "Capability check",
+  "demoHTML": "<input type=\"text\" id=\"sl-in-sl-185\" placeholder=\"Describe a task, e.g. summarize a document\" style=\"width:100%\"><button data-sl=\"sl-185\" onclick=\"slDemo(this)\">Check capability</button><span class=\"out\" id=\"sl-out-sl-185\"></span>",
+  "mirror": {
+   "model": "GPT4All",
+   "vendor": "Nomic AI",
+   "url": "https://gpt4all.io",
+   "status": "released"
+  },
+  "py": "# JAH-AI-SL-185 Signature Quartzcrest Engine - Signature-Line twin\n# Original Signature-math implementation by Justin Addam Higgins.\n# Mirrors the claimed capabilities of: GPT4All (Nomic AI).\n# Independent interpretation - not affiliated with Nomic AI.\n# Reference (facts only, no copied text or branding): https://gpt4all.io\n# Runs anywhere with Python 3; no external dependencies.\n\nCAPABILITIES = [\n    'Open-source desktop app for running LLMs privately on everyday computers',\n    'One-click model downloads; no API calls or GPUs required',\n    'LocalDocs: chat with your own documents via on-device RAG',\n    'Python bindings and OpenAI-compatible local server mode',\n    'CPU-optimized inference for 3-13B parameter models',\n]\n\nclass SignatureLineTwin:\n    \"\"\"Deterministic Signature-math persona core.\"\"\"\n    def __init__(self):\n        self.name = 'Signature Quartzcrest Engine'\n        self.stamp = 'JAH-AI-SL-185'\n        self.engine = 'signature-math deterministic core'\n        self.mirrors = 'GPT4All'\n\n    def capability_check(self, task):\n        task = task.lower()\n        hits = []\n        for c in CAPABILITIES:\n            words = [w for w in c.lower().split() if len(w) > 3]\n            if any(w.strip('.,;:()') in task for w in words):\n                hits.append(c)\n        return hits\n\n    def respond(self, prompt):\n        hits = self.capability_check(prompt)\n        if hits:\n            return self.name + ' engages: ' + '; '.join(hits)\n        return (self.name + ' ready. Ask me about: '\n                + ', '.join(CAPABILITIES[:3]))\n\nif __name__ == '__main__':\n    t = SignatureLineTwin()\n    print(t.name, t.stamp, '-', t.engine)\n    print('Mirrors the claimed capabilities of:', t.mirrors)\n    while True:\n        try:\n            q = input('you> ')\n        except (EOFError, KeyboardInterrupt):\n            break\n        if q.strip().lower() in ('quit', 'exit'):\n            break\n        print(t.respond(q))\n"
  }
 ];
 
