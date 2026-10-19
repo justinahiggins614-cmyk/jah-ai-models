@@ -1,11 +1,11 @@
 {
  "site": "The Signature AI Telephone Book",
  "site_url": "https://justinahiggins614-cmyk.github.io/jah-ai-models/",
- "generated_at": "2026-10-05T02:51:15Z",
+ "generated_at": "2026-10-18",
  "for_bots": "Machine-readable catalog of the embedded AI files. Word AIs (JAH-AI-WORD-######) are lazy-loaded from the Spec Catalog word-AI index; hybrid files (JAH-AI-MIX-######) are generated deterministically on demand.",
  "counts": {
-  "embedded_total": 443,
-  "system": 11,
+  "embedded_total": 444,
+  "system": 12,
   "persona": 6,
   "domain": 253,
   "sl": 171,
@@ -21240,6 +21240,55 @@
     "download": "sky-kitchen-captain.py",
     "deep_link": "#file-jah-ai-mix-002499",
     "live_url": "https://justinahiggins614-cmyk.github.io/signature-backend/mixes.html"
+   }
+  },
+  {
+   "ID": "JAH-AI-SIG-013",
+   "NAME": "JAH-N Universal Ecosystem Intelligence Engine",
+   "ROLE": "SYSTEM MODEL",
+   "TYPE": "system",
+   "CATEGORY": "System",
+   "VERSION": "1.0",
+   "STATUS": "SPECIFICATION",
+   "DESCRIPTION": "Build Test 2 blueprint: a self-expanding, hierarchical, multi-model AI system that uses the whole JAH Network as its construction kit — master coordinator, domain/database/file/record agents, universal retrieval, deterministic + probabilistic hybrid reasoning, boundless generation, persistent memory, verification gates, Archive Control Center, online/offline operation. SPECIFICATION/BLUEPRINT v1.0 — not a deployed running system. Design vs deployed scale kept distinct: 5,681 databases live verified 2026-10-18, network target 10,000.",
+   "CAPABILITIES": [
+    "Master coordinator: plans tasks, selects smallest sufficient agent/resource set, manages dependencies and verification",
+    "Hierarchical agent network: master, domain, database, file, and record/execution intelligence levels",
+    "Universal knowledge retrieval: multi-database evidence packages with provenance, ranking, contradiction detection",
+    "Hybrid reasoning: deterministic computation where reproducible, probabilistic inference where interpretive, explicit method selection",
+    "Boundless generation: database, record, file, dataset, agent, software, test, and documentation generators with a 10-stage validation pipeline",
+    "Persistent memory: session, long-term, episodic, semantic, procedural, resource, and evaluation stores",
+    "Independent verification: PASS / PASS WITH LIMITATIONS / NEEDS REVIEW / FAIL quality gates on evidence, not self-assessment",
+    "Archive Control Center: central registry, versioning, provenance, duplicate detection for the whole knowledge network",
+    "Online/offline operation: local inference and indexes offline, authorized remote models and tools online",
+    "Controlled self-expansion: gap analysis, candidate ranking, validation, and measured improvement before registration"
+   ],
+   "LIMITATIONS": "This is a specification blueprint, not an implemented system — acceptance tests A–O are unrun. Million-database / billion-file figures are target architecture; live network is 5,681 databases and growing toward 10,000. Every advertised capability must be connected and verified through actual interfaces before it counts as working.",
+   "SOURCE": "Build Test 2 architecture spec (2026-10-18), fixed by Muse: live counts corrected to 5,681 verified, tracking params stripped, marked blueprint. Verbatim paste: hidden_files/build-test-2-jahn-universal-ecosystem-engine.txt; fixed spec: hidden_files/build-test-2-fixed-spec.txt",
+   "SIGNATURE_NUMBER": "1-200-0000013",
+   "HASH": "sha256:c1688c94a946b687eb3df0395e6ae555cb935d0f1af62d9c809a47d065234005",
+   "RUNTIME": {
+    "works_offline": "Proposed in spec (local model runtime, local indexes) — unimplemented",
+    "internet_required": "YES for remote model APIs and current-information retrieval when online",
+    "local_download": "NO — blueprint only, nothing to download yet",
+    "browser_only": "NO — proposed Python/FastAPI stack, unimplemented",
+    "what_the_chat_is": "No chat exists for this entry — it is a specification, not a running AI",
+    "what_the_demo_is": "No demo exists — blueprint only",
+    "what_you_download": "Nothing — specification document only"
+   },
+   "VOICE": {
+    "read_aloud": true,
+    "engine": "browser speech synthesis (tiered TTS)"
+   },
+   "DEMO": {
+    "kind": "",
+    "runs_in": "",
+    "url": ""
+   },
+   "ARTIFACTS": {},
+   "RELATIONSHIPS": {
+    "build_test_lineage": "Build Test 2 (follows the 2026-10-16 Merica-L Build Test 1 pattern: test prompt BUILD AI USING DATABASES)",
+    "network": "Designed to run on the JAH Databases network (https://justinahiggins614-cmyk.github.io/jah-databases/)"
    }
   }
  ]
