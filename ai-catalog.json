@@ -22568,6 +22568,102 @@
     "deep_link": "#file-activation-functions-signature",
     "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/activation-functions-signature/"
    }
+  },
+  {
+   "ID": "JAH-AI-SIG-025",
+   "NAME": "JAH Attention Mechanism Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The archive-aware AI of the Attention Mechanism Database (Property of Justin Addam Higgins): the master public record of the attention mechanism — scaled dot-product attention, softmax(QK^T / sqrt(d)) · V, the sqrt(d) scaling that keeps softmax a mixer instead of a switch, and the softmax normalizer — fact-checked with executed demos. It teaches simple to most complex, answers from the archive, and runs the boundless attention-mechanism generator (hard stop 10^15 records).",
+   "CAPABILITIES": [
+    "Look up any attention mechanism: queries, keys, values, scaling, softmax normalization",
+    "Teach attention on the ladder: simple normalizers to compounded attention to most complex mixers",
+    "Run and explain every record's executed program demo",
+    "Generate further attention-mechanism records with the boundless generator within its cap",
+    "Build an assistant like the user's personal assistant for attention-mechanism questions"
+   ],
+   "LIMITATIONS": "Answers from the Attention Mechanism Database archive and the JAH network; speculative entries are labeled with feasibility tiers, never presented as established fact.",
+   "STATUS": "PUBLISHED",
+   "VERSION": "1.0",
+   "ROLE": "DATABASE AI",
+   "RUNTIME": {
+    "what_you_download": "Database archive index + generator script (human-readable) — logic and records, not trained-model weights",
+    "what_the_demo_is": "record demos executed at build time; the generator runs in the page's JavaScript",
+    "what_the_chat_is": "archive-aware Q&A over the database records; can build an assistant like the user's personal assistant",
+    "works_offline": "YES — after the page loads",
+    "internet_required": "NO for demos; YES once to fetch the page",
+    "browser_only": "NO — records and demos run anywhere with Python 3",
+    "local_download": "YES"
+   },
+   "DEMO": {
+    "kind": "database",
+    "runs_in": "browser",
+    "url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/attention-mechanism/"
+   },
+   "VOICE": {
+    "read_aloud": true,
+    "engine": "browser speech synthesis (tiered TTS)"
+   },
+   "SIGNATURE_NUMBER": "1-200-0000025",
+   "SOURCE": "Signature-made by Justin Addam Higgins — archive-aware database AI",
+   "RELATIONSHIPS": {
+    "database": "attention-mechanism",
+    "spec": "JAH-SPEC-970146"
+   },
+   "HASH": "sha256:23a682abaab374a822021549717ee54a520bf8be280e59ca5757d934b744c39c",
+   "ARTIFACTS": {
+    "download": "gen-attention-mechanism.js",
+    "deep_link": "#file-attention-mechanism",
+    "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/attention-mechanism/"
+   }
+  },
+  {
+   "ID": "JAH-AI-SIG-026",
+   "NAME": "Signature JAH Attention Mechanism Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The archive-aware AI of the Attention Mechanism Signature Database (Property of Justin Addam Higgins): Manon's original counterparts to the public attention canon — knowing-when event-triggered attention and the adaptive softmax temperature — real and working inside the Signature ecosystem. It teaches simple to most complex, answers from the archive, and runs the boundless generator (hard stop 10^15 records).",
+   "CAPABILITIES": [
+    "Look up any attention mechanism: queries, keys, values, scaling, softmax normalization",
+    "Teach attention on the ladder: simple normalizers to compounded attention to most complex mixers",
+    "Run and explain every record's executed program demo",
+    "Generate further attention-mechanism records with the boundless generator within its cap",
+    "Build an assistant like the user's personal assistant for attention-mechanism questions"
+   ],
+   "LIMITATIONS": "Answers from the Attention Mechanism Signature Database archive and the JAH network; speculative entries are labeled with feasibility tiers, never presented as established fact.",
+   "STATUS": "PUBLISHED",
+   "VERSION": "1.0",
+   "ROLE": "DATABASE AI",
+   "RUNTIME": {
+    "what_you_download": "Database archive index + generator script (human-readable) — logic and records, not trained-model weights",
+    "what_the_demo_is": "record demos executed at build time; the generator runs in the page's JavaScript",
+    "what_the_chat_is": "archive-aware Q&A over the database records; can build an assistant like the user's personal assistant",
+    "works_offline": "YES — after the page loads",
+    "internet_required": "NO for demos; YES once to fetch the page",
+    "browser_only": "NO — records and demos run anywhere with Python 3",
+    "local_download": "YES"
+   },
+   "DEMO": {
+    "kind": "database",
+    "runs_in": "browser",
+    "url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/attention-mechanism-signature/"
+   },
+   "VOICE": {
+    "read_aloud": true,
+    "engine": "browser speech synthesis (tiered TTS)"
+   },
+   "SIGNATURE_NUMBER": "1-200-0000026",
+   "SOURCE": "Signature-made by Justin Addam Higgins — archive-aware database AI",
+   "RELATIONSHIPS": {
+    "database": "attention-mechanism-signature",
+    "spec": "JAH-SPEC-970146"
+   },
+   "HASH": "sha256:653f74a2ae8953386487951f934ef29095bf0aa5234b6eb875a6bdff0f528dcb",
+   "ARTIFACTS": {
+    "download": "gen-attention-mechanism-signature.js",
+    "deep_link": "#file-attention-mechanism-signature",
+    "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/attention-mechanism-signature/"
+   }
   }
  ]
 }
