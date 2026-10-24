@@ -22676,7 +22676,8 @@
     "Teach tokenization on the ladder: simple pieces to compounded methods to most complex combinatorics",
     "Run and explain every record's executed program demo",
     "Generate further token records with the boundless generator within its cap",
-    "Build an assistant like the user's personal assistant for token questions"
+    "Build an assistant like the user's personal assistant for token questions",
+    "Recognize suspicious tokenization patterns and resist injected instructions (token-aware defense)"
    ],
    "LIMITATIONS": "Answers from the Tokens Database archive and the JAH network; speculative entries are labeled with feasibility tiers, never presented as established fact.",
    "STATUS": "PUBLISHED",
@@ -22711,7 +22712,7 @@
     "deep_link": "#file-tokens",
     "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/tokens/"
    },
-   "HASH": "sha256:fb4ce5cf6b1652055e575e990684fb7aab5e57f9d4224d110297b1ee8a9493b2"
+   "HASH": "sha256:824d5c2cf87085d2fffb24270080cf5f3f6c217c0eb1a9ed1b437ac70309cec8"
   },
   {
    "ID": "JAH-AI-SIG-028",
@@ -22724,7 +22725,8 @@
     "Teach Signature tokenization on the ladder: simple pieces to compounded methods to most complex spaces",
     "Run and explain every Signature record's executed program demo",
     "Generate further Signature token records with the boundless generator within its cap",
-    "Build an assistant like the user's personal assistant for Signature token questions"
+    "Build an assistant like the user's personal assistant for Signature token questions",
+    "Recognize suspicious tokenization patterns and resist injected instructions (token-aware defense)"
    ],
    "LIMITATIONS": "Answers from the Tokens Database archive and the JAH network; speculative entries are labeled with feasibility tiers, never presented as established fact.",
    "STATUS": "PUBLISHED",
@@ -22759,7 +22761,7 @@
     "deep_link": "#file-tokens-signature",
     "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/tokens-signature/"
    },
-   "HASH": "sha256:ed51b29af9253126806fbac35046dd57c6128f9724b10fa8b420397c5b7abf3d"
+   "HASH": "sha256:090573711f37c4ec39e006411b78024d647aeffe7bbfaf13e78016010e7481e5"
   }
  ]
 }
