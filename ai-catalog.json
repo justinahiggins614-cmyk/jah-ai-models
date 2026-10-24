@@ -22664,6 +22664,102 @@
     "deep_link": "#file-attention-mechanism-signature",
     "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/attention-mechanism-signature/"
    }
+  },
+  {
+   "ID": "JAH-AI-SIG-027",
+   "NAME": "JAH Tokens Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The archive-aware AI of the Tokens Database (Property of Justin Addam Higgins): the master public record of tokens and tokenization — what a token is, BPE, WordPiece, Unigram/SentencePiece, character- and byte-level methods, fact-checked vocabulary sizes across real models, the token-to-probability pipeline, out-of-distribution tokenization, and token-sequence combinatorics — fact-checked with executed demos. It teaches simple to most complex, answers from the archive, and runs the boundless tokens generator (hard stop 10^15 records).",
+   "CAPABILITIES": [
+    "Look up any token concept: token types, BPE, WordPiece, Unigram, vocab sizes, pipelines",
+    "Teach tokenization on the ladder: simple pieces to compounded methods to most complex combinatorics",
+    "Run and explain every record's executed program demo",
+    "Generate further token records with the boundless generator within its cap",
+    "Build an assistant like the user's personal assistant for token questions"
+   ],
+   "LIMITATIONS": "Answers from the Tokens Database archive and the JAH network; speculative entries are labeled with feasibility tiers, never presented as established fact.",
+   "STATUS": "PUBLISHED",
+   "VERSION": "1.0",
+   "ROLE": "DATABASE AI",
+   "RUNTIME": {
+    "what_you_download": "Database archive index + generator script (human-readable) — logic and records, not trained-model weights",
+    "what_the_demo_is": "record demos executed at build time; the generator runs in the page's JavaScript",
+    "what_the_chat_is": "archive-aware Q&A over the database records; can build an assistant like the user's personal assistant",
+    "works_offline": "YES — after the page loads",
+    "internet_required": "NO for demos; YES once to fetch the page",
+    "browser_only": "NO — records and demos run anywhere with Python 3",
+    "local_download": "YES"
+   },
+   "DEMO": {
+    "kind": "database",
+    "runs_in": "browser",
+    "url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/tokens/"
+   },
+   "VOICE": {
+    "read_aloud": true,
+    "engine": "browser speech synthesis (tiered TTS)"
+   },
+   "SIGNATURE_NUMBER": "1-200-0000027",
+   "SOURCE": "Signature-made by Justin Addam Higgins — archive-aware database AI",
+   "RELATIONSHIPS": {
+    "database": "tokens",
+    "spec": "JAH-SPEC-970147"
+   },
+   "ARTIFACTS": {
+    "download": "gen-tokens.js",
+    "deep_link": "#file-tokens",
+    "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/tokens/"
+   },
+   "HASH": "sha256:fb4ce5cf6b1652055e575e990684fb7aab5e57f9d4224d110297b1ee8a9493b2"
+  },
+  {
+   "ID": "JAH-AI-SIG-028",
+   "NAME": "Signature JAH Tokens Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The archive-aware AI of the Tokens Signature Database (Property of Justin Addam Higgins): Manon's original Signature counterparts to the public token canon — meaning-led pieces, Signature merge/match/prune tokenizers, the Signature vocabulary ladder, the Signature piece-to-probability pipeline, and Signature segmentation studies — real and working inside the Signature ecosystem. It teaches simple to most complex, answers from the archive, and runs the boundless tokens-signature generator (hard stop 10^15 records).",
+   "CAPABILITIES": [
+    "Look up any Signature token concept: meaning-led pieces, merge/match/prune tokenizers, vocabulary ladder",
+    "Teach Signature tokenization on the ladder: simple pieces to compounded methods to most complex spaces",
+    "Run and explain every Signature record's executed program demo",
+    "Generate further Signature token records with the boundless generator within its cap",
+    "Build an assistant like the user's personal assistant for Signature token questions"
+   ],
+   "LIMITATIONS": "Answers from the Tokens Database archive and the JAH network; speculative entries are labeled with feasibility tiers, never presented as established fact.",
+   "STATUS": "PUBLISHED",
+   "VERSION": "1.0",
+   "ROLE": "DATABASE AI",
+   "RUNTIME": {
+    "what_you_download": "Database archive index + generator script (human-readable) — logic and records, not trained-model weights",
+    "what_the_demo_is": "record demos executed at build time; the generator runs in the page's JavaScript",
+    "what_the_chat_is": "archive-aware Q&A over the database records; can build an assistant like the user's personal assistant",
+    "works_offline": "YES — after the page loads",
+    "internet_required": "NO for demos; YES once to fetch the page",
+    "browser_only": "NO — records and demos run anywhere with Python 3",
+    "local_download": "YES"
+   },
+   "DEMO": {
+    "kind": "database",
+    "runs_in": "browser",
+    "url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/tokens-signature/"
+   },
+   "VOICE": {
+    "read_aloud": true,
+    "engine": "browser speech synthesis (tiered TTS)"
+   },
+   "SIGNATURE_NUMBER": "1-200-0000028",
+   "SOURCE": "Signature-made by Justin Addam Higgins — archive-aware database AI",
+   "RELATIONSHIPS": {
+    "database": "tokens-signature",
+    "spec": "JAH-SPEC-970147"
+   },
+   "ARTIFACTS": {
+    "download": "gen-tokens-signature.js",
+    "deep_link": "#file-tokens-signature",
+    "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/tokens-signature/"
+   },
+   "HASH": "sha256:ed51b29af9253126806fbac35046dd57c6128f9724b10fa8b420397c5b7abf3d"
   }
  ]
 }
