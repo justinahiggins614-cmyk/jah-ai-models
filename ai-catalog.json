@@ -22472,6 +22472,102 @@
     "deep_link": "#file-technology-signature",
     "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/technology-signature/"
    }
+  },
+  {
+   "ID": "JAH-AI-SIG-023",
+   "NAME": "JAH Activation Functions Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The archive-aware AI of the Activation Functions Database (Property of Justin Addam Higgins): the master public record of activation functions — the ReLU family, nonlinear neural control, the inverted pendulum balancing benchmark, and the universal approximation theorem — fact-checked with executed demos. It teaches simple to most complex, answers from the archive, and runs the boundless activation-function generator (hard stop 10^15 records).",
+   "CAPABILITIES": [
+    "Look up any activation function: definition, formula, variants, where it is used",
+    "Teach activation functions on the ladder: simple hinges to compounded control to most complex approximation",
+    "Run and explain every record's executed program demo",
+    "Generate further activation-function records with the boundless generator within its cap",
+    "Build an assistant like the user's personal assistant for activation-function questions"
+   ],
+   "LIMITATIONS": "Answers from the Activation Functions Database archive and the JAH network; speculative entries are labeled with feasibility tiers, never presented as established fact.",
+   "STATUS": "PUBLISHED",
+   "VERSION": "1.0",
+   "ROLE": "DATABASE AI",
+   "RUNTIME": {
+    "what_you_download": "Database archive index + generator script (human-readable) — logic and records, not trained-model weights",
+    "what_the_demo_is": "record demos executed at build time; the generator runs in the page's JavaScript",
+    "what_the_chat_is": "archive-aware Q&A over the database records; can build an assistant like the user's personal assistant",
+    "works_offline": "YES — after the page loads",
+    "internet_required": "NO for demos; YES once to fetch the page",
+    "browser_only": "NO — records and demos run anywhere with Python 3",
+    "local_download": "YES"
+   },
+   "DEMO": {
+    "kind": "database",
+    "runs_in": "browser",
+    "url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/activation-functions/"
+   },
+   "VOICE": {
+    "read_aloud": true,
+    "engine": "browser speech synthesis (tiered TTS)"
+   },
+   "SIGNATURE_NUMBER": "1-200-0000023",
+   "SOURCE": "Signature-made by Justin Addam Higgins — archive-aware database AI",
+   "RELATIONSHIPS": {
+    "database": "activation-functions",
+    "spec": "JAH-SPEC-970145"
+   },
+   "HASH": "sha256:7d1d53c05463d4a24842d6b5ea7e82030665053dc0033e6206c559bf4e25bc1e",
+   "ARTIFACTS": {
+    "download": "gen-activation-functions.js",
+    "deep_link": "#file-activation-functions",
+    "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/activation-functions/"
+   }
+  },
+  {
+   "ID": "JAH-AI-SIG-024",
+   "NAME": "Signature JAH Activation Functions Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The archive-aware AI of the Activation Functions Signature Database (Property of Justin Addam Higgins): Manon's original counterparts to the public activation-function canon — tunable-knee bent functions, knowing-when event-triggered control, the anticipation balance engine, and the approximation ladder — real and working inside the Signature ecosystem. It teaches simple to most complex, answers from the archive, and runs the boundless generator (hard stop 10^15 records).",
+   "CAPABILITIES": [
+    "Look up any activation function: definition, formula, variants, where it is used",
+    "Teach activation functions on the ladder: simple hinges to compounded control to most complex approximation",
+    "Run and explain every record's executed program demo",
+    "Generate further activation-function records with the boundless generator within its cap",
+    "Build an assistant like the user's personal assistant for activation-function questions"
+   ],
+   "LIMITATIONS": "Answers from the Activation Functions Signature Database archive and the JAH network; speculative entries are labeled with feasibility tiers, never presented as established fact.",
+   "STATUS": "PUBLISHED",
+   "VERSION": "1.0",
+   "ROLE": "DATABASE AI",
+   "RUNTIME": {
+    "what_you_download": "Database archive index + generator script (human-readable) — logic and records, not trained-model weights",
+    "what_the_demo_is": "record demos executed at build time; the generator runs in the page's JavaScript",
+    "what_the_chat_is": "archive-aware Q&A over the database records; can build an assistant like the user's personal assistant",
+    "works_offline": "YES — after the page loads",
+    "internet_required": "NO for demos; YES once to fetch the page",
+    "browser_only": "NO — records and demos run anywhere with Python 3",
+    "local_download": "YES"
+   },
+   "DEMO": {
+    "kind": "database",
+    "runs_in": "browser",
+    "url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/activation-functions-signature/"
+   },
+   "VOICE": {
+    "read_aloud": true,
+    "engine": "browser speech synthesis (tiered TTS)"
+   },
+   "SIGNATURE_NUMBER": "1-200-0000024",
+   "SOURCE": "Signature-made by Justin Addam Higgins — archive-aware database AI",
+   "RELATIONSHIPS": {
+    "database": "activation-functions-signature",
+    "spec": "JAH-SPEC-970145"
+   },
+   "HASH": "sha256:62bed94358749e9cb0d765eddaca78e01304ab711ac074af2d793524af830fc7",
+   "ARTIFACTS": {
+    "download": "gen-activation-functions-signature.js",
+    "deep_link": "#file-activation-functions-signature",
+    "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/activation-functions-signature/"
+   }
   }
  ]
 }
