@@ -22762,6 +22762,741 @@
     "live_url": "https://justinahiggins614-cmyk.github.io/jah-databases/db/tokens-signature/"
    },
    "HASH": "sha256:090573711f37c4ec39e006411b78024d647aeffe7bbfaf13e78016010e7481e5"
+  },
+  {
+   "ID": "JAH-AI-SIG-029",
+   "NAME": "JAH All Worlds Data Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the All World's Data Database; archive-aware guide to Earth's public-data domains and source families."
+  },
+  {
+   "ID": "JAH-AI-SIG-030",
+   "NAME": "Signature JAH All Worlds Data Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the All World's Data Signature Database; Signature guide to the mirrored inventory."
+  },
+  {
+   "ID": "JAH-AI-SIG-031",
+   "NAME": "JAH All Universal Data Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the All Universal Data Database; archive-aware guide to universe-scale catalogs, constants, frames, and standards."
+  },
+  {
+   "ID": "JAH-AI-SIG-032",
+   "NAME": "Signature JAH All Universal Data Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the All Universal Data Signature Database; Signature guide to the mirrored universal inventory."
+  },
+  {
+   "ID": "JAH-AI-SIG-033",
+   "NAME": "JAH Distributed Index Federation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Distributed Index Federation Database Guide is the database AI for Distributed Index Federation Database (distributed-index-federation), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-034",
+   "NAME": "Signature JAH Distributed Index Federation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Distributed Index Federation Database Guide is the database AI for Distributed Index Federation Database (distributed-index-federation-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-035",
+   "NAME": "JAH Automatic Shard Placement Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Automatic Shard Placement Database Guide is the database AI for Automatic Shard Placement Database (automatic-shard-placement), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-036",
+   "NAME": "Signature JAH Automatic Shard Placement Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Automatic Shard Placement Database Guide is the database AI for Automatic Shard Placement Database (automatic-shard-placement-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-037",
+   "NAME": "JAH Backpressure Workload Scheduling Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Backpressure Workload Scheduling Database Guide is the database AI for Backpressure Workload Scheduling Database (backpressure-workload-scheduling), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-038",
+   "NAME": "Signature JAH Backpressure Workload Scheduling Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Backpressure Workload Scheduling Database Guide is the database AI for Backpressure Workload Scheduling Database (backpressure-workload-scheduling-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-039",
+   "NAME": "JAH Resource-Aware Generation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Resource-Aware Generation Database Guide is the database AI for Resource-Aware Generation Database (resource-aware-generation), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-040",
+   "NAME": "Signature JAH Resource-Aware Generation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Resource-Aware Generation Database Guide is the database AI for Resource-Aware Generation Database (resource-aware-generation-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-041",
+   "NAME": "JAH Hot-Cold Storage Tiers Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Hot-Cold Storage Tiers Database Guide is the database AI for Hot-Cold Storage Tiers Database (hot-cold-storage-tiers), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-042",
+   "NAME": "Signature JAH Hot-Cold Storage Tiers Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Hot-Cold Storage Tiers Database Guide is the database AI for Hot-Cold Storage Tiers Database (hot-cold-storage-tiers-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-043",
+   "NAME": "JAH Cross-Repository Synchronization Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Cross-Repository Synchronization Database Guide is the database AI for Cross-Repository Synchronization Database (cross-repository-synchronization), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-044",
+   "NAME": "Signature JAH Cross-Repository Synchronization Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Cross-Repository Synchronization Database Guide is the database AI for Cross-Repository Synchronization Database (cross-repository-synchronization-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-045",
+   "NAME": "JAH Global Transaction Consistency Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Global Transaction Consistency Database Guide is the database AI for Global Transaction Consistency Database (global-transaction-consistency), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-046",
+   "NAME": "Signature JAH Global Transaction Consistency Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Global Transaction Consistency Database Guide is the database AI for Global Transaction Consistency Database (global-transaction-consistency-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-047",
+   "NAME": "JAH Dynamic Specialist Selection Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Dynamic Specialist Selection Database Guide is the database AI for Dynamic Specialist Selection Database (dynamic-specialist-selection), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-048",
+   "NAME": "Signature JAH Dynamic Specialist Selection Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Dynamic Specialist Selection Database Guide is the database AI for Dynamic Specialist Selection Database (dynamic-specialist-selection-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-049",
+   "NAME": "JAH Evidence-Weighted Synthesis Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Evidence-Weighted Synthesis Database Guide is the database AI for Evidence-Weighted Synthesis Database (evidence-weighted-synthesis), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-050",
+   "NAME": "Signature JAH Evidence-Weighted Synthesis Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Evidence-Weighted Synthesis Database Guide is the database AI for Evidence-Weighted Synthesis Database (evidence-weighted-synthesis-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-051",
+   "NAME": "JAH Agent Delegation Negotiation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Agent Delegation Negotiation Database Guide is the database AI for Agent Delegation Negotiation Database (agent-delegation-negotiation), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-052",
+   "NAME": "Signature JAH Agent Delegation Negotiation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Agent Delegation Negotiation Database Guide is the database AI for Agent Delegation Negotiation Database (agent-delegation-negotiation-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-053",
+   "NAME": "JAH Human Approval Escalation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Human Approval Escalation Database Guide is the database AI for Human Approval Escalation Database (human-approval-escalation), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-054",
+   "NAME": "Signature JAH Human Approval Escalation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Human Approval Escalation Database Guide is the database AI for Human Approval Escalation Database (human-approval-escalation-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-055",
+   "NAME": "JAH Typed Artifact Generation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Typed Artifact Generation Database Guide is the database AI for Typed Artifact Generation Database (typed-artifact-generation), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-056",
+   "NAME": "Signature JAH Typed Artifact Generation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Typed Artifact Generation Database Guide is the database AI for Typed Artifact Generation Database (typed-artifact-generation-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-057",
+   "NAME": "JAH Constraint-Aware Generation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Constraint-Aware Generation Database Guide is the database AI for Constraint-Aware Generation Database (constraint-aware-generation), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-058",
+   "NAME": "Signature JAH Constraint-Aware Generation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Constraint-Aware Generation Database Guide is the database AI for Constraint-Aware Generation Database (constraint-aware-generation-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-059",
+   "NAME": "JAH Dependency-Aware Regeneration Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Dependency-Aware Regeneration Database Guide is the database AI for Dependency-Aware Regeneration Database (dependency-aware-regeneration), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-060",
+   "NAME": "Signature JAH Dependency-Aware Regeneration Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Dependency-Aware Regeneration Database Guide is the database AI for Dependency-Aware Regeneration Database (dependency-aware-regeneration-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-061",
+   "NAME": "JAH Incremental Generation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Incremental Generation Database Guide is the database AI for Incremental Generation Database (incremental-generation), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-062",
+   "NAME": "Signature JAH Incremental Generation Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Incremental Generation Database Guide is the database AI for Incremental Generation Database (incremental-generation-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-063",
+   "NAME": "JAH Generator Quality Scoring Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Generator Quality Scoring Database Guide is the database AI for Generator Quality Scoring Database (generator-quality-scoring), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-064",
+   "NAME": "Signature JAH Generator Quality Scoring Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Generator Quality Scoring Database Guide is the database AI for Generator Quality Scoring Database (generator-quality-scoring-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-065",
+   "NAME": "JAH Novelty Verification Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Novelty Verification Database Guide is the database AI for Novelty Verification Database (novelty-verification), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-066",
+   "NAME": "Signature JAH Novelty Verification Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Novelty Verification Database Guide is the database AI for Novelty Verification Database (novelty-verification-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-067",
+   "NAME": "JAH Generator Lifecycle Management Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Generator Lifecycle Management Database Guide is the database AI for Generator Lifecycle Management Database (generator-lifecycle-management), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-068",
+   "NAME": "Signature JAH Generator Lifecycle Management Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Generator Lifecycle Management Database Guide is the database AI for Generator Lifecycle Management Database (generator-lifecycle-management-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-069",
+   "NAME": "JAH Automatic Repair Loops Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Automatic Repair Loops Database Guide is the database AI for Automatic Repair Loops Database (automatic-repair-loops), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-070",
+   "NAME": "Signature JAH Automatic Repair Loops Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Automatic Repair Loops Database Guide is the database AI for Automatic Repair Loops Database (automatic-repair-loops-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-071",
+   "NAME": "JAH Generation Budget Quota Controls Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Generation Budget Quota Controls Database Guide is the database AI for Generation Budget Quota Controls Database (generation-budget-quota-controls), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-072",
+   "NAME": "Signature JAH Generation Budget Quota Controls Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Generation Budget Quota Controls Database Guide is the database AI for Generation Budget Quota Controls Database (generation-budget-quota-controls-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-073",
+   "NAME": "JAH Recursive Expansion Safeguards Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Recursive Expansion Safeguards Database Guide is the database AI for Recursive Expansion Safeguards Database (recursive-expansion-safeguards), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-074",
+   "NAME": "Signature JAH Recursive Expansion Safeguards Database Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Recursive Expansion Safeguards Database Guide is the database AI for Recursive Expansion Safeguards Database (recursive-expansion-safeguards-signature), answering questions from that database and explaining its design, demo, limits, and roadmap."
+  },
+  {
+   "ID": "JAH-AI-SIG-075",
+   "NAME": "JAH Temporal Database Support Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Temporal Database Support Guide Guide for the Temporal Database Support Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-076",
+   "NAME": "Signature JAH Temporal Database Support Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Temporal Database Support Guide Guide for the Temporal Database Support Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-077",
+   "NAME": "JAH Streaming Ingestion Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Streaming Ingestion Guide Guide for the Streaming Ingestion Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-078",
+   "NAME": "Signature JAH Streaming Ingestion Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Streaming Ingestion Guide Guide for the Streaming Ingestion Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-079",
+   "NAME": "JAH Data Quality Observability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Data Quality Observability Guide Guide for the Data Quality Observability Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-080",
+   "NAME": "Signature JAH Data Quality Observability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Data Quality Observability Guide Guide for the Data Quality Observability Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-081",
+   "NAME": "JAH Approximate Search at Scale Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Approximate Search at Scale Guide Guide for the Approximate Search at Scale Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-082",
+   "NAME": "Signature JAH Approximate Search at Scale Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Approximate Search at Scale Guide Guide for the Approximate Search at Scale Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-083",
+   "NAME": "JAH Dataset Version Pinning Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Dataset Version Pinning Guide Guide for the Dataset Version Pinning Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-084",
+   "NAME": "Signature JAH Dataset Version Pinning Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Dataset Version Pinning Guide Guide for the Dataset Version Pinning Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-085",
+   "NAME": "JAH Least Privilege Permissions Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Least Privilege Permissions Guide Guide for the Least Privilege Permissions Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-086",
+   "NAME": "Signature JAH Least Privilege Permissions Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Least Privilege Permissions Guide Guide for the Least Privilege Permissions Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-087",
+   "NAME": "JAH Secret Isolation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Secret Isolation Guide Guide for the Secret Isolation Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-088",
+   "NAME": "Signature JAH Secret Isolation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Secret Isolation Guide Guide for the Secret Isolation Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-089",
+   "NAME": "JAH Signed Artifacts Manifests Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Signed Artifacts Manifests Guide Guide for the Signed Artifacts Manifests Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-090",
+   "NAME": "Signature JAH Signed Artifacts Manifests Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Signed Artifacts Manifests Guide Guide for the Signed Artifacts Manifests Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-091",
+   "NAME": "JAH Tool Call Authorization Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Tool Call Authorization Guide Guide for the Tool Call Authorization Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-092",
+   "NAME": "Signature JAH Tool Call Authorization Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Tool Call Authorization Guide Guide for the Tool Call Authorization Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-093",
+   "NAME": "JAH Data Classification Access Rules Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Data Classification Access Rules Guide Guide for the Data Classification Access Rules Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-094",
+   "NAME": "Signature JAH Data Classification Access Rules Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Data Classification Access Rules Guide Guide for the Data Classification Access Rules Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-095",
+   "NAME": "JAH Policy Enforcement Engine Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Policy Enforcement Engine Guide Guide for the Policy Enforcement Engine Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-096",
+   "NAME": "Signature JAH Policy Enforcement Engine Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Policy Enforcement Engine Guide Guide for the Policy Enforcement Engine Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-097",
+   "NAME": "JAH Autonomy Boundaries Kill Switches Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Autonomy Boundaries Kill Switches Guide Guide for the Autonomy Boundaries Kill Switches Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-098",
+   "NAME": "Signature JAH Autonomy Boundaries Kill Switches Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Autonomy Boundaries Kill Switches Guide Guide for the Autonomy Boundaries Kill Switches Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-099",
+   "NAME": "JAH License Rights Enforcement Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH License Rights Enforcement Guide Guide for the License Rights Enforcement Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-100",
+   "NAME": "Signature JAH License Rights Enforcement Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH License Rights Enforcement Guide Guide for the License Rights Enforcement Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-101",
+   "NAME": "JAH Model Data Poisoning Detection Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Model Data Poisoning Detection Guide Guide for the Model Data Poisoning Detection Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-102",
+   "NAME": "Signature JAH Model Data Poisoning Detection Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Model Data Poisoning Detection Guide Guide for the Model Data Poisoning Detection Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-103",
+   "NAME": "JAH Independent Safety Reliability Evaluation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Independent Safety Reliability Evaluation Guide Guide for the Independent Safety Reliability Evaluation Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-104",
+   "NAME": "Signature JAH Independent Safety Reliability Evaluation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Independent Safety Reliability Evaluation Guide Guide for the Independent Safety Reliability Evaluation Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-105",
+   "NAME": "JAH Network SDK Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Network SDK Guide Guide for the Network SDK Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-106",
+   "NAME": "Signature JAH Network SDK Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Network SDK Guide Guide for the Network SDK Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-107",
+   "NAME": "JAH Interactive Data Explorer Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Interactive Data Explorer Guide Guide for the Interactive Data Explorer Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-108",
+   "NAME": "Signature JAH Interactive Data Explorer Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Interactive Data Explorer Guide Guide for the Interactive Data Explorer Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-109",
+   "NAME": "JAH Offline Package Synchronization Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Offline Package Synchronization Guide Guide for the Offline Package Synchronization Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-110",
+   "NAME": "Signature JAH Offline Package Synchronization Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Offline Package Synchronization Guide Guide for the Offline Package Synchronization Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-111",
+   "NAME": "JAH User Feedback Correction Loop Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH User Feedback Correction Loop Guide Guide for the User Feedback Correction Loop Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-112",
+   "NAME": "Signature JAH User Feedback Correction Loop Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH User Feedback Correction Loop Guide Guide for the User Feedback Correction Loop Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-113",
+   "NAME": "JAH Usage Metering Cost Estimation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Usage Metering Cost Estimation Guide Guide for the Usage Metering Cost Estimation Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-114",
+   "NAME": "Signature JAH Usage Metering Cost Estimation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Usage Metering Cost Estimation Guide Guide for the Usage Metering Cost Estimation Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-115",
+   "NAME": "JAH Service Health Dashboard Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Service Health Dashboard Guide Guide for the Service Health Dashboard Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-116",
+   "NAME": "Signature JAH Service Health Dashboard Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Service Health Dashboard Guide Guide for the Service Health Dashboard Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-117",
+   "NAME": "JAH Reproducible Evaluation Suite Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Reproducible Evaluation Suite Guide Guide for the Reproducible Evaluation Suite Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-118",
+   "NAME": "Signature JAH Reproducible Evaluation Suite Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature JAH Reproducible Evaluation Suite Guide Guide for the Reproducible Evaluation Suite Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-119",
+   "NAME": "JAH Backup Integrity Verifier Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "JAH Backup Integrity Verifier Guide Guide for the Backup Integrity Verifier Database; archive-aware database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-120",
+   "NAME": "JAH Data.gov Source Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Data.gov Source Catalog, answering questions about the catalog, its collection topics, and how to search and cite it."
+  },
+  {
+   "ID": "JAH-AI-SIG-121",
+   "NAME": "Signature JAH Data.gov Source Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Signature Data.gov Source Catalog, answering questions about the catalog, its collection topics, and how to search and cite it."
+  },
+  {
+   "ID": "JAH-AI-SIG-122",
+   "NAME": "JAH Europe Open Data Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Europe Open Data Catalog, answering questions about the catalog, its collection topics, and how to search and cite it."
+  },
+  {
+   "ID": "JAH-AI-SIG-123",
+   "NAME": "Signature JAH Europe Open Data Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Signature Europe Open Data Catalog, answering questions about the catalog, its collection topics, and how to search and cite it."
+  },
+  {
+   "ID": "JAH-AI-SIG-124",
+   "NAME": "JAH Earth Observation Source Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Earth Observation Source Catalog, answering questions about the catalog, its collection topics, and how to search and cite it."
+  },
+  {
+   "ID": "JAH-AI-SIG-125",
+   "NAME": "Signature JAH Earth Observation Source Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Signature Earth Observation Source Catalog, answering questions about the catalog, its collection topics, and how to search and cite it."
+  },
+  {
+   "ID": "JAH-AI-SIG-126",
+   "NAME": "JAH Open Contracting Source Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Open Contracting Source Catalog, answering questions about the catalog, its collection topics, and how to search and cite it."
+  },
+  {
+   "ID": "JAH-AI-SIG-127",
+   "NAME": "Signature JAH Open Contracting Source Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Signature Open Contracting Source Catalog, answering questions about the catalog, its collection topics, and how to search and cite it."
+  },
+  {
+   "ID": "JAH-AI-SIG-128",
+   "NAME": "JAH Census Source Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Census Source Catalog, answering questions about the catalog, its collection topics, and how to search and cite it."
+  },
+  {
+   "ID": "JAH-AI-SIG-129",
+   "NAME": "Signature JAH Census Source Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Signature Census Source Catalog, answering questions about the catalog, its collection topics, and how to search and cite it."
+  },
+  {
+   "ID": "JAH-AI-SIG-130",
+   "NAME": "JAH Full-Work File Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for Full-Work File Types Database (slug full-work-file-types): archive-aware guide to the database, its records, its completeness standard, and its sample works. TYPE database, CATEGORY Database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-131",
+   "NAME": "Signature JAH Full-Work File Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for Full-Work File Types Signature Database (slug full-work-file-types-signature): archive-aware guide to the database, its records, its completeness standard, and its sample works. TYPE database, CATEGORY Database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-132",
+   "NAME": "JAH 100 Book Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for 100 Book Types Database (slug book-types-100): archive-aware guide to the database, its records, its completeness standard, and its sample works. TYPE database, CATEGORY Database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-133",
+   "NAME": "Signature JAH 100 Book Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for 100 Book Types Signature Database (slug book-types-100-signature): archive-aware guide to the database, its records, its completeness standard, and its sample works. TYPE database, CATEGORY Database AI."
   }
  ]
 }
