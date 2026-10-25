@@ -25450,6 +25450,20 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Database AI for the Professional Presentation Standard Signature Database; Signature guide to organize-only professional presentation of Signature records and pages."
+  },
+  {
+   "ID": "JAH-AI-SIG-413",
+   "NAME": "JAH Drone Defense Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Drone Defense Systems Database: explains civilian detection, sensors, barriers, and lawful response procedures; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-414",
+   "NAME": "Signature JAH Drone Defense Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Drone Defense Systems Signature Database: explains Signature detection, sensing, barrier, and response designs; can build an assistant like the user's personal assistant."
   }
  ]
 }
