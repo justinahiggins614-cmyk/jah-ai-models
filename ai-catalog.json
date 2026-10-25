@@ -23497,6 +23497,1959 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Database AI for 100 Book Types Signature Database (slug book-types-100-signature): archive-aware guide to the database, its records, its completeness standard, and its sample works. TYPE database, CATEGORY Database AI."
+  },
+  {
+   "ID": "JAH-AI-SIG-134",
+   "NAME": "JAH Complete Written Works Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Complete Written Works Database; archive-aware guide to its 100 templates and packages."
+  },
+  {
+   "ID": "JAH-AI-SIG-135",
+   "NAME": "JAH Complete Written Works Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Complete Written Works Signature Database; archive-aware guide to its 100 templates and packages."
+  },
+  {
+   "ID": "JAH-AI-SIG-136",
+   "NAME": "JAH User Creation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the User Creation Targets Database; archive-aware guide to its 100 templates and packages."
+  },
+  {
+   "ID": "JAH-AI-SIG-137",
+   "NAME": "JAH User Creation Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the User Creation Targets Signature Database; archive-aware guide to its 100 templates and packages."
+  },
+  {
+   "ID": "JAH-AI-SIG-138",
+   "NAME": "JAH Really Fun Creations Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Really Fun Creations Database; archive-aware guide to its 100 templates and packages."
+  },
+  {
+   "ID": "JAH-AI-SIG-139",
+   "NAME": "JAH Really Fun Creations Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Really Fun Creations Signature Database; archive-aware guide to its 100 templates and packages."
+  },
+  {
+   "ID": "JAH-AI-SIG-140",
+   "NAME": "JAH Bizarre Generators Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Bizarre Generators Database; archive-aware guide to its 100 templates and packages."
+  },
+  {
+   "ID": "JAH-AI-SIG-141",
+   "NAME": "JAH Bizarre Generators Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Bizarre Generators Signature Database; archive-aware guide to its 100 templates and packages."
+  },
+  {
+   "ID": "JAH-AI-SIG-142",
+   "NAME": "JAH Apex Programs Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Apex Programs Database; archive-aware guide to the 100 apex-level programs and their common contract."
+  },
+  {
+   "ID": "JAH-AI-SIG-143",
+   "NAME": "Signature JAH Apex Programs Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Apex Programs Signature Database; Signature guide to the mirrored apex program designs."
+  },
+  {
+   "ID": "JAH-AI-SIG-144",
+   "NAME": "JAH Apex Integration Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Apex Integration Database; archive-aware guide to the ten-program integrated architecture, its data flow, contracts, and test plan."
+  },
+  {
+   "ID": "JAH-AI-SIG-145",
+   "NAME": "Signature JAH Apex Integration Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Apex Integration Signature Database; Signature guide to the mirrored integration architecture."
+  },
+  {
+   "ID": "JAH-AI-SIG-146",
+   "NAME": "JAH Architectural Design Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Architectural Design Database: explains, answers and navigates architectural design records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-147",
+   "NAME": "JAH Architectural Design Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Architectural Design Database (Signature Edition): explains, answers and navigates architectural design records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-148",
+   "NAME": "JAH Floor Plans and Space Planning Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Floor Plans and Space Planning Database: explains, answers and navigates floor plans and space planning records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-149",
+   "NAME": "JAH Floor Plans and Space Planning Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Floor Plans and Space Planning Database (Signature Edition): explains, answers and navigates floor plans and space planning records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-150",
+   "NAME": "JAH Architectural Drawings and Blueprints Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Architectural Drawings and Blueprints Database (Signature Edition): explains, answers and navigates architectural drawings and blueprints records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-151",
+   "NAME": "JAH BIM and 3D Building Models Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the BIM and 3D Building Models Database: explains, answers and navigates bim and 3d building models records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-152",
+   "NAME": "JAH BIM and 3D Building Models Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the BIM and 3D Building Models Database (Signature Edition): explains, answers and navigates bim and 3d building models records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-153",
+   "NAME": "JAH Site Planning and Property Layouts Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Site Planning and Property Layouts Database: explains, answers and navigates site planning and property layouts records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-154",
+   "NAME": "JAH Site Planning and Property Layouts Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Site Planning and Property Layouts Database (Signature Edition): explains, answers and navigates site planning and property layouts records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-155",
+   "NAME": "JAH Architectural Details and Assemblies Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Architectural Details and Assemblies Database: explains, answers and navigates architectural details and assemblies records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-156",
+   "NAME": "JAH Architectural Details and Assemblies Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Architectural Details and Assemblies Database (Signature Edition): explains, answers and navigates architectural details and assemblies records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-157",
+   "NAME": "JAH Architectural Styles and History Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Architectural Styles and History Database: explains, answers and navigates architectural styles and history records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-158",
+   "NAME": "JAH Interior Architecture and Room Design Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Interior Architecture and Room Design Database: explains, answers and navigates interior architecture and room design records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-159",
+   "NAME": "JAH Interior Architecture and Room Design Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Interior Architecture and Room Design Database (Signature Edition): explains, answers and navigates interior architecture and room design records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-160",
+   "NAME": "JAH Accessibility and Universal Design Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Accessibility and Universal Design Database: explains, answers and navigates accessibility and universal design records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-161",
+   "NAME": "JAH Design Briefs and Client Requirements Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Design Briefs and Client Requirements Database (Signature Edition): explains, answers and navigates design briefs and client requirements records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-162",
+   "NAME": "JAH Building Codes and Local Amendments Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Building Codes and Local Amendments Database: explains, answers and navigates building codes and local amendments records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-163",
+   "NAME": "JAH Building Codes and Local Amendments Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Building Codes and Local Amendments Database (Signature Edition): explains, answers and navigates building codes and local amendments records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-164",
+   "NAME": "JAH Zoning, Land Use and Setbacks Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Zoning, Land Use and Setbacks Database: explains, answers and navigates zoning, land use and setbacks records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-165",
+   "NAME": "JAH Zoning, Land Use and Setbacks Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Zoning, Land Use and Setbacks Database (Signature Edition): explains, answers and navigates zoning, land use and setbacks records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-166",
+   "NAME": "JAH Residential Construction Requirements Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Residential Construction Requirements Database: explains, answers and navigates residential construction requirements records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-167",
+   "NAME": "JAH Residential Construction Requirements Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Residential Construction Requirements Database (Signature Edition): explains, answers and navigates residential construction requirements records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-168",
+   "NAME": "JAH Commercial Building Requirements Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Commercial Building Requirements Database: explains, answers and navigates commercial building requirements records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-169",
+   "NAME": "JAH Commercial Building Requirements Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Commercial Building Requirements Database (Signature Edition): explains, answers and navigates commercial building requirements records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-170",
+   "NAME": "JAH Fire and Life Safety Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Fire and Life Safety Database: explains, answers and navigates fire and life safety records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-171",
+   "NAME": "JAH Fire and Life Safety Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Fire and Life Safety Database (Signature Edition): explains, answers and navigates fire and life safety records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-172",
+   "NAME": "JAH Electrical Codes and Standards Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Electrical Codes and Standards Database: explains, answers and navigates electrical codes and standards records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-173",
+   "NAME": "JAH Electrical Codes and Standards Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Electrical Codes and Standards Database (Signature Edition): explains, answers and navigates electrical codes and standards records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-174",
+   "NAME": "JAH Plumbing and Drainage Codes Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Plumbing and Drainage Codes Database: explains, answers and navigates plumbing and drainage codes records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-175",
+   "NAME": "JAH Plumbing and Drainage Codes Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Plumbing and Drainage Codes Database (Signature Edition): explains, answers and navigates plumbing and drainage codes records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-176",
+   "NAME": "JAH Mechanical, HVAC and Ventilation Standards Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Mechanical, HVAC and Ventilation Standards Database: explains, answers and navigates mechanical, hvac and ventilation standards records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-177",
+   "NAME": "JAH Mechanical, HVAC and Ventilation Standards Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Mechanical, HVAC and Ventilation Standards Database (Signature Edition): explains, answers and navigates mechanical, hvac and ventilation standards records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-178",
+   "NAME": "JAH Energy, Insulation and Building Envelope Standards Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Energy, Insulation and Building Envelope Standards Database: explains, answers and navigates energy, insulation and building envelope standards records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-179",
+   "NAME": "JAH Energy, Insulation and Building Envelope Standards Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Energy, Insulation and Building Envelope Standards Database (Signature Edition): explains, answers and navigates energy, insulation and building envelope standards records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-180",
+   "NAME": "JAH Permits, Inspections and Occupancy Approvals Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Permits, Inspections and Occupancy Approvals Database (Signature Edition): explains, answers and navigates permits, inspections and occupancy approvals records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-181",
+   "NAME": "JAH Rough Carpentry and Framing Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Rough Carpentry and Framing Database: explains, answers and navigates rough carpentry and framing records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-182",
+   "NAME": "JAH Rough Carpentry and Framing Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Rough Carpentry and Framing Database (Signature Edition): explains, answers and navigates rough carpentry and framing records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-183",
+   "NAME": "JAH Finish Carpentry Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Finish Carpentry Database: explains, answers and navigates finish carpentry records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-184",
+   "NAME": "JAH Finish Carpentry Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Finish Carpentry Database (Signature Edition): explains, answers and navigates finish carpentry records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-185",
+   "NAME": "JAH Cabinetmaking and Built-In Furniture Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Cabinetmaking and Built-In Furniture Database: explains, answers and navigates cabinetmaking and built-in furniture records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-186",
+   "NAME": "JAH Cabinetmaking and Built-In Furniture Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Cabinetmaking and Built-In Furniture Database (Signature Edition): explains, answers and navigates cabinetmaking and built-in furniture records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-187",
+   "NAME": "JAH Doors, Windows and Openings Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Doors, Windows and Openings Database: explains, answers and navigates doors, windows and openings records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-188",
+   "NAME": "JAH Doors, Windows and Openings Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Doors, Windows and Openings Database (Signature Edition): explains, answers and navigates doors, windows and openings records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-189",
+   "NAME": "JAH Stairs, Railings and Handrails Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Stairs, Railings and Handrails Database: explains, answers and navigates stairs, railings and handrails records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-190",
+   "NAME": "JAH Stairs, Railings and Handrails Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Stairs, Railings and Handrails Database (Signature Edition): explains, answers and navigates stairs, railings and handrails records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-191",
+   "NAME": "JAH Roof Framing and Roof Structures Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Roof Framing and Roof Structures Database: explains, answers and navigates roof framing and roof structures records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-192",
+   "NAME": "JAH Roof Framing and Roof Structures Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Roof Framing and Roof Structures Database (Signature Edition): explains, answers and navigates roof framing and roof structures records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-193",
+   "NAME": "JAH Decks, Porches and Outdoor Structures Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Decks, Porches and Outdoor Structures Database: explains, answers and navigates decks, porches and outdoor structures records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-194",
+   "NAME": "JAH Decks, Porches and Outdoor Structures Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Decks, Porches and Outdoor Structures Database (Signature Edition): explains, answers and navigates decks, porches and outdoor structures records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-195",
+   "NAME": "JAH Wood Joinery and Furniture Construction Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Wood Joinery and Furniture Construction Database: explains, answers and navigates wood joinery and furniture construction records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-196",
+   "NAME": "JAH Wood Species and Lumber Properties Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Wood Species and Lumber Properties Database: explains, answers and navigates wood species and lumber properties records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-197",
+   "NAME": "JAH Carpentry Tools, Machines and Jigs Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Carpentry Tools, Machines and Jigs Database: explains, answers and navigates carpentry tools, machines and jigs records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-198",
+   "NAME": "JAH Carpentry Tools, Machines and Jigs Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Carpentry Tools, Machines and Jigs Database (Signature Edition): explains, answers and navigates carpentry tools, machines and jigs records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-199",
+   "NAME": "JAH Foundations and Footings Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Foundations and Footings Database: explains, answers and navigates foundations and footings records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-200",
+   "NAME": "JAH Foundations and Footings Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Foundations and Footings Database (Signature Edition): explains, answers and navigates foundations and footings records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-201",
+   "NAME": "JAH Concrete, Cement and Reinforcement Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Concrete, Cement and Reinforcement Database: explains, answers and navigates concrete, cement and reinforcement records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-202",
+   "NAME": "JAH Concrete, Cement and Reinforcement Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Concrete, Cement and Reinforcement Database (Signature Edition): explains, answers and navigates concrete, cement and reinforcement records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-203",
+   "NAME": "JAH Structural Lumber and Engineered Wood Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Structural Lumber and Engineered Wood Database: explains, answers and navigates structural lumber and engineered wood records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-204",
+   "NAME": "JAH Structural Lumber and Engineered Wood Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Structural Lumber and Engineered Wood Database (Signature Edition): explains, answers and navigates structural lumber and engineered wood records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-205",
+   "NAME": "JAH Steel Structures and Connections Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Steel Structures and Connections Database: explains, answers and navigates steel structures and connections records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-206",
+   "NAME": "JAH Steel Structures and Connections Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Steel Structures and Connections Database (Signature Edition): explains, answers and navigates steel structures and connections records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-207",
+   "NAME": "JAH Masonry, Brick, Block and Stone Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Masonry, Brick, Block and Stone Database: explains, answers and navigates masonry, brick, block and stone records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-208",
+   "NAME": "JAH Masonry, Brick, Block and Stone Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Masonry, Brick, Block and Stone Database (Signature Edition): explains, answers and navigates masonry, brick, block and stone records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-209",
+   "NAME": "JAH Structural Loads and Calculations Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Structural Loads and Calculations Database: explains, answers and navigates structural loads and calculations records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-210",
+   "NAME": "JAH Structural Loads and Calculations Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Structural Loads and Calculations Database (Signature Edition): explains, answers and navigates structural loads and calculations records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-211",
+   "NAME": "JAH Soil, Geotechnical and Site Conditions Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Soil, Geotechnical and Site Conditions Database (Signature Edition): explains, answers and navigates soil, geotechnical and site conditions records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-212",
+   "NAME": "JAH Retaining Walls and Slope Stability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Retaining Walls and Slope Stability Database: explains, answers and navigates retaining walls and slope stability records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-213",
+   "NAME": "JAH Retaining Walls and Slope Stability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Retaining Walls and Slope Stability Database (Signature Edition): explains, answers and navigates retaining walls and slope stability records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-214",
+   "NAME": "JAH Structural Connections and Fasteners Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Structural Connections and Fasteners Database: explains, answers and navigates structural connections and fasteners records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-215",
+   "NAME": "JAH Structural Connections and Fasteners Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Structural Connections and Fasteners Database (Signature Edition): explains, answers and navigates structural connections and fasteners records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-216",
+   "NAME": "JAH Structural Inspections and Failure Analysis Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Structural Inspections and Failure Analysis Database (Signature Edition): explains, answers and navigates structural inspections and failure analysis records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-217",
+   "NAME": "JAH Construction Materials Master Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Construction Materials Master Catalog Database: explains, answers and navigates construction materials master catalog records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-218",
+   "NAME": "JAH Construction Materials Master Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Construction Materials Master Catalog Database (Signature Edition): explains, answers and navigates construction materials master catalog records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-219",
+   "NAME": "JAH Insulation and Soundproofing Materials Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Insulation and Soundproofing Materials Database: explains, answers and navigates insulation and soundproofing materials records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-220",
+   "NAME": "JAH Insulation and Soundproofing Materials Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Insulation and Soundproofing Materials Database (Signature Edition): explains, answers and navigates insulation and soundproofing materials records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-221",
+   "NAME": "JAH Roofing Systems and Products Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Roofing Systems and Products Database: explains, answers and navigates roofing systems and products records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-222",
+   "NAME": "JAH Roofing Systems and Products Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Roofing Systems and Products Database (Signature Edition): explains, answers and navigates roofing systems and products records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-223",
+   "NAME": "JAH Siding, Cladding and Exterior Finishes Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Siding, Cladding and Exterior Finishes Database: explains, answers and navigates siding, cladding and exterior finishes records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-224",
+   "NAME": "JAH Siding, Cladding and Exterior Finishes Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Siding, Cladding and Exterior Finishes Database (Signature Edition): explains, answers and navigates siding, cladding and exterior finishes records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-225",
+   "NAME": "JAH Drywall, Plaster and Interior Wall Systems Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Drywall, Plaster and Interior Wall Systems Database: explains, answers and navigates drywall, plaster and interior wall systems records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-226",
+   "NAME": "JAH Drywall, Plaster and Interior Wall Systems Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Drywall, Plaster and Interior Wall Systems Database (Signature Edition): explains, answers and navigates drywall, plaster and interior wall systems records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-227",
+   "NAME": "JAH Flooring and Surface Finishes Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Flooring and Surface Finishes Database: explains, answers and navigates flooring and surface finishes records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-228",
+   "NAME": "JAH Flooring and Surface Finishes Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Flooring and Surface Finishes Database (Signature Edition): explains, answers and navigates flooring and surface finishes records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-229",
+   "NAME": "JAH Paints, Coatings, Sealants and Adhesives Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Paints, Coatings, Sealants and Adhesives Database: explains, answers and navigates paints, coatings, sealants and adhesives records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-230",
+   "NAME": "JAH Paints, Coatings, Sealants and Adhesives Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Paints, Coatings, Sealants and Adhesives Database (Signature Edition): explains, answers and navigates paints, coatings, sealants and adhesives records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-231",
+   "NAME": "JAH Building Fixtures and Hardware Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Building Fixtures and Hardware Database: explains, answers and navigates building fixtures and hardware records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-232",
+   "NAME": "JAH Building Fixtures and Hardware Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Building Fixtures and Hardware Database (Signature Edition): explains, answers and navigates building fixtures and hardware records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-233",
+   "NAME": "JAH Manufacturer Specifications and Product Approvals Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Manufacturer Specifications and Product Approvals Database: explains, answers and navigates manufacturer specifications and product approvals records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-234",
+   "NAME": "JAH Manufacturer Specifications and Product Approvals Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Manufacturer Specifications and Product Approvals Database (Signature Edition): explains, answers and navigates manufacturer specifications and product approvals records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-235",
+   "NAME": "JAH Material Substitutions and Compatibility Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Material Substitutions and Compatibility Database (Signature Edition): explains, answers and navigates material substitutions and compatibility records, and can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-236",
+   "NAME": "JAH Construction Cost and Price Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Unit prices, cost references and price-adjustment methods for construction work."
+  },
+  {
+   "ID": "JAH-AI-SIG-237",
+   "NAME": "JAH Construction Cost and Price Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Unit prices, cost references and price-adjustment methods for construction work. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-238",
+   "NAME": "JAH Material Takeoff and Quantity Estimation Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Takeoff methods and quantity schedules that turn drawings into ordered material lists. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-239",
+   "NAME": "JAH Labor Productivity and Crew Rates Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Crew compositions, productivity rates and labour-rate build-ups for construction trades. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-240",
+   "NAME": "JAH Contractor and Subcontractor Directory Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Directory record templates and prequalification checklists for contractors and subcontractors. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-241",
+   "NAME": "JAH Suppliers, Distributors and Inventory Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Supplier record templates, inventory methods and reorder controls for construction materials. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-242",
+   "NAME": "JAH Bids, Proposals and Tender Documents Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Bid, proposal and tender document templates for construction procurement. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-243",
+   "NAME": "JAH Project Budgets, Cash Flow and Profitability Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Budget templates, cash-flow forecasts and profitability reports for construction projects. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-244",
+   "NAME": "JAH Purchase Orders and Material Procurement Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Purchase order templates and procurement workflows for construction materials. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-245",
+   "NAME": "JAH Contracts, Change Orders and Claims Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Contract, change-order and claim document guides for construction projects. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-246",
+   "NAME": "JAH Construction Business Operations Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Operations guides and record templates for running a construction business. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-247",
+   "NAME": "JAH Construction Scheduling and Sequencing Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Schedule templates and sequencing methods for construction programmes. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-248",
+   "NAME": "JAH Daily Site Reports and Field Logs Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Daily report templates and field log structures for construction sites. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-249",
+   "NAME": "JAH Site Safety and Hazard Assessments Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Hazard assessment templates and safety checklists for construction sites. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-250",
+   "NAME": "JAH Equipment, Tools and Rental Management Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Equipment registers, rental checklists and maintenance logs for construction plant. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-251",
+   "NAME": "JAH Delivery, Logistics and Site Storage Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Delivery schedules, site access plans and storage methods for construction sites. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-252",
+   "NAME": "JAH Quality Assurance and Quality Control Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Quality plans, inspection checklists and nonconformance workflows for construction. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-253",
+   "NAME": "JAH RFIs, Submittals and Technical Queries Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "RFI forms, submittal logs and technical query workflows for construction projects. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-254",
+   "NAME": "JAH Construction Photographs and Progress Tracking Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Photo documentation protocols and progress tracking methods for construction. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-255",
+   "NAME": "JAH Punch Lists, Defects and Corrective Work Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Punch list templates, defect classifications and corrective work procedures. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-256",
+   "NAME": "JAH Project Closeout and Handover Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Closeout checklists and handover packages for completed construction projects. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-257",
+   "NAME": "JAH Electrical Design and Lighting Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Electrical design guides, circuit schedules and lighting layouts for buildings."
+  },
+  {
+   "ID": "JAH-AI-SIG-258",
+   "NAME": "JAH Electrical Design and Lighting Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Electrical design guides, circuit schedules and lighting layouts for buildings. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-259",
+   "NAME": "JAH Plumbing, Water Supply and Fixtures Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Water supply, drainage and fixture guides for residential and commercial buildings."
+  },
+  {
+   "ID": "JAH-AI-SIG-260",
+   "NAME": "JAH Plumbing, Water Supply and Fixtures Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Water supply, drainage and fixture guides for residential and commercial buildings. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-261",
+   "NAME": "JAH HVAC Design and Equipment Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Heating, cooling and air distribution design guides and equipment selection notes."
+  },
+  {
+   "ID": "JAH-AI-SIG-262",
+   "NAME": "JAH HVAC Design and Equipment Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Heating, cooling and air distribution design guides and equipment selection notes. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-263",
+   "NAME": "JAH Ventilation, Indoor Air Quality and Moisture Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Ventilation design, indoor air quality and moisture control guides for healthy buildings."
+  },
+  {
+   "ID": "JAH-AI-SIG-264",
+   "NAME": "JAH Ventilation, Indoor Air Quality and Moisture Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Ventilation design, indoor air quality and moisture control guides for healthy buildings. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-265",
+   "NAME": "JAH Fire Protection and Alarm Systems Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Fire protection and alarm system guides, device schedules and testing procedures."
+  },
+  {
+   "ID": "JAH-AI-SIG-266",
+   "NAME": "JAH Fire Protection and Alarm Systems Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Fire protection and alarm system guides, device schedules and testing procedures. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-267",
+   "NAME": "JAH Roofing Drainage and Stormwater Systems Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Roof drainage, gutter sizing and stormwater management guides for buildings."
+  },
+  {
+   "ID": "JAH-AI-SIG-268",
+   "NAME": "JAH Roofing Drainage and Stormwater Systems Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Roof drainage, gutter sizing and stormwater management guides for buildings. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-269",
+   "NAME": "JAH Low-Voltage, Network and Smart-Home Systems Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Network cabling, smart-home and low-voltage system design guides for buildings."
+  },
+  {
+   "ID": "JAH-AI-SIG-270",
+   "NAME": "JAH Low-Voltage, Network and Smart-Home Systems Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Network cabling, smart-home and low-voltage system design guides for buildings. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-271",
+   "NAME": "JAH Elevators, Lifts and Vertical Transportation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Elevator selection, traffic analysis and maintenance guides for buildings."
+  },
+  {
+   "ID": "JAH-AI-SIG-272",
+   "NAME": "JAH Elevators, Lifts and Vertical Transportation Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Elevator selection, traffic analysis and maintenance guides for buildings. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-273",
+   "NAME": "JAH Solar, Batteries and Backup Power Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Solar array, battery storage and backup power sizing and commissioning guides."
+  },
+  {
+   "ID": "JAH-AI-SIG-274",
+   "NAME": "JAH Solar, Batteries and Backup Power Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Solar array, battery storage and backup power sizing and commissioning guides. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-275",
+   "NAME": "JAH Building Automation and Controls Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Building automation architecture, control sequences and commissioning guides."
+  },
+  {
+   "ID": "JAH-AI-SIG-276",
+   "NAME": "JAH Building Automation and Controls Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Building automation architecture, control sequences and commissioning guides. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-277",
+   "NAME": "JAH Home Repairs and Troubleshooting Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Diagnosis and repair guides for common household problems."
+  },
+  {
+   "ID": "JAH-AI-SIG-278",
+   "NAME": "JAH Home Repairs and Troubleshooting Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Diagnosis and repair guides for common household problems. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-279",
+   "NAME": "JAH Remodeling and Renovation Projects Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Sample remodeling project plans, budgets and schedules for renovation work. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-280",
+   "NAME": "JAH Building Inspection and Condition Assessments Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Inspection checklists and condition assessment methods for buildings. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-281",
+   "NAME": "JAH Waterproofing, Leaks and Moisture Damage Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Waterproofing methods, leak tracing and moisture damage repair guides."
+  },
+  {
+   "ID": "JAH-AI-SIG-282",
+   "NAME": "JAH Waterproofing, Leaks and Moisture Damage Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Waterproofing methods, leak tracing and moisture damage repair guides. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-283",
+   "NAME": "JAH Termites, Pests, Rot and Material Degradation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Pest signs, rot diagnosis and degradation prevention guides for buildings."
+  },
+  {
+   "ID": "JAH-AI-SIG-284",
+   "NAME": "JAH Termites, Pests, Rot and Material Degradation Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Pest signs, rot diagnosis and degradation prevention guides for buildings. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-285",
+   "NAME": "JAH Historic Building Restoration Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Assessment and restoration methods for historic buildings."
+  },
+  {
+   "ID": "JAH-AI-SIG-286",
+   "NAME": "JAH Historic Building Restoration Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Assessment and restoration methods for historic buildings. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-287",
+   "NAME": "JAH Building Maintenance and Preventive Servicing Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Preventive maintenance schedules and service logs for buildings. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-288",
+   "NAME": "JAH Property, Building and Asset Registry Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Registry templates and lifecycle methods for property and building assets. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-289",
+   "NAME": "JAH Energy Audits and Building Performance Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Energy audit checklists, testing notes and retrofit prioritisation methods."
+  },
+  {
+   "ID": "JAH-AI-SIG-290",
+   "NAME": "JAH Energy Audits and Building Performance Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Energy audit checklists, testing notes and retrofit prioritisation methods. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-291",
+   "NAME": "JAH Disaster Damage and Building Recovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Damage assessment and recovery planning guides for storm, flood and fire events."
+  },
+  {
+   "ID": "JAH-AI-SIG-292",
+   "NAME": "JAH Disaster Damage and Building Recovery Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Damage assessment and recovery planning guides for storm, flood and fire events. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-293",
+   "NAME": "JAH Complete Building Project Templates Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Complete sample project templates that assemble plans, schedules and budgets into one package."
+  },
+  {
+   "ID": "JAH-AI-SIG-294",
+   "NAME": "JAH Complete Building Project Templates Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Complete sample project templates that assemble plans, schedules and budgets into one package. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-295",
+   "NAME": "JAH Parametric Building Design Generator Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Specifications for parametric generators that produce building designs from parameters. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-296",
+   "NAME": "JAH Automated Carpentry Plan and Cut-List Generator Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Cut-list methods and generator specifications for carpentry plans. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-297",
+   "NAME": "JAH Construction Calculation and Unit Conversion Library Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Calculation references and unit conversion tables for construction work."
+  },
+  {
+   "ID": "JAH-AI-SIG-298",
+   "NAME": "JAH Construction Calculation and Unit Conversion Library Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Calculation references and unit conversion tables for construction work. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-299",
+   "NAME": "JAH Building Code Applicability and Compliance Engine Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Methods for determining which code provisions apply to a project and checking compliance."
+  },
+  {
+   "ID": "JAH-AI-SIG-300",
+   "NAME": "JAH Building Code Applicability and Compliance Engine Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Methods for determining which code provisions apply to a project and checking compliance. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-301",
+   "NAME": "JAH Building Design Validation and Clash Detection Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Validation and clash detection methods for coordinated building designs. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-302",
+   "NAME": "JAH Construction Knowledge Graph and Cross-Database Search Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Knowledge graph schema and cross-database search methods for construction data."
+  },
+  {
+   "ID": "JAH-AI-SIG-303",
+   "NAME": "JAH Construction Knowledge Graph and Cross-Database Search Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Knowledge graph schema and cross-database search methods for construction data. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-304",
+   "NAME": "JAH Construction AI, Expert Roles and Diagnostic Agents Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Role specifications for construction AI experts and diagnostic agents. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-305",
+   "NAME": "JAH Construction Generator Foundry and Testing Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Test protocols and quality suites for construction generators. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-306",
+   "NAME": "JAH Master Builder Command Center and Project Archive Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Command center specifications and project archive structures for master builders. (Signature edition: generic templates and sample projects.)"
+  },
+  {
+   "ID": "JAH-AI-SIG-307",
+   "NAME": "JAH Harry Potter Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The boy-wizard book and film franchise: public record of its books, films and games, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-308",
+   "NAME": "JAH Harry Potter Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of Harry Potter: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-309",
+   "NAME": "JAH Star Wars Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The space-opera saga: public record of its films and series, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-310",
+   "NAME": "JAH Star Wars Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of Star Wars: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-311",
+   "NAME": "JAH Star Trek Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The starship exploration franchise: public record of its series and films, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-312",
+   "NAME": "JAH Star Trek Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of Star Trek: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-313",
+   "NAME": "JAH The Lord of the Rings Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The Middle-earth legendarium: public record of its books and films, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-314",
+   "NAME": "JAH The Lord of the Rings Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of The Lord of the Rings: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-315",
+   "NAME": "JAH Marvel Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The Marvel superhero universe: public record of its comics and films, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-316",
+   "NAME": "JAH Marvel Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of Marvel: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-317",
+   "NAME": "JAH DC Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The DC superhero universe: public record of its comics and films, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-318",
+   "NAME": "JAH DC Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of DC: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-319",
+   "NAME": "JAH Pokémon Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The pocket-monster franchise: public record of its games and animation, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-320",
+   "NAME": "JAH Pokémon Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of Pokémon: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-321",
+   "NAME": "JAH Super Mario Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The Super Mario platforming franchise: public record of its games and film, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-322",
+   "NAME": "JAH Super Mario Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of Super Mario: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-323",
+   "NAME": "JAH Minecraft Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The block-building sandbox franchise: public record of its editions and spin-offs, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-324",
+   "NAME": "JAH Minecraft Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of Minecraft: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-325",
+   "NAME": "JAH The Witcher Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The Witcher saga: public record of its books and games, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-326",
+   "NAME": "JAH The Witcher Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of The Witcher: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-327",
+   "NAME": "JAH Doctor Who Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The time-travel series: public record of its eras and specials, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-328",
+   "NAME": "JAH Doctor Who Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of Doctor Who: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-329",
+   "NAME": "JAH Sherlock Holmes Franchise Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The Sherlock Holmes canon: public record of its books and adaptations, plus labeled Signature continuations."
+  },
+  {
+   "ID": "JAH-AI-SIG-330",
+   "NAME": "JAH Sherlock Holmes Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction continuations of Sherlock Holmes: original, unofficial sequel stories with new characters and settings, labeled throughout as not affiliated with or endorsed by the rights holders."
+  },
+  {
+   "ID": "JAH-AI-SIG-331",
+   "NAME": "JAH Franchise Crossovers Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The public pairing index for the twelve franchise pairs: factual comparisons of two franchises at a time, with no copyrighted text reproduced."
+  },
+  {
+   "ID": "JAH-AI-SIG-332",
+   "NAME": "JAH Franchise Crossovers Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature fiction crossover stories mixing two franchise worlds at a time: original, unofficial stories labeled throughout as not affiliated with or endorsed by any rights holder."
+  },
+  {
+   "ID": "JAH-AI-SIG-333",
+   "NAME": "JAH Franchise Mix Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The master index of all twelve franchise pairs plus the crossover pair, with public reading and viewing order guides."
+  },
+  {
+   "ID": "JAH-AI-SIG-334",
+   "NAME": "JAH Franchise Mix Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature reading paths for all twelve franchise continuations plus the Signature crossover index, labeled unofficial throughout."
+  },
+  {
+   "ID": "JAH-AI-SIG-335",
+   "NAME": "JAH Game Concepts Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Original game concepts with full scripts: premise, mechanics, characters, levels, dialogue, scenes and systems, all original with no franchise IP."
+  },
+  {
+   "ID": "JAH-AI-SIG-336",
+   "NAME": "JAH Game Concepts Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Signature expansion game concepts with full scripts: original concepts and dialogue, labeled Signature, with no franchise IP."
+  },
+  {
+   "ID": "JAH-AI-SIG-337",
+   "NAME": "JAH Image Verbal Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Image Verbal Documentation Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-338",
+   "NAME": "Signature JAH Image Verbal Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Image Verbal Documentation Signature Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-339",
+   "NAME": "JAH Spaceship Viewscreen Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Universal Spaceship Simulator Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-340",
+   "NAME": "Signature JAH Spaceship Viewscreen Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Universal Spaceship Simulator Signature Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-341",
+   "NAME": "JAH Speed Reference Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Speed Simulator Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-342",
+   "NAME": "Signature JAH Speed Reference Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Speed Simulator Signature Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-343",
+   "NAME": "JAH Superpowers Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Superpowers Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-344",
+   "NAME": "Signature JAH Superpowers Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Superpowers Signature Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-345",
+   "NAME": "JAH Technology Paths Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Ways to Achieve Through Technology Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-346",
+   "NAME": "Signature JAH Technology Paths Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Ways to Achieve Through Technology Signature Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-347",
+   "NAME": "JAH Genetics Paths Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Ways to Achieve Through DNA Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-348",
+   "NAME": "Signature JAH Genetics Paths Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Ways to Achieve Through DNA Signature Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-349",
+   "NAME": "JAH Faith Paths Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Ways to Achieve Through Spiritual Faith Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-350",
+   "NAME": "Signature JAH Faith Paths Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Ways to Achieve Through Spiritual Faith Signature Database; archive-aware guide to its records."
+  },
+  {
+   "ID": "JAH-AI-SIG-351",
+   "NAME": "JAH Goat Milk Soap Distribution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Goat Milk Soap Distribution Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-352",
+   "NAME": "JAH Goat Milk Soap Distribution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Goat Milk Soap Distribution Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-353",
+   "NAME": "JAH Honey Distribution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Honey Distribution Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-354",
+   "NAME": "JAH Honey Distribution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Honey Distribution Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-355",
+   "NAME": "JAH Olive Oil Distribution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Olive Oil Distribution Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-356",
+   "NAME": "JAH Olive Oil Distribution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Olive Oil Distribution Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-357",
+   "NAME": "JAH Coffee Distribution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Coffee Distribution Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-358",
+   "NAME": "JAH Coffee Distribution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Coffee Distribution Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-359",
+   "NAME": "JAH Tea Distribution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Tea Distribution Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-360",
+   "NAME": "JAH Tea Distribution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Tea Distribution Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-361",
+   "NAME": "JAH Chocolate Distribution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Chocolate Distribution Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-362",
+   "NAME": "JAH Chocolate Distribution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Chocolate Distribution Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-363",
+   "NAME": "JAH Cheese Distribution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Cheese Distribution Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-364",
+   "NAME": "JAH Cheese Distribution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Cheese Distribution Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-365",
+   "NAME": "JAH Candle Distribution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Candle Distribution Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-366",
+   "NAME": "JAH Candle Distribution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Candle Distribution Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-367",
+   "NAME": "JAH Jam and Preserves Distribution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Jam and Preserves Distribution Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-368",
+   "NAME": "JAH Jam and Preserves Distribution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Jam and Preserves Distribution Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-369",
+   "NAME": "JAH Maple Syrup Distribution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Maple Syrup Distribution Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-370",
+   "NAME": "JAH Maple Syrup Distribution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Maple Syrup Distribution Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-371",
+   "NAME": "JAH Bunker Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Bunker Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-372",
+   "NAME": "JAH Bunker Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Bunker Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-373",
+   "NAME": "JAH Skyscraper Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Skyscraper Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-374",
+   "NAME": "JAH Skyscraper Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Skyscraper Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-375",
+   "NAME": "JAH Skyscraper Designs Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Skyscraper Designs Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-376",
+   "NAME": "JAH Skyscraper Designs Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Skyscraper Designs Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-377",
+   "NAME": "JAH Boat Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Boat Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-378",
+   "NAME": "JAH Boat Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Boat Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-379",
+   "NAME": "JAH Car Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Car Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-380",
+   "NAME": "JAH Car Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Car Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-381",
+   "NAME": "JAH Truck Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Truck Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-382",
+   "NAME": "JAH Truck Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Truck Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-383",
+   "NAME": "JAH Jet Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Jet Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-384",
+   "NAME": "JAH Jet Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Jet Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-385",
+   "NAME": "JAH Plane Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Plane Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-386",
+   "NAME": "JAH Plane Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Plane Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-387",
+   "NAME": "JAH Submarine Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Submarine Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-388",
+   "NAME": "JAH Submarine Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Submarine Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-389",
+   "NAME": "JAH Train Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Train Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-390",
+   "NAME": "JAH Train Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Train Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-391",
+   "NAME": "JAH Helicopter Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Helicopter Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-392",
+   "NAME": "JAH Helicopter Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Helicopter Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-393",
+   "NAME": "JAH Motorcycle Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Motorcycle Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-394",
+   "NAME": "JAH Motorcycle Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Motorcycle Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-395",
+   "NAME": "JAH Bus Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Bus Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-396",
+   "NAME": "JAH Bus Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Bus Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-397",
+   "NAME": "JAH Ship Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Ship Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-398",
+   "NAME": "JAH Ship Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Ship Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-399",
+   "NAME": "JAH Spacecraft Types Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Spacecraft Types Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-400",
+   "NAME": "JAH Spacecraft Types Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Spacecraft Types Signature Database: archive-aware lookup, questions, and boundless generation."
+  },
+  {
+   "ID": "JAH-AI-SIG-401",
+   "NAME": "JAH Boot Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The database AI for the boot suite: teaches any new user to boot from any database and run starter workflows."
+  },
+  {
+   "ID": "JAH-AI-SIG-402",
+   "NAME": "JAH Boot Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The Signature database AI for the boot suite: teaches boot paths through Signature-made works."
+  },
+  {
+   "ID": "JAH-AI-SIG-403",
+   "NAME": "JAH Mix Review Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The database AI for the mix review suite: synthesizes full reviews from many databases and writes quick-reference cards."
+  },
+  {
+   "ID": "JAH-AI-SIG-404",
+   "NAME": "JAH Mix Review Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The Signature database AI for the mix review suite: reviews Signature works with Signature sources labeled."
+  },
+  {
+   "ID": "JAH-AI-SIG-405",
+   "NAME": "JAH Validity Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The database AI for the validity suite: tests claims against existing records and issues honest verdicts."
+  },
+  {
+   "ID": "JAH-AI-SIG-406",
+   "NAME": "JAH Validity Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The Signature database AI for the validity suite: assesses Signature claims by the same proof-aiming method."
+  },
+  {
+   "ID": "JAH-AI-SIG-407",
+   "NAME": "JAH Citations Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The database AI for the citations database: gives public citations for anything where applicable, and refuses private sources."
+  },
+  {
+   "ID": "JAH-AI-SIG-408",
+   "NAME": "JAH Citations Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The Signature database AI for the citations database: cites public sources and labels Signature seams."
+  },
+  {
+   "ID": "JAH-AI-SIG-409",
+   "NAME": "JAH Verification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The database AI for the verification database: runs the four checks and proposes fixes only for proven errors."
+  },
+  {
+   "ID": "JAH-AI-SIG-410",
+   "NAME": "JAH Verification Guide (Signature)",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "The Signature database AI for the verification database: verifies with Signature databases covered in the sample."
+  },
+  {
+   "ID": "JAH-AI-SIG-411",
+   "NAME": "JAH Professional Presentation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Professional Presentation Standard Database; archive-aware guide to organize-only professional presentation of records and pages."
+  },
+  {
+   "ID": "JAH-AI-SIG-412",
+   "NAME": "Signature JAH Professional Presentation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Database AI for the Professional Presentation Standard Signature Database; Signature guide to organize-only professional presentation of Signature records and pages."
   }
  ]
 }
