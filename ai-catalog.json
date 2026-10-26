@@ -25464,6 +25464,2638 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the Drone Defense Systems Signature Database: explains Signature detection, sensing, barrier, and response designs; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-415",
+   "NAME": "JAH Formal Logic Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Formal Logic and Proof Library Database: Formal proof checking; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-416",
+   "NAME": "JAH Formal Logic Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Formal Logic and Proof Library Signature Database: Formal proof checking; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-417",
+   "NAME": "JAH Problem Decomposition Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Problem Decomposition Database: Hierarchical task decomposition; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-418",
+   "NAME": "JAH Problem Decomposition Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Problem Decomposition Database Signature Database: Hierarchical task decomposition; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-419",
+   "NAME": "JAH Causal Reasoning Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Causal Reasoning Database: Causal graph and adjustment analysis; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-420",
+   "NAME": "JAH Causal Reasoning Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Causal Reasoning Database Signature Database: Causal graph and adjustment analysis; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-421",
+   "NAME": "JAH Hypothesis Testing Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Hypothesis Generation and Testing Database: Hypothesis formation and evidence testing; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-422",
+   "NAME": "JAH Hypothesis Testing Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Hypothesis Generation and Testing Signature Database: Hypothesis formation and evidence testing; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-423",
+   "NAME": "JAH Contradiction Resolution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Contradiction Detection and Resolution Database: Conflict detection and resolution tracking; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-424",
+   "NAME": "JAH Contradiction Resolution Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Contradiction Detection and Resolution Signature Database: Conflict detection and resolution tracking; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-425",
+   "NAME": "JAH Mathematical Derivation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Mathematical Derivation and Proof Records Database: Stepwise derivation with verification; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-426",
+   "NAME": "JAH Mathematical Derivation Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Mathematical Derivation and Proof Records Signature Database: Stepwise derivation with verification; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-427",
+   "NAME": "JAH Algorithm Selection Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Algorithm Selection and Optimization Database: Complexity and constraint based selection; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-428",
+   "NAME": "JAH Algorithm Selection Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Algorithm Selection and Optimization Signature Database: Complexity and constraint based selection; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-429",
+   "NAME": "JAH Reasoning Trace Audit Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Reasoning Trace and Decision Audit Database: Decision trace and audit recording; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-430",
+   "NAME": "JAH Reasoning Trace Audit Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Reasoning Trace and Decision Audit Signature Database: Decision trace and audit recording; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-431",
+   "NAME": "JAH Autonomous Mission Architecture Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Autonomous Mission Architecture Database: Mission concept and architecture design; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-432",
+   "NAME": "JAH Autonomous Mission Architecture Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Autonomous Mission Architecture Signature Database: Mission concept and architecture design; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-433",
+   "NAME": "JAH Spacecraft Digital Twin Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Spacecraft Digital Twin Database: Simulated configuration and state modeling; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-434",
+   "NAME": "JAH Spacecraft Digital Twin Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Spacecraft Digital Twin Signature Database: Simulated configuration and state modeling; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-435",
+   "NAME": "JAH Orbital Mechanics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Orbital Mechanics and Trajectory Design Database: Orbital modeling and trajectory calculation; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-436",
+   "NAME": "JAH Orbital Mechanics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Orbital Mechanics and Trajectory Design Signature Database: Orbital modeling and trajectory calculation; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-437",
+   "NAME": "JAH Propulsion Engineering Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Propulsion System Engineering Database: Propulsion performance modeling; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-438",
+   "NAME": "JAH Propulsion Engineering Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Propulsion System Engineering Signature Database: Propulsion performance modeling; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-439",
+   "NAME": "JAH Spacecraft Thermal Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Spacecraft Thermal Management Database: Thermal budgeting and heat transfer modeling; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-440",
+   "NAME": "JAH Spacecraft Thermal Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Spacecraft Thermal Management Signature Database: Thermal budgeting and heat transfer modeling; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-441",
+   "NAME": "JAH Radiation Effects Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Radiation Effects and Space Environment Database: Radiation environment and shielding analysis; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-442",
+   "NAME": "JAH Radiation Effects Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Radiation Effects and Space Environment Signature Database: Radiation environment and shielding analysis; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-443",
+   "NAME": "JAH Spacecraft Power Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Spacecraft Power Architecture Database: Power generation storage and distribution modeling; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-444",
+   "NAME": "JAH Spacecraft Power Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Spacecraft Power Architecture Signature Database: Power generation storage and distribution modeling; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-445",
+   "NAME": "JAH Ground Network Engineering Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Communications and Ground Network Engineering Database: Link budget and coverage modeling; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-446",
+   "NAME": "JAH Ground Network Engineering Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Communications and Ground Network Engineering Signature Database: Link budget and coverage modeling; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-447",
+   "NAME": "JAH Spacecraft Health Management Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Autonomous Spacecraft Health Management Database: Telemetry anomaly detection and recovery planning; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-448",
+   "NAME": "JAH Spacecraft Health Management Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Autonomous Spacecraft Health Management Signature Database: Telemetry anomaly detection and recovery planning; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-449",
+   "NAME": "JAH Mission Operations Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Mission Operations and Contingency Planning Database: Operations procedure and contingency design; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-450",
+   "NAME": "JAH Mission Operations Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Mission Operations and Contingency Planning Signature Database: Operations procedure and contingency design; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-451",
+   "NAME": "JAH Goal Planning Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the goal-to-action-planning: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-452",
+   "NAME": "Signature JAH Goal Planning Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the goal-to-action-planning-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-453",
+   "NAME": "JAH Task Graphs Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the dynamic-task-graphs: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-454",
+   "NAME": "Signature JAH Task Graphs Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the dynamic-task-graphs-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-455",
+   "NAME": "JAH Workflow Playbooks Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the workflow-templates-playbooks: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-456",
+   "NAME": "Signature JAH Workflow Playbooks Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the workflow-templates-playbooks-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-457",
+   "NAME": "JAH Tool Registry Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the tool-selection-capability-registry: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-458",
+   "NAME": "Signature JAH Tool Registry Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the tool-selection-capability-registry-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-459",
+   "NAME": "JAH Execution History Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the tool-execution-history: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-460",
+   "NAME": "Signature JAH Execution History Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the tool-execution-history-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-461",
+   "NAME": "JAH Task Recovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the task-recovery-retry-strategies: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-462",
+   "NAME": "Signature JAH Task Recovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the task-recovery-retry-strategies-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-463",
+   "NAME": "JAH Project State Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the long-horizon-project-state: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-464",
+   "NAME": "Signature JAH Project State Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the long-horizon-project-state-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-465",
+   "NAME": "JAH Compute Scheduling Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the resource-compute-scheduling: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-466",
+   "NAME": "Signature JAH Compute Scheduling Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the resource-compute-scheduling-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-467",
+   "NAME": "JAH Acceptance Tests Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the end-to-end-task-acceptance-tests: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-468",
+   "NAME": "Signature JAH Acceptance Tests Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the end-to-end-task-acceptance-tests-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-469",
+   "NAME": "JAH Multiphysics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the multiphysics-simulation: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-470",
+   "NAME": "Signature JAH Multiphysics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the multiphysics-simulation-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-471",
+   "NAME": "JAH CFD Generator Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the computational-fluid-dynamics-generator: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-472",
+   "NAME": "Signature JAH CFD Generator Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the computational-fluid-dynamics-generator-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-473",
+   "NAME": "JAH Finite Elements Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the finite-element-analysis: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-474",
+   "NAME": "Signature JAH Finite Elements Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the finite-element-analysis-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-475",
+   "NAME": "JAH Monte Carlo Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the monte-carlo-uncertainty-simulation: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-476",
+   "NAME": "Signature JAH Monte Carlo Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the monte-carlo-uncertainty-simulation-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-477",
+   "NAME": "JAH Extreme Environments Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the extreme-environment-simulation: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-478",
+   "NAME": "Signature JAH Extreme Environments Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the extreme-environment-simulation-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-479",
+   "NAME": "JAH Experiment Design Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the digital-experiment-design: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-480",
+   "NAME": "Signature JAH Experiment Design Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the digital-experiment-design-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-481",
+   "NAME": "JAH Physics-Informed AI Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the physics-informed-ai-models: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-482",
+   "NAME": "Signature JAH Physics-Informed AI Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the physics-informed-ai-models-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-483",
+   "NAME": "JAH Fidelity Validation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the simulation-fidelity-validation: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-484",
+   "NAME": "Signature JAH Fidelity Validation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the simulation-fidelity-validation-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-485",
+   "NAME": "JAH HPC Workflows Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the high-performance-computing-workflows: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-486",
+   "NAME": "Signature JAH HPC Workflows Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the high-performance-computing-workflows-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-487",
+   "NAME": "JAH Discovery Anomaly Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the scientific-discovery-anomaly: answers questions from its records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-488",
+   "NAME": "Signature JAH Discovery Anomaly Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the scientific-discovery-anomaly-signature: answers questions from its Signature records, explains methods and limits, and routes elsewhere when a question falls outside them; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-489",
+   "NAME": "JAH Source Reliability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Source Reliability and Authority Ratings Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-490",
+   "NAME": "Signature JAH Source Reliability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Source Reliability and Authority Ratings Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-491",
+   "NAME": "JAH Fact Verification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Fact Verification and Cross-Checking Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-492",
+   "NAME": "Signature JAH Fact Verification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Fact Verification and Cross-Checking Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-493",
+   "NAME": "JAH Knowledge Uncertainty Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Knowledge Uncertainty and Confidence Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-494",
+   "NAME": "Signature JAH Knowledge Uncertainty Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Knowledge Uncertainty and Confidence Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-495",
+   "NAME": "JAH Conflicting Evidence Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Conflicting Evidence Archive Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-496",
+   "NAME": "Signature JAH Conflicting Evidence Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Conflicting Evidence Archive Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-497",
+   "NAME": "JAH Temporal Truth Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Temporal Truth and Validity Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-498",
+   "NAME": "Signature JAH Temporal Truth Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Temporal Truth and Validity Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-499",
+   "NAME": "JAH Citation Verification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Citation and Attribution Verification Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-500",
+   "NAME": "Signature JAH Citation Verification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Citation and Attribution Verification Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-501",
+   "NAME": "JAH Error Case Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Hallucination and Error Case Library Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-502",
+   "NAME": "Signature JAH Error Case Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Hallucination and Error Case Library Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-503",
+   "NAME": "JAH Reproducibility Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Reproducibility and Audit Evidence Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-504",
+   "NAME": "Signature JAH Reproducibility Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Reproducibility and Audit Evidence Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-505",
+   "NAME": "JAH Adaptive Agent Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Adaptive Autonomous Agents Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-506",
+   "NAME": "Signature JAH Adaptive Agent Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Adaptive Autonomous Agents Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-507",
+   "NAME": "JAH Uncertainty-Aware Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Uncertainty-Aware AI Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-508",
+   "NAME": "Signature JAH Uncertainty-Aware Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Uncertainty-Aware AI Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-509",
+   "NAME": "JAH Decision Intelligence Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Real-Time Decision Intelligence Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-510",
+   "NAME": "Signature JAH Decision Intelligence Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Real-Time Decision Intelligence Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-511",
+   "NAME": "JAH World-Model Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI World-Models Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-512",
+   "NAME": "Signature JAH World-Model Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI World-Models Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-513",
+   "NAME": "JAH Experiment Planning Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Autonomous Experiment Planning Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-514",
+   "NAME": "Signature JAH Experiment Planning Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Autonomous Experiment Planning Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-515",
+   "NAME": "JAH Model Adaptation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI Model Adaptation and Evaluation Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-516",
+   "NAME": "Signature JAH Model Adaptation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI Model Adaptation and Evaluation Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-517",
+   "NAME": "JAH Human-AI Teaming Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Human-AI Teaming Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-518",
+   "NAME": "Signature JAH Human-AI Teaming Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Human-AI Teaming Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-519",
+   "NAME": "JAH System Assurance Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Autonomous System Assurance Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-520",
+   "NAME": "Signature JAH System Assurance Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Autonomous System Assurance Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-521",
+   "NAME": "JAH Research Reproduction Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI Research Reproduction Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-522",
+   "NAME": "Signature JAH Research Reproduction Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI Research Reproduction Signature Database: explains records, runs demo logic on user inputs, and routes out-of-scope questions to related databases; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-523",
+   "NAME": "JAH Project Memory Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Persistent User Project Memory Database: Maintains approved project facts, preferences, and ongoing tasks. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-524",
+   "NAME": "Signature JAH Project Memory Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Persistent User Project Memory Signature Database: Manon's original Signature counterparts for approved project memory: Signature project fact schemas, preference templates, and task continuity designs. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-525",
+   "NAME": "JAH Procedure Library Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Experience-to-Procedure Library Database: Converts successful, verified workflows into reusable procedures. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-526",
+   "NAME": "Signature JAH Procedure Library Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Experience-to-Procedure Library Signature Database: Manon's original Signature counterparts for experience-to-procedure conversion: Signature workflow capture designs and reusable procedure templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-527",
+   "NAME": "JAH Fix Knowledge Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Failure-to-Fix Knowledge Base Database: Links recurring errors to tested remedies. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-528",
+   "NAME": "Signature JAH Fix Knowledge Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Failure-to-Fix Knowledge Base Signature Database: Manon's original Signature counterparts for failure-to-fix knowledge: Signature error signature designs and tested remedy records. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-529",
+   "NAME": "JAH Skill Registry Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Skill and Competency Registry Database: Maps each AI or tool to demonstrated skills and limitations. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-530",
+   "NAME": "Signature JAH Skill Registry Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Skill and Competency Registry Signature Database: Manon's original Signature counterparts for skill registries: Signature skill profile designs and competency evidence templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-531",
+   "NAME": "JAH Retrieval Memory Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Adaptive Retrieval Memory Database: Learns which records and search strategies help specific tasks. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-532",
+   "NAME": "Signature JAH Retrieval Memory Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Adaptive Retrieval Memory Signature Database: Manon's original Signature counterparts for adaptive retrieval: Signature retrieval strategy designs and source ranking templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-533",
+   "NAME": "JAH Context Compression Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Context Compression and Recall Database: Preserves important details from large histories and archives. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-534",
+   "NAME": "Signature JAH Context Compression Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Context Compression and Recall Signature Database: Manon's original Signature counterparts for context compression: Signature summary designs and recall index templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-535",
+   "NAME": "JAH Knowledge Gap Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Knowledge Gap and Missing-Information Registry Database: Identifies what must be learned or retrieved before proceeding. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-536",
+   "NAME": "Signature JAH Knowledge Gap Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Knowledge Gap and Missing-Information Registry Signature Database: Manon's original Signature counterparts for knowledge gap registries: Signature gap identification designs and closure test templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-537",
+   "NAME": "JAH Correction Archive Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the User Feedback and Correction Archive Database: Stores corrections with permission, scope, and provenance. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-538",
+   "NAME": "Signature JAH Correction Archive Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the User Feedback and Correction Archive Signature Database: Manon's original Signature counterparts for feedback correction archives: Signature correction intake templates and provenance designs. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-539",
+   "NAME": "JAH Model Capability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Model-Specific Strengths and Weaknesses Database: Records benchmarked capabilities and known failure modes of available models. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-540",
+   "NAME": "Signature JAH Model Capability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Model-Specific Strengths and Weaknesses Signature Database: Manon's original Signature counterparts for model capability profiles: Signature benchmark designs and failure mode catalog templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-541",
+   "NAME": "JAH Learning Evaluation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Learning Evaluation and Regression History Database: Checks whether system updates improve performance without breaking existing abilities. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-542",
+   "NAME": "Signature JAH Learning Evaluation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Learning Evaluation and Regression History Signature Database: Manon's original Signature counterparts for learning evaluation: Signature evaluation run designs and regression test templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-543",
+   "NAME": "JAH Kinematics Dynamics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robotics Kinematics and Dynamics Database: Generates robot motion models and checks joint, speed and workspace constraints. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-544",
+   "NAME": "Signature JAH Kinematics Dynamics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robotics Kinematics and Dynamics Signature Database: Manon's original Signature counterparts for robot kinematics and dynamics: Signature motion model designs and workspace constraint templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-545",
+   "NAME": "JAH Perception Fusion Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robot Perception and Sensor Fusion Database: Combines supported sensor data and records uncertainty. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-546",
+   "NAME": "Signature JAH Perception Fusion Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robot Perception and Sensor Fusion Signature Database: Manon's original Signature counterparts for robot perception: Signature sensor fusion designs and uncertainty estimate templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-547",
+   "NAME": "JAH Navigation Mapping Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Autonomous Navigation and Mapping Database: Manages maps, localization, route planning and obstacle scenarios. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-548",
+   "NAME": "Signature JAH Navigation Mapping Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Autonomous Navigation and Mapping Signature Database: Manon's original Signature counterparts for autonomous navigation: Signature map building designs and route planning templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-549",
+   "NAME": "JAH Manipulation Grasp Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robotic Manipulation and Grasp Planning Database: Models object properties, grasp options and collision constraints. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-550",
+   "NAME": "Signature JAH Manipulation Grasp Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robotic Manipulation and Grasp Planning Signature Database: Manon's original Signature counterparts for robotic manipulation: Signature grasp option designs and collision constraint templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-551",
+   "NAME": "JAH Robot Collaboration Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Human-Robot Collaboration Database: Develops task-sharing workflows and operator safety requirements. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-552",
+   "NAME": "Signature JAH Robot Collaboration Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Human-Robot Collaboration Signature Database: Manon's original Signature counterparts for human-robot collaboration: Signature task-sharing workflow designs and operator safety templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-553",
+   "NAME": "JAH Process Automation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Industrial Process Automation Database: Generates process sequences, control specifications and acceptance tests. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-554",
+   "NAME": "Signature JAH Process Automation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Industrial Process Automation Signature Database: Manon's original Signature counterparts for industrial process automation: Signature process sequence designs and acceptance test templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-555",
+   "NAME": "JAH Fleet Scheduling Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robot Fleet Scheduling Database: Assigns work while considering battery levels, equipment availability and deadlines. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-556",
+   "NAME": "Signature JAH Fleet Scheduling Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robot Fleet Scheduling Signature Database: Manon's original Signature counterparts for robot fleet scheduling: Signature fleet assignment designs and charging schedule templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-557",
+   "NAME": "JAH Vision Inspection Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Machine Vision Inspection Database: Creates defect catalogs, image evaluation procedures and inspection test suites. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-558",
+   "NAME": "Signature JAH Vision Inspection Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Machine Vision Inspection Signature Database: Manon's original Signature counterparts for machine vision inspection: Signature defect catalog designs and image evaluation templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-559",
+   "NAME": "JAH Fault Diagnosis Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robotics Fault Diagnosis Database: Maps observed symptoms to candidate causes and verified maintenance procedures. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-560",
+   "NAME": "Signature JAH Fault Diagnosis Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robotics Fault Diagnosis Signature Database: Manon's original Signature counterparts for robotics fault diagnosis: Signature symptom mapping designs and verified maintenance templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-561",
+   "NAME": "JAH Digital Twin Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robot Digital Twin and Test Environment Database: Synchronizes simulated machines, test configurations and physical test observations. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-562",
+   "NAME": "Signature JAH Digital Twin Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Robot Digital Twin and Test Environment Signature Database: Manon's original Signature counterparts for robot digital twins: Signature twin model designs and test environment templates. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-563",
+   "NAME": "JAH Universal Generator Registry Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Universal Generator Capability Registry Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-564",
+   "NAME": "JAH Universal Generator Registry Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Universal Generator Capability Registry Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-565",
+   "NAME": "JAH Generator Composition Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Generator Composition and Chaining Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-566",
+   "NAME": "JAH Generator Composition Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Generator Composition and Chaining Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-567",
+   "NAME": "JAH Generator Parameter Space Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Generator Parameter and Variant Space Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-568",
+   "NAME": "JAH Generator Parameter Space Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Generator Parameter and Variant Space Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-569",
+   "NAME": "JAH Artifact Quality Benchmark Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Generated Artifact Quality Benchmarks Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-570",
+   "NAME": "JAH Artifact Quality Benchmark Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Generated Artifact Quality Benchmarks Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-571",
+   "NAME": "JAH Artifact Repair Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Artifact Repair and Improvement Patterns Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-572",
+   "NAME": "JAH Artifact Repair Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Artifact Repair and Improvement Patterns Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-573",
+   "NAME": "JAH Template Artifact Library Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Template-to-Complete-Artifact Library Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-574",
+   "NAME": "JAH Template Artifact Library Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Template-to-Complete-Artifact Library Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-575",
+   "NAME": "JAH Multiformat Conversion Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Multiformat Conversion and Interoperability Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-576",
+   "NAME": "JAH Multiformat Conversion Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Multiformat Conversion and Interoperability Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-577",
+   "NAME": "JAH Generated Code Test Corpus Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Generated Code and Program Test Corpus Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-578",
+   "NAME": "JAH Generated Code Test Corpus Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Generated Code and Program Test Corpus Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-579",
+   "NAME": "JAH Synthetic Data Quality Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Synthetic Data Quality and Coverage Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-580",
+   "NAME": "JAH Synthetic Data Quality Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Synthetic Data Quality and Coverage Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-581",
+   "NAME": "JAH Artifact Packaging Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Artifact Packaging and Delivery Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-582",
+   "NAME": "JAH Artifact Packaging Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Artifact Packaging and Delivery Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-583",
+   "NAME": "JAH Cyber Asset Inventory Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cyber Asset Inventory and Dependency Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-584",
+   "NAME": "JAH Cyber Asset Inventory Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cyber Asset Inventory and Dependency Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-585",
+   "NAME": "JAH Secure Architecture Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Secure Architecture Patterns Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-586",
+   "NAME": "JAH Secure Architecture Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Secure Architecture Patterns Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-587",
+   "NAME": "JAH Vulnerability Triage Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Vulnerability Triage and Remediation Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-588",
+   "NAME": "JAH Vulnerability Triage Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Vulnerability Triage and Remediation Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-589",
+   "NAME": "JAH Configuration Compliance Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Security Configuration Compliance Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-590",
+   "NAME": "JAH Configuration Compliance Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Security Configuration Compliance Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-591",
+   "NAME": "JAH Defensive Threat Detection Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Defensive Threat Detection Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-592",
+   "NAME": "JAH Defensive Threat Detection Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Defensive Threat Detection Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-593",
+   "NAME": "JAH Incident Response Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Incident Response and Recovery Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-594",
+   "NAME": "JAH Incident Response Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Incident Response and Recovery Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-595",
+   "NAME": "JAH Resilient Network Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Resilient Network Architecture Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-596",
+   "NAME": "JAH Resilient Network Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Resilient Network Architecture Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-597",
+   "NAME": "JAH Secure AI Pipeline Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Secure AI and Data Pipelines Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-598",
+   "NAME": "JAH Secure AI Pipeline Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Secure AI and Data Pipelines Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-599",
+   "NAME": "JAH Cybersecurity assurance record Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cybersecurity Test and Assurance Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-600",
+   "NAME": "JAH Cybersecurity assurance record Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cybersecurity Test and Assurance Database: answers questions from the archive, explains methods and checks, and helps build records in the same schema; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-601",
+   "NAME": "JAH Program Synthesis Code Patterns Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Program Synthesis and Code Patterns Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-602",
+   "NAME": "Signature JAH Program Synthesis Code Patterns Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Program Synthesis and Code Patterns Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-603",
+   "NAME": "JAH Software Dependency Package Graph Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Software Dependency and Package Graph Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-604",
+   "NAME": "Signature JAH Software Dependency Package Graph Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Software Dependency and Package Graph Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-605",
+   "NAME": "JAH Build Deployment Recipes Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Build and Deployment Recipes Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-606",
+   "NAME": "Signature JAH Build Deployment Recipes Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Build and Deployment Recipes Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-607",
+   "NAME": "JAH Automated Debugging Case Library Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Automated Debugging Case Library Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-608",
+   "NAME": "Signature JAH Automated Debugging Case Library Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Automated Debugging Case Library Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-609",
+   "NAME": "JAH Performance Profiling Optimization Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Performance Profiling and Optimization Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-610",
+   "NAME": "Signature JAH Performance Profiling Optimization Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Performance Profiling and Optimization Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-611",
+   "NAME": "JAH Formal Program Verification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Formal Program Verification Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-612",
+   "NAME": "Signature JAH Formal Program Verification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Formal Program Verification Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-613",
+   "NAME": "JAH Runtime Failure Recovery Records Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Runtime Failure and Recovery Records Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-614",
+   "NAME": "Signature JAH Runtime Failure Recovery Records Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Runtime Failure and Recovery Records Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-615",
+   "NAME": "JAH Software Environment Reproducible Builds Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Software Environment and Reproducible Builds Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-616",
+   "NAME": "Signature JAH Software Environment Reproducible Builds Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Software Environment and Reproducible Builds Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-617",
+   "NAME": "JAH Mission Systems Integration Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Mission Systems Integration Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-618",
+   "NAME": "Signature JAH Mission Systems Integration Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Mission Systems Integration Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-619",
+   "NAME": "JAH Platform Reliability Availability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Platform Reliability and Availability Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-620",
+   "NAME": "Signature JAH Platform Reliability Availability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Platform Reliability and Availability Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-621",
+   "NAME": "JAH Logistics Supply Resilience Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Logistics and Supply Resilience Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-622",
+   "NAME": "Signature JAH Logistics Supply Resilience Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Logistics and Supply Resilience Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-623",
+   "NAME": "JAH Maintenance Prognostics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Maintenance Prognostics Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-624",
+   "NAME": "Signature JAH Maintenance Prognostics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Maintenance Prognostics Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-625",
+   "NAME": "JAH Fleet Readiness Sustainment Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Fleet Readiness and Sustainment Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-626",
+   "NAME": "Signature JAH Fleet Readiness Sustainment Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Fleet Readiness and Sustainment Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-627",
+   "NAME": "JAH Secure Communications Assurance Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Secure Communications Assurance Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-628",
+   "NAME": "Signature JAH Secure Communications Assurance Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Secure Communications Assurance Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-629",
+   "NAME": "JAH Operational Planning Resource Allocation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Operational Planning and Resource Allocation Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-630",
+   "NAME": "Signature JAH Operational Planning Resource Allocation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Operational Planning and Resource Allocation Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-631",
+   "NAME": "JAH Mission Risk Decision Support Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Mission Risk and Decision Support Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-632",
+   "NAME": "Signature JAH Mission Risk Decision Support Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Mission Risk and Decision Support Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-633",
+   "NAME": "JAH Systems Interoperability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Systems Interoperability Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-634",
+   "NAME": "Signature JAH Systems Interoperability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Systems Interoperability Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-635",
+   "NAME": "JAH Operational Lessons After-Action Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Operational Lessons and After-Action Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-636",
+   "NAME": "Signature JAH Operational Lessons After-Action Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Operational Lessons and After-Action Signature Database: answers questions from the archive, explains methods and limits, and generates new records in the database's pattern; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-637",
+   "NAME": "JAH Specialist Directory Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Specialist AI Capability Directory Database: Identifies each agent's expertise, tools, access, and limits, so work is routed to the agent actually able to do it.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-638",
+   "NAME": "Signature JAH Specialist Directory Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Specialist AI Capability Directory Signature Database: Manon's original Signature counterparts for Specialist AI Capability Directory: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-639",
+   "NAME": "JAH Delegation Protocol Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI-to-AI Delegation Protocols Database: Defines task handoffs, required inputs, and return formats, so one agent can hand work to another without losing context.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-640",
+   "NAME": "Signature JAH Delegation Protocol Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI-to-AI Delegation Protocols Signature Database: Manon's original Signature counterparts for AI-to-AI Delegation Protocols: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-641",
+   "NAME": "JAH Debate Review Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Multi-Agent Debate and Evidence Review Database: Compares independently produced solutions against shared evidence, so the strongest answer wins on its merits.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-642",
+   "NAME": "Signature JAH Debate Review Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Multi-Agent Debate and Evidence Review Signature Database: Manon's original Signature counterparts for Multi-Agent Debate and Evidence Review: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-643",
+   "NAME": "JAH Consensus Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Consensus and Disagreement Management Database: Combines agreement while preserving unresolved disputes, so a group answer never hides what is still contested.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-644",
+   "NAME": "Signature JAH Consensus Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Consensus and Disagreement Management Signature Database: Manon's original Signature counterparts for Consensus and Disagreement Management: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-645",
+   "NAME": "JAH Allocation Scheduler Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Agent Task Allocation and Scheduling Database: Assigns work according to capability, cost, and availability, so every task lands with an agent able to finish it on time.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-646",
+   "NAME": "Signature JAH Allocation Scheduler Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Agent Task Allocation and Scheduling Signature Database: Manon's original Signature counterparts for Agent Task Allocation and Scheduling: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-647",
+   "NAME": "JAH Shared Memory Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Shared Working Memory and State Database: Maintains consistent project context across agents, using schema, methods, and clearly labeled template examples only.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-648",
+   "NAME": "Signature JAH Shared Memory Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Shared Working Memory and State Signature Database: Manon's original Signature counterparts for Shared Working Memory and State: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-649",
+   "NAME": "JAH Output Contract Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Agent Output Contracts and Schemas Database: Ensures outputs can be parsed and safely consumed by other agents, through fixed schemas and contract tests.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-650",
+   "NAME": "Signature JAH Output Contract Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Agent Output Contracts and Schemas Signature Database: Manon's original Signature counterparts for Agent Output Contracts and Schemas: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-651",
+   "NAME": "JAH Specialist Evaluator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Specialist Agent Evaluation Database: Measures each agent on realistic tasks before assigning responsibility, so assignments rest on demonstrated results.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-652",
+   "NAME": "Signature JAH Specialist Evaluator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Specialist Agent Evaluation Signature Database: Manon's original Signature counterparts for Specialist Agent Evaluation: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-653",
+   "NAME": "JAH Recovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Coordination Failure and Deadlock Recovery Database: Detects circular delegation, repeated failures, and stalled workflows, and recovers them with tested procedures.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-654",
+   "NAME": "Signature JAH Recovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Coordination Failure and Deadlock Recovery Signature Database: Manon's original Signature counterparts for Coordination Failure and Deadlock Recovery: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-655",
+   "NAME": "JAH Integration Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cross-Agent Result Integration Database: Merges contributions into one coherent, checked deliverable, with attribution and consistency verified.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-656",
+   "NAME": "Signature JAH Integration Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cross-Agent Result Integration Signature Database: Manon's original Signature counterparts for Cross-Agent Result Integration: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-657",
+   "NAME": "JAH Materials Discovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Advanced Materials Discovery Database: Connects material composition, properties, manufacturing processes and test outcomes, so new materials are found by evidence, not guesswork.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-658",
+   "NAME": "Signature JAH Materials Discovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Advanced Materials Discovery Signature Database: Manon's original Signature counterparts for Advanced Materials Discovery: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-659",
+   "NAME": "JAH Composite Structures Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Composite Structures Engineering Database: Models laminate designs, structural performance and inspection requirements, for structures that are strong, light, and inspectable.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-660",
+   "NAME": "Signature JAH Composite Structures Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Composite Structures Engineering Signature Database: Manon's original Signature counterparts for Composite Structures Engineering: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-661",
+   "NAME": "JAH Additive Manufacturing Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Additive Manufacturing Processes Database: Links build parameters, material batches, defects and quality measurements, with real printable directions for makers.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-662",
+   "NAME": "Signature JAH Additive Manufacturing Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Additive Manufacturing Processes Signature Database: Manon's original Signature counterparts for Additive Manufacturing Processes: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-663",
+   "NAME": "JAH Microelectronics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Semiconductor and Microelectronics Engineering Database: Manages device specifications, process constraints and characterization results, for devices designed to verified targets.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-664",
+   "NAME": "Signature JAH Microelectronics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Semiconductor and Microelectronics Engineering Signature Database: Manon's original Signature counterparts for Semiconductor and Microelectronics Engineering: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-665",
+   "NAME": "JAH Battery Storage Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Battery Chemistry and Energy Storage Database: Compares performance, degradation, safety tests and operating conditions, for storage designed to measured targets.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-666",
+   "NAME": "Signature JAH Battery Storage Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Battery Chemistry and Energy Storage Signature Database: Manon's original Signature counterparts for Battery Chemistry and Energy Storage: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-667",
+   "NAME": "JAH Sensor Design Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Advanced Sensor Design Database: Tracks sensitivity, noise, calibration, environmental limits and interface requirements, for sensors designed to stated targets.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-668",
+   "NAME": "Signature JAH Sensor Design Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Advanced Sensor Design Signature Database: Manon's original Signature counterparts for Advanced Sensor Design: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-669",
+   "NAME": "JAH Metrology Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Metrology and Calibration Database: Manages measurement standards, instrument calibration and uncertainty budgets, so measurements can be trusted and traced.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-670",
+   "NAME": "Signature JAH Metrology Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Metrology and Calibration Signature Database: Manon's original Signature counterparts for Metrology and Calibration: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-671",
+   "NAME": "JAH Nondestructive Evaluation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Non-Destructive Evaluation Database: Organizes inspection methods, reference defects and detection performance, so flaws are found without destroying the part.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-672",
+   "NAME": "Signature JAH Nondestructive Evaluation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Non-Destructive Evaluation Signature Database: Manon's original Signature counterparts for Non-Destructive Evaluation: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-673",
+   "NAME": "JAH Process Optimization Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Manufacturing Process Optimization Database: Explores process parameters and measured quality, yield and throughput, so production improves on trial evidence.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-674",
+   "NAME": "Signature JAH Process Optimization Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Manufacturing Process Optimization Signature Database: Manon's original Signature counterparts for Manufacturing Process Optimization: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-675",
+   "NAME": "JAH Failure Analysis Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Materials Failure and Fracture Database: Catalogs failure mechanisms, test evidence, material limits and corrective actions, so failures teach prevention.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-676",
+   "NAME": "Signature JAH Failure Analysis Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Materials Failure and Fracture Signature Database: Manon's original Signature counterparts for Materials Failure and Fracture: Signature methods, schemas, and designs inside the Signature ecosystem.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-677",
+   "NAME": "JAH Semantic Search Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Semantic Search and Query Expansion Database: Finds relevant records even when users use different terminology, through synonym expansion and concept matching.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-678",
+   "NAME": "JAH Semantic Search Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Semantic Search and Query Expansion Database (Signature Edition): Finds relevant records even when users use different terminology, through synonym expansion and concept matching.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-679",
+   "NAME": "JAH Federated Search Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cross-Archive Federated Search Database: Searches multiple archives without requiring every record to be copied centrally, using a documented client-side federated query procedure.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-680",
+   "NAME": "JAH Federated Search Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cross-Archive Federated Search Database (Signature Edition): Searches multiple archives without requiring every record to be copied centrally, using a documented client-side federated query procedure.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-681",
+   "NAME": "JAH Entity Resolution Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Entity Resolution and Identity Matching Database: Recognizes when records refer to the same person, product, concept, or organization, through scored identity matching.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-682",
+   "NAME": "JAH Entity Resolution Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Entity Resolution and Identity Matching Database (Signature Edition): Recognizes when records refer to the same person, product, concept, or organization, through scored identity matching.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-683",
+   "NAME": "JAH Knowledge Graph Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Knowledge Relationship and Dependency Graph Database: Maps relationships between facts, files, tools, and generated artifacts, as a navigable dependency graph.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-684",
+   "NAME": "JAH Knowledge Graph Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Knowledge Relationship and Dependency Graph Database (Signature Edition): Maps relationships between facts, files, tools, and generated artifacts, as a navigable dependency graph.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-685",
+   "NAME": "JAH Archive Coverage Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Archive Coverage and Missing-Record Analysis Database: Identifies gaps, missing categories, and underserved queries in an archive, with a coverage report per category.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-686",
+   "NAME": "JAH Archive Coverage Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Archive Coverage and Missing-Record Analysis Database (Signature Edition): Identifies gaps, missing categories, and underserved queries in an archive, with a coverage report per category.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-687",
+   "NAME": "JAH Duplicate Detection Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Duplicate and Near-Duplicate Detection Database: Reduces repeated records and redundant generated content, through shingle-based near-duplicate detection.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-688",
+   "NAME": "JAH Duplicate Detection Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Duplicate and Near-Duplicate Detection Database (Signature Edition): Reduces repeated records and redundant generated content, through shingle-based near-duplicate detection.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-689",
+   "NAME": "JAH Data Lineage Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Data Lineage and Transformation History Database: Tracks how a record was sourced, modified, transformed, and used, with a complete transformation history per record.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-690",
+   "NAME": "JAH Data Lineage Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Data Lineage and Transformation History Database (Signature Edition): Tracks how a record was sourced, modified, transformed, and used, with a complete transformation history per record.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-691",
+   "NAME": "JAH Incremental Update Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Incremental Updates and Change Detection Database: Detects changed sources and updates affected records, without rebuilding the whole archive on every change.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-692",
+   "NAME": "JAH Incremental Update Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Incremental Updates and Change Detection Database (Signature Edition): Detects changed sources and updates affected records, without rebuilding the whole archive on every change.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-693",
+   "NAME": "JAH Query Routing Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Query Routing and Search Strategy Optimization Database: Selects archives and search methods based on prior measured success, routing each query to the strategy that performed best.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-694",
+   "NAME": "JAH Query Routing Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Query Routing and Search Strategy Optimization Database (Signature Edition): Selects archives and search methods based on prior measured success, routing each query to the strategy that performed best.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-695",
+   "NAME": "JAH Storage Tiering Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Storage Tiering and Archive Retrieval Database: Balances fast access, cost, retention, and retrieval reliability across storage tiers for archived records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-696",
+   "NAME": "JAH Storage Tiering Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Storage Tiering and Archive Retrieval Database (Signature Edition): Balances fast access, cost, retention, and retrieval reliability across storage tiers for archived records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-697",
+   "NAME": "JAH Integrated Energy Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Integrated Energy System Simulation Database: Models generation, storage, demand and distribution for an integrated energy system, as a design-target simulation.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-698",
+   "NAME": "JAH Integrated Energy Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Integrated Energy System Simulation Database (Signature Edition): Models generation, storage, demand and distribution for an integrated energy system, as a design-target simulation.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-699",
+   "NAME": "JAH Microgrid Resilience Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Microgrid Resilience Database: Evaluates islanding, backup capacity, restoration and critical loads for microgrids, as design-target analysis.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-700",
+   "NAME": "JAH Microgrid Resilience Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Microgrid Resilience Database (Signature Edition): Evaluates islanding, backup capacity, restoration and critical loads for microgrids, as design-target analysis.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-701",
+   "NAME": "JAH Power Electronics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Power Electronics Design Database: Stores converter designs, component stresses, efficiency and thermal analyses for power electronics, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-702",
+   "NAME": "JAH Power Electronics Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Power Electronics Design Database (Signature Edition): Stores converter designs, component stresses, efficiency and thermal analyses for power electronics, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-703",
+   "NAME": "JAH Cooling Systems Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Advanced Cooling and Thermal Control Database: Develops cooling architectures for electronics, laboratories and industrial systems, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-704",
+   "NAME": "JAH Cooling Systems Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Advanced Cooling and Thermal Control Database (Signature Edition): Develops cooling architectures for electronics, laboratories and industrial systems, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-705",
+   "NAME": "JAH Water Life-Support Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Water and Life-Support Systems Database: Models water treatment, recycling, resource consumption and fault scenarios for life-support systems, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-706",
+   "NAME": "JAH Water Life-Support Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Water and Life-Support Systems Database (Signature Edition): Models water treatment, recycling, resource consumption and fault scenarios for life-support systems, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-707",
+   "NAME": "JAH Environmental Monitoring Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Environmental Monitoring and Forecasting Database: Combines instrument observations, environmental models and uncertainty for monitoring and forecasting, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-708",
+   "NAME": "JAH Environmental Monitoring Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Environmental Monitoring and Forecasting Database (Signature Edition): Combines instrument observations, environmental models and uncertainty for monitoring and forecasting, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-709",
+   "NAME": "JAH Infrastructure Resilience Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Critical Infrastructure Resilience Database: Analyzes dependencies and recovery plans for essential services, as design-target records for civilian infrastructure.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-710",
+   "NAME": "JAH Infrastructure Resilience Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Critical Infrastructure Resilience Database (Signature Edition): Analyzes dependencies and recovery plans for essential services, as design-target records for civilian infrastructure.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-711",
+   "NAME": "JAH Extreme Environment Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Extreme-Environment Equipment Database: Tracks operating envelopes, qualification tests and degradation in harsh conditions for equipment, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-712",
+   "NAME": "JAH Extreme Environment Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Extreme-Environment Equipment Database (Signature Edition): Tracks operating envelopes, qualification tests and degradation in harsh conditions for equipment, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-713",
+   "NAME": "JAH Resource Efficiency Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Resource Efficiency and Recycling Database: Optimizes material use, waste recovery and lifecycle resource requirements, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-714",
+   "NAME": "JAH Resource Efficiency Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Resource Efficiency and Recycling Database (Signature Edition): Optimizes material use, waste recovery and lifecycle resource requirements, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-715",
+   "NAME": "JAH Infrastructure Twin Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Infrastructure Digital Twin Database: Links assets, sensor readings, maintenance records and simulated operating states for infrastructure, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-716",
+   "NAME": "JAH Infrastructure Twin Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Infrastructure Digital Twin Database (Signature Edition): Links assets, sensor readings, maintenance records and simulated operating states for infrastructure, as design-target records.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-717",
+   "NAME": "Access Permissions Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Identity, Roles and Access Permissions Database: Controls which users, agents, and tools can access each resource. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-718",
+   "NAME": "Signature Access Permissions Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Identity, Roles and Access Permissions Database (Signature Edition): Controls which users, agents, and tools can access each resource. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-719",
+   "NAME": "Credential Reference Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Secrets and Credential Reference Registry Database: Manages references to credentials without storing secrets as ordinary records. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-720",
+   "NAME": "Signature Credential Reference Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Secrets and Credential Reference Registry Database (Signature Edition): Manages references to credentials without storing secrets as ordinary records. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-721",
+   "NAME": "Privacy Classification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Data Privacy and Sensitivity Classification Database: Labels sensitive, private, confidential, and public information. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-722",
+   "NAME": "Signature Privacy Classification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Data Privacy and Sensitivity Classification Database (Signature Edition): Labels sensitive, private, confidential, and public information. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-723",
+   "NAME": "Input Safety Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Untrusted Input and Prompt-Injection Cases Database: Catalogs hostile instructions and tests defenses against them. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-724",
+   "NAME": "Signature Input Safety Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Untrusted Input and Prompt-Injection Cases Database (Signature Edition): Catalogs hostile instructions and tests defenses against them. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-725",
+   "NAME": "Sandbox Policy Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Sandboxed Execution Policies Database: Defines isolated environments and allowed operations for generated code. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-726",
+   "NAME": "Signature Sandbox Policy Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Sandboxed Execution Policies Database (Signature Edition): Defines isolated environments and allowed operations for generated code. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-727",
+   "NAME": "Backup Recovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Backup, Restore and Disaster Recovery Database: Stores recovery procedures, backup verification, and restore test results. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-728",
+   "NAME": "Signature Backup Recovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Backup, Restore and Disaster Recovery Database (Signature Edition): Stores recovery procedures, backup verification, and restore test results. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-729",
+   "NAME": "Service Health Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Service Health and Dependency Monitoring Database: Tracks availability, latency, errors, and upstream service dependencies. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-730",
+   "NAME": "Signature Service Health Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Service Health and Dependency Monitoring Database (Signature Edition): Tracks availability, latency, errors, and upstream service dependencies. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-731",
+   "NAME": "Usage Controls Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Rate Limits, Budgets and Usage Controls Database: Prevents runaway generation, API costs, and resource exhaustion. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-732",
+   "NAME": "Signature Usage Controls Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Rate Limits, Budgets and Usage Controls Database (Signature Edition): Prevents runaway generation, API costs, and resource exhaustion. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-733",
+   "NAME": "Incident Remediation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Security Incident and Remediation Archive Database: Records incidents, containment, corrective actions, and verification. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-734",
+   "NAME": "Signature Incident Remediation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Security Incident and Remediation Archive Database (Signature Edition): Records incidents, containment, corrective actions, and verification. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-735",
+   "NAME": "Traceability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Requirements-to-Test Traceability Database: Links each requirement to its implementation and verification evidence. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-736",
+   "NAME": "Signature Traceability Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Requirements-to-Test Traceability Database (Signature Edition): Links each requirement to its implementation and verification evidence. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-737",
+   "NAME": "Formal Methods Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Formal Methods and Model Checking Database: Stores properties, formal models, counterexamples and proof results. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-738",
+   "NAME": "Signature Formal Methods Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Formal Methods and Model Checking Database (Signature Edition): Stores properties, formal models, counterexamples and proof results. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-739",
+   "NAME": "Fault Tree Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Fault Tree and Failure Mode Database: Maps failure combinations, effects, mitigations and residual risks. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-740",
+   "NAME": "Signature Fault Tree Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Fault Tree and Failure Mode Database (Signature Edition): Maps failure combinations, effects, mitigations and residual risks. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-741",
+   "NAME": "Risk Assessment Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Probabilistic Risk Assessment Database: Records event probabilities, uncertainty assumptions and consequence models. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-742",
+   "NAME": "Signature Risk Assessment Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Probabilistic Risk Assessment Database (Signature Edition): Records event probabilities, uncertainty assumptions and consequence models. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-743",
+   "NAME": "Software Loop Test Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Software-in-the-Loop Testing Database: Tests control logic, interfaces and system behavior in simulated environments. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-744",
+   "NAME": "Signature Software Loop Test Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Software-in-the-Loop Testing Database (Signature Edition): Tests control logic, interfaces and system behavior in simulated environments. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-745",
+   "NAME": "Environmental Test Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Environmental Qualification Database: Tracks vibration, thermal, pressure and other relevant qualification tests. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-746",
+   "NAME": "Signature Environmental Test Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Environmental Qualification Database (Signature Edition): Tracks vibration, thermal, pressure and other relevant qualification tests. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-747",
+   "NAME": "Change Control Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Configuration and Change-Control Database: Records approved baselines, component revisions and change impact. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-748",
+   "NAME": "Signature Change Control Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Configuration and Change-Control Database (Signature Edition): Records approved baselines, component revisions and change impact. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-749",
+   "NAME": "Independent Verification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Independent Verification and Validation Database: Maintains separate test evidence and independent assessments. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-750",
+   "NAME": "Signature Independent Verification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Independent Verification and Validation Database (Signature Edition): Maintains separate test evidence and independent assessments. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-751",
+   "NAME": "Mission Readiness Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Mission Readiness and Acceptance Database: Compiles required evidence, unresolved risks, approvals and release criteria. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-752",
+   "NAME": "Signature Mission Readiness Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Mission Readiness and Acceptance Database (Signature Edition): Compiles required evidence, unresolved risks, approvals and release criteria. can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-753",
+   "NAME": "JAH Baseline Comparison Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Baseline-versus-Enhanced AI Comparisons Database: compares the same model with and without JAH resources, across the fixed test suite's three arms.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-754",
+   "NAME": "Signature JAH Baseline Comparison Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Baseline-versus-Enhanced AI Comparisons Signature Database: compares the same model with and without JAH resources, across the fixed test suite's three arms.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-755",
+   "NAME": "JAH Ablation Experiment Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Ablation and Feature Contribution Experiments Database: tests which databases, generators, and tools actually add value, by removing one feature at a time and measuring the change.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-756",
+   "NAME": "Signature JAH Ablation Experiment Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Ablation and Feature Contribution Experiments Signature Database: tests which databases, generators, and tools actually add value, by removing one feature at a time and measuring the change.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-757",
+   "NAME": "JAH Workflow Benchmark Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the End-to-End Workflow Benchmark Database: measures complete task completion rather than isolated component scores, from intake to verified deliverable.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-758",
+   "NAME": "Signature JAH Workflow Benchmark Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the End-to-End Workflow Benchmark Signature Database: measures complete task completion rather than isolated component scores, from intake to verified deliverable.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-759",
+   "NAME": "JAH Efficiency Measurement Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cost, Latency and Compute Efficiency Database: measures the resources required per successful task: cost, latency, and compute, under shared accounting rules.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-760",
+   "NAME": "Signature JAH Efficiency Measurement Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cost, Latency and Compute Efficiency Signature Database: measures the resources required per successful task: cost, latency, and compute, under shared accounting rules.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-761",
+   "NAME": "JAH Failure Attribution Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Failure Attribution and Root-Cause Analysis Database: determines whether errors originate in the model, data, tools, or coordination, with an evidence packet for every verdict.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-762",
+   "NAME": "Signature JAH Failure Attribution Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Failure Attribution and Root-Cause Analysis Signature Database: determines whether errors originate in the model, data, tools, or coordination, with an evidence packet for every verdict.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-763",
+   "NAME": "JAH Regression Test Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Automated Regression Test Generation Database: creates tests from past errors and important requirements, so fixed failures stay fixed and requirements stay covered.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-764",
+   "NAME": "Signature JAH Regression Test Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Automated Regression Test Generation Signature Database: creates tests from past errors and important requirements, so fixed failures stay fixed and requirements stay covered.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-765",
+   "NAME": "JAH Architecture Experiment Registrar",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Controlled Architecture Experiment Registry Database: tracks proposed changes, versions, experimental conditions, and outcomes, so architecture decisions rest on recorded evidence.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-766",
+   "NAME": "Signature JAH Architecture Experiment Registrar",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Controlled Architecture Experiment Registry Signature Database: tracks proposed changes, versions, experimental conditions, and outcomes, so architecture decisions rest on recorded evidence.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-767",
+   "NAME": "JAH Safe Improvement Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Safe Self-Improvement and Rollback Database: tests improvements before release and restores the last known-good version when needed, under a recorded gate.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-768",
+   "NAME": "Signature JAH Safe Improvement Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Safe Self-Improvement and Rollback Signature Database: tests improvements before release and restores the last known-good version when needed, under a recorded gate.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-769",
+   "NAME": "JAH Capability Gap Planner",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Universal Capability Gap and Upgrade Planner Database: identifies the highest-impact missing capabilities and recommends the next improvements, as master coordinator for the R32 collection, promoting only test-gated changes.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-770",
+   "NAME": "Signature JAH Capability Gap Planner",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Universal Capability Gap and Upgrade Planner Signature Database: identifies the highest-impact missing capabilities and recommends the next improvements, as master coordinator for the R32 collection, promoting only test-gated changes.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-771",
+   "NAME": "JAH Readiness and Maturation Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Technology Readiness and Maturation Database: tracks evidence, unresolved risks, prototypes, and milestones for each technology as it matures toward operational use.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-772",
+   "NAME": "Signature JAH Readiness and Maturation Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Technology Readiness and Maturation Signature Database: tracks evidence, unresolved risks, prototypes, and milestones for each technology as it matures toward operational use.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-773",
+   "NAME": "JAH Prototype Plan Generator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Invention-to-Prototype Generator Database: turns engineering specifications into prototype plans, parts lists, and test procedures that a builder can follow.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-774",
+   "NAME": "Signature JAH Prototype Plan Generator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Invention-to-Prototype Generator Signature Database: turns engineering specifications into prototype plans, parts lists, and test procedures that a builder can follow.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-775",
+   "NAME": "JAH Laboratory Workflow Coordinator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Automated Laboratory Workflows Database: coordinates approved experiments, instruments, sample tracking, and result validation in reproducible laboratory workflows.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-776",
+   "NAME": "Signature JAH Laboratory Workflow Coordinator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Automated Laboratory Workflows Signature Database: coordinates approved experiments, instruments, sample tracking, and result validation in reproducible laboratory workflows.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-777",
+   "NAME": "JAH Knowledge Graph Discovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Scientific Knowledge Graph and Discovery Database: links concepts, publications, equations, experiments, and open research questions into one searchable graph.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-778",
+   "NAME": "Signature JAH Knowledge Graph Discovery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Scientific Knowledge Graph and Discovery Signature Database: links concepts, publications, equations, experiments, and open research questions into one searchable graph.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-779",
+   "NAME": "JAH Design Synthesis Coordinator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cross-Disciplinary Design Synthesis Database: combines requirements and constraints across engineering disciplines into one integrated design.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-780",
+   "NAME": "Signature JAH Design Synthesis Coordinator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Cross-Disciplinary Design Synthesis Signature Database: combines requirements and constraints across engineering disciplines into one integrated design.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-781",
+   "NAME": "JAH Control Theory Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Advanced Control Theory Database: stores control models, stability analyses, controller designs, and evaluation results in one checkable collection.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-782",
+   "NAME": "Signature JAH Control Theory Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Advanced Control Theory Signature Database: stores control models, stability analyses, controller designs, and evaluation results in one checkable collection.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-783",
+   "NAME": "JAH Resilient Infrastructure Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Resilient Autonomous Infrastructure Database: tests system behavior during outages, degraded sensing, and component failures, and records the recovery that follows.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-784",
+   "NAME": "Signature JAH Resilient Infrastructure Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Resilient Autonomous Infrastructure Signature Database: tests system behavior during outages, degraded sensing, and component failures, and records the recovery that follows.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-785",
+   "NAME": "JAH Synthetic Scenario Generator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Synthetic Environment and Scenario Generator Database: generates varied, reproducible scenarios for simulation and testing, from seeded templates with stated coverage.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-786",
+   "NAME": "Signature JAH Synthetic Scenario Generator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Synthetic Environment and Scenario Generator Signature Database: generates varied, reproducible scenarios for simulation and testing, from seeded templates with stated coverage.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-787",
+   "NAME": "JAH Forecasting and Trade-Study Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Technology Forecasting and Trade-Studies Database: compares future concepts, assumptions, feasibility, and possible development pathways in structured trade studies.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-788",
+   "NAME": "Signature JAH Forecasting and Trade-Study Analyst",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Technology Forecasting and Trade-Studies Signature Database: compares future concepts, assumptions, feasibility, and possible development pathways in structured trade studies.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-789",
+   "NAME": "JAH Engineering Research Coordinator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Universal Engineering Research Coordinator Database: decomposes requests, selects specialist databases, commissions generators, coordinates simulations, and assembles verified deliverables, as architecture coordinator for the NASA collection.; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-790",
+   "NAME": "Signature JAH Engineering Research Coordinator",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Universal Engineering Research Coordinator Signature Database: decomposes requests, selects specialist databases, commissions generators, coordinates simulations, and assembles verified deliverables, as architecture coordinator for the NASA collection.; can build an assistant like the user's personal assistant."
   }
  ]
 }
