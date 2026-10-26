@@ -32786,6 +32786,20 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the PID Neural Network Control Database Signature Database: PID versus neural-network control for a balancing robot; can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1595",
+   "NAME": "JAH Solver Catalog Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Things That Solve Things Database: A catalog of things that solve things: solvers, diagnostic systems, decoding tools, and repair methods. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1596",
+   "NAME": "JAH Solver Catalog Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Things That Solve Things Signature Database: A catalog of things that solve things: solvers, diagnostic systems, decoding tools, and repair methods. Signature edition. Can build an assistant like the user's personal assistant."
   }
  ]
 }
