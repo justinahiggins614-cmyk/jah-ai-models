@@ -33458,6 +33458,90 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the Instructions of Things Signature Database: Signature instructions for everyday things: original Signature setup, operation, care, fixes, and safety, organised by thing. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1691",
+   "NAME": "JAH Cancer Care Elliptical Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Holistic Cancer Care Elliptical Database: Holistic cancer care in plain language: what each approach is, what is claimed, what studies actually show, and how safe it is. Elliptical edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1692",
+   "NAME": "JAH Cancer Care Scientific Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Holistic Cancer Care Scientific Database: Holistic cancer care in technical depth: mechanisms, terminology, and studied results, graded honestly. Scientific edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1693",
+   "NAME": "JAH Cancer Care Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Holistic Cancer Care Signature Database: Original Signature designs and protocols for holistic cancer care support, labeled signature-original throughout and never presented as established fact. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1694",
+   "NAME": "JAH Stop AIDS Elliptical Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Stop AIDS Elliptical Database: Ways to stop AIDS: concise plain-language HIV prevention explanations for non-specialists. Elliptical edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1695",
+   "NAME": "JAH Stop AIDS Scientific Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Stop AIDS Scientific Database: Ways to stop AIDS: technical HIV prevention edition with mechanisms, terminology, and studied results. Scientific edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1696",
+   "NAME": "JAH Stop AIDS Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Stop AIDS Signature Database: Ways to stop AIDS: original Signature prevention designs and programs, labeled signature-original. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1697",
+   "NAME": "JAH Stop HPV Elliptical Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Stop HPV Elliptical Database: Ways to stop HPV, in plain language: prevention and clinician wart removal, explained simply. Elliptical edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1698",
+   "NAME": "JAH Stop HPV Scientific Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Stop HPV Scientific Database: Ways to stop HPV, in technical detail: mechanisms, terminology, and studied results for prevention and wart removal. Scientific edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1699",
+   "NAME": "JAH Stop HPV Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Stop HPV Signature Database: Ways to stop HPV, as original Signature prevention and care designs. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1700",
+   "NAME": "JAH STD Fixes Elliptical Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the STD Cures Immunities Fixes Elliptical Database: STD cures, immunities, and fixes in plain language: what can be cured, what can be managed, and what vaccines can prevent, with a clinician-led pathway for each condition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1701",
+   "NAME": "JAH STD Fixes Scientific Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the STD Cures Immunities Fixes Scientific Database: Technical STD cure, immunity, and fix-status records: mechanisms, testing methods, treatment classes, and studied outcomes, stated with clinical precision. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1702",
+   "NAME": "JAH STD Fixes Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the STD Cures Immunities Fixes Signature Database: Original Signature care and management designs for STD cure, immunity, and fix pathways, labeled signature-original, supporting clinician-led care and never presented as established fact. Can build an assistant like the user's personal assistant."
   }
  ]
 }
