@@ -32982,6 +32982,20 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the Signature Album Release Strategies Database: Original Signature designs for album releases, including a companion-master design linking related albums as one listening path. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1623",
+   "NAME": "JAH Hacking Resistance Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Hacking Defenses Database: Threats, cures, immunizations, and solutions for hacking attack classes. Resistance data so your system can resist. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1624",
+   "NAME": "JAH Hacking Resistance Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Hacking Defenses Signature Database: Threats, cures, immunizations, and solutions for hacking attack classes. Resistance data so your system can resist. Signature edition. Can build an assistant like the user's personal assistant."
   }
  ]
 }
