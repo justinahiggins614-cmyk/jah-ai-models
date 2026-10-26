@@ -33584,6 +33584,146 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Signature Sew Patterns Database: The umbrella Signature sew-pattern catalog: sixteen original Signature designs on the same sixteen topics, each full and labeled Signature-original. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1709",
+   "NAME": "JAH Red Flag Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Red Flag Literacy Everyday: The full red-flag catalog by body area: what each urgent symptom is, why it needs urgent care, what to do first, what not to do, and what clinicians generally check. General information only, never a diagnosis. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1710",
+   "NAME": "JAH Red Flag Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Red Flag Literacy Everyday Signature Database: Signature-original red-flag readiness frameworks by body area: notice, name, note, and navigate to urgent care. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1711",
+   "NAME": "JAH Label Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the OTC Label Literacy: How to read over-the-counter labels: the Drug Facts panel, active ingredients and purposes, uses, warnings, directions, and the cautions for each product class. General information only, never a diagnosis. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1712",
+   "NAME": "JAH Label Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the OTC Label Literacy Signature Database: Signature-original label-reading frameworks for over-the-counter labels: fixed-order panel maps, class maps, and safety checks. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1713",
+   "NAME": "JAH Symptom Description Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Describing Symptoms to a Clinician Database: How to describe pain and symptoms so a clinician can use the description: location, quality, timing, triggers, severity scales, and the symptom note, applied across 16 problem areas. General education only, never a diagnosis. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1714",
+   "NAME": "JAH Symptom Description Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Describing Symptoms to a Clinician Signature Database: Signature-original description frameworks for pain and symptoms: the nine-field note card applied across 16 problem areas. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1715",
+   "NAME": "JAH Care Setting Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Urgent vs Routine Care Guide Database: Care-setting education as frameworks: emergency now, urgent same-day, routine appointment, and self-care with watch rules, with worked general examples. Frameworks only, never advice for your own symptoms. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1716",
+   "NAME": "JAH Care Setting Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Urgent vs Routine Care Guide Signature Database: Signature-original care-setting frameworks: the four-door guide to emergency, urgent, routine, and watch settings, with worked general examples. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1717",
+   "NAME": "JAH Clinician Question Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Questions for Your Clinician: Question lists for clinician visits, organized by problem area: what to ask, why each question matters, and how to note the answers. General information only, never a diagnosis. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1718",
+   "NAME": "JAH Clinician Question Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Questions for Your Clinician Signature Database: Signature-original question frameworks for clinician visits, organized by problem area: what to ask, why each question matters, and how to note the answers. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1719",
+   "NAME": "JAH Visit Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Clinician Visit Guides Everyday: Everyday visit guides for general adult visits: preparing, check-in, history questions, physical checks, common tests, visit scenarios, and follow-up. General information only, never a diagnosis. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1720",
+   "NAME": "JAH Visit Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Clinician Visit Guides Everyday Signature Database: Signature-original everyday visit guides for general adult visits: preparing, check-in, history questions, physical checks, common tests, visit scenarios, and follow-up. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1721",
+   "NAME": "JAH Pharmacist Question Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Pharmacist Questions Everyday: Questions to ask a pharmacist about everyday over-the-counter product classes, combinations, labels, and storage — general information only, never a diagnosis and never a prescription. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1722",
+   "NAME": "JAH Pharmacist Question Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Pharmacist Questions Everyday Signature Database: Signature-original question frameworks for pharmacist visits: original question sets for everyday over-the-counter classes, combinations, labels, and storage. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1723",
+   "NAME": "JAH Visit Note Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Symptom Notes for Visits: An educational guide to keeping a simple symptom note over days and weeks to show a clinician — templates, severity scales, worked sample notes, and visit preparation. General information only, never a diagnosis and never a prescription. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1724",
+   "NAME": "JAH Visit Note Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Symptom Notes for Visits Signature Database: Signature-original visit-prep note frameworks: original templates and sample-note methods for tracking symptoms over days and weeks to show a clinician. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1725",
+   "NAME": "JAH Cabinet Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Medicine Cabinet Guide Database: What a basic home medicine cabinet holds in general classes, with storage, expiry, and safety guidance. General information only, never a diagnosis. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1726",
+   "NAME": "JAH Cabinet Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Medicine Cabinet Guide Signature Database: Signature-original cabinet organization frameworks: zone plans, storage rules, and safety routines for a basic home medicine cabinet. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1727",
+   "NAME": "JAH Headache Help Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Everyday Headaches Database: General ways to help for everyday non-migraine headaches, organized by headache type: over-the-counter classes, holistic comfort options with honest grades, red-flag guidance, and see-a-clinician direction on every record. General information only, never a diagnosis. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1728",
+   "NAME": "JAH Headache Help Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Everyday Headaches Signature Database: Signature-original comfort frameworks for everyday non-migraine headaches, organized by headache type, with honest grades, red-flag guidance, and see-a-clinician direction on every record. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
   }
  ]
 }
