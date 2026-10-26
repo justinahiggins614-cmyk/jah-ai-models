@@ -33542,6 +33542,20 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the STD Cures Immunities Fixes Signature Database: Original Signature care and management designs for STD cure, immunity, and fix pathways, labeled signature-original, supporting clinician-led care and never presented as established fact. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1703",
+   "NAME": "JAH Help Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Database 123: General ways to help for everyday aches and pains, organized by problem area: over-the-counter classes, holistic comfort options with honest grades, cautions and interactions, and what to try next. General information only, never a diagnosis. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1704",
+   "NAME": "JAH Help Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Database 123 Signature Database: Signature-original ways-to-help frameworks for everyday aches and pains, organized by problem area: comfort routines, holistic options with honest grades, cautions, and what to try next. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
   }
  ]
 }
