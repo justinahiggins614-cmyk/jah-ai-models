@@ -32996,6 +32996,426 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the Hacking Defenses Signature Database: Threats, cures, immunizations, and solutions for hacking attack classes. Resistance data so your system can resist. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1625",
+   "NAME": "JAH Aging Access Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Aging Digital Accessibility Database: Digital accessibility for aging users: larger text, clearer sound, simpler screens, voice control, and adaptations for hearing, vision, motor, and memory change. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1626",
+   "NAME": "JAH Aging Access Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Aging Digital Accessibility Database Signature Database: Signature-original simplified-access designs for aging users, labeled Signature, never public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1627",
+   "NAME": "JAH AI at Work Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI at Work Literacy Database: Worker-facing AI and automation literacy: what AI can and cannot do, its limits, its effect on roles, workplace AI privacy, human oversight, and workplace AI policy. Verifying AI output is covered by the companion verifying-ai-outputs pair, not duplicated here. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1628",
+   "NAME": "JAH AI at Work Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI at Work Literacy Database Signature Database: Worker-facing AI and automation literacy: what AI can and cannot do, its limits, its effect on roles, workplace AI privacy, human oversight, and workplace AI policy. Verifying AI output is covered by the companion verifying-ai-outputs pair, not duplicated here. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1629",
+   "NAME": "JAH AI Disclosure Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI Content Disclosure Database: Disclosing machine assistance honestly: labels, wording, provenance, watermark limits, and disclosure by medium and context. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1630",
+   "NAME": "JAH AI Disclosure Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI Content Disclosure Database Signature: Disclosing machine assistance honestly: labels, wording, provenance, watermark limits, and disclosure by medium and context. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1631",
+   "NAME": "JAH AI Health Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI Health Assistants Wearables Genomics Database: AI health assistants, wearables, and genomic information: how to use, judge, and question them, with limits stated plainly. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1632",
+   "NAME": "JAH AI Health Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AI Health Assistants Wearables Genomics Database Signature Database: AI health assistants, wearables, and genomic information: how to use, judge, and question them, with limits stated plainly. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1633",
+   "NAME": "JAH Ambient Basics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Ambient Computing Basics Database: Ambient computing basics for everyday users: presence sensing, voice helpers, calm technology, routines, privacy tradeoffs, and what is established versus speculative. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1634",
+   "NAME": "JAH Ambient Basics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Ambient Computing Basics Database Signature Database: Signature-original ambient designs, speculative parts labeled speculative and design, never established fact. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1635",
+   "NAME": "JAH Immersive Safety Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AR VR Safety Database: AR and VR safety for everyday users: play spaces, comfort, children, privacy, and public demos. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1636",
+   "NAME": "JAH Immersive Safety Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the AR VR Safety Database Signature Database: Signature-original AR and VR safety designs: the Signature system's own safety tools, labeled Signature, never public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1637",
+   "NAME": "JAH Child Safety Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Child Online Safety Database: Keeping children safe online by age and stage: kind chat, private details, photos, games, video, bullying, purchases, and a family response plan for when something goes wrong. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1638",
+   "NAME": "JAH Child Safety Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Child Online Safety Signature Database: Keeping children safe online by age and stage: kind chat, private details, photos, games, video, bullying, purchases, and a family response plan for when something goes wrong. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1639",
+   "NAME": "JAH Community Mesh Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Community Mesh Networks Database: Community mesh building and governance: planning, funding, sites, pilots, maintenance, and handover. Building and governance only; mesh protocols and directories are covered elsewhere. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1640",
+   "NAME": "JAH Community Mesh Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Community Mesh Networks Database Signature Database: Signature-original community-mesh building and governance designs, labeled Signature, never public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1641",
+   "NAME": "JAH Community Moderation Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Community Moderation Practice Database: Running groups and communities fairly: rules, warnings, appeals, live moderation, and transparent moderation practice. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1642",
+   "NAME": "JAH Community Moderation Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Community Moderation Practice Database Signature: Running groups and communities fairly: rules, warnings, appeals, live moderation, and transparent moderation practice. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1643",
+   "NAME": "JAH Creator Monetization Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Creator Monetization Practice Database: Earning from creative work sustainably: revenue streams, memberships, sponsorship, pricing, records, and yearly review. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1644",
+   "NAME": "JAH Creator Monetization Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Creator Monetization Practice Database Signature: Earning from creative work sustainably: revenue streams, memberships, sponsorship, pricing, records, and yearly review. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1645",
+   "NAME": "JAH Digital Currency Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Digital Currencies and CBDC Database: Central bank digital currencies, stablecoins, and programmable money: what they are, how they work, and what is still experimental. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1646",
+   "NAME": "JAH Digital Currency Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Digital Currencies and CBDC Database Signature Database: Central bank digital currencies, stablecoins, and programmable money: what they are, how they work, and what is still experimental. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1647",
+   "NAME": "JAH Digital Legacy Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Digital Legacy Database: Accounts after death and incapacity, planned while planning is still possible: legacy contacts, asset lists, memorial choices, executors, and the annual review that keeps the plan true. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1648",
+   "NAME": "JAH Digital Legacy Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Digital Legacy Signature Database: Accounts after death and incapacity, planned while planning is still possible: legacy contacts, asset lists, memorial choices, executors, and the annual review that keeps the plan true. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1649",
+   "NAME": "JAH Digital Safety Teacher",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Digital Safety Education Database: Plain-language digital safety education for everyday users: safe browsing, careful sharing, calm responses to pressure, and habits that hold up on any device. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1650",
+   "NAME": "JAH Digital Safety Signature Teacher",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Digital Safety Education Signature Database: Plain-language digital safety education for everyday users: safe browsing, careful sharing, calm responses to pressure, and habits that hold up on any device. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1651",
+   "NAME": "JAH Everyday Communication Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Everyday Communication Practice Database: Everyday email, messaging, and video calls done well: choosing channels, writing clearly, running small meetings, and keeping records. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1652",
+   "NAME": "JAH Everyday Communication Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Everyday Communication Practice Database Signature: Everyday email, messaging, and video calls done well: choosing channels, writing clearly, running small meetings, and keeping records. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1653",
+   "NAME": "JAH Family Communication Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Family Communication and Screen Time Database: Family communication and screen time: meetings, listening, repair, and screen agreements by age, for the whole household. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1654",
+   "NAME": "JAH Family Communication Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Family Communication and Screen Time Database Signature Database: Family communication and screen time: meetings, listening, repair, and screen agreements by age, for the whole household. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1655",
+   "NAME": "JAH Financial Rights Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Financial Consumer Rights Database: Your rights with banks, lenders, collectors, and credit files: disputes, corrections, complaints, and recovery, explained as educational reference. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1656",
+   "NAME": "JAH Financial Rights Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Financial Consumer Rights Database Signature Database: Your rights with banks, lenders, collectors, and credit files: disputes, corrections, complaints, and recovery, explained as educational reference. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1657",
+   "NAME": "JAH Health Privacy Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Health Data Privacy and Sharing Database: Health data privacy and sharing control: consent, portals, apps, genetic data, and breach response, in plain language. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1658",
+   "NAME": "JAH Health Privacy Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Health Data Privacy and Sharing Database Signature Database: Health data privacy and sharing control: consent, portals, apps, genetic data, and breach response, in plain language. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1659",
+   "NAME": "JAH Home Device Safety Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Home and Connected Device Safety Database: Keeping the connected home safe: routers, Wi-Fi, cameras, speakers, locks, and every device that joins the home network, with setup, update, and handover habits. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1660",
+   "NAME": "JAH Home Device Safety Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Home and Connected Device Safety Signature Database: Keeping the connected home safe: routers, Wi-Fi, cameras, speakers, locks, and every device that joins the home network, with setup, update, and handover habits. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1661",
+   "NAME": "JAH Household Climate Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Household Climate Adaptation Database: Household climate adaptation: heat, flood, smoke, storm, water, and power resilience for real homes, renters included. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1662",
+   "NAME": "JAH Household Climate Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Household Climate Adaptation Database Signature Database: Household climate adaptation: heat, flood, smoke, storm, water, and power resilience for real homes, renters included. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1663",
+   "NAME": "JAH Safe Shopping Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Online Shopping Safety Database: Shop online without getting burned: verify sellers, pay safely, spot fakes and fraud, and put it right when it goes wrong. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1664",
+   "NAME": "JAH Safe Shopping Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Online Shopping Safety Database Signature Database: Shop online without getting burned: verify sellers, pay safely, spot fakes and fraud, and put it right when it goes wrong. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1665",
+   "NAME": "JAH Petition Methods Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Petition Methods Database: Petition methods only: writing petitions, circulating, signature validation, submission, and jurisdiction variation. Organizing itself is covered by the companion community-organizing-basics database. NOTE FOR MERGE: drop this pair if merge-time verification shows organizing-basics already covers petitions thoroughly. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1666",
+   "NAME": "JAH Petition Methods Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Petition Methods Database Signature Database: Petition methods only: writing petitions, circulating, signature validation, submission, and jurisdiction variation. Organizing itself is covered by the companion community-organizing-basics database. NOTE FOR MERGE: drop this pair if merge-time verification shows organizing-basics already covers petitions thoroughly. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1667",
+   "NAME": "JAH Disaster Alerts Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Plain-Language Disaster Alerts Database: A plain-language user guide to disaster alerts: alert types and channels, what each level means, what to do for each, drills, and accessible alerts. Distinct from emergency preparedness and emergency communication. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1668",
+   "NAME": "JAH Disaster Alerts Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Plain-Language Disaster Alerts Database Signature Database: A plain-language user guide to disaster alerts: alert types and channels, what each level means, what to do for each, drills, and accessible alerts. Distinct from emergency preparedness and emergency communication. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1669",
+   "NAME": "JAH Privacy Toolkit Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Privacy and Data Rights Toolkit Database: The everyday privacy toolkit: reading notices, setting browsers and apps, choosing cookies, blocking trackers, and exercising data rights including access, correction, deletion, and portability. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1670",
+   "NAME": "JAH Privacy Toolkit Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Privacy and Data Rights Toolkit Signature Database: The everyday privacy toolkit: reading notices, setting browsers and apps, choosing cookies, blocking trackers, and exercising data rights including access, correction, deletion, and portability. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1671",
+   "NAME": "JAH Comparison and Review Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Product and Service Comparisons and Reviews Database: How to compare products and services fairly and judge reviews honestly: criteria, total cost, and review checks. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1672",
+   "NAME": "JAH Comparison and Review Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Product and Service Comparisons and Reviews Signature Database: Original Signature designs for comparing products and services fairly and judging reviews honestly. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1673",
+   "NAME": "JAH Secondhand Safety Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Secondhand Marketplace Safety Database: Buy and sell secondhand with confidence: safe meetings, honest inspection, protected payment, and scam patterns to refuse. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1674",
+   "NAME": "JAH Secondhand Safety Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Secondhand Marketplace Safety Database Signature Database: Buy and sell secondhand with confidence: safe meetings, honest inspection, protected payment, and scam patterns to refuse. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1675",
+   "NAME": "JAH Self-Directed Learning Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Self-Directed Learning Database: Learn a skill on your own, step by step: goals, plans, practice, feedback, and finishing. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1676",
+   "NAME": "JAH Self-Directed Learning Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Self-Directed Learning Signature Database: Original Signature designs for learning a skill on your own, step by step. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1677",
+   "NAME": "JAH Sustainable Travel Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Sustainable Travel Database: Travel lighter on the planet: lower-carbon transport, slower stays, local money, and honest footprint counting. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1678",
+   "NAME": "JAH Sustainable Travel Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Sustainable Travel Database Signature Database: Travel lighter on the planet: lower-carbon transport, slower stays, local money, and honest footprint counting. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1679",
+   "NAME": "JAH Verification Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Verifying AI Outputs Database: Using AI well, verification half: checking claims, sources, numbers, citations, media, and agent work before acting. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1680",
+   "NAME": "JAH Verification Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Verifying AI Outputs Database Signature Database: Signature-original verification designs: the Signature system's own checking tools, labeled Signature, never public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1681",
+   "NAME": "JAH Web3 Basics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Web3 Basics and Decentralized Identity Database: Everyday Web3 and decentralized identity basics in plain language: wallets, keys, credentials you hold yourself, signing, recovery, and when this technology helps and when it does not. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1682",
+   "NAME": "JAH Web3 Basics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Web3 Basics and Decentralized Identity Signature Database: Everyday Web3 and decentralized identity basics in plain language: wallets, keys, credentials you hold yourself, signing, recovery, and when this technology helps and when it does not. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1683",
+   "NAME": "JAH Workplace Collaboration Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Workplace Collaboration Database: How teams work together well: shared documents, handoffs, decisions, reviews, and agreements that hold. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1684",
+   "NAME": "JAH Workplace Collaboration Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Workplace Collaboration Database Signature Database: How teams work together well: shared documents, handoffs, decisions, reviews, and agreements that hold. Signature edition. Can build an assistant like the user's personal assistant."
   }
  ]
 }
