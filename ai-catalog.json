@@ -33430,6 +33430,34 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the Online Bot Armies Signature Database: Lawful online bot fleets: service, assistant, monitoring, notification, accessibility, and authorized research armies that operate online with authorization and rate limits. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1687",
+   "NAME": "JAH Beginner Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the How-To Guides for Beginners Database: Complete beginner-friendly how-to guides for everyday tasks, written in plain language with full steps, mistakes to avoid, and fixes. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1688",
+   "NAME": "JAH Beginner Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the How-To Guides for Beginners Signature Database: Signature beginner-friendly how-to guides for everyday tasks: original Signature methods with full steps, mistakes to avoid, and fixes. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1689",
+   "NAME": "JAH Thing Instructions Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Instructions of Things Database: Complete instructions for everyday things: setup, operation, care, fixes, and safety, organised by thing. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1690",
+   "NAME": "JAH Thing Instructions Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Instructions of Things Signature Database: Signature instructions for everyday things: original Signature setup, operation, care, fixes, and safety, organised by thing. Signature edition. Can build an assistant like the user's personal assistant."
   }
  ]
 }
