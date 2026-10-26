@@ -33556,6 +33556,34 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the Database 123 Signature Database: Signature-original ways-to-help frameworks for everyday aches and pains, organized by problem area: comfort routines, holistic options with honest grades, cautions, and what to try next. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1705",
+   "NAME": "JAH Stitch Pattern Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Stitch Patterns Database: Sixteen full stitch pattern records, ordered simple to complex, each with materials, gauge, row-by-row instructions, chart, uses, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1706",
+   "NAME": "JAH Stitch Pattern Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Stitch Patterns Database: Sixteen full stitch pattern records, ordered simple to complex, each with materials, gauge, row-by-row instructions, chart, uses, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1707",
+   "NAME": "JAH Sew Pattern Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Sew Patterns Database: The umbrella sew-pattern catalog: sixteen full patterns from scrunchie to simple dress, each with measurements, fabric, cutting, construction, and a working yardage demo. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1708",
+   "NAME": "JAH Sew Pattern Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Sew Patterns Database: The umbrella Signature sew-pattern catalog: sixteen original Signature designs on the same sixteen topics, each full and labeled Signature-original. Signature edition. Can build an assistant like the user's personal assistant."
   }
  ]
 }
