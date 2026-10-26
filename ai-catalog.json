@@ -33724,6 +33724,104 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Everyday Headaches Signature Database: Signature-original comfort frameworks for everyday non-migraine headaches, organized by headache type, with honest grades, red-flag guidance, and see-a-clinician direction on every record. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1729",
+   "NAME": "JAH Milk and Honey Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Land of Milk and Honey Database: Sixteen full milk and honey fundamentals records, ordered simple to complex: what milk, honey, and beeswax are, how they are harvested and kept safe, how they store, and the science of emulsification, fermentation, gelling, freezing, and browning, plus the suite map. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1730",
+   "NAME": "JAH Milk and Honey Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Land of Milk and Honey Database: Sixteen full milk and honey fundamentals records, ordered simple to complex: what milk, honey, and beeswax are, how they are harvested and kept safe, how they store, and the science of emulsification, fermentation, gelling, freezing, and browning, plus the suite map. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1731",
+   "NAME": "JAH Milk Uses Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Milk Uses Database: Sixteen full milk use records, ordered simple to complex, each with ingredients, method, safety, storage, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1732",
+   "NAME": "JAH Milk Uses Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Milk Uses Database: Sixteen full Signature milk use records, ordered simple to complex, each with ingredients, method, safety, storage, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1733",
+   "NAME": "JAH Honey Uses Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Honey Uses Database: Sixteen full honey use records, ordered simple to complex, each with ingredients, method, safety, storage, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1734",
+   "NAME": "JAH Honey Uses Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Honey Uses Database: Sixteen full Signature honey use records, ordered simple to complex, each with ingredients, method, safety, storage, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1735",
+   "NAME": "JAH Beeswax Uses Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Beeswax Uses Database: Sixteen full beeswax use records, ordered simple to complex, each with materials, quantities, method, yield, safety notes, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1736",
+   "NAME": "JAH Beeswax Uses Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Beeswax Uses Database: Sixteen full beeswax use records, ordered simple to complex, each with materials, quantities, method, yield, safety notes, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1737",
+   "NAME": "JAH Milk Replica Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Milk Food Replicas Database: Sixteen full milk food replica records, ordered simple to complex, each with the original food, a milk-based replica recipe, molding method, food science, safety and storage guidance, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1738",
+   "NAME": "JAH Milk Replica Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Milk Food Replicas Database: Sixteen original Signature milk food replica designs, ordered simple to complex, each with the original food, a milk-based replica recipe, molding method, food science, safety and storage guidance, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1739",
+   "NAME": "JAH Honey Replica Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Honey Food Replicas Database: Sixteen full honey food replica records, ordered simple to complex, each with the original food, a honey-based replica recipe, molding method, food science, safety, storage, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1740",
+   "NAME": "JAH Honey Replica Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Honey Food Replicas Database: Sixteen full Signature honey food replica records, ordered simple to complex, each with the original food, an original Signature honey-based replica recipe, molding method, food science, safety, storage, variations, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1741",
+   "NAME": "JAH Wax Replica Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Wax Food Replicas Database: Sixteen full wax food replica records, ordered simple to complex, each with model subject, beeswax materials with labeled blends, molding and coloring method, realism techniques, care, safety, and a working demo. Display models are not food. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1742",
+   "NAME": "JAH Wax Replica Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Wax Food Replicas Database: Sixteen full wax food replica records, ordered simple to complex, each with model subject, beeswax materials with labeled blends, molding and coloring method, realism techniques, care, safety, and a working demo. Display models are not food. Can build an assistant like the user's personal assistant."
   }
  ]
 }
