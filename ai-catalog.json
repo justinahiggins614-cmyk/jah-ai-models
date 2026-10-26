@@ -33416,6 +33416,20 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the Workplace Collaboration Database Signature Database: How teams work together well: shared documents, handoffs, decisions, reviews, and agreements that hold. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1685",
+   "NAME": "JAH Online Bot Fleet Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Online Bot Armies Database: Lawful online bot fleets: service, assistant, monitoring, notification, accessibility, and authorized research armies that operate online with authorization and rate limits. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1686",
+   "NAME": "JAH Online Bot Fleet Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Online Bot Armies Signature Database: Lawful online bot fleets: service, assistant, monitoring, notification, accessibility, and authorized research armies that operate online with authorization and rate limits. Signature edition. Can build an assistant like the user's personal assistant."
   }
  ]
 }
