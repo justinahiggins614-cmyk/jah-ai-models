@@ -35992,6 +35992,174 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Signature US Reserve Bases Database: Sixteen full US reserve base records, ordered simple to complex, each recorded for its Reserve role distinctly. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2053",
+   "NAME": "JAH Media Release Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Media Releases: The flagship media-release catalog: landmark releases spanning CD, track, vinyl, tape, Billboard song, Billboard movie, and TV airtime families, plus the suite framework that ties all eleven family pairs together. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2054",
+   "NAME": "JAH Media Release Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Media Releases Signature Database: The flagship media-release catalog: landmark releases spanning CD, track, vinyl, tape, Billboard song, Billboard movie, and TV airtime families, plus the suite framework that ties all eleven family pairs together. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2055",
+   "NAME": "JAH CD Release Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the CD Releases: Landmark CD releases: title, artist, release date, label, and track listing for each album, with pressing and edition notes where public. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2056",
+   "NAME": "JAH CD Release Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the CD Releases Signature Database: Landmark CD releases: title, artist, release date, label, and track listing for each album, with pressing and edition notes where public. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2057",
+   "NAME": "JAH Track Release Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Track Releases: Landmark individual tracks and singles: title, artist, release date, and chart note for each track. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2058",
+   "NAME": "JAH Track Release Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Track Releases Signature Database: Landmark individual tracks and singles: title, artist, release date, and chart note for each track. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2059",
+   "NAME": "JAH Vinyl Record Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Vinyl Records: Sixteen landmark vinyl releases with verified release dates, labels, pressings, and editions, from 1959 to 1991: a release-focused catalog of the vinyl era. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2060",
+   "NAME": "JAH Vinyl Record Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Vinyl Records Signature Database: Sixteen Signature-original vinyl releases with invented titles, artists, pressings, and editions. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2061",
+   "NAME": "JAH Tape Release Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Tape Releases: Sixteen landmark cassette releases with verified release dates, labels, and cassette editions, from 1973 to 1995: the cassette era in full releases. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2062",
+   "NAME": "JAH Tape Release Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Tape Releases Signature Database: Sixteen Signature-original cassette releases with invented titles, artists, and tape editions. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2063",
+   "NAME": "JAH Billboard Song Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Billboard Song Releases: Sixteen Billboard Hot 100 song releases with verified release dates and peak chart positions, from 1957 to 2019: chart history as releases. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2064",
+   "NAME": "JAH Billboard Song Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Billboard Song Releases Signature Database: Sixteen Signature-original chart-style song releases with imagined Signature chart placements. Signature-made, never presented as real Billboard chart entries. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2065",
+   "NAME": "JAH Billboard Movie Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Billboard Movie Releases: Sixteen landmark movie releases: title, studio, United States release date, and verified worldwide box-office total. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2066",
+   "NAME": "JAH Billboard Movie Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Billboard Movie Releases Signature Database: Sixteen original Signature films: original titles, original fictional studios, and Signature ledger figures. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2067",
+   "NAME": "JAH TV History Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the TV Airtimes History: Sixteen historical television airtimes: program, episode or broadcast, network, date and time, with a source for every airtime. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2068",
+   "NAME": "JAH TV History Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the TV Airtimes History Signature Database: Sixteen original Signature programs with fictional historical airtimes. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2069",
+   "NAME": "JAH TV Upcoming Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the TV Airtimes Upcoming: Sixteen upcoming television airtimes from published November 2026 schedules and announcements. Dated and verified; nothing invented. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2070",
+   "NAME": "JAH TV Upcoming Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the TV Airtimes Upcoming Signature Database: Sixteen original Signature programs with announced Signature windows. Signature-made, never presented as public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2071",
+   "NAME": "JAH Beatles Release Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Beatles Releases: The full Beatles release record: 13 UK studio albums plus 3 compilations, each with a verified release date, in plain sentences. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2072",
+   "NAME": "JAH Beatles Release Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Beatles Releases Signature Database: The full Beatles release record: 13 UK studio albums plus 3 compilations, each with a verified release date, in plain sentences. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2073",
+   "NAME": "JAH Elvis Release Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Elvis Presley Releases: The full Elvis Presley release record: 16 studio albums with verified release dates, in plain sentences. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2074",
+   "NAME": "JAH Elvis Release Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Elvis Presley Releases Signature Database: The full Elvis Presley release record: 16 studio albums with verified release dates, in plain sentences. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2075",
+   "NAME": "JAH Stones Release Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Rolling Stones Releases: The full Rolling Stones release record: 16 studio albums with verified release dates, in plain sentences. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2076",
+   "NAME": "JAH Stones Release Guide Signature",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Rolling Stones Releases Signature Database: The full Rolling Stones release record: 16 studio albums with verified release dates, in plain sentences. Can build an assistant like the user's personal assistant."
   }
  ]
 }
