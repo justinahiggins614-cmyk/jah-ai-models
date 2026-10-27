@@ -36552,6 +36552,132 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Signature Mecca Spiritual Life Database: Sixteen full records on spiritual life in Mecca: daily prayer, Friday prayer, Ramadan, recitation, supplication, preparation, pilgrimage seasons, devotional life, sacred nights, charity, teaching circles, etiquette, poetry, glossary, and sources, with faith and fact labeled throughout. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2133",
+   "NAME": "Librarian of the Jesus Design Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Design Books: Jesus: Sixteen complete jesus-version design books for the Library of Jerusalem, each with preface, chapters, rebuild checklist, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2134",
+   "NAME": "Librarian of the Jesus Design Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Design Books: Jesus (Signature Edition): Sixteen complete jesus-version design books for the Library of Jerusalem, each with preface, chapters, rebuild checklist, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2135",
+   "NAME": "Librarian of the Old Design Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Design Books: Old: Sixteen complete old-version design books for the Library of Jerusalem, each with preface, chapters, rebuild checklist, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2136",
+   "NAME": "Librarian of the Old Design Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Design Books: Old (Signature Edition): Sixteen complete old-version design books for the Library of Jerusalem, each with preface, chapters, rebuild checklist, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2137",
+   "NAME": "Librarian of the New Design Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Design Books: New: Sixteen complete new-version design books for the Library of Jerusalem, each with preface, chapters, rebuild checklist, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2138",
+   "NAME": "Librarian of the New Design Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Design Books: New (Signature Edition): Sixteen complete new-version design books for the Library of Jerusalem, each with preface, chapters, rebuild checklist, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2139",
+   "NAME": "Librarian of the Jesus Blueprint Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Blueprint Jesus Books Database: Sixteen complete blueprint books in the Jesus version track, each a model-scale design with full tables so its part can be rebuilt from the books alone. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2140",
+   "NAME": "Librarian of the Jesus Blueprint Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Blueprint Jesus Books Database (Signature Edition): Sixteen complete blueprint books in the Jesus version track, each a model-scale design with full tables so its part can be rebuilt from the books alone. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2141",
+   "NAME": "Librarian of the Old Blueprint Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Blueprint Old Books Database: Sixteen complete blueprint books in the old version track, each an ancient-pattern model-scale design with full tables so its part can be rebuilt from the books alone. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2142",
+   "NAME": "Librarian of the Old Blueprint Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Blueprint Old Books Database (Signature Edition): Sixteen complete blueprint books in the old version track, each an ancient-pattern model-scale design with full tables so its part can be rebuilt from the books alone. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2143",
+   "NAME": "Librarian of the New Blueprint Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Blueprint New Books Database: Sixteen complete blueprint books in the new version track, each a foursquare model-scale design with full tables so its part can be rebuilt from the books alone. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2144",
+   "NAME": "Librarian of the New Blueprint Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Blueprint New Books Database (Signature Edition): Sixteen complete blueprint books in the new version track, each a foursquare model-scale design with full tables so its part can be rebuilt from the books alone. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2145",
+   "NAME": "Librarian of the Jesus Quote Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Jesus Quote Book Database: Sixteen complete quote books in the Library of Jerusalem, jesus version: short cited King James Version excerpts with commentary chapters, read aloud by Anonymous of Peace. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2146",
+   "NAME": "Librarian of the Jesus Quote Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Jesus Quote Book Database (Signature Edition): Sixteen complete quote books in the Library of Jerusalem, jesus version: short cited King James Version excerpts with commentary chapters, read aloud by Anonymous of Peace. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2147",
+   "NAME": "Librarian of the Old Quote Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Old Quote Book Database: Sixteen complete quote books in the Library of Jerusalem, old version: short cited King James Version excerpts with commentary chapters, read aloud by Anonymous of Peace. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2148",
+   "NAME": "Librarian of the Old Quote Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem Old Quote Book Database (Signature Edition): Sixteen complete quote books in the Library of Jerusalem, old version: short cited King James Version excerpts with commentary chapters, read aloud by Anonymous of Peace. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2149",
+   "NAME": "Librarian of the New Quote Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem New Quote Book Database: Sixteen complete quote books in the Library of Jerusalem, new version: short cited King James Version excerpts with commentary chapters, read aloud by Anonymous of Peace. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2150",
+   "NAME": "Librarian of the New Quote Books",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem New Quote Book Database (Signature Edition): Sixteen complete quote books in the Library of Jerusalem, new version: short cited King James Version excerpts with commentary chapters, read aloud by Anonymous of Peace. Can build an assistant like the user's personal assistant."
   }
  ]
 }
