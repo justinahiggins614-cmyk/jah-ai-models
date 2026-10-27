@@ -35194,6 +35194,216 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The International Lotteries Statistics Signature Database: Sixteen full Signature-original international lottery statistics study records: eleven national lottery games from Australia, Germany, France, Brazil, Japan, South Africa, Spain, Italy, and New Zealand, plus five method guides covering comparison, jackpot caps, currency and payout variation, verification, and responsible play. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1939",
+   "NAME": "JAH Piano Song Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Database: Sixteen complete piano songs in each edition, a sampler across eras from medieval chant to folk song, each with full note data for both hands, a full structure, and a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1940",
+   "NAME": "JAH Piano Song Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Songs Database: Sixteen complete piano songs in each edition, a sampler across eras from medieval chant to folk song, each with full note data for both hands, a full structure, and a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1941",
+   "NAME": "JAH Medieval Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Medieval Songs Database: Sixteen complete medieval piano songs in each edition, in chant, estampie, saltarello and ductia forms, each with full note data for both hands, a full structure, and a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1942",
+   "NAME": "JAH Medieval Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Medieval Songs Database: Sixteen complete medieval piano songs in each edition, in chant, estampie, saltarello and ductia forms, each with full note data for both hands, a full structure, and a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1943",
+   "NAME": "JAH Renaissance Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Renaissance Songs Database: Sixteen complete Renaissance piano songs in each edition, in pavane, galliard, branle and allemande forms, each with full note data for both hands, a full structure, and a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1944",
+   "NAME": "JAH Renaissance Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Renaissance Songs Database: Sixteen complete Renaissance piano songs in each edition, in pavane, galliard, branle and allemande forms, each with full note data for both hands, a full structure, and a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1945",
+   "NAME": "JAH Baroque Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Baroque Database: Sixteen complete baroque piano songs, ordered simple to complex: inventions, fugue-style studies, dance-suite movements, a canon framework, and figured-bass realizations, each a full song with complete note data and playback. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1946",
+   "NAME": "JAH Baroque Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Songs Baroque Database: Sixteen complete baroque piano songs, ordered simple to complex: inventions, fugue-style studies, dance-suite movements, a canon framework, and figured-bass realizations, each a full song with complete note data and playback. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1947",
+   "NAME": "JAH Classical Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Classical Database: Sixteen complete classical piano songs, ordered simple to complex: sonata movements, minuets, theme-and-variations, and rondos, each a full song with complete note data and playback. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1948",
+   "NAME": "JAH Classical Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Songs Classical Database: Sixteen complete classical piano songs, ordered simple to complex: sonata movements, minuets, theme-and-variations, and rondos, each a full song with complete note data and playback. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1949",
+   "NAME": "JAH Romantic Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Romantic Database: Sixteen complete romantic piano songs, ordered simple to complex: nocturnes, waltzes, character pieces, lied-style songs, and etude-style studies, each a full song with complete note data and playback. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1950",
+   "NAME": "JAH Romantic Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Songs Romantic Database: Sixteen complete romantic piano songs, ordered simple to complex: nocturnes, waltzes, character pieces, lied-style songs, and etude-style studies, each a full song with complete note data and playback. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1951",
+   "NAME": "JAH Impressionist Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Impressionist Database: Sixteen complete impressionist piano songs, ordered simple to complex: full note data, form analysis, playing guidance and a demo program that prints the whole song timeline, plus WebAudio playback of every complete song. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1952",
+   "NAME": "JAH Impressionist Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Songs Impressionist Database: Sixteen complete Signature-original impressionist piano songs, ordered simple to complex: full note data, form analysis, playing guidance and a demo program that prints the whole song timeline, plus WebAudio playback of every complete song. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1953",
+   "NAME": "JAH Ragtime Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Ragtime Database: Sixteen complete ragtime piano songs, ordered simple to complex: full note data, form analysis, playing guidance and a demo program that prints the whole song timeline, plus WebAudio playback of every complete song. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1954",
+   "NAME": "JAH Ragtime Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Songs Ragtime Database: Sixteen complete Signature-original ragtime piano songs, ordered simple to complex: full note data, form analysis, playing guidance and a demo program that prints the whole song timeline, plus WebAudio playback of every complete song. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1955",
+   "NAME": "JAH Jazz Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Jazz Database: Sixteen complete jazz piano songs, ordered simple to complex: full note data, form analysis, playing guidance and a demo program that prints the whole song timeline, plus WebAudio playback of every complete song. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1956",
+   "NAME": "JAH Jazz Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Songs Jazz Database: Sixteen complete Signature-original jazz piano songs, ordered simple to complex: full note data, form analysis, playing guidance and a demo program that prints the whole song timeline, plus WebAudio playback of every complete song. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1957",
+   "NAME": "JAH Blues Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Blues Database: Sixteen complete original blues piano songs, ordered simple to complex: twelve-bar, eight-bar, sixteen-bar, boogie-woogie, and slow blues frameworks, each a full song with complete note data, a playable demo, and page playback. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1958",
+   "NAME": "JAH Blues Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Songs Blues Database: Sixteen complete original blues piano songs, ordered simple to complex: twelve-bar, eight-bar, sixteen-bar, boogie-woogie, and slow blues frameworks, each a full song with complete note data, a playable demo, and page playback. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1959",
+   "NAME": "JAH Swing Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Swing Database: Sixteen complete original swing piano songs, ordered simple to complex: big-band piano, stride-swing, and jump-swing frameworks, each a full song with complete note data, a playable demo, and page playback. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1960",
+   "NAME": "JAH Swing Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Songs Swing Database: Sixteen complete original swing piano songs, ordered simple to complex: big-band piano, stride-swing, and jump-swing frameworks, each a full song with complete note data, a playable demo, and page playback. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1961",
+   "NAME": "JAH Rock Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Rock Database: Sixteen complete original rock piano songs, ordered simple to complex: rock-and-roll, classic rock piano, ballad rock, and boogie rock frameworks, each a full song with complete note data, a playable demo, and page playback. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1962",
+   "NAME": "JAH Rock Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Piano Songs Rock Database: Sixteen complete original rock piano songs, ordered simple to complex: rock-and-roll, classic rock piano, ballad rock, and boogie rock frameworks, each a full song with complete note data, a playable demo, and page playback. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1963",
+   "NAME": "JAH Pop Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Pop Database: Sixteen complete original pop piano songs per edition: ballad pop, dance pop piano, and singer-songwriter piano frameworks, each a full playable song with complete note data. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1964",
+   "NAME": "JAH Pop Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Pop Database (Signature Edition): Sixteen complete original pop piano songs per edition: ballad pop, dance pop piano, and singer-songwriter piano frameworks, each a full playable song with complete note data. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1965",
+   "NAME": "JAH Film Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Film Database: Sixteen complete original film-style piano songs per edition: theme-style, underscore-style, romance, adventure, and mystery frameworks, each a full playable song with complete note data. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1966",
+   "NAME": "JAH Film Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Film Database (Signature Edition): Sixteen complete original film-style piano songs per edition: theme-style, underscore-style, romance, adventure, and mystery frameworks, each a full playable song with complete note data. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1967",
+   "NAME": "JAH Folk Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Folk Traditional Database: Sixteen complete folk and traditional piano songs per edition: public-domain standard melodies and original framework realizations, each a full playable song with complete note data. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1968",
+   "NAME": "JAH Folk Piano Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Piano Songs Folk Traditional Database (Signature Edition): Sixteen complete folk and traditional piano songs per edition: public-domain standard melodies and original framework realizations, each a full playable song with complete note data. Can build an assistant like the user's personal assistant."
   }
  ]
 }
