@@ -34396,6 +34396,216 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Signature Gotham Blueprints Database: Sixteen ranked gotham blueprint record, ordered rank 1 to 16 with scores shown: Signature Gotham Digital Twin; Signature District Plan Whole-City Map; Signature Old City Historic Quarter; Signature Park and Riverfront Districts, and twelve more ranked options.. Each record carries districts, ecosystems, caves and underground, technology level, feasibility label, acceptance tests, and a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1825",
+   "NAME": "JAH Amusement Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Amusement Parks Database: Sixteen full amusement park guide records, ordered simple to complex: how to read a map, lands and themed ecosystems, hidden spots and caves, the NEW versus PAST status system, coaster, dark, water, family, and thrill ride overviews, shows, food, accessibility, the defunct parks archive, itinerary planning, safety and height rules, plus the suite map. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1826",
+   "NAME": "JAH Amusement Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Amusement Parks Database: Sixteen full amusement park guide records, ordered simple to complex: how to read a map, lands and themed ecosystems, hidden spots and caves, the NEW versus PAST status system, coaster, dark, water, family, and thrill ride overviews, shows, food, accessibility, the defunct parks archive, itinerary planning, safety and height rules, plus the suite map. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1827",
+   "NAME": "JAH Disney Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Disney Parks Database: Sixteen full Disney park records, one park each, ordered simple to complex: Disneyland California, Magic Kingdom, EPCOT, Hollywood Studios, Animal Kingdom, Disney California Adventure, Disneyland Paris, Walt Disney Studios Park, Tokyo Disneyland, Tokyo DisneySea, Hong Kong Disneyland, Shanghai Disneyland, Blizzard Beach, Typhoon Lagoon, and the past parks Discovery Island and River Country, plus the suite map. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1828",
+   "NAME": "JAH Disney Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Disney Parks Database: Sixteen full Disney park records, one park each, ordered simple to complex: Disneyland California, Magic Kingdom, EPCOT, Hollywood Studios, Animal Kingdom, Disney California Adventure, Disneyland Paris, Walt Disney Studios Park, Tokyo Disneyland, Tokyo DisneySea, Hong Kong Disneyland, Shanghai Disneyland, Blizzard Beach, Typhoon Lagoon, and the past parks Discovery Island and River Country, plus the suite map. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1829",
+   "NAME": "JAH Disneyland Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Disneyland Park Database: Sixteen full Disneyland California records, ordered simple to complex: Main Street, U.S.A., Adventureland, Frontierland, Fantasyland, Tomorrowland, New Orleans Square, Critter Country, Mickey's Toontown, Star Wars: Galaxy's Edge, Tom Sawyer Island and the Rivers of America, plus six past or changed areas, Mine Train Through Nature's Wonderland, PeopleMover, Skyway, Carousel of Progress, America Sings, and Rainbow Ridge, plus the suite map. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1830",
+   "NAME": "JAH Disneyland Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Disneyland Park Database: Sixteen full Disneyland California records, ordered simple to complex: Main Street, U.S.A., Adventureland, Frontierland, Fantasyland, Tomorrowland, New Orleans Square, Critter Country, Mickey's Toontown, Star Wars: Galaxy's Edge, Tom Sawyer Island and the Rivers of America, plus six past or changed areas, Mine Train Through Nature's Wonderland, PeopleMover, Skyway, Carousel of Progress, America Sings, and Rainbow Ridge, plus the suite map. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1831",
+   "NAME": "JAH Universal Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Universal Parks Database: Sixteen full Universal park records, ordered simple to complex: operating parks, past parks, and planned parks, each with lands, rides labeled NEW or PAST, theming ecosystems, and publicly-known hidden spots. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1832",
+   "NAME": "JAH Universal Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Universal Parks Database: Sixteen full Universal park records, ordered simple to complex: operating parks, past parks, and planned parks, each with lands, rides labeled NEW or PAST, theming ecosystems, and publicly-known hidden spots. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1833",
+   "NAME": "JAH Universal Orlando Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Universal Orlando Parks Database: Sixteen full Universal Orlando land records, ordered simple to complex: every Universal Studios Florida land, every Islands of Adventure land, the Volcano Bay water park, and the Epic Universe park with its five lands as areas. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1834",
+   "NAME": "JAH Universal Orlando Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Universal Orlando Parks Database: Sixteen full Universal Orlando land records, ordered simple to complex: every Universal Studios Florida land, every Islands of Adventure land, the Volcano Bay water park, and the Epic Universe park with its five lands as areas. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1835",
+   "NAME": "JAH Walt Disney World Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Walt Disney World Parks Database: Sixteen full Walt Disney World records, ordered simple to complex: the four theme parks, both water parks, the shopping and entertainment districts, the campground and sports complex, and past parks, islands, districts, and the speedway. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1836",
+   "NAME": "JAH Walt Disney World Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Walt Disney World Parks Database: Sixteen full Walt Disney World records, ordered simple to complex: the four theme parks, both water parks, the shopping and entertainment districts, the campground and sports complex, and past parks, islands, districts, and the speedway. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1837",
+   "NAME": "JAH Six Flags Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Six Flags Parks Database: Sixteen full Six Flags park records, ordered simple to complex: Magic Mountain, Great Adventure, Great America, Over Texas, Fiesta Texas, New England, Discovery Kingdom, Darien Lake, St. Louis, Over Georgia, Mexico, La Ronde, America, Qiddiya City, plus past parks Astroworld and Six Flags New Orleans, each with NEW and PAST rides. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1838",
+   "NAME": "JAH Six Flags Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Six Flags Parks Database: Sixteen full Six Flags park records, ordered simple to complex: Magic Mountain, Great Adventure, Great America, Over Texas, Fiesta Texas, New England, Discovery Kingdom, Darien Lake, St. Louis, Over Georgia, Mexico, La Ronde, America, Qiddiya City, plus past parks Astroworld and Six Flags New Orleans, each with NEW and PAST rides. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1839",
+   "NAME": "JAH Cedar Fair Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Cedar Fair Parks Database: Sixteen full Cedar Fair park records, ordered simple to complex: Cedar Point, Kings Island, Canada's Wonderland, Knott's Berry Farm, Carowinds, Kings Dominion, Dorney Park, Worlds of Fun, Valleyfair, Michigan's Adventure, California's Great America, past park Geauga Lake, and water park properties Knott's Soak City, Cedar Point Shores, and the two Schlitterbahn parks, each with NEW and PAST rides. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1840",
+   "NAME": "JAH Cedar Fair Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Cedar Fair Parks Database: Sixteen full Cedar Fair park records, ordered simple to complex: Cedar Point, Kings Island, Canada's Wonderland, Knott's Berry Farm, Carowinds, Kings Dominion, Dorney Park, Worlds of Fun, Valleyfair, Michigan's Adventure, California's Great America, past park Geauga Lake, and water park properties Knott's Soak City, Cedar Point Shores, and the two Schlitterbahn parks, each with NEW and PAST rides. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1841",
+   "NAME": "JAH Cedar Point Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Cedar Point Park Database: Sixteen full Cedar Point records, ordered simple to complex: Main Midway, Frontier Town, Camp Snoopy, Gemini Midway, and Cedar Point Shores, plus signature coasters Millennium Force, Steel Vengeance, Maverick, Top Thrill 2, Magnum XL-200, Raptor, Valravn, and GateKeeper, plus past coasters Mean Streak, Wicked Twister, and Disaster Transport, each with NEW and PAST rides. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1842",
+   "NAME": "JAH Cedar Point Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Cedar Point Park Database: Sixteen full Cedar Point records, ordered simple to complex: Main Midway, Frontier Town, Camp Snoopy, Gemini Midway, and Cedar Point Shores, plus signature coasters Millennium Force, Steel Vengeance, Maverick, Top Thrill 2, Magnum XL-200, Raptor, Valravn, and GateKeeper, plus past coasters Mean Streak, Wicked Twister, and Disaster Transport, each with NEW and PAST rides. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1843",
+   "NAME": "JAH Merlin Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Merlin Parks Database: Sixteen full Merlin park records, ordered simple to complex: brick parks from Billund to Shanghai plus Alton Towers, Thorpe Park, Chessington, Heide Park and Gardaland, each with operating and retired rides, lands, theming and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1844",
+   "NAME": "JAH Merlin Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Merlin Parks Database: Sixteen full Merlin park records, ordered simple to complex: brick parks from Billund to Shanghai plus Alton Towers, Thorpe Park, Chessington, Heide Park and Gardaland, each with operating and retired rides, lands, theming and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1845",
+   "NAME": "JAH Regional Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Regional Parks Database: Sixteen full regional park records, ordered simple to complex: Hersheypark, Dollywood, Silver Dollar City, Holiday World, Knoebels, Kennywood, Lake Compounce, Waldameer, Indiana Beach, Beech Bend, Fun Spot America, Adventureland Iowa, Silverwood, Lagoon, Rye Playland and Playland Vancouver, each with operating and retired rides, lands, theming and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1846",
+   "NAME": "JAH Regional Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Regional Parks Database: Sixteen full regional park records, ordered simple to complex: Hersheypark, Dollywood, Silver Dollar City, Holiday World, Knoebels, Kennywood, Lake Compounce, Waldameer, Indiana Beach, Beech Bend, Fun Spot America, Adventureland Iowa, Silverwood, Lagoon, Rye Playland and Playland Vancouver, each with operating and retired rides, lands, theming and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1847",
+   "NAME": "JAH International Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The International Parks Database: Sixteen full international park records, ordered simple to complex: Europa-Park, Efteling, PortAventura World, Parc Asterix, Tivoli Gardens, Liseberg, Gröna Lund, Phantasialand, Futuroscope, Puy du Fou, Everland, Lotte World, Fuji-Q Highland, Nagashima Spa Land, Tokyo Dome City and OCT Happy Valley Beijing, each with operating and retired rides, lands, theming and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1848",
+   "NAME": "JAH International Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature International Parks Database: Sixteen full international park records, ordered simple to complex: Europa-Park, Efteling, PortAventura World, Parc Asterix, Tivoli Gardens, Liseberg, Gröna Lund, Phantasialand, Futuroscope, Puy du Fou, Everland, Lotte World, Fuji-Q Highland, Nagashima Spa Land, Tokyo Dome City and OCT Happy Valley Beijing, each with operating and retired rides, lands, theming and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1849",
+   "NAME": "JAH Defunct Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Defunct Parks Database: Sixteen full defunct park records, ordered simple to complex: Astroworld, Geauga Lake, Opryland USA, Palisades, Euclid Beach, Riverview Chicago, Idora, West View, Rocky Point, Whalom, Rocky Glen, Dogpatch USA, Six Flags New Orleans, Freestyle Music Park, Miracle Strip, and River Country, each with lands, rides labeled PAST, theming, and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1850",
+   "NAME": "JAH Defunct Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Defunct Parks Database: Sixteen full defunct park records, ordered simple to complex: Astroworld, Geauga Lake, Opryland USA, Palisades, Euclid Beach, Riverview Chicago, Idora, West View, Rocky Point, Whalom, Rocky Glen, Dogpatch USA, Six Flags New Orleans, Freestyle Music Park, Miracle Strip, and River Country, each with lands, rides labeled PAST, theming, and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1851",
+   "NAME": "JAH Amusement Park Ride Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Amusement Park Rides Database: Sixteen full amusement park ride type records, ordered simple to complex: wooden, steel, inverted, and launched coasters, dark rides, log flumes, river rapids, Ferris wheels, carousels, drop towers, spinning flat rides, haunted houses, 4D simulators, water coasters, mine trains, and monorails and people movers, each with NEW and PAST example rides named, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1852",
+   "NAME": "JAH Amusement Park Ride Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Amusement Park Rides Database: Sixteen full amusement park ride type records, ordered simple to complex: wooden, steel, inverted, and launched coasters, dark rides, log flumes, river rapids, Ferris wheels, carousels, drop towers, spinning flat rides, haunted houses, 4D simulators, water coasters, mine trains, and monorails and people movers, each with NEW and PAST example rides named, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1853",
+   "NAME": "JAH Water Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Water Parks Database: Sixteen full water park records, ordered simple to complex: Blizzard Beach, Typhoon Lagoon, Volcano Bay, Aquatica Orlando, Schlitterbahn New Braunfels, Noah's Ark, Kalahari Resorts, Great Wolf Lodge, Wilderness Territory, Water Country USA, Splish Splash, Hurricane Harbor, Raging Waters, Cowabunga Bay, Wet 'n Wild Orlando (past), and WaterWorld California (past name), each with lands, rides labeled NEW or PAST, theming, and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1854",
+   "NAME": "JAH Water Park Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Water Parks Database: Sixteen full water park records, ordered simple to complex: Blizzard Beach, Typhoon Lagoon, Volcano Bay, Aquatica Orlando, Schlitterbahn New Braunfels, Noah's Ark, Kalahari Resorts, Great Wolf Lodge, Wilderness Territory, Water Country USA, Splish Splash, Hurricane Harbor, Raging Waters, Cowabunga Bay, Wet 'n Wild Orlando (past), and WaterWorld California (past name), each with lands, rides labeled NEW or PAST, theming, and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
   }
  ]
 }
