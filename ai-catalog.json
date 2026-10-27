@@ -36356,6 +36356,202 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Signature New Jerusalem Digital Twin and AI Database: Sixteen digital twin and AI records for the New Jerusalem design brief, from the master data schema and knowledge graph through synchronization, calibration, and credibility monitoring to apex coordination, future AI labeled speculative, and truth labeling, each with a text-faithful view, an engineering view, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2105",
+   "NAME": "JAH Mecca Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mecca Database: Sixteen full mecca record records: Suite Map; Mecca at a Glance; Geography Overview; History Overview; Grand Mosque Overview; Kaaba Overview; Pilgrimage Overview; Scholarship and Tradition Overview; Mecca Today Overview; Water and Environment Overview; Crowd Science Overview; Botany Overview; Architecture Overview; Spiritual Life Overview; Honesty Labeling Guide; Remaining Waves Index. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2106",
+   "NAME": "JAH Mecca Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Mecca Database: Sixteen full mecca record records: Suite Map; Mecca at a Glance; Geography Overview; History Overview; Grand Mosque Overview; Kaaba Overview; Pilgrimage Overview; Scholarship and Tradition Overview; Mecca Today Overview; Water and Environment Overview; Crowd Science Overview; Botany Overview; Architecture Overview; Spiritual Life Overview; Honesty Labeling Guide; Remaining Waves Index. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2107",
+   "NAME": "JAH Grand Mosque Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Grand Mosque Mecca Database: Sixteen full grand mosque record records: Mosque Overview; Courtyards and Prayer Halls; Minarets; Domes and Roof; Mataf and Tawaf Area; Safa and Marwa; Expansions Through History; Capacity and Facilities; Ablution and Services; Accessibility; Crowd Management; Cleaning and Maintenance; Construction Materials; Acoustics and Lighting; Modern Engineering; Visitor Guidance. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2108",
+   "NAME": "JAH Grand Mosque Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Grand Mosque Mecca Database: Sixteen full grand mosque record records: Mosque Overview; Courtyards and Prayer Halls; Minarets; Domes and Roof; Mataf and Tawaf Area; Safa and Marwa; Expansions Through History; Capacity and Facilities; Ablution and Services; Accessibility; Crowd Management; Cleaning and Maintenance; Construction Materials; Acoustics and Lighting; Modern Engineering; Visitor Guidance. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2109",
+   "NAME": "JAH Kaaba Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Kaaba Mecca Database: Sixteen full kaaba record records: Kaaba Overview; Dimensions and Structure; Kiswah (Covering); Black Stone; Maqam Ibrahim; Hijr Ismail; Doors and Roof; Construction and Repairs Through History; Materials; Geometry and Orientation; Qibla Role; Care and Maintenance; Misconceptions Corrected; Glossary; Sources Index; Kaaba in Context: Mosque, City, and World. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2110",
+   "NAME": "JAH Kaaba Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Kaaba Mecca Database: Sixteen full kaaba record records: Kaaba Overview; Dimensions and Structure; Kiswah (Covering); Black Stone; Maqam Ibrahim; Hijr Ismail; Doors and Roof; Construction and Repairs Through History; Materials; Geometry and Orientation; Qibla Role; Care and Maintenance; Misconceptions Corrected; Glossary; Sources Index; Kaaba in Context: Mosque, City, and World. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2111",
+   "NAME": "JAH Mecca History Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mecca History Database: Sixteen full mecca history record records: Pre-Islamic Trade Town; Early Islamic Period; Umayyad and Abbasid Eras; Ottoman Era; Saudi Era; Grand Mosque Expansions Timeline; Pilgrimage Through the Centuries; Mecca in Geography and Trade Routes; Water History; Scholars and Schools; Archaeology and Inscriptions; Mecca in Maps; Heritage Preservation; Timeline Index; Sources Index; Reading Guide and Open Questions. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2112",
+   "NAME": "JAH Mecca History Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Mecca History Database: Sixteen full mecca history record records: Pre-Islamic Trade Town; Early Islamic Period; Umayyad and Abbasid Eras; Ottoman Era; Saudi Era; Grand Mosque Expansions Timeline; Pilgrimage Through the Centuries; Mecca in Geography and Trade Routes; Water History; Scholars and Schools; Archaeology and Inscriptions; Mecca in Maps; Heritage Preservation; Timeline Index; Sources Index; Reading Guide and Open Questions. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2113",
+   "NAME": "JAH Mecca Geography Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mecca Geography Database: Sixteen full records on Mecca's geography: location, Hejaz region, mountains and valleys, desert climate, elevation, wadis, districts, transport corridors, the holy sites' geography, the Jeddah corridor, the Red Sea, maps, geology, hazards, glossary, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2114",
+   "NAME": "JAH Mecca Geography Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Mecca Geography Database: Sixteen full records on Mecca's geography: location, Hejaz region, mountains and valleys, desert climate, elevation, wadis, districts, transport corridors, the holy sites' geography, the Jeddah corridor, the Red Sea, maps, geology, hazards, glossary, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2115",
+   "NAME": "JAH Pilgrimage Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Hajj and Umrah Pilgrimage Database: Sixteen full records on Hajj and Umrah: the rites in order, Ihram, Tawaf, Sa'i, Mina, Arafat, Muzdalifah, Jamarat, Eid al-Adha, recent pilgrim numbers with dates, quotas and logistics, health and safety, transport, calendar, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2116",
+   "NAME": "JAH Pilgrimage Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Hajj and Umrah Pilgrimage Database: Sixteen full records on Hajj and Umrah: the rites in order, Ihram, Tawaf, Sa'i, Mina, Arafat, Muzdalifah, Jamarat, Eid al-Adha, recent pilgrim numbers with dates, quotas and logistics, health and safety, transport, calendar, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2117",
+   "NAME": "JAH Zamzam Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Zamzam Water Database: Sixteen full records on Zamzam water: the well, its place in the Grand Mosque, history separated into tradition and documented fact, geology, depth, extraction and distribution, published water-quality studies, bottling rules, tradition, engineering, monitoring, myths corrected, glossaries, and sources. No medical or cure claims anywhere. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2118",
+   "NAME": "JAH Zamzam Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Zamzam Water Database: Sixteen full records on Zamzam water: the well, its place in the Grand Mosque, history separated into tradition and documented fact, geology, depth, extraction and distribution, published water-quality studies, bottling rules, tradition, engineering, monitoring, myths corrected, glossaries, and sources. No medical or cure claims anywhere. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2119",
+   "NAME": "JAH Mecca Tradition Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mecca Scholarship and Tradition Database: Sixteen full records on Mecca's scholarship and tradition: what tradition means in this suite, Quran and Hadith literature as categories, Mecca in the Quran described generally, Abrahamic associations as tradition, schools of thought, scholarship centres, manuscripts, calendar, Ramadan, Friday prayer, teaching, preservation, interpretation differences, glossary, sources, and a reading path. No invented doctrine, no invented quotes. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2120",
+   "NAME": "JAH Mecca Tradition Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Mecca Scholarship and Tradition Database: Sixteen full records on Mecca's scholarship and tradition: what tradition means in this suite, Quran and Hadith literature as categories, Mecca in the Quran described generally, Abrahamic associations as tradition, schools of thought, scholarship centres, manuscripts, calendar, Ramadan, Friday prayer, teaching, preservation, interpretation differences, glossary, sources, and a reading path. No invented doctrine, no invented quotes. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2121",
+   "NAME": "JAH Mecca Today Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mecca Today Database: Mecca Today is the modern-city pair of the Mecca suite: the city as it stands now, its people, districts, transport, services and development, in general public fact, with ranges and as-of dates wherever published figures disagree. Religious significance is labeled tradition where it appears; everything else here is public fact, and gaps are labeled as gaps. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2122",
+   "NAME": "JAH Mecca Today Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Mecca Today Database: Mecca Today is the modern-city pair of the Mecca suite: the city as it stands now, its people, districts, transport, services and development, in general public fact, with ranges and as-of dates wherever published figures disagree. Religious significance is labeled tradition where it appears; everything else here is public fact, and gaps are labeled as gaps. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2123",
+   "NAME": "JAH Mecca Environment Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mecca Water and Environment Database: Mecca Water and Environment is the environment pair of the Mecca suite: desert climate, water supply and desalination, floods, heat, air, waste, green space, energy, monitoring, adaptation and conservation, with every model labeled as a model and every dataset disagreement stated as a range. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2124",
+   "NAME": "JAH Mecca Environment Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Mecca Water and Environment Database: Mecca Water and Environment is the environment pair of the Mecca suite: desert climate, water supply and desalination, floods, heat, air, waste, green space, energy, monitoring, adaptation and conservation, with every model labeled as a model and every dataset disagreement stated as a range. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2125",
+   "NAME": "JAH Mecca Crowd Science Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mecca Crowd Science Database: Mecca Crowd Science is the crowd-science pair of the Mecca suite: density, flow, bridges, tent cities, movement planning, bottlenecks, evacuation, heat, monitoring, simulation and capacity formulas. Every number in its demos is a model, labeled as a model, never a record of a real event; ritual meanings are labeled tradition and kept apart from engineering fact. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2126",
+   "NAME": "JAH Mecca Crowd Science Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Mecca Crowd Science Database: Mecca Crowd Science is the crowd-science pair of the Mecca suite: density, flow, bridges, tent cities, movement planning, bottlenecks, evacuation, heat, monitoring, simulation and capacity formulas. Every number in its demos is a model, labeled as a model, never a record of a real event; ritual meanings are labeled tradition and kept apart from engineering fact. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2127",
+   "NAME": "JAH Date Palm Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Date Palm Botany Database: Sixteen full records on the date palm: its biology, pollination, cultivars, cultivation, water, harvest, nutrition, products, pests, tradition, crafts, oases, breeding, glossary, and sources, in public and Signature editions. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2128",
+   "NAME": "JAH Date Palm Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Date Palm Botany Database: Sixteen full records on the date palm: its biology, pollination, cultivars, cultivation, water, harvest, nutrition, products, pests, tradition, crafts, oases, breeding, glossary, and sources, in public and Signature editions. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2129",
+   "NAME": "JAH Mecca Architecture Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mecca Architecture Database: Sixteen full records on Mecca's built fabric: Hijazi houses, courtyards, tower houses, the Ottoman layer, the modern high-rise ring, Abraj Al Bait, materials, climate design, arches, domes, minarets, gates, conservation, contemporary design, glossary, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2130",
+   "NAME": "JAH Mecca Architecture Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Mecca Architecture Database: Sixteen full records on Mecca's built fabric: Hijazi houses, courtyards, tower houses, the Ottoman layer, the modern high-rise ring, Abraj Al Bait, materials, climate design, arches, domes, minarets, gates, conservation, contemporary design, glossary, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2131",
+   "NAME": "JAH Mecca Spiritual Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mecca Spiritual Life Database: Sixteen full records on spiritual life in Mecca: daily prayer, Friday prayer, Ramadan, recitation, supplication, preparation, pilgrimage seasons, devotional life, sacred nights, charity, teaching circles, etiquette, poetry, glossary, and sources, with faith and fact labeled throughout. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2132",
+   "NAME": "JAH Mecca Spiritual Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Mecca Spiritual Life Database: Sixteen full records on spiritual life in Mecca: daily prayer, Friday prayer, Ramadan, recitation, supplication, preparation, pilgrimage seasons, devotional life, sacred nights, charity, teaching circles, etiquette, poetry, glossary, and sources, with faith and fact labeled throughout. Can build an assistant like the user's personal assistant."
   }
  ]
 }
