@@ -36160,6 +36160,202 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the Rolling Stones Releases Signature Database: The full Rolling Stones release record: 16 studio albums with verified release dates, in plain sentences. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2077",
+   "NAME": "Keeper of the Master Register",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Master Register Database: The map of the whole 700-item New Jerusalem register, section by section, with counts, cumulative totals, and status labels, cross-linking the live component databases without rebuilding them. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2078",
+   "NAME": "Keeper of the Master Register",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Master Register Database (Signature Edition): The map of the whole 700-item New Jerusalem register, section by section, with counts, cumulative totals, and status labels, cross-linking the live component databases without rebuilding them. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2079",
+   "NAME": "Keeper of the Source Text",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem KJV Source Text Database: Sixteen source-text records covering Revelation 21:1 through Revelation 22:5 in order, each with a short cited King James Version excerpt and the passage's own countable quantities, kept distinct from every engineering model. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2080",
+   "NAME": "Keeper of the Source Text",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem KJV Source Text Database (Signature Edition): Sixteen source-text records covering Revelation 21:1 through Revelation 22:5 in order, each with a short cited King James Version excerpt and the passage's own countable quantities, kept distinct from every engineering model. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2081",
+   "NAME": "Steward of Interpretations",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Interpretation Scenarios Database: Sixteen interpretation-scenario records: four readings, alternative comparisons for stadia, cubits, gemstones, dimensions, pearls, gold, night, temple, river, and tree, plus a conflict register, freeze discipline, and the no-mixing selection gate. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2082",
+   "NAME": "Steward of Interpretations",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Interpretation Scenarios Database (Signature Edition): Sixteen interpretation-scenario records: four readings, alternative comparisons for stadia, cubits, gemstones, dimensions, pearls, gold, night, temple, river, and tree, plus a conflict register, freeze discipline, and the no-mixing selection gate. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2083",
+   "NAME": "Measurer of Geometry",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Geometry Scale Database: Sixteen geometry and scale records: the foursquare cube, furlong and cubit conversions with uncertainty, scale models, planetary coordinates, precision, tiling, multi-resolution geometry, wall sections, interfaces, circulation, interiors, conversions, tolerances, and integrity checks. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2084",
+   "NAME": "Measurer of Geometry",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Geometry Scale Database (Signature Edition): Sixteen geometry and scale records: the foursquare cube, furlong and cubit conversions with uncertainty, scale models, planetary coordinates, precision, tiling, multi-resolution geometry, wall sections, interfaces, circulation, interiors, conversions, tolerances, and integrity checks. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2085",
+   "NAME": "Keeper of the Foundations",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Gemstone Foundations Science Database: The twelve foundation stones of Revelation 21 as gemstone science: mineral identity, optical properties, identification limits, and honest uncertainty where ancient names admit more than one candidate. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2086",
+   "NAME": "Keeper of the Foundations",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Gemstone Foundations Science Database (Signature Edition): The twelve foundation stones of Revelation 21 as gemstone science: mineral identity, optical properties, identification limits, and honest uncertainty where ancient names admit more than one candidate. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2087",
+   "NAME": "Keeper of the Pearl Gates",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Gate Systems Database: Twelve pearl gates as systems: placement, nacre material science, assembly, inspection, access, safety, and traceability — with the monumental single-pearl scale problem stated honestly. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2088",
+   "NAME": "Keeper of the Pearl Gates",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Gate Systems Database (Signature Edition): Twelve pearl gates as systems: placement, nacre material science, assembly, inspection, access, safety, and traceability — with the monumental single-pearl scale problem stated honestly. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2089",
+   "NAME": "Keeper of the Radiance",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Radiance Light Database: Light without sun or moon as a faith claim and as an engineering brief: illumination, uniformity, glare, colour, optics, and energy accounting, with unresolved claims kept in an open register. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2090",
+   "NAME": "Keeper of the Radiance",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Radiance Light Database (Signature Edition): Light without sun or moon as a faith claim and as an engineering brief: illumination, uniformity, glare, colour, optics, and energy accounting, with unresolved claims kept in an open register. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2091",
+   "NAME": "Keeper of the River and Tree",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Tree of Life River Database: The river of the water of life and the tree of life from Revelation 22 as faith text, real botany, real hydrology, and real water engineering — with healing claims kept to faith tradition and factual phytochemistry only. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2092",
+   "NAME": "Keeper of the River and Tree",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Tree of Life River Database (Signature Edition): The river of the water of life and the tree of life from Revelation 22 as faith text, real botany, real hydrology, and real water engineering — with healing claims kept to faith tradition and factual phytochemistry only. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2093",
+   "NAME": "Steward of the Spiritual City",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Spirituality Database: Sixteen faith-labeled spirituality records for the New Jerusalem of Revelation 21-22: worship, symbolism, interpretation traditions, and the spiritual life of the city, with faith and engineering kept distinct. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2094",
+   "NAME": "Steward of the Spiritual City",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Spirituality Database (Signature Edition): Sixteen faith-labeled spirituality records for the New Jerusalem of Revelation 21-22: worship, symbolism, interpretation traditions, and the spiritual life of the city, with faith and engineering kept distinct. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2095",
+   "NAME": "Keeper of Living Things",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Biology Database: Sixteen biology records for life in and around Jerusalem: people, trees, water, soil, pollination, health, food supply, and the living systems that join them, in real science with limits stated. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2096",
+   "NAME": "Keeper of Living Things",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Biology Database (Signature Edition): Sixteen biology records for life in and around Jerusalem: people, trees, water, soil, pollination, health, food supply, and the living systems that join them, in real science with limits stated. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2097",
+   "NAME": "Chronicler of Jerusalem",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Jerusalem History and Geography Database: Sixteen factual public records on Jerusalem's history and geography: the city through time, its walls, water, archaeology, measures, climate, geology, maps, imaging, quarters, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2098",
+   "NAME": "Chronicler of Jerusalem",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Jerusalem History and Geography Database (Signature Edition): Sixteen factual public records on Jerusalem's history and geography: the city through time, its walls, water, archaeology, measures, climate, geology, maps, imaging, quarters, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2099",
+   "NAME": "Keeper of Acceptance",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Verification and Acceptance Database: Sixteen verification and acceptance records for the New Jerusalem design brief, from traceability and unit tests to independent review and a master truthfulness audit, each with a text-faithful view, an engineering view, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2100",
+   "NAME": "Keeper of Acceptance",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature New Jerusalem Verification and Acceptance Database: Sixteen verification and acceptance records for the New Jerusalem design brief, from traceability and unit tests to independent review and a master truthfulness audit, each with a text-faithful view, an engineering view, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2101",
+   "NAME": "Keeper of Materials and Light",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Materials and Optics Database: Sixteen materials and optics records for the New Jerusalem design brief, from transparent gold as an appearance target distinct from bulk gold, through glass, composites, coatings, and gemstone optics, to research and speculative surfaces, each with a text-faithful view, an engineering view, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2102",
+   "NAME": "Keeper of Materials and Light",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature New Jerusalem Materials and Optics Database: Sixteen materials and optics records for the New Jerusalem design brief, from transparent gold as an appearance target distinct from bulk gold, through glass, composites, coatings, and gemstone optics, to research and speculative surfaces, each with a text-faithful view, an engineering view, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2103",
+   "NAME": "Steward of the Digital Twin",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The New Jerusalem Digital Twin and AI Database: Sixteen digital twin and AI records for the New Jerusalem design brief, from the master data schema and knowledge graph through synchronization, calibration, and credibility monitoring to apex coordination, future AI labeled speculative, and truth labeling, each with a text-faithful view, an engineering view, and a working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2104",
+   "NAME": "Steward of the Digital Twin",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature New Jerusalem Digital Twin and AI Database: Sixteen digital twin and AI records for the New Jerusalem design brief, from the master data schema and knowledge graph through synchronization, calibration, and credibility monitoring to apex coordination, future AI labeled speculative, and truth labeling, each with a text-faithful view, an engineering view, and a working demo. Can build an assistant like the user's personal assistant."
   }
  ]
 }
