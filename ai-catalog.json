@@ -35404,6 +35404,202 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Piano Songs Folk Traditional Database (Signature Edition): Sixteen complete folk and traditional piano songs per edition: public-domain standard melodies and original framework realizations, each a full playable song with complete note data. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1969",
+   "NAME": "JAH Carpentry Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Projects Database: Sixteen full carpentry overview and guide records, ordered simple to complex: what carpentry is, the fourteen-pair suite map, core skills, workshop safety, measuring, marking, wood selection, plans, hand and power tools, joinery, gluing, sanding, finishing, a first build, and the family framework. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1970",
+   "NAME": "JAH Carpentry Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Carpentry Projects Database: Sixteen full carpentry overview and guide records, ordered simple to complex: what carpentry is, the fourteen-pair suite map, core skills, workshop safety, measuring, marking, wood selection, plans, hand and power tools, joinery, gluing, sanding, finishing, a first build, and the family framework. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1971",
+   "NAME": "JAH Furniture Project Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Furniture Projects Database: Sixteen full furniture builds, ordered simple to complex: bench, stool, footstool, side table, plant stand, wall shelf, coat rack, toy box, nightstand, bookshelf, coffee table, desk, chair, storage bench, dining table, and bed frame, each with image, specs, cut list, steps, and tools. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1972",
+   "NAME": "JAH Furniture Project Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Carpentry Furniture Projects Database: Sixteen full furniture builds, ordered simple to complex: bench, stool, footstool, side table, plant stand, wall shelf, coat rack, toy box, nightstand, bookshelf, coffee table, desk, chair, storage bench, dining table, and bed frame, each with image, specs, cut list, steps, and tools. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1973",
+   "NAME": "JAH Storage Project Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Storage Projects Database: Sixteen full storage builds, ordered simple to complex: storage box, crate, shoe rack, under-bed box, hanging shelf, pantry shelf, pantry organizer, bookcase, shelving unit, general wall cabinet, drawer unit, tool chest, chest, blanket chest, garage shelving, and wardrobe, each with image, specs, cut list, steps, and tools. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1974",
+   "NAME": "JAH Storage Project Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Carpentry Storage Projects Database: Sixteen full storage builds, ordered simple to complex: storage box, crate, shoe rack, under-bed box, hanging shelf, pantry shelf, pantry organizer, bookcase, shelving unit, general wall cabinet, drawer unit, tool chest, chest, blanket chest, garage shelving, and wardrobe, each with image, specs, cut list, steps, and tools. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1975",
+   "NAME": "JAH Outdoor Project Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Outdoor Projects Database: Sixteen full outdoor builds, ordered simple to complex: birdhouse, planter box, trellis, sandbox, firewood rack, compost bin, mailbox post, garden bench, deck bench, raised bed, fence gate, shed door, outdoor table, Adirondack chair, porch swing frame, and pergola, each with image, specs, cut list, steps, and tools. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1976",
+   "NAME": "JAH Outdoor Project Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Carpentry Outdoor Projects Database: Sixteen full outdoor builds, ordered simple to complex: birdhouse, planter box, trellis, sandbox, firewood rack, compost bin, mailbox post, garden bench, deck bench, raised bed, fence gate, shed door, outdoor table, Adirondack chair, porch swing frame, and pergola, each with image, specs, cut list, steps, and tools. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1977",
+   "NAME": "JAH Joinery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Joinery Guides Database: Sixteen full joinery guides, ordered simple to complex: butt, miter, lap, mortise and tenon, dovetail, box, dowel, biscuit, pocket-hole, bridle, tongue and groove, dado, rabbet, half-lap, spline, and wedged tenon joints, each with a dimensioned original diagram, cut list, and working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1978",
+   "NAME": "JAH Joinery Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Joinery Guides Database: Sixteen full joinery guides, ordered simple to complex: butt, miter, lap, mortise and tenon, dovetail, box, dowel, biscuit, pocket-hole, bridle, tongue and groove, dado, rabbet, half-lap, spline, and wedged tenon joints, each with a dimensioned original diagram, cut list, and working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1979",
+   "NAME": "JAH Stairs Doors Windows Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Stairs Doors Windows Database: Sixteen full stairs, doors, and windows builds and guides, ordered simple to complex: straight and L stairs, handrails, interior and exterior doors, barn doors, window frames and sash repair, casing, tread replacement, basement and attic stairs, French doors, screen doors, window seats, and thresholds, each with a dimensioned original diagram, cut list, and working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1980",
+   "NAME": "JAH Stairs Doors Windows Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Stairs Doors Windows Database: Sixteen full stairs, doors, and windows builds and guides, ordered simple to complex: straight and L stairs, handrails, interior and exterior doors, barn doors, window frames and sash repair, casing, tread replacement, basement and attic stairs, French doors, screen doors, window seats, and thresholds, each with a dimensioned original diagram, cut list, and working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1981",
+   "NAME": "JAH Measuring Marking Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Measuring Marking Database: Sixteen full measuring and marking skill guides, ordered simple to complex: tape measures, marking gauges, squares, knife versus pencil marking, story sticks, diagonals, level and plumb, chalk lines, angle transfer, center finding, equal spacing, board feet, moisture meters, curves and arcs, cut-line accuracy, and trim fit, each with an original diagram, skill details, and working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1982",
+   "NAME": "JAH Measuring Marking Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Measuring Marking Database: Sixteen full measuring and marking skill guides, ordered simple to complex: tape measures, marking gauges, squares, knife versus pencil marking, story sticks, diagonals, level and plumb, chalk lines, angle transfer, center finding, equal spacing, board feet, moisture meters, curves and arcs, cut-line accuracy, and trim fit, each with an original diagram, skill details, and working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1983",
+   "NAME": "JAH Sharpening Maintenance Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Sharpening Maintenance Database: Sixteen full sharpening and maintenance guides, ordered simple to complex: chisels, plane irons, hand saws, knives, drill bits, router bits, rust removal, handles, storage, workbenches, saw blades, plane tuning, square calibration, oil and wax protection, tool inventory, and seasonal care, each with an original diagram, skill details, and working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1984",
+   "NAME": "JAH Sharpening Maintenance Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Sharpening Maintenance Database: Sixteen full sharpening and maintenance guides, ordered simple to complex: chisels, plane irons, hand saws, knives, drill bits, router bits, rust removal, handles, storage, workbenches, saw blades, plane tuning, square calibration, oil and wax protection, tool inventory, and seasonal care, each with an original diagram, skill details, and working demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1985",
+   "NAME": "JAH Power Tool Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Power Tools Database: Sixteen full power-tool use guides, ordered simple to complex: safe operation, techniques, and a practice project for each tool, from the table saw to the track saw. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1986",
+   "NAME": "JAH Power Tool Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Power Tools Database: Sixteen full power-tool use guides, ordered simple to complex: safe operation, techniques, and a practice project for each tool, from the table saw to the track saw. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1987",
+   "NAME": "JAH Wood Material Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Wood Materials Database: Sixteen full wood material guides, ordered simple to complex: properties, grain, workability, best uses, moisture and movement notes, cost tier, and safety for each material, from pine to lumber grading. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1988",
+   "NAME": "JAH Wood Material Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Wood Materials Database: Sixteen full wood material guides, ordered simple to complex: properties, grain, workability, best uses, moisture and movement notes, cost tier, and safety for each material, from pine to lumber grading. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1989",
+   "NAME": "JAH Finish Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Finishes Database: Sixteen full finish application guides, ordered simple to complex: complete application steps, coats and dry times, coverage, and safety for each finish, from danish oil to outdoor spar finish. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1990",
+   "NAME": "JAH Finish Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Finishes Database: Sixteen full finish application guides, ordered simple to complex: complete application steps, coats and dry times, coverage, and safety for each finish, from danish oil to outdoor spar finish. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1991",
+   "NAME": "JAH Workshop Setup Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Workshop Setup Database: Sixteen full workshop setup guides, ordered simple to complex: small-shop layout, wall and clamp and small-parts storage, shop lighting, workbench and vise setup, lumber rack, dust collection, electrical safety, sharpening station, finishing area, noise control, heating and ventilation, mobile workstation, and a shop safety audit checklist. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1992",
+   "NAME": "JAH Workshop Setup Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Workshop Setup Database Signature: Sixteen full workshop setup guides, ordered simple to complex: small-shop layout, wall and clamp and small-parts storage, shop lighting, workbench and vise setup, lumber rack, dust collection, electrical safety, sharpening station, finishing area, noise control, heating and ventilation, mobile workstation, and a shop safety audit checklist. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1993",
+   "NAME": "JAH Small Structure Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Small Structures Database: Sixteen complete small-structure builds, ordered simple to complex: dog house, cold frame, trash bin enclosure, firewood shelter, bike shelter, chicken coop, potting shed, arbor gate, well cover, garden shed, outdoor shower frame, greenhouse frame, treehouse platform basics, playhouse, boathouse-side storage shed, and kids clubhouse, each with structural notes and permit guidance. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1994",
+   "NAME": "JAH Small Structure Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Small Structures Database Signature: Sixteen complete small-structure builds, ordered simple to complex: dog house, cold frame, trash bin enclosure, firewood shelter, bike shelter, chicken coop, potting shed, arbor gate, well cover, garden shed, outdoor shower frame, greenhouse frame, treehouse platform basics, playhouse, boathouse-side storage shed, and kids clubhouse, each with structural notes and permit guidance. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1995",
+   "NAME": "JAH Decorative Project Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Decorative Projects Database: Sixteen decorative woodwork builds, ordered simple to complex: carved spoon, scroll-sawn ornament, candle holder set, picture frame with mat, marquetry coaster set, carved sign, shelf brackets, turned pen, inlay box, clock frame, molding sampler, turned bowl, jewelry box, turned vase, intarsia plaque, and wall art panel. Trim and molding installation belongs to finish-carpentry, cross-linked here; this pair makes decorative objects. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1996",
+   "NAME": "JAH Decorative Project Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Carpentry Decorative Projects Database Signature: Sixteen decorative woodwork builds, ordered simple to complex: carved spoon, scroll-sawn ornament, candle holder set, picture frame with mat, marquetry coaster set, carved sign, shelf brackets, turned pen, inlay box, clock frame, molding sampler, turned bowl, jewelry box, turned vase, intarsia plaque, and wall art panel. Trim and molding installation belongs to finish-carpentry, cross-linked here; this pair makes decorative objects. Can build an assistant like the user's personal assistant."
   }
  ]
 }
