@@ -35026,6 +35026,174 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Signature Esports Disciplines Database: Sixteen full esports discipline records, from MOBA games to fair play and anti-cheat, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1915",
+   "NAME": "JAH Lotto Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Lotto Statistics Database: The flagship lotto statistics database: shared methods, odds, and verification guides for the whole lotto statistics suite. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1916",
+   "NAME": "JAH Lotto Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Lotto Statistics Signature Database: The flagship lotto statistics database in its Signature edition: original worked designs for the shared methods of the suite. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1917",
+   "NAME": "JAH Powerball Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Powerball Statistics Database: Powerball statistics: verified matrix, odds, prize tiers, and methods, with clearly labeled simulated data where no archive is reproduced. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1918",
+   "NAME": "JAH Powerball Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Powerball Statistics Signature Database: Powerball statistics in its Signature edition: original worked designs for the verified matrix, odds, and methods. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1919",
+   "NAME": "JAH Mega Millions Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mega Millions Statistics Database: Sixteen full mega millions statistics records, ordered simple to complex: current matrix, exact odds, prize tiers, multiplier rules, draw mechanics, verified history, and descriptive frequency methods on labeled simulated data. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1920",
+   "NAME": "JAH Mega Millions Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mega Millions Statistics Signature Database: Sixteen full mega millions statistics signature records, ordered simple to complex: the same topics as the public edition, presented as Signature-original educational material. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1921",
+   "NAME": "JAH EuroMillions Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The EuroMillions Statistics Database: Sixteen full euromillions statistics records, ordered simple to complex: current matrix, exact odds, prize tiers, participating countries, draw mechanics, verified history, jackpot cap rules, and descriptive frequency methods on labeled simulated data. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1922",
+   "NAME": "JAH EuroMillions Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The EuroMillions Statistics Signature Database: Sixteen full euromillions statistics signature records, ordered simple to complex: the same topics as the public edition, presented as Signature-original educational material. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1923",
+   "NAME": "JAH Eurojackpot Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Eurojackpot Statistics Database: Eurojackpot statistics: matrix, odds, prize tiers, countries, rollover and cap behavior, and verification, with simulated-data methods where history is not verified. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1924",
+   "NAME": "JAH Eurojackpot Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Eurojackpot Statistics Signature Database: Eurojackpot statistics: matrix, odds, prize tiers, countries, rollover and cap behavior, and verification, with simulated-data methods where history is not verified. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1925",
+   "NAME": "JAH UK Lotto Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The UK Lotto Statistics Database: UK Lotto statistics: matrix, odds, prize tiers, two-round format, rollover and rolldown, HotPicks, Thunderball, and verification, with simulated-data methods where history is not verified. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1926",
+   "NAME": "JAH UK Lotto Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The UK Lotto Statistics Signature Database: UK Lotto statistics: matrix, odds, prize tiers, two-round format, rollover and rolldown, HotPicks, Thunderball, and verification, with simulated-data methods where history is not verified. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1927",
+   "NAME": "JAH El Gordo Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the El Gordo Statistics Database: Sixteen full El Gordo statistics records: the Spanish Christmas Lottery raffle, its ticket and prize structure, verified history anchors, and honest statistical methods. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1928",
+   "NAME": "JAH El Gordo Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the El Gordo Statistics Signature Database: Sixteen full El Gordo statistics records in the Signature edition: Signature-original studies of the Spanish Christmas Lottery raffle, its structure, and honest statistical methods. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1929",
+   "NAME": "JAH SuperEnalotto Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the SuperEnalotto Statistics Database: Sixteen full SuperEnalotto statistics records: Italy's 6-from-90 lottery, its exact tier odds, Jolly and SuperStar mechanics, verified record jackpots, and honest statistical methods. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1930",
+   "NAME": "JAH SuperEnalotto Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the SuperEnalotto Statistics Signature Database: Sixteen full SuperEnalotto statistics records in the Signature edition: Signature-original studies of Italy's 6-from-90 lottery, its odds, mechanics, and honest statistical methods. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1931",
+   "NAME": "JAH Irish Lotto Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Irish Lotto Statistics Database: Irish Lotto statistics, odds, draw mechanics, and methods, with simulated-data demos and plain randomness statements. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1932",
+   "NAME": "JAH Irish Lotto Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Irish Lotto Statistics Signature Database: Signature-original Irish Lotto statistics, odds, draw mechanics, and methods, with simulated-data demos and plain randomness statements. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1933",
+   "NAME": "JAH Canada Lotto Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Canada Lotto Statistics Database: Canada Lotto 6/49 and Lotto Max statistics, odds, draw mechanics, and methods, with simulated-data demos and plain randomness statements. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1934",
+   "NAME": "JAH Canada Lotto Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the Canada Lotto Statistics Signature Database: Signature-original Canada Lotto 6/49 and Lotto Max statistics, odds, draw mechanics, and methods, with simulated-data demos and plain randomness statements. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1935",
+   "NAME": "JAH US State Lotteries Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US State Lotteries Statistics Database: Sixteen full US state lottery statistics records: ten state jackpot games, two multi-state daily games, and four method guides covering odds comparison, archive verification, tax and payout variation, and responsible play. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1936",
+   "NAME": "JAH US State Lotteries Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US State Lotteries Statistics Signature Database: Sixteen full Signature-original US state lottery statistics study records: ten state jackpot games, two multi-state daily games, and four method guides covering odds comparison, archive verification, tax and payout variation, and responsible play. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1937",
+   "NAME": "JAH International Lotteries Statistics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The International Lotteries Statistics Database: Sixteen full international lottery statistics records: eleven national lottery games from Australia, Germany, France, Brazil, Japan, South Africa, Spain, Italy, and New Zealand, plus five method guides covering comparison, jackpot caps, currency and payout variation, verification, and responsible play. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1938",
+   "NAME": "JAH International Lotteries Statistics Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The International Lotteries Statistics Signature Database: Sixteen full Signature-original international lottery statistics study records: eleven national lottery games from Australia, Germany, France, Brazil, Japan, South Africa, Spain, Italy, and New Zealand, plus five method guides covering comparison, jackpot caps, currency and payout variation, verification, and responsible play. Signature edition. Can build an assistant like the user's personal assistant."
   }
  ]
 }
