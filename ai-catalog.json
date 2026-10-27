@@ -34606,6 +34606,202 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Signature Water Parks Database: Sixteen full water park records, ordered simple to complex: Blizzard Beach, Typhoon Lagoon, Volcano Bay, Aquatica Orlando, Schlitterbahn New Braunfels, Noah's Ark, Kalahari Resorts, Great Wolf Lodge, Wilderness Territory, Water Country USA, Splish Splash, Hurricane Harbor, Raging Waters, Cowabunga Bay, Wet 'n Wild Orlando (past), and WaterWorld California (past name), each with lands, rides labeled NEW or PAST, theming, and publicly-known hidden spots, plus a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1855",
+   "NAME": "JAH Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Video Game Arcade Database: Sixteen eras of the arcade, from the first coin-op cabinets to the modern hall, each with a playable tribute demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1856",
+   "NAME": "JAH Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Video Game Arcade Signature Database: Sixteen eras of the arcade, from the first coin-op cabinets to the modern hall, each with a playable tribute demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1857",
+   "NAME": "JAH Golden Age Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Golden Age Arcade Database: Sixteen golden-age arcade games, 1971 to 1982, each with a playable tribute demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1858",
+   "NAME": "JAH Golden Age Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Golden Age Arcade Signature Database: Sixteen golden-age arcade games, 1971 to 1982, each with a playable tribute demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1859",
+   "NAME": "JAH Maze Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Maze Arcade Games Database: Sixteen maze-chase arcade games, from the dot-munching classics to bomb-laying labyrinths, each with a playable maze demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1860",
+   "NAME": "JAH Maze Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Maze Arcade Games Signature Database: Sixteen maze-chase arcade games, from the dot-munching classics to bomb-laying labyrinths, each with a playable maze demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1861",
+   "NAME": "JAH Space Shooter Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Space Shooter Arcade Database: Sixteen fixed-shooter classics and sixteen original fixed shooters, each with a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1862",
+   "NAME": "JAH Space Shooter Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Space Shooter Arcade Signature Database: Sixteen fixed-shooter classics and sixteen original fixed shooters, each with a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1863",
+   "NAME": "JAH Vector Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Vector Arcade Games Database: Sixteen vector-graphics classics and sixteen original vector-style games, each with a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1864",
+   "NAME": "JAH Vector Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Vector Arcade Games Signature Database: Sixteen vector-graphics classics and sixteen original vector-style games, each with a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1865",
+   "NAME": "JAH Platform Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Platform Arcade Games Database: Sixteen platform classics and sixteen original platform games, each with a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1866",
+   "NAME": "JAH Platform Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Platform Arcade Games Signature Database: Sixteen platform classics and sixteen original platform games, each with a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1867",
+   "NAME": "JAH Fighting Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Fighting Arcade Games Database: One-on-one arcade fighters, from early karate bouts to weapon-based three-dimensional duels, plus original fighting games. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1868",
+   "NAME": "JAH Fighting Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Fighting Arcade Games Signature Database: One-on-one arcade fighters, from early karate bouts to weapon-based three-dimensional duels, plus original fighting games. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1869",
+   "NAME": "JAH Racing Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Racing Arcade Games Database: Arcade racers, from early grand-prix cabinets to drifting, rally, and open-city driving, plus original racing games. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1870",
+   "NAME": "JAH Racing Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Racing Arcade Games Signature Database: Arcade racers, from early grand-prix cabinets to drifting, rally, and open-city driving, plus original racing games. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1871",
+   "NAME": "JAH Puzzle Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Puzzle Arcade Games Database: Arcade puzzle games, from falling blocks and matching bubbles to digging adventures, plus original puzzle games. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1872",
+   "NAME": "JAH Puzzle Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Puzzle Arcade Games Signature Database: Arcade puzzle games, from falling blocks and matching bubbles to digging adventures, plus original puzzle games. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1873",
+   "NAME": "JAH Gallery Shooter Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Gallery Shooter Arcade Database: Light-gun gallery shooters, from classic cabinets to original ranges, each with a playable tribute demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1874",
+   "NAME": "JAH Gallery Shooter Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Gallery Shooter Arcade Signature Database: Light-gun gallery shooters, from classic cabinets to original ranges, each with a playable tribute demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1875",
+   "NAME": "JAH Sports Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Sports Arcade Games Database: Arcade sports, from Olympic button-mashers to hoops and golf, each with a playable timing demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1876",
+   "NAME": "JAH Sports Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Sports Arcade Games Signature Database: Arcade sports, from Olympic button-mashers to hoops and golf, each with a playable timing demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1877",
+   "NAME": "JAH Rhythm Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Rhythm Arcade Games Database: Rhythm cabinets, from dance pads to drum kits, each with a playable sixteen-beat demo excerpt. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1878",
+   "NAME": "JAH Rhythm Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Rhythm Arcade Games Signature Database: Rhythm cabinets, from dance pads to drum kits, each with a playable sixteen-beat demo excerpt. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1879",
+   "NAME": "JAH Adventure Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Adventure Arcade Games Database: Dungeon and adventure cabinets, from four-player crawls to fantasy quests, each with a playable dungeon demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1880",
+   "NAME": "JAH Adventure Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Adventure Arcade Games Signature Database: Dungeon and adventure cabinets, from four-player crawls to fantasy quests, each with a playable dungeon demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1881",
+   "NAME": "JAH Scrolling Shooter Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Scrolling Shooter Arcade Database: Sixteen scrolling-shooter classics and sixteen original scrolling shooters, each with a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1882",
+   "NAME": "JAH Scrolling Shooter Arcade Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Scrolling Shooter Arcade Signature Database: Sixteen scrolling-shooter classics and sixteen original scrolling shooters, each with a playable demo. Can build an assistant like the user's personal assistant."
   }
  ]
 }
