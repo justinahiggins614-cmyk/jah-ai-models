@@ -36678,6 +36678,76 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Library of Jerusalem New Quote Book Database (Signature Edition): Sixteen complete quote books in the Library of Jerusalem, new version: short cited King James Version excerpts with commentary chapters, read aloud by Anonymous of Peace. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2151",
+   "NAME": "Keeper of Biofonics",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Biofonics Database: Sixteen full biofonics record records: What Is Biofonics; The Dawn Chorus; Bernie Krause and the Biophony Concept; Birdsong: Learning and Repertoire; Frog Choruses and Amphibian Calls; Insect Sound: Crickets and Cicadas; Bat Echolocation; Whale Song and Ocean Bioacoustics; Elephant Infrasound; The Acoustic Niche Hypothesis; Soundscape Indices: NDSI and ACI; Bioacoustics Field Recording Methods; Noise Pollution and the Anthrophony Layer; Coral Reef Soundscapes; Biofonics Conservation: Listening as Monitoring; Biofonics Field Guide Index. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2152",
+   "NAME": "Keeper of Biofonics",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Biofonics Database (Signature): Sixteen full biofonics record records: Signature: What Is Signature Biofonics; Signature: Dawn Chorus Model; Signature: Layer Model of a Soundscape; Signature: Songbird Call Synthesizer Design; Signature: Frog Chorus Synthesizer Design; Signature: Insect Call Synthesizer Design; Signature: Bat Pulse Model; Signature: Whale Song Model; Signature: Infrasound Rumble Model; Signature: Acoustic Niche Planner; Signature: Soundscape Index Calculator Design; Signature: Field Recorder Design; Signature: Quiet-Zone Soundscape Model; Signature: Reef Chorus Model; Signature: Acoustic Monitoring Network Design; Signature: Biofonics Design Index. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2153",
+   "NAME": "Keeper of the Biophony",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Biophony Soundscapes Database: Sixteen full biophony soundscape record records: What Is a Soundscape; Forest Soundscape; Ocean Soundscape; Desert Soundscape; Wetland Soundscape; Urban Soundscape; Rainforest Dawn Soundscape; Arctic Soundscape; Grassland and Savanna Soundscape; River and Stream Soundscape; Night Soundscape; Seasonal Soundscape Change; Storm Soundscape; Coastal Soundscape; Soundscape Restoration and Quiet Places; Biophony Soundscape Index. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2154",
+   "NAME": "Keeper of the Biophony",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Biophony Soundscapes Database (Signature): Sixteen full biophony soundscape record records: Signature: Soundscape Primer; Signature: Forest Soundscape Model; Signature: Ocean Soundscape Model; Signature: Desert Wind Model; Signature: Wetland Model; Signature: Quiet City Model; Signature: Rainforest Dawn Model; Signature: Ice Soundscape Model; Signature: Savanna Model; Signature: River Model; Signature: Night Model; Signature: Seasonal Shift Model; Signature: Storm Model; Signature: Coast Model; Signature: Restored Quiet Park Model; Signature: Soundscape Design Index. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2155",
+   "NAME": "Keeper of Animal Voices",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Animal Vocal Communication Database: Sixteen full records on how animals communicate with sound: calls and songs, alarms, mating songs, territorial calls, choruses, infrasound, echolocation, howls, vocabularies, whistles, learning, dialects, mimicry, the Lombard effect, study methods, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2156",
+   "NAME": "Keeper of Animal Voices",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Animal Vocal Communication Database: Sixteen full records on how animals communicate with sound: calls and songs, alarms, mating songs, territorial calls, choruses, infrasound, echolocation, howls, vocabularies, whistles, learning, dialects, mimicry, the Lombard effect, study methods, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2157",
+   "NAME": "Keeper of Bioacoustic Analysis",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Bioacoustic Recording Analysis Database: Sixteen full records on recording and analysing animal sounds: sensors, sampling and the Nyquist rule, spectrograms, frequency bands, field protocols, ACI, ADI and AEI, automated detection, recorder arrays, noise measurement, long-term monitoring, classifiers, archiving, ethics, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2158",
+   "NAME": "Keeper of Bioacoustic Analysis",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Bioacoustic Recording Analysis Database: Sixteen full records on recording and analysing animal sounds: sensors, sampling and the Nyquist rule, spectrograms, frequency bands, field protocols, ACI, ADI and AEI, automated detection, recorder arrays, noise measurement, long-term monitoring, classifiers, archiving, ethics, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2159",
+   "NAME": "Keeper of Soundscapes",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Soundscape Ecology Database: Sixteen full records on soundscapes and their three layers, kept distinct and cross-linked: biophony, geophony, and anthrophony, the acoustic niche hypothesis, habitat comparison, dawn chorus, urban, freshwater, and marine soundscapes, seasons, indices, noise pollution, restoration, quiet parks, and sources. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2160",
+   "NAME": "Keeper of Soundscapes",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Soundscape Ecology Database: Sixteen full records on soundscapes and their three layers, kept distinct and cross-linked: biophony, geophony, and anthrophony, the acoustic niche hypothesis, habitat comparison, dawn chorus, urban, freshwater, and marine soundscapes, seasons, indices, noise pollution, restoration, quiet parks, and sources. Can build an assistant like the user's personal assistant."
   }
  ]
 }
