@@ -34802,6 +34802,230 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Scrolling Shooter Arcade Signature Database: Sixteen scrolling-shooter classics and sixteen original scrolling shooters, each with a playable demo. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1883",
+   "NAME": "JAH Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Sports Database: Sixteen full records on what sport is, how it is governed, played, coached and kept fair. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1884",
+   "NAME": "JAH Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Sports Database: Sixteen original Signature records on what sport is, how it is governed, played, coached and kept fair. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1885",
+   "NAME": "JAH Team Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Team Sports Database: Sixteen full records on team sports from volleyball to bandy. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1886",
+   "NAME": "JAH Team Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Team Sports Database: Sixteen original Signature records on team sports from volleyball to bandy. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1887",
+   "NAME": "JAH Soccer Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Soccer Football Database: Sixteen full records on soccer: laws, positions, skills, tactics, training and competitions. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1888",
+   "NAME": "JAH Soccer Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Soccer Football Database: Sixteen original Signature records on soccer: laws, positions, skills, tactics, training and competitions. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1889",
+   "NAME": "JAH Basketball Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Basketball Database: Sixteen full records on basketball: rules, skills, tactics, training and competitions. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1890",
+   "NAME": "JAH Basketball Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Basketball Database: Sixteen original Signature records on basketball: rules, skills, tactics, training and competitions. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1891",
+   "NAME": "JAH American Football Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The American Football Database: American football, from its origins to modern analytics, in full records with working demos. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1892",
+   "NAME": "JAH American Football Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature American Football Database: American football, from its origins to modern analytics, in full records with working demos. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1893",
+   "NAME": "JAH Cricket Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Cricket Database: Cricket, from its origins to T20 leagues, in full records with working demos. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1894",
+   "NAME": "JAH Cricket Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Cricket Database: Cricket, from its origins to T20 leagues, in full records with working demos. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1895",
+   "NAME": "JAH Tennis Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Tennis Database: Tennis, from its origins to the Grand Slams, in full records with working demos. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1896",
+   "NAME": "JAH Tennis Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Tennis Database: Tennis, from its origins to the Grand Slams, in full records with working demos. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1897",
+   "NAME": "JAH Individual Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Individual Sports Database: Individual sports, from golf to roller sports, in full records with working demos. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1898",
+   "NAME": "JAH Individual Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Individual Sports Database: Individual sports, from golf to roller sports, in full records with working demos. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1899",
+   "NAME": "JAH Combat Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Combat Sports Database: Sixteen full combat sport records, from judo to escrima and kali, ordered simple to complex, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1900",
+   "NAME": "JAH Combat Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Combat Sports Database: Sixteen full combat sport records, from judo to escrima and kali, ordered simple to complex, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1901",
+   "NAME": "JAH Water Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Water Sports Database: Sixteen full water sport records, from swimming to rafting, ordered simple to complex, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1902",
+   "NAME": "JAH Water Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Water Sports Database: Sixteen full water sport records, from swimming to rafting, ordered simple to complex, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1903",
+   "NAME": "JAH Winter Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Winter Sports Database: Sixteen full winter sport records, from alpine skiing to snowshoeing, ordered simple to complex, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1904",
+   "NAME": "JAH Winter Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Winter Sports Database: Sixteen full winter sport records, from alpine skiing to snowshoeing, ordered simple to complex, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1905",
+   "NAME": "JAH Racquet Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Racquet Sports Database: Sixteen full racquet sport records, from badminton to qianball, ordered simple to complex, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1906",
+   "NAME": "JAH Racquet Sports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Racquet Sports Database: Sixteen full racquet sport records, from badminton to qianball, ordered simple to complex, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1907",
+   "NAME": "JAH Motorsport Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Motorsport Database: Sixteen full motorsport records, from Formula 1 to truck racing, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1908",
+   "NAME": "JAH Motorsport Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Motorsport Database: Sixteen full motorsport records, from Formula 1 to truck racing, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1909",
+   "NAME": "JAH Athletics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Athletics Database: Sixteen full athletics records, from sprints to javelin, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1910",
+   "NAME": "JAH Athletics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Athletics Database: Sixteen full athletics records, from sprints to javelin, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1911",
+   "NAME": "JAH Gymnastics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Gymnastics Database: Sixteen full gymnastics records, from artistic gymnastics to slacklining, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1912",
+   "NAME": "JAH Gymnastics Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Gymnastics Database: Sixteen full gymnastics records, from artistic gymnastics to slacklining, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1913",
+   "NAME": "JAH Esports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Esports Disciplines Database: Sixteen full esports discipline records, from MOBA games to fair play and anti-cheat, each with a working demo program. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1914",
+   "NAME": "JAH Esports Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Esports Disciplines Database: Sixteen full esports discipline records, from MOBA games to fair play and anti-cheat, each with a working demo program. Can build an assistant like the user's personal assistant."
   }
  ]
 }
