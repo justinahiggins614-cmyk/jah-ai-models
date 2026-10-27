@@ -35796,6 +35796,202 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Signature Clock Maintenance and Restoration Database: Full clock maintenance and restoration records with specifications, mechanisms, maintenance, and working demo programs. Signature edition of original designs. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2025",
+   "NAME": "JAH Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Military Bases Database: Sixteen full military base records, ordered simple to compounded to complex, covering major United States domestic installations across branches, with a branch and region index and a suite framework record. Everything is free forever, with no payments and no upsells. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2026",
+   "NAME": "JAH Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Military Bases Signature Database: Sixteen full military base records, ordered simple to compounded to complex, covering major United States domestic installations across branches, with a branch and region index and a suite framework record. Everything is free forever, with no payments and no upsells. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2027",
+   "NAME": "JAH Army Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Army Bases Database: Sixteen full United States Army post records, ordered simple to compounded to complex, covering major domestic Army posts from the public record. Everything is free forever, with no payments and no upsells. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2028",
+   "NAME": "JAH Army Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Army Bases Signature Database: Sixteen full United States Army post records, ordered simple to compounded to complex, covering major domestic Army posts from the public record. Everything is free forever, with no payments and no upsells. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2029",
+   "NAME": "JAH Navy Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Navy Bases Database: Sixteen full United States Navy station records, ordered simple to compounded to complex, covering major domestic naval stations including Hawaii, from the public record. Everything is free forever, with no payments and no upsells. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2030",
+   "NAME": "JAH Navy Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Navy Bases Signature Database: Sixteen full United States Navy station records, ordered simple to compounded to complex, covering major domestic naval stations including Hawaii, from the public record. Everything is free forever, with no payments and no upsells. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2031",
+   "NAME": "JAH Air Force Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Air Force Bases Database: Sixteen full United States Air Force base records, ordered simple to compounded to complex, covering major domestic Air Force bases from the public record. Everything is free forever, with no payments and no upsells. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2032",
+   "NAME": "JAH Air Force Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Air Force Bases Signature Database: Sixteen full United States Air Force base records, ordered simple to compounded to complex, covering major domestic Air Force bases from the public record. Everything is free forever, with no payments and no upsells. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2033",
+   "NAME": "JAH Marine Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Marine Corps Bases Database: Sixteen full us marine corps base record records, ordered simple to compounded to complex, covering major United States Marine Corps installations in the United States, each with public role, public history, publicly listed units, public fa Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2034",
+   "NAME": "JAH Marine Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature US Marine Corps Bases Database: Sixteen full us marine corps base record records, ordered simple to compounded to complex, covering major United States Marine Corps installations in the United States, each with public role, public history, publicly listed units, public fa Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2035",
+   "NAME": "JAH Space Force Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Space Force Bases Database: Sixteen full us space force base record records, ordered simple to compounded to complex, covering major United States Space Force installations in the United States, each with public role, public history, publicly listed units, public faci Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2036",
+   "NAME": "JAH Space Force Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature US Space Force Bases Database: Sixteen full us space force base record records, ordered simple to compounded to complex, covering major United States Space Force installations in the United States, each with public role, public history, publicly listed units, public faci Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2037",
+   "NAME": "JAH Coast Guard Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Coast Guard Bases Database: Sixteen full us coast guard base record records, ordered simple to compounded to complex, covering major United States Coast Guard installations in the United States, each with public role, public history, publicly listed units, public faci Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2038",
+   "NAME": "JAH Coast Guard Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature US Coast Guard Bases Database: Sixteen full us coast guard base record records, ordered simple to compounded to complex, covering major United States Coast Guard installations in the United States, each with public role, public history, publicly listed units, public faci Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2039",
+   "NAME": "JAH National Guard Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US National Guard Bases Database: Sixteen full us national guard base record records, ordered simple to compounded to complex, covering major National Guard installations in the United States, each with public role, public history, publicly listed units, public facilities,  Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2040",
+   "NAME": "JAH National Guard Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature US National Guard Bases Database: Sixteen full us national guard base record records, ordered simple to compounded to complex, covering major National Guard installations in the United States, each with public role, public history, publicly listed units, public facilities,  Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2041",
+   "NAME": "JAH Joint Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Joint Bases Database: Sixteen full us joint base record records, ordered simple to compounded to complex, drawn from the public record only. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2042",
+   "NAME": "JAH Joint Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature US Joint Bases Database: Sixteen full us joint base record records, ordered simple to compounded to complex, drawn from the public record only. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2043",
+   "NAME": "JAH Training Range Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Training Ranges Database: Sixteen full us training range record records, ordered simple to compounded to complex, drawn from the public record only. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2044",
+   "NAME": "JAH Training Range Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature US Training Ranges Database: Sixteen full us training range record records, ordered simple to compounded to complex, drawn from the public record only. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2045",
+   "NAME": "JAH Closed Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Closed Military Bases Database: Sixteen full us closed base record records, ordered simple to compounded to complex, drawn from the public record only. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2046",
+   "NAME": "JAH Closed Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature US Closed Military Bases Database: Sixteen full us closed base record records, ordered simple to compounded to complex, drawn from the public record only. Free forever. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2047",
+   "NAME": "JAH Academy Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Military Academies Database: Sixteen full US military academy records, ordered simple to complex, covering service academies, preparatory schools, and war colleges. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2048",
+   "NAME": "JAH Academy Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature US Military Academies Database: Sixteen full US military academy records, ordered simple to complex, covering service academies, preparatory schools, and war colleges. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2049",
+   "NAME": "JAH Medical Center Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Military Medical Centers Database: Sixteen full US military medical center records, ordered simple to complex, covering domestic Army, Navy, and joint medical facilities. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2050",
+   "NAME": "JAH Medical Center Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature US Military Medical Centers Database: Sixteen full US military medical center records, ordered simple to complex, covering domestic Army, Navy, and joint medical facilities. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2051",
+   "NAME": "JAH Reserve Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The US Reserve Bases Database: Sixteen full US reserve base records, ordered simple to complex, each recorded for its Reserve role distinctly. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2052",
+   "NAME": "JAH Reserve Base Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature US Reserve Bases Database: Sixteen full US reserve base records, ordered simple to complex, each recorded for its Reserve role distinctly. Can build an assistant like the user's personal assistant."
   }
  ]
 }
