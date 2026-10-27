@@ -35600,6 +35600,202 @@
    "TYPE": "database",
    "CATEGORY": "Database AI",
    "DESCRIPTION": "Archive-aware AI for the The Carpentry Decorative Projects Database Signature: Sixteen decorative woodwork builds, ordered simple to complex: carved spoon, scroll-sawn ornament, candle holder set, picture frame with mat, marquetry coaster set, carved sign, shelf brackets, turned pen, inlay box, clock frame, molding sampler, turned bowl, jewelry box, turned vase, intarsia plaque, and wall art panel. Trim and molding installation belongs to finish-carpentry, cross-linked here; this pair makes decorative objects. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1997",
+   "NAME": "JAH Grandfather Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Grandfather Clocks Database: A full catalog of grandfather clock types, movements, dials, cases, chimes and restoration guidance. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1998",
+   "NAME": "JAH Grandfather Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Grandfather Clocks Database: Original Signature grandfather clock designs, labeled signature-original. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-1999",
+   "NAME": "JAH Grandmother Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Grandmother Clocks Database: A full catalog of grandmother clock types, movements, dials, cases, chimes and care guidance. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2000",
+   "NAME": "JAH Grandmother Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Grandmother Clocks Database: Original Signature grandmother clock designs, labeled signature-original. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2001",
+   "NAME": "JAH Regulator Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Regulator Clocks Database: A full catalog of regulator clock types, dials, escapements, cases and rating guidance. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2002",
+   "NAME": "JAH Regulator Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Regulator Clocks Database: Original Signature regulator clock designs, labeled signature-original. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2003",
+   "NAME": "JAH Wall Pendulum Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Wall Pendulum Clocks Database: A full catalog of wall pendulum clock types, movements, dials, chimes and hanging guidance. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2004",
+   "NAME": "JAH Wall Pendulum Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Wall Pendulum Clocks Database: Original Signature wall pendulum clock designs, labeled signature-original. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2005",
+   "NAME": "JAH Mantel Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Mantel Clocks Database: Mantel clocks: shelf-sitting clocks with spring movements, short pendulums, striking, and chiming. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2006",
+   "NAME": "JAH Mantel Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Mantel Clocks Database: Signature mantel clocks: original Signature shelf-sitting clock designs, labeled signature-original, never presented as authentic public record. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2007",
+   "NAME": "JAH Bracket Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Bracket Clocks Database: Bracket clocks: spring-driven table clocks for the wall bracket, with striking, chiming, and repeating movements. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2008",
+   "NAME": "JAH Bracket Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Bracket Clocks Database: Original Signature bracket clock designs: spring-driven table clocks for the wall bracket, in Signature form. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2009",
+   "NAME": "JAH Cuckoo Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Cuckoo Clocks Database: Cuckoo clocks: weight-driven Black Forest clocks with bellows, pipes, and the animated bird. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2010",
+   "NAME": "JAH Cuckoo Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Cuckoo Clocks Database: Original Signature cuckoo clock designs: weight-driven clocks with bellows, pipes, and the animated bird, in Signature form. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2011",
+   "NAME": "JAH Lantern Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Lantern Clocks Database: Lantern clocks: weight-driven English brass clocks with verge escapements, foliots, and countwheel striking. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2012",
+   "NAME": "JAH Lantern Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Lantern Clocks Database: Original Signature lantern clock designs: weight-driven brass clocks with verge escapements and countwheel striking, in Signature form. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2013",
+   "NAME": "JAH Tower Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Tower Clocks Database: Tower clocks database: full tower-clock types, mechanisms, striking, dials and maintenance guidance. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2014",
+   "NAME": "JAH Tower Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Tower Clocks Database: Tower clocks database: full tower-clock types, mechanisms, striking, dials and maintenance guidance. Signature edition, original Signature designs. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2015",
+   "NAME": "JAH Skeleton Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Skeleton Clocks Database: Skeleton clocks database: full open-framework clock principles, mechanisms, care and designs. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2016",
+   "NAME": "JAH Skeleton Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Skeleton Clocks Database: Skeleton clocks database: original Signature open-framework clock designs. Signature edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2017",
+   "NAME": "JAH Anniversary Clock Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Anniversary Clocks Database: Anniversary clocks database: full anniversary-clock torsion-pendulum principles, regulation, care and designs. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2018",
+   "NAME": "JAH Anniversary Clock Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Anniversary Clocks Database: Anniversary clocks database: full anniversary-clock torsion-pendulum principles, regulation, care and designs. Signature edition, original Signature designs. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2019",
+   "NAME": "JAH Clock Escapement Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Clock Escapements Database: Full clock escapements records with specifications, mechanisms, maintenance, and working demo programs. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2020",
+   "NAME": "JAH Clock Escapement Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Clock Escapements Database: Full clock escapements records with specifications, mechanisms, maintenance, and working demo programs. Signature edition of original designs. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2021",
+   "NAME": "JAH Clock Chime Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Clock Chimes and Strikes Database: Full clock chimes and strikes records with specifications, mechanisms, maintenance, and working demo programs. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2022",
+   "NAME": "JAH Clock Chime Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Clock Chimes and Strikes Database: Full clock chimes and strikes records with specifications, mechanisms, maintenance, and working demo programs. Signature edition of original designs. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2023",
+   "NAME": "JAH Clock Maintenance Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Clock Maintenance and Restoration Database: Full clock maintenance and restoration records with specifications, mechanisms, maintenance, and working demo programs. Public edition. Can build an assistant like the user's personal assistant."
+  },
+  {
+   "ID": "JAH-AI-SIG-2024",
+   "NAME": "JAH Clock Maintenance Signature Guide",
+   "TYPE": "database",
+   "CATEGORY": "Database AI",
+   "DESCRIPTION": "Archive-aware AI for the The Signature Clock Maintenance and Restoration Database: Full clock maintenance and restoration records with specifications, mechanisms, maintenance, and working demo programs. Signature edition of original designs. Can build an assistant like the user's personal assistant."
   }
  ]
 }
